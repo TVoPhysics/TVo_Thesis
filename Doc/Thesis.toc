@@ -1,0 +1,31 @@
+\contentsline {chapter}{Preface}{3}
+\contentsline {chapter}{\numberline {1}Introduction}{7}
+\contentsline {section}{\numberline {1.1}Gravitational Waves}{7}
+\contentsline {section}{\numberline {1.2}The LIGO Instrument}{7}
+\contentsline {subsection}{\numberline {1.2.1}Dual-recycled Fabry-Perot Interferometer}{7}
+\contentsline {subsection}{\numberline {1.2.2}Limitations}{7}
+\contentsline {section}{\numberline {1.3}Squeezed States of Light}{7}
+\contentsline {section}{\numberline {1.4}The Effects of Mode-Matching}{7}
+\contentsline {chapter}{\numberline {2}Modeling Mode-Matching}{9}
+\contentsline {section}{\numberline {2.1}How it works}{9}
+\contentsline {section}{\numberline {2.2}Defining Mode-Matching}{9}
+\contentsline {subsection}{\numberline {2.2.1}Misalignment}{9}
+\contentsline {subsection}{\numberline {2.2.2}Waist Size and Location}{9}
+\contentsline {section}{\numberline {2.3}Finesse Simulations}{9}
+\contentsline {subsection}{\numberline {2.3.1}ALIGO Design with FC and Squeezer}{9}
+\contentsline {subsection}{\numberline {2.3.2}Looking at just Modal Change}{9}
+\contentsline {subsection}{\numberline {2.3.3}QM Limited Sensitivity}{9}
+\contentsline {section}{\numberline {2.4}Results}{9}
+\contentsline {chapter}{\numberline {3}Mode Matching Cavities at Syracuse}{11}
+\contentsline {section}{\numberline {3.1}Adaptive Mode Matching}{11}
+\contentsline {section}{\numberline {3.2}Actuators}{11}
+\contentsline {subsection}{\numberline {3.2.1}Thermal Lenses}{11}
+\contentsline {subsection}{\numberline {3.2.2}Translation Stages}{11}
+\contentsline {section}{\numberline {3.3}Sensors}{11}
+\contentsline {subsection}{\numberline {3.3.1}Mode Converters}{11}
+\contentsline {subsection}{\numberline {3.3.2}Bullseye Photodiodes}{11}
+\contentsline {chapter}{\numberline {4}Mode Matching Cavities at LIGO Hanford}{13}
+\contentsline {section}{\numberline {4.1}Beam Jitter}{13}
+\contentsline {chapter}{\numberline {5}High Power Commissioning}{15}
+\contentsline {section}{\numberline {5.1}Effect on Mode-Matching}{15}
+\contentsline {chapter}{\numberline {6}Solutions for Next Generation Detectors}{17}

@@ -1,0 +1,144 @@
+\documentclass[10pt,a4paper]{book}
+\usepackage{lineno, blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\title{Adaptive Mode Matching in Advanced LIGO}
+\date{Spring 2017}
+\author{Thomas Vo}
+
+
+
+
+
+\begin{document}
+\begin{linenumbers}
+		\chapter*{Abstract}
+		Going to make LIGO the best possible ever.
+	
+	\maketitle
+		\chapter*{Preface}
+		The era of gravitational waves astronomy was ushered in by the LIGO (Laser Interferometer Gravitational-Wave Observatory) collaboration with the detection of a binary black hole collision (Detection paper).  The event that shook the foundation of space-time allowed mankind to view the cosmos in a way that had never been done previously. 
+		\addcontentsline{toc}{chapter}{Preface}
+	\tableofcontents
+
+\chapter{Introduction}
+	\section{Gravitational Waves}
+	Gravitational waves are the 
+	
+	
+	
+	\section{The LIGO Instrument}
+	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the interferometer as a measure of the differential arm length 
+	
+		
+	The LIGO Interferometers are considered dual 
+	
+		\subsection{Dual-recycled Fabry-Perot Interferometer}
+		A Fabry-Perot cavity is:
+		
+		Power Recycling
+		If the interferometer is operating such that the 4 km arms are exactly different in arms a pi over two times the wavelength, then the intensity of the light at antisymmetric port will be close to null.  This means the power from the arms will
+		
+		Signal Recycling9
+		\subsection{Limitations}
+		Noise budget:
+		- Quantum Noise
+		- Seismic
+		- Thermal Noise
+	\section{Squeezed States of Light}
+	The Quantum Noise is a fundamental source that can be helped by squeezing. This is Squeezing (Caves, Dwyer, Kwee, Miao)
+		
+	\section{The Effects of Mode-Matching}
+	Theory section of modematching.
+	
+	An example of how mode-matching can affect the overall sensitivity.
+	
+	
+	
+%%%%%%%%%%%%%%%%%%%%%%	
+\chapter{Modeling Mode-Matching}	
+	\section{How it works}
+
+	\section{Defining Mode-Matching}
+		\subsection{Misalignment}
+		Anderson, Kognelik and Li
+		\newline
+		Guido Paper
+		\newline
+		
+		\subsection{Waist Size and Location}
+		Anderson, Kognelik and Li
+		\newline
+		In contrast to the misalignment orthoganlity 
+	
+	\section{Finesse Simulations}
+		\subsection{ALIGO Design with FC and Squeezer}
+		\subsection{Looking at just Modal Change}
+		\subsection{QM Limited Sensitivity}
+			
+	\section{Results}
+		* Signal recycling cavity mismatches
+
+		* Mismatches before the OMC
+			
+		* Mismatch contour graph: Comparing all of ALIGO cavities
+			
+		* Optical Spring pops up at 7.4 Hz in the Signal-to-Darm TF, re-run with varying SRM Trans which should.
+
+%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Mode Matching Cavities at Syracuse}
+
+	\section{Adaptive Mode Matching}
+	Real time digital system and model.
+	
+	\section{Actuators}
+		\subsection{Thermal Lenses}
+		Fabian's work and UFL paper.
+		\subsection{Translation Stages}
+		
+	\section{Sensors}
+		\subsection{Mode Converters}
+		
+		\subsection{Bullseye Photodiodes}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Mode Matching Cavities at LIGO Hanford}
+	\section{Beam Jitter}
+	
+Current measurements of mode-matching.
+
+%%%%%%%%%%%%%%%%%%%%%%
+\chapter{High Power Commissioning}
+	\section{Effect on Mode-Matching}
+	What is the effect on mode-matching when you change the laser power?
+
+%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Solutions for Next Generation Detectors}
+
+* SR3 Heater
+
+* SRM Heater
+
+* Operation: range (in terms of watts and % percentage mismatch)
+
+
+* Translation stages
+
+* Mechanical description (Solidworks designs)
+
+* Constraints (range, vacuum, alignment, integration)
+
+* Electronics 
+
+* Software
+	\listoffigures
+	\listoftables
+
+\end{linenumbers}
+\end{document}

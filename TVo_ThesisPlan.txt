@@ -1,0 +1,53 @@
+﻿* Chapter 1: Intro
+   * G-Waves
+   * The LIGO Instrument
+      * Dual-recycled Fabry Perot IFO
+      * Limitations (Noise)
+   * Squeezing
+   * Why we need mode-matching
+      * Optica l Losses
+* Chapter 2: Mode-matching modelling with Finesse.
+   * How it works:
+      * Beam propagation: solution to paraxial Helmhotz equations
+      * Higher order mode content
+   * What is mode-mismatching?
+      * Cavity mismatches leading to HOMs
+         * Misalignment
+         * Waist size and position
+   * Setup
+      * ALIGO design with a filter cavity and Squeezing injection
+      * Decoupling of the modal change vs. the lensing effect.
+      * Quantum limited sensitivity output
+   * Results
+      * Signal recycling cavity mismatches
+      * Mismatches before the OMC
+      * Mismatch contour graph: Comparing all of ALIGO cavities
+      * Optical Spring pops up at 7.4 Hz in the Signal-to-Darm TF, re-run with varying SRM_Trans which should shift the resonance.
+      * Bumps at 360 Hz.
+* Chapter 3: Current Mode-matching measurements at 4km IFO
+   * Thermal Distortions giving rise to mode-matching
+      * HWS readout
+      * Power losses at the OMC Refl?
+   * Methods:
+      * Reflection off of OMC. (with the SRM aligned/misaligned)
+         * What Channels?
+      * BPDs
+         * How they work? Amplifying and Mod/Demod scheme.
+         * Alignment sensing.
+* Chapter 4: Mode-matching solutions
+   * SR3 Heater
+      * Operation: range (in terms of watts and % percentage mismatch)
+      * Sign?
+      * Mismatch contour graphs.
+   * Translation stages
+      * Mechanical description (Solidworks designs)
+         * Constraints (range, vacuum, alignment, integration)
+      * Electronics 
+      * Software
+   * Thermal lens (brief, reference Fabian’s work)
+* Chapter 5: High Power Commissioning
+   * Effect on thermal state of the IFO?
+   *  Angular Control?
+   * Challenges…?
+* Chapter 6: Squeezing Install and testing with Mode-Matching?
+   *
