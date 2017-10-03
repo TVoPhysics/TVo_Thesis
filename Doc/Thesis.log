@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  30 SEP 2017 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  2 OCT 2017 16:08
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -601,6 +601,12 @@ Chapter 3.
 
 ]
 Chapter 4.
+
+Overfull \hbox (4.33405pt too wide) in paragraph at lines 119--120
+\OT1/cmr/m/n/10 The im-por-tance of mode-matching ac-tu-ally goes be-yond just 
+re-duc-ing the amount
+ []
+
 [13] [14
 
 ]
@@ -629,14 +635,14 @@ Here is how much of TeX's memory you used:
  8004 multiletter control sequences out of 15000+200000
  13068 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,6n,35p,357b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,6n,35p,432b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb>
-Output written on Thesis.pdf (23 pages, 112969 bytes).
+Output written on Thesis.pdf (23 pages, 113560 bytes).
 PDF statistics:
  100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
