@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{listings}
+\usepackage{physics}
 
 \title{Adaptive Mode Matching in Advanced LIGO}
 \date{Spring 2017}
@@ -31,13 +32,61 @@
 	
 	The seminal equation in this theory is:
 	
-	Soon after 1918, Einstein developed a linear theory of gravity that allowed the creation of gravitational waves.  There was a lot of controversy about whether gravitational waves arise from a physical effect or due to an arbitrary gauge transformation.  Felix Pirani was able to solve the puzzle by attacking the problem in a 
+	\begin{equation} \label{einstein}
+	G_{\mu \nu} = 8 \pi T_{\mu \nu}
+	\end{equation}
 	
-	Gravitational waves are the 
+	which is a set of 10 coupled second order differential equations that are nonlinear.  In their complete form, equation [1] fully describes the interaction between space-time and mass-energy. To describe the physics in a highly curved space-time, one would have to fully solve the Einstein field equations numerically.  
+	
+	
+	In the weak field approximation, the metric can be described as
+	
+	\begin{equation} \label{weak}
+	g_{\mu \nu}  \approxeq \eta_{\mu \nu} + h_{\mu \nu}
+	\end{equation}
+	
+	where $\eta_{\mu \nu}$ is the metric of flat space time and $|h_{\mu \nu}| \ll 1$ is the perturbation due to a gravitational field.
+	
+	By plugging in equation \ref{weak} into equation \ref{einstein} and using empty space we obtain the familiar wave equation
+	
+	\begin{equation} \label{wave}
+	\Big(\nabla^2 - \frac{1}{c^2} \pdv[2]{t} \Big) h_{\mu \nu}  = 0
+	\end{equation}
+
+	which has a plane-wave solution of the form $h_{\mu \nu} = A_{\mu \nu} e^{ik_{\nu} x^{\nu}}$. 
+	
+	By using the gauge constraint $h^{\mu \nu}_{,\nu} = 0$, it follows that $A_{\mu \nu} k^{\mu} = 0$ which means that the gravitational wave amplitude is orthogonal to the propagation vector.
+	
+	By further imposing transverse-traceless gauge, we can constrain the complex amplitude to two orthogonal polarizations which have physical significance:
+	
+	\begin{equation} \label{gwamp}
+	A_{\mu \nu} = 
+	\begin{pmatrix}
+			0 &    0   &  0      & 0 
+		 \\ 0 & A_{xx} &  A_{yx} & 0
+		 \\ 0 & A_{xy} & -A_{yy} & 0
+		 \\ 0 &    0   &  0      & 0
+	\end{pmatrix}
+	\end{equation}
+
+	One can ask if a gravitational wave passed by a pair of particles separated by length $L$, what would be the effect on the distance between the two points?  The proper distance is defined as
+	
+	\begin{equation}\label{propdist}
+	\delta l
+	= \int{g_{\mu \nu} dx^{\mu} dx^{\nu}} \\
+	= \int_{0}^{L}{g_{xx} {d}x}\\
+	\approx |g_{xx}(x=0)|^{1/2}\\
+	\approx [ 1 + \frac{1}{2} h_{xx}(x=0)] L
+	\end{equation} 
+	
+	which shows us two very important points about the nature of gravitational waves.  Firstly, the effect is very small since the variation in the length is 
 	
 	Even with the theoretical formulation of gravitational waves resolved, the detection of gravitational waves by ground-based detectors was still a controversial topic among scientists in the field.  This was due to the incredible amount of accuracy needed to actually measure strain. 
 	
 	Even with some of the most energetic events known to humanity such as the merger of neutron stars and black holes, the amount of strain expected is on the order of 10e-24`
+	
+	
+	
 	\section{The LIGO Instrument}
 	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the interferometer as a measure of the differential arm length, it becomes a natural way of detecting gravitational waves.
 	
