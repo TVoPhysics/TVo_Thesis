@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  20 OCT 2017 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  24 OCT 2017 09:30
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1710,10 +1710,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Chapter 1.
 [7
 
-] [8] [9] [10
+] [8]
+Overfull \hbox (16.21973pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10 1.3.  THE EFFECT OF A GRAVITATIONAL WAVE ON INTERFEROMETERS \O
+T1/cmr/m/n/10 9
+ []
+
+[9] [10
 
 ]
 Chapter 2.
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 183.
+
 [11] [12]
 Chapter 3.
 [13
@@ -1722,49 +1733,49 @@ Chapter 3.
 
 ]
 Chapter 4.
-[15] [16
-
-]
+[15] [16]
 Chapter 5.
-[17] [18
+[17
+
+] [18
 
 ]
 Chapter 6.
 [19] [20
 
-]
-Chapter 7.
-[21] [22
-
 ] (Thesis.lof)
 \tf@lof=\write4
 \openout4 = `Thesis.lof'.
 
- [23] [24
+ [21] [22
 
 ] (Thesis.lot)
 \tf@lot=\write5
 \openout5 = `Thesis.lot'.
 
- [25] [26
+ [23] [24
 
-] [27
+] [25
 
-] [28]
+] [26]
 Appendix A.
-[29
+[27
 
-] [30]
+] [28
+
+]
 Appendix B.
+[29] [30]
+Appendix C.
 [31
 
 ] (Thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 13259 strings out of 493323
- 232942 string characters out of 3139066
- 283194 words of memory out of 3000000
- 16701 multiletter control sequences out of 15000+200000
- 539700 words of font info for 58 fonts, out of 3000000 for 9000
+ 13269 strings out of 493323
+ 233046 string characters out of 3139066
+ 283263 words of memory out of 3000000
+ 16709 multiletter control sequences out of 15000+200000
+ 540319 words of font info for 60 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,19n,38p,10415b,275s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
@@ -1782,7 +1793,7 @@ m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis.pdf (33 pages, 223821 bytes).
+Output written on Thesis.pdf (33 pages, 234092 bytes).
 PDF statistics:
  172 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

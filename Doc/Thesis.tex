@@ -29,7 +29,8 @@
 	\tableofcontents
 
 \chapter{Introduction}
-	\section{Gravitational Waves}
+
+	\section{Gravitational Waves}\label{gravitational waves}
 	In 1915, Albert Einstein published his theory of general relativity.
 	
 	The seminal equation in this theory is:
@@ -92,18 +93,20 @@
 	\section{The LIGO Instrument}
 	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the interferometer as a measure of the differential arm length, it becomes a natural way of detecting gravitational waves.
 	
-	The LIGO instruments are considered dual-recycled Fabry-Perot interferometers
+	The LIGO instruments are considered dual-recycled Fabry-Perot interferometers.
 	
-		\subsection{Fabry-Perot Cavities}
+		\subsection{Simple Michaelson}
+		A simple interferometer consists of an input laser, a 50/50 beamsplitter, two mirrors and a photodetector at the output port to read the signal.
+		
+		In Peter Saulson's book, there is a simple explaination of the light field exiting the anti-symmetric port.
+		
+		
+		As show in section \ref{gravitational waves}, the gravitational wave will modulate the proper length between two free floating points in space. 
+	
+		\subsection{Fabry-Perot Cavities}\label{FP}
 		A Fabry-Perot cavity is an optical system comprised of two mirrors and one laser input. The very simple condition that once the laser has made a round trip around the optics, it is the same shape at the same point.  Conceptually, this may seem simple but in practice, controlling and sensing any optical cavity comes with many challenges.
 
-		Ray Trace: Round trip phase, cavity stability
-
-		TF: analytical derivation
-	
-		Important quantities: Finesse, cavity pole, free spectral range
-		
-		Effect of higher order modes into the cavity, mode scanning. All comes from round trip Gouy phase.
+		Appendix
 
 		References:[Black, Rick's Paper]
 
@@ -127,10 +130,20 @@
 		- Quantum Noise
 		- Seismic
 		- Thermal Noise
+	
+	
+	\section{The Effect of a Gravitational Wave on Interferometers}
+	
+		\subsection{Energy from a Gravitational Wave}
 		
-
+		\subsection{Signal to Noise}
+		
+		\subsection{Range}
+	
 	\section{Squeezed States of Light}
 	The Quantum Noise is a fundamental source that can be improved by modifying the quantum vacuum using correlated photons and injecting the states of light into the antisymmetric port of the interferometer.  Within the LIGO community, this procedure of modifying quantum vacuum is called squeezing. Caves analytically derived the effects of quantum noise on the interferometer as well as the improvement due to i
+	
+	
 	
 	References: [Caves, Dwyer, Kwee, Miao]
 		
@@ -140,11 +153,67 @@
 	References: [Kognelik and Li]
 	
 		\subsection{Gaussian Beam Optics}
-		When dealing with length sensing DOFs, the simple plane wave appoximation works, however, when trying to understand the misalignment and mode-mismatch signals, we require Gaussian beam optics
+		When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, we require Gaussian beam optics and associated higher order modes.
 		
 		Define a Gaussian beam:
 		
-		-Maxwell's equations + approximations =  Paraxial helmholtz equation
+		- Consider the famous Maxwell's equations in vacuum:
+		
+		\begin{equation}
+		\label{18.1:1}
+		\begin{aligned}
+		 \nabla \times \vec{E} &=-\frac{\partial \mathbf{B}} {\partial t},&
+		\\\nabla \cdot \vec{B} &=0&,
+		\\\nabla \times \mathbf{B} &= \mu\ \mathbf{J} + \frac{1}{c^2} \frac{\partial \mathbf{E}} {\partial t}&
+		\\
+		\nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon}&
+		\end{aligned}
+		\end{equation}
+		
+		- Concentrating on the electric field in vacuum, we arrive at the Helmholtz Equation
+		
+		\begin{equation}
+		(\nabla^2 + k^2 ) E(x,y,z) = 0
+		\end{equation}
+		
+		If we apply the paraxial approximations,
+		
+		\begin{subequations}
+		\begin{equation}\label{paraxiala}
+		\bigg| { \partial^2 u \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial u \over \partial z} } \bigg|
+		\end{equation}
+		\begin{equation}\label{paraxialb}
+		\bigg| { \partial^2 u \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial^2 u \over \partial x^2} } \bigg|
+		\end{equation}
+		\begin{equation}\label{paraxialc}
+		\bigg| { \partial^2 u \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial^2 u \over \partial y^2} } \bigg|
+		\end{equation}
+		\end{subequations}
+		
+		
+		- Now get the Paraxial Helmholtz Equation, with the transverse Laplacian operator:
+		
+		\begin{equation}
+		U(r) = A(r) e^{-ikz)}
+		\end{equation}
+		
+		\begin{equation}
+		\nabla_T^2 A(r) - i2k {\partial A(r) \over \partial z} = 0
+		\end{equation}
+		
+		where $\nabla_T^2 = {\partial^2  \over \partial x^2} + {\partial^2  \over \partial y^2} $ is the transverse Laplacian 
+		
+		- Solution to the Paraxial Helmholtz equation:
+		
+		\begin{equation} label{complexenvelope}
+		A(r) = \frac{A_0}{q(z)} e^{\frac{-ikr^2}{2q(z)}} , \quad q(z)=z+iz_0
+		\end{equation}
+		
+		where $z_0$ is the Rayleigh range and is directly proportional to the square of the waist size.  It is useful to rewrite $q(z)$ as
+		
+		\begin{equation}
+		\frac{1}{q(z)} = \frac{1}{R(z)} - i \frac{\lambda}{\pi W^2(z)}
+		\end{equation} 
 		
 		- Complex amplitude * phase
 		
@@ -153,6 +222,8 @@
 		- Radius of Curvature
 		
 		- Gouy Phase + graph
+		
+		- Intensity
 		
 		- HOM equation for LG and HG
 		
@@ -179,7 +250,7 @@
 	
 		\subsection{Effects of Mode-matching on Squeezing}
 		Still not clear to me.
-	
+		In the most simple sense, a loss is akin to coupling quantum vacuum into a squeezed state.
 		References: [Miao, Sheon?]
 	
 	
@@ -204,7 +275,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%
 \chapter{Mode Matching Cavities at Syracuse}
-
+In conjunction with Sandoval et al, the adaptive modematching table top experiment was able to show the feasibility of a fully dynamical system.
 	\section{Adaptive Mode Matching}
 	Real time digital system and model.
 	
@@ -217,7 +288,12 @@
 		
 	\section{Sensors}
 		\subsection{Bullseye Photodiodes}
-		Why do we need bullseye photodiodes
+		As stated in section [], we saw that the error signal for a mode-mismatched cavity has cylindrical symmetry due to the beating between the LG-01 and the LG-00 mode.  This means that the quadrant photodiodes would not have a way to detect the modal content of a cavity.  One way to solve this is to introduce a type of detector that can sense the power outside versus the power inside (ugh re write this).
+		
+		In [Rana's IO final design document] 
+		
+		
+		Why do we need bullseye photodiodes, meantion the geometry of the error signal.
 		
 		Derivations in the appendix.
 		
@@ -253,11 +329,7 @@
 	Current measurements of mode-matching.
 
 %%%%%%%%%%%%%%%%%%%%%%
-\chapter{High Power Commissioning}
-	\section{Effect on Mode-Matching}
-	What is the effect on mode-matching when you change the laser power?
 
-%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Solutions for Detector Upgrades}
 
 * SR3 Heater
@@ -283,6 +355,19 @@
 	\listoftables
 
 \begin{appendices}
+	
+	\chapter{Resonator Formulas}
+	
+	
+	Ray Trace: Round trip phase, cavity stability
+	
+	TF: analytical derivation
+	
+	Important quantities: Finesse, cavity pole, free spectral range
+	
+	Effect of higher order modes into the cavity, mode scanning. All comes from round trip Gouy phase.
+	
+	
 	\chapter{Bullseye Photodiode Characterization}
 	
 	\section{DC}
@@ -344,6 +429,12 @@
 	
 	\chapter{Overlap of Gaussian Beams}
 	
+	Referenced in section
+	
+	The full Gaussian beam overlap is important in quantitatively defining the amount of power loss obtained when a cavity is mismatched a incoming laser field.
+	
+	First we define an arbitrary Gaussian beam in cylindrical coordinates:
+	
 	\begin{equation}
 	\begin{split}
 	\ket{A(r)} 
@@ -352,21 +443,18 @@
 	\end{split}
 	\end{equation}
 	
-	where 
-	
-	$q(z) = z + iz_0$
-	
-	Dot product:
+	where $A_0$ is a real amplitude, $q(z)= z + i z_0$ is the complex beam parameter, $k$ is the wave number, and $r$ is the radial variable in the transverse direction.
+
+	First we normalize the overlap integral to unity:
 	\begin{equation}
 	\braket{A(r)|A(r)} 
-	=  \frac{A_0}{z^2+z_0^2} \int_{0}^{\infty} e^{\frac{-kr^2 z_0}{\abs{q(z)}^2}} 2 \pi r dr = 1
+	=  \frac{\rvert A_0 \rvert^2}{z^2+z_0^2} \int_{0}^{\infty} e^{\frac{-kr^2 z_0}{\abs{q(z)}^2}} 2 \pi r dr = 1
 	\end{equation}
 
 	Normalization factor is this:
 	\begin{equation}
 	A_0 = \sqrt{\frac{k z_0}{\pi}}
 	\end{equation}
-
 
 	For two Gaussian beams with arbitrary q-parameters
 	\begin{equation}
