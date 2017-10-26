@@ -205,7 +205,7 @@
 		
 		- Solution to the Paraxial Helmholtz equation:
 		
-		\begin{equation} label{complexenvelope}
+		\begin{equation} \label{complexenvelope}
 		A(r) = \frac{A_0}{q(z)} e^{\frac{-ikr^2}{2q(z)}} , \quad q(z)=z+iz_0
 		\end{equation}
 		
@@ -217,8 +217,23 @@
 		
 		- Complex amplitude * phase
 		
-		- Waist size and Beam Size
+		\begin{equation}
+		U(r) = A_0 \frac{W_0}{W(z)} e^{-\frac{r^2}{W^2(z)}} e^{-ikz - ik \frac{r^2}{2R(z)} + i \phi(z)}
+		\end{equation}
 		
+		- Waist size and Beam Size
+		\begin{subequations}
+		\begin{equation}
+		W(z) = W_0 \sqrt{1 + \bigg( \frac{z}{z_0} \bigg)^2}
+		\end{equation}
+		\begin{equation}
+		R(z) = z \bigg[ 1 + \bigg( \frac{z}{z_0} \bigg)^2 \bigg]
+		\end{equation}
+		
+		\end{subequations}
+
+
+
 		- Radius of Curvature
 		
 		- Gouy Phase + graph
