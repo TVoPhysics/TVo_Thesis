@@ -147,7 +147,7 @@
 	
 	References: [Caves, Dwyer, Kwee, Miao]
 		
-\chapter{The Effects of Mode-Matching}
+\chapter{The Fundamentals of Mode-Matching}
 	Theory section of modematching. Gaussian beams, define relevant quantities, Gouy Phase!
 	
 	References: [Kognelik and Li]
@@ -221,7 +221,7 @@
 		U(r) = A_0 \frac{W_0}{W(z)} e^{-\frac{r^2}{W^2(z)}} e^{-ikz - ik \frac{r^2}{2R(z)} + i \phi(z)}
 		\end{equation}
 		
-		- Waist size and Beam Size
+		where
 		\begin{subequations}
 		\begin{equation}
 		W(z) = W_0 \sqrt{1 + \bigg( \frac{z}{z_0} \bigg)^2}
@@ -229,12 +229,14 @@
 		\begin{equation}
 		R(z) = z \bigg[ 1 + \bigg( \frac{z}{z_0} \bigg)^2 \bigg]
 		\end{equation}
-		
+		\begin{equation}
+		\phi(z)= \text{tan}^{-1}\bigg(\frac{z}{z_0}\bigg)
+		\end{equation}
+		\begin{equation}
+		W_0 = \sqrt{\frac{\lambda z_0}{\pi}}
+		\end{equation}
 		\end{subequations}
 
-
-
-		- Radius of Curvature
 		
 		- Gouy Phase + graph
 		
@@ -278,7 +280,7 @@
 	
 	
 %%%%%%%%%%%%%%%%%%%%%%	
-\chapter{Modeling Mode-Matching}	
+\chapter{Simulating Mode-Matching with Finesse}	
 	\section{How it works}
 	Summary of how Finesse works (input output matrix), how it handles HOMs
 
@@ -297,7 +299,7 @@
 		* Optical Spring pops up at 7.4 Hz in the Signal-to-Darm TF, re-run with varying SRM Trans which should.
 
 %%%%%%%%%%%%%%%%%%%%%%
-\chapter{Mode Matching Cavities at Syracuse}
+\chapter{Experimental Mode Matching Cavities at Syracuse}
 In conjunction with Sandoval et al, the adaptive modematching table top experiment was able to show the feasibility of a fully dynamical system.
 	\section{Adaptive Mode Matching}
 	Real time digital system and model.

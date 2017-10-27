@@ -12,21 +12,21 @@
 \contentsline {subsection}{\numberline {1.3.2}Signal to Noise}{9}
 \contentsline {subsection}{\numberline {1.3.3}Range}{9}
 \contentsline {section}{\numberline {1.4}Squeezed States of Light}{9}
-\contentsline {chapter}{\numberline {2}The Effects of Mode-Matching}{11}
+\contentsline {chapter}{\numberline {2}The Fundamentals of Mode-Matching}{11}
 \contentsline {subsection}{\numberline {2.0.1}Gaussian Beam Optics}{11}
 \contentsline {subsection}{\numberline {2.0.2}Coupling Power to Higher Order Modes}{12}
-\contentsline {subsubsection}{Misalignment}{12}
+\contentsline {subsubsection}{Misalignment}{13}
 \contentsline {subsubsection}{Mode Mismatch}{13}
 \contentsline {subsection}{\numberline {2.0.3}Wavefront Sensing}{13}
 \contentsline {subsection}{\numberline {2.0.4}Effects of Mode-matching on Squeezing}{13}
-\contentsline {chapter}{\numberline {3}Modeling Mode-Matching}{15}
+\contentsline {chapter}{\numberline {3}Simulating Mode-Matching with Finesse}{15}
 \contentsline {section}{\numberline {3.1}How it works}{15}
 \contentsline {section}{\numberline {3.2}Finesse Simulations}{15}
 \contentsline {subsection}{\numberline {3.2.1}ALIGO Design with FC and Squeezer}{15}
 \contentsline {subsection}{\numberline {3.2.2}Looking at just Modal Change}{15}
 \contentsline {subsection}{\numberline {3.2.3}QM Limited Sensitivity}{15}
 \contentsline {section}{\numberline {3.3}Results}{15}
-\contentsline {chapter}{\numberline {4}Mode Matching Cavities at Syracuse}{17}
+\contentsline {chapter}{\numberline {4}Experimental Mode Matching Cavities at Syracuse}{17}
 \contentsline {section}{\numberline {4.1}Adaptive Mode Matching}{17}
 \contentsline {section}{\numberline {4.2}Actuators}{17}
 \contentsline {subsection}{\numberline {4.2.1}Thermal Lenses}{17}

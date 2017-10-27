@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  25 OCT 2017 09:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  26 OCT 2017 09:32
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1733,7 +1733,13 @@ Chapter 3.
 
 ]
 Chapter 4.
-[17] [18]
+[17]
+Overfull \hbox (29.97192pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/10 18 \OT1/cmr/m/sl/10 CHAPTER 4.  EXPERIMENTAL MODE MATCHING CAVI
+TIES AT SYRACUSE
+ []
+
+[18]
 Chapter 5.
 [19
 
@@ -1793,7 +1799,7 @@ m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis.pdf (35 pages, 235774 bytes).
+Output written on Thesis.pdf (35 pages, 236398 bytes).
 PDF statistics:
  178 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
