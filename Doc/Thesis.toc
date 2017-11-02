@@ -13,12 +13,11 @@
 \contentsline {subsection}{\numberline {1.3.3}Range}{9}
 \contentsline {section}{\numberline {1.4}Squeezed States of Light}{9}
 \contentsline {chapter}{\numberline {2}The Fundamentals of Mode-Matching}{11}
-\contentsline {subsection}{\numberline {2.0.1}Gaussian Beam Optics}{11}
-\contentsline {subsection}{\numberline {2.0.2}Coupling Power to Higher Order Modes}{12}
-\contentsline {subsubsection}{Misalignment}{13}
-\contentsline {subsubsection}{Mode Mismatch}{13}
-\contentsline {subsection}{\numberline {2.0.3}Wavefront Sensing}{13}
-\contentsline {subsection}{\numberline {2.0.4}Effects of Mode-matching on Squeezing}{13}
+\contentsline {section}{\numberline {2.1}Gaussian Beam Optics}{11}
+\contentsline {subsection}{\numberline {2.1.1}Misalignment}{13}
+\contentsline {subsection}{\numberline {2.1.2}Mode Mismatch}{13}
+\contentsline {section}{\numberline {2.2}Wavefront Sensing}{13}
+\contentsline {section}{\numberline {2.3}Effects of Mode-matching on Squeezing}{13}
 \contentsline {chapter}{\numberline {3}Simulating Mode-Matching with Finesse}{15}
 \contentsline {section}{\numberline {3.1}How it works}{15}
 \contentsline {section}{\numberline {3.2}Finesse Simulations}{15}
@@ -41,7 +40,8 @@
 \contentsline {chapter}{\numberline {6}Solutions for Detector Upgrades}{21}
 \contentsline {chapter}{Appendices}{27}
 \contentsline {chapter}{\numberline {A}Resonator Formulas}{29}
-\contentsline {chapter}{\numberline {B}Bullseye Photodiode Characterization}{31}
-\contentsline {section}{\numberline {B.1}DC}{31}
-\contentsline {section}{\numberline {B.2}RF}{31}
-\contentsline {chapter}{\numberline {C}Overlap of Gaussian Beams}{33}
+\contentsline {chapter}{\numberline {B}Higher Order Mode Coupling}{31}
+\contentsline {chapter}{\numberline {C}Bullseye Photodiode Characterization}{33}
+\contentsline {section}{\numberline {C.1}DC}{33}
+\contentsline {section}{\numberline {C.2}RF}{33}
+\contentsline {chapter}{\numberline {D}Overlap of Gaussian Beams}{35}

@@ -152,7 +152,7 @@
 	
 	References: [Kognelik and Li]
 	
-		\subsection{Gaussian Beam Optics}
+		\section{Gaussian Beam Optics}
 		When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, we require Gaussian beam optics and associated higher order modes.
 		
 		Define a Gaussian beam:
@@ -240,40 +240,55 @@
 		
 		- Gouy Phase + graph
 		
-		- Intensity
+		- Intensity and Power
+		
 		
 		- HOM equation for LG and HG
+		\begin{equation}	
+		\begin{aligned}
+		&U_{mn}(x,y,z) = A_{mn}\bigg[ \frac{W_0}{W(z)} \bigg] \mathbb{G}_m\Bigg( \frac{\sqrt{2}x}{W(z)}  \Bigg) \mathbb{G}_n\Bigg( \frac{\sqrt{2}y}{W(z)} \Bigg)\\
+		&\times \text{exp} \bigg\{ -ikz - \frac{ik(x^2+y^2)}{2R(z)} + i(m+n+1)\phi(z) \bigg\}
+		\end{aligned}
+		\end{equation}
 		
-		\subsection{Coupling Power to Higher Order Modes}
+		where,
+		\begin{equation}
+		\mathbb{G}_(u) = \mathbb{H}(u) \, \text{exp}(-u^2/2)
+		\end{equation}
 		
-		In general, there are a number of ways that a TEM00 mode can couple into higher order modes.  
+		\begin{equation}	
+		\begin{aligned}
+		&V_{\mu\nu}(\rho,\theta,z) = A_{\mu\nu}\bigg[ \frac{W_0}{W(z)} \bigg] \mathbb{L}^{\mu}_{\nu} \Bigg( \frac{\sqrt{2}x}{W(z)}  \Bigg) \\
+		&\times \text{exp} \bigg\{-ikz-\frac{ik(x^2+y^2)}{2R(z)} + i(m+n+1)\phi(z) \bigg\}
+		\end{aligned}
+		\end{equation}
 		
-		This can be broken up into two categories: mode misalignment and mode mismatch.  Everyone says it differently.
-		
-		Summarize the coupling [Anderson]
-		
-		Summarize the formalism with ket notation as a sum of the eigenmodes of a cavity.
-		References:[Anderson, Guido]
-		
-		
-			\subsubsection{Misalignment}
+
+			\subsection{Misalignment}\label{Misalignment}
+			
+			
 			Mode Misalignment: tilted axis, displaced axis
 			References: [Daniel and Nergis, own calculations]
-				
-			\subsubsection{Mode Mismatch}
+			
+			\subsection{Mode Mismatch}\label{Mode Match}
 			References: [Own Calculations]
 				
 		
-		\subsection{Wavefront Sensing}
-		- General Formulation
-			- Modulation and Demodulation
-			
-		- 
+		\section{Wavefront Sensing}
+		Heterodyne detection using a modal decomposition of the full electric field allows the use of wavefront sensors to extract an error signal from the optical system.  Ref[Sigg and Nergis] created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  
+		Consider a general equation for an electric field which solves the Helmholtz equation in the paraxial approximation
+		\begin{equation}
+		E(x,y,z) = \sum\limits_{m,n}^{\infty} a_{mn} U_{mn}(x,y,z)
+		\end{equation}
 		
+		where $ U_{mn}(x,y,z)$ are the eigenmodes of the described in Eq[] and $a_{mn}$ is the complex amplitude.  It is also convenient in the following analysis to use vectors when describing the composition of the electric fields.
 		
-		
+		\begin{equation}
+		\ket{E(x,y,z)} = \begin{pmatrix} E_{00} \\ E_{01} \\ E_{10} \\ \vdots \end{pmatrix}
+		\end{equation}
 
-		\subsection{Effects of Mode-matching on Squeezing}
+
+		\section{Effects of Mode-matching on Squeezing}
 		Still not clear to me.
 		In the most simple sense, a loss is akin to coupling quantum vacuum into a squeezed state.
 		References: [Miao, Sheon?]
@@ -380,7 +395,7 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 	\listoftables
 
 \begin{appendices}
-	
+
 	\chapter{Resonator Formulas}
 	
 	
@@ -391,6 +406,17 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 	Important quantities: Finesse, cavity pole, free spectral range
 	
 	Effect of higher order modes into the cavity, mode scanning. All comes from round trip Gouy phase.
+	
+	
+	\chapter{Higher Order Mode Coupling}
+	In general, there are a number of ways that a TEM00 mode can couple into higher order modes.  
+	
+	This can be broken up into two categories: mode misalignment and mode mismatch.  Everyone says it differently.
+	
+	Summarize the coupling [Anderson and Morrison]
+	
+	Summarize the formalism with ket notation as a sum of the eigenmodes of a cavity.
+	References:[Anderson, Guido]
 	
 	
 	\chapter{Bullseye Photodiode Characterization}
