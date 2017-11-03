@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{book}
+\documentclass[oneside]{book}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -9,13 +9,12 @@
 \usepackage{physics}
 \usepackage[toc,page]{appendix}
 \usepackage{braket}
+\usepackage[pagebackref]{hyperref}   
+
 
 \title{Adaptive Mode Matching in Advanced LIGO}
 \date{Spring 2017}
 \author{Thomas Vo}
-
-
-
 
 
 \begin{document}
@@ -84,14 +83,15 @@
 	
 	which shows us two very important points about the nature of gravitational waves.  Firstly, the effect is very small since the variation in the length is 
 	
-	Even with the theoretical formulation of gravitational waves resolved, the detection of gravitational waves by ground-based detectors was still a controversial topic among scientists in the field.  This was due to the incredible amount of accuracy needed to actually measure strain. 
+	Even with the theoretical formulation of gravitational waves resolved by the 1970s, detection of GWs by ground-based detectors was still a controversial topic among scientists in the field.  This was due to the incredible amount of accuracy needed to actually measure strain. 
 	
-	Even with some of the most energetic events known to humanity such as the merger of neutron stars and black holes, the amount of strain expected is on the order of 10e-24`
+	Even with some of the most energetic events known to humanity such as the merger of neutron stars and black holes, the amount of strain expected is on the order of 10e-24
 	
+	\cite{Saulson}
 	
 	
 	\section{The LIGO Instrument}
-	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the interferometer as a measure of the differential arm length, it becomes a natural way of detecting gravitational waves.
+	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the output as a measure of the differential arm length, it becomes a natural way of detecting gravitational waves.
 	
 	The LIGO instruments are considered dual-recycled Fabry-Perot interferometers.
 	
@@ -123,14 +123,16 @@
 		
 		References: [Kiwamu]
 		
-		\subsection{Noise Budget}
+		\subsection{Fundamental Noise Sources}
 		Ref: Evan Hall, GWINC
 
 		Noise budget:
-		- Quantum Noise
-		- Seismic
-		- Thermal Noise
-	
+
+		\subsubsection{Quantum Noise}
+		\subsubsection{Seismic Noise}
+		\subsubsection{Thermal Noise}
+		\subsubsection{Newtonian Noise}
+
 	
 	\section{The Effect of a Gravitational Wave on Interferometers}
 	
@@ -143,79 +145,81 @@
 	\section{Squeezed States of Light}
 	The Quantum Noise is a fundamental source that can be improved by modifying the quantum vacuum using correlated photons and injecting the states of light into the antisymmetric port of the interferometer.  Within the LIGO community, this procedure of modifying quantum vacuum is called squeezing. Caves analytically derived the effects of quantum noise on the interferometer as well as the improvement due to i
 	
-	
-	
 	References: [Caves, Dwyer, Kwee, Miao]
 		
 \chapter{The Fundamentals of Mode-Matching}
 	Theory section of modematching. Gaussian beams, define relevant quantities, Gouy Phase!
 	
+	In order to properly explain the effects of electromagnetic waves in the LIGO interferometers, it is useful to review the 
+	
 	References: [Kognelik and Li]
 	
 		\section{Gaussian Beam Optics}
-		When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, we require Gaussian beam optics and associated higher order modes.
+		When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, it is necessary to incorporate Gaussian beam optics and associated their higher order modes.
+
 		
-		Define a Gaussian beam:
-		
-		- Consider the famous Maxwell's equations in vacuum:
+		Consider the famous Maxwell's equations in vacuum:
 		
 		\begin{equation}
 		\label{18.1:1}
 		\begin{aligned}
-		 \nabla \times \vec{E} &=-\frac{\partial \mathbf{B}} {\partial t},&
-		\\\nabla \cdot \vec{B} &=0&,
+		 \nabla \times \mathbf{E} &=-\frac{\partial \mathbf{B}} {\partial t},&
+		\\\nabla \cdot \mathbf{B} &=0&,
 		\\\nabla \times \mathbf{B} &= \mu\ \mathbf{J} + \frac{1}{c^2} \frac{\partial \mathbf{E}} {\partial t}&
 		\\
 		\nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon}&
 		\end{aligned}
 		\end{equation}
 		
-		- Concentrating on the electric field in vacuum, we arrive at the Helmholtz Equation
 		
+		Concentrating on the electric field in vacuum, we arrive at the Helmholtz Equation
+		
+		\begin{equation}\label{Helmholtz}
+		(\nabla^2 + k^2 ) \mathbf{U}(\mathbf{r},t) = 0
+		\end{equation}
+	
+		
+		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\boldmath{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  
+		
+		It is possible to express the solution to Eq. \ref{Helmholtz} as
+		a plane wave with a slowly modulating complex envelope
 		\begin{equation}
-		(\nabla^2 + k^2 ) E(x,y,z) = 0
+		\mathbf{U}(\mathbf{r}) = \mathbf{A}(\mathbf{r}) e^{-ikz)}
 		\end{equation}
 		
-		If we apply the paraxial approximations,
+		Some approximations can be made to satisfy this point,
 		
 		\begin{subequations}
 		\begin{equation}\label{paraxiala}
-		\bigg| { \partial^2 u \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial u \over \partial z} } \bigg|
+		\bigg| { \partial^2 \mathbf{A} \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial \mathbf{A} \over \partial z} } \bigg|
 		\end{equation}
 		\begin{equation}\label{paraxialb}
-		\bigg| { \partial^2 u \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial^2 u \over \partial x^2} } \bigg|
+		\bigg| { \partial^2 \mathbf{A} \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial^2 \mathbf{A} \over \partial x^2} } \bigg|
 		\end{equation}
 		\begin{equation}\label{paraxialc}
-		\bigg| { \partial^2 u \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial^2 u \over \partial y^2} } \bigg|
+		\bigg| { \partial^2 \mathbf{A} \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial^2 \mathbf{A} \over \partial y^2} } \bigg|
 		\end{equation}
 		\end{subequations}
 		
+		By imposing the constraints which force the envelope to vary slowly with respect to the z-axis within the distance of one wavelength $\lambda = 2\pi/k]$, a different partial differential equation arises called the Paraxial Helmholtz Equation:
 		
-		- Now get the Paraxial Helmholtz Equation, with the transverse Laplacian operator:
-		
-		\begin{equation}
-		U(r) = A(r) e^{-ikz)}
-		\end{equation}
-		
-		\begin{equation}
+		\begin{equation}\label{paraHelmholtz}
 		\nabla_T^2 A(r) - i2k {\partial A(r) \over \partial z} = 0
 		\end{equation}
 		
-		where $\nabla_T^2 = {\partial^2  \over \partial x^2} + {\partial^2  \over \partial y^2} $ is the transverse Laplacian 
-		
-		- Solution to the Paraxial Helmholtz equation:
+		where $\nabla_T^2 = {\partial^2  \over \partial x^2} + {\partial^2  \over \partial y^2} $ is the transverse Laplacian.  A simple solution for Eq.\ref{paraHelmholtz} is the complex paraboloidal wave
 		
 		\begin{equation} \label{complexenvelope}
 		A(r) = \frac{A_0}{q(z)} e^{\frac{-ikr^2}{2q(z)}} , \quad q(z)=z+iz_0
 		\end{equation}
 		
-		where $z_0$ is the Rayleigh range and is directly proportional to the square of the waist size.  It is useful to rewrite $q(z)$ as
+		where $z_0$ is the Rayleigh range and is directly proportional to the square of the waist size.  In order to separate the amplitude and phase portions of the wave, it is useful to rewrite $q(z)$ as
 		
-		\begin{equation}
+		\begin{equation}\label{invq}
 		\frac{1}{q(z)} = \frac{1}{R(z)} - i \frac{\lambda}{\pi W^2(z)}
 		\end{equation} 
 		
-		- Complex amplitude * phase
+		Plugging Eq.\ref{invq} into \ref{complexenvelope} leads directly to the complex amplitude for a Gaussian Beam
 		
 		\begin{equation}
 		U(r) = A_0 \frac{W_0}{W(z)} e^{-\frac{r^2}{W^2(z)}} e^{-ikz - ik \frac{r^2}{2R(z)} + i \phi(z)}
@@ -243,7 +247,6 @@
 		- Intensity and Power
 		
 		
-		- HOM equation for LG and HG
 		\begin{equation}	
 		\begin{aligned}
 		&U_{mn}(x,y,z) = A_{mn}\bigg[ \frac{W_0}{W(z)} \bigg] \mathbb{G}_m\Bigg( \frac{\sqrt{2}x}{W(z)}  \Bigg) \mathbb{G}_n\Bigg( \frac{\sqrt{2}y}{W(z)} \Bigg)\\
@@ -264,18 +267,21 @@
 		\end{equation}
 		
 
-			\subsection{Misalignment}\label{Misalignment}
+		\subsection{Misalignment}\label{Misalignment}
 			
-			
+		Figure: Misalignments
+		
 			Mode Misalignment: tilted axis, displaced axis
 			References: [Daniel and Nergis, own calculations]
 			
-			\subsection{Mode Mismatch}\label{Mode Match}
+		\subsection{Mode Mismatch}\label{Mode Match}
+		Figure: Modematching
 			References: [Own Calculations]
 				
 		
 		\section{Wavefront Sensing}
-		Heterodyne detection using a modal decomposition of the full electric field allows the use of wavefront sensors to extract an error signal from the optical system.  Ref[Sigg and Nergis] created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  
+		Heterodyne detection using a modal decomposition of the full electric field allows the use of wavefront sensors to extract an error signal from the optical system.  Hefetz et.al Ref[Sigg and Nergis] created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  
+		
 		Consider a general equation for an electric field which solves the Helmholtz equation in the paraxial approximation
 		\begin{equation}
 		E(x,y,z) = \sum\limits_{m,n}^{\infty} a_{mn} U_{mn}(x,y,z)
@@ -287,18 +293,19 @@
 		\ket{E(x,y,z)} = \begin{pmatrix} E_{00} \\ E_{01} \\ E_{10} \\ \vdots \end{pmatrix}
 		\end{equation}
 
+		Figure: Beat frequency between two modes.
 
 		\section{Effects of Mode-matching on Squeezing}
 		Still not clear to me.
 		In the most simple sense, a loss is akin to coupling quantum vacuum into a squeezed state.
-		References: [Miao, Sheon?]
+		References: [Miao, Sheon, Kimble, Dwyer]
 	
 	
 %%%%%%%%%%%%%%%%%%%%%%	
 \chapter{Simulating Mode-Matching with Finesse}	
 	\section{How it works}
 	Summary of how Finesse works (input output matrix), how it handles HOMs
-
+	\cite{Saulson}
 	\section{Finesse Simulations}
 		\subsection{ALIGO Design with FC and Squeezer}
 		\subsection{Looking at just Modal Change}
@@ -310,7 +317,7 @@
 		* Mismatches before the OMC
 			
 		* Mismatch contour graph: Comparing all of ALIGO cavities
-			
+		
 		* Optical Spring pops up at 7.4 Hz in the Signal-to-Darm TF, re-run with varying SRM Trans which should.
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -519,6 +526,12 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 	\end{equation}
 
 \end{appendices} 
+
+\medskip
+
+\bibliographystyle{unsrt}
+\bibliography{Refs}
+
 
 
 \end{document}
