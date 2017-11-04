@@ -179,16 +179,16 @@
 		\end{equation}
 	
 		
-		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\boldmath{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  
+		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\mathbf{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  
 		
 		It is possible to express the solution to Eq. \ref{Helmholtz} as
-		a plane wave with a slowly modulating complex envelope
+		a plane wave with a modulated complex envelope
 		\begin{equation}
 		\mathbf{U}(\mathbf{r}) = \mathbf{A}(\mathbf{r}) e^{-ikz)}
 		\end{equation}
 		
-		Some approximations can be made to satisfy this point,
-		
+		By imposing the constraints which force the envelope to vary slowly with respect to the z-axis within the distance of one wavelength $\lambda = 2\pi/k$,
+
 		\begin{subequations}
 		\begin{equation}\label{paraxiala}
 		\bigg| { \partial^2 \mathbf{A} \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial \mathbf{A} \over \partial z} } \bigg|
@@ -201,7 +201,7 @@
 		\end{equation}
 		\end{subequations}
 		
-		By imposing the constraints which force the envelope to vary slowly with respect to the z-axis within the distance of one wavelength $\lambda = 2\pi/k]$, a different partial differential equation arises called the Paraxial Helmholtz Equation:
+		the partial differential equation which arises is called the Paraxial Helmholtz Equation:
 		
 		\begin{equation}\label{paraHelmholtz}
 		\nabla_T^2 A(r) - i2k {\partial A(r) \over \partial z} = 0
@@ -210,7 +210,7 @@
 		where $\nabla_T^2 = {\partial^2  \over \partial x^2} + {\partial^2  \over \partial y^2} $ is the transverse Laplacian.  A simple solution for Eq.\ref{paraHelmholtz} is the complex paraboloidal wave
 		
 		\begin{equation} \label{complexenvelope}
-		A(r) = \frac{A_0}{q(z)} e^{\frac{-ikr^2}{2q(z)}} , \quad q(z)=z+iz_0
+		A(\mathbf{r}) = \frac{A_0}{q(z)} e^{\frac{-ikr^2}{2q(z)}} , \quad q(z)=z+iz_0
 		\end{equation}
 		
 		where $z_0$ is the Rayleigh range and is directly proportional to the square of the waist size.  In order to separate the amplitude and phase portions of the wave, it is useful to rewrite $q(z)$ as
@@ -246,8 +246,9 @@
 		
 		- Intensity and Power
 		
-		
-		\begin{equation}	
+		\subsubsection{Hermite-Gauss Modes}
+		The fundamental Gaussian beam is not the only solution which can be used to solve Eq.\ref{paraHelmholtz}.  In fact, there exists a complete set of solutions that can solve the paraxial Helmholtz Equation, which are referred to as the higher order modes (HOMs)
+		\begin{equation}\label{HG}
 		\begin{aligned}
 		&U_{mn}(x,y,z) = A_{mn}\bigg[ \frac{W_0}{W(z)} \bigg] \mathbb{G}_m\Bigg( \frac{\sqrt{2}x}{W(z)}  \Bigg) \mathbb{G}_n\Bigg( \frac{\sqrt{2}y}{W(z)} \Bigg)\\
 		&\times \text{exp} \bigg\{ -ikz - \frac{ik(x^2+y^2)}{2R(z)} + i(m+n+1)\phi(z) \bigg\}
@@ -259,22 +260,41 @@
 		\mathbb{G}_(u) = \mathbb{H}(u) \, \text{exp}(-u^2/2)
 		\end{equation}
 		
-		\begin{equation}	
+		and $ \mathbb{H}(u)$ are the well known Hermite polynomials.  It is important to mention that the Gouy phase of the complex amplitude is different than the fundamental Gaussian beam by a factor of $(m + n + 1)$. Also, the intensity distribution of these higher order modes are much different. Both of these facts will become extremely important in the following wavefront sensing discussion.
+		
+		\subsubsection{Laguerre Modes}
+		Another complete set of alternative solutions to Eq.\ref{paraHelmholtz} exists which are called the Laguerre-Gauss modes
+		
+		\begin{equation}\label{LG}
 		\begin{aligned}
 		&V_{\mu\nu}(\rho,\theta,z) = A_{\mu\nu}\bigg[ \frac{W_0}{W(z)} \bigg] \mathbb{L}^{\mu}_{\nu} \Bigg( \frac{\sqrt{2}x}{W(z)}  \Bigg) \\
-		&\times \text{exp} \bigg\{-ikz-\frac{ik(x^2+y^2)}{2R(z)} + i(m+n+1)\phi(z) \bigg\}
+		&\times \text{exp} \bigg\{-ikz-\frac{ik\rho^2}{2R(z)} + i(\mu+2\nu+1)\phi(z) \bigg\}
 		\end{aligned}
 		\end{equation}
 		
-
-		\subsection{Misalignment}\label{Misalignment}
-			
-		Figure: Misalignments
+		where $\mathbb{L}^{\mu}_{\nu} \Bigg( \frac{\sqrt{2}x}{W(z)}  \Bigg)$ is the Laguerre polynomial function. Both equations \ref{HG} and \ref{LG} are able to fully describe any complex electromagnetic amplitude; and because they both form complete sets, there is a rotation which can map from one basis to the other [ref Bond and Biejergasern]
 		
-			Mode Misalignment: tilted axis, displaced axis
-			References: [Daniel and Nergis, own calculations]
+		\begin{equation}
+		U^{LG}_{\mu \nu} (x,y,z) = \sum\limits_{k}^{N} i^k b(n,m,k) U^{HG}_{N-k,k} (x,y,z)
+		\end{equation}
+		where
+		\begin{equation}
+		b(n,m,k) = \sqrt{\bigg( \frac{(N-k)!k!}{2^N n!m!} \bigg)} \frac{1}{k!} \frac{\text{d}^k}{\text{d}t^k}[(1-t)^m (1+t)^m]\vert_{t=0}
+		\end{equation}
+
+		\subsection{Misalignment and Mode Mismatch}\label{Misalignment}
+		Morrison and Anderson derived a simplistic way of how small misalignments and mismodematched cavities can couple the fundamental Gaussian beam mode into various higher order modes.
+		
+		Consider Eq.\ref{HG} in a more simplified form:
+		
+		
+		
+		
+		Mode Misalignment: tilted axis, displaced axis
+		References: [Daniel and Nergis, own calculations]
 			
-		\subsection{Mode Mismatch}\label{Mode Match}
+		
+		
 		Figure: Modematching
 			References: [Own Calculations]
 				
@@ -282,7 +302,7 @@
 		\section{Wavefront Sensing}
 		Heterodyne detection using a modal decomposition of the full electric field allows the use of wavefront sensors to extract an error signal from the optical system.  Hefetz et.al Ref[Sigg and Nergis] created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  
 		
-		Consider a general equation for an electric field which solves the Helmholtz equation in the paraxial approximation
+		Consider a general equation for an electric field which is a linear combination of all higher order modes of the complex amplitude
 		\begin{equation}
 		E(x,y,z) = \sum\limits_{m,n}^{\infty} a_{mn} U_{mn}(x,y,z)
 		\end{equation}
@@ -293,6 +313,56 @@
 		\ket{E(x,y,z)} = \begin{pmatrix} E_{00} \\ E_{01} \\ E_{10} \\ \vdots \end{pmatrix}
 		\end{equation}
 
+		\begin{equation} \label{misalign_matrix}
+		\hat{\Theta}_{\mu \nu} = 
+		\begin{pmatrix}
+		   1			&2i\theta_x		&2i\theta_y		& 0 & 0
+		\\ 2i\theta_x	&1				&0				& 0	& 0
+		\\ 2i\theta_y	&0				&1				& 0	& 0
+		\\ 0			&0				&0				& 1	& 0
+		\\ 0			&0				&0				& 0	& 1
+		\end{pmatrix}
+		\end{equation}
+
+		\begin{equation} \label{mistrans_matrix}
+		\hat{\mathbb{D}}_{\mu \nu} = 
+		\begin{pmatrix}
+			1					&\alpha_x/\omega_{0}	&\alpha_y/\omega_{0}	& 0 & 0
+		\\ \alpha_x/\omega_{0}	&1						&0						& 0 & 0
+		\\ \alpha_y/\omega_{0}	&0						&1						& 0	& 0
+		\\ 0					&0						&0						& 1	& 0
+		\\ 0					&0						&0						& 0 & 1 
+		\end{pmatrix}
+		\end{equation}
+		
+		
+		\begin{equation} \label{waistloc_matrix}
+		\hat{\mathbb{Z}}_{\mu \nu} = 
+		\begin{pmatrix}
+		1				&0		&0		&\Delta z_x 	&\Delta z_y  
+		\\ 0			&1		&0		&0 				&0
+		\\ 0			&0		&1		&0 				&0
+		\\ \Delta z_x	&0		&0		&1 				&0
+		\\ \Delta z_y	&0		&0		&0				&1 
+		\end{pmatrix}
+		\end{equation}
+		
+		where $\Delta z_{(x,y)} =  \frac{i}{\sqrt{2}} \frac{\lambda b }{2\pi \omega_{0}} $
+		
+		
+		\begin{equation} \label{waistsize_matrix}
+		\hat{\mathbb{Z}}_{0, \mu \nu} = 
+		\begin{pmatrix}
+		1					&0		&0		&\Delta z_{0,x} 	&\Delta z_{0,y} 
+		\\ 0				&1		&0		&0 					&0
+		\\ 0				&0		&1		&0 					&0
+		\\ \Delta z_{0,x} 	&0		&0		&1 					&0
+		\\ \Delta z_{0,y} 	&0		&0		&0					&1 
+		\end{pmatrix}
+		\end{equation}
+
+		where $\Delta z_{0,(x,y)} =   \frac{1}{\sqrt{2}} \frac{\omega'-\omega_{0}}{\omega_{0}} $
+
 		Figure: Beat frequency between two modes.
 
 		\section{Effects of Mode-matching on Squeezing}
@@ -302,10 +372,9 @@
 	
 	
 %%%%%%%%%%%%%%%%%%%%%%	
-\chapter{Simulating Mode-Matching with Finesse}	
+e\chapter{Simulating Mode-Matching with Finesse}	
 	\section{How it works}
 	Summary of how Finesse works (input output matrix), how it handles HOMs
-	\cite{Saulson}
 	\section{Finesse Simulations}
 		\subsection{ALIGO Design with FC and Squeezer}
 		\subsection{Looking at just Modal Change}

@@ -18,34 +18,35 @@
 \contentsline {section}{\numberline {1.4}Squeezed States of Light}{6}{section.1.4}
 \contentsline {chapter}{\numberline {2}The Fundamentals of Mode-Matching}{8}{chapter.2}
 \contentsline {section}{\numberline {2.1}Gaussian Beam Optics}{8}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Misalignment}{10}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Mode Mismatch}{10}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Wavefront Sensing}{10}{section.2.2}
-\contentsline {section}{\numberline {2.3}Effects of Mode-matching on Squeezing}{11}{section.2.3}
-\contentsline {chapter}{\numberline {3}Simulating Mode-Matching with Finesse}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}How it works}{12}{section.3.1}
-\contentsline {section}{\numberline {3.2}Finesse Simulations}{12}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}ALIGO Design with FC and Squeezer}{12}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Looking at just Modal Change}{12}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}QM Limited Sensitivity}{12}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Results}{12}{section.3.3}
-\contentsline {chapter}{\numberline {4}Experimental Mode Matching Cavities at Syracuse}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Adaptive Mode Matching}{13}{section.4.1}
-\contentsline {section}{\numberline {4.2}Actuators}{13}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Thermal Lenses}{13}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Translation Stages}{13}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Sensors}{13}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Bullseye Photodiodes}{13}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Mode Converters}{14}{subsection.4.3.2}
-\contentsline {chapter}{\numberline {5}Mode Matching Cavities at LIGO Hanford}{15}{chapter.5}
-\contentsline {section}{\numberline {5.1}Active Wavefront Control System}{15}{section.5.1}
-\contentsline {section}{\numberline {5.2}SRC}{15}{section.5.2}
-\contentsline {section}{\numberline {5.3}Beam Jitter}{15}{section.5.3}
-\contentsline {chapter}{\numberline {6}Solutions for Detector Upgrades}{16}{chapter.6}
-\contentsline {chapter}{Appendices}{19}{section*.10}
-\contentsline {chapter}{\numberline {A}Resonator Formulas}{20}{Appendix.a.A}
-\contentsline {chapter}{\numberline {B}Higher Order Mode Coupling}{21}{Appendix.a.B}
-\contentsline {chapter}{\numberline {C}Bullseye Photodiode Characterization}{22}{Appendix.a.C}
-\contentsline {section}{\numberline {C.1}DC}{22}{section.a.C.1}
-\contentsline {section}{\numberline {C.2}RF}{22}{section.a.C.2}
-\contentsline {chapter}{\numberline {D}Overlap of Gaussian Beams}{24}{Appendix.a.D}
+\contentsline {subsubsection}{Hermite-Gauss Modes}{10}{section*.8}
+\contentsline {subsubsection}{Laguerre Modes}{10}{section*.9}
+\contentsline {subsection}{\numberline {2.1.1}Misalignment and Mode Mismatch}{11}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Wavefront Sensing}{11}{section.2.2}
+\contentsline {section}{\numberline {2.3}Effects of Mode-matching on Squeezing}{12}{section.2.3}
+\contentsline {chapter}{\numberline {3}Simulating Mode-Matching with Finesse}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}How it works}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Finesse Simulations}{13}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}ALIGO Design with FC and Squeezer}{13}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Looking at just Modal Change}{13}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}QM Limited Sensitivity}{13}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Results}{13}{section.3.3}
+\contentsline {chapter}{\numberline {4}Experimental Mode Matching Cavities at Syracuse}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Adaptive Mode Matching}{14}{section.4.1}
+\contentsline {section}{\numberline {4.2}Actuators}{14}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Thermal Lenses}{14}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Translation Stages}{14}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Sensors}{14}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Bullseye Photodiodes}{14}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Mode Converters}{15}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {5}Mode Matching Cavities at LIGO Hanford}{16}{chapter.5}
+\contentsline {section}{\numberline {5.1}Active Wavefront Control System}{16}{section.5.1}
+\contentsline {section}{\numberline {5.2}SRC}{16}{section.5.2}
+\contentsline {section}{\numberline {5.3}Beam Jitter}{16}{section.5.3}
+\contentsline {chapter}{\numberline {6}Solutions for Detector Upgrades}{17}{chapter.6}
+\contentsline {chapter}{Appendices}{20}{section*.12}
+\contentsline {chapter}{\numberline {A}Resonator Formulas}{21}{Appendix.a.A}
+\contentsline {chapter}{\numberline {B}Higher Order Mode Coupling}{22}{Appendix.a.B}
+\contentsline {chapter}{\numberline {C}Bullseye Photodiode Characterization}{23}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}DC}{23}{section.a.C.1}
+\contentsline {section}{\numberline {C.2}RF}{23}{section.a.C.2}
+\contentsline {chapter}{\numberline {D}Overlap of Gaussian Beams}{25}{Appendix.a.D}
