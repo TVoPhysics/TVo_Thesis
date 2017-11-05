@@ -1,4 +1,6 @@
 \documentclass[oneside]{book}
+\usepackage[margin=1.0in]{geometry}
+\usepackage{setspace}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -18,6 +20,8 @@
 
 
 \begin{document}
+	
+\doublespacing
 		\chapter*{Abstract}
 		Going to make LIGO the best possible ever.
 	
@@ -71,8 +75,23 @@
 	\end{pmatrix}
 	\end{equation}
 
-	One can ask if a gravitational wave passed by a pair of particles separated by length $L$, what would be the effect on the distance between the two points?  The proper distance is defined as
+	Add Figure of GWs
+
+	It is natural to attempt to understand the physical interpretation of Eq.\ref{gwamp} as an affect on the position of a free floating particle. Consider the four-velocity, $U^{\alpha}$, in the transverse traceless gauge where the coordinate itself is attached the particles and incorporates any small wiggles that would shake the coordinates.  Of course, any free particles will follow the geodesic equation
 	
+	\begin{equation}\label{geodesic}
+	\nabla U^{\alpha} = \frac{\text{d}}{\text{d} \tau} U^{\alpha} + \Gamma^{\alpha}_{\mu \nu} U^{\mu} U^{\nu} = 0
+	\end{equation}	
+	where $\Gamma^{\alpha}_{\mu \nu} = \frac{1}{2} g^{\gamma \alpha}(g_{\gamma \mu, \nu} + g_{\gamma \nu,\mu} - g_{\mu \nu, \gamma} )$ are the famous Christoffel symbols.
+	By evaluating the first term of the acceleration in Eq.\ref{geodesic},
+	\begin{equation}\label{accel}
+	\bigg(\frac{\text{d}U^{\alpha}}{\text{d}\tau}\bigg)_0 = -\Gamma^{\alpha}_{00} 
+	\\ = \frac{1}{2} \eta_{\mu \nu} (h_{\beta 0, 0} + h_{0 \beta, 0} + h_{0 0, \beta} )
+	\end{equation}
+	However, comparing Eq.\ref{gwamp} and Eq.\ref{accel}, it is clear that if the particle is initially at rest, then a moment later it is still at rest! The term "at rest" is actually used liberally here since the coordinate system varies along with the gravitational wave. 
+	
+	Alternatively, one can ask if a gravitational wave passed by a pair of particles separated by length $L$, what would be the effect on the distance between two points?  The proper distance is defined as
+
 	\begin{equation}\label{propdist}
 	\delta l
 	= \int{g_{\mu \nu} dx^{\mu} dx^{\nu}} \\
@@ -81,10 +100,13 @@
 	\approx [ 1 + \frac{1}{2} h_{xx}(x=0)] L
 	\end{equation} 
 	
-	which shows us two very important points about the nature of gravitational waves.  Firstly, the effect is very small since the variation in the length is 
+	which shows us two very important points about the nature of gravitational waves.  Firstly, the effect is very small since the length variation is, by definition, a small perturbation in flat space-time.  Secondly, the effect is proportional to the initial separation between the particles. This means a detector which is large will have a better chance to measure these small effects, a point that drove the design of the Laser Interferometer Gravitational-Wave Interferometer (LIGO).
 	
+	\subsection{Measuring Gravitational Waves with Light}
 	Even with the theoretical formulation of gravitational waves resolved by the 1970s, detection of GWs by ground-based detectors was still a controversial topic among scientists in the field.  This was due to the incredible amount of accuracy needed to actually measure strain. 
 	
+	
+	\subsection{Sources of Gravitational Waves}
 	Even with some of the most energetic events known to humanity such as the merger of neutron stars and black holes, the amount of strain expected is on the order of 10e-24
 	
 	\cite{Saulson}
@@ -347,7 +369,7 @@
 		\end{pmatrix}
 		\end{equation}
 		
-		where $\Delta z_{(x,y)} =  \frac{i}{\sqrt{2}} \frac{\lambda b }{2\pi \omega_{0}} $
+		where $\Delta z_{(x,y)} =  \frac{i}{\sqrt{2}} \frac{\lambda b}{2\pi\omega_{0}} $
 		
 		
 		\begin{equation} \label{waistsize_matrix}
