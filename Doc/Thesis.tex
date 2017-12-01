@@ -109,7 +109,6 @@
 	
 	\subsection{Signal to Noise}
 	
-	\subsection{Range}
 	\subsection{Sources of Gravitational Waves}
 	\subsubsection{Compact Binary Inspirals}
 	\subsubsection{Continuous Waves}
@@ -132,6 +131,8 @@
 		
 		In Peter Saulson's book, there is a simple explaination of the light field exiting the anti-symmetric port.
 		
+		However, the signal is proportional to the square of the strain, not good.
+		[Black Paper on Signal extraction]
 		
 		As show in section \ref{gravitational waves}, the gravitational wave will modulate the proper length between two free floating points in space. 
 	
@@ -287,6 +288,10 @@
 		
 		and $ \mathbb{H}(u)$ are the well known Hermite polynomials.  It is important to mention that the Gouy phase of the complex amplitude is different than the fundamental Gaussian beam by a factor of $(m + n + 1)$. Also, the intensity distribution of these higher order modes are much different. Both of these facts will become extremely important in the following wavefront sensing discussion.
 		
+		It is useful to normalize the Hermite-Gauss modes with respect to the overall power, which are derived in Appendix[].
+		
+		
+		
 		\subsubsection{Laguerre Modes}
 		Another complete set of alternative solutions to Eq.\ref{paraHelmholtz} exists which are called the Laguerre-Gauss modes
 		
@@ -308,16 +313,60 @@
 		\end{equation}
 
 		\subsection{Misalignment and Mode Mismatch}\label{Misalignment}
-		Morrison and Anderson derived a simplistic way of how small misalignments and mismodematched cavities can couple the fundamental Gaussian beam mode into various higher order modes.
+		Morrison and Anderson derived a simplistic way of how small misalignments and mismodematched cavities can couple the fundamental Gaussian beam into various higher order modes.  This is done by taking a linear cavity and using its perfectly matched Gaussian beam as a reference, and then varying the input electric field with small perturbations and expanding in terms of the cavity modes.  As long as the mismatches are small, it is possible to consider only the first few terms of the expansion which have gained power from the fundamental mode.
 		
-		Consider Eq.\ref{HG} in a more simplified form:
+		Consider the first three modes of Eq.\ref{HG} in one dimension and normalized to set the total optical power to unity (derived in Appendix[]):
+
+		\begin{equation}
+		\label{Gauss1D}
+		\begin{aligned}
+				U_{0}(r) & =	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  e^{-r^2/w^2(z)}		&
+		\\		U_{1}(r) &	=	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  \frac{2r}{w(z)} \quad e^{-r^2/w^2(z)}&,
+		\\	 	U_{2}(r) &	=	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  \bigg( \frac{r^2}{w^2(z)} - \frac{1}{4} \bigg)   e^{-r^2/w^2(z)}
+		\end{aligned}
+		\end{equation}
+				
+		
+		\subsubsection{Beam Axis Tilted}
+		If the input beam into an optical cavity is tilted by an angle $\alpha$ with respect to the nominal cavity axis as shown in Figure [], the wave front of the input beam will have an extra phase propagation relative to the cavity that is approximately proportional to $e^{ik \alpha r}$.  By implementing the small angle approximation, which is valid if the misalignment is much smaller than the divergence angle of the fundamental mode $k \alpha r << 1$, the resultant input beam is
+		
+		\begin{equation}
+		\Psi \approx U_{0}(r) e^{ik \alpha r} \approx U_{0}(r) ( 1 + ik \alpha r ) =  U_{0}(r) + \frac{ik \alpha w(z)}{\sqrt{2\pi}} U_{1}(r)
+		\end{equation}
+		
+		Here the factor associated with the first higher order mode is complex, indicating there is a 90 degree phase difference between the fundamental and off axis mode. 
+		\subsubsection{Beam Axis Displaced}
+		If the input beam is displaced in the transverse direction by a quantity $\Delta r$, the resultant waveform will be
+		
+		\begin{equation}
+		\begin{aligned}
+			\Psi 	&=  		U_{0}(r + \Delta r	) 
+			\\		&= 			\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  e^{-(r+\Delta r)^2/w^2(z)}
+			\\		&= 			\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  e^{-(r^2 + 2r \Delta r  + \Delta r^2)/w^2(z)}
+			\\		&\approx 	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  e^{-r^2/w^2(z)} e^{-2r \Delta r/w^2(z)}
+			\\		&\approx 	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  e^{-r^2/w^2(z)} \bigg(1 - \frac{2r \Delta r}{w^2(z)} \bigg)
+			\\		&=			\bigg( U_0(r) - \sqrt{\frac{2}{\pi}} \frac{\Delta r }{w(z)} U_1(r)	 \bigg)
+		\end{aligned}
+		\end{equation} 
+		
+		Similarly to a tilted input beam axis, the displaced beam axis couples power to the first higher order mode, however, the latter does not have a 90 degree phase difference previously seen in the former.  This point is of extreme importance when trying to discern between the two effects as shown in Section [].  Although comparing the two cases in Figure, one can already seen the difference between the wavefronts in the near field, $z<<z_R$, and the far field, $z>>z_R$.  
+		
+		In the near field, there is no phase difference due to a displaced beam, but there is one for a tilted beam.  Conversely, in the far field, there is no phase difference due to a tilted beam, but there is one from a displaced beam.  In order to implement a closed loop feedback system, the wavefront sensors discussed in Section[] will use this precise logic to extract an error signal.
+		
+		\subsubsection{Waist Size Shifted}
 		
 		
-		
-		
-		Mode Misalignment: tilted axis, displaced axis
-		References: [Daniel and Nergis, own calculations]
-			
+		\begin{equation}
+		\begin{aligned}
+		\Psi 	&=  		U_{0} \big(r,w(z) = w_0/(1+\epsilon) \big) 
+		\\		&= 			\bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \sqrt{1 + \epsilon} \quad e^{-r^2 (1+\epsilon)^2/w_0^2 }
+		\\		&\approx 	\bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} (1 + \epsilon /2) \quad e^{-r^2/w_0^2} \quad e^{-2r^2\epsilon/w_0^2} 
+		\\		&\approx 	\bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} (1 + \epsilon /2) \quad e^{-r^2/w_0^2} \quad (1-2r^2\epsilon/w_0^2)
+		\\		&\approx 	\bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \bigg(1+ 2\epsilon\bigg(\frac{1}{4} - \frac{r^2}{w_0^2}\bigg) \bigg ) \quad e^{-r^2/w_0^2}	
+		\\		&=			U_0(r) \, + \, 2\epsilon U_2(r)
+		\end{aligned}
+		\end{equation}
+		\subsubsection{Waist Position Shifted}
 		
 		
 		Figure: Modematching
@@ -326,6 +375,8 @@
 		
 		\section{Wavefront Sensing}
 		Heterodyne detection using a modal decomposition of the full electric field allows the use of wavefront sensors to extract an error signal from the optical system.  Hefetz et.al Ref[Sigg and Nergis] created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  
+		
+		Fundamentally, the purpose of wavefront sensing is to detect the content of higher order modes due to physical disturbances of the optical cavity (ie. mode mismatch or misalignment).  In other words, it is examining the difference of basis sets between the incoming eigenmodes and the cavity eigenmodes.
 		
 		Consider a general equation for an electric field which is a linear combination of all higher order modes of the complex amplitude
 		\begin{equation}
@@ -337,6 +388,43 @@
 		\begin{equation}
 		\ket{E(x,y,z)} = \begin{pmatrix} E_{00} \\ E_{01} \\ E_{10} \\ \vdots \end{pmatrix}
 		\end{equation}
+
+		When creating a theory that involves laser beams, it is useful to define operators that are important in describing physical situations.  For example, laser beams propagate through space and pick up phase according to Eq.\ref{HG} which can be represented by the spatial propagation operator,
+		
+		\begin{equation}
+		\hat{P}_{mn,kl} = \delta_{mn} \delta_{kl} \quad \text{exp}[-ik(z_2 - z_1)] 
+		\\ \text{exp}[i(m+n+1)\phi(z)]
+		\end{equation}
+
+		However, it is useful to compare how the fundamental Gaussian mode propagates compared to the higher order modes,
+
+		\begin{equation} \label{GouyPhaseMatrix}
+		\hat{\eta}_{\mu \nu} = 
+		\begin{pmatrix}
+		e^{i\phi}	&0			&0			& 0 			& 0
+		\\ 0		&e^{2i\phi}	&0			& 0				& 0
+		\\ 0		&0			&e^{2i\phi}	& 0				& 0
+		\\ 0		&0			&0			& e^{3i\phi}	& 0
+		\\ 0		&0			&0			& 0				& e^{3i\phi}
+		\end{pmatrix}
+		\end{equation}
+
+		From the aabove diagonal elements it is clear that the higher order modes have an extra phase compared to the fundamental 00 mode, this effect will be extremely important on how an error signal can be derived from the optical system.
+		
+		Fundamentally, the purpose of wavefront sensing is to detect the content of higher order modes due to physical disturbances of the optical cavity (ie. mode mismatch or misalignment).  In other words, it is examining the difference of basis sets between the incoming eigenmodes and the cavity eigenmodes; this can be described by [ref Hefetz]
+		
+		\begin{equation}
+		\ket{E(x,y,z_2)} = \hat{M}(x,y,z_1,z_2)	\ket{E(x,y,z_1)}
+		\end{equation}
+		
+		where $\hat{M}(x,y,z_1,z_2)$ is the misalignment operator.  Since we are using the paraxial approximation, the z-components of the misalignment operator are small so we can approximate $\hat{M}_(x,y,z_1,z_2) \approx \hat{M}_(x,y)$ and the expectation value is
+		
+		\begin{equation}
+		M_{mn,kl}=  \bra{U_{mn}(x,y,z_1)} M(x,y) \ket{U_{kl}(x,y,z_2)}
+		\end{equation}
+
+		where the product is an integral over the transverse space $\int \!\!\! \int_{D(x,y)} \text{d}x \text{d}y$
+		
 
 		\begin{equation} \label{misalign_matrix}
 		\hat{\Theta}_{\mu \nu} = 
@@ -389,6 +477,14 @@
 		where $\Delta z_{0,(x,y)} =   \frac{1}{\sqrt{2}} \frac{\omega'-\omega_{0}}{\omega_{0}} $
 
 		Figure: Beat frequency between two modes.
+		
+		
+		\subsubsection{Example: Fabry Perot Cavity}
+		
+		
+		\subsubsection{Example: Simple Michaelson}
+		
+
 
 		\section{Effects of Mode-matching on Squeezing}
 		Still not clear to me.
@@ -509,15 +605,66 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 	Effect of higher order modes into the cavity, mode scanning. All comes from round trip Gouy phase.
 	
 	
-	\chapter{Higher Order Mode Coupling}
-	In general, there are a number of ways that a TEM00 mode can couple into higher order modes.  
+	\chapter{Hermite Gauss Normalization}
+	According to Eq.\ref{HG}, the higher order modes in the Hermite Gauss basis has the intensity profile,
 	
-	This can be broken up into two categories: mode misalignment and mode mismatch.  Everyone says it differently.
+	\begin{equation}
+		I_{mn} (x,y,z) = \vert A_{mn} \vert^2 \bigg[ \frac{W_0}{W(z)} \bigg]^2  \mathbb{G}^2_n\Bigg( \frac{\sqrt{2}x}{W(z)} \Bigg) \mathbb{G}^2_n\Bigg( \frac{\sqrt{2}y}{W(z)} \Bigg)
+	\end{equation}
+
+	It is useful to normalize the first few lowest order modes with respect to the total optical power since the Gaussian beam will couple to them the most due either misalignment or mode mismatch as seen in section [].
 	
-	Summarize the coupling [Anderson and Morrison]
+	In one dimension, the total optical power for the first 3 modes are
 	
-	Summarize the formalism with ket notation as a sum of the eigenmodes of a cavity.
-	References:[Anderson, Guido]
+	\begin{equation}
+	\label{HGNormalInt1D}
+	\begin{aligned}
+		P_{0}(x,y,z) 	& 	=	\int_{-\infty}^{\infty}  \vert A_{0} \vert^2   \bigg[ \frac{W_0}{W(z)} \bigg] e^{-2x^2/w^2(z)} dx	&
+	\\	P_{1}(x,y,z)	&	=	\int_{-\infty}^{\infty}  \vert A_{1} \vert^2  \bigg[ \frac{W_0}{W(z)} \bigg] \frac{8x^2}{w^2(z)} 	
+								e^{-2x^2/w^2(z)}dx &
+	\\	P_{2}(x,y,z)	&	= 	\int_{-\infty}^{\infty}  \vert A_{2} \vert^2   \bigg[ \frac{W_0}{W(z)} \bigg] \bigg(\frac{8x^2}{w^2(z)}	-2\bigg)^2e^{-2x^2/w^2(z)}dx
+	\end{aligned}
+	\end{equation}
+	
+	In two dimensions, the total optical power for the first 3 modes are
+	\begin{equation}
+	\label{HGNormalInt2D}
+	\begin{aligned}
+		P_{00}(x,y,z) 	& 	=	 \int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  \vert A_{00} \vert^2   \bigg[ \frac{W_0}{W(z)} \bigg]^2 e^{-2x^2/w^2(z)}e^{-2y^2/w^2(z)} dx dy&
+	\\	P_{10}(x,y,z)	&	=	\int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  \vert A_{10} \vert^2  \bigg[ \frac{W_0}{W(z)} \bigg]^2 \frac{8x}{w^2(z)} e^{-2x^2/w^2(z)}e^{-2y^2/w^2(z)} dx dy&
+	\\	P_{20}(x,y,z)	&	= 	\int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  \vert A_{20} \vert^2   \bigg[ \frac{W_0}{W(z)} \bigg]^2 \bigg(\frac{8x^2}{w^2(z)} - 2\bigg)^2 e^{-2x^2/w^2(z)}e^{-2y^2/w^2(z)} dx dy
+	\end{aligned}
+	\end{equation}
+	
+	By setting the equations above to unity, the normalization factors become
+	
+	\begin{equation}
+	\begin{aligned}
+		A_{0} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} 
+	\\	A_{1} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \frac{1}{\sqrt{2}}
+	\\	A_{2} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \frac{1}{8}
+	\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\begin{aligned}
+		A_{00} &	= \sqrt{\frac{2}{\pi w_0^2}}
+	\\	A_{10} &	= \sqrt{\frac{1}{\pi w_0^2}}
+	\\	A_{20} &	= \sqrt{\frac{1}{4\pi w_0^2}}
+	\end{aligned}
+	\end{equation}
+	
+	Therefore the normalized modes are
+	
+	
+	
+	
+
+
+	
+	
+
+	
 	
 	
 	\chapter{Bullseye Photodiode Characterization}
