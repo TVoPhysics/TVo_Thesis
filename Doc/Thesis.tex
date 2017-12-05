@@ -102,9 +102,6 @@
 	
 	which shows us two very important points about the nature of gravitational waves.  Firstly, the effect is very small since the length variation is, by definition, a small perturbation in flat space-time.  Secondly, the effect is proportional to the initial separation between the particles. This means a detector which is large will have a better chance to measure these small effects, a point that drove the design of the Laser Interferometer Gravitational-Wave Interferometer (LIGO).
 	
-	\subsection{Measuring Gravitational Waves with Light}
-	Even with the theoretical formulation of gravitational waves resolved by the 1970s, detection of GWs by ground-based detectors was still a controversial topic among scientists in the field.  This was due to the incredible amount of accuracy needed to actually measure strain. 
-	
 	\subsection{Energy from a Gravitational Wave}
 	
 	\subsection{Signal to Noise}
@@ -256,7 +253,7 @@
 		\begin{equation}
 		W(z) = W_0 \sqrt{1 + \bigg( \frac{z}{z_0} \bigg)^2}
 		\end{equation}
-		\begin{equation}
+		\begin{equation}\label{ROC}
 		R(z) = z \bigg[ 1 + \bigg( \frac{z}{z_0} \bigg)^2 \bigg]
 		\end{equation}
 		\begin{equation}
@@ -312,7 +309,7 @@
 		b(n,m,k) = \sqrt{\bigg( \frac{(N-k)!k!}{2^N n!m!} \bigg)} \frac{1}{k!} \frac{\text{d}^k}{\text{d}t^k}[(1-t)^m (1+t)^m]\vert_{t=0}
 		\end{equation}
 
-		\subsection{Misalignment and Mode Mismatch}\label{Misalignment}
+		\subsection{Misalignment and Higher Order Modes}\label{Misalign}
 		Morrison and Anderson derived a simplistic way of how small misalignments and mismodematched cavities can couple the fundamental Gaussian beam into various higher order modes.  This is done by taking a linear cavity and using its perfectly matched Gaussian beam as a reference, and then varying the input electric field with small perturbations and expanding in terms of the cavity modes.  As long as the mismatches are small, it is possible to consider only the first few terms of the expansion which have gained power from the fundamental mode.
 		
 		Consider the first three modes of Eq.\ref{HG} in one dimension and normalized to set the total optical power to unity (derived in Appendix[]):
@@ -351,11 +348,14 @@
 		
 		Similarly to a tilted input beam axis, the displaced beam axis couples power to the first higher order mode, however, the latter does not have a 90 degree phase difference previously seen in the former.  This point is of extreme importance when trying to discern between the two effects as shown in Section [].  Although comparing the two cases in Figure, one can already seen the difference between the wavefronts in the near field, $z<<z_R$, and the far field, $z>>z_R$.  
 		
-		In the near field, there is no phase difference due to a displaced beam, but there is one for a tilted beam.  Conversely, in the far field, there is no phase difference due to a tilted beam, but there is one from a displaced beam.  In order to implement a closed loop feedback system, the wavefront sensors discussed in Section[] will use this precise logic to extract an error signal.
+		In the near field, there is no phase difference due to a displaced beam, but there is one for a tilted beam.  Conversely, in the far field, there is no phase difference due to a tilted beam, but there is one from a displaced beam.  In order to implement a closed loop feedback system, the wavefront sensors discussed in Section \ref{WFS} will use this precise logic to extract an error signal.
+		
+		
+		\subsection{Mode Mismatch and Higher Order Modes}\label{Modemismatch}
+		
 		
 		\subsubsection{Waist Size Shifted}
-		
-		
+		By considering the effect of evaluating the fundamental mode at the waist position, $z=0$, but changing the waist size by a small amount $\epsilon$, it is possible to see coupling into higher order modes.
 		\begin{equation}
 		\begin{aligned}
 		\Psi 	&=  		U_{0} \big(r,w(z) = w_0/(1+\epsilon) \big) 
@@ -366,15 +366,48 @@
 		\\		&=			U_0(r) \, + \, 2\epsilon U_2(r)
 		\end{aligned}
 		\end{equation}
+		
+		
 		\subsubsection{Waist Position Shifted}
+		To repeat the process from above with a waist position shift, it is useful to start with a more general equation that includes the phase that is gained from including the radius of curvature,
+		
+		\begin{equation}\label{EFieldwPhase}
+		\Psi = 	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4} \quad e^{-r^2/w^2(z)} \quad e^{-ikr^2/2R(z)}
+		\end{equation}
+		where $R(z)$ is from equation \ref{ROC}.  It is also useful to approximate the shift in waist position along the longitudinal axis is small compared to the Rayleigh range of the beam, $\Delta z << z_0$, which leaves the waist size approximately the same and the radius of curvature inversely proportional to the shift. 
+		
+		\begin{subequations}
+		\begin{align}
+		\begin{split}
+			w^2(\Delta z)	&= 	w^2_0 \bigg[1 + \bigg(\frac{\Delta z}{z_0}  \bigg)^2 \bigg]  \approx	w^2_0
+		\end{split}\\
+		\begin{split}
+			R(\Delta z) 	&=	\Delta z \bigg(1 + \bigg(\frac{z_0}{\Delta z}\bigg)^2\bigg) \approx	\frac{z_0^2}{\Delta z}
+		\end{split}
+		\end{align}
+		\end{subequations}
+
+		Plugging the equations above into \ref{EFieldwPhase},
+		
+		\begin{equation}
+		\begin{aligned}
+		\Psi 	&\approx	\bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \quad e^{-r^2/w_0^2} \quad e^{-ikr^2 \Delta z /2 z_0^2}
+		\\		&\approx	\bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \quad e^{-r^2/w_0^2} \quad \bigg( 1-\frac{ikr^2 \Delta z}{2 z_0^2}  \bigg)
+		\\		&=			U_0(r) - \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} e^{-r^2/w_0^2} \quad \frac{ikr^2 \Delta z}{2 z_0^2}
+		\\		&=			U_0(r) - i \frac{\Delta z}{2k w_0^2} \bigg( 4U_2(r) + U_0(r) \bigg)
+		\end{aligned}
+		\end{equation}
+		
+		The equations above show that a fundamental Gaussian mode that is shifted in waist position will couple power to the second order Hermite Gauss mode.  Although changes in the waist size or position couple power to the same mode, they differ by a 90 degrees in phase as denoted by the extra factor of $i$ in the coupling coefficient.  By recognizing the two effects are in different quadrature phases will allow a user to design a system to distinguish between the different types of physical couplings, this is shown in Section \ref{WFS}.
+		
+		 In order to be physically valid one would need to consider the full two dimensional space so that the equation would encapsulate the full transverse mode, however, the x and y components would follow the exact same derivation. On that point, it is important to note that only the mode mismatch couplings from either a varying waist position or size has higher order modes that are circularly symmetric.
 		
 		
-		Figure: Modematching
-			References: [Own Calculations]
-				
 		
-		\section{Wavefront Sensing}
-		Heterodyne detection using a modal decomposition of the full electric field allows the use of wavefront sensors to extract an error signal from the optical system.  Hefetz et.al Ref[Sigg and Nergis] created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  
+		
+%%%%%%%%%%%%%%%%
+		\section{Wavefront Sensing}\label{WFS}
+		Heterodyne detection using a modal) decomposition of the full electric field allows the use of wavefront sensors to extract an error signal from the optical system.  Hefetz et.al Ref[Sigg and Nergis] created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system. 
 		
 		Fundamentally, the purpose of wavefront sensing is to detect the content of higher order modes due to physical disturbances of the optical cavity (ie. mode mismatch or misalignment).  In other words, it is examining the difference of basis sets between the incoming eigenmodes and the cavity eigenmodes.
 		
