@@ -77,18 +77,18 @@
 
 	Add Figure of GWs
 
-	It is natural to attempt to understand the physical interpretation of Eq.\ref{gwamp} as an affect on the position of a free floating particle. Consider the four-velocity, $U^{\alpha}$, in the transverse traceless gauge where the coordinate itself is attached the particles and incorporates any small wiggles that would shake the coordinates.  Of course, any free particles will follow the geodesic equation
+	It is natural to attempt to understand the physical interpretation of equation \ref{gwamp} as an affect on the position of a free floating particle. Consider the four-velocity, $U^{\alpha}$, in the transverse traceless gauge where the coordinate itself is attached the particles and incorporates any small wiggles that would shake the coordinates.  Of course, any free particles will follow the geodesic equation
 	
 	\begin{equation}\label{geodesic}
 	\nabla U^{\alpha} = \frac{\text{d}}{\text{d} \tau} U^{\alpha} + \Gamma^{\alpha}_{\mu \nu} U^{\mu} U^{\nu} = 0
 	\end{equation}	
 	where $\Gamma^{\alpha}_{\mu \nu} = \frac{1}{2} g^{\gamma \alpha}(g_{\gamma \mu, \nu} + g_{\gamma \nu,\mu} - g_{\mu \nu, \gamma} )$ are the famous Christoffel symbols.
-	By evaluating the first term of the acceleration in Eq.\ref{geodesic},
+	By evaluating the first term of the acceleration in equation \ref{geodesic},
 	\begin{equation}\label{accel}
 	\bigg(\frac{\text{d}U^{\alpha}}{\text{d}\tau}\bigg)_0 = -\Gamma^{\alpha}_{00} 
 	\\ = \frac{1}{2} \eta_{\mu \nu} (h_{\beta 0, 0} + h_{0 \beta, 0} + h_{0 0, \beta} )
 	\end{equation}
-	However, comparing Eq.\ref{gwamp} and Eq.\ref{accel}, it is clear that if the particle is initially at rest, then a moment later it is still at rest! The term "at rest" is actually used liberally here since the coordinate system varies along with the gravitational wave. 
+	However, comparing equation \ref{gwamp} and equation \ref{accel}, it is clear that if the particle is initially at rest, then a moment later it is still at rest! The term "at rest" is actually used liberally here since the coordinate system varies along with the gravitational wave. 
 	
 	Alternatively, one can ask if a gravitational wave passed by a pair of particles separated by length $L$, what would be the effect on the distance between two points?  The proper distance is defined as
 
@@ -173,12 +173,12 @@
 \chapter{The Fundamentals of Mode-Matching}
 	Theory section of modematching. Gaussian beams, define relevant quantities, Gouy Phase!
 	
-	In order to properly explain the effects of electromagnetic waves in the LIGO interferometers, it is useful to review the 
+	In order to properly explain the effects of electromagnetic waves in the LIGO interferometers, it is useful to review the  
 	
 	References: [Kognelik and Li]
 	
 		\section{Gaussian Beam Optics}
-		When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, it is necessary to incorporate Gaussian beam optics and associated their higher order modes.
+		When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, it is necessary to incorporate Gaussian beams and associated their higher order modes.
 
 		
 		Consider the famous Maxwell's equations in vacuum:
@@ -204,7 +204,7 @@
 		
 		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\mathbf{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  
 		
-		It is possible to express the solution to Eq. \ref{Helmholtz} as
+		It is possible to express the solution to equation  \ref{Helmholtz} as
 		a plane wave with a modulated complex envelope
 		\begin{equation}
 		\mathbf{U}(\mathbf{r}) = \mathbf{A}(\mathbf{r}) e^{-ikz)}
@@ -230,7 +230,7 @@
 		\nabla_T^2 A(r) - i2k {\partial A(r) \over \partial z} = 0
 		\end{equation}
 		
-		where $\nabla_T^2 = {\partial^2  \over \partial x^2} + {\partial^2  \over \partial y^2} $ is the transverse Laplacian.  A simple solution for Eq.\ref{paraHelmholtz} is the complex paraboloidal wave
+		where $\nabla_T^2 = {\partial^2  \over \partial x^2} + {\partial^2  \over \partial y^2} $ is the transverse Laplacian.  A simple solution for equation \ref{paraHelmholtz} is the complex paraboloidal wave
 		
 		\begin{equation} \label{complexenvelope}
 		A(\mathbf{r}) = \frac{A_0}{q(z)} e^{\frac{-ikr^2}{2q(z)}} , \quad q(z)=z+iz_0
@@ -242,7 +242,7 @@
 		\frac{1}{q(z)} = \frac{1}{R(z)} - i \frac{\lambda}{\pi W^2(z)}
 		\end{equation} 
 		
-		Plugging Eq.\ref{invq} into \ref{complexenvelope} leads directly to the complex amplitude for a Gaussian Beam
+		Plugging equation \ref{invq} into \ref{complexenvelope} leads directly to the complex amplitude for a Gaussian Beam
 		
 		\begin{equation}
 		U(r) = A_0 \frac{W_0}{W(z)} e^{-\frac{r^2}{W^2(z)}} e^{-ikz - ik \frac{r^2}{2R(z)} + i \phi(z)}
@@ -270,7 +270,7 @@
 		- Intensity and Power
 		
 		\subsubsection{Hermite-Gauss Modes}
-		The fundamental Gaussian beam is not the only solution which can be used to solve Eq.\ref{paraHelmholtz}.  In fact, there exists a complete set of solutions that can solve the paraxial Helmholtz Equation, which are referred to as the higher order modes (HOMs)
+		The fundamental Gaussian beam is not the only solution which can be used to solve equation \ref{paraHelmholtz}.  In fact, there exists a complete set of solutions that can solve the paraxial Helmholtz Equation, which are referred to as the higher order modes (HOMs)
 		\begin{equation}\label{HG}
 		\begin{aligned}
 		&U_{mn}(x,y,z) = A_{mn}\bigg[ \frac{W_0}{W(z)} \bigg] \mathbb{G}_m\Bigg( \frac{\sqrt{2}x}{W(z)}  \Bigg) \mathbb{G}_n\Bigg( \frac{\sqrt{2}y}{W(z)} \Bigg)\\
@@ -290,7 +290,7 @@
 		
 		
 		\subsubsection{Laguerre Modes}
-		Another complete set of alternative solutions to Eq.\ref{paraHelmholtz} exists which are called the Laguerre-Gauss modes
+		Another complete set of alternative solutions to equation \ref{paraHelmholtz} exists which are called the Laguerre-Gauss modes
 		
 		\begin{equation}\label{LG}
 		\begin{aligned}
@@ -312,14 +312,14 @@
 		\subsection{Misalignment and Higher Order Modes}\label{Misalign}
 		Morrison and Anderson derived a simplistic way of how small misalignments and mismodematched cavities can couple the fundamental Gaussian beam into various higher order modes.  This is done by taking a linear cavity and using its perfectly matched Gaussian beam as a reference, and then varying the input electric field with small perturbations and expanding in terms of the cavity modes.  As long as the mismatches are small, it is possible to consider only the first few terms of the expansion which have gained power from the fundamental mode.
 		
-		Consider the first three modes of Eq.\ref{HG} in one dimension and normalized to set the total optical power to unity (derived in Appendix[]):
+		Consider the first three modes of equation \ref{HG} in one dimension and normalized to set the total optical power to unity (derived in Appendix[]):
 
 		\begin{equation}
 		\label{Gauss1D}
 		\begin{aligned}
 				U_{0}(r) & =	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  e^{-r^2/w^2(z)}		&
 		\\		U_{1}(r) &	=	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  \frac{2r}{w(z)} \quad e^{-r^2/w^2(z)}&,
-		\\	 	U_{2}(r) &	=	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  \bigg( \frac{r^2}{w^2(z)} - \frac{1}{4} \bigg)   e^{-r^2/w^2(z)}
+		\\	 	U_{2}(r) &	=	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  \frac{1}{2\sqrt{2}} \bigg( \frac{8r^2}{w^2(z)} - 2 \bigg)   e^{-r^2/w^2(z)}
 		\end{aligned}
 		\end{equation}
 				
@@ -355,7 +355,7 @@
 		
 		
 		\subsubsection{Waist Size Shifted}
-		By considering the effect of evaluating the fundamental mode at the waist position, $z=0$, but changing the waist size by a small amount $\epsilon$, it is possible to see coupling into higher order modes.
+		By considering the effect of evaluating the fundamental mode at the waist position, $z=0$, but changing the waist size by a small amount $\epsilon$, it is possible to see coupling into higher order modes by expanding to first order.	
 		\begin{equation}
 		\begin{aligned}
 		\Psi 	&=  		U_{0} \big(r,w(z) = w_0/(1+\epsilon) \big) 
@@ -366,7 +366,7 @@
 		\\		&=			U_0(r) \, + \, 2\epsilon U_2(r)
 		\end{aligned}
 		\end{equation}
-		
+		Changing the waist size by a small amount will couple the fundamental mode to the in-phase second order Hermite Gauss mode.
 		
 		\subsubsection{Waist Position Shifted}
 		To repeat the process from above with a waist position shift, it is useful to start with a more general equation that includes the phase that is gained from including the radius of curvature,
@@ -407,7 +407,7 @@
 		
 %%%%%%%%%%%%%%%%
 		\section{Wavefront Sensing}\label{WFS}
-		Heterodyne detection using a modal) decomposition of the full electric field allows the use of wavefront sensors to extract an error signal from the optical system.  Hefetz et.al Ref[Sigg and Nergis] created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system. 
+		Heterodyne detection via modal decomposition of the full electric field allows the use of wavefront sensors to extract an error signal from the optical system.  Hefetz et.al Ref[Sigg and Nergis] created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  By observing the demodulated signal of the intensity, it is possible to obtain a linear signal that corresponds to a physical misalignment or mode mismatch.
 		
 		Fundamentally, the purpose of wavefront sensing is to detect the content of higher order modes due to physical disturbances of the optical cavity (ie. mode mismatch or misalignment).  In other words, it is examining the difference of basis sets between the incoming eigenmodes and the cavity eigenmodes.
 		
@@ -416,13 +416,18 @@
 		E(x,y,z) = \sum\limits_{m,n}^{\infty} a_{mn} U_{mn}(x,y,z)
 		\end{equation}
 		
-		where $ U_{mn}(x,y,z)$ are the eigenmodes of the described in Eq[] and $a_{mn}$ is the complex amplitude.  It is also convenient in the following analysis to use vectors when describing the composition of the electric fields.
+		where $ U_{mn}(x,y,z)$ are the eigenmodes described in equation \ref{HG} (or \ref{LG}) and $a_{mn}$ is the complex amplitude.  It is also convenient in the following analysis to use vectors when describing the composition of the electric fields.
 		
 		\begin{equation}
-		\ket{E(x,y,z)} = \begin{pmatrix} E_{00} \\ E_{01} \\ E_{10} \\ \vdots \end{pmatrix}
+		\ket{E(x,y,z)} = \begin{pmatrix} E_{00} 
+		\\ E_{01}
+		\\E_{10}
+		\\E_{20}
+		\\E_{02}
+		\end{pmatrix}
 		\end{equation}
 
-		When creating a theory that involves laser beams, it is useful to define operators that are important in describing physical situations.  For example, laser beams propagate through space and pick up phase according to Eq.\ref{HG} which can be represented by the spatial propagation operator,
+		When creating a theory that involves laser beams, it is useful to define operators that are important in describing physical situations.  For example, laser beams propagate through space and pick up phase according to equation \ref{HG} which can be represented by the spatial propagation operator,
 		
 		\begin{equation}
 		\hat{P}_{mn,kl} = \delta_{mn} \delta_{kl} \quad \text{exp}[-ik(z_2 - z_1)] 
@@ -442,9 +447,7 @@
 		\end{pmatrix}
 		\end{equation}
 
-		From the aabove diagonal elements it is clear that the higher order modes have an extra phase compared to the fundamental 00 mode, this effect will be extremely important on how an error signal can be derived from the optical system.
-		
-		Fundamentally, the purpose of wavefront sensing is to detect the content of higher order modes due to physical disturbances of the optical cavity (ie. mode mismatch or misalignment).  In other words, it is examining the difference of basis sets between the incoming eigenmodes and the cavity eigenmodes; this can be described by [ref Hefetz]
+		From the above diagonal elements, it is clear that the higher order modes have an extra phase compared to the fundamental 00 mode, this effect will be extremely important on how an error signal can be derived from the optical system.
 		
 		\begin{equation}
 		\ket{E(x,y,z_2)} = \hat{M}(x,y,z_1,z_2)	\ket{E(x,y,z_1)}
@@ -526,7 +529,7 @@
 	
 	
 %%%%%%%%%%%%%%%%%%%%%%	
-e\chapter{Simulating Mode-Matching with Finesse}	
+\chapter{Simulating Mode-Matching with Finesse}	
 	\section{How it works}
 	Summary of how Finesse works (input output matrix), how it handles HOMs
 	\section{Finesse Simulations}
@@ -639,7 +642,7 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 	
 	
 	\chapter{Hermite Gauss Normalization}
-	According to Eq.\ref{HG}, the higher order modes in the Hermite Gauss basis has the intensity profile,
+	According to equation \ref{HG}, the higher order modes in the Hermite Gauss basis has the intensity profile,
 	
 	\begin{equation}
 		I_{mn} (x,y,z) = \vert A_{mn} \vert^2 \bigg[ \frac{W_0}{W(z)} \bigg]^2  \mathbb{G}^2_n\Bigg( \frac{\sqrt{2}x}{W(z)} \Bigg) \mathbb{G}^2_n\Bigg( \frac{\sqrt{2}y}{W(z)} \Bigg)
@@ -675,7 +678,7 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 	\begin{aligned}
 		A_{0} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} 
 	\\	A_{1} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \frac{1}{\sqrt{2}}
-	\\	A_{2} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \frac{1}{8}
+	\\	A_{2} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \frac{1}{\sqrt{8}}
 	\end{aligned}
 	\end{equation}
 	
@@ -794,9 +797,14 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 	\end{equation}
 	where $z_{0,i}$ is the waist size of one particular beam.
 	
-	The power overlap is:
+	The amplitude overlap is:
 	\begin{equation}
-	\text{Overlap} = \braket{A_1|A_2} = 4 \frac{ \sqrt{z_{0,1}z_{0,2}}}{\abs{q_1 - q_2^*}^2}
+	\braket{A_1|A_2} = 2 i  \frac{ z_{0,1}z_{0,2}}{q_1 - q_2^*}
+	\end{equation}
+	
+	So the power overlap is:
+	\begin{equation}
+	\text{Power Overlap} = \vert \braket{A_1|A_2} \vert^2 = 4 \frac{ z_{0,1}z_{0,2}}{\abs{q_1 - q_2^*}^2}
 	\end{equation}
 
 \end{appendices} 
