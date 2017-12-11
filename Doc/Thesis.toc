@@ -53,6 +53,7 @@
 \contentsline {section}{\numberline {5.1}Active Wavefront Control System}{22}{section.5.1}
 \contentsline {section}{\numberline {5.2}SRC}{22}{section.5.2}
 \contentsline {section}{\numberline {5.3}Beam Jitter}{22}{section.5.3}
+\contentsline {section}{\numberline {5.4}Contrast Defect}{22}{section.5.4}
 \contentsline {chapter}{\numberline {6}Solutions for Detector Upgrades}{23}{chapter.6}
 \contentsline {chapter}{Appendices}{26}{section*.22}
 \contentsline {chapter}{\numberline {A}Resonator Formulas}{27}{Appendix.a.A}
