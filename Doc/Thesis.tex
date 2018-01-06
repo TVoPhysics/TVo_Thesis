@@ -33,8 +33,10 @@
 
 \chapter{Introduction}
 
+	Say something profound here.
+
 	\section{Gravitational Waves}\label{gravitational waves}
-	In 1915, Albert Einstein published his theory of general relativity.
+	In 1915, Albert Einstein published his theory of general relativity ref[Einstein].
 	
 	The seminal equation in this theory is:
 	
@@ -61,22 +63,23 @@
 
 	which has a plane-wave solution of the form $h_{\mu \nu} = A_{\mu \nu} e^{ik_{\nu} x^{\nu}}$. 
 	
-	By using the gauge constraint $h^{\mu \nu}_{,\nu} = 0$, it follows that $A_{\mu \nu} k^{\mu} = 0$ which means that the gravitational wave amplitude is orthogonal to the propagation vector.
+	Using the gauge constraint $h^{\mu \nu}_{,\nu} = 0$, it follows that $A_{\mu \nu} k^{\mu} = 0$ which means that the gravitational wave amplitude is orthogonal to the propagation vector.
 	
-	By further imposing transverse-traceless gauge, we can constrain the complex amplitude to two orthogonal polarizations which have physical significance:
+	Further imposing transverse-traceless gauge and assuming that the wave is traveling in the $x^3$ direction, it can be shown that the complex amplitude has physical significance expressed in the matrix
 	
 	\begin{equation} \label{gwamp}
 	A_{\mu \nu} = 
 	\begin{pmatrix}
 			0 &    0   &  0      & 0 
 		 \\ 0 & A_{xx} &  A_{yx} & 0
-		 \\ 0 & A_{xy} & -A_{yy} & 0
+		 \\ 0 & A_{xy} & -A_{xx} & 0
 		 \\ 0 &    0   &  0      & 0
 	\end{pmatrix}
 	\end{equation}
 
-	Add Figure of GWs
+	Oftentimes, the four non-zero components of equation \ref{gwamp} can be categorized into two distinct polarizations called plus and cross such that $h_{+} = A_{xx} = -A_{yy}$ and $h_{\cross} = A_{xy} = A_{yx}$ .
 
+ 
 	It is natural to attempt to understand the physical interpretation of equation \ref{gwamp} as an affect on the position of a free floating particle. Consider the four-velocity, $U^{\alpha}$, in the transverse traceless gauge where the coordinate itself is attached the particles and incorporates any small wiggles that would shake the coordinates.  Of course, any free particles will follow the geodesic equation
 	
 	\begin{equation}\label{geodesic}
@@ -102,9 +105,8 @@
 	
 	which shows us two very important points about the nature of gravitational waves.  Firstly, the effect is very small since the length variation is, by definition, a small perturbation in flat space-time.  Secondly, the effect is proportional to the initial separation between the particles. This means a detector which is large will have a better chance to measure these small effects, a point that drove the design of the Laser Interferometer Gravitational-Wave Interferometer (LIGO).
 	
-	\subsection{Energy from a Gravitational Wave}
 	
-	\subsection{Signal to Noise}
+	\subsection{Energy from a Gravitational Wave}
 	
 	\subsection{Sources of Gravitational Waves}
 	\subsubsection{Compact Binary Inspirals}
@@ -115,39 +117,149 @@
 	
 	\cite{Saulson}
 	
-	\subsection{Measuring Gravitational Waves with Light}
-	Even with the theoretical formulation of gravitational waves resolved by the 1970s, detection of GWs by ground-based detectors was still a controversial topic among scientists in the field.  This was due to the incredible amount of accuracy needed to actually measure strain. 
+	\subsection{Measuring Gravitational Waves with Light}\label{measuringGWs}
+	Even with the theoretical formulation of gravitational waves resolved by the 1970s [Pirani], detection of GWs by ground-based detectors was still a controversial topic among scientists in the field.  This was due to the incredible accuracy required to measure the strain from even the most dense astrophysical objects[Rai's paper].  The earliest attempts at detecting these small signals were famously done by Joseph Weber ref[weber] using large resonant bars and piezoelectric transducers to extract the energy from gravitational waves at the resonant frequencies of the bars. Picture of bar detectors[].  However, these bars are limited by thermal noise and can only detect GWs in very narrow frequency bands. 
 	
+	Interferometers are devices that measure small displacements by using a laser that is split with a partially transmitting mirror (or beamsplitter), which allows 50$\%$ of the light to get reflected and 50$\%$ to be transmitted.  Each of the split beams travel down arms and reflect off of mirrors and return down the arms.  Upon reaching the beamsplitter, the beams recombine and by using the superposition of electromagnetic waves the laser will add linearly at the output port (or antisymmetric port).  The laser beams will gather phase as they propagate down each individual arm, and when recombining, the intensity of the light will be proportional to the phase differences between each beam.  This will correspond to a differential length that is described by
+	
+	\begin{equation}
+	L_{-} = l_{x} - l_{y}
+	\end{equation}
+	
+	As shown in equation \ref{propdist}, the effect of gravitational waves on the proper length between two free falling objects is proportional to the initial separation.  From figure[GWparticles], it is intuitively clear that interferometry would be an ideal technique to detect signals from a gravitational wave.  However, one can explicitly derive a ground-based interferometer's response to a GW from an astrophysical object.
+	
+	Consider a gravitational wave source arbitrarily located in the sky with respect to an interferometer on Earth. By denoting the interferometer's Cartesian coordinates as $\{\hat{x},\hat{y},\hat{z}\}$ with x and y located along the arms respectively such that the z-axis points directly towards the zenith (i.e. a right-handed system.).  Using the well known Euler angles, a relation from the detector frame to the source frame with coordinates $\{\hat{x}',\hat{y}',\hat{z}'\}$ can be seen in Figure[Euler]. 
+	
+	If a gravitational wave at the source has emitted GWs with plus and cross polarizations as denoted by equation \ref{gwamp}, then the detector time series can be regarded as ref[Duncan Thesis and AndersonGWs]
+	\begin{equation}
+	h(t) = F_{+}(\theta,\phi,\psi) \, h_{+}(t) + F_{\times}(\theta,\phi,\psi) \, h_{\cross}(t)
+	\end{equation}
+	where $F_{+}(\theta,\phi,\psi)$ and $F_{\cross}(\theta,\phi,\psi$ are the antenna pattern functions that project the gravitational wave amplitudes onto the detector frame.
+	
+	\begin{equation}
+	F_{+}(\theta,\phi,\psi) = -\frac{1}{2}[1+\text{cos}^2(\theta)] \text{cos}(2\phi) \text{cos}(2\psi) - \text{cos}(\theta) \text{sin}(2\phi) \text{sin}(2\psi)
+	\end{equation}
+	\begin{equation}
+	F_{\cross}(\theta,\phi,\psi) = + \frac{1}{2}[1+\text{cos}^2(\theta)] \text{sin}(2\phi) \text{cos}(2\psi) - \text{cos}(\theta) \text{sin}(2\phi) \text{sin}(2\psi)
+	\end{equation}
+	
+	If the gravitational wave is located directly above the interferometer (ie $\theta = 0$) and setting $\psi=0$, then the magnitude of the antenna pattern is equal to unity.  Furthermore, by rotating about the $\phi$ angle such that the detector arms align with the plus polarization, the null geodesic equation (ie the path of a photon) in the interferometer frame becomes 
+	
+	\begin{equation}
+	ds^2 = g_{\mu\nu}dx^{\mu} dx^{\nu} = -dt^2 + [1+h_{+}]  dx^2 + [1-h_{+}]  dy^2 + dz^2 = 0
+	\end{equation}
+	
+	Now if the photon is traveling along the x-arm, this means that $dy^2 = dz^2 = 0$ and the metric equation transforms to
+	
+	\begin{equation}
+	\frac{dt}{dx} = \sqrt{ 1+h_{+} } \approx 1+\frac{1}{2} h_{+} 
+	\end{equation}
+	
+	The amount of time required for the photon to reach the x-end mirror (starting at $t=0$) is equal to
+	
+	\begin{equation}
+	t_1 = \int_{0}^{L_{x}} [1+\frac{1}{2}  h_{+}(x) ] \text{d}x
+	\end{equation}
+	
+	where $t_0$ is the start time and $L_x$ is the total length of the x-arm.  Upon returning to the beamsplitter, the photon's total time of flight for the x and y arms are, respectively,
+	
+	\begin{equation}
+	t_2 = 2 L_x + \frac{1}{2} \int_{0}^{L_x} \bigg[  h_{+}(x) +  h_{+}(x + L_x)  \bigg] \text{d}x
+	\end{equation}
+	\begin{equation}
+	t'_{2}= 2 L_y - \frac{1}{2} \int_{0}^{L_y} \bigg[  h_{+}(y) +  h_{+}(y + L_y)  \bigg] \text{d}y
+	\end{equation}
+	
+	If the gravitational wave period is much longer than the time of flight, then $h_{+}$ does not change much during the measurement, which means $h_{+}(\eta_i) \approx h_{+}(\eta_i + L_{\eta_i}) \approx constant$.  By subtracting the flight times of the photons for each arm and setting $L = L_x = L_y$, the difference is proportional to the gravitational wave perturbation multiplied by the sum of arm lengths (with a factor of $c$ to get the units right),
+	
+	\begin{equation}
+	\Delta t = t_2 - t'_{2} = \frac{2L}{c} h_{+}
+	\end{equation}
+	
+	By recasting the expression for time of flight in terms of the phase picked up laser light as it travels through space, the differential phase shift is
+	\begin{equation}
+	\Delta \Phi = \Phi(t_{2}) - \Phi(t'_{2}) = \frac{4 \pi}{\lambda} \, h_{+} \, L
+	\end{equation}
+	
+	How to actually measure $\Delta \Phi$ with an interferometer is explained in the next section.
 	\section{The LIGO Instrument}
 	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the output as a measure of the differential arm length, it becomes a natural way of detecting gravitational waves.
 	
 	The LIGO instruments are considered dual-recycled Fabry-Perot interferometers.
 	
 		\subsection{Simple Michaelson}
-		A simple interferometer consists of an input laser, a 50/50 beamsplitter, two mirrors and a photodetector at the output port to read the signal.
+		As show in figure[michaelson], the interferometer readout uses a photodetector that measure the total power which depends on how laser light in the arms constructively or destructively interferes.  
+		At the end of section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down each arm carries gravitational wave information.  The difference in flight times, $\Delta t$, can be easily cast into how much phase,$\Delta \phi$ is accumulated by the photons as they propagate through space.  But the question remains how an interferometer actually measures $\Delta \phi$:
 		
-		In Peter Saulson's book, there is a simple explaination of the light field exiting the anti-symmetric port.
+		If the input electric field of the interferometer is $E_0$, the beamsplitter will transmit $E_0 /2$ down the x-arm and reflect $E_0 /2$ down the y-arm.  By setting the beamsplitter to be the origin,  the beams traveling down their respective arms will have gathered a phase $\phi_i$. Then, upon reflecting off the end mirrors and returning to the beamsplitter, each of the electric fields can be described by these equations
 		
-		However, the signal is proportional to the square of the strain, not good.
+			\begin{equation}
+			\begin{aligned}
+				E_{x} 	&=	\frac{i E_0}{2} e^{2i\phi_{x}}	
+			\\	E_{y} 	&=	\frac{i E_0}{2} e^{2i\phi_{y}}
+			\end{aligned}
+			\end{equation}
+			
+		Since the electromagnetic waves are linear, the resultant sum of waves at the output will be $E_{out} = E_x + E_y$. A photodiode (PD) is placed at the output (or antisymmetric) port to read out the integrated power which is related to the total electric field by
+		\begin{equation}
+		\begin{aligned}
+			P \vert_{PD}	&= \int_{Area} I \;				\text{d}A 
+		\\					&= \int_{Area} (E_x + E_y)^2 \;	\text{d}A 
+		\\					&= 
+		\end{aligned}
+		\end{equation}
+		
+		In Peter Saulson's book, there is a simple explaination of the light field exiting the anti-symmetric port, but in a more general sense, the phase can be different depending on how the reader chooses to solve Maxwell's equation.
+		
+		However, the signal has a large DC component which is more difficult to practically detect.  
+		
+		When working on the dark fringe the signal is proportional to the square of $h(t)$, this is really bad.
+		
+		So we have to introduce a lock-in detection scheme which uses sidebands to maintain the linear relation between the output and $h(t)$.
 		[Black Paper on Signal extraction]
 		
 		As show in section \ref{gravitational waves}, the gravitational wave will modulate the proper length between two free floating points in space. 
 	
+		However, the signal has a large DC component which is more difficult to practically detect.  
+		
+		When working on the dark fringe the signal is proportional to the square of $h(t)$, this is really bad.
+		
+		So we have to introduce a lock-in detection scheme which uses sidebands to maintain the linear relation between the output and $h(t)$.
+		[Black Paper on Signal extraction]	
+	
 		\subsection{Fabry-Perot Cavities}\label{FP}
-		A Fabry-Perot cavity is an optical system comprised of two mirrors and one laser input. The very simple condition that once the laser has made a round trip around the optics, it is the same shape at the same point.  Conceptually, this may seem simple but in practice, controlling and sensing any optical cavity comes with many challenges.
-
-		Appendix
+		There are two ways to make our instrument better: one is to increase the sensitivity to gravitational waves and the other is to make our noise lower. From equation [], the gravitational wave signal is proportional to the optical path length that the photon travels, which means the most straightforward method of increasing the sensitivity is to make the arms as long as possible (up to the null point described in section []).  Generally, there were two methods to do this: a delay line or a Fabry-Perot resonator.  At the time of writing this thesis, all modern gravitational wave detectors use the latter method.
+	
+		A Fabry-Perot cavity is an optical system comprised of two mirrors and one laser input. The very simple condition that once the laser has made a round trip around the optics, it is the same shape and size.  Conceptually, this may seem simple but in practice, controlling and sensing any optical cavity comes with many challenges.
+		
+		Plane wave analysis:
+		
+		Frequency response of a single FP:
+		
+		Stability: Ray matrices and resonant condition
+		
+		In order to prove that the Fabry Perot is stable, it is useful to introduce the matrices that describe a periodic optical system.  A Fabry Perot cavity that is separated by distance $d$ with spherical mirrors that have radii of curvature $R_1$ and $R_2$.
+	
+		Modal Contents
+		
+		\subsubsection{Application to LIGO}
+		
+		
+		
+		Frequency response of a FP Michaelson:
 
 		References:[Black, Rick's Paper]
 
-		\subsection{Power-Recycled Interferometers}
+		\subsection{Power-Recycled Fabry-Perot Interferometers}
 		Power Recycling
 		If the interferometer is operating such that the 4 km arms are exactly different in arms a pi over two times the wavelength, then the intensity of the light at antisymmetric port will be close to null.  This means the power from the arms will reflect back towards the input laser.  Ref[] shows the effect of adding a partially reflecting mirror to increase the optical gain of the Michaelson.
 		
+		
 		References: [Meers, Kiwamu]
 		
-		\subsection{Dual-Recycled Interferometers}
+		\subsection{Dual-Recycled Fabry-Perot Interferometers}
 		
+		DC
 		
 		Figure comparing the three cases of increased sensitivity.
 		
@@ -264,9 +376,11 @@
 		\end{equation}
 		\end{subequations}
 
-		
+
+		\subsubsection{Gouy Phase}
+		The Gouy phase is 
 		- Gouy Phase + graph
-		
+		\subsubsection{Intensity}
 		- Intensity and Power
 		
 		\subsubsection{Hermite-Gauss Modes}
@@ -286,8 +400,6 @@
 		and $ \mathbb{H}(u)$ are the well known Hermite polynomials.  It is important to mention that the Gouy phase of the complex amplitude is different than the fundamental Gaussian beam by a factor of $(m + n + 1)$. Also, the intensity distribution of these higher order modes are much different. Both of these facts will become extremely important in the following wavefront sensing discussion.
 		
 		It is useful to normalize the Hermite-Gauss modes with respect to the overall power, which are derived in Appendix[].
-		
-		
 		
 		\subsubsection{Laguerre Modes}
 		Another complete set of alternative solutions to equation \ref{paraHelmholtz} exists which are called the Laguerre-Gauss modes
@@ -319,7 +431,7 @@
 		\begin{aligned}
 				U_{0}(r) & =	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  e^{-r^2/w^2(z)}		&
 		\\		U_{1}(r) &	=	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  \frac{2r}{w(z)} \quad e^{-r^2/w^2(z)}&,
-		\\	 	U_{2}(r) &	=	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  \frac{1}{2\sqrt{2}} \bigg( \frac{8r^2}{w^2(z)} - 2 \bigg)   e^{-r^2/w^2(z)}
+		\\	 	U_{2}(r) &	=	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  \frac{1}{\sqrt{2}} \bigg( \frac{4r^2}{w^2(z)} - 1 \bigg)   e^{-r^2/w^2(z)}
 		\end{aligned}
 		\end{equation}
 				
@@ -363,7 +475,7 @@
 		\\		&\approx 	\bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} (1 + \epsilon /2) \quad e^{-r^2/w_0^2} \quad e^{-2r^2\epsilon/w_0^2} 
 		\\		&\approx 	\bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} (1 + \epsilon /2) \quad e^{-r^2/w_0^2} \quad (1-2r^2\epsilon/w_0^2)
 		\\		&\approx 	\bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \bigg(1+ 2\epsilon\bigg(\frac{1}{4} - \frac{r^2}{w_0^2}\bigg) \bigg ) \quad e^{-r^2/w_0^2}	
-		\\		&=			U_0(r) \, + \, 2\epsilon U_2(r)
+		\\		&=			U_0(r) \, - \, \frac{\epsilon}{\sqrt{2}} \, U_2(r)
 		\end{aligned}
 		\end{equation}
 		Changing the waist size by a small amount will couple the fundamental mode to the in-phase second order Hermite Gauss mode.
@@ -585,7 +697,7 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 		
 		\subsection{Mode Converters}
 		
-		
+		\subsection{Scanning Gaussian Beams}
 		
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -811,6 +923,9 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 	\text{Power Overlap} = \vert \braket{A_1|A_2} \vert^2 = 4 \frac{ z_{0,1}z_{0,2}}{\abs{q_1 - q_2^*}^2}
 	\end{equation}
 
+	\chapter{Designing Fabry-Perot Cavities as Filters}
+	- RT Gouy Phase
+	- HOM Coupling
 \end{appendices} 
 
 \medskip

@@ -1,58 +1,3 @@
-#--------------------------------------------------------------------------
-# aligo_IFO_AWC.kat (Mode matching optimized for ~18W input power)
-#
-# FINESSE kat file for aligo dual recycled michelson with FP arm cavities
-#
-# To be used as a base file for investigations into active wavefront control
-# requirements, sensing and actuation.
-#
-# > As of 2014/04/15 this file is still under development
-# - Quantum noise detectors are required at some stage. 
-# - Tuning of IFO should be checked: most recently it was just used for output 
-#   of cavity eigenmode paramters (see tasks/20150309).
-# - File should be default ideally mode matched for x-axis currently.   
-# 
-#  > This is a file based on aligo_central_IFO.kat where the following
-#    features have been added:
-#  - Thermal lensing at ITMs (modeled as a thin lens outside
-#    the substrate). Default value is 34.5km, corresponding to the lens 
-#    predicted at ~18W input power with 0.5ppm absorption on ITMs.
-#  - SRM thickness;
-#  - ROCs and lengths of PRC SRC changed following T0900043 (Table 2) to 
-#    mode match the cavities with a 34.5km thermal lens in ITMs.
-#  - However, PR3 to BS and SR3 to BS are adjusted to maintain overall 
-#    quoted P/SRC length. These lengths have minimal effect on mode matching.
-#  - N.B. the thermal lens quoted in T0900043 is 50km, but this was 
-#    modeled as being inside the ITM substrate, so in this model the focal 
-#    length is adjusted by a factor 1/nsilica. 
-#
-# Antonio Perreca
-#
-# FINESSE kat file for aLIGO dual recycled michelson with FP arm cavities.
-# Parameters are mostly design parameters.
-#
-# 05/08/2013
-# Lengths and Rcs 
-# - generally taken from design document T0900043-11 unless otherwise 
-#   stated 
-# - Schnupp asymmetry changed to 8cm (from 5cm) 
-# - Average distance between BS and ITMX and ITMY calculated using length 
-#   of PRC, as not explicitly given (then +/- 4cm on distances to give 
-#   Schnupp asymmetry)
-# Reflectivities/transmisison/losses
-# - also from T0900043-11
-# - transmission of SRM changed to 35% (i.e. see T1300507-v1)
-# - losses at each mirror = 37.5ppm 
-#
-# Also use T1000298-T for parameters, (design) control scheme 
-# 
-# https://awiki.ligo-wa.caltech.edu/aLIGO/Finesse%20for%20aLIGO
-# https://alog.ligo-la.caltech.edu/aLOG/index.php?callRep=8102
-#
-# DARM offset of 0.00136 added to give 100mW DC offset at 125W input power
-#
-# Charlotte Bond 
-#--------------------------------------------------------------------------
 
 %%% FTblock Laser
 ###########################################################################
@@ -332,8 +277,9 @@ s lOP 0.019 $nsilica nOPa nOPb
 # nOPd is the output towards OMC
 # nOPb is the input from SRC
 # nOPc is the input from squeezer
-isol* OP 100000 nOPd nOPb nOPc
+#isol OP 100000 nOPd nOPb nOPc
 #isol OP 100000 nOPb nOPd
+dbs OPP nOPb nOPc nOPd nOPz
 
 # need a bunch of dummy spaces to keep refractive index the same over isol nodes
 
