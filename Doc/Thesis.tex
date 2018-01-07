@@ -157,7 +157,7 @@
 	
 	The amount of time required for the photon to reach the x-end mirror (starting at $t=0$) is equal to
 	
-	\begin{equation}
+	\begin{equation}\label{pathlength}
 	t_1 = \int_{0}^{L_{x}} [1+\frac{1}{2}  h_{+}(x) ] \text{d}x
 	\end{equation}
 	
@@ -177,11 +177,22 @@
 	\end{equation}
 	
 	By recasting the expression for time of flight in terms of the phase picked up laser light as it travels through space, the differential phase shift is
-	\begin{equation}
+	\begin{equation}\label{diffphase}
 	\Delta \Phi = \Phi(t_{2}) - \Phi(t'_{2}) = \frac{4 \pi}{\lambda} \, h_{+} \, L
 	\end{equation}
 	
+	The equation above is simple, however, it only works for gravitational wave signals that are not frequency dependent and it assumes that the path length can be arbitrarily long. Both points are actually not true but we can alleviate these discrepancies by considering a gravitational wave signal of the form $h(t) = h_0 \text{exp} (i 2 \pi f_{GW} t)$  and repeating the calculation between equations \ref{pathlength} and \ref{diffphase}:
+	
+	\begin{equation}\label{gwsinc}
+	\Delta \Phi (t) = h(t) \; \tau \; \frac{2 \pi c}{\lambda} \; \text{sinc}(f_{GW} \tau) e^{i \pi f_{GW} \tau}
+	\end{equation}
+	
+	where $\tau_{RT} = 2L/c$.  The response for a detector whose arm lengths are blank km have null points at the around blank Hz which means the instrument cannot be arbitrarily long, however, this point is not concerning because it is too expensive and difficult to make a terrestrial detector of this size.
+	
 	How to actually measure $\Delta \Phi$ with an interferometer is explained in the next section.
+	
+	
+	
 	\section{The LIGO Instrument}
 	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the output as a measure of the differential arm length, it becomes a natural way of detecting gravitational waves.
 	
@@ -205,9 +216,10 @@
 		\begin{aligned}
 			P \vert_{PD}	&= \int_{Area} I \;				\text{d}A 
 		\\					&= \int_{Area} (E_x + E_y)^2 \;	\text{d}A 
-		\\					&= 
+		\\					&\propto \text{cos}^2(\Delta \phi)
 		\end{aligned}
 		\end{equation}
+		where $\Delta \phi = \phi_{x} - \phi_{y}$.
 		
 		In Peter Saulson's book, there is a simple explaination of the light field exiting the anti-symmetric port, but in a more general sense, the phase can be different depending on how the reader chooses to solve Maxwell's equation.
 		
@@ -228,23 +240,91 @@
 		[Black Paper on Signal extraction]	
 	
 		\subsection{Fabry-Perot Cavities}\label{FP}
-		There are two ways to make our instrument better: one is to increase the sensitivity to gravitational waves and the other is to make our noise lower. From equation [], the gravitational wave signal is proportional to the optical path length that the photon travels, which means the most straightforward method of increasing the sensitivity is to make the arms as long as possible (up to the null point described in section []).  Generally, there were two methods to do this: a delay line or a Fabry-Perot resonator.  At the time of writing this thesis, all modern gravitational wave detectors use the latter method.
+		There are two ways to make our instrument better: one is to increase the sensitivity to gravitational waves and the other is to make our noise lower. From equation \ref{diffphase}, the gravitational wave signal is proportional to the optical path length that the photon travels, which means the most straightforward method of increasing the sensitivity is to make the arms as long as possible (up to the null point described by equation \ref{gwsinc}.  Generally, there were two methods to do this: a delay line or a Fabry-Perot resonator.  At the time of writing this thesis, all modern gravitational wave detectors use the latter method.
 	
 		A Fabry-Perot cavity is an optical system comprised of two mirrors and one laser input. The very simple condition that once the laser has made a round trip around the optics, it is the same shape and size.  Conceptually, this may seem simple but in practice, controlling and sensing any optical cavity comes with many challenges.
 		
 		Plane wave analysis:
+		Consider a two mirror system separated by a length $L$ with reflection and transmission coefficients: $r_1$, $t_1$, $r_2$, $t_2$.
 		
-		Frequency response of a single FP:
+		Starting with a plane wave at the input mirror with amplitude $E_0$ \cite{Saulson}, 
 		
-		Stability: Ray matrices and resonant condition
+		the reflection coefficient is 
+		\begin{equation}
+		r_{FP} = -r_1 + \frac{t_1^2 r_2  e^{-i2kL}}{1-r_1 r_2 e^{-i2kL}}
+		\end{equation}
 		
-		In order to prove that the Fabry Perot is stable, it is useful to introduce the matrices that describe a periodic optical system.  A Fabry Perot cavity that is separated by distance $d$ with spherical mirrors that have radii of curvature $R_1$ and $R_2$.
+		the transmission coefficient is
+		\begin{equation}
+		t_{FP} = \frac{t_1 t_2 e^{ikl}}{1-r_1 r_2 e^{-i2kl}}
+		\end{equation}
+		
+		the circulating coefficient is
+		\begin{equation}
+		c_{FP} = \frac{t_1}{1- r_1 r_2 e^{-2ikL}}
+		\end{equation}
+		
+		Resonance Condition: $L = n \lambda / 2$  
+		
+		If you are on resonance, the circulating coefficient in the cavity is maximized so that the gain is
+		
+		\begin{equation}
+		\text{Gain} = c^2_{FP} \vert_{\text{resonating}} = \bigg( \frac{t_1}{1-r_1 r_2}\bigg)^2
+		\end{equation}
+		
+		Frequency response of a single FP (plot):
+		\cite{Lawrence:99}
+		A cavity of fixed length and frequency, the circulating power becomes
 	
+		which is maximized when 
+		\begin{equation}
+		\frac{\Delta w}{w} = -\frac{\Delta L}{L}
+		\end{equation}
+		
+		Notice that the circulating power depends on the length of the cavity as well as the frequency and one might naively determine that modulating the two parameters independently cause the same effect.  However, when both the frequency and the length are changing, the resonant light  they are related by a frequency dependent transfer function
+		\begin{equation}
+		C(s) \frac{\Delta w}{w} = -\frac{\Delta L}{L}
+		\end{equation}
+		where
+		\begin{equation}
+		C(s) = \frac{1-e^{-2sL/c}}{2sL/c}
+		\end{equation}
+		in the Laplace domain.
+		
+		Finesse, or the line width of the resonant peak, function of $r_1$ and $r_2$      :
+		\begin{equation}
+		\mathbb{F} = \frac{\pi \sqrt{r_1 r_2}}{1- r_1 r_2}
+		\end{equation}
+		
+		Storage Time :
+		\begin{equation}
+		\tau_{s} = \frac{L}{c \pi} \, \mathbb{F}
+		\end{equation}
+		
+		Cavity Pole:
+		\begin{equation}
+		f_{pole} = \frac{1}{4\pi \tau_{s}}
+		\end{equation}
+	
+		Free Spectral Range:
+		\begin{equation}
+		f_{FSR}  = \frac{c}{2L}
+		\end{equation}
+		
+		Stability: In order to prove that the Fabry Perot is stable, it is useful to introduce the matrices that describe a periodic optical system which is explicitly derived in appendix \ref{FPappendix}.  A Fabry Perot cavity that is separated by distance $L$ with spherical mirrors that have radii of curvature $R_1$ and $R_2$ will need to satisfy 
+		\begin{equation}\label{gfactor}
+		0 \geq \bigg(1+\frac{L}{R_1}\bigg) \bigg(1+\frac{L}{R_2}\bigg) \geq 1
+		\end{equation}
+		in order to be geometrically stable.
+		
+		Power circulating as a function of our defined parameters slightly off resonance by a length of $\delta L$:
+		\begin{equation}
+		P_{cav} = \vert c_{FP} \vert^2 = \frac{Gain}{ 1 + \big(\frac{2\mathbb{F}}{\pi} \big)^2 \, \text{sin}^2(k \delta L) }
+		\end{equation}
+		
 		Modal Contents
 		
 		\subsubsection{Application to LIGO}
-		
-		
 		
 		Frequency response of a FP Michaelson:
 
@@ -252,7 +332,8 @@
 
 		\subsection{Power-Recycled Fabry-Perot Interferometers}
 		Power Recycling
-		If the interferometer is operating such that the 4 km arms are exactly different in arms a pi over two times the wavelength, then the intensity of the light at antisymmetric port will be close to null.  This means the power from the arms will reflect back towards the input laser.  Ref[] shows the effect of adding a partially reflecting mirror to increase the optical gain of the Michaelson.
+		If the interferometer is operating such that the 4 km arms are exactly different in arms a pi over two times the wavelength, then the intensity of the light at antisymmetric port will be close to null.  This means the power from the arms will reflect back towards the input laser.  Ref[] shows the effect of adding a partially reflecting mirror to increase the optical gain of the Michaelson for the sidebands and carrier fields.
+		
 		
 		
 		References: [Meers, Kiwamu]
@@ -745,17 +826,114 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 
 \begin{appendices}
 
-	\chapter{Resonator Formulas}
+	\chapter{Resonator Formulas and Cavity Design} \label{FPappendix}
+	Equation \ref{gfactor} describes the stability condition for a two mirror Fabry-Perot cavity.  It is worthwhile to derive the criterion for geometric stability from the ray matrix tools commonly used in optics. 
+	
+	Consider two plane waves traveling in space shown by figure [], they differ by two quantities: the axial and angular separations,  $y$ and $\theta$, respectively.  These two quantities can be transformed via these optical matrices:
+	
+	Lens
+	\begin{equation} \label{lens}
+	\hat{F_i} = 
+	\begin{pmatrix}
+		1				&0			
+	\\ 	-\frac{1}{f_i}	&1
+	\end{pmatrix}
+	\end{equation}
+	
+	Curved Mirror
+	\begin{equation} \label{mirror}
+	\hat{M_i} = 
+	\begin{pmatrix}
+		1				&0			
+	\\ 	\frac{2}{R_i}	&1
+	\end{pmatrix}
+	\end{equation}
+	
+	Space
+	\begin{equation} \label{space}
+	\hat{D_i} = 
+	\begin{pmatrix}
+		1	& d_i		
+	\\ 	0	&1
+	\end{pmatrix}
+	\end{equation}
 	
 	
-	Ray Trace: Round trip phase, cavity stability
+	Periodic Fabry-Perot with two mirrors is 
+	\begin{equation}
+	\begin{pmatrix} y_{m+1} 
+	\\ \theta{m+1}
+	\end{pmatrix}
+	= \hat{M}_{FP} \begin{pmatrix} y_{m} 
+	\\ \theta{m}
+	\end{pmatrix}
+	\end{equation}
+
+	where 
+	\begin{equation}
+	\hat{M}_{FP} = \hat{M_i} \hat{D_i} \hat{M_i} \hat{D_i}
+	\end{equation}
+	is the optical transfer matrix.
+	The goal is to find a geometric condition that is dependent on the optical transfer matrix which keeps the axial displacement from diverging.
 	
-	TF: analytical derivation
+	\begin{equation}
+	\begin{pmatrix} y_{m+1} 
+	\\ \theta{m+1}
+	\end{pmatrix}
+	= 
+	\begin{pmatrix}
+		A	&B		
+	\\ 	C	&D
+	\end{pmatrix}
+	\begin{pmatrix} y_{m} 
+	\\ \theta{m}
+	\end{pmatrix}
+	\end{equation}
 	
-	Important quantities: Finesse, cavity pole, free spectral range
+	which means
+	
+	\begin{subequations}
+	\begin{equation}
+	\theta_m = \frac{y_{m+1} - A \, y_m}{B}
+	\end{equation}
+	\begin{equation}\label{ROC}
+	\theta_{m+1} = \frac{y_{m+2} - A \, y_{m+1}}{B}
+	\end{equation}
+	\end{subequations}
+
+	Solving for $y_{m+2}$
+	
+	\begin{equation}
+	y_{m+2} = (A+D) \, y_{m+1} - \text{det}(\hat{M}_{FP}) y_m
+	\end{equation}
+	
+	Assuming a geometrical solution where $y_m = y_o h^m$ and plugging into the equation above, 
+	
+	\begin{equation}
+	h^2 = (A+D) \, h - \text{det}(\hat{M}_{FP})
+	\end{equation}
+	
+	which is a quadratic equation that has two solutions and can be further simplified if the index of refraction for the entire system remains constant such that $\text{det}(\hat{M}_{FP}) =1 $.  Plugging back into $y_m$ and doing some algebra
+	
+	\begin{equation}
+	y_m \propto \text{sin}(m \phi )
+	\end{equation}
+	where $\phi =\text{cos}^{-1} (\frac{A+D}{2})$.  In order for $y_m$ to be harmonic instead of hyperbolic and hence confined, this condition must be met
+	
+	\begin{equation}
+	\frac{\vert A+D \vert}{2} \leq 1
+	\end{equation}
+	
+	By actually calculating the terms of $\hat{M}_{FP}$ and doing even more algebra, it is clear that 
+	\begin{equation}
+	0 \geq \bigg(1+\frac{L}{R_1}\bigg) \bigg(1+\frac{L}{R_2}\bigg) \geq 1
+	\end{equation}
+	
+	which is what was stated in equation \ref{gfactor}
 	
 	Effect of higher order modes into the cavity, mode scanning. All comes from round trip Gouy phase.
-	
+	- RT Gouy Phase
+	- HOM Coupling
 	
 	\chapter{Hermite Gauss Normalization}
 	According to equation \ref{HG}, the higher order modes in the Hermite Gauss basis has the intensity profile,
@@ -923,9 +1101,7 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 	\text{Power Overlap} = \vert \braket{A_1|A_2} \vert^2 = 4 \frac{ z_{0,1}z_{0,2}}{\abs{q_1 - q_2^*}^2}
 	\end{equation}
 
-	\chapter{Designing Fabry-Perot Cavities as Filters}
-	- RT Gouy Phase
-	- HOM Coupling
+
 \end{appendices} 
 
 \medskip
