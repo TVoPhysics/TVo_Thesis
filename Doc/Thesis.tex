@@ -1,17 +1,5 @@
 \documentclass[oneside]{book}
-\usepackage[margin=1.0in]{geometry}
-\usepackage{setspace}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{xcolor}
-\usepackage{listings}
-\usepackage{physics}
-\usepackage[toc,page]{appendix}
-\usepackage{braket}
-\usepackage[pagebackref]{hyperref}   
+\usepackage{MyStyle}
 
 
 \title{Adaptive Mode Matching in Advanced LIGO}
@@ -407,7 +395,7 @@
 
 		\begin{subequations}
 		\begin{equation}\label{paraxiala}
-		\bigg| { \partial^2 \mathbf{A} \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial \mathbf{A} \over \partial z} } \bigg|
+		\bigg| { \partial^2 \mathbf{A} \over \partial z^2 } \bigg|  \ll  \bigg| { k {\frac{}\partial \mathbf{A}{\partial z} } } \bigg|
 		\end{equation}
 		\begin{equation}\label{paraxialb}
 		\bigg| { \partial^2 \mathbf{A} \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial^2 \mathbf{A} \over \partial x^2} } \bigg|
@@ -826,7 +814,7 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 
 \begin{appendices}
 
-	\chapter{Resonator Formulas and Cavity Design} \label{FPappendix}
+	\chapter{Resonator Formulas} \label{FPappendix}
 	Equation \ref{gfactor} describes the stability condition for a two mirror Fabry-Perot cavity.  It is worthwhile to derive the criterion for geometric stability from the ray matrix tools commonly used in optics. 
 	
 	Consider two plane waves traveling in space shown by figure [], they differ by two quantities: the axial and angular separations,  $y$ and $\theta$, respectively.  These two quantities can be transformed via these optical matrices:
@@ -896,7 +884,7 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 	\begin{equation}
 	\theta_m = \frac{y_{m+1} - A \, y_m}{B}
 	\end{equation}
-	\begin{equation}\label{ROC}
+	\begin{equation}
 	\theta_{m+1} = \frac{y_{m+2} - A \, y_{m+1}}{B}
 	\end{equation}
 	\end{subequations}
