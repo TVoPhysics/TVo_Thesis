@@ -1,0 +1,280 @@
+
+\begin{appendices}
+
+	\chapter{Resonator Formulas} \label{FPappendix}
+	Equation \ref{gfactor} describes the stability condition for a two mirror Fabry-Perot cavity.  It is worthwhile to derive the criterion for geometric stability from the ray matrix tools commonly used in optics. 
+	
+	Consider two plane waves traveling in space shown by figure [], they differ by two quantities: the axial and angular separations,  $y$ and $\theta$, respectively.  These two quantities can be transformed via these optical matrices:
+	
+	Lens
+	\begin{equation} \label{lens}
+	\hat{F_i} = 
+	\begin{pmatrix}
+		1				&0			
+	\\ 	-\frac{1}{f_i}	&1
+	\end{pmatrix}
+	\end{equation}
+	
+	Curved Mirror
+	\begin{equation} \label{mirror}
+	\hat{M_i} = 
+	\begin{pmatrix}
+		1				&0			
+	\\ 	\frac{2}{R_i}	&1
+	\end{pmatrix}
+	\end{equation}
+	
+	Space
+	\begin{equation} \label{space}
+	\hat{D_i} = 
+	\begin{pmatrix}
+		1	& d_i		
+	\\ 	0	&1
+	\end{pmatrix}
+	\end{equation}
+	
+	
+	Periodic Fabry-Perot with two mirrors is 
+	\begin{equation}
+	\begin{pmatrix} y_{m+1} 
+	\\ \theta{m+1}
+	\end{pmatrix}
+	= \hat{M}_{FP} \begin{pmatrix} y_{m} 
+	\\ \theta{m}
+	\end{pmatrix}
+	\end{equation}
+
+	where 
+	\begin{equation}
+	\hat{M}_{FP} = \hat{M_i} \hat{D_i} \hat{M_i} \hat{D_i}
+	\end{equation}
+	is the optical transfer matrix.
+	The goal is to find a geometric condition that is dependent on the optical transfer matrix which keeps the axial displacement from diverging.
+	
+	\begin{equation}
+	\begin{pmatrix} y_{m+1} 
+	\\ \theta{m+1}
+	\end{pmatrix}
+	= 
+	\begin{pmatrix}
+		A	&B		
+	\\ 	C	&D
+	\end{pmatrix}
+	\begin{pmatrix} y_{m} 
+	\\ \theta{m}
+	\end{pmatrix}
+	\end{equation}
+	
+	which means
+	
+	\begin{subequations}
+	\begin{equation}
+	\theta_m = \frac{y_{m+1} - A \, y_m}{B}
+	\end{equation}
+	\begin{equation}
+	\theta_{m+1} = \frac{y_{m+2} - A \, y_{m+1}}{B}
+	\end{equation}
+	\end{subequations}
+
+	Solving for $y_{m+2}$
+	
+	\begin{equation}
+	y_{m+2} = (A+D) \, y_{m+1} - \text{det}(\hat{M}_{FP}) y_m
+	\end{equation}
+	
+	Assuming a geometrical solution where $y_m = y_o h^m$ and plugging into the equation above, 
+	
+	\begin{equation}
+	h^2 = (A+D) \, h - \text{det}(\hat{M}_{FP})
+	\end{equation}
+	
+	which is a quadratic equation that has two solutions and can be further simplified if the index of refraction for the entire system remains constant such that $\text{det}(\hat{M}_{FP}) =1 $.  Plugging back into $y_m$ and doing some algebra
+	
+	\begin{equation}
+	y_m \propto \text{sin}(m \phi )
+	\end{equation}
+	where $\phi =\text{cos}^{-1} (\frac{A+D}{2})$.  In order for $y_m$ to be harmonic instead of hyperbolic and hence confined, this condition must be met
+	
+	\begin{equation}
+	\frac{\vert A+D \vert}{2} \leq 1
+	\end{equation}
+	
+	By actually calculating the terms of $\hat{M}_{FP}$ and doing even more algebra, it is clear that 
+	\begin{equation}
+	0 \geq \bigg(1+\frac{L}{R_1}\bigg) \bigg(1+\frac{L}{R_2}\bigg) \geq 1
+	\end{equation}
+	
+	which is what was stated in equation \ref{gfactor}
+	
+	Effect of higher order modes into the cavity, mode scanning. All comes from round trip Gouy phase.
+	- RT Gouy Phase
+	- HOM Coupling
+	
+	\chapter{Hermite Gauss Normalization}
+	According to equation \ref{HG}, the higher order modes in the Hermite Gauss basis has the intensity profile,
+	
+	\begin{equation}
+		I_{mn} (x,y,z) = \vert A_{mn} \vert^2 \bigg[ \frac{W_0}{W(z)} \bigg]^2  \mathbb{G}^2_n\Bigg( \frac{\sqrt{2}x}{W(z)} \Bigg) \mathbb{G}^2_n\Bigg( \frac{\sqrt{2}y}{W(z)} \Bigg)
+	\end{equation}
+
+	It is useful to normalize the first few lowest order modes with respect to the total optical power since the Gaussian beam will couple to them the most due either misalignment or mode mismatch as seen in section [].
+	
+	In one dimension, the total optical power for the first 3 modes are
+	
+	\begin{equation}
+	\label{HGNormalInt1D}
+	\begin{aligned}
+		P_{0}(x,y,z) 	& 	=	\int_{-\infty}^{\infty}  \vert A_{0} \vert^2   \bigg[ \frac{W_0}{W(z)} \bigg] e^{-2x^2/w^2(z)} dx	&
+	\\	P_{1}(x,y,z)	&	=	\int_{-\infty}^{\infty}  \vert A_{1} \vert^2  \bigg[ \frac{W_0}{W(z)} \bigg] \frac{8x^2}{w^2(z)} 	
+								e^{-2x^2/w^2(z)}dx &
+	\\	P_{2}(x,y,z)	&	= 	\int_{-\infty}^{\infty}  \vert A_{2} \vert^2   \bigg[ \frac{W_0}{W(z)} \bigg] \bigg(\frac{8x^2}{w^2(z)}	-2\bigg)^2e^{-2x^2/w^2(z)}dx
+	\end{aligned}
+	\end{equation}
+	
+	In two dimensions, the total optical power for the first 3 modes are
+	\begin{equation}
+	\label{HGNormalInt2D}
+	\begin{aligned}
+		P_{00}(x,y,z) 	& 	=	 \int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  \vert A_{00} \vert^2   \bigg[ \frac{W_0}{W(z)} \bigg]^2 e^{-2x^2/w^2(z)}e^{-2y^2/w^2(z)} dx dy&
+	\\	P_{10}(x,y,z)	&	=	\int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  \vert A_{10} \vert^2  \bigg[ \frac{W_0}{W(z)} \bigg]^2 \frac{8x}{w^2(z)} e^{-2x^2/w^2(z)}e^{-2y^2/w^2(z)} dx dy&
+	\\	P_{20}(x,y,z)	&	= 	\int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  \vert A_{20} \vert^2   \bigg[ \frac{W_0}{W(z)} \bigg]^2 \bigg(\frac{8x^2}{w^2(z)} - 2\bigg)^2 e^{-2x^2/w^2(z)}e^{-2y^2/w^2(z)} dx dy
+	\end{aligned}
+	\end{equation}
+	
+	By setting the equations above to unity, the normalization factors become
+	
+	\begin{equation}
+	\begin{aligned}
+		A_{0} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} 
+	\\	A_{1} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \frac{1}{\sqrt{2}}
+	\\	A_{2} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \frac{1}{\sqrt{8}}
+	\end{aligned}
+	\end{equation}
+	
+	\begin{equation}
+	\begin{aligned}
+		A_{00} &	= \sqrt{\frac{2}{\pi w_0^2}}
+	\\	A_{10} &	= \sqrt{\frac{1}{\pi w_0^2}}
+	\\	A_{20} &	= \sqrt{\frac{1}{4\pi w_0^2}}
+	\end{aligned}
+	\end{equation}
+	
+	Therefore the normalized modes are
+	
+	
+	
+	
+
+
+	
+	
+
+	
+	
+	
+	\chapter{Bullseye Photodiode Characterization}
+	
+	\section{DC}
+	\begin{equation}
+	\begin{split}
+	\text{Power} &= \int_{A}^{B} \abs{A_{00}}^2e^{\frac{-2r^2}{\omega_{0}^2}} 2\pi r dr\\
+			&= -\abs{A_{00}}^2 \frac{\pi \omega_{0}^2}{2} e^{\frac{-2r^2}{\omega_{0}^2}} \biggr\rvert_A^B
+	\end{split}
+	\end{equation}
+	
+	\begin{equation}
+	\text{P}_{in} = \text{Power} \biggr\rvert_0^{r_0} = \abs{A_{00}}^2 \frac{\pi \omega_{0}^2}{2} [1 - e^{\frac{-2r_0^2}{\omega_{0}^2}}]
+	\end{equation}
+	
+	\begin{equation}
+	\text{P}_{out} = \text{Power} \biggr\rvert_{r_0}^{\infty} = \abs{A_{00}}^2 \frac{\pi \omega_{0}^2}{2} [e^{\frac{-2r_0^2}{\omega_{0}^2}}]
+	\end{equation}
+	
+	\begin{equation}
+	\text{P}_{total} =  \text{P}_{in} + \text{P}_{out}
+	\end{equation}
+	
+	\begin{equation}
+	\omega = \sqrt{\frac{\text{P}_{total}}{\abs{A_{00}}^2 \pi / 2}}
+	\end{equation}
+	
+	\begin{equation}
+	\text{DC Power Ratio} 
+	= \frac{P_{out}}{P_{in}} \\
+	= \frac{e^{-2r_0^2/ \omega_{0}^2}} {1 - e^{-2r_0^2/ \omega_{0}^2 }} \approx 0.582
+	\end{equation}
+	
+	\section{RF}
+	
+	\begin{equation}
+	\begin{split}
+	\text{P}_{RF} &= \int_{A}^{B} \abs{A_{01}}^2 \big(1-\frac{2r^2}{\omega_{0}^2}\big) e^{\frac{-2r^2}{\omega_{0}^2}} 2\pi r dr\\
+	&= -\abs{A_{00}}^2 \frac{\pi}{2} \omega_{0}^2 e^{\frac{-2r^2}{\omega_{0}^2}} \bigg(1 + \frac{4 r_4}{\omega_{0}^4} \bigg)  \biggr\rvert_A^B
+	\end{split}
+	\end{equation}
+	
+	\begin{equation}
+	\text{P}_{in} \\
+	= \text{P}_{RF} \biggr\rvert_0^{r_0} \\
+	= - \abs{A_{01}}^2  \frac{\pi}{2} \omega_{0}^2 \bigg( e^{\frac{-2r^2}{\omega_{0}^2}} \big(1 + \frac{4 r_4}{\omega_{0}^4} \big) - 1 \bigg)
+	\end{equation}
+	
+	\begin{equation}
+	\text{P}_{out} \\
+	= \text{P}_{RF} \biggr\rvert_{r_0}^{\infty}\\ 
+	= - \abs{A_{01}}^2  \frac{\pi}{2} \omega_{0}^2 e^{\frac{-2r^2}{\omega_{0}^2}} \big(1 + \frac{4 r_4}{\omega_{0}^4} \big) 
+	\end{equation}
+	
+	\begin{equation}
+	\text{RF Power Ratio} 
+	= \frac{P_{out}}{P_{in}} \\
+	= \frac{e^{-2r_0^2/ \omega_{0}^2}} {1 - e^{-2r_0^2/ \omega_{0}^2 }} \approx 2.7844
+	\end{equation}
+	
+	\chapter{Overlap of Gaussian Beams}
+	
+	Referenced in section
+	
+	The full Gaussian beam overlap is important in quantitatively defining the amount of power loss obtained when a cavity is mismatched a incoming laser field.
+	
+	First we define an arbitrary Gaussian beam in cylindrical coordinates:
+	
+	\begin{equation}
+	\begin{split}
+	\ket{A(r)} 
+	&= \frac{A_0}{q(z)} e^{\frac{-ikr^2}{2q(z)}}\\
+	&= \frac{A_0}{q(z)} e^{\frac{-ikr^2(z-iz_0)}{2\abs{q(z)}^2}}
+	\end{split}
+	\end{equation}
+	
+	where $A_0$ is a real amplitude, $q(z)= z + i z_0$ is the complex beam parameter, $k$ is the wave number, and $r$ is the radial variable in the transverse direction.
+
+	First we normalize the overlap integral to unity:
+	\begin{equation}
+	\braket{A(r)|A(r)} 
+	=  \frac{\rvert A_0 \rvert^2}{z^2+z_0^2} \int_{0}^{\infty} e^{\frac{-kr^2 z_0}{\abs{q(z)}^2}} 2 \pi r dr = 1
+	\end{equation}
+
+	Normalization factor is this:
+	\begin{equation}
+	A_0 = \sqrt{\frac{k z_0}{\pi}}
+	\end{equation}
+
+	For two Gaussian beams with arbitrary q-parameters
+	\begin{equation}
+	\ket{A_i} = \frac{A_{0,i}}{q_i} e^{ \frac{-ikr^2(z-iz_0)}{2\abs{q_i}^2 }}
+	\end{equation}
+	where $z_{0,i}$ is the waist size of one particular beam.
+	
+	The amplitude overlap is:
+	\begin{equation}
+	\braket{A_1|A_2} = 2 i  \frac{ z_{0,1}z_{0,2}}{q_1 - q_2^*}
+	\end{equation}
+	
+	So the power overlap is:
+	\begin{equation}
+	\text{Power Overlap} = \vert \braket{A_1|A_2} \vert^2 = 4 \frac{ z_{0,1}z_{0,2}}{\abs{q_1 - q_2^*}^2}
+	\end{equation}
+
+
+\end{appendices} 
