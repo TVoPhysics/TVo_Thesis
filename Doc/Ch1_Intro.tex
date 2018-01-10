@@ -3,7 +3,7 @@
 	Say something profound here.
 
 	\section{Gravitational Waves}\label{gravitational waves}
-	In 1915, Albert Einstein published his theory of general relativity ref[Einstein].
+	In 1915, Albert Einstein published his theory of general relativity \ref{einstein}.
 	
 	The seminal equation in this theory is:
 	
@@ -11,9 +11,10 @@
 	G_{\mu \nu} = 8 \pi T_{\mu \nu}
 	\end{equation}
 	
-	which is a set of 10 coupled second order differential equations that are nonlinear.  In their complete form, equation [1] fully describes the interaction between space-time and mass-energy. To describe the physics in a highly curved space-time, one would have to fully solve the Einstein field equations numerically.  
+	Which is a set of 10 coupled second-order differential equations that are nonlinear.  In its complete form, equation \ref{einstein} fully describes the interaction between space-time and mass-energy. 
 	
-	In the weak field approximation, the metric can be described as
+	
+	To describe the physics in a highly curved space-time, one would have to fully solve the Einstein field equations numerically. In areas where the curvature is close to flat,  the weak field approximation can be applied and the metric is described as	
 	
 	\begin{equation} \label{weak}
 	g_{\mu \nu}  \approxeq \eta_{\mu \nu} + h_{\mu \nu}
@@ -21,7 +22,7 @@
 	
 	where $\eta_{\mu \nu}$ is the metric of flat space time and $|h_{\mu \nu}| \ll 1$ is the perturbation due to a gravitational field.
 	
-	By plugging in equation \ref{weak} into equation \ref{einstein} and using empty space we obtain the familiar wave equation
+	By plugging in equation \ref{weak} into \ref{einstein} and using empty space we obtain the familiar wave equation
 	
 	\begin{equation} \label{wave}
 	\Big(\nabla^2 - \frac{1}{c^2} \pdv[2]{t} \Big) h_{\mu \nu}  = 0
@@ -69,7 +70,7 @@
 	\approx [ 1 + \frac{1}{2} h_{xx}(x=0)] L
 	\end{equation} 
 	
-	which shows us two very important points about the nature of gravitational waves.  Firstly, the effect is very small since the length variation is, by definition, a small perturbation in flat space-time.  Secondly, the effect is proportional to the initial separation between the particles. This means a detector which is large will have a better chance to measure these small effects, a point that drove the design of the Laser Interferometer Gravitational-Wave Interferometer (LIGO).
+	which shows us two very important points about the nature of gravitational waves.  Firstly, the effect is very small since the length variation, $h_{xx}$, is a small perturbation on flat space-time.  Secondly, the effect is proportional to the initial separation between the particles. This means a detector which is large will have a better chance to measure these small effects, an important point that drove the design of the Laser Interferometer Gravitational-Wave Interferometer (LIGO).
 	
 	
 	\subsection{Energy from a Gravitational Wave}
@@ -84,7 +85,7 @@
 	\cite{Saulson}
 	
 	\subsection{Measuring Gravitational Waves with Light}\label{measuringGWs}
-	Even with the theoretical formulation of gravitational waves resolved by the 1970s [Pirani], detection of GWs by ground-based detectors was still a controversial topic among scientists in the field.  This was due to the incredible accuracy required to measure the strain from even the most dense astrophysical objects[Rai's paper].  The earliest attempts at detecting these small signals were famously done by Joseph Weber ref[weber] using large resonant bars and piezoelectric transducers to extract the energy from gravitational waves at the resonant frequencies of the bars. Picture of bar detectors[].  However, these bars are limited by thermal noise and can only detect GWs in very narrow frequency bands. 
+	Even with the theoretical formulation of gravitational waves resolved by the 1970s ref[Pirani], detection of GWs by ground-based detectors was still a controversial topic among scientists in the field ref[Collins].  This was due to the incredible accuracy required to measure the strain from even the most dense astrophysical objects ref[Rai].  The earliest attempts at detecting these small signals were famously done by Joseph Weber ref[Weber] using large resonant bars and piezoelectric transducers to extract the energy from gravitational waves at the resonant frequencies of the bars. Picture of bar detectors at LHO.  However, these bars are limited by thermal noise and can only detect GWs in very narrow frequency bands ref[Bars]. 
 	
 	Interferometers are devices that measure small displacements by using a laser that is split with a partially transmitting mirror (or beamsplitter), which allows 50$\%$ of the light to get reflected and 50$\%$ to be transmitted.  Each of the split beams travel down arms and reflect off of mirrors and return down the arms.  Upon reaching the beamsplitter, the beams recombine and by using the superposition of electromagnetic waves the laser will add linearly at the output port (or antisymmetric port).  The laser beams will gather phase as they propagate down each individual arm, and when recombining, the intensity of the light will be proportional to the phase differences between each beam.  This will correspond to a differential length that is described by
 	
@@ -155,9 +156,7 @@
 	
 	where $\tau_{RT} = 2L/c$.  The response for a detector whose arm lengths are blank km have null points at the around blank Hz which means the instrument cannot be arbitrarily long, however, this point is not concerning because it is too expensive and difficult to make a terrestrial detector of this size.
 	
-	How to actually measure $\Delta \Phi$ with an interferometer is explained in the next section.
-	
-	
+	How to practically measure $\Delta \Phi$ with an interferometer is explained in the next section.
 	
 	\section{The LIGO Instrument}
 	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the output as a measure of the differential arm length, it becomes a natural way of detecting gravitational waves.
