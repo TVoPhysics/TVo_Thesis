@@ -178,30 +178,94 @@
 			
 		Since the electromagnetic waves are linear, the resultant sum of waves at the output will be $E_{out} = E_x + E_y$. A photodiode (PD) is placed at the output (or antisymmetric) port to read out the integrated power which is related to the total electric field by
 		\begin{equation}
-		\begin{aligned}
+		\begin{aligned}\label{asy_power}
 			P \vert_{PD}	&= \int_{Area} I \;				\text{d}A 
 		\\					&= \int_{Area} (E_x + E_y)^2 \;	\text{d}A 
-		\\					&\propto \text{cos}^2(\Delta \phi)
+		\\					&= P_{in} \; \text{cos}^2(\Delta \phi)
+		\end{aligned}
+		\end{equation}	
+		where $\Delta \phi = \phi_{x} - \phi_{y} = k_x L_x - k_y L_y$ and $P_{in}$ is the input power.. By using equation \ref{diffphase} and the common (or average) arm length $L_{+} = \frac{L_x + L_y}{2}$, the differential phase results in a power shift
+		
+		\begin{equation}
+		P \vert_{PD} \approx P_{max} \; (1-2 \Delta \phi) = P_{in} \; (1-2 k L_{+} h_{+})
+		\end{equation}
+		
+		There is a large DC term that is dependent on the input power and generally, it is very difficult to measure small changes in a large signal. So the next obvious method would be to shift the arms such that the output port is operating on a dark fringe, normally this is called a null-point operation.  However, there are difficulties associated with this method as well.  Consider shifting the phase of equation \ref{asy_power} by $\pi/2$, which would result in
+		
+		\begin{equation}\label{null}
+		P \vert_{null} = P_{in} \; \text{sin}^2 (\Delta \phi) \approx P_{in} \; (k L_{+} h_{+})^2 
+		\end{equation}
+		However, this results in second-order dependence on the gravitational-wave signal which is already approximated to be very small.
+		
+		So a good solution to the issue of how to $read$ out a gravitational wave signal from an interferometer is familiar to radio engineers, namely, RF detection methods:
+		
+		Consider changing the interferometer input by adding an electro-optical modulator (EOM) to sinusoidally modulate the laser frequency and expanding to first order using the Bessel functions,
+		
+		\begin{equation}\label{modE}
+		\begin{aligned}
+		E_{in} 	&= E_{0} e^{i(wt + \beta \text{cos} (\Omega t))} \\
+				&\approx E_0 e^{iwt} [J_0(\beta) + J_1(\beta) e^{i \Omega t} + J_1(\beta) e^{-i \Omega t}] \\
+				&= E_{C,in} + E_{SB+,in} + E_{SB-,in}
 		\end{aligned}
 		\end{equation}
-		where $\Delta \phi = \phi_{x} - \phi_{y}$.
+		where $\Omega$ and $\beta$ are the modulation frequency and depth, respectively.  The 
 		
-		In Peter Saulson's book, there is a simple explaination of the light field exiting the anti-symmetric port, but in a more general sense, the phase can be different depending on how the reader chooses to solve Maxwell's equation.
+		It is useful to define an optical transfer functions which transforms the interferometer's input electric field to its output,
 		
-		However, the signal has a large DC component which is more difficult to practically detect.  
+		\begin{equation}\label{opt_tf}
+		E_{out} = E_{C} + E_{SB+} + E_{SB-} = 
+		\begin{pmatrix}
+			t_{C} 	&   
+		\\ 	t_{SB+} &
+		\\ 	t_{SB-} &
+		\end{pmatrix}
+		\begin{pmatrix}
+		E_{C,in} &    E_{SB+,in}    &  E_{SB-,in}     
+		\end{pmatrix}
+		\end{equation}
 		
-		When working on the dark fringe the signal is proportional to the square of $h(t)$, this is really bad.
 		
-		So we have to introduce a lock-in detection scheme which uses sidebands to maintain the linear relation between the output and $h(t)$.
-		[Black Paper on Signal extraction]
+		The carrier transfer function, $t_{C}$ has already been calculated by equations \ref{asy_power} - \ref{null} and the sideband transfer functions are not much different.
 		
-		As show in section \ref{gravitational waves}, the gravitational wave will modulate the proper length between two free floating points in space. 
-	
-		However, the signal has a large DC component which is more difficult to practically detect.  
+		\begin{equation}\label{sb_tf}
+		t_{SB\pm} = r_{x,\pm}  e^{i\phi_{\pm,x}} - r_{y,\pm}  e^{i\phi_{\pm,y}}
+		\end{equation}
 		
-		When working on the dark fringe the signal is proportional to the square of $h(t)$, this is really bad.
+		where $\phi_{\pm,i} = (k \pm k_{\Omega}) \, \ell_{i} = (\frac{w+\Omega}{c} ) \ell_{i}$. In the current example, there is no difference in reflectivity between the sidebands and carrier fields, however, this will not be true in general when integrating Fabry-Perot cavities.  Plugging equation \ref{sb_tf} into \ref{opt_tf}, the output electric field becomes 
 		
-		So we have to introduce a lock-in detection scheme which uses sidebands to maintain the linear relation between the output and $h(t)$.
+		\begin{equation}
+		E_{out} = i e^{iwt} [ J_0(\beta) 	k \ell_{+}  h_{+}  \; + \; J_1(\beta) \sin( k \Delta \ell + k_{\Omega} \Delta \ell) e^{i\Omega t} \; + \; J_1(\beta) \sin( k \Delta \ell + k_{\Omega} \Delta \ell) e^{-i\Omega t} ]
+		\end{equation}
+		
+		By choosing the carrier signal to be on the dark fringe, $k \Delta \ell = \pi/2$ but the sidebands to be slightly off the null (Figure []) and hence leak into the anti-symmetric port, the electric field reduces to
+		
+		\begin{equation}
+		E_{out} = i e^{iwt} [ J_0(\beta) 	k \ell_{+}  h_{+}  \; + \; J_1(\beta) \sin(k_{\Omega} \Delta \ell) e^{i\Omega t} \; + \; J_1(\beta) \sin( k_{\Omega} \Delta \ell) e^{-i\Omega t} ]
+		\end{equation}
+		
+		Recall that the intensity is equal to the electric field squared,
+		
+		\begin{equation}
+		\begin{aligned}
+			I	= \vert E_{out} \vert^2  =	&\vert E_{C}\vert^2 + \vert E_{SB+}\vert^2 + \vert E_{SB-}\vert^2 \\
+										  	& + 2 \mathbf{Re} \{ \; E_{SB+} E^*_{SB-} e^{2i\Omega t} \; \}\\
+										  	& + 2 \mathbf{Re} \{ \; (E_{C} E^*_{SB-} +  E_{SB+} E^*_{C} ) e^{i\Omega t} \; \}
+		\end{aligned}
+		\end{equation}
+		
+		The last term is referred to as the $beat$ $note$ between the carrier signal and the sidebands.  It is possible to extract only the signal at the modulation frequency using a mixer and low-pass filter to get the demodulated signal
+		
+		\begin{equation}
+		S = 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell)  \; h_{+}
+		\end{equation}
+		
+		This shows that a RF detection technique will be linear in GW signal with no large DC offset.  However, this method depends on the local oscillator's stability. 
+		
+		Setting the carrier on the null point means $\Delta \ell = \frac{k_{\Omega}}{k} \frac{\pi}{2}$ and allows the designer to optimize the Schnupp asymmetry length to get the best signal for some modulation frequency.
+		
+		
+		
+		
 		[Black Paper on Signal extraction]	
 	
 		\subsection{Fabry-Perot Cavities}\label{FP}
