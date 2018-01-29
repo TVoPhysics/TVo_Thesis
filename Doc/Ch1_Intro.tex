@@ -253,20 +253,34 @@
 		\end{aligned}
 		\end{equation}
 		
-		The last term is referred to as the $beat$ $note$ between the carrier signal and the sidebands.  It is possible to extract only the signal at the modulation frequency using a mixer and low-pass filter to get the demodulated signal
+		The last term is referred to as the $beat$ $note$ between the carrier signal and the sidebands.  It is possible to extract only the signal at the modulation frequency using a mixer and low-pass filter to get a demodulated signal.  The mixer is an analog device which takes in two signals and outputs the product of the two inputs. Using a local oscillator at the modulation frequency, the demodulated intensity is 
 		
 		\begin{equation}
-		S = 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell)  \; h_{+}
+		\begin{aligned}
+		I_{Demod} 	&\propto \big[ 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell)  \; h_{+}\big] \big[ \cos(\Omega t)  \sin(\Omega t + \phi_{Demod}) \big] \\
+					&= \big[ 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell)  \; h_{+}\big] \big[ \sin(\phi_{Demod}) + \sin(2\Omega t + \phi_{Demod}) \big]
+		\end{aligned}
 		\end{equation}
 		
-		This shows that a RF detection technique will be linear in GW signal with no large DC offset.  However, this method depends on the local oscillator's stability. 
+		where $\phi_{Demod}$ is the phase that can be set by the user in order to practically extract the right signal. For the output, the   After the mixer, there will be signals at DC, $\Omega$, $2\Omega$ and so on. However, the part that is linear in the gravitational wave amplitude will be at DC so a low-pass filter will allow the final signal to dominate:
 		
-		Setting the carrier on the null point means $\Delta \ell = \frac{k_{\Omega}}{k} \frac{\pi}{2}$ and allows the designer to optimize the Schnupp asymmetry length to get the best signal for some modulation frequency.
+		\begin{equation}
+		S = 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell) \sin(\phi_{Demod}) \; h_{+}
+		\end{equation}
 		
 		
+		This shows that a RF detection technique will be linear in GW signal with no large DC offset.  However, this method depends on the local oscillator's stability. Reference [Fritzchel, Hild] 
+		
+		Setting the carrier on a null point means $\Delta \ell = \frac{k_{\Omega}}{k} \frac{\pi}{2}$ and allows the designer to optimize the Schnupp asymmetry length to get the best signal for some modulation frequency.
+		
+		This type of readout scheme is called Heterodyne detection, where the local oscillator signal is provided by an EOM.  However, the Advanced LIGO scheme uses Homodyne detection in order to derive the GW signal but 
+		
+		Disadvantages of heterodyne scheme: fluctuations in the local oscillator via the modulation depth changing or the phase oscillation.
+		
+		Fix: Homodyne scheme, ref[Tobin and Nick Smith], this has the advantage of being mode-matched to the carrier beam and lower quantum noise and easier to do squeezing. see section []
 		
 		
-		[Black Paper on Signal extraction]	
+		[Black Paper on Signal extraction, ]	
 	
 		\subsection{Fabry-Perot Cavities}\label{FP}
 		There are two ways to make our instrument better: one is to increase the sensitivity to gravitational waves and the other is to make our noise lower. From equation \ref{diffphase}, the gravitational wave signal is proportional to the optical path length that the photon travels, which means the most straightforward method of increasing the sensitivity is to make the arms as long as possible (up to the null point described by equation \ref{gwsinc}.  Generally, there were two methods to do this: a delay line or a Fabry-Perot resonator.  At the time of writing this thesis, all modern gravitational wave detectors use the latter method.
@@ -279,17 +293,17 @@
 		Starting with a plane wave at the input mirror with amplitude $E_0$ \cite{Saulson}, 
 		
 		the reflection coefficient is 
-		\begin{equation}
+		\begin{equation}\label{r_FP}
 		r_{FP} = -r_1 + \frac{t_1^2 r_2  e^{-i2kL}}{1-r_1 r_2 e^{-i2kL}}
 		\end{equation}
 		
 		the transmission coefficient is
-		\begin{equation}
+		\begin{equation}\label{t_FP}
 		t_{FP} = \frac{t_1 t_2 e^{ikl}}{1-r_1 r_2 e^{-i2kl}}
 		\end{equation}
 		
 		the circulating coefficient is
-		\begin{equation}
+		\begin{equation}\label{c_FP}
 		c_{FP} = \frac{t_1}{1- r_1 r_2 e^{-2ikL}}
 		\end{equation}
 		
@@ -353,10 +367,41 @@
 		
 		Modal Contents
 		
+		\subsubsection{Locking a Fabry Perot Cavity}
+		This is described everywhere, reference Black, Drever, Jenne, Evan Hall. Just give the highlights.
+		
+		Described above are the theoretical constructs of a FP cavity, but the question remains, how does one practically construct a resonant optical cavity?  The answer comes from using a heterodyne sensing scheme similar to the one described in section [].  Except the optical system is not a Michelson interferometer but rather a two mirror cavity, however, this can apply to a number of different geometries such as triangular or bow-tie cavities shown in Figure [].  All of which are used in LIGO for various reasons.
+		
+		Starting with a input laser and an EOM (electro-optical modulator) that imparts upper and lower sidebands at a modulation frequency $\Omega$, the user injects three beams into the optical system exactly as in equation \ref{modE}.  When placing a photodetector on the cavity reflection port, one should see the effects of the cavity on each of the three electric fields.
+		
+		\begin{equation}
+		E_{FP,out} = E_{C} + E_{SB+} + E_{SB-} = 
+		\begin{pmatrix}
+		r_{C} 	&   
+		\\ 	r_{SB+} &
+		\\ 	r_{SB-} &
+		\end{pmatrix}
+		\begin{pmatrix}
+		E_{C,in} &    E_{SB+,in}    &  E_{SB-,in}     
+		\end{pmatrix}
+		\end{equation}
+		
+		where the reflection coefficients follow equation \ref{r_FP}.  It is obvious that the phase accumulated by the cavity differ between the carrier and sidebands so that the beat frequency will be proportional to the phase difference.  To make a good reference for the resonant carrier beam, the sidebands should be anti-resonant in the cavity.  
+		\begin{equation}
+		r_{C} = -r_1 + \frac{t_1^2 r_2  e^{-i2kL}}{1-r_1 r_2 e^{-i2kL}}
+		\end{equation}
+		
+		and 
+		\begin{equation}
+		r_{SB\pm} = -r_1 + \frac{t_1^2 r_2  e^{-i2(k+k_{\Omega})L}}{1-r_1 r_2 e^{-i2(k+k_{\Omega})L}}
+		\end{equation}
+		
+		This time, 
+		
 		\subsubsection{Application to LIGO}
 		
 		Frequency response of a FP Michaelson:
-
+		Just write it down.
 		References:[Black, Rick's Paper]
 
 		\subsection{Power-Recycled Fabry-Perot Interferometers}
@@ -369,11 +414,12 @@
 		
 		\subsection{Dual-Recycled Fabry-Perot Interferometers}
 		
-		DC
+		One of the biggest changes made between initial and advanced LIGO was the addition of a signal recycling mirror at the antisymmetric port shown in Figure []. This extra mirror allows an extra degree of freedom in shaping the sensitivity curve such.
+		
 		
 		Figure comparing the three cases of increased sensitivity.
 		
-		References: [Kiwamu]
+		References: [Kiwamu, Buonanno and Chen]
 		
 		\subsection{Fundamental Noise Sources}
 		Ref: Evan Hall, GWINC
@@ -385,7 +431,7 @@
 		\subsubsection{Thermal Noise}
 		\subsubsection{Newtonian Noise}
 
-	
+		
 	
 	\section{Squeezed States of Light}
 	The Quantum Noise is a fundamental source that can be improved by modifying the quantum vacuum using correlated photons and injecting the states of light into the antisymmetric port of the interferometer.  Within the LIGO community, this procedure of modifying quantum vacuum is called squeezing. Caves analytically derived the effects of quantum noise on the interferometer as well as the improvement due to i
