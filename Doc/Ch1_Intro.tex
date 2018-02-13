@@ -159,15 +159,13 @@
 	How to practically measure $\Delta \Phi$ with an interferometer is explained in the next section.
 	
 	\section{The LIGO Instrument}
-	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the output as a measure of the differential arm length, it becomes a natural way of detecting gravitational waves.
-	
-	The LIGO instruments are considered dual-recycled Fabry-Perot interferometers.
+	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the output as a measure of the differential arm length, it becomes a natural way of detecting gravitational waves. However, to make a practical gravitational-wave observatory, the complexity will have to be extended.  The next sections will explore the various upgrades that were implemented to improve the sensitivity of LIGO.
 	
 		\subsection{Simple Michaelson}
 		As show in figure[michaelson], the interferometer readout uses a photodetector that measure the total power which depends on how laser light in the arms constructively or destructively interferes.  
-		At the end of section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down each arm carries gravitational wave information.  The difference in flight times, $\Delta t$, can be easily cast into how much phase,$\Delta \phi$ is accumulated by the photons as they propagate through space.  But the question remains how an interferometer actually measures $\Delta \phi$:
+		At the end of section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down each arm carries gravitational wave information.  The difference in flight times, $\Delta t$, can be converted into how much phase,$\Delta \phi$ is accumulated by the photons as they propagate through space.  But the question remains how an interferometer actually measures $\Delta \phi$:
 		
-		If the input electric field of the interferometer is $E_0$, the beamsplitter will transmit $E_0 /2$ down the x-arm and reflect $E_0 /2$ down the y-arm.  By setting the beamsplitter to be the origin,  the beams traveling down their respective arms will have gathered a phase $\phi_i$. Then, upon reflecting off the end mirrors and returning to the beamsplitter, each of the electric fields can be described by these equations
+		If the input electric field of the interferometer is $E_0$, the beamsplitter will transmit $E_0 /2$ down the x-arm and reflect $E_0 /2$ down the y-arm.  By setting the beamsplitter to be the origin,  two beams traveling down their respective arms will have gathered a phase $\phi_i$. Then, upon reflecting off the end mirrors and returning to the beamsplitter, each of the electric fields can be described by these equations
 		
 			\begin{equation}
 			\begin{aligned}
@@ -267,7 +265,6 @@
 		\begin{equation}
 		S = 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell) \sin(\phi_{Demod}) \; h_{+}
 		\end{equation}
-		
 		
 		This shows that a RF detection technique will be linear in GW signal with no large DC offset.  However, this method depends on the local oscillator's stability. Reference [Fritzchel, Hild] 
 		
@@ -427,10 +424,13 @@
 		Noise budget:
 
 		\subsubsection{Quantum Noise}
+		One fundamental noise source that is limiting LIGO's sensitivity arises from the fluctuation of quantum vacuum entering the anti-symmetric port and coupling to the electric fields.  A quantum mechanical description of an interferometer was constructed by Caves[] where he used electric field operators to show that quantum vacuum fluctuations are the cause of radiation pressure and shot noise in an interferometer.
+		
+		
 		\subsubsection{Seismic Noise}
 		\subsubsection{Thermal Noise}
 		\subsubsection{Newtonian Noise}
-
+		Although there are some noise sources that can be reduced using increasingly complicated techniques such as more levels of seismic isolation or quantum nondemolition devices.  Newtonian noise that is caused by fluctuating gravitational fields arising from the wave motion of the earth is one that cannot easily be reduced.
 		
 	
 	\section{Squeezed States of Light}

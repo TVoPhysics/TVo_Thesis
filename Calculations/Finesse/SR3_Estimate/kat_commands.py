@@ -7,7 +7,7 @@ const mech_Q    1M # Guess for suspension Q factor
 fsig darm  LXarm 1 0 1
 fsig darm2 LYarm 1 180 1
 qnoisedS NSR_with_RP 1 $fs nOMC_AROC_trans
-xaxis darm f log 5 5k 100
+xaxis darm f log 1 5k 100
 yaxis lin re:im
 retrace off
 """
