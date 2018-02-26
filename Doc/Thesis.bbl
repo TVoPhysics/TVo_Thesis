@@ -1,13 +1,44 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{5}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem{Saulson}
-Peter Saulson.
-\newblock {\em Fundamentals of Gravitational Wave Detectors}.
-\newblock World Scientific, 2016.
+\bibitem[Black(2001)]{BlackPDH}
+E.~D. Black.
+\newblock An introduction to pound–drever–hall laser frequency
+  stabilization.
+\newblock \emph{American Journal of Physics}, 69\penalty0 (1):\penalty0 79--87,
+  2001.
+\newblock \doi{10.1119/1.1286663}.
+\newblock URL \url{https://doi.org/10.1119/1.1286663}.
 
-\bibitem{Lawrence:99}
+\bibitem[Lawrence et~al.(1999)Lawrence, Willke, Husman, Gustafson, and
+  Byer]{Lawrence:99}
 M.~J. Lawrence, B.~Willke, M.~E. Husman, E.~K. Gustafson, and R.~L. Byer.
 \newblock Dynamic response of a fabry--perot interferometer.
-\newblock {\em J. Opt. Soc. Am. B}, 16(4):523--532, Apr 1999.
+\newblock \emph{J. Opt. Soc. Am. B}, 16\penalty0 (4):\penalty0 523--532, Apr
+  1999.
+\newblock \doi{10.1364/JOSAB.16.000523}.
+\newblock URL \url{http://josab.osa.org/abstract.cfm?URI=josab-16-4-523}.
+
+\bibitem[M~Rakhmanov and Jr(2004)]{dynamicFP}
+O.~D. M~Rakhmanov, F~Bondu and R.~L.~S. Jr.
+\newblock Characterization of the ligo 4 km fabry–perot cavities via their
+  high-frequency dynamic responses to length and laser frequency variations.
+\newblock \emph{Classical and Quantum Gravity}, Feb 2004.
+\newblock URL
+  \url{http://iopscience.iop.org/article/10.1088/0264-9381/21/5/015/meta}.
+
+\bibitem[of~Birmingham(2014)]{FinesseManual}
+U.~of~Birmingham.
+\newblock \emph{Finesse Manual}, 2014.
+\newblock URL \url{http://www.gwoptics.org/finesse/}.
+
+\bibitem[Saulson(2016)]{Saulson}
+P.~Saulson.
+\newblock \emph{Fundamentals of Gravitational Wave Detectors}.
+\newblock World Scientific, 2016.
 
 \end{thebibliography}
