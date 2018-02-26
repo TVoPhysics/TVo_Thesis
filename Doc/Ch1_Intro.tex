@@ -74,16 +74,9 @@
 	
 	
 	\subsection{Energy from a Gravitational Wave}
+	Consider a binary system.
 	
-	\subsection{Sources of Gravitational Waves}
-	\subsubsection{Compact Binary Inspirals}
-	\subsubsection{Continuous Waves}
-	\subsubsection{Bursts}
-	\subsubsection{Stochastic}
-	Even with some of the most energetic events known to humanity such as the merger of neutron stars and black holes, the amount of strain expected is on the order of 10e-24.
-	
-	\cite{Saulson}
-	
+
 	\subsection{Measuring Gravitational Waves with Light}\label{measuringGWs}
 	Even with the theoretical formulation of gravitational waves resolved by the 1970s ref[Pirani], detection of GWs by ground-based detectors was still a controversial topic among scientists in the field ref[Collins].  This was due to the incredible accuracy required to measure the strain from even the most dense astrophysical objects ref[Rai].  The earliest attempts at detecting these small signals were famously done by Joseph Weber ref[Weber] using large resonant bars and piezoelectric transducers to extract the energy from gravitational waves at the resonant frequencies of the bars. Picture of bar detectors at LHO.  However, these bars are limited by thermal noise and can only detect GWs in very narrow frequency bands ref[Bars]. 
 	
@@ -103,10 +96,10 @@
 	\end{equation}
 	where $F_{+}(\theta,\phi,\psi)$ and $F_{\cross}(\theta,\phi,\psi$ are the antenna pattern functions that project the gravitational wave amplitudes onto the detector frame.
 	
-	\begin{equation}
+	\begin{equation}\label{Fplus}
 	F_{+}(\theta,\phi,\psi) = -\frac{1}{2}[1+\text{cos}^2(\theta)] \text{cos}(2\phi) \text{cos}(2\psi) - \text{cos}(\theta) \text{sin}(2\phi) \text{sin}(2\psi)
 	\end{equation}
-	\begin{equation}
+	\begin{equation}\label{Fcross}
 	F_{\cross}(\theta,\phi,\psi) = + \frac{1}{2}[1+\text{cos}^2(\theta)] \text{sin}(2\phi) \text{cos}(2\psi) - \text{cos}(\theta) \text{sin}(2\phi) \text{sin}(2\psi)
 	\end{equation}
 	
@@ -156,12 +149,94 @@
 	
 	where $\tau_{RT} = 2L/c$.  The response for a detector whose arm lengths are blank km have null points at the around blank Hz which means the instrument cannot be arbitrarily long, however, this point is not concerning because it is too expensive and difficult to make a terrestrial detector of this size.
 	
-	How to practically measure $\Delta \Phi$ with an interferometer is explained in the next section.
+	How to practically measure $\Delta \Phi$ with an interferometer is explained in section \ref{LIGOInstrument}.
+
+	\subsection{Detection of Gravitational Waves}
+	The LIGO project is meant to observe astrophysical objects so it is natural to wonder how well a single detector can probe the universe.  
 	
-	\section{The LIGO Instrument}
+	Signal-to-noise is the level of interesting signals compared to the background noise, which can be expressed as
+	\begin{equation}\label{SNR}
+	\rho = 2 \int_{-\infty}^{\infty} \frac{ \tilde{s}(f) \tilde{s}^*(f) }{S_n(f)}
+	\end{equation}
+	
+	where ${S_n(f)}$ is the one-sided average power spectral density of the detector noise and $\tilde{s}(f)$ is the Fourier transform of the detectors' response to a gravitational-wave signal.
+	
+	Consider two dense objects with mass $m_1$ and $m_2$ rotating around each other, separated by a distance $R$ such that quadrupole equation still holds (i.e. flat space-time with small perturbations). The detector response, in units of strain, to the gravitational waves emitted by this source is [Finn],
+	
+	\begin{equation}\label{inspiralsignal}
+	s(t) = \frac{\mathcal{M}}{d_L} \Theta(\theta,\phi,\psi,i) [\pi f(t) \mathcal{M}]^{2/3} \cos[\Phi(t) + constant]
+	\end{equation}
+	
+	where $\mathcal{M} = (1+z) \frac{(m_1 m_2)^{3/5}}{(m_1 + m_2)^{1/5}}$ is the chirp mass, $d_L$ is the luminosity distance. 
+	
+	
+	The orientation response, $\Theta(\theta,\phi,\psi,i)$, is a function that depends entirely on the detector orientation relative to the angular momentum vector of the binary [Figure of a binary spiraling and a detector on earth]
+	
+	\begin{equation}
+	\Theta(\theta,\phi,\psi,i) = 2 \sqrt{	[F_{+}(\theta,\phi,\psi) (1+\cos^2(i)) ]^2 + [2 F_{\cross} \cos(i)]^2 }
+	\end{equation}
+	
+	where $F_{+}$ and $F_{\cross}$ are from equation \ref{Fplus} and \ref{Fcross}.
+	
+	As the binary loses energy to gravitational waves, the orbit will shrink [ref Schutz or something] as a function of time, in turn, the orbital frequency will increase
+	
+	\begin{equation}
+	f(t) = \frac{1}{\pi \mathcal{M}} \bigg[\frac{5}{256} \frac{\mathcal{M}}{T-t}\bigg]^{3/8} 
+	\end{equation}
+	
+	By defining the binary phase as $f(t) = \frac{1}{2\pi} \frac{\partial \mathbf{\Phi} }{\partial t}$, it is easy to recognize that the phase also evolves with time.
+	\begin{equation}
+	\Phi(t) = 2\pi \int_{T}^{t} f(t) dt = -2 \bigg( \frac{T-t}{5\mathcal{M}}\bigg)^{5/8}
+	\end{equation}
+	
+	What this means is that the gravitational wave signal from the binary will increase in amplitude and frequency as a function of time up until the coalescence time, $T$.
+
+
+	There is actually a subtle difference between the coalescence time and the moment when adiabatic approximations fail which allows usage of the quadrupole formulation. 
+
+	Plugging equation \ref{inspiralsignal} into \ref{SNR},
+	\begin{equation}
+	\rho = 8 \Theta(\theta,\phi,\psi,i) \frac{r_0}{d_L} \bigg(\frac{\mathcal{M}}{1.2 \textup{M}_\odot}\bigg)^{5/6} \zeta(f_{max})
+	\end{equation}
+	
+	There are two important functions in the equation above that reflect the detector's performance in sensing gravitational radiation from a binary inspiral, $r_0$ and $\zeta(f_{max})$.
+	
+	The characteristic distance, $r_0$ is how far the detector can see for a fixed binary's mass distribution,
+	
+	\begin{equation}\label{char_r0}
+	r_0^2 = \frac{5}{192\pi^{4/3}} \bigg(\frac{3\textup{M}_\odot}{20}\bigg)^{5/3}   \int_{0}^{\infty} \frac{1}{S_n(f)} \frac{\text{d} f}{f^{7/3}}
+	\end{equation}
+
+	Due to the integrand's dependence on $f^{-7/3}$, lower frequency improvements in the detector's noise spectrum will contribute more to the distance.
+	
+	\begin{equation}\label{zeta}
+	\zeta(f_{max}) = \frac{\int_{0}^{2f_{max}} \frac{1}{S_n(f)} \frac{\text{d} f}{f^{7/3}}}{\int_{0}^{\infty} \frac{1}{S_n(f)} \frac{\text{d} f}{f^{7/3}}}
+	\end{equation}
+	
+	The sensitivity can be different for various mass distributions; $\zeta(f_{max})$ is a normalized function that describes how well the detector's bandwidth overlaps the binary's frequency evolution.  If $f_{max}$ is higher that the minimal sensitivity frequency for the detector, then there is good overlap and  $\zeta(f_{max})\approx 1$.  However, if the masses are sufficiently large, $f_{max}$ will be lower because coalescence occurs before the objects reach a higher frequency regime and this will result in  $\zeta(f_{max})\approx 0$.
+	
+	The process of two objects coalescing starts at lower frequencies and terminate at some $f_{max}$ that depends on when the objects reach their inner-most stable circular orbit, $f_{ISCO}$.   If $m_1=m_2$, then the maximum frequency is[]
+	
+	\begin{equation}
+	\begin{aligned}
+	f_{max}	=&  \frac{f_{ISCO}}{1+z} \\
+			=&	\frac{99 \text{Hz}}{1+z} \, \frac{20 \textup{M}_\odot}{M}
+	\end{aligned}
+	\end{equation}
+	where $M=m_1+m_2$.
+	
+	
+	By plugging a few mass distributions and an estimate of the sensitivity [GWINC], it is possible to study the range of a single detector.  For example, a 1.4-1.4$\textup{M}_\odot$ binary that has optimal orientation with respect to the detector has horizon distance equal to...
+	
+	Horizon distance and range, advanced LIGO projected
+	
+	[Finn, Duncan Thesis]
+	\cite{Saulson}
+	
+	\section{The LIGO Instrument}\label{LIGOInstrument}
 	In the simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the output as a measure of the differential arm length, it becomes a natural way of detecting gravitational waves. However, to make a practical gravitational-wave observatory, the complexity will have to be extended.  The next sections will explore the various upgrades that were implemented to improve the sensitivity of LIGO.
 	
-		\subsection{Simple Michaelson}
+		\subsection{Simple Michaelson}\label{michelson}
 		As show in figure[michaelson], the interferometer readout uses a photodetector that measure the total power which depends on how laser light in the arms constructively or destructively interferes.  
 		At the end of section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down each arm carries gravitational wave information.  The difference in flight times, $\Delta t$, can be converted into how much phase,$\Delta \phi$ is accumulated by the photons as they propagate through space.  But the question remains how an interferometer actually measures $\Delta \phi$:
 		
@@ -416,25 +491,221 @@
 		
 		Figure comparing the three cases of increased sensitivity.
 		
-		References: [Kiwamu, Buonanno and Chen]
+		References: [Kiwamu]
 		
 		\subsection{Fundamental Noise Sources}
 		Ref: Evan Hall, GWINC
 
 		Noise budget:
-
-		\subsubsection{Quantum Noise}
-		One fundamental noise source that is limiting LIGO's sensitivity arises from the fluctuation of quantum vacuum entering the anti-symmetric port and coupling to the electric fields.  A quantum mechanical description of an interferometer was constructed by Caves[] where he used electric field operators to show that quantum vacuum fluctuations are the cause of radiation pressure and shot noise in an interferometer.
 		
+		\subsubsection{Quantum Noise}
+		One fundamental noise source that is limiting LIGO's sensitivity arises from the fluctuations of quantum vacuum entering the anti-symmetric port and coupling to the electric fields.  A quantum mechanical description of an interferometer was constructed by Caves[] where he used electric field operators to show that quantum vacuum fluctuations are the cause of radiation pressure and shot noise in an interferometer.
+		
+		\textbf{Quantum states}:
+		
+		\begin{equation}
+		\hat{N} = \hat{a}^{\dagger} \, \hat{a}
+		\end{equation}
+		
+		
+		Unitary operator:
+		\begin{equation}
+		\hat{D} \equiv \hat{D}(\alpha) \equiv \text{exp}(\alpha \hat{a}^{\dagger} - \alpha^{*} \hat{a} ) = e^{-\frac{\vert{\alpha}\vert^2}{2}} e^{\alpha \hat{a}^{\dagger} } e^{\alpha^{*} \hat{a} }
+		\end{equation}
+
+		$\hat{D}(\alpha) = \hat{D}^{-1}(\alpha) = \hat{D}(-\alpha)$
+		
+		\begin{equation}
+		\begin{aligned}
+		\hat{D}^\dagger&\, \hat{a} 		\,\hat{D}			= \hat{a} + \alpha \\ 
+		\hat{D}^\dagger&\, \hat{a}^\dagger \,\hat{D} 		= \hat{a}^\dagger + \alpha^*
+		\end{aligned}
+		\end{equation}
+		
+	
+		\begin{equation}
+		\ket{\alpha} = \hat{D} \ket{0} =  e^{-\frac{\vert{\alpha}\vert^2}{2}} e^{\alpha \hat{a}^{\dagger} } \ket{0}
+		\end{equation}
+		
+		
+		\textbf{Radiation Pressure}
+		
+		One might naively think that power fluctuations in the laser cause radiation pressure effects on the test masses which will result in noise.  However, if the 50/50 beamsplitter is perfect, then the momentum transfer to each test mass will be a common length changes and will not change the intensity at the antisymmetric port (or the symmetric port for that matter).
+		
+		Following the work of Caves[Caves], the concept of radiation pressure arises from first considering the plane wave waves from both the symmetric and anti-symmetric ports.  This method is similar to the input-output methods of section \ref{michelson} where the beamsplitter will couple the electric fields from the input laser and quantum vacuum.
+		
+		The electric fields hitting the test masses, respectively,
+		\begin{subequations}\label{exey}
+		\begin{equation}
+		E_x = \frac{1}{\sqrt{2}} \bigg[ iE_0 +   E_{AS,in} \bigg]
+		\end{equation}
+		\begin{equation}
+		E_y = \frac{1}{\sqrt{2}} \bigg[  E_0 + i E_{AS,in} \bigg]
+		\end{equation}
+		\end{subequations}
+		
+		The intensities hitting the test masses, respectively,
+		\begin{subequations}
+		\begin{equation}
+		\vert E_x \vert^2 = \frac{1}{2} \bigg[ \vert E_0 \vert^2 + \vert E_{AS,in} \vert^2  + i(E_0 E^*_{AS,in} - E_0^*E_{AS,in} )\bigg]
+		\end{equation}
+		\begin{equation}
+		\vert E_y \vert^2 = \frac{1}{2} \bigg[ \vert E_0 \vert^2 + \vert E_{AS,in} \vert^2  - i(E_0 E^*_{AS,in} - E_0^*E_{AS,in} )\bigg]`
+		\end{equation}
+		\end{subequations}
+		
+		Momentum transfer between the two test masses:
+		\begin{equation}\label{momentumtranfer}
+		\begin{aligned}
+		 \mathbf{P} 	&= \frac{2 \hbar \omega}{c} \bigg( \vert E_x \vert^2 - \vert E_y \vert^2 \bigg) \\
+						&= \frac{2 \hbar \omega}{c} \bigg( E_0 E^*_{AS,in} - E_0^*E_{AS,in} \bigg)\\
+		\Rightarrow	\mathbf{\hat{P}}&= \frac{2 \hbar \omega}{c} \bigg( \hat{a}_1^{\dagger} \hat{a}_2 - \hat{a}_2^{\dagger} \hat{a}_1 \bigg)
+		\end{aligned}
+		\end{equation}
+		
+		The last part of equation \ref{momentumtranfer} replaces the classical electric fields with creation and annihilation operators for the symmetric input mode ($\hat{a}_1^{\dagger}$, $\hat{a}_1$) and antisymmetric input mode ($\hat{a}_2^{\dagger}$, $\hat{a}_2$) modes. Recall that there is a well established convention [Gerry] denoting the wave function of the two dimensional modes of the quantum harmonic oscillator, $\ket{\alpha,\beta}$, where $\alpha$ denotes the input symmetric mode and $\beta$ refers to the input antisymmetric mode.
+		
+		\begin{equation}
+		\ket{\alpha,0} = \hat{D}_1(\alpha) \ket{0,0}
+		\end{equation}
+		
+		
+		
+		The interesting results arising from this formulation are the expectation value:
+
+		\begin{equation}
+		\langle \mathbf{\hat{P}} \rangle = \bra{\alpha,0} \mathbf{\hat{P}}\ket{\alpha,0} = 0
+		\end{equation}
+		
+		And the variance 
+		\begin{equation} 
+		\begin{aligned}
+		\Delta \mathbf{P}^2 &= \langle \mathbf{\hat{P}}^2 \rangle  - \langle \mathbf{\hat{P}} \rangle^2 \\
+							&= \bigg(\frac{2 \hbar \omega}{c}\bigg)^2 \bra{\alpha,0}  \hat{a}_1^{\dagger}  \hat{a}_2  \hat{a}_1  \hat{a}_2^{\dagger} + \hat{a}_2^{\dagger}  \hat{a}_1  \hat{a}_2  \hat{a}_1^{\dagger}
+							- \hat{a}_2^{\dagger}  \hat{a}_1  \hat{a}_1  \hat{a}_2^{\dagger} - \hat{a}_1^{\dagger}  \hat{a}_2  \hat{a}_2  \hat{a}_1^{\dagger} \ket{\alpha,0}\\
+							&= \bigg(\frac{2 \hbar \omega}{c}\bigg)^2 \vert \alpha \vert^2
+		\end{aligned}
+		\end{equation}
+		
+		
+		For some time interval, input laser power consisting of $\langle N \rangle =\vert\alpha \vert^2$ photons for a time interval $\Delta T$ is,
+		\begin{equation}
+		P_{in} = \frac{\hbar \omega}{\Delta T} \vert \alpha \vert^2
+		\end{equation}
+	
+		To solve for the amplitude spectral density of the displacement, Newton's second law can be applied in the frequency domain
+		\begin{equation}
+		M (2\pi f)^2 \tilde{x}(f) = \tilde{F}(f) = \frac{\Delta \mathbf{P}}{\Delta T}
+		\end{equation}
+		
+		The force spectrum is white because the impacting photons arrive randomly.
+		
+		Solving for the displacement,
+		\begin{equation}
+		\tilde{x}_{RP}(f) = \sqrt{\frac{\hbar \omega}{\Delta T} P_{in}} \frac{1}{2Mc (\pi f)^2}
+		\end{equation}
+	
+		The noise spectral density for $M=40kg$, $P_{in}=125$W, and $\lambda=1064$nm
+		\begin{equation}
+		\tilde{h}_{RP}(f) = 2.04\times 10^{-20} \frac{1}{f^2} \; \bigg[ \frac{\text{Strain}}{\sqrt{\text{Hz}}}\bigg]
+		\end{equation}
+		
+		
+		%\bf{Shot Noise}
+		Another way that quantum fluctuations can vary the antisymmetric port output is by adding phase noise.  Imagine holding the test masses rigidly such that the only effects on the output light is due to a phase change in the laser light in the arms. By using the same formulation for radiation pressure but propagating the fields back to the beam splitter, equations \ref{exey} will have extra phase,
+		
+		\begin{subequations}\label{exeyout}
+		\begin{equation}
+		E_{x,out} = \frac{1}{\sqrt{2}} \bigg[ iE_0 +   E_{AS,in} \bigg] e^{-i2kL_x}
+		\end{equation}
+		\begin{equation}
+		E_{y,out} = \frac{1}{\sqrt{2}} \bigg[  E_0 + i E_{AS,in} \bigg] e^{-i2kL_y}
+		\end{equation}
+		\end{subequations}
+		
+		Antisymmetric port output electric field is
+		\begin{equation}
+		\begin{aligned}
+		E_{AS,out} 	&= \frac{1}{\sqrt{2}} (E_{x,out} + iE_{y,out})\\
+					&= i e^{-ikL_x-ikL_y} \big[\cos(\Delta \phi) E_0 - \sin(\Delta \phi) E_{AS,in}\big]
+		\end{aligned}
+		\end{equation}
+		where $\Delta \phi = k(L_x-Ly)$
+		
+		Output intensity,
+		\begin{equation}
+		\begin{aligned}
+		\mathbf{I}_{AS,out} 		&= \vert E_{AS,out}\vert^2 \\
+									&= \bigg[ \cos^2(\Delta \phi)\vert E_0\vert^2 + \sin^2(\Delta\phi)\vert E_{AS,in}\vert^2 - \sin(\Delta\phi)\cos(\Delta\phi) \big[E_0 E^*_{AS,in} + E_0^* E_{AS,in}\big] \bigg]\\
+		\Rightarrow	
+		\hat{\mathbf{I}}_{AS,out} 	&= \bigg[ \cos^2(\Delta \phi)a_1^{\dagger}a_1 + \sin^2(\Delta\phi)a_2^{\dagger}a_2 - \sin(\Delta\phi)\cos(\Delta \phi) \big[a_1^{\dagger}a_2 + a_2^{\dagger}a_1 \big] \bigg]\\	
+		\end{aligned}
+		\end{equation}
+		
+		The expectation value for the intensity using an input coherent laser with $\alpha$ and quantum vacuum input at the antisymmetric port is
+		
+		\begin{equation}
+		\begin{aligned}
+		\langle \hat{\mathbf{I}} \rangle 	&= \bra{\alpha,0} \hat{\mathbf{I}}_{AS,out} \ket{\alpha,0}\\
+							&= \cos^2(\Delta \phi) \vert \alpha \vert^2
+		\end{aligned}
+		\end{equation}
+		
+		which matches the classical description of a Michelson output.
+		
+		Following the same methods to calculate the radiation pressure, photon number variance is 
+		\begin{equation} 
+		\begin{aligned}
+		\Delta \mathbf{I} 	&= \sqrt{\langle \mathbf{\hat{I}}^2 \rangle  - \langle \mathbf{\hat{I}} \rangle^2)} \\
+							&= \vert \alpha \vert \big[ \cos^2(\Delta \phi)\ \big] 
+		\end{aligned}
+		\end{equation}
+		
+		\begin{equation}
+		I = N \cos^2(\Delta \phi)
+		\end{equation}
+		
+		\begin{equation}
+		\frac{\partial I}{\partial \phi} = - 2 \vert \alpha \vert^2\cos(\Delta \phi) \sin(\Delta \phi)
+		\end{equation}
+		
+		\begin{equation}
+		\delta \phi = \sqrt{\frac{\hbar \omega}{ P_{in}}} \cot(\Delta \phi)
+		\end{equation}
+		Here $\delta \phi$ is the microscopic change in phase due to shot noise, whereas $\Delta\phi$ is the DC offset in the arm lengths to begin with. So in general, the shot noise contribution is dependent on the amount of light present at the anti-symmetric port and this will vary depending on what type of read out that is implemented.
+		
+		\begin{equation}
+		\tilde{h}_{SN}(f) = 8.2\times 10^{-22} \; \bigg[ \frac{\text{Strain}}{\sqrt{\text{Hz}}}\bigg]
+		\end{equation}
+		Unsurprisingly, the variance is proportional to the amount of photons present and the phase difference between the interferometer arms.
+		Interestingly, there are a few subtleties associated with measuring the noise, it is assumed here that the interferometer readout is a simple photodetector located at the antisymmetric port.  However, is it possible to measure the light at two different phases (90 degrees apart) and subtract the results.   Also, in section \ref{michelson}, there is a freedom to choose the readout scheme of the interferometer (heterodyne or homodyne) which will also affect the overall quantum noise.
+
+		Losses!?!?!?!?!?!?
 		
 		\subsubsection{Seismic Noise}
+		Seismic noise will be the low frequency barrier for all terrestrial gravitational-wave detectors.  By using seismic isolation platforms and quadruple suspensions, the noise contribution can be attenuated for frequencies larger than ~1Hz.
+		
+		Compare low and high noise microseisms
+		[Blair: Norna]
+		
 		\subsubsection{Thermal Noise}
+		Suspension Thermal Noise [Saulson and Gaby]
+		Substrate Thermal Noise [\cite{Saulson}]
+		Coating Thermal Noise [G Harry]
+		
 		\subsubsection{Newtonian Noise}
-		Although there are some noise sources that can be reduced using increasingly complicated techniques such as more levels of seismic isolation or quantum nondemolition devices.  Newtonian noise that is caused by fluctuating gravitational fields arising from the wave motion of the earth is one that cannot easily be reduced.
+		Although there are some noise sources that can be reduced using increasingly complicated techniques such as more levels of seismic isolation or quantum nondemolition devices as shown above. [Saulson and Hughes/Thorne]
+		
+		Newtonian noise that is caused by fluctuating gravitational fields arising from the wave motion of the ground is one that cannot easily be reduced but possibly be measured and fed-forward or subtracted.[Driggers]
 		
 	
 	\section{Squeezed States of Light}
-	The Quantum Noise is a fundamental source that can be improved by modifying the quantum vacuum using correlated photons and injecting the states of light into the antisymmetric port of the interferometer.  Within the LIGO community, this procedure of modifying quantum vacuum is called squeezing. Caves analytically derived the effects of quantum noise on the interferometer as well as the improvement due to i
+
+
+	Virtually all undergraduate quantum mechanics textbooks include a section on the harmonic oscillator[Shankar, Sakura].  An interesting result when solving the Schrodinger equation using creation ($\hat{a^{\dagger}}$) and annihilation $\hat{a}$ operators is the existence of a non-zero energy ground state. 
 	
+	This effect leads to Quantum Noise, which is a fundamental source that can be improved by modifying the quantum vacuum using correlated photons and injecting the states of light into the antisymmetric port of the interferometer.  Within the LIGO community, this procedure of modifying quantum vacuum is called squeezing. Caves analytically derived the effects of quantum noise on the interferometer as well as the improvement due to	
+	
+	Losses!?!?!?!?!?!?
 	References: [Caves, Dwyer, Kwee, Miao]
 	

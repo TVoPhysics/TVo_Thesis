@@ -1,0 +1,87 @@
+l L0 100 0 nlin1
+s lbs 1 nlin1 nlin2
+
+sq sqz 0 10 0 nsqzin1
+s sqzopo 1 nsqzin1 nsqzin2
+
+bs bsin 0.5 0.5 0 45 nlin2 dump nbs2opo nsqzin2
+s bsopo 1 nbs2opo nOPO_ARIC_in
+
+#### Mode matching from OPO
+# insert a MMT between the squeezer and the FC so you can separate the modes
+s ssqz_lens1 0.1 nOPO_ARICrefl nsqz_lens1a
+lens sqz_lens1 inf nsqz_lens1a nsqz_lens1b
+s ssqz_lens1_lens2 0.1 nsqz_lens1b nsqz_lens2a
+lens sqz_lens2 inf nsqz_lens2a nsqz_lens2b
+
+# Distance lensSqz2 --> ZM1
+s lzm1 1.395 nsqz_lens2b nZM1a 
+
+# ZM1
+bs1 ZM1 10u $Mloss 0 4.399 nZM1a nZM1b dump dump
+attr ZM2 Rc 1.7058
+
+# Distance ZM1 --> ZM2
+s lzm2 0.631 nZM1b nZM2a
+bs1 ZM2 10u $Mloss 0 30.037 nZM2a nZM2b dump dump
+
+# Distance ZM2 --> OFI 
+s lzm2fi 0.196 nZM2b nOFIout2
+
+#OPO (as built parameters: T1600067-v1)
+# Input Coupler IC (flat mirror)
+bs1 OPO_ARIC 1 0 0 4.004 nOPO_ARIC_in nOPO_ARICrefl nOPO_ARIC_trans nOPO_ARICret
+s subOPO_IC 0.01078 $nsilica nOPO_ARIC_trans nOPO_HRIC_in
+s subOPO_IOC 0.01078 $nsilica nOPO_HRIC_refl nOPO_ARICret
+bs1 OPO_HRIC 0.125 10u 0 6 nOPO_HRIC_in nOPO_HRIC_refl nOPO_HRIC_trans nOPO_HRICret
+
+# Distance from IC to OC 
+s OPO_ICOC 0.110 1 nOPO_HRIC_trans nOPO_HROC_in
+
+# Output Coupler OC (flat mirror)
+bs1 OPO_HROC 0.0015 10u 0 6 nOPO_HROC_in nOPO_HROC_refl nOPO_HROC_trans nOPO_HROC_ret
+s subOPO_OC 0.01078 $nsilica nOPO_HROC_trans nOPO_AROC_in
+bs1 OPO_AROC 1 0 0 2.7609 nOPO_AROC_in dump nOPO_AROC_trans dump
+
+# Distance from OC to CM1
+s OPO_OCCM1 0.087103 1 nOPO_HROC_refl nOPO_CM1_in
+
+# Curved Mirror CM1
+bs1 OPO_CM1 0.01 10u 0 6 nOPO_CM1_in nOPO_CM1_refl dump dump
+attr OPO_CM1 Rc 0.050
+
+# Distance from CM1 to CM2 
+s OPO_CM1CM2 0.06040 1 nOPO_CM1_refl nOPO_CM2_in
+
+# Curved Mirror CM2
+bs1 OPO_CM2 0.01 10u 0 6 nOPO_CM2_in nOPO_CM2_refl dump dump
+attr OPO_CM2 Rc 0.050
+
+# Distance from CM2 to IC 
+s CM2OPOOC 0.087103 1 nOPO_CM2_refl nOPO_HRICret
+
+cav cavOPO OPO_HROC nOPO_HROC_refl OPO_HROC nOPO_HROC_in
+
+cp cavOPO x stability
+cp cavOPO y stability
+
+cp cavOPO x q
+cp cavOPO y q
+
+cp cavOPO x w0
+cp cavOPO y w0
+
+cp cavOPO x fsr
+cp cavOPO y fsr
+
+cp cavOPO x fwhm
+cp cavOPO y fwhm
+
+cp cavOPO x finesse
+cp cavOPO y finesse
+
+const nsilica 1.44963098985906
+const Mloss 0
+
+noxaxis
+yaxis re:im
