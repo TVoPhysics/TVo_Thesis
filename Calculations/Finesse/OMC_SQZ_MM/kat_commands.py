@@ -7,9 +7,7 @@ const mech_Q    1M # Guess for suspension Q factor
 fsig darm  LXarm 1 0 1
 fsig darm2 LYarm 1 180 1
 qnoisedS NSR_with_RP 1 $fs nOMC_AROC_trans
-xaxis darm f log 1 5k 100
-yaxis lin re:im
-retrace off
+noxaxis
 """
 
 commands = """
@@ -75,7 +73,7 @@ sd sd00OFI 0 0 0 nIMFC1
 sd sd01OFI 0 0 1 nIMFC1
 sd sd02OFI 0 0 2 nIMFC1
 
-pd1 signal $fs nOMC_AROC_trans
+	
 
 ad OMCoutTEM00 0 0 0 nOMC_AROC_trans
 ad OMCoutTEM01 0 1 0 nOMC_AROC_trans
