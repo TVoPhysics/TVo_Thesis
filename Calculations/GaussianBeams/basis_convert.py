@@ -94,8 +94,13 @@ def LG2HG(p,l):
     
     return coefficients, ns, ms
 
-x = LG2HG(1,0)
+x = LG2HG(2,0)
 print(x)
+
+y = HG2LG(2,0)
+z = HG2LG(0,2)
+print(y)
+print(z)
 
 
 

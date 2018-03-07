@@ -312,25 +312,23 @@ m1 OBA 1 0 0 nOBAin nOBAout
 #### Mode matching from OPO
 
 #### Mode matching from OPO
-# insert a MMT between the squeezer and the FC so you can separate the modes
-s ssqz_lens1 0.1 nOPO_ARICrefl nsqz_lens1a
-lens sqz_lens1 inf nsqz_lens1a nsqz_lens1b
-s ssqz_lens1_lens2 0.1 nsqz_lens1b nsqz_lens2a
-lens sqz_lens2 inf nsqz_lens2a nsqz_lens2b
+s ssqz_lens1 0.353 nOPO_ARICrefl nsqz_lens1a
+lens sqz_lens1 0.111 nsqz_lens1a nsqz_lens1b
+s ssqz_lens1_lens2 0.54 nsqz_lens1b nsqz_lens2a
+lens sqz_lens2 0.334 nsqz_lens2a nsqz_lens2b
 
 # Distance lensSqz2 --> ZM1
-s lzm1 1.395 nsqz_lens2b nZM1a 
+s lzm1 2.6 nsqz_lens2b nZM1a 
 
 # ZM1
-bs1 ZM1 10u $Mloss 0 4.399 nZM1a nZM1b dump dump
-attr ZM2 Rc 1.7058
+bs1 ZM1 10u $Mloss 0 45 nZM1a nZM1b dump dump
 
 # Distance ZM1 --> ZM2
-s lzm2 0.631 nZM1b nZM2a
-bs1 ZM2 10u $Mloss 0 30.037 nZM2a nZM2b dump dump
+s lzm2 1.0 nZM1b nZM2a
+bs1 ZM2 10u $Mloss 0 45 nZM2a nZM2b dump dump
 
 # Distance ZM2 --> OFI 
-s lzm2fi 0.196 nZM2b nOFIout2
+s lzm2fi 1.00 nZM2b nOFIout2
 
 #OPO (as built parameters: T1600067-v1)
 # Input Coupler IC (flat mirror)
@@ -372,14 +370,14 @@ s CM2OPOOC 0.087103 1 nOPO_CM2_refl nOPO_HRICret
 # (lom1=2.6334,lom3omc=0.24.8 give 99% overlap at OMC)
 
 # Distance OBA --> OM1  
-s lom1 2.724 nOBAout nOM1a 
+s lom1 2.5034 nOBAout nOM1a 
 
 #OM1
 bs1 OM1 800u $Mloss 0 2.251 nOM1a nOM1b dump dump # T is set for high power; Loss is a guess
 attr OM1 Rc 4.6
 
 # Distance OM1 --> OM2
-s lom2 1.395 nOM1b nOM2a 
+s lom2 1.385 nOM1b nOM2a 
 
 # OM2
 bs1 OM2 10u $Mloss 0 4.399 nOM2a nOM2b dump dump  # T is a guess
@@ -390,7 +388,7 @@ s lom3 0.631 nOM2b nOM3a
 bs1 OM3 10u $Mloss 0 30.037 nOM3a nOM3b nOM3trans dump # T is a guess
 
 # Distance OM3 --> OMC input coupler IC (AR side)
-s lom3omc 0.196 nOM3b nOMC_ARIC_in # By design should be ~0.31
+s lom3omc 0.35 nOM3b nOMC_ARIC_in # By design should be ~0.31
 
 #  Distance in transmission to OM3 used for testing
 s lomOM3trans 0.1 nOM3trans nOMC_ARIC2_in
