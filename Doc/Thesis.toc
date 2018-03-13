@@ -1,22 +1,21 @@
 \contentsline {chapter}{Preface}{1}{chapter*.2}
 \contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}
 \contentsline {section}{\numberline {1.1}Gravitational Waves}{4}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Energy from a Gravitational Wave}{6}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Measuring Gravitational Waves with Light}{6}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Detection of Gravitational Waves}{8}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.1}Measuring Gravitational Waves with Light}{6}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Detection of Gravitational Waves}{8}{subsection.1.1.2}
 \contentsline {section}{\numberline {1.2}The LIGO Instrument}{10}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Simple Michaelson}{10}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Fabry-Perot Cavities}{14}{subsection.1.2.2}
 \contentsline {subsubsection}{Locking a Fabry Perot Cavity}{15}{section*.4}
 \contentsline {subsubsection}{Application to LIGO}{16}{section*.5}
-\contentsline {subsection}{\numberline {1.2.3}Power-Recycled Fabry-Perot Interferometers}{16}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.3}Power-Recycled Fabry-Perot Interferometers}{17}{subsection.1.2.3}
 \contentsline {subsection}{\numberline {1.2.4}Dual-Recycled Fabry-Perot Interferometers}{17}{subsection.1.2.4}
 \contentsline {subsection}{\numberline {1.2.5}Fundamental Noise Sources}{17}{subsection.1.2.5}
 \contentsline {subsubsection}{Quantum Noise}{17}{section*.6}
 \contentsline {subsubsection}{Seismic Noise}{21}{section*.7}
 \contentsline {subsubsection}{Thermal Noise}{21}{section*.8}
 \contentsline {subsubsection}{Newtonian Noise}{21}{section*.9}
-\contentsline {section}{\numberline {1.3}Squeezed States of Light}{21}{section.1.3}
+\contentsline {section}{\numberline {1.3}Squeezed States of Light}{22}{section.1.3}
 \contentsline {chapter}{\numberline {2}The Fundamentals of Mode-Matching}{23}{chapter.2}
 \contentsline {section}{\numberline {2.1}Gaussian Beam Optics}{23}{section.2.1}
 \contentsline {subsubsection}{Gouy Phase}{25}{section*.10}

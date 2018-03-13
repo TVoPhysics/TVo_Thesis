@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{19}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -23,22 +23,99 @@ E.~D. Black and R.~N. Gutenkunst.
 \newblock \doi{10.1119/1.1531578}.
 \newblock URL \url{https://doi.org/10.1119/1.1531578}.
 
-\bibitem[Lawrence et~al.(1999)Lawrence, Willke, Husman, Gustafson, and
-  Byer]{Lawrence:99}
-M.~J. Lawrence, B.~Willke, M.~E. Husman, E.~K. Gustafson, and R.~L. Byer.
-\newblock Dynamic response of a fabry--perot interferometer.
-\newblock \emph{J. Opt. Soc. Am. B}, 16\penalty0 (4):\penalty0 523--532, Apr
-  1999.
-\newblock \doi{10.1364/JOSAB.16.000523}.
-\newblock URL \url{http://josab.osa.org/abstract.cfm?URI=josab-16-4-523}.
+\bibitem[Blair(2005)]{BlairBook}
+D.~G. Blair.
+\newblock \emph{The detection of gravitational waves}.
+\newblock Cambridge University Press, 2005.
 
-\bibitem[M~Rakhmanov and Jr(2004)]{dynamicFP}
-O.~D. M~Rakhmanov, F~Bondu and R.~L.~S. Jr.
-\newblock Characterization of the ligo 4 km fabry–perot cavities via their
-  high-frequency dynamic responses to length and laser frequency variations.
-\newblock \emph{Classical and Quantum Gravity}, Feb 2004.
-\newblock URL
-  \url{http://iopscience.iop.org/article/10.1088/0264-9381/21/5/015/meta}.
+\bibitem[Caves(1981)]{CavesQMNoise}
+C.~M. Caves.
+\newblock Quantum-mechanical noise in an interferometer.
+\newblock \emph{Phys. Rev. D}, 23:\penalty0 1693--1708, Apr 1981.
+\newblock \doi{10.1103/PhysRevD.23.1693}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.23.1693}.
+
+\bibitem[Caves and Schumaker(1985)]{Caves2photon}
+C.~M. Caves and B.~L. Schumaker.
+\newblock New formalism for two-photon quantum optics. i. quadrature phases and
+  squeezed states.
+\newblock \emph{Phys. Rev. A}, 31:\penalty0 3068--3092, May 1985.
+\newblock \doi{10.1103/PhysRevA.31.3068}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.31.3068}.
+
+\bibitem[Caves et~al.(1980)Caves, Thorne, Drever, Sandberg, and
+  Zimmermann]{CavesOscillator}
+C.~M. Caves, K.~S. Thorne, R.~W.~P. Drever, V.~D. Sandberg, and M.~Zimmermann.
+\newblock On the measurement of a weak classical force coupled to a
+  quantum-mechanical oscillator. i. issues of principle.
+\newblock \emph{Rev. Mod. Phys.}, 52:\penalty0 341--392, Apr 1980.
+\newblock \doi{10.1103/RevModPhys.52.341}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/RevModPhys.52.341}.
+
+\bibitem[{Driggers} et~al.(2012){Driggers}, {Harms}, and
+  {Adhikari}]{DriggersNewtonian}
+J.~C. {Driggers}, J.~{Harms}, and R.~X. {Adhikari}.
+\newblock Subtraction of newtonian noise using optimized sensor arrays.
+\newblock \emph{\prd}, 86\penalty0 (10):\penalty0 102001, Nov. 2012.
+\newblock \doi{10.1103/PhysRevD.86.102001}.
+
+\bibitem[Fritschel et~al.(2001)Fritschel, Bork, Gonz\'{a}lez, Mavalvala,
+  Ouimette, Rong, Sigg, and Zucker]{FritschelReadout}
+P.~Fritschel, R.~Bork, G.~Gonz\'{a}lez, N.~Mavalvala, D.~Ouimette, H.~Rong,
+  D.~Sigg, and M.~Zucker.
+\newblock Readout and control of a power-recycled interferometric
+  gravitational-wave antenna.
+\newblock \emph{Appl. Opt.}, 40\penalty0 (28):\penalty0 4988--4998, Oct 2001.
+\newblock \doi{10.1364/AO.40.004988}.
+\newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-40-28-4988}.
+
+\bibitem[Gerry and Knight(2005)]{GerryKnight}
+C.~C. Gerry and P.~Knight.
+\newblock \emph{Introductory quantum optics}.
+\newblock Cambridge University Press, 2005.
+
+\bibitem[González and Saulson(1994)]{SaulsonThermalSus}
+G.~I. González and P.~R. Saulson.
+\newblock Brownian motion of a mass suspended by an anelastic wire.
+\newblock \emph{The Journal of the Acoustical Society of America}, 96\penalty0
+  (1):\penalty0 207--212, 1994.
+\newblock \doi{10.1121/1.410467}.
+\newblock URL \url{https://doi.org/10.1121/1.410467}.
+
+\bibitem[Griffiths(2005)]{Griffiths}
+D.~J. Griffiths.
+\newblock \emph{Introduction to quantum mechanics}.
+\newblock Pearson Prentice Hall, 2005.
+
+\bibitem[Harry et~al.(2002)Harry, Gretarsson, Saulson, Kittelberger, Penn,
+  Startin, Rowan, Fejer, Crooks, Cagnoli, Hough, and
+  Nakagawa]{HarryThermalCoat}
+G.~M. Harry, A.~M. Gretarsson, P.~R. Saulson, S.~E. Kittelberger, S.~D. Penn,
+  W.~J. Startin, S.~Rowan, M.~M. Fejer, D.~R.~M. Crooks, G.~Cagnoli, J.~Hough,
+  and N.~Nakagawa.
+\newblock Thermal noise in interferometric gravitational wave detectors due to
+  dielectric optical coatings.
+\newblock \emph{Classical and Quantum Gravity}, 19\penalty0 (5):\penalty0 897,
+  2002.
+\newblock URL \url{http://stacks.iop.org/0264-9381/19/i=5/a=305}.
+
+\bibitem[Hild et~al.(2009)Hild, Grote, Degallaix, Chelkowski, Danzmann, Freise,
+  Hewitson, Hough, Lück, Prijatelj, Strain, Smith, and Willke]{HildDCReadout}
+S.~Hild, H.~Grote, J.~Degallaix, S.~Chelkowski, K.~Danzmann, A.~Freise,
+  M.~Hewitson, J.~Hough, H.~Lück, M.~Prijatelj, K.~A. Strain, J.~R. Smith, and
+  B.~Willke.
+\newblock Dc-readout of a signal-recycled gravitational wave detector.
+\newblock \emph{Classical and Quantum Gravity}, 26\penalty0 (5):\penalty0
+  055012, 2009.
+\newblock URL \url{http://stacks.iop.org/0264-9381/26/i=5/a=055012}.
+
+\bibitem[Hughes and Thorne(1998)]{ThorneNewtonian}
+S.~A. Hughes and K.~S. Thorne.
+\newblock Seismic gravity-gradient noise in interferometric gravitational-wave
+  detectors.
+\newblock \emph{Phys. Rev. D}, 58:\penalty0 122002, Nov 1998.
+\newblock \doi{10.1103/PhysRevD.58.122002}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.58.122002}.
 
 \bibitem[of~Birmingham(2014)]{FinesseManual}
 U.~of~Birmingham.
@@ -49,5 +126,24 @@ U.~of~Birmingham.
 P.~Saulson.
 \newblock \emph{Fundamentals of Gravitational Wave Detectors}.
 \newblock World Scientific, 2016.
+
+\bibitem[Saulson(1984)]{SaulsonNewtonian}
+P.~R. Saulson.
+\newblock Terrestrial gravitational noise on a gravitational wave antenna.
+\newblock \emph{Phys. Rev. D}, 30:\penalty0 732--736, Aug 1984.
+\newblock \doi{10.1103/PhysRevD.30.732}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.30.732}.
+
+\bibitem[Saulson(1990)]{SaulsonThermalNoise}
+P.~R. Saulson.
+\newblock Thermal noise in mechanical experiments.
+\newblock \emph{Phys. Rev. D}, 42:\penalty0 2437--2445, Oct 1990.
+\newblock \doi{10.1103/PhysRevD.42.2437}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.42.2437}.
+
+\bibitem[Shankar(2014)]{Shankar}
+R.~Shankar.
+\newblock \emph{Principles of Quantum Mechanics}.
+\newblock Springer Verlag, 2014.
 
 \end{thebibliography}
