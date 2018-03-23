@@ -1,6 +1,20 @@
 \chapter{Introduction}
 
 	Say something profound here.
+	
+	Structure of this thesis:
+	
+		Gravitational waves and their detection
+	
+		The LIGO instrument and Noise + Squeezed States of Light
+	
+		Introduction to Wavefront Sensing
+	
+		Experimental Mode Matching at Syracuse
+	
+		Mode matching at LIGO Hanford
+	
+		Future Works
 
 	\section{Gravitational Waves}\label{gravitational waves}
 	In 1915, Albert Einstein published his theory of general relativity \ref{einstein}.
@@ -443,14 +457,14 @@
 		
 		\subsubsection{Quantum Noise}
 
-		One fundamental noise source that is limiting LIGO's sensitivity arises from the fluctuations of quantum vacuum entering the anti-symmetric port and coupling to the electric fields.  A quantum mechanical description of an interferometer was constructed by Caves \cite{CavesQMNoise}\cite{Caves2photon} \cite{CavesOscillator}, where he used electric field operators to show that quantum vacuum fluctuations are the cause of radiation pressure and shot noise in an interferometer.
+		One fundamental noise source that is limiting LIGO's sensitivity comes from the fluctuations of quantum vacuum entering the anti-symmetric port and coupling to the input laser. A quantum mechanical description of an interferometer was constructed by Caves \cite{CavesQMNoise}\cite{Caves2photon} \cite{CavesOscillator}, where he used electric field operators to show that vacuum fluctuations are the cause of radiation pressure and shot noise in an interferometer.
 		
 		\textbf{Quantum states}:
-		It is well known in physics \cite{Shankar} \cite{Griffiths} that a solution to the quantum harmonic oscillator in the energy eigenbasis employs the annihilation and creation  operators, $\hat{a}^{\dagger}$ and $\hat{a}$, to factorize the Schrödinger  
+		It is well known in physics \cite{Shankar} \cite{Griffiths} that a solution to the quantum harmonic oscillator in the energy eigenbasis employs the annihilation and creation  operators, $\hat{a}^{\dagger}$ and $\hat{a}$, to factorize the Hamiltonian
 		\begin{equation}
-		\hat{N} = \hat{a}^{\dagger} \, \hat{a}
-		\end{equation}
-		Unitary operator:
+		\hat{H} = \hbar w (\hat{N} + 1/2)
+		\end{equation} 
+		where $\hat{N} = \hat{a}^{\dagger}  \hat{a}$ is the number operator.  When using this formalism to create a coherent electromagnetic field, it is useful to define a unitary operator that displaces the vacuum state \cite{GerryKnight}:
 		\begin{equation}
 		\hat{D} \equiv \hat{D}(\alpha) \equiv \text{exp}(\alpha \hat{a}^{\dagger} - \alpha^{*} \hat{a} ) = e^{-\frac{\vert{\alpha}\vert^2}{2}} e^{\alpha \hat{a}^{\dagger} } e^{\alpha^{*} \hat{a} }
 		\end{equation}
@@ -503,7 +517,7 @@
 		\begin{equation}
 		\ket{\alpha,0} = \hat{D}_1(\alpha) \ket{0,0}
 		\end{equation}
-		The interesting results arising from this formulation are the expectation values
+		The interesting results arising from this formulation is the expectation value
 		\begin{equation}
 		\langle \mathbf{\hat{P}} \rangle = \bra{\alpha,0} \mathbf{\hat{P}}\ket{\alpha,0} = 0
 		\end{equation}
@@ -613,9 +627,15 @@
 		
 		\subsubsection{Thermal Noise}
 		Thermal Noise [\cite{SaulsonThermalNoise}]
+		
 		Suspension Thermal Noise \cite{SaulsonThermalSus}
+		
 		Substrate Thermal Noise [\cite{Saulson}]
+		
 		Coating Thermal Noise [\cite{HarryThermalCoat}]
+		
+		Thermal-Optical Noise[\cite{EvansBallmerThermalOptic}]
+		
 		
 		\subsubsection{Newtonian Noise}
 		Although there are some noise sources that can be reduced using increasingly complicated techniques such as various levels of seismic isolation or quantum nondemolition devices as shown above. [\cite{SaulsonNewtonian} and \cite{ThorneNewtonian}]

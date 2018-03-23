@@ -1,9 +1,21 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Beijersbergen et~al.(1993)Beijersbergen, Allen, van~der Veen, and
+  Woerdman]{BEIJERSBERGEN}
+M.~Beijersbergen, L.~Allen, H.~van~der Veen, and J.~Woerdman.
+\newblock Astigmatic laser mode converters and transfer of orbital angular
+  momentum.
+\newblock \emph{Optics Communications}, 96\penalty0 (1):\penalty0 123 -- 132,
+  1993.
+\newblock ISSN 0030-4018.
+\newblock \doi{https://doi.org/10.1016/0030-4018(93)90535-D}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/003040189390535D}.
 
 \bibitem[Black(2001)]{BlackPDH}
 E.~D. Black.
@@ -58,6 +70,15 @@ J.~C. {Driggers}, J.~{Harms}, and R.~X. {Adhikari}.
 \newblock Subtraction of newtonian noise using optimized sensor arrays.
 \newblock \emph{\prd}, 86\penalty0 (10):\penalty0 102001, Nov. 2012.
 \newblock \doi{10.1103/PhysRevD.86.102001}.
+
+\bibitem[Evans et~al.(2008)Evans, Ballmer, Fejer, Fritschel, Harry, and
+  Ogin]{EvansBallmerThermalOptic}
+M.~Evans, S.~Ballmer, M.~Fejer, P.~Fritschel, G.~Harry, and G.~Ogin.
+\newblock Thermo-optic noise in coated mirrors for high-precision optical
+  measurements.
+\newblock \emph{Phys. Rev. D}, 78:\penalty0 102003, Nov 2008.
+\newblock \doi{10.1103/PhysRevD.78.102003}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.78.102003}.
 
 \bibitem[Fritschel et~al.(2001)Fritschel, Bork, Gonz\'{a}lez, Mavalvala,
   Ouimette, Rong, Sigg, and Zucker]{FritschelReadout}
@@ -117,10 +138,31 @@ S.~A. Hughes and K.~S. Thorne.
 \newblock \doi{10.1103/PhysRevD.58.122002}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.58.122002}.
 
+\bibitem[Mueller et~al.(2000)Mueller, ze~Shu, Adhikari, Tanner, Reitze, Sigg,
+  Mavalvala, and Camp]{MuellerMM}
+G.~Mueller, Q.~ze~Shu, R.~Adhikari, D.~B. Tanner, D.~Reitze, D.~Sigg,
+  N.~Mavalvala, and J.~Camp.
+\newblock Determination and optimization of modgit ste matching into optical
+  cavities by heterodyne detection.
+\newblock \emph{Opt. Lett.}, 25\penalty0 (4):\penalty0 266--268, Feb 2000.
+\newblock \doi{10.1364/OL.25.000266}.
+\newblock URL \url{http://ol.osa.org/abstract.cfm?URI=ol-25-4-266}.
+
 \bibitem[of~Birmingham(2014)]{FinesseManual}
 U.~of~Birmingham.
 \newblock \emph{Finesse Manual}, 2014.
 \newblock URL \url{http://www.gwoptics.org/finesse/}.
+
+\bibitem[O'Neil and Courtial(2000)]{ONeilModeTransform}
+A.~T. O'Neil and J.~Courtial.
+\newblock Mode transformations in terms of the constituent hermite–gaussian
+  or laguerre–gaussian modes and the variable-phase mode converter.
+\newblock \emph{Optics Communications}, 181\penalty0 (1):\penalty0 35 -- 45,
+  2000.
+\newblock ISSN 0030-4018.
+\newblock \doi{https://doi.org/10.1016/S0030-4018(00)00736-7}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/S0030401800007367}.
 
 \bibitem[Saulson(2016)]{Saulson}
 P.~Saulson.

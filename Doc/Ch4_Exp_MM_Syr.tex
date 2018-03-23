@@ -1,6 +1,7 @@
 \chapter{Experimental Mode Matching Cavities at Syracuse}
 In conjunction with Sandoval et al, the adaptive modematching table top experiment was able to show the feasibility of a fully dynamical system.
 	\section{Adaptive Mode Matching}
+	Reque
 	Real time digital system and model.
 	
 	Signal chain.
@@ -11,34 +12,99 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 		\subsection{Translation Stages}
 		
 	\section{Sensors}
-		\subsection{Bullseye Photodiodes}
-		As stated in section [], we saw that the error signal for a mode-mismatched cavity has cylindrical symmetry due to the beating between the LG-01 and the LG-00 mode.  This means that the quadrant photodiodes would not have a way to detect the modal content of a cavity.  One way to solve this is to introduce a type of detector that can sense the power outside versus the power inside (ugh re write this).
+	Recall in Section \ref{WFS} that the RF modal decomposition technique relies on comparing the Gouy phase of the higher order modes to the fundamental Gaussian mode using an array of RF photodiodes to extract an error signal. The complication arises when using this method to extract the beat note between the fundamental mode and symmetric donut mode because the photodetector arrays must match the higher order mode geometry.  This is easier to deal with when trying to sense angular distortions from a misaligned cavity because the 01 and 10 modes can be sensed with a split photodetector, however, directly using that device will not work to sense mode mismatch due to the symmetry of the 02 and 20 modes. To date, Advanced LIGO uses no RF sensors to detect mode matching so the next sections will provide methods of sensing mode mismatch which can be integrated into advanced LIGO and used for dynamic closed loop feedback control.
+		\subsection{Bullseye Photodiodes (BPD)}
+		It is clear that using a quadrant photodetector to measure the symmetric $U_{20} + U_{02}$ mode which arises from mismatch is futile because the integrated power on each side will be exactly the same due to donut mode symmetry. So it is simplest to try subtracting the inner beam power from the outer ring of the electric field in order to measure a phase difference using a specialized RF photodiode called a Bullseye Photodetector shown in Figure []. 
 		
-		In [Rana's IO final design document] 
-		
-		
-		Why do we need bullseye photodiodes, meantion the geometry of the error signal.
-		
-		Derivations in the appendix.
+		\subsubsection{BPD Calibration}
+		To use the BPDs, there are a few steps required in designing the optical setup which is different than the standard PDH or WFS method.  Most notably, the beam size incident on the BPD must be tuned such that the zero crossing of the ($U_{20} + U_{02}$) matches the boundary between the inner and outer segments.  This condition is met if $\omega_{0} = \sqrt{2} r_0$ and Appendix \ref{BPDchar} shows the power ratio of the outer to inner segments when this is true,
+		\begin{equation}
+		\text{Power Ratio} = \frac{\text{P}_2 + \text{P}_3 + \text{P}_4}{\text{P}_1}  \\
+		= \frac{e^{-2r_0^2/ \omega_{0}^2}} {1 - e^{-2r_0^2/ \omega_{0}^2 }} \approx 0.582
+		\end{equation}
 		
 		Picture of BPD
 		
 		Pitch and Yaw sensing matrix
 		
 		Demodulation phase
+
 		
-		Explain why we need $\omega_{0} = \sqrt{2} r_0$
+		Another constraint on using this method is that the Gouy phase separation between successive BPDs must be close to 45 or 135 degrees so that the error signals from each BPD can be orthogonalized, this is in contrast to angular wavefront sensors which require 90 degree Gouy phase separation.
+
 		
-		The ratio of out over in will give:
-		
-		\begin{equation}
-		\text{Power Ratio} = \frac{\text{P}_2 + \text{P}_3 + \text{P}_4}{\text{P}_1}  \\
-		= \frac{e^{-2r_0^2/ \omega_{0}^2}} {1 - e^{-2r_0^2/ \omega_{0}^2 }} \approx 0.582
-		\end{equation}
-		
-		\subsection{Mode Converters}
-		
-		\subsection{Scanning Gaussian Beams}
-		
+\subsection{Mode Converters}
+The bullseye photodiodes can be difficult to calibrate and manufacture so a particularly interesting method of sensing mode mismatch is to convert the fields with a cylindrical telescope.  Using lenses which contain separate curvatures for each direction (x or y), one being flat and the other is curved with focal length, $f$.  The idea is to break the cylindrical symmetry of the donut mode (Figure []) and convert the beam into a pringle mode, then, an error signal can extracted using the radio frequency quadrant photodiode that the angular wavefront sensors employ
+
+\subsubsection{Vector formalism for laser beams and optical cavities}
+Consider an optical cavity that is longitudinally resonant on the $\text{TEM}_{00}$ mode using the Pound-Drever-Hall technique shown in Section \ref{FP} and also locked with angular wavefront sensors shown in Section \ref{WFS}. When there is a small mismatch between the waist size and position of the input beam relative to the cavity, this is equivalent to coupling the TEM-00 mode into higher order modes.  Since mode matching is only concerned with coupling to the second order modes, the  resultant field in reflection ($r_{FP}$) of a Fabry-Perot resonator will have the form
+	\begin{equation}\label{MMVector}
+\ket{U_{refl}} = r_{FP} \begin{pmatrix} U_{00}
+\\ 0
+\\ 0
+\end{pmatrix}
++
+\epsilon \begin{pmatrix} 0
+\\ U_{20}
+\\ U_{02}
+\end{pmatrix}
+\end{equation}
+\begin{equation}
+\epsilon = \frac{1}{\sqrt{2}} \bigg(\frac{\delta w}{w_0} + i \frac{\delta z}{z_R}\bigg)
+\end{equation}
+where $\delta w$ and $\delta z$ are the mismatches in waist size and position, respectively.  
+
+O'Neil et al \cite{ONeilModeTransform} wrote down a formalism that explicitly showed the effects of cylindrical telescopes on the full range of Hermite Gauss modes. An arbitrary mode converter is comprised of two cylindrical lenses that can be rotated about the axis of propagation shown in Figure []:
+	\begin{equation}
+	\hat{M} = \hat{R} \hat{C}
+	\end{equation} 
+where $\hat{R}$ is a rotation operator and $\hat{C}$ is the mode converting operator.  Since mode matching primarily couples power into the 02 and 20 modes of the cavity, we can use a 3x3 matrix.  For rotations about the axis of propagation, the operator is
+
+\begin{equation} \label{rotation}
+\hat{R}_{ij} = 
+\begin{pmatrix}
+1		&0										& 0 
+\\ 	0		&\cos(\Delta \theta)						&\sin(\Delta \theta)
+\\ 	0		&-\sin(\Delta \theta)						&\cos(\Delta \theta)			
+
+\end{pmatrix}
+\end{equation}
+
+For the mode converter, the operator is
+\begin{equation} \label{convert}
+\hat{C}_{ij} = 
+\begin{pmatrix}
+1			&0						& 0 
+\\ 	0			&e^{-i \Omega_{20}}		& 0
+\\ 	0			&0						&e^{i \Omega_{02}}			
+
+\end{pmatrix}
+\end{equation}
+
+where $ \Omega_{mn} = (m+\frac{1}{2}) \tan^{-1}\bigg(\frac{d}{z_{R,x}}\bigg) + (n+\frac{1}{2}) \tan^{-1}\bigg(\frac{d}{z_{R,y}}\bigg) $ and $d$ is the distance from one cylindrical lens to the waist.  $\Omega_{mn}$ is the amount of extra phase that a higher order mode will experience due to the mode converter.  It is important to note, the matrices above show that the Gaussian beam is only astigmatic within the region of between the cylindrical lenses and unchanged outside of the telescope.   If the beam reflected from the cavity is well mode matched to the cylindrical telescope, then a mode converter will introduce an astigmatism and vary the separate Rayleigh ranges \cite{BEIJERSBERGEN},
+\begin{equation}
+\frac{z_{R,x}}{z_{R,y}} = \frac{1+d/f}{1-d/f}
+\end{equation}
+Of course, the tuning of $\theta$, $d$ and $f$ is left up to the optical designer's choice.  The obvious selection for $\theta$ should rotate the output beam such that the pringle mode intensities are centered on the individual quadrant photodiodes.  The choice of separation distance $d$ and focal length $f$ are a bit more subtle.  In Figure [] from O'Neil \cite{ONeilModeTransform}, the only conversion that transforms the diagonal HG mode into a symmetric donut mode is with $\Delta \Omega = \pi/2$. This implies the converse is  true if one desires to transform the donut mode into an HG mode of the same order. Making this choice of phase propagation will automatically constrain the optical setup,
+	\begin{equation}
+	\frac{\pi}{2} = 2\bigg[\tan^{-1}\bigg(\frac{d}{z_{R,x}}\bigg) - \tan^{-1} \bigg(\frac{d}{z_{R,y}} \bigg)  \bigg]
+	\end{equation} 
+	\begin{equation}
+	  \Rightarrow \sqrt{2} - 1 = \frac{d}{z_{R,y}} = \frac{z_{R,x}}{d}
+	\end{equation}
+The equation above only shows a relation between the Rayleigh ranges and the separation. However, by imposing mode matching conditions it is possible also constrain the focal length of the cylindrical lenses as well.
+	\begin{equation}
+	f = \bigg[\frac{1}{R_x(d)} - \frac{1}{R_y(d)}\bigg]^{-1} = \sqrt{2}\,d
+	\end{equation}
+
+\subsubsection{Extracting information from mode}
+Mueller et al \cite{MuellerMM} showed that the error signal from mode mismatch could be extracted by using an RF detection scheme. Using this formalism, the error signal on a quadrant photodetector from a mismatched cavity after a mode converter is 
+	\begin{equation}
+	\begin{aligned}
+	S 	&\propto \sin(\Omega t) \text{Im} \bigg\{ \epsilon^{*} \bigg[\int_{A1,A3} \hat{M}^{\dagger}_{00} \bra{U_{00}} \big[\hat{M}^{\dagger}_{20} \ket{20} + \hat{M}^{\dagger}_{02} \ket{02}\big]  \,-\, \int_{A2,A4} \hat{M}^{\dagger}_{00} \bra{U_{00}} (\hat{M}^{\dagger}_{20} \ket{20} + \hat{M}^{\dagger}_{02} \ket{02}) \bigg] \bigg\}\\
+	&\propto \sin(\Omega t) \text{Im} \bigg\{ \epsilon^{*} \bigg[\int_{A1,A3} \bra{U_{00}} \big(\ket{20} - \ket{02}\big)  \,-\, \int_{A2,A4}  \bra{U_{00}} ( \ket{20} - \ket{02}) \bigg] \bigg\}
+	\end{aligned}
+	\end{equation}
+In the above equation, $\hat{C}_{ij} $ was chosen with $\Delta \Omega = \pi/2$ and $\hat{R}_{ij}$ should rotate the beams such that the intensities in Figure {ModeConverter} are aligned with the quadrant photodiodes.
 		
 		
