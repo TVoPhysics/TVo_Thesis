@@ -17,18 +17,13 @@
 		Future Works
 
 	\section{Gravitational Waves}\label{gravitational waves}
-	In 1915, Albert Einstein published his theory of general relativity \ref{einstein}.
-	
-	The seminal equation in this theory is:
+	In 1915, Albert Einstein published his theory of general relativity \cite{einstein}, which contains the most complete description of gravity to date. The seminal equation in this theory, called the Einstein Field Equation is
 	
 	\begin{equation} \label{einstein}
 	G_{\mu \nu} = 8 \pi T_{\mu \nu}
 	\end{equation}
 	
-	Which is a set of 10 coupled second-order differential equations that are nonlinear.  In its complete form, equation \ref{einstein} fully describes the interaction between space-time and mass-energy. 
-	
-	
-	To describe the physics in a highly curved space-time, one would have to fully solve the Einstein field equations numerically. In areas where the curvature is close to flat,  the weak field approximation can be applied and the metric is described as	
+	which is a set of 10 coupled second-order differential equations that are nonlinear and fully describes the interaction between space-time and mass-energy. Equation \ref{einstein} is difficult to solve except in situations where specific approximations allow a user to find exact solutions such as spherical symmetry \cite{carroll_2003} \cite{schutz_2009}. In areas where the curvature is close to flat,  the weak field approximation can be applied and the metric is described as	
 	
 	\begin{equation} \label{weak}
 	g_{\mu \nu}  \approxeq \eta_{\mu \nu} + h_{\mu \nu}
@@ -87,9 +82,11 @@
 	which shows us two very important points about the nature of gravitational waves.  Firstly, the effect is very small since the length variation, $h_{xx}$, is a small perturbation on flat space-time.  Secondly, the effect is proportional to the initial separation between the particles. This means a detector which is large will have a better chance to measure these small effects, an important point that drove the design of the Laser Interferometer Gravitational-Wave Interferometer (LIGO).
 	
 	\subsection{Measuring Gravitational Waves with Light}\label{measuringGWs}
-	Even with the theoretical formulation of gravitational waves resolved by the 1970s ref[Pirani], detection of GWs by ground-based detectors was still a controversial topic among scientists in the field ref[Collins].  This was due to the incredible accuracy required to measure the strain from even the most dense astrophysical objects ref[Rai].  The earliest attempts at detecting these small signals were famously done by Joseph Weber ref[Weber] using large resonant bars and piezoelectric transducers to extract the energy from gravitational waves at the resonant frequencies of the bars. Picture of bar detectors at LHO.  However, these bars are limited by thermal noise and can only detect GWs in very narrow frequency bands ref[Bars]. 
+	Even with the theoretical formulation of gravitational waves resolved by the 1970s \cite{PiraniPhysicalSignificance}, the possibility of detecting gravitational waves by ground-based instruments was still a controversial topic among scientists in the field \cite{CollinsGravity}.  During the famous Chapel Hill Conference in 1957 which included some of the great minds of the era such as Wheeler, Schwinger, and Feynman, the experimental search for gravitational waves began to take hold.  One thought experiment that was proposed by Feynmann \cite{SmootBrief} where he considered a bead sliding on a string with some friction as a gravitational wave passes by.  As the beads slide back and forth due to the wave described by equation \ref{propdist}, there will be some heat dissipated which means the gravitational wave must carry some energy.
 	
-	Interferometers are devices that measure small displacements by using a laser that is split with a partially transmitting mirror (or beamsplitter), which allows 50$\%$ of the light to get reflected and 50$\%$ to be transmitted.  Each of the split beams travel down arms and reflect off of mirrors and return down the arms.  Upon reaching the beamsplitter, the beams recombine and by using the superposition of electromagnetic waves the laser will add linearly at the output port (or antisymmetric port).  The laser beams will gather phase as they propagate down each individual arm, and when recombining, the intensity of the light will be proportional to the phase differences between each beam.  This will correspond to a differential length that is described by
+	There is still the issue of an incredible amount of accuracy required to measure the strain from even the most dense astrophysical objects. The earliest attempts at detecting these small signals were famously done by Joseph Weber using large resonant bars and piezoelectric transducers to extract the energy from gravitational waves at the resonant frequencies of the bars. Picture of bar detectors at LHO.  However, these bars are limited by thermal noise and can only detect GWs in very narrow frequency bands. 
+	
+	Interferometers are devices that measure small displacements by using a laser that is split by a partially transmitting mirror (or beamsplitter), which allows 50$\%$ of the light to get reflected and 50$\%$ to be transmitted.  Each of the beams travel down the arms and reflect off of mirrors and return to the beamsplitter.  Upon reaching the optic, the two beams recombine and by the principle of superposition  the electromagnetic waves will add linearly at the output port (or antisymmetric port). Figure[].  The laser beams will gather phase as they propagate down each individual arm, and when recombining, the intensity of the light will be proportional to the phase differences between each beam.  This will correspond to a differential length that is described by
 	
 	\begin{equation}
 	L_{-} = l_{x} - l_{y}
@@ -99,7 +96,7 @@
 	
 	Consider a gravitational wave source arbitrarily located in the sky with respect to an interferometer on Earth. By denoting the interferometer's Cartesian coordinates as $\{\hat{x},\hat{y},\hat{z}\}$ with x and y located along the arms respectively such that the z-axis points directly towards the zenith (i.e. a right-handed system.).  Using the well known Euler angles, a relation from the detector frame to the source frame with coordinates $\{\hat{x}',\hat{y}',\hat{z}'\}$ can be seen in Figure[Euler]. 
 	
-	If a gravitational wave at the source has emitted GWs with plus and cross polarizations as denoted by equation \ref{gwamp}, then the detector time series can be regarded as ref[Duncan Thesis and AndersonGWs]
+	If a gravitational wave at the source has emitted GWs with plus and cross polarizations as denoted by equation \ref{gwamp}, then the detector time series can be regarded as \cite{S6sensitivity} \cite{Finn:1995}
 	\begin{equation}
 	h(t) = F_{+}(\theta,\phi,\psi) \, h_{+}(t) + F_{\times}(\theta,\phi,\psi) \, h_{\cross}(t)
 	\end{equation}
@@ -112,13 +109,13 @@
 	F_{\cross}(\theta,\phi,\psi) = + \frac{1}{2}[1+\text{cos}^2(\theta)] \text{sin}(2\phi) \text{cos}(2\psi) - \text{cos}(\theta) \text{sin}(2\phi) \text{sin}(2\psi)
 	\end{equation}
 	
-	If the gravitational wave is located directly above the interferometer (ie $\theta = 0$) and setting $\psi=0$, then the magnitude of the antenna pattern is equal to unity.  Furthermore, by rotating about the $\phi$ angle such that the detector arms align with the plus polarization, the null geodesic equation (ie the path of a photon) in the interferometer frame becomes 
+	If the gravitational wave is located directly above the interferometer such that $\theta = 0$ and setting $\psi=0$, then the magnitude of the antenna pattern is equal to unity.  Furthermore, by rotating about the $\phi$ angle such that the detector arms align with the plus polarization, the null geodesic equation (ie the path of a photon) in the interferometer frame becomes 
 	
 	\begin{equation}
 	ds^2 = g_{\mu\nu}dx^{\mu} dx^{\nu} = -dt^2 + [1+h_{+}]  dx^2 + [1-h_{+}]  dy^2 + dz^2 = 0
 	\end{equation}
 	
-	Now if the photon is traveling along the x-arm, this means that $dy^2 = dz^2 = 0$ and the metric equation transforms to
+	Now, if the photon is traveling along the x-arm, this means that $dy^2 = dz^2 = 0$ and the metric equation transforms to
 	
 	\begin{equation}
 	\frac{dt}{dx} = \sqrt{ 1+h_{+} } \approx 1+\frac{1}{2} h_{+} 
@@ -130,7 +127,7 @@
 	t_1 = \int_{0}^{L_{x}} [1+\frac{1}{2}  h_{+}(x) ] \text{d}x
 	\end{equation}
 	
-	where $t_0$ is the start time and $L_x$ is the total length of the x-arm.  Upon returning to the beamsplitter, the photon's total time of flight for the x and y arms are, respectively,
+	where $L_x$ is the total length of the x-arm.  Upon returning to the beamsplitter, the photon's total time of flight for the x and y arms are, respectively,
 	
 	\begin{equation}
 	t_2 = 2 L_x + \frac{1}{2} \int_{0}^{L_x} \bigg[  h_{+}(x) +  h_{+}(x + L_x)  \bigg] \text{d}x
@@ -150,10 +147,10 @@
 	\Delta \Phi = \Phi(t_{2}) - \Phi(t'_{2}) = \frac{4 \pi}{\lambda} \, h_{+} \, L
 	\end{equation}
 	
-	The equation above is simple, however, it only works for gravitational wave signals that are not frequency dependent and it assumes that the path length can be arbitrarily long. Both points are actually not true but we can alleviate these discrepancies by considering a gravitational wave signal of the form $h(t) = h_0 \text{exp} (i 2 \pi f_{GW} t)$  and repeating the calculation between equations \ref{pathlength} and \ref{diffphase}:
+	The equation above is simple, however, it only works for gravitational wave signals that are not frequency dependent and it assumes that the path length can be arbitrarily long. Both points are actually not true \cite{Saulson} but we can alleviate these discrepancies by considering a gravitational wave signal of the form $h(t) = h_0 \text{exp} (i 2 \pi f_{GW} t)$  and repeating the calculation between equations \ref{pathlength} and \ref{diffphase}:
 	
 	\begin{equation}\label{gwsinc}
-	\Delta \Phi (t) = h(t) \; \tau \; \frac{2 \pi c}{\lambda} \; \text{sinc}(f_{GW} \tau) e^{i \pi f_{GW} \tau}
+	\Delta \Phi (t) = h(t) \; \tau_{RT} \; \frac{2 \pi c}{\lambda} \; \text{sinc}(f_{GW} \tau_{RT}) e^{i \pi f_{GW} \tau_{RT}}
 	\end{equation}
 	
 	where $\tau_{RT} = 2L/c$.  The response for a detector whose arm lengths are blank km have null points at the around blank Hz which means the instrument cannot be arbitrarily long, however, this point is not concerning because it is too expensive and difficult to make a terrestrial detector of this size.
@@ -161,33 +158,35 @@
 	How to practically measure $\Delta \Phi$ with an interferometer is explained in section \ref{LIGOInstrument}.
 
 	\subsection{Detection of Gravitational Waves}
-	The LIGO project is meant to observe astrophysical objects so it is natural to wonder how well a single detector can probe the universe.  
-	
-	Signal-to-noise is the level of interesting signals compared to the background noise, which can be expressed as
+	The purpose of LIGO is to observe gravitational waves emanating from astrophysical objects \cite{NSFproposal}, so it is natural to wonder how well a single detector can probe the universe.  It is worthwhile to explicitly derive the inspiral horizon distance, which is how far a single detector can see a source comprised two equal mass compact objects optimally oriented in the sky relative to the detector.  Signal-to-noise (SNR) is the level of interesting signals compared to the background noise, which can be expressed as
 	\begin{equation}\label{SNR}
 	\rho = 2 \int_{-\infty}^{\infty} \frac{ \tilde{s}(f) \tilde{s}^*(f) }{S_n(f)}
 	\end{equation}
 	
 	where ${S_n(f)}$ is the one-sided average power spectral density of the detector noise and $\tilde{s}(f)$ is the Fourier transform of the detectors' response to a gravitational-wave signal.
 	
-	Consider two dense objects with mass $m_1$ and $m_2$ rotating around each other, separated by a distance $R$ such that quadrupole equation still holds (i.e. flat space-time with small perturbations). The detector response, in units of strain, to the gravitational waves emitted by this source is [Finn],
+	Consider two dense objects with mass $m_1$ and $m_2$ rotating around each other, separated by a distance $R$ such that quadrupole equation still holds (i.e. flat space-time with small perturbations). The detector response, in units of strain, to the gravitational waves emitted by this source is \cite{Finn:1995},
 	
 	\begin{equation}\label{inspiralsignal}
 	s(t) = \frac{\mathcal{M}}{d_L} \Theta(\theta,\phi,\psi,i) [\pi f(t) \mathcal{M}]^{2/3} \cos[\Phi(t) + constant]
 	\end{equation}
+	where 
+
+	\begin{subequations}
+		\begin{equation}\label{chirp}
+		\mathcal{M} &= (1+z) \frac{(m_1 m_2)^{3/5}}{(m_1 + m_2)^{1/5}}
+		\end{equation}
+		\begin{equation}\label{orient}
+		\Theta(\theta,\phi,\psi,i) &= 2 \sqrt{	[F_{+}(\theta,\phi,\psi) (1+\cos^2(i)) ]^2 + [2 F_{\cross} \cos(i)]^2 }
+		\end{equation}
+	\end{subequations}
+
+	By convention, $\mathcal{M}$ called the chirp mass and $d_L$ is the luminosity distance. The orientation response, $\Theta(\theta,\phi,\psi,i)$, is a function that depends entirely on the detector orientation relative to the angular momentum vector of the binary [Figure of a binary spiraling and a detector on earth]
 	
-	where $\mathcal{M} = (1+z) \frac{(m_1 m_2)^{3/5}}{(m_1 + m_2)^{1/5}}$ is the chirp mass, $d_L$ is the luminosity distance. 
-	
-	
-	The orientation response, $\Theta(\theta,\phi,\psi,i)$, is a function that depends entirely on the detector orientation relative to the angular momentum vector of the binary [Figure of a binary spiraling and a detector on earth]
-	
-	\begin{equation}
-	\Theta(\theta,\phi,\psi,i) = 2 \sqrt{	[F_{+}(\theta,\phi,\psi) (1+\cos^2(i)) ]^2 + [2 F_{\cross} \cos(i)]^2 }
-	\end{equation}
 	
 	where $F_{+}$ and $F_{\cross}$ are from equation \ref{Fplus} and \ref{Fcross}.
 	
-	As the binary loses energy to gravitational waves, the orbit will shrink [ref Schutz or something] as a function of time, in turn, the orbital frequency will increase
+	As the binary loses energy to gravitational waves, the orbit will shrink as a function of time, in turn, the orbital frequency will increase
 	
 	\begin{equation}
 	f(t) = \frac{1}{\pi \mathcal{M}} \bigg[\frac{5}{256} \frac{\mathcal{M}}{T-t}\bigg]^{3/8} 

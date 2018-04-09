@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  23 MAR 2018 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  1 APR 2018 13:46
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1899,19 +1899,43 @@ Chapter 1.
 [4
 
 
-] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
-[20] [21]
-Overfull \hbox (7.85709pt too wide) in paragraph at lines 648--649
+] [5] [6] [7] [8]
+
+Package natbib Warning: Citation `NSFproposal' on page 9 undefined on input lin
+e 161.
+
+! Misplaced alignment tab character &.
+l.177 		\mathcal{M} &
+                     = (1+z) \frac{(m_1 m_2)^{3/5}}{(m_1 + m_2)^{1/5}}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.180 		\Theta(\theta,\phi,\psi,i) &
+                                    = 2 \sqrt{	[F_{+}(\theta,\phi,\psi) (1+\...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+[9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20] [21]
+Overfull \hbox (7.85709pt too wide) in paragraph at lines 647--648
 \OT1/cmr/m/n/10 Virtually all un-der-grad-u-ate quan-tum me-chan-ics text-books
  in-clude a sec-tion on the har-monic os-cil-la-tor[Shankar,
  []
 
-) [22]
+[22]) [23]
 \openout2 = `Ch2_Intro_to_MM.aux'.
 
  (Ch2_Intro_to_MM.tex
 Chapter 2.
-[23
+[24
 
 
 
@@ -1921,12 +1945,12 @@ Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 45.
 
-[24] [25] [26] [27] [28] [29] [30]) [31] [32]
+[25] [26] [27] [28] [29] [30] [31]) [32] [33]
 \openout2 = `Ch3_Sim_MM_Finesse.aux'.
 
  (Ch3_Sim_MM_Finesse.tex
 Chapter 3.
-) [33
+) [34
 
 
 
@@ -1935,57 +1959,57 @@ Chapter 3.
 
  (Ch4_Exp_MM_Syr.tex
 Chapter 4.
-[34
+[35
 
 
 
-] [35] [36] [37]) [38]
+] [36] [37] [38]) [39]
 \openout2 = `Ch5_MM_at_LHO.aux'.
 
  (Ch5_MM_at_LHO.tex
 Chapter 5.
-) [39
+) [40
 
 
 
-] [40]
+] [41]
 \openout2 = `Ch6_Det_Up.aux'.
 
  (Ch6_Det_Up.tex
 Chapter 6.
-) [41
+) [42
 
 
 
 ]
 \openout2 = `Appendix.aux'.
 
- (Appendix.tex [42
+ (Appendix.tex [43
 
 
 
 
 ]
 Appendix A.
-[43
+[44
 
-] [44] [45]
+] [45] [46]
 Appendix B.
-[46
+[47
 
-] [47]
+] [48]
 Appendix C.
-[48
+[49
 
-] [49]
+] [50]
 Appendix D.
-[50
+[51
 
-]) [51] (Thesis.lof)
+]) [52] (Thesis.lof)
 \tf@lof=\write5
 \openout5 = `Thesis.lof'.
 
- [52
+ [53
 
 
 ] (Thesis.lot)
@@ -1996,13 +2020,16 @@ Appendix D.
 \tf@brf=\write7
 \openout7 = `Thesis.brf'.
 
- [53
+ [54
+
+]
+[55
 
 ]
 ! Undefined control sequence.
 <recently read> \prd 
                      
-l.73 
+l.98 
      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2010,31 +2037,35 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[54
+[56])
 
-] [55])
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
- [56]
+[57]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
- (Thesis.aux (Ch1_Intro.aux) (Ch2_Intro_to_MM.aux)
-(Ch3_Sim_MM_Finesse.aux) (Ch4_Exp_MM_Syr.aux) (Ch5_MM_at_LHO.aux)
-(Ch6_Det_Up.aux) (Appendix.aux))
+ (Thesis.aux (Ch1_Intro.aux) (Ch2_Intro_to_MM.aux) (Ch3_Sim_MM_Finesse.aux) (Ch
+4_Exp_MM_Syr.aux) (Ch5_MM_at_LHO.aux) (Ch6_Det_Up.aux) (Appendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 75BD354726A836FB2E7094E63463C638;3479.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: C426E8F8497077F36DEDB7BCA8C38FA9;1560.
+(rerunfilecheck)             Checksum: 7A072BABEA07062A967DCFC771CF2C7E;2098.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 18379 strings out of 493323
- 309642 string characters out of 3139066
- 398573 words of memory out of 3000000
- 21381 multiletter control sequences out of 15000+200000
+ 18442 strings out of 493323
+ 310766 string characters out of 3139066
+ 398976 words of memory out of 3000000
+ 21433 multiletter control sequences out of 15000+200000
  542663 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,19n,40p,10416b,463s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,19n,40p,10416b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files
@@ -2054,9 +2085,9 @@ nts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Thesis.pdf (58 pages, 498254 bytes).
+Output written on Thesis.pdf (59 pages, 509024 bytes).
 PDF statistics:
- 1006 PDF objects out of 1200 (max. 8388607)
- 324 named destinations out of 1000 (max. 500000)
+ 1047 PDF objects out of 1200 (max. 8388607)
+ 335 named destinations out of 1000 (max. 500000)
  393 words of extra memory for PDF output out of 10000 (max. 10000000)
 
