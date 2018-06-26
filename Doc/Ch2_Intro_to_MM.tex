@@ -42,23 +42,23 @@
 
 		\begin{subequations}
 		\begin{equation}\label{paraxiala}
-		\bigg| { \partial^2 \mathbf{A} \over \partial z^2 } \bigg|  \ll  \bigg| { k {\frac{}\partial \mathbf{A}{\partial z} } } \bigg|
+		\bigg| { \frac{\partial^2 \mathbf{A}}{\partial z^2} } \bigg|  \ll  \bigg| { k {\frac{\partial\mathbf{A}}{{\partial z}} } } \bigg|
 		\end{equation}
 		\begin{equation}\label{paraxialb}
-		\bigg| { \partial^2 \mathbf{A} \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial^2 \mathbf{A} \over \partial x^2} } \bigg|
+		\bigg| { \frac{\partial^2 \mathbf{A}}{\partial z^2} } \bigg|  \ll  \bigg| { k {\frac{\partial^2 \mathbf{A}}{\partial x^2}} } \bigg|
 		\end{equation}
 		\begin{equation}\label{paraxialc}
-		\bigg| { \partial^2 \mathbf{A} \over \partial z^2 } \bigg|  \ll  \bigg| { k {\partial^2 \mathbf{A} \over \partial y^2} } \bigg|
+		\bigg| { \frac{\partial^2 \mathbf{A}}{\partial z^2} } \bigg|  \ll  \bigg| { k{\frac{\partial^2 \mathbf{A}}{\partial y^2}}} \bigg|
 		\end{equation}
 		\end{subequations}
 		
 		the partial differential equation which arises is called the Paraxial Helmholtz Equation:
 		
 		\begin{equation}\label{paraHelmholtz}
-		\nabla_T^2 A(r) - i2k {\partial A(r) \over \partial z} = 0
+		\nabla_T^2 A(r) - i2k \frac{\partial A(r)}{\partial z} = 0
 		\end{equation}
 		
-		where $\nabla_T^2 = {\partial^2  \over \partial x^2} + {\partial^2  \over \partial y^2} $ is the transverse Laplacian.  A simple solution for equation \ref{paraHelmholtz} is the complex paraboloidal wave
+		where $\nabla_T^2 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} $ is the transverse Laplacian.  A simple solution for equation \ref{paraHelmholtz} is the complex paraboloidal wave
 		
 		\begin{equation} \label{complexenvelope}
 		A(\mathbf{r}) = \frac{A_0}{q(z)} e^{\frac{-ikr^2}{2q(z)}} , \quad q(z)=z+iz_0

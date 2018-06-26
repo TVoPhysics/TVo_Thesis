@@ -46,8 +46,12 @@
 \BOOKMARK [0][-]{section*.23}{Appendices}{}% 46
 \BOOKMARK [0][-]{Appendix.a.A}{Resonator Formulas}{}% 47
 \BOOKMARK [0][-]{Appendix.a.B}{Hermite Gauss Normalization}{}% 48
-\BOOKMARK [0][-]{Appendix.a.C}{Bullseye Photodiode Characterization}{}% 49
-\BOOKMARK [1][-]{section.a.C.1}{DC}{Appendix.a.C}% 50
-\BOOKMARK [1][-]{section.a.C.2}{RF}{Appendix.a.C}% 51
-\BOOKMARK [0][-]{Appendix.a.D}{Overlap of Gaussian Beams}{}% 52
-\BOOKMARK [0][-]{Appendix.a.E}{Extending the ABCD Formalism}{}% 53
+\BOOKMARK [0][-]{Appendix.a.C}{Bullseye and Quadrant Photodiode Characterization}{}% 49
+\BOOKMARK [1][-]{section.a.C.1}{Quadrant Photodiodes \(QPD\)}{Appendix.a.C}% 50
+\BOOKMARK [1][-]{section.a.C.2}{Bullseye Photodiodes}{Appendix.a.C}% 51
+\BOOKMARK [2][-]{subsection.a.C.2.1}{Width}{section.a.C.2}% 52
+\BOOKMARK [2][-]{subsection.a.C.2.2}{Pitch}{section.a.C.2}% 53
+\BOOKMARK [2][-]{subsection.a.C.2.3}{Yaw}{section.a.C.2}% 54
+\BOOKMARK [2][-]{subsection.a.C.2.4}{RF}{section.a.C.2}% 55
+\BOOKMARK [0][-]{Appendix.a.D}{Overlap of Gaussian Beams}{}% 56
+\BOOKMARK [0][-]{Appendix.a.E}{Extending the ABCD Formalism}{}% 57

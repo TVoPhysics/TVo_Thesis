@@ -1,4 +1,4 @@
-\begin{thebibliography}{32}
+\begin{thebibliography}{33}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -45,6 +45,20 @@ E.~D. Black and R.~N. Gutenkunst.
 D.~G. Blair.
 \newblock \emph{The detection of gravitational waves}.
 \newblock Cambridge University Press, 2005.
+
+\bibitem[Brooks et~al.(2016)Brooks, Abbott, Arain, Ciani, Cole, Grabeel,
+  Gustafson, Guido, Heintze, Heptonstall, Jacobson, Kim, King, Lynch, O'Connor,
+  Ottaway, Mailand, Mueller, Munch, Sannibale, Shao, Smith, Veitch, Vo,
+  Vorvick, and Willems]{AWC_current}
+A.~F. Brooks, B.~Abbott, M.~A. Arain, G.~Ciani, A.~Cole, G.~Grabeel,
+  E.~Gustafson, C.~Guido, M.~Heintze, A.~Heptonstall, M.~Jacobson, W.~Kim,
+  E.~King, A.~Lynch, S.~O'Connor, D.~Ottaway, K.~Mailand, G.~Mueller, J.~Munch,
+  V.~Sannibale, Z.~Shao, M.~Smith, P.~Veitch, T.~Vo, C.~Vorvick, and
+  P.~Willems.
+\newblock Overview of advanced ligo adaptive optics.
+\newblock \emph{Appl. Opt.}, 55\penalty0 (29):\penalty0 8256--8265, Oct 2016.
+\newblock \doi{10.1364/AO.55.008256}.
+\newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-55-29-8256}.
 
 \bibitem[Carroll(2003)]{carroll_2003}
 S.~M. Carroll.

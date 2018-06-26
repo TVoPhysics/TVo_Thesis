@@ -65,8 +65,12 @@
 \contentsline {chapter}{Appendices}{44}{section*.23}
 \contentsline {chapter}{\numberline {A}Resonator Formulas}{45}{Appendix.a.A}
 \contentsline {chapter}{\numberline {B}Hermite Gauss Normalization}{48}{Appendix.a.B}
-\contentsline {chapter}{\numberline {C}Bullseye Photodiode Characterization}{50}{Appendix.a.C}
-\contentsline {section}{\numberline {C.1}DC}{50}{section.a.C.1}
-\contentsline {section}{\numberline {C.2}RF}{50}{section.a.C.2}
-\contentsline {chapter}{\numberline {D}Overlap of Gaussian Beams}{52}{Appendix.a.D}
-\contentsline {chapter}{\numberline {E}Extending the ABCD Formalism}{54}{Appendix.a.E}
+\contentsline {chapter}{\numberline {C}Bullseye and Quadrant Photodiode Characterization}{50}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}Quadrant Photodiodes (QPD)}{50}{section.a.C.1}
+\contentsline {section}{\numberline {C.2}Bullseye Photodiodes}{51}{section.a.C.2}
+\contentsline {subsection}{\numberline {C.2.1}Width}{51}{subsection.a.C.2.1}
+\contentsline {subsection}{\numberline {C.2.2}Pitch}{52}{subsection.a.C.2.2}
+\contentsline {subsection}{\numberline {C.2.3}Yaw}{52}{subsection.a.C.2.3}
+\contentsline {subsection}{\numberline {C.2.4}RF}{52}{subsection.a.C.2.4}
+\contentsline {chapter}{\numberline {D}Overlap of Gaussian Beams}{53}{Appendix.a.D}
+\contentsline {chapter}{\numberline {E}Extending the ABCD Formalism}{55}{Appendix.a.E}

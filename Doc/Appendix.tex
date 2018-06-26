@@ -173,50 +173,75 @@
 	
 	Therefore the normalized modes are
 	
-	
-	
-	
-
 
 	
-	
-
-	
-	
-	
-	\chapter{Bullseye Photodiode Characterization}\label{BPDchar}
-	
-	\section{DC}
+	\chapter{Bullseye and Quadrant Photodiode Characterization}\label{BPDchar}
+	Both RF and DC segmented photodiodes are widely used in LIGO's sensing schemes.  Generally, the quadrant photodiodes (QPDs) are more readily used but recently a bullseye photodiode has been implemented to sense the size and angular jitter noise contribution from the high powered oscillator.  To calibrate the two types of sensors in common units, it is useful to normalize by the beam diameters.
+	\section{Quadrant Photodiodes (QPD)}
+	Calculating the QPD response to angular jitter is relatively straight forward. Begin with a Gaussian beam in rectangular coordinates that is displaced along the horizontal axis by a small value $\Delta x$ and expand to first order:
 	\begin{equation}
 	\begin{split}
-	\text{Power} &= \int_{A}^{B} \abs{A_{00}}^2e^{\frac{-2r^2}{\omega_{0}^2}} 2\pi r dr\\
-			&= -\abs{A_{00}}^2 \frac{\pi \omega_{0}^2}{2} e^{\frac{-2r^2}{\omega_{0}^2}} \biggr\rvert_A^B
+	I(x,y) 	&= 			\bigg(\frac{2}{\pi w^2}\bigg) e^{-2 \frac{(x+\Delta x)^2 + y^2}{w^2}}\\
+			&\approx	\bigg(\frac{2}{\pi w^2}\bigg) e^{-2 \frac{x^2 + y^2}{\omega^2}}  \bigg(1-\frac{4 x \Delta x}{w^2}\bigg)
 	\end{split}
 	\end{equation}
-	
+	Converting to polar coordinates where $x=r\cos \theta$ and $y=r \sin \theta$ then integrating over the individual segments to get the power,
 	\begin{equation}
-	\text{P}_{in} = \text{Power} \biggr\rvert_0^{r_0} = \abs{A_{00}}^2 \frac{\pi \omega_{0}^2}{2} [1 - e^{\frac{-2r_0^2}{\omega_{0}^2}}]
+	\begin{split}
+	P 	&=  \bigg(\frac{2}{\pi w^2}\bigg) \int_{0}^{\infty} \int_{\theta_1}^{\theta_2} e^{-2 \frac{r^2}{\omega^2}}  \bigg(1-\frac{4 r \cos \theta}{w^2}\Delta x\bigg) r \text{d}r \text{d} \theta\\
+		&= \frac{1}{2} - [\cos \theta_2 - \cos \theta_1] \frac{8 \Delta x }{\pi \omega^4}\int_{0}^{\infty} e^{-2\frac{r^2}{\omega^2}} r^2 \text{d}r\\
+		&= \frac{1}{2} - [\cos \theta_2 - \cos \theta_1] \frac{\Delta x }{2\pi \omega^2} \bigg(\sqrt{2\pi} \omega \; \text{erf}(\frac{\sqrt{2}r)}{\omega}) - 4 r e^{-2 \frac{r^2}{\omega^2}} \bigg) \bigg\vert^\infty_0\\
+		&= \frac{1}{2} - [\cos \theta_2 - \cos \theta_1] \frac{\Delta x}{w} \sqrt{\frac{1}{2\pi}}
+	\end{split}
 	\end{equation}
-	
+	where $\theta_1$ and $\theta_2$ are the limits from $\pm \pi/2$ for the right half and $\mp \pi/2$ for the left half.  Denoting the right and left segment as $P_2$ and $P_1$, respectively, it is possible to subtract the halves and obtain a calibrated DC signal in units of beam diameter.
 	\begin{equation}
-	\text{P}_{out} = \text{Power} \biggr\rvert_{r_0}^{\infty} = \abs{A_{00}}^2 \frac{\pi \omega_{0}^2}{2} [e^{\frac{-2r_0^2}{\omega_{0}^2}}]
+	S = P_2 - P_1 = 2\sqrt{\frac{2}{\pi}} \frac{\Delta x}{\omega}
 	\end{equation}
+	It is trivial to repeat the calculation for vertical displacements so it is left for the reader to complete.
 	
+	\section{Bullseye Photodiodes}
+	
+	Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye will give insight on the beam size.  A sensing matrix for these degrees of freedom is realized 
+	The calibration for pitch and yaw for the bullseye is determined in a similar manner to the QPD, however, it will inherently depend on the beam size.  In fact, the sensitivity of the width signal from a bullseye will depend on the DC size of the beam.  
+	
+	\subsection{Width}
+	Calculating a power integral for a cylindrically symmetric Gaussian beam is simple for the width degree of freedom,
 	\begin{equation}
-	\text{P}_{total} =  \text{P}_{in} + \text{P}_{out}
+	\begin{split}
+	\text{Power} &= \int_{A}^{B} \abs{A_{00}}^2e^{\frac{-2r^2}{\omega^2}} 2\pi r dr\\
+			&= -\abs{A_{00}}^2 \frac{\pi \omega^2}{2} e^{\frac{-2r^2}{\omega^2}} \biggr\rvert_A^B
+	\end{split}
 	\end{equation}
-	
+	Plugging in limits for the equation where $r_0$ is the boundary between the inner and outer segments,
 	\begin{equation}
-	\omega = \sqrt{\frac{\text{P}_{total}}{\abs{A_{00}}^2 \pi / 2}}
+	\text{P}_{in} = \text{Power} \biggr\rvert_0^{r_0} = \abs{A_{00}}^2 \frac{\pi \omega^2}{2} [1 - e^{\frac{-2r_0^2}{\omega^2}}]
 	\end{equation}
-	
+	\begin{equation}
+	\text{P}_{out} = \text{Power} \biggr\rvert_{r_0}^{\infty} = \abs{A_{00}}^2 \frac{\pi \omega^2}{2} [e^{\frac{-2r_0^2}{\omega^2}}]
+	\end{equation}
+	The error signal comes from subtracting the inner segment from the outer,
+	\begin{equation}
+	\text{S}_{WID} =  \text{P}_{in} - \text{P}_{out}
+	\end{equation}
+	Minimizing the derivative with respect to the beam size will determine the optimal width which gives the best sensitivity to beam size change,
+	\begin{equation}
+	\begin{aligned}
+	\frac{\partial \text{S}_{WID}}{\partial \omega} &\approx \frac{8 r_0^2}{\omega^2} \bigg(1-\frac{2 r_0^2}{\omega^2}\bigg) = 0 \\
+	\Rightarrow	\omega &= \sqrt{2} r_0
+	\end{aligned}
+	\end{equation}
+	When determining the beam size, it is possible to measure the beam size directly by fitting the power ratio,
 	\begin{equation}
 	\text{DC Power Ratio} 
 	= \frac{P_{out}}{P_{in}} \\
 	= \frac{e^{-2r_0^2/ \omega_{0}^2}} {1 - e^{-2r_0^2/ \omega_{0}^2 }} \approx 0.582
 	\end{equation}
+
+	\subsection{Pitch}
 	
-	\section{RF}
+	\subsection{Yaw}
+	\subsection{RF}
 	
 	\begin{equation}
 	\begin{split}
