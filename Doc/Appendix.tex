@@ -180,7 +180,7 @@
 	\section{Quadrant Photodiodes (QPD)}
 	Calculating the QPD response to angular jitter is relatively straight forward. Begin with a Gaussian beam in rectangular coordinates that is displaced along the horizontal axis by a small value $\Delta x$ and expand to first order:
 	\begin{equation}
-	\begin{split}
+	\begin{split}\label{gauss_intensity_yaw}
 	I(x,y) 	&= 			\bigg(\frac{2}{\pi w^2}\bigg) e^{-2 \frac{(x+\Delta x)^2 + y^2}{w^2}}\\
 			&\approx	\bigg(\frac{2}{\pi w^2}\bigg) e^{-2 \frac{x^2 + y^2}{\omega^2}}  \bigg(1-\frac{4 x \Delta x}{w^2}\bigg)
 	\end{split}
@@ -213,12 +213,12 @@
 			&= -\abs{A_{00}}^2 \frac{\pi \omega^2}{2} e^{\frac{-2r^2}{\omega^2}} \biggr\rvert_A^B
 	\end{split}
 	\end{equation}
-	Plugging in limits for the equation where $r_0$ is the boundary between the inner and outer segments,
+	Plugging in limits for the equation where $R$ is the boundary between the inner and outer segments,
 	\begin{equation}
-	\text{P}_{in} = \text{Power} \biggr\rvert_0^{r_0} = \abs{A_{00}}^2 \frac{\pi \omega^2}{2} [1 - e^{\frac{-2r_0^2}{\omega^2}}]
+	\text{P}_{in} = \text{Power} \biggr\rvert_0^{R} = \abs{A_{00}}^2 \frac{\pi \omega^2}{2} [1 - e^{\frac{-2R^2}{\omega^2}}]
 	\end{equation}
 	\begin{equation}
-	\text{P}_{out} = \text{Power} \biggr\rvert_{r_0}^{\infty} = \abs{A_{00}}^2 \frac{\pi \omega^2}{2} [e^{\frac{-2r_0^2}{\omega^2}}]
+	\text{P}_{out} = \text{Power} \biggr\rvert_{R}^{\infty} = \abs{A_{00}}^2 \frac{\pi \omega^2}{2} [e^{\frac{-2R^2}{\omega^2}}]
 	\end{equation}
 	The error signal comes from subtracting the inner segment from the outer,
 	\begin{equation}
@@ -227,22 +227,51 @@
 	Minimizing the derivative with respect to the beam size will determine the optimal width which gives the best sensitivity to beam size change,
 	\begin{equation}
 	\begin{aligned}
-	\frac{\partial \text{S}_{WID}}{\partial \omega} &\approx \frac{8 r_0^2}{\omega^2} \bigg(1-\frac{2 r_0^2}{\omega^2}\bigg) = 0 \\
-	\Rightarrow	\omega &= \sqrt{2} r_0
+	\frac{\partial \text{S}_{WID}}{\partial \omega} &\approx \frac{8 R^2}{\omega^2} \bigg(1-\frac{2 R^2}{\omega^2}\bigg) = 0 \\
+	\Rightarrow	\omega &= \sqrt{2} R
 	\end{aligned}
 	\end{equation}
 	When determining the beam size, it is possible to measure the beam size directly by fitting the power ratio,
 	\begin{equation}
 	\text{DC Power Ratio} 
 	= \frac{P_{out}}{P_{in}} \\
-	= \frac{e^{-2r_0^2/ \omega_{0}^2}} {1 - e^{-2r_0^2/ \omega_{0}^2 }} \approx 0.582
+	= \frac{e^{-2R^2/ \omega_{0}^2}} {1 - e^{-2R^2/ \omega_{0}^2 }} \approx 0.582
 	\end{equation}
 
 	\subsection{Pitch}
+	To calibrate the pitch signal on a bullseye, first consider a Gaussian that is displaced in the vertical direction,
+	\begin{equation}
+	\begin{split}
+	I^{\text{Pit}}(x,y) 	&= 			\bigg(\frac{2}{\pi w^2}\bigg) e^{-2 \frac{x^2 + (y+\Delta y)^2}{w^2}}\\
+					&\approx	\bigg(\frac{2}{\pi w^2}\bigg) e^{-2 \frac{x^2 + y^2}{\omega^2}}  \bigg(1-\frac{4 x \Delta y}{w^2}\bigg)
+	\end{split}
+	\end{equation}
+
+	\begin{equation}
+	\begin{split}
+	P^{\text{Pit}}_{\theta_1 \rightarrow \theta_2} 	&=  \bigg(\frac{2}{\pi w^2}\bigg) \int_{R}^{\infty} \int_{\theta_1}^{\theta_2} e^{-2 \frac{r^2}{\omega^2}}  \bigg(1-\frac{4 r \sin \theta}{w^2}\Delta y\bigg) r \text{d}r \text{d} \theta\\
+		&= \bigg( \frac{\theta_2-\theta_1}{2 \pi}\bigg) e^{-2 \frac{R^2}{\omega^2}} + (\cos \theta_2 - \cos \theta_1) \frac{1}{\sqrt{2 \pi}} \frac{\Delta y}{\omega} \bigg[ 	  \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) \sqrt{\frac{8}{\pi}} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}}\bigg]
+	\end{split}
+	\end{equation}
 	
+	\begin{equation}
+	S^{\text{Pit}} = P^{\text{Pit}}_{seg_1} + P^{\text{Pit}}_{seg_2} - 2 P^{\text{Pit}}_{seg_3} = 3\sqrt{\frac{3}{2\pi}} \frac{\Delta y}{\omega} \bigg[ \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) + \sqrt{\frac{8}{\pi }} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}} \bigg]
+ 	\end{equation}
+
 	\subsection{Yaw}
-	\subsection{RF}
+	Using \ref{gauss_intensity_yaw} and repeating the mathematics above, the power for an individual segment is
+	\begin{equation}
+	\begin{split}
+	P^{\text{Yaw}}_{\theta_1 \rightarrow \theta_2} 	&=  \bigg(\frac{2}{\pi w^2}\bigg) \int_{R}^{\infty} \int_{\theta_1}^{\theta_2} e^{-2 \frac{r^2}{\omega^2}}  \bigg(1-\frac{4 r \cos \theta}{w^2}\Delta x\bigg) r \text{d}r \text{d} \theta\\
+	&= \bigg( \frac{\theta_2-\theta_1}{2 \pi}\bigg) e^{-2 \frac{R^2}{\omega^2}} + (\cos \theta_2 - \cos \theta_1) \frac{1}{\sqrt{2 \pi}} \frac{\Delta x}{\omega} \bigg[ 	  \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) \sqrt{\frac{8}{\pi}} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}}\bigg]
+	\end{split}
+	\end{equation}
+	Plugging in the angles to get the signal response in terms of beam radius,
+	\begin{equation}
+	S^{\text{Yaw}} = P^{\text{Yaw}}_{seg_1} + P^{\text{Yaw}}_{seg_2} = \frac{3}{\sqrt{2\pi}} \frac{\Delta x}{\omega} \bigg[ \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) + \sqrt{\frac{8}{\pi }} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}} \bigg]
+	\end{equation}
 	
+	\subsection{RF}
 	\begin{equation}
 	\begin{split}
 	\text{P}_{RF} &= \int_{A}^{B} \abs{A_{01}}^2 \big(1-\frac{2r^2}{\omega_{0}^2}\big) e^{\frac{-2r^2}{\omega_{0}^2}} 2\pi r dr\\

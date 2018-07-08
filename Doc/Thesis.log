@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  26 JUN 2018 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  8 JUL 2018 10:46
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1965,19 +1965,19 @@ Appendix B.
 Appendix C.
 [50
 
-] [51] [52]
+] [51] [52] [53]
 Appendix D.
-[53
+[54
 
-] [54]
+] [55]
 Appendix E.
-) [55
+) [56
 
 ] (Thesis.lof)
 \tf@lof=\write5
 \openout5 = `Thesis.lof'.
 
- [56
+ [57
 
 
 ] (Thesis.lot)
@@ -1988,9 +1988,9 @@ Appendix E.
 \tf@brf=\write7
 \openout7 = `Thesis.brf'.
 
- [57
+ [58
 
-] [58
+] [59
 
 ]
 ! Undefined control sequence.
@@ -2004,9 +2004,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[59] [60])
+[60] [61])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
- [61]
+ [62]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
  (Thesis.aux (Ch1_Intro.aux) (Ch2_Intro_to_MM.aux)
 (Ch3_Sim_MM_Finesse.aux) (Ch4_Exp_MM_Syr.aux) (Ch5_MM_at_LHO.aux)
@@ -2020,10 +2020,10 @@ Package rerunfilecheck Info: File `Thesis.brf' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 18479 strings out of 493323
- 311327 string characters out of 3139066
- 399325 words of memory out of 3000000
- 21453 multiletter control sequences out of 15000+200000
+ 18486 strings out of 493323
+ 311440 string characters out of 3139066
+ 402384 words of memory out of 3000000
+ 21454 multiletter control sequences out of 15000+200000
  542663 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,19n,40p,10416b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2046,9 +2046,9 @@ nts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Thesis.pdf (63 pages, 526407 bytes).
+Output written on Thesis.pdf (64 pages, 532695 bytes).
 PDF statistics:
- 1121 PDF objects out of 1200 (max. 8388607)
- 352 named destinations out of 1000 (max. 500000)
+ 1132 PDF objects out of 1200 (max. 8388607)
+ 358 named destinations out of 1000 (max. 500000)
  457 words of extra memory for PDF output out of 10000 (max. 10000000)
 
