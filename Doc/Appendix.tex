@@ -176,9 +176,9 @@
 
 	
 	\chapter{Bullseye and Quadrant Photodiode Characterization}\label{BPDchar}
-	Both RF and DC segmented photodiodes are widely used in LIGO's sensing schemes.  Generally, the quadrant photodiodes (QPDs) are more readily used but recently a bullseye photodiode has been implemented to sense the size and angular jitter noise contribution from the high powered oscillator.  To calibrate the two types of sensors in common units, it is useful to normalize by the beam diameters.
+	Both RF and DC segmented photodiodes are widely used in LIGO's sensing schemes, however, the quadrant photodiodes (QPDs) are more readily implemented but recently a bullseye photodiode has been installed upstream of the pre-mode cleaner to sense the size and angular jitter noise contribution from the high powered oscillator.  It is useful to have angular sensors both upstream and downstream of optical cavities in order to narrow down where jitter could be coupling into the optical path.  That being said, to calibrate the two types of sensors in common units, it is easiest to use units of beam diameters.
 	\section{Quadrant Photodiodes (QPD)}
-	Calculating the QPD response to angular jitter is relatively straight forward. Begin with a Gaussian beam in rectangular coordinates that is displaced along the horizontal axis by a small value $\Delta x$ and expand to first order:
+	Calculating the QPD response to angular jitter is relatively straight forward. Beginning with a Gaussian beam in rectangular coordinates that is displaced along the horizontal axis by a small value $\Delta x$ and expanding to first order:
 	\begin{equation}
 	\begin{split}\label{gauss_intensity_yaw}
 	I(x,y) 	&= 			\bigg(\frac{2}{\pi w^2}\bigg) e^{-2 \frac{(x+\Delta x)^2 + y^2}{w^2}}\\
@@ -202,11 +202,26 @@
 	
 	\section{Bullseye Photodiodes}
 	
-	Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye will give insight on the beam size.  A sensing matrix for these degrees of freedom is realized 
-	The calibration for pitch and yaw for the bullseye is determined in a similar manner to the QPD, however, it will inherently depend on the beam size.  In fact, the sensitivity of the width signal from a bullseye will depend on the DC size of the beam.  
+	Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye will give insight on the beam size jitter.  A sensing matrix for these degrees of freedom is realized in Table \ref{bpd_matrix}
+
+	\begin{table}\label{bpd_matrix}
+	\begin{center}
+		\begin{tabular}{ c|c|c|c|c } 
+			&\text{Seg 1}		&\text{Seg 2}		& \text{Seg 3} 	& \text{Seg 4} \\
+			\hline
+				\text{Pit}		&1		&1		& -2 	& 0
+			\\ 	\text{Yaw}		&-1		&1		& 0		& 0
+			\\ 	\text{Wid}		&1		&1		& 1		& -1
+			\\ 	\text{Sum}		&1		&1		& 1		& 1
+		\end{tabular}
+	\caption{Bullseye photodiode sensing matrix.}
+	\end{center}
+	\end{table}
+
+	The calibration for pitch and yaw for the bullseye is determined in a similar manner to the QPD however, the sensitivity will inherently depend on the beam size.
 	
 	\subsection{Width}
-	Calculating a power integral for a cylindrically symmetric Gaussian beam is simple for the width degree of freedom,
+	To calculate what beam size is optimal, first consider a power integral for a cylindrically symmetric Gaussian beam,
 	\begin{equation}
 	\begin{split}
 	\text{Power} &= \int_{A}^{B} \abs{A_{00}}^2e^{\frac{-2r^2}{\omega^2}} 2\pi r dr\\
@@ -246,7 +261,8 @@
 					&\approx	\bigg(\frac{2}{\pi w^2}\bigg) e^{-2 \frac{x^2 + y^2}{\omega^2}}  \bigg(1-\frac{4 x \Delta y}{w^2}\bigg)
 	\end{split}
 	\end{equation}
-
+	
+	The integrated power for a given segment is,
 	\begin{equation}
 	\begin{split}
 	P^{\text{Pit}}_{\theta_1 \rightarrow \theta_2} 	&=  \bigg(\frac{2}{\pi w^2}\bigg) \int_{R}^{\infty} \int_{\theta_1}^{\theta_2} e^{-2 \frac{r^2}{\omega^2}}  \bigg(1-\frac{4 r \sin \theta}{w^2}\Delta y\bigg) r \text{d}r \text{d} \theta\\
@@ -254,6 +270,7 @@
 	\end{split}
 	\end{equation}
 	
+	The error signal from a pitch displacement following Table \ref{bpd_matrix} is,
 	\begin{equation}
 	S^{\text{Pit}} = P^{\text{Pit}}_{seg_1} + P^{\text{Pit}}_{seg_2} - 2 P^{\text{Pit}}_{seg_3} = 3\sqrt{\frac{3}{2\pi}} \frac{\Delta y}{\omega} \bigg[ \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) + \sqrt{\frac{8}{\pi }} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}} \bigg]
  	\end{equation}
@@ -268,7 +285,7 @@
 	\end{equation}
 	Plugging in the angles to get the signal response in terms of beam radius,
 	\begin{equation}
-	S^{\text{Yaw}} = P^{\text{Yaw}}_{seg_1} + P^{\text{Yaw}}_{seg_2} = \frac{3}{\sqrt{2\pi}} \frac{\Delta x}{\omega} \bigg[ \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) + \sqrt{\frac{8}{\pi }} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}} \bigg]
+	S^{\text{Yaw}} = P^{\text{Yaw}}_{seg_1} - P^{\text{Yaw}}_{seg_2} = \frac{3}{\sqrt{2\pi}} \frac{\Delta x}{\omega} \bigg[ \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) + \sqrt{\frac{8}{\pi }} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}} \bigg]
 	\end{equation}
 	
 	\subsection{RF}
