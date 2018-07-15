@@ -176,7 +176,7 @@
 
 	
 	\chapter{Bullseye and Quadrant Photodiode Characterization}\label{BPDchar}
-	Both RF and DC segmented photodiodes are widely used in LIGO's sensing schemes, however, the quadrant photodiodes (QPDs) are more readily implemented but recently a bullseye photodiode has been installed upstream of the pre-mode cleaner to sense the size and angular jitter noise contribution from the high powered oscillator.  It is useful to have angular sensors both upstream and downstream of optical cavities in order to narrow down where jitter could be coupling into the optical path.  That being said, to calibrate the two types of sensors in common units, it is easiest to use units of beam diameters.
+	Both RF and DC segmented photodiodes are widely used in LIGO's sensing schemes, however, the quadrant photodiodes (QPDs) are more readily implemented.  However, recently a bullseye photodiode has been installed upstream of the pre-mode cleaner to sense the size and angular jitter noise contribution from the high powered oscillator.  It is useful to have angular sensors both upstream and downstream of optical cavities in order to narrow down where jitter could be coupling into the optical path.  That being said, to calibrate the two types of sensors in common units, it is easiest to use units of beam diameters.
 	\section{Quadrant Photodiodes (QPD)}
 	Calculating the QPD response to angular jitter is relatively straight forward. Beginning with a Gaussian beam in rectangular coordinates that is displaced along the horizontal axis by a small value $\Delta x$ and expanding to first order:
 	\begin{equation}
@@ -201,27 +201,24 @@
 	It is trivial to repeat the calculation for vertical displacements so it is left for the reader to complete.
 	
 	\section{Bullseye Photodiodes}
-	
-	Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye will give insight on the beam size jitter.  A sensing matrix for these degrees of freedom is realized in Table \ref{bpd_matrix}
+	Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye's geometry will give insight on the beam size jitter. A sensing matrix for these degrees of freedom is realized in Table \ref{bpd_matrix}
 
 	\begin{table}\label{bpd_matrix}
 	\begin{center}
 		\begin{tabular}{ c|c|c|c|c } 
 			&\text{Seg 1}		&\text{Seg 2}		& \text{Seg 3} 	& \text{Seg 4} \\
 			\hline
-				\text{Pit}		&1		&1		& -2 	& 0
+			\text{Pit}		&1		&1		& -2 	& 0
 			\\ 	\text{Yaw}		&-1		&1		& 0		& 0
 			\\ 	\text{Wid}		&1		&1		& 1		& -1
 			\\ 	\text{Sum}		&1		&1		& 1		& 1
 		\end{tabular}
-	\caption{Bullseye photodiode sensing matrix.}
+		\caption{Bullseye photodiode sensing matrix.}
 	\end{center}
 	\end{table}
-
-	The calibration for pitch and yaw for the bullseye is determined in a similar manner to the QPD however, the sensitivity will inherently depend on the beam size.
 	
 	\subsection{Width}
-	To calculate what beam size is optimal, first consider a power integral for a cylindrically symmetric Gaussian beam,
+	 The bullseye's calibration is determined in a similar manner to the QPD however, the sensitivity will inherently depend on the beam size. To calculate what beam size is optimal, first consider a power integral for a cylindrically symmetric Gaussian beam,
 	\begin{equation}
 	\begin{split}
 	\text{Power} &= \int_{A}^{B} \abs{A_{00}}^2e^{\frac{-2r^2}{\omega^2}} 2\pi r dr\\
@@ -246,7 +243,7 @@
 	\Rightarrow	\omega &= \sqrt{2} R
 	\end{aligned}
 	\end{equation}
-	When determining the beam size, it is possible to measure the beam size directly by fitting the power ratio,
+	When determining the beam size, it is possible to measure the beam size directly by fitting the power ratio. For example, if the constraint that $\omega = \sqrt{2} R$ then the power ratio is,
 	\begin{equation}
 	\text{DC Power Ratio} 
 	= \frac{P_{out}}{P_{in}} \\
@@ -317,11 +314,8 @@
 	\chapter{Overlap of Gaussian Beams}
 	
 	Referenced in section
-	
-	The full Gaussian beam overlap is important in quantitatively defining the amount of power loss obtained when a cavity is mismatched a incoming laser field.
-	
-	First we define an arbitrary Gaussian beam in cylindrical coordinates:
-	
+	When a cavity is mode mismatched to an incoming laser field, the amount of power loss from scattering to higher order modes is quantified by the spatial overlap integral between the TEM00 cavity eigenmode and TEM00 of the input beam.
+	An arbitrary Gaussian integral is defined as,
 	\begin{equation}
 	\begin{split}
 	\ket{A(r)} 
@@ -329,27 +323,20 @@
 	&= \frac{A_0}{q(z)} e^{\frac{-ikr^2(z-iz_0)}{2\abs{q(z)}^2}}
 	\end{split}
 	\end{equation}
-	
-	where $A_0$ is a real amplitude, $q(z)= z + i z_0$ is the complex beam parameter, $k$ is the wave number, and $r$ is the radial variable in the transverse direction.
-
-	First we normalize the overlap integral to unity:
+	where $A_0$ is a real amplitude, $q(z)= z + i z_0$ is the complex beam parameter, $k$ is the wave number, and $r$ is the radial variable in the transverse direction. Then normalizing to unity,
 	\begin{equation}
 	\braket{A(r)|A(r)} 
 	=  \frac{\rvert A_0 \rvert^2}{z^2+z_0^2} \int_{0}^{\infty} e^{\frac{-kr^2 z_0}{\abs{q(z)}^2}} 2 \pi r dr = 1
 	\end{equation}
-
-	Normalization factor is this:
 	\begin{equation}
 	A_0 = \sqrt{\frac{k z_0}{\pi}}
 	\end{equation}
 
-	For two Gaussian beams with arbitrary q-parameters
+	For a Gaussian beam with arbitrary q-parameters,
 	\begin{equation}
 	\ket{A_i} = \frac{A_{0,i}}{q_i} e^{ \frac{-ikr^2(z-iz_0)}{2\abs{q_i}^2 }}
 	\end{equation}
-	where $z_{0,i}$ is the waist size of one particular beam.
-	
-	The amplitude overlap is:
+	where $z_{0,i}$ is the waist size of one particular beam, the overlap integral for the amplitude becomes
 	\begin{equation}
 	\braket{A_1|A_2} = 2 i  \frac{ z_{0,1}z_{0,2}}{q_1 - q_2^*}
 	\end{equation}
@@ -358,7 +345,7 @@
 	\begin{equation}
 	\text{Power Overlap} = \vert \braket{A_1|A_2} \vert^2 = 4 \frac{ z_{0,1}z_{0,2}}{\abs{q_1 - q_2^*}^2}
 	\end{equation}
-
+	Essentially, mode matching an optical system only requires the designer to match the q-parameter of the incoming beam to the cavity, so it makes sense that the final power overlap depends only on the waist size and location.
 
 \chapter{Extending the ABCD Formalism}
 Misalignment
