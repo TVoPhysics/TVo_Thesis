@@ -30,9 +30,56 @@
 	- Astigmatism: expected in LIGO and measured!
 
 	\section{Modal Contrast Defect}
+	Generally, the contrast defect is defined as the ratio of power between the antisymmetric port and the reflected port when locked on a dark fringe.  
+	In other words, it is the amount of junk light that is present in the interferometer when light between the two arms do not perfectly interfere with each other. 
+	This junk light can be the symptom of various causes, for example, an imbalance of reflectivity between ITMX and ITMY will cause non-perfect destructive interference at the antisymmetric port and a camera would see a TEM00 beam when locked on length.  
+	Another cause of contrast defect could be from misalignment between the ITMs or beamsplitter which will result in seeing a TEM 01/10 mode.  
+	However, if both of the aforementioned causes are fixed with a combination of stringent design specifications for the reflectivity and alignment loops closed to minimize angular jitter, then the contrast defect will be dominated by mode mismatch which can be fixed by a combination of ring heaters and CO2 lasers.   
+	The picture gets even more complicated when adding in the absorption for individual optics and introducing multiple Fabry-Perot cavities which will treat the sidebands and carrier fields differently.  
+	One of the main goals for the Thermal Compensation System is to correct the cold and hot interferometer differences in radii of curvature.  
+	A useful equation that relates the contrast defect to the fields incident on the $\hat{x}$ and $\hat{y}$ side of the beamsplitter,
+	\begin{equation}\label{CD}
+	\text{CD} = \frac{P_{AS}}{P_{REFL}} \bigg\vert_{Dark} = \frac{1}{2} \bigg( 1 - \int \psi_X \psi_Y \text{d}A\bigg)
+	\end{equation}
+	
+	where the amplitude overlap integral can be directly calculated from equation \ref{gauss_power_ovl}.  
+	
+	\subsection{Simple Michelson Contrast Defect}
+	The simple Michelson can give the first estimate of the contrast defect when starting to commission the interferometer, however, it will not be directly used in nominal low noise since the dual-recycled Michelson is implemented.  
+	By propagating the input mode cleaner beam to each of the input test masses and taking a single bounce at the high reflectivity surface, one can approximate the resultant mode overlap.  
+	At this point the carrier and sideband fields follow the same ABCD matrix transfer function, so only one calculation is needed to estimate the contrast defect.  
+	A keen reader will notice that this model will not take the Schnupp asymmetry into account which allows the $\hat{x}$-direction beam to travel an extra 8 centimeters further than the $\hat{y}$, however, this effect will only change the end result by approximately 10$\%$.
+	In fact, for this interferometer configuration, the dominate source of mismatch will be from the prompt reflection off the HR surfaces of the ITMs where most of the phase change occurs.
+	
+	Figure[]
+	
+	
+	\subsection{DRMI Contrast Defect}
+	
+	
+	
+	\subsection{Fabry-Perot Contrast Defect}
 	
 	\section{Mode Matching as a Function of DARM Offset}
 	
 	\section{Hot vs. Cold Interferometers}
-	- Kilowatts of arm power
-	- 
+		When fully operational, the LIGO interferometers can have a few hundred kilowatts of laser power resonating in the arms during nominal low noise operation,
+	\begin{equation}
+		P_{\text{ARM}} \approx \frac{1}{2} (g_{PRC} * g_{ARM} * P_{IN})
+	\end{equation}
+	where $g_{PRC} \approx 30$ is the power recycling cavity gain and $g_{ARM} \approx 250$ is the single arm cavity gain.
+		For O3, the intended input power, $P_{IN}$ will reach approximately 50 W which means $P_{ARM} \approx 187,500$ W. 
+		A fraction of that power, approximately .5 PPM, will be absorbed by the high reflectivity surface, hence, creating an additional thermal lens which changes the radius of curvature.  
+		Additionally, the thermo-refactive index will change as a function of absorbed temperature \cite{winkler_thermaldist}.
+		By changing the curvature of the test masses, the resonant Gaussian mode will also change its profile.
+		For the substrate lensing, the sideband signals will be most adversely affected because the carrier field will see a cancellation of the distortion from the promptly reflected beam (see sectiion [])
+	
+	
+	\subsection{Thermal Lensing}
+		As seen in Section\ref{DRMI}, the sideband and carrier frequencies propagate differently in the interferometer, which means their fields will see different lensing from thermal effects.
+		To understand how the fields change quantitatively, the easiest way is to invoke the ABCD transfer matrix approach for the carrier and sideband fields individually.
+		\subsubsection{Carrier}
+		\subsubsection{Sidebands}
+		\subsubsection{GW Signal}
+		As mentioned in Section \ref{michelson}, LIGO's gravitational wave readout currently employs a DC readout scheme that extracts the signal by beating the carrier field with the sidebands created by the gravitational wave.
+	

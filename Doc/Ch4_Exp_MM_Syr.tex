@@ -12,7 +12,11 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 		\subsection{Translation Stages}
 		
 	\section{Sensors}
-	Recall in Section \ref{WFS} that the RF modal decomposition technique relies on comparing the Gouy phase of the higher order modes to the fundamental Gaussian mode using an array of RF photodiodes to extract an error signal. The complication arises when using this method to extract the beat note between the fundamental mode and symmetric donut mode because the photodetector arrays must match the higher order mode geometry.  This is easier to deal with when trying to sense angular distortions from a misaligned cavity because the 01 and 10 modes can be sensed with a split photodetector, however, directly using that device will not work to sense mode mismatch due to the symmetry of the 02 and 20 modes. To date, Advanced LIGO uses no RF sensors to detect mode matching so the next sections will provide methods of sensing mode mismatch which can be integrated into advanced LIGO and used for dynamic closed loop feedback control.
+	Recall in Section \ref{WFS} that the RF modal decomposition technique relies on comparing the Gouy phase of the higher order modes to the fundamental Gaussian mode using an array of RF photodiodes to extract an error signal. 
+	The complication arises when using this method to extract the beat note between the fundamental mode and symmetric donut mode because the photodetector arrays must match the higher order mode geometry.  
+	This is easier to deal with when trying to sense angular distortions from a misaligned cavity because the 01 and 10 modes can be sensed with a split photodetector, however, using that a quadrant photodiode will not work to sense mode mismatch due to the cylindrical symmetry of the 02 and 20 modes. 
+	To date, Advanced LIGO uses no RF sensors to detect mode matching so the next sections will provide sensing methods which can be used for dynamic closed loop feedback control.
+	
 		\subsection{Bullseye Photodiodes (BPD)}
 		It is clear that using a quadrant photodetector to measure the symmetric $U_{20} + U_{02}$ mode which arises from mismatch is futile because the integrated power on each side will be exactly the same due to donut mode symmetry. So it is simplest to try subtracting the inner beam power from the outer ring of the electric field in order to measure a phase difference using a specialized RF photodiode called a Bullseye Photodetector shown in Figure []. 
 		
@@ -107,4 +111,11 @@ Mueller et al \cite{MuellerMM} showed that the error signal from mode mismatch c
 	\end{equation}
 In the above equation, $\hat{C}_{ij} $ was chosen with $\Delta \Omega = \pi/2$ and $\hat{R}_{ij}$ should rotate the beams such that the intensities in Figure {ModeConverter} are aligned with the quadrant photodiodes.
 		
-		
+\subsection{DC Mode Matching}
+	The benefit to using the RF sensing scheme for generating an error signal is the automatic reduction of the higher order mode content which can use actuators to adjust the incoming mode of the beam to whatever the cavity requires.
+	This is particularly useful in areas where the laser power density is high and absorption on the high reflectivity surfaces cause thermal distortions in the cavity mode.
+	However, the output mode cleaner remains generally fixed in its eigenbasis such that the nominal input mode is static.
+	If there was a low-noise way to continually measure the beam size at two different Gouy phases prior to entering the output mode cleaner, then there could be an error signal which would be used for thermal actuators directly after the signal recycling cavity.
+	This can be achieved with bullseye sensors that read power ratio relatively quickly.
+	Another interesting way of measuring the mode is using a slowly rotating razer blade with known angular frequency in front of a single photodiode and inferring the error function which will directly give the beam size.
+	

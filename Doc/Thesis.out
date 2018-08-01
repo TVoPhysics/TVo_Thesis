@@ -31,27 +31,34 @@
 \BOOKMARK [1][-]{section.4.3}{Sensors}{chapter.4}% 31
 \BOOKMARK [2][-]{subsection.4.3.1}{Bullseye Photodiodes \(BPD\)}{section.4.3}% 32
 \BOOKMARK [2][-]{subsection.4.3.2}{Mode Converters}{section.4.3}% 33
-\BOOKMARK [0][-]{chapter.5}{Mode Matching Cavities at LIGO Hanford}{}% 34
-\BOOKMARK [1][-]{section.5.1}{SRC Gouy Phase Measurement}{chapter.5}% 35
-\BOOKMARK [2][-]{subsection.5.1.1}{SR3 Heater}{section.5.1}% 36
-\BOOKMARK [2][-]{subsection.5.1.2}{SRM Heater}{section.5.1}% 37
-\BOOKMARK [1][-]{section.5.2}{Mode Matching IFO to OMC: Single Bounce vs DRMI}{chapter.5}% 38
-\BOOKMARK [1][-]{section.5.3}{Mode Matching Squeezer to OMC}{chapter.5}% 39
-\BOOKMARK [1][-]{section.5.4}{Modal Contrast Defect}{chapter.5}% 40
-\BOOKMARK [1][-]{section.5.5}{Mode Matching as a Function of DARM Offset}{chapter.5}% 41
-\BOOKMARK [1][-]{section.5.6}{Hot vs. Cold Interferometers}{chapter.5}% 42
-\BOOKMARK [0][-]{chapter.6}{Solutions for Detector Upgrades}{}% 43
-\BOOKMARK [1][-]{section.6.1}{Sensors}{chapter.6}% 44
-\BOOKMARK [1][-]{section.6.2}{High Sensitivity Telescope}{chapter.6}% 45
-\BOOKMARK [0][-]{section*.23}{Appendices}{}% 46
-\BOOKMARK [0][-]{Appendix.a.A}{Resonator Formulas}{}% 47
-\BOOKMARK [0][-]{Appendix.a.B}{Hermite Gauss Normalization}{}% 48
-\BOOKMARK [0][-]{Appendix.a.C}{Bullseye and Quadrant Photodiode Characterization}{}% 49
-\BOOKMARK [1][-]{section.a.C.1}{Quadrant Photodiodes \(QPD\)}{Appendix.a.C}% 50
-\BOOKMARK [1][-]{section.a.C.2}{Bullseye Photodiodes}{Appendix.a.C}% 51
-\BOOKMARK [2][-]{subsection.a.C.2.1}{Width}{section.a.C.2}% 52
-\BOOKMARK [2][-]{subsection.a.C.2.2}{Pitch}{section.a.C.2}% 53
-\BOOKMARK [2][-]{subsection.a.C.2.3}{Yaw}{section.a.C.2}% 54
-\BOOKMARK [2][-]{subsection.a.C.2.4}{RF}{section.a.C.2}% 55
-\BOOKMARK [0][-]{Appendix.a.D}{Overlap of Gaussian Beams}{}% 56
-\BOOKMARK [0][-]{Appendix.a.E}{Extending the ABCD Formalism}{}% 57
+\BOOKMARK [2][-]{subsection.4.3.3}{DC Mode Matching}{section.4.3}% 34
+\BOOKMARK [0][-]{chapter.5}{Mode Matching Cavities at LIGO Hanford}{}% 35
+\BOOKMARK [1][-]{section.5.1}{SRC Gouy Phase Measurement}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.1.1}{SR3 Heater}{section.5.1}% 37
+\BOOKMARK [2][-]{subsection.5.1.2}{SRM Heater}{section.5.1}% 38
+\BOOKMARK [1][-]{section.5.2}{Mode Matching IFO to OMC: Single Bounce vs DRMI}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.3}{Mode Matching Squeezer to OMC}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.4}{Modal Contrast Defect}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.4.1}{Simple Michelson Contrast Defect}{section.5.4}% 42
+\BOOKMARK [2][-]{subsection.5.4.2}{DRMI Contrast Defect}{section.5.4}% 43
+\BOOKMARK [2][-]{subsection.5.4.3}{Fabry-Perot Contrast Defect}{section.5.4}% 44
+\BOOKMARK [1][-]{section.5.5}{Mode Matching as a Function of DARM Offset}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.6}{Hot vs. Cold Interferometers}{chapter.5}% 46
+\BOOKMARK [2][-]{subsection.5.6.1}{Thermal Lensing}{section.5.6}% 47
+\BOOKMARK [0][-]{chapter.6}{Solutions for Detector Upgrades}{}% 48
+\BOOKMARK [1][-]{section.6.1}{Sensors}{chapter.6}% 49
+\BOOKMARK [1][-]{section.6.2}{High Sensitivity Telescope}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.3}{A Global Active Wavefront Control Scheme}{chapter.6}% 51
+\BOOKMARK [2][-]{subsection.6.3.1}{Hard and Soft Mode Matching}{section.6.3}% 52
+\BOOKMARK [0][-]{section*.26}{Appendices}{}% 53
+\BOOKMARK [0][-]{Appendix.a.A}{Resonator Formulas}{}% 54
+\BOOKMARK [0][-]{Appendix.a.B}{Hermite Gauss Normalization}{}% 55
+\BOOKMARK [0][-]{Appendix.a.C}{Bullseye and Quadrant Photodiode Characterization}{}% 56
+\BOOKMARK [1][-]{section.a.C.1}{Quadrant Photodiodes \(QPD\)}{Appendix.a.C}% 57
+\BOOKMARK [1][-]{section.a.C.2}{Bullseye Photodiodes}{Appendix.a.C}% 58
+\BOOKMARK [2][-]{subsection.a.C.2.1}{Width}{section.a.C.2}% 59
+\BOOKMARK [2][-]{subsection.a.C.2.2}{Pitch}{section.a.C.2}% 60
+\BOOKMARK [2][-]{subsection.a.C.2.3}{Yaw}{section.a.C.2}% 61
+\BOOKMARK [2][-]{subsection.a.C.2.4}{RF}{section.a.C.2}% 62
+\BOOKMARK [0][-]{Appendix.a.D}{Overlap of Gaussian Beams}{}% 63
+\BOOKMARK [0][-]{Appendix.a.E}{Extending the ABCD Formalism}{}% 64
