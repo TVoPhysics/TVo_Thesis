@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  31 JUL 2018 21:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  3 AUG 2018 17:50
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1936,53 +1936,48 @@ Chapter 5.
 
 
 
-] [42]
-
-Package natbib Warning: Citation `winkler_thermaldist' on page 43 undefined on 
-input line 73.
-
-[43]) [44]
+] [42] [43]) [44] [45]
 \openout2 = `Ch6_Det_Up.aux'.
 
  (Ch6_Det_Up.tex
 Chapter 6.
-) [45
+) [46
 
 
 
-] [46]
+] [47]
 \openout2 = `Appendix.aux'.
 
- (Appendix.tex [47
+ (Appendix.tex [48
 
 
 
 
 ]
 Appendix A.
-[48
+[49
 
-] [49] [50]
+] [50] [51]
 Appendix B.
-[51
+[52
 
-] [52]
+] [53]
 Appendix C.
-[53
+[54
 
-] [54] [55] [56]
+] [55] [56] [57]
 Appendix D.
-[57
+[58
 
-] [58]
+] [59]
 Appendix E.
-) [59
+) [60
 
 ] (Thesis.lof)
 \tf@lof=\write5
 \openout5 = `Thesis.lof'.
 
- [60
+ [61
 
 
 ] (Thesis.lot)
@@ -1993,9 +1988,9 @@ Appendix E.
 \tf@brf=\write7
 \openout7 = `Thesis.brf'.
 
- [61
+ [62
 
-] [62
+] [63
 
 ]
 ! Undefined control sequence.
@@ -2009,28 +2004,26 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[63] [64])
-
-Package natbib Warning: There were undefined citations.
-
+[64] [65])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
-[65]
+ [66]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
- (Thesis.aux (Ch1_Intro.aux) (Ch2_Intro_to_MM.aux) (Ch3_Sim_MM_Finesse.aux) (Ch
-4_Exp_MM_Syr.aux) (Ch5_MM_at_LHO.aux) (Ch6_Det_Up.aux) (Appendix.aux))
+ (Thesis.aux (Ch1_Intro.aux) (Ch2_Intro_to_MM.aux)
+(Ch3_Sim_MM_Finesse.aux) (Ch4_Exp_MM_Syr.aux) (Ch5_MM_at_LHO.aux)
+(Ch6_Det_Up.aux) (Appendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 0D63448BF95E01EDD38C2C3528F05943;4666.
+(rerunfilecheck)             Checksum: 057092F7C938E9BC2F3D415DA413B4CD;4611.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 5F4394E8DE40E3E2B318A9977F48DE85;2245.
+(rerunfilecheck)             Checksum: CAB980C12FF53D96563EB3D3D0761382;2305.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 18515 strings out of 493323
- 311832 string characters out of 3139066
- 403620 words of memory out of 3000000
- 21467 multiletter control sequences out of 15000+200000
+ 18524 strings out of 493323
+ 312017 string characters out of 3139066
+ 403798 words of memory out of 3000000
+ 21473 multiletter control sequences out of 15000+200000
  542663 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,19n,40p,10416b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2053,9 +2046,9 @@ nts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Thesis.pdf (67 pages, 550751 bytes).
+Output written on Thesis.pdf (68 pages, 555046 bytes).
 PDF statistics:
- 1196 PDF objects out of 1200 (max. 8388607)
- 374 named destinations out of 1000 (max. 500000)
- 513 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1203 PDF objects out of 1440 (max. 8388607)
+ 377 named destinations out of 1000 (max. 500000)
+ 505 words of extra memory for PDF output out of 10000 (max. 10000000)
 

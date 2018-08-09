@@ -52,35 +52,34 @@
 \contentsline {subsubsection}{Extracting information from mode}{39}{section*.22}
 \contentsline {subsection}{\numberline {4.3.3}DC Mode Matching}{40}{subsection.4.3.3}
 \contentsline {chapter}{\numberline {5}Mode Matching Cavities at LIGO Hanford}{41}{chapter.5}
-\contentsline {section}{\numberline {5.1}SRC Gouy Phase Measurement}{41}{section.5.1}
+\contentsline {section}{\numberline {5.1}Mode Matching IFO to OMC: Single Bounce vs DRMI}{41}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}SR3 Heater}{41}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}SRM Heater}{42}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}Mode Matching IFO to OMC: Single Bounce vs DRMI}{42}{section.5.2}
-\contentsline {section}{\numberline {5.3}Mode Matching Squeezer to OMC}{42}{section.5.3}
+\contentsline {subsection}{\numberline {5.1.2}SRM Heater}{41}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}Mode Matching Squeezer to OMC}{41}{section.5.2}
+\contentsline {section}{\numberline {5.3}Mode Matching as a Function of DARM Offset}{42}{section.5.3}
 \contentsline {section}{\numberline {5.4}Modal Contrast Defect}{42}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Simple Michelson Contrast Defect}{43}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}DRMI Contrast Defect}{43}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.2}Dual Recycled Michelson Contrast Defect}{43}{subsection.5.4.2}
 \contentsline {subsection}{\numberline {5.4.3}Fabry-Perot Contrast Defect}{43}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5}Mode Matching as a Function of DARM Offset}{43}{section.5.5}
-\contentsline {section}{\numberline {5.6}Hot vs. Cold Interferometers}{43}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Thermal Lensing}{44}{subsection.5.6.1}
+\contentsline {section}{\numberline {5.5}Hot vs. Cold Interferometers}{44}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Thermal Lensing}{44}{subsection.5.5.1}
 \contentsline {subsubsection}{Carrier}{44}{section*.23}
-\contentsline {subsubsection}{Sidebands}{44}{section*.24}
-\contentsline {subsubsection}{GW Signal}{44}{section*.25}
-\contentsline {chapter}{\numberline {6}Solutions for Detector Upgrades}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Sensors}{45}{section.6.1}
-\contentsline {section}{\numberline {6.2}High Sensitivity Telescope}{45}{section.6.2}
-\contentsline {section}{\numberline {6.3}A Global Active Wavefront Control Scheme}{45}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Hard and Soft Mode Matching}{46}{subsection.6.3.1}
-\contentsline {chapter}{Appendices}{47}{section*.26}
-\contentsline {chapter}{\numberline {A}Resonator Formulas}{48}{Appendix.a.A}
-\contentsline {chapter}{\numberline {B}Hermite Gauss Normalization}{51}{Appendix.a.B}
-\contentsline {chapter}{\numberline {C}Bullseye and Quadrant Photodiode Characterization}{53}{Appendix.a.C}
-\contentsline {section}{\numberline {C.1}Quadrant Photodiodes (QPD)}{53}{section.a.C.1}
-\contentsline {section}{\numberline {C.2}Bullseye Photodiodes}{54}{section.a.C.2}
-\contentsline {subsection}{\numberline {C.2.1}Width}{54}{subsection.a.C.2.1}
-\contentsline {subsection}{\numberline {C.2.2}Pitch}{55}{subsection.a.C.2.2}
-\contentsline {subsection}{\numberline {C.2.3}Yaw}{56}{subsection.a.C.2.3}
-\contentsline {subsection}{\numberline {C.2.4}RF}{56}{subsection.a.C.2.4}
-\contentsline {chapter}{\numberline {D}Overlap of Gaussian Beams}{57}{Appendix.a.D}
-\contentsline {chapter}{\numberline {E}Extending the ABCD Formalism}{59}{Appendix.a.E}
+\contentsline {subsubsection}{Sidebands}{45}{section*.24}
+\contentsline {subsubsection}{GW Signal}{45}{section*.25}
+\contentsline {chapter}{\numberline {6}Solutions for Detector Upgrades}{46}{chapter.6}
+\contentsline {section}{\numberline {6.1}Sensors}{46}{section.6.1}
+\contentsline {section}{\numberline {6.2}High Sensitivity Telescope}{46}{section.6.2}
+\contentsline {section}{\numberline {6.3}A Global Active Wavefront Control Scheme}{46}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Hard and Soft Mode Matching}{47}{subsection.6.3.1}
+\contentsline {chapter}{Appendices}{48}{section*.26}
+\contentsline {chapter}{\numberline {A}Resonator Formulas}{49}{Appendix.a.A}
+\contentsline {chapter}{\numberline {B}Hermite Gauss Normalization}{52}{Appendix.a.B}
+\contentsline {chapter}{\numberline {C}Bullseye and Quadrant Photodiode Characterization}{54}{Appendix.a.C}
+\contentsline {section}{\numberline {C.1}Quadrant Photodiodes (QPD)}{54}{section.a.C.1}
+\contentsline {section}{\numberline {C.2}Bullseye Photodiodes}{55}{section.a.C.2}
+\contentsline {subsection}{\numberline {C.2.1}Width}{55}{subsection.a.C.2.1}
+\contentsline {subsection}{\numberline {C.2.2}Pitch}{56}{subsection.a.C.2.2}
+\contentsline {subsection}{\numberline {C.2.3}Yaw}{57}{subsection.a.C.2.3}
+\contentsline {subsection}{\numberline {C.2.4}RF}{57}{subsection.a.C.2.4}
+\contentsline {chapter}{\numberline {D}Overlap of Gaussian Beams}{58}{Appendix.a.D}
+\contentsline {chapter}{\numberline {E}Extending the ABCD Formalism}{60}{Appendix.a.E}

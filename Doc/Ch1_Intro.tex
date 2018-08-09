@@ -242,27 +242,32 @@
 	\cite{Saulson}
 	
 	\section{The LIGO Instrument}\label{LIGOInstrument}
-	In its simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  If we imagine the output as a measure of differential arm lengths, it becomes a natural way of detecting gravitational waves. However, to make a practical gravitational-wave observatory, the complexity will have to be extended beyond what Michelson and Morley used.  The next sections will explore the various upgrades that were implemented to improve the sensitivity of LIGO.
+	In its simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  
+	If we imagine the output as a measure of differential arm lengths, it becomes a natural way of detecting gravitational waves. However, to make a practical gravitational-wave observatory, the complexity will have to be extended beyond what Michelson and Morley used.  
+	The next sections will explore the various upgrades to the instrument configuration that improve the sensitivity of LIGO.
 	
 		\subsection{Simple Michaelson}\label{michelson}
-		As shown in Figure [michelsonifo], the interferometer readout uses a photodetector that measures the total laser beam power and depends on how light in the arms constructively or destructively interferes at the beamsplitter. In Section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down the individual arms carry gravitational wave information.  The difference in flight times, $\Delta t$, can be converted into how much phase,$\Delta \phi$ is accumulated by the photons as they propagate through space.  But the question remains how an interferometer actually measures $\Delta \phi$.
+		As shown in Figure [michelsonifo], the interferometer readout uses a photodetector that measures the total laser beam power and depends on how light in the arms constructively or destructively interferes at the beamsplitter. 
+		In Section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down the individual arms carry gravitational wave information.  
+		The difference in flight times, $\Delta t$, can be converted into how much phase, $\Delta \phi$, is accumulated by the photons as they propagate through space.  
+		But the question remains how an interferometer actually measures $\Delta \phi$.
 		
-		If the input electric field of the interferometer is $E_0$, the beamsplitter will transmit $E_0 /2$ down the x-arm and reflect $E_0 /2$ down the y-arm.  By setting the beamsplitter to be the origin,  two beams traveling down their respective arms will have gathered a phase $\phi_i$. Then, upon reflecting off the end mirrors and returning to the beamsplitter, each of the electric fields can be described by these equations
+		If the input electric field of the interferometer is $E_0$, the beamsplitter will transmit $E_0 /2$ down the x-arm and reflect $E_0 /2$ down the y-arm.  By setting the beamsplitter to be the origin, the two plane waves traveling down their respective arms will have gathered a phase $\phi_i$. Then, upon reflecting off the end mirrors and returning to the beamsplitter, each of the electric fields can be described by these equations
 			\begin{equation}
 			\begin{aligned}
 				E_{x} 	&=	\frac{i E_0}{2} e^{2i\phi_{x}}	
 			\\	E_{y} 	&=	\frac{i E_0}{2} e^{2i\phi_{y}}
 			\end{aligned}
 			\end{equation}
-		Since the electromagnetic waves are linear, the resultant sum of waves at the output will be $E_{out} = E_x + E_y$. A photodiode (PD) is placed at the output (or antisymmetric) port to read out the integrated power which is related to the total electric field by
+		Since the electromagnetic waves are linear, the resultant sum of waves at the antisymmetric port will be $E_{out} = E_x + E_y$. A photodiode (PD) is placed at the output (or antisymmetric) port to read out the integrated power which is related to the total electric field by
 			\begin{equation}
 			\begin{aligned}\label{asy_power}
-				P_{AS}	&= \int_{Area} I \;				\text{d}A 
-			\\			&= \int_{Area} \vert E_x + E_y \vert^2 \;	\text{d}A 
-			\\			&= P_{in} \; \text{cos}^2(\Delta \phi)
+				P_{AS}	&= \int_{\text{Area}} I \;				\text{d}A 
+			\\			&= \int_{\text{Area}} \vert E_x + E_y \vert^2 \;	\text{d}A 
+			\\			&= P_{in} \; \cos^2(\Delta \phi)
 			\end{aligned}
 			\end{equation}	
-		where $\Delta \phi = \phi_{x} - \phi_{y} = k_x L_x - k_y L_y$ and $P_{in}$ is the input power. By using equation \ref{diffphase} and the common (or average) arm length $L_{+} = \frac{L_x + L_y}{2}$, the power due to a differential phase shift is
+		where $\Delta \phi = \phi_{x} - \phi_{y} = k_x L_x - k_y L_y$ and $P_{in} = \int_{\text{Area}}	 \vert E_0\vert^2 \text{d}A$ is the input power. By using equation \ref{diffphase} and the common (or average) arm length $L_{+} = \frac{L_x + L_y}{2}$, the power due to a differential phase shift is
 			\begin{equation}
 			P_{AS} \approx P_{in} \; (1-2 \Delta \phi) = P_{in} \; (1-2 k L_{+} h_{+})
 			\end{equation}
@@ -317,7 +322,7 @@
 		\begin{equation}
 		\begin{aligned}
 		I_{Demod} 	&\propto \big[ 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell)  \; h_{+}\big] \big[ \cos(\Omega t)  \sin(\Omega t + \phi_{Demod}) \big] \\
-					&= \big[ 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell)  \; h_{+}\big] \big[ \sin(\phi_{Demod}) + \sin(2\Omega t + \phi_{Demod}) \big]
+					&\propto \big[ 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell)  \; h_{+}\big] \big[ \sin(\phi_{Demod}) + \sin(2\Omega t + \phi_{Demod}) \big]
 		\end{aligned}
 		\end{equation}
 		where $\phi_{Demod}$ is the phase that can be set by the user in order to account for extra phase shifts (ie. longer cables). After the mixer, there will be signals at DC, $\Omega$, $2\Omega$ and so on. However, the part that is linear in the gravitational wave amplitude will be at DC so a low-pass filter will allow the final signal to dominate:

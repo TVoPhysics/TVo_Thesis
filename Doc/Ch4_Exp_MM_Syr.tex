@@ -114,7 +114,7 @@ In the above equation, $\hat{C}_{ij} $ was chosen with $\Delta \Omega = \pi/2$ a
 \subsection{DC Mode Matching}
 	The benefit to using the RF sensing scheme for generating an error signal is the automatic reduction of the higher order mode content which can use actuators to adjust the incoming mode of the beam to whatever the cavity requires.
 	This is particularly useful in areas where the laser power density is high and absorption on the high reflectivity surfaces cause thermal distortions in the cavity mode.
-	However, the output mode cleaner remains generally fixed in its eigenbasis such that the nominal input mode is static.
+	However, the output mode cleaner remains generally fixed in its eigenbasis such that the nominal input mode is static; in fact, the current alignment scheme uses DC quadrant photodiodes to feed back to the OMC suspensions and the control loop offsets are tuned to minimize the 10/01 modes.
 	If there was a low-noise way to continually measure the beam size at two different Gouy phases prior to entering the output mode cleaner, then there could be an error signal which would be used for thermal actuators directly after the signal recycling cavity.
 	This can be achieved with bullseye sensors that read power ratio relatively quickly.
 	Another interesting way of measuring the mode is using a slowly rotating razer blade with known angular frequency in front of a single photodiode and inferring the error function which will directly give the beam size.

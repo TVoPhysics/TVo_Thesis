@@ -7,27 +7,24 @@
 	
 	Misalignments described in Chapter \ref{fund_mm} can be actively suppressed using the modal decomposition technique which leaves reduces the amount of odd order modes present in the cavity.  This leaves the even order modes which arise from modal mismatch to be the dominate sources of optical losses assuming mirrors with a small amount of scatter loss($<100$ ppm).
 
+		
 	
-	\section{SRC Gouy Phase Measurement}
-	The importance of mode matching actually goes beyond reducing the amount of losses in coupled cavities.  It also is important for cavity stability.  If we look at the g-factor of a cavity, it is required through ABCD transformations that the values lay between 0 and 1.  For the signal recycling cavity, if the round trip gouy phase is off by a few millimeters, the stability of the cavity can be compromised. 
-	
+	\section{Mode Matching IFO to OMC: Single Bounce vs DRMI}
 	\subsection{SR3 Heater}
 	Beckhoff code
 	
-
+	
 	\subsection{SRM Heater}
 	Test set up in OSB optics lab
-	
-	
-	\section{Mode Matching IFO to OMC: Single Bounce vs DRMI}
 	- Mode Profiling: Single Bounce
 	- OMC Scanning
-	
 	
 	\section{Mode Matching Squeezer to OMC}
 	- Mode Profiling
 	- OMC Scanning
 	- Astigmatism: expected in LIGO and measured!
+	
+	\section{Mode Matching as a Function of DARM Offset}
 
 	\section{Modal Contrast Defect}
 	Generally, the contrast defect is defined as the ratio of power between the antisymmetric port and the reflected port when locked on a dark fringe.  
@@ -44,6 +41,22 @@
 	
 	where the amplitude overlap integral can be directly calculated from equation \ref{gauss_power_ovl}.  
 	
+	In the modal picture, the contrast defect can be defined using the zeroth eigenmode of each arm and then expanded to project the X-arm's basis onto Y-arm using higher order Laguerre-Gauss modes, $LG^{00}_y \rightarrow  LG^{00}_x + \alpha LG^{10}_x$. Where $\alpha = \frac{1}{\sqrt{2}} \big(\frac{\Delta \omega_{0}}{\omega_{0}} + i \frac{\Delta z }{z_R}\big)$ is the amount of higher order mode coupling due to mismatch in beam size and location,respectively (see Chapter \ref{fund_mm}).
+	\begin{equation}\label{CD_mode}
+	\begin{aligned}
+	\text{CD} 	&\equiv \frac{P_{AS}}{P_{REFL}} \\
+				&= \frac{\vert LG^{00}_x - LG^{00}_y \vert^2}{\vert LG^{00}_x + LG^{00}_y \vert^2}\\
+				&= \frac{\vert LG^{00}_x \vert^2 + \vert LG^{00}_x + \alpha LG^{10}_x \vert^2 - 2\Re(LG^{00}_x [LG^{00*}_x + \alpha LG^{10}_x ])}{\vert LG^{00}_x \vert^2 + \vert LG^{00}_x + \alpha LG^{10}_x \vert^2 + 2\Re(LG^{00}_x [LG^{00*}_x + \alpha LG^{10}_x ])}\\
+				&\approx \frac{\alpha^2}{4}\\
+				&\approx \frac{1}{8} \bigg[ \bigg(\frac{\Delta\omega_{0}}{\omega_{0}} \bigg)^2+  \bigg(\frac{ \Delta z }{z_R}\bigg)^2 \bigg]
+	\end{aligned}
+	\end{equation}
+	Mismatch between the arm cavities can stem from a few different sources such as mismatches between the test masses radii of curvature on the high reflectivity surfaces will cause the resonant modes to be different between the X-arm and Y-arm.
+	In addition to modes being different, there exists a static (or cold) substrate lens in each of the compensation plates.
+	This static lens becomes important for two reasons: Firstly, the sidebands in DRMI are promptly rejected by the arm cavities. Secondly, the gravitational wave sidebands which are generated and resonant in the arms will see the substrate lensing as it travels to the beamsplitter.
+	
+
+
 	\subsection{Simple Michelson Contrast Defect}
 	The simple Michelson can give the first estimate of the contrast defect when starting to commission the interferometer, however, it will not be directly used in nominal low noise since the dual-recycled Michelson is implemented.  
 	By propagating the input mode cleaner beam to each of the input test masses and taking a single bounce at the high reflectivity surface, one can approximate the resultant mode overlap.  
@@ -54,16 +67,21 @@
 	Figure[]
 	
 	
-	\subsection{DRMI Contrast Defect}
+	\subsection{Dual Recycled Michelson Contrast Defect}
+	The contrast defect for DRMI is similar to the simple Michelson analysis, however, there is an added complexity in that the resonance of the power recycling cavities (PRX and PRY) make up the mode content at the beamsplitter.
+	This means that the power recycling mirror has to be mode matched well to the ITMs and this also means the field inside DRMI will see the substrate lensing.
 	
 	
 	
 	\subsection{Fabry-Perot Contrast Defect}
+	The contrast defect from the two 4km arms will be dominated by the resonant mode of the individual arm cavities and will not see the static substrate lens distortions.
+	The reasoning for this is subtle and described in Section \ref{TL_lensing}.
 	
-	\section{Mode Matching as a Function of DARM Offset}
 	
 	\section{Hot vs. Cold Interferometers}
-		When fully operational, the LIGO interferometers can have a few hundred kilowatts of laser power resonating in the arms during nominal low noise operation,
+		In the previous section, the contrast defect calculations did not include the self-heating thermal effects that will be present when the interferometer reaches its nominal state.
+		When fully operational, the arm cavities can have a few hundred kilowatts of laser power resonating while in observing mode. 
+	An approximate but useful description of the total arm power in each arm is
 	\begin{equation}
 		P_{\text{ARM}} \approx \frac{1}{2} (g_{PRC} * g_{ARM} * P_{IN})
 	\end{equation}
@@ -72,13 +90,18 @@
 		A fraction of that power, approximately .5 PPM, will be absorbed by the high reflectivity surface, hence, creating an additional thermal lens which changes the radius of curvature.  
 		Additionally, the thermo-refactive index will change as a function of absorbed temperature \cite{winkler_thermaldist}.
 		By changing the curvature of the test masses, the resonant Gaussian mode will also change its profile.
-		For the substrate lensing, the sideband signals will be most adversely affected because the carrier field will see a cancellation of the distortion from the promptly reflected beam (see sectiion [])
+		For the substrate lensing, the sideband signals will be most adversely affected because the carrier field will see a cancellation of the distortion from the promptly reflected beam (see Section [])
 	
 	
-	\subsection{Thermal Lensing}
+	\subsection{Thermal Lensing}\label{TL_lensing}
 		As seen in Section\ref{DRMI}, the sideband and carrier frequencies propagate differently in the interferometer, which means their fields will see different lensing from thermal effects.
 		To understand how the fields change quantitatively, the easiest way is to invoke the ABCD transfer matrix approach for the carrier and sideband fields individually.
 		\subsubsection{Carrier}
+		Consider Figure[], a two-mirror optical system which has an input beam, $E_{in}$, that has a portion promptly reflected off the input mirror to create $E_{prompt}$ 
+		
+		\begin{equation}
+		\ket{E^{carrier}_{prompt}} = \hat{M}_{carrier}^{prompt} \ket{E^{carrier}_{in}}
+		\end{equation}
 		\subsubsection{Sidebands}
 		\subsubsection{GW Signal}
 		As mentioned in Section \ref{michelson}, LIGO's gravitational wave readout currently employs a DC readout scheme that extracts the signal by beating the carrier field with the sidebands created by the gravitational wave.
