@@ -32,15 +32,6 @@ E.~D. Black.
 \newblock \doi{10.1119/1.1286663}.
 \newblock URL \url{https://doi.org/10.1119/1.1286663}.
 
-\bibitem[Black and Gutenkunst(2003)]{BlackSignalExtraction}
-E.~D. Black and R.~N. Gutenkunst.
-\newblock An introduction to signal extraction in interferometric gravitational
-  wave detectors.
-\newblock \emph{American Journal of Physics}, 71\penalty0 (4):\penalty0
-  365--378, 2003.
-\newblock \doi{10.1119/1.1531578}.
-\newblock URL \url{https://doi.org/10.1119/1.1531578}.
-
 \bibitem[Blair(2005)]{BlairBook}
 D.~G. Blair.
 \newblock \emph{The detection of gravitational waves}.
@@ -230,6 +221,11 @@ F.~A.~E. Pirani.
 \newblock ISSN 1572-9532.
 \newblock \doi{10.1007/s10714-009-0787-9}.
 \newblock URL \url{https://doi.org/10.1007/s10714-009-0787-9}.
+
+\bibitem[Saleh and Teich(2009)]{Saleh}
+B.~E.~A. Saleh and M.~C. Teich.
+\newblock \emph{Fundamentals of Photonics}.
+\newblock Wiley-Interscience, 2009.
 
 \bibitem[Saulson(2016)]{Saulson}
 P.~Saulson.

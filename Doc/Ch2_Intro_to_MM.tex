@@ -1,16 +1,9 @@
 \chapter{The Fundamentals of Mode-Matching}\label{fund_mm}
 	Theory section of modematching. Gaussian beams, define relevant quantities, Gouy Phase!
 	
-	In order to properly explain the effects of electromagnetic waves in the LIGO interferometers, it is useful to review the  
-	
-	References: [Kognelik and Li]
-	
+	When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, it is necessary to incorporate Gaussian beams and associated their higher order modes.
 		\section{Gaussian Beam Optics}
-		When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, it is necessary to incorporate Gaussian beams and associated their higher order modes.
-
-		
-		Consider the famous Maxwell's equations in vacuum:
-		
+		Consider the famous Maxwell's equations:
 		\begin{equation}
 		\label{18.1:1}
 		\begin{aligned}
@@ -22,7 +15,6 @@
 		\end{aligned}
 		\end{equation}
 		
-		
 		Concentrating on the electric field in vacuum, we arrive at the Helmholtz Equation
 		
 		\begin{equation}\label{Helmholtz}
@@ -30,7 +22,7 @@
 		\end{equation}
 	
 		
-		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\mathbf{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  
+		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\mathbf{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  There are a variety of solutions to equation \ref{Helmholtz} which include the plane and spherical waves \cite{Saleh}
 		
 		It is possible to express the solution to equation  \ref{Helmholtz} as
 		a plane wave with a modulated complex envelope

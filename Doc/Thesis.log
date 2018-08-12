@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  3 AUG 2018 17:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  12 AUG 2018 11:13
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1905,6 +1905,10 @@ Chapter 1.
 
  (Ch2_Intro_to_MM.tex
 Chapter 2.
+
+Package natbib Warning: Citation `Saleh' on page 25 undefined on input line 25.
+
+
 [25
 
 
@@ -1996,7 +2000,7 @@ Appendix E.
 ! Undefined control sequence.
 <recently read> \prd 
                      
-l.112 
+l.103 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2005,28 +2009,35 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [64] [65])
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
- [66]
+[66]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
- (Thesis.aux (Ch1_Intro.aux) (Ch2_Intro_to_MM.aux)
-(Ch3_Sim_MM_Finesse.aux) (Ch4_Exp_MM_Syr.aux) (Ch5_MM_at_LHO.aux)
-(Ch6_Det_Up.aux) (Appendix.aux))
+ (Thesis.aux (Ch1_Intro.aux) (Ch2_Intro_to_MM.aux) (Ch3_Sim_MM_Finesse.aux) (Ch
+4_Exp_MM_Syr.aux) (Ch5_MM_at_LHO.aux) (Ch6_Det_Up.aux) (Appendix.aux)
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 057092F7C938E9BC2F3D415DA413B4CD;4611.
+(rerunfilecheck)             Checksum: 9E1B666D4228D4E6D514FBFDD850E631;4611.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: CAB980C12FF53D96563EB3D3D0761382;2305.
+(rerunfilecheck)             Checksum: 00B53AA261D7A6561299115ECE8386C0;2198.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 18524 strings out of 493323
- 312017 string characters out of 3139066
- 403798 words of memory out of 3000000
- 21473 multiletter control sequences out of 15000+200000
+ 18525 strings out of 493323
+ 311926 string characters out of 3139066
+ 403851 words of memory out of 3000000
+ 21475 multiletter control sequences out of 15000+200000
  542663 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,19n,40p,10416b,485s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,19n,40p,10416b,492s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files
@@ -2046,9 +2057,9 @@ nts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Thesis.pdf (68 pages, 555046 bytes).
+Output written on Thesis.pdf (68 pages, 555419 bytes).
 PDF statistics:
- 1203 PDF objects out of 1440 (max. 8388607)
- 377 named destinations out of 1000 (max. 500000)
+ 1199 PDF objects out of 1200 (max. 8388607)
+ 376 named destinations out of 1000 (max. 500000)
  505 words of extra memory for PDF output out of 10000 (max. 10000000)
 

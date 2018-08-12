@@ -243,14 +243,16 @@
 	
 	\section{The LIGO Instrument}\label{LIGOInstrument}
 	In its simplest form, the LIGO instrument is an incredibly large Michaelson interferometer.  
-	If we imagine the output as a measure of differential arm lengths, it becomes a natural way of detecting gravitational waves. However, to make a practical gravitational-wave observatory, the complexity will have to be extended beyond what Michelson and Morley used.  
+	If we imagine the output as a measure of differential arm length, it becomes a natural way of detecting gravitational waves. 
+	However, to make a practical gravitational-wave observatory, the complexity will have to be extended beyond what Michelson and Morley used.  
 	The next sections will explore the various upgrades to the instrument configuration that improve the sensitivity of LIGO.
 	
 		\subsection{Simple Michaelson}\label{michelson}
-		As shown in Figure [michelsonifo], the interferometer readout uses a photodetector that measures the total laser beam power and depends on how light in the arms constructively or destructively interferes at the beamsplitter. 
+		As shown in Figure [michelsonifo], the interferometer begins with a laser which is incident on a partially-reflecting and partially-transmitting beamsplitter that sends half of the laser light down each arm.  The individual light beams gather phase as they propagate down the arms and then reflect from two end mirrors and eventually recombine at the same beamsplitter.  A photodetector is located at the output and measures the total beam power which will depend on how light in the arms constructively or destructively interfered due to their relative phase.
 		In Section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down the individual arms carry gravitational wave information.  
 		The difference in flight times, $\Delta t$, can be converted into how much phase, $\Delta \phi$, is accumulated by the photons as they propagate through space.  
-		But the question remains how an interferometer actually measures $\Delta \phi$.
+		
+		But the question remains, how does an interferometer explcitly measure $\Delta \phi$?
 		
 		If the input electric field of the interferometer is $E_0$, the beamsplitter will transmit $E_0 /2$ down the x-arm and reflect $E_0 /2$ down the y-arm.  By setting the beamsplitter to be the origin, the two plane waves traveling down their respective arms will have gathered a phase $\phi_i$. Then, upon reflecting off the end mirrors and returning to the beamsplitter, each of the electric fields can be described by these equations
 			\begin{equation}
@@ -305,7 +307,7 @@
 		\begin{equation}
 		E_{out} = i e^{iwt} [ J_0(\beta) 	k \ell_{+}  h_{+}  \; + \; J_1(\beta) \sin( k \Delta \ell + k_{\Omega} \Delta \ell) (e^{i\Omega t}  + e^{-i\Omega t}) ]
 		\end{equation}
-		By choosing the carrier signal to be on the dark fringe, $k \Delta \ell = \pi/2$ but the sidebands to be slightly off the null (Figure []) and hence leak into the anti-symmetric port, the electric field reduces to
+		The frequency offset of the sidebands allow them to pick up phase differently than the carrier field. Thus, by choosing a static offset between the arm lengths such that the carrier signal is on a dark fringe, $k \Delta \ell = \pi/2$, but the sideband are slightly off the null point (Figure []) and hence leak into the anti-symmetric port.  This technique is colloquially known as the Schnupp Asymmetry and the electric field reduces to
 		\begin{equation}
 		E_{out} = i e^{iwt} [ J_0(\beta) 	k \ell_{+}  h_{+}  \; + \; J_1(\beta) \sin(k_{\Omega} \Delta \ell) ( e^{i\Omega t} + e^{-i\Omega t}) ]
 		\end{equation}
@@ -335,75 +337,68 @@
 		\cite{BlackPDH}	
 	
 		\subsection{Fabry-Perot Cavities}\label{FP}
-		There are two ways to improve the LIGO detectors: one is to increase the response from gravitational waves and the other is to decrease the noise contributions. From equation \ref{diffphase}, the gravitational wave signal is proportional to the optical path length that the photon travels, which means the most straightforward method of increasing the sensitivity is to make the arms as long as possible (up to the null point described by equation \ref{gwsinc}.  Generally, there were two methods to do this: a Herriott delay line or a Fabry-Perot resonator, the differences between each method is shown in Figure[].  At the time of writing this thesis, all modern gravitational wave detectors use the latter method.
+		There are two ways to improve the LIGO detectors: one is to increase the response from gravitational waves and the other is to decrease the noise contributions. From equation \ref{diffphase}, the gravitational wave signal is proportional to the optical path length that the photon travels, which means the most straightforward method of increasing the sensitivity is to make the arms as long as possible (up to the null point described by equation \ref{gwsinc}).  There were two methods to achieve long: a Herriott delay line or a Fabry-Perot resonator, the differences between each method is shown in Figure[].  At the time of writing this thesis, all modern gravitational wave detectors use the latter method.
 	
-		A Fabry-Perot cavity is an optical system comprised of two or more partially transmitting mirrors with one laser input.  To create a resonator, the user must design a system such that once the laser has made one round trip around the optics, it is the same shape and size as when it started.  Conceptually, this may seem simple but in practice, controlling and sensing any optical cavity comes with a few challenges.
+		A Fabry-Perot cavity is an optical system comprised of two or more partially transmitting mirrors with one laser input.  To create a resonator, the user must design a system so that once the laser has made one round trip within the optical system, the shape and size of the beam is the same as when it started.  This may seem simple conceptually but in practice, controlling and sensing any optical cavity comes with a few challenges.
 		
-		To start understanding the longitudinal degree of freedom, consider a two mirror system in Figure [] which is separated by a length $L$ with reflection and transmission coefficients: $r_1$, $t_1$, $r_2$, $t_2$.	
-		Starting with a plane wave at the input mirror with amplitude $E_0$, the beam will enter the cavity add on top of each other such that the reflected field \cite{Saulson} is 
+		To start understanding the longitudinal degree of freedom, consider a two mirror system in Figure [FabryPerotFig] which is separated by a length $L$ with reflection and transmission coefficients: $r_1$, $t_1$, $r_2$, $t_2$.	
+		Starting with a plane wave at the input mirror with amplitude $E_0$, the beam will enter the cavity and propagate back between the two mirrors.  The reflected, transmitted, and circulating fields \cite{Saulson}, which are a result of the geometric series, can be described as
 		\begin{equation}\label{r_FP}
-		E_{REFL} = r_{FP} E_0 = \bigg(-r_1 + \frac{t_1^2 r_2  e^{-i2kL}}{1-r_1 r_2 e^{-i2kL}} \bigg) E_0,
+		E_{REFL} = r_{FP} E_0 = \bigg(-r_1 + \frac{t_1^2 r_2  e^{-i2kL}}{1-r_1 r_2 e^{-i2kL}} \bigg) E_0
 		\end{equation}
-		the transmission field is
 		\begin{equation}\label{t_FP}
 		E_{TRAN} = t_{FP} E_{0} = \bigg( \frac{t_1 t_2 e^{ikL}}{1-r_1 r_2 e^{-i2kL}}\bigg) E_0
 		\end{equation}
-		the circulating field is
 		\begin{equation}\label{c_FP}
 		E_{CIRC} = c_{FP} E_0 = \bigg(\frac{t_1}{1- r_1 r_2 e^{-2ikL}} \bigg) E_0
 		\end{equation}
-		The fields become resonant when the cavity length is $L = n \lambda / 2$ and the circulating coefficient in the cavity is maximized such that the gain is
+		The fields above are all highly dependent on the round trip phase and become resonant when the cavity length is $L = n \lambda / 2$ and the circulating coefficient in the cavity is maximized such that the gain is
 		\begin{equation}
 		\text{Gain} = c^2_{FP} \vert_{\text{resonating}} = \bigg( \frac{t_1}{1-r_1 r_2}\bigg)^2
 		\end{equation}
-		Depending on the relative reflection coefficients of the input and output mirrors, the fields on resonance will be slightly different Figure[].
+		Depending on the relative reflection coefficients of the input and output mirrors, the fields on resonance will be slightly different Figure[UnderOverCritCoupled].
 		
-		Frequency response of a single FP (plot):
-		
-		Notice that the circulating power dependent on the cavity length and laser frequency so one might naively determine that modulating the two parameters independently cause the same effect.  However, when both are changing by large amounts, they are related by a frequency dependent transfer function
+		Notice that the fields are dependent on the cavity length and laser frequency, $2kL$, so one might naively determine that modulating the two parameters independently cause the same effect.  However, when both are changing by large amounts, they are related by a frequency dependent transfer function 
 		\begin{equation}
 		C(s) \frac{\Delta w}{w} = -\frac{\Delta L}{L}
 		\end{equation}
-		where $C(s) = \frac{1-e^{-2sL/c}}{2sL/c}$ in the Laplace domain.  Only when the cavity is on or near resonance, then the frequency and length variations are related by $\frac{\Delta w}{w} = -\frac{\Delta L}{L}$.
+		where $C(s) = \frac{1-e^{-2sL/c}}{2sL/c}$ in the Laplace domain Figure[FreqRespFP]. Only when the cavity is on or near resonance, then the frequency and length variations are related by $\frac{\Delta w}{w} = -\frac{\Delta L}{L}$.
 		
 		While sweeping through either laser frequency or cavity length and measuring the reflected (or transmitted) fields, there are features of the power spectrum which relate directly to the cavity's physical properties:
 		
 		Finesse, or the line width of the resonant peak, function of $r_1$ and $r_2$:
-		\begin{equation}
+		\begin{equation}\label{finesse}
 		\mathbb{F} = \frac{\pi \sqrt{r_1 r_2}}{1- r_1 r_2}
 		\end{equation}
-		
 		Storage Time :
 		\begin{equation}
 		\tau_{s} = \frac{L}{c \pi} \, \mathbb{F}
 		\end{equation}
-		
 		Cavity Pole:
 		\begin{equation}
 		f_{pole} = \frac{1}{4\pi \tau_{s}}
 		\end{equation}
-	
 		Free Spectral Range:
 		\begin{equation}
 		f_{FSR}  = \frac{c}{2L}
 		\end{equation}
-		
-		Stability: In order to prove that the Fabry Perot is stable, it is useful to introduce the matrices that describe a periodic optical system which is explicitly derived in appendix \ref{FPappendix}.  A Fabry Perot cavity that is separated by distance $L$ with spherical mirrors that have radii of curvature $R_1$ and $R_2$ will need to satisfy 
+
+		Stability: In order to prove that an optical cavity is stable, it is useful to introduce the matrices that describe a periodic optical system which is explicitly derived in appendix \ref{FPappendix}.  A Fabry Perot cavity that is separated by distance $L$ with spherical mirrors that have radii of curvature $R_1$ and $R_2$ will need to satisfy 
 		\begin{equation}\label{gfactor}
 		0 \geq \bigg(1+\frac{L}{R_1}\bigg) \bigg(1+\frac{L}{R_2}\bigg) \geq 1
 		\end{equation}
-		in order to be geometrically stable.
+		in order to be geometrically stable (see Figure[BeamGeometryFP]).
 		
 		Power circulating as a function of our defined parameters slightly off resonance by a length of $\delta L$:
 		\begin{equation}
 		P_{cav} = \vert c_{FP} \vert^2 = \frac{Gain}{ 1 + \big(\frac{2\mathbb{F}}{\pi} \big)^2 \, \text{sin}^2(k \delta L) }
 		\end{equation}
-		\subsubsection{Locking a Fabry Perot Cavity}
-		This is described everywhere, reference \cite{BlackPDH}, Drever. Just give the highlights.
 		
-		Described above are the theoretical constructs of a FP cavity, but the question remains, how does one practically construct a resonant optical cavity?  The answer comes from using a heterodyne sensing scheme similar to the one described in Section \ref{michelson}.  Except the optical system is not a Michelson interferometer but rather a two mirror cavity, however, heterodyne detection can apply to a number of different geometries such as triangular or bow-tie cavities shown in Figure [].  All of which are used in LIGO for various reasons.
+		LIGO uses the frequency response of optical cavities for a number of reasons: Firstly, the round trip phase of the gravitational wave is amplified by the finesse (equation \ref{finesse}) of the 4 kilometer arm cavities, therefore increasing the sensitivity.  Secondly, the input and output of the interferometer's Gaussian beam mode can be refined by only allowing the fundamental mode of the laser to resonate (input and output mode cleaners).  Thirdly, Advanced LIGO uses a dual-recycled Michelson interferometer which means the symmetric port has a mirror inserted to resonate the light reflected from the Fabry Perot arms (power recycling) and another mirror shapes the frequency response of the differential cavity pole at the anti-symmetric port (signal recycling).
+		\subsubsection{Achieving Resonance in an Optical Cavity}
+		Described above are the theoretical constructs of a FP cavity, but the question remains, how does one practically construct a resonant optical cavity?  The answer comes from using a heterodyne sensing scheme similar to the one described in Section \ref{michelson}.  Except the optical system is not a Michelson interferometer but rather a two mirror cavity.  Still, the heterodyne detection method can apply to a number of different geometries such as triangular or bow-tie cavities shown in Figure[DiffResCavs].
 		
-		Starting with an input laser and EOM (electro-optical modulator) that imparts upper and lower sidebands at a modulation frequency $\Omega$, the user injects three beams into the optical system exactly as in Equation \ref{modE}.  When placing a photodetector on the reflection port, one should see the cavity's effect on each of the three electric fields.
+		Starting with an input laser and EOM (electro-optical modulator) that imparts upper and lower sidebands at a modulation frequency $\Omega$, the user injects three beams into the optical system described in Equation \ref{modE}.  When placing a photodetector on the reflection port, one should see the cavity's effect on each of the three electric fields.
 		
 		\begin{equation}
 		E_{FP,out} = E_{C} + E_{SB+} + E_{SB-} = 
@@ -425,16 +420,10 @@
 		\begin{equation}
 		r_{SB\pm} = -r_1 + \frac{t_1^2 r_2  e^{-i2(k+k_{\Omega})L}}{1-r_1 r_2 e^{-i2(k+k_{\Omega})L}}
 		\end{equation}
-		The formalism to read out the error signal is the shown in Equation \ref{RFdet}. Using a photodetector in reflection, the error signal will be linearly proportional to the laser frequency and cavity length \cite{BlackPDH}.
+		The formalism to read out the error signal is the shown in Equation \ref{RFdet}. Using a photodetector in reflection (see Figure[FPLocking]), the error signal will be linearly proportional to the laser frequency and cavity length \cite{BlackPDH}.
 		\begin{equation}
 		\text{Error Signal} \propto \frac{L \mathbb{F}}{\lambda} \bigg[\frac{\delta w}{w} + \frac{\delta L}{L}\bigg]
 		\end{equation}
-
-		\subsubsection{Application to LIGO}
-		
-		Frequency response of a FP Michaelson:
-		Just write it down.
-		References:[\cite{BlackSignalExtraction}]
 
 		\subsection{Power-Recycled Fabry-Perot Interferometers}
 		Power Recycling
