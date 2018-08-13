@@ -22,15 +22,11 @@
 		\end{equation}
 	
 		
-		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\mathbf{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  There are a variety of solutions to equation \ref{Helmholtz} which include the plane and spherical waves \cite{Saleh}
-		
-		It is possible to express the solution to equation  \ref{Helmholtz} as
-		a plane wave with a modulated complex envelope
+		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\mathbf{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  There are a variety of solutions to equation \ref{Helmholtz} which include the plane and spherical waves \cite{Saleh}.  These two types of solutions are the extremes when considering the angle and spatial distribution as a function of propagation.  The plane wave which has been used in chapter \ref{intro} is a beam whose rays have no variance in the spatial direction as it propagates through space, whereas the spherical wave starts at a point and spreads as a function of distance from the origin. Somewhere in between these two extrema is the paraxial wave which is a wave pattern that has its rays at small angles relative to the direction of propagation (see Figure[raysoflight]).  It is possible to express the paraxial solution to equation \ref{Helmholtz} as a plane wave with a modulated complex envelope $\mathbf{A}(r)$
 		\begin{equation}
 		\mathbf{U}(\mathbf{r}) = \mathbf{A}(\mathbf{r}) e^{-ikz)}
 		\end{equation}
-		
-		By imposing the constraints which force the envelope to vary slowly with respect to the z-axis within the distance of one wavelength $\lambda = 2\pi/k$,
+		However, in order for the paraxial wave to exist, $\mathbf{U}(r)$ must satisfy the Helmholtz equation or alternatively, the complex amplitude portion must satisfy a separate differential equation known as the paraxial Helmholtz Equation. By imposing the constraints which force the envelope to vary slowly with respect to the z-axis within the distance of one wavelength $\lambda = 2\pi/k$,
 
 		\begin{subequations}
 		\begin{equation}\label{paraxiala}
@@ -76,7 +72,7 @@
 		\begin{equation}\label{ROC}
 		R(z) = z \bigg[ 1 + \bigg( \frac{z}{z_0} \bigg)^2 \bigg]
 		\end{equation}
-		\begin{equation}
+		\begin{equation}\label{gouy}
 		\phi(z)= \text{tan}^{-1}\bigg(\frac{z}{z_0}\bigg)
 		\end{equation}
 		\begin{equation}
@@ -86,10 +82,11 @@
 
 
 		\subsubsection{Gouy Phase}
-		The Gouy phase is 
-		- Gouy Phase + graph
-		\subsubsection{Intensity}
-		- Intensity and Power
+		The Gouy phase given by equation \ref{gouy} is the phase lag that occurs as a function of propagation along the $\hat{z}$-axis which ranges from $\phi(z) = \pm \pi/2$ for $z =\pm \inf$.  Physically, this manifests itself as the difference between the laser beam behaving like a plane wave when $z\approx0$ (or near field) and eventually evolving into a spherical wave when $z\approx \pm \inf$ (or far field) (see Figure[GouyPhaseFig]).  Although this phenomenon is interesting mathematically, most texts do not consider how to practically use or measure the Gouy phase.  In LIGO technical notes and electronic logs, the Gouy phase of sensors or actuators are used to describe where along the laser beam path the piece of equipment is located.  This will indicate what degree of freedom is being observed or adjusted, respectively.  For example, in ray optics \cite{Saleh} a laser beam has two degrees of freedom, the displacement and angle from the optical axis (see Figure[Gouyphase]).  If an actuator such as a piezo-electric transducer with an attached reflective mirror is placed near the origin or focus of the laser beam, then the controlled degree of freedom is only the angle.  Alternatively, if the actuator is placed in the far field then the controlled degree of freedom is almost entirely displacement.  This is also true of sensors at various points along the $\hat{z}$-axis to determine the exact alignment of the optical beam.
+		
+		In practice, it is impossible to sense the true waist of an optical system because it could be inside a Fabry-Perot cavity.  So the clever designer must insert a pick-off beam to sample the transmission or reflection of the interested optical system and use a combination of lenses to create a telescope for the sensors and infers the degrees of freedom.  Then, by rotating to the two-dimensional space created by the sensors to represent the interested space spanned by the optical system's degrees of freedom (see Figure[RotDofs]); colloquially, this is known as a sensing matrix.  Using this method, sensors do not have to be exactly at the near or far field because it is only required that the two sensors are separated by $\pi/2$ in Gouy phase, in fact, it is usually easier to place one sensor at $+\pi/4$ and the other at $-\pi/4$. 
+		
+		Unfortunately, there is no transducer that directly measures the Gouy phase so in order to \textit{determine} the Gouy phase of a particular sensor or actuator, one must model the beam propagation and fit the waist location.
 		
 		\subsubsection{Hermite-Gauss Modes}
 		The fundamental Gaussian beam is not the only solution which can be used to solve equation \ref{paraHelmholtz}.  In fact, there exists a complete set of solutions that can solve the paraxial Helmholtz Equation in rectangular coordinates, which are referred to as the Hermite Gauss modes
@@ -109,7 +106,7 @@
 		
 		It is useful to normalize the Hermite-Gauss modes with respect to the overall power, which are derived in Appendix[].
 		
-		How higher order modes show up in resonators, Gouy Phase, HOM spacing.
+		Another commonly used term in LIGO is the round trip Gouy phase of a cavity, which can be directly used to measure the higher order mode separation.  This becomes important if the cavity has a low finesse which means the fundamental Gaussian mode has a spread comparable in frequency to the first order mode then it is easy to hop from one to the other, see Figure [FSRwHOM].
 		
 		\subsubsection{Laguerre Modes}
 		Another complete set of alternative solutions to equation \ref{paraHelmholtz} exists which are called the Laguerre-Gauss modes
