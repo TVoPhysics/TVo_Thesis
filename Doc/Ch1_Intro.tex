@@ -157,7 +157,7 @@
 	
 	How to practically measure $\Delta \Phi$ with an interferometer is explained in section \ref{LIGOInstrument}.
 
-	\subsection{Detection of Gravitational Waves}
+	\subsection{Detection of Gravitational Waves}\label{detectgw}
 	The purpose of LIGO is to observe gravitational waves emanating from astrophysical objects \cite{NSFproposal}, so it is natural to wonder how well a single detector can probe the universe.  It is worthwhile to explicitly derive the inspiral horizon distance, which is how far a single detector can see a source comprised two equal mass compact objects optimally oriented in the sky relative to the detector.  Signal-to-noise (SNR) is the level of interesting signals compared to the background noise, which can be expressed as
 	\begin{equation}\label{SNR}
 	\rho = 2 \int_{-\infty}^{\infty} \frac{ \tilde{s}(f) \tilde{s}^*(f) }{S_n(f)}
@@ -248,7 +248,8 @@
 	The next sections will explore the various upgrades to the instrument configuration that improve the sensitivity of LIGO.
 	
 		\subsection{Simple Michaelson}\label{michelson}
-		As shown in Figure [michelsonifo], the interferometer begins with a laser which is incident on a partially-reflecting and partially-transmitting beamsplitter that sends half of the laser light down each arm.  The individual light beams gather phase as they propagate down the arms and then reflect from two end mirrors and eventually recombine at the same beamsplitter.  A photodetector is located at the output and measures the total beam power which will depend on how light in the arms constructively or destructively interfered due to their relative phase.
+		As shown in Figure [michelsonifo], the interferometer begins with a laser which is incident on a partially-reflecting and partially-transmitting beamsplitter that sends half of the laser light down each arm.  The individual beams gather phase as they propagate down the arms and then reflect off of two end mirrors and eventually recombine at the same beamsplitter.  Whether the light constructively or destructively interferes will depend on their relative accumulated phase from propagating down each arm. A photodetector is placed at the output and measures the total power which converts the total amount of light into an electronic signal.
+		
 		In Section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down the individual arms carry gravitational wave information.  
 		The difference in flight times, $\Delta t$, can be converted into how much phase, $\Delta \phi$, is accumulated by the photons as they propagate through space.  
 		
@@ -261,7 +262,7 @@
 			\\	E_{y} 	&=	\frac{i E_0}{2} e^{2i\phi_{y}}
 			\end{aligned}
 			\end{equation}
-		Since the electromagnetic waves are linear, the resultant sum of waves at the antisymmetric port will be $E_{out} = E_x + E_y$. A photodiode (PD) is placed at the output (or antisymmetric) port to read out the integrated power which is related to the total electric field by
+		Since the electromagnetic waves are linear, the resultant sum of waves at the antisymmetric port will be $E_{out} = E_x + E_y$. The photodiode at the output (or antisymmetric) port detects the integrated power which is related to the total electric field by
 			\begin{equation}
 			\begin{aligned}\label{asy_power}
 				P_{AS}	&= \int_{\text{Area}} I \;				\text{d}A 
@@ -337,7 +338,7 @@
 		\cite{BlackPDH}	
 	
 		\subsection{Fabry-Perot Cavities}\label{FP}
-		There are two ways to improve the LIGO detectors: one is to increase the response from gravitational waves and the other is to decrease the noise contributions. From equation \ref{diffphase}, the gravitational wave signal is proportional to the optical path length that the photon travels, which means the most straightforward method of increasing the sensitivity is to make the arms as long as possible (up to the null point described by equation \ref{gwsinc}).  There were two methods to achieve long: a Herriott delay line or a Fabry-Perot resonator, the differences between each method is shown in Figure[].  At the time of writing this thesis, all modern gravitational wave detectors use the latter method.
+		There are two ways to improve the LIGO detectors: one is to increase the response from gravitational waves and the other is to decrease the noise contributions. From equation \ref{diffphase}, the gravitational wave signal is proportional to the optical path length that the photon travels, which means the most straightforward method of increasing the sensitivity is to make the arms as long as possible (up to the null point described by equation \ref{gwsinc}).  There are two methods to achieve this: a Herriott delay line or a Fabry-Perot resonator, the differences between each method is shown in Figure[FPvsDelay].  At the time of writing this thesis, all modern gravitational wave detectors use the latter method.
 	
 		A Fabry-Perot cavity is an optical system comprised of two or more partially transmitting mirrors with one laser input.  To create a resonator, the user must design a system so that once the laser has made one round trip within the optical system, the shape and size of the beam is the same as when it started.  This may seem simple conceptually but in practice, controlling and sensing any optical cavity comes with a few challenges.
 		
@@ -416,7 +417,7 @@
 		\begin{equation}
 		r_{C} = -r_1 + \frac{t_1^2 r_2  e^{-i2kL}}{1-r_1 r_2 e^{-i2kL}}
 		\end{equation}
-		and 	
+		and 
 		\begin{equation}
 		r_{SB\pm} = -r_1 + \frac{t_1^2 r_2  e^{-i2(k+k_{\Omega})L}}{1-r_1 r_2 e^{-i2(k+k_{\Omega})L}}
 		\end{equation}
@@ -424,6 +425,44 @@
 		\begin{equation}
 		\text{Error Signal} \propto \frac{L \mathbb{F}}{\lambda} \bigg[\frac{\delta w}{w} + \frac{\delta L}{L}\bigg]
 		\end{equation}
+		
+		
+		\subsection{Fabry-Perot Michelson}
+		Using an optical cavity to increase the number of bounces along the 4 kilometer arms will amplify the gravitational wave signal but it will also shape the frequency dependence of the sensitivity as well.  This has already been alluded to in section \ref{measuringGWs} where the overall increase in arm length will tune the response function of equation \ref{gwsinc}.  The same formalism can apply to integrate the use of Fabry-Perot arms into a Michelson interferometer and looking at the signal at the antisymmetric port as a function of gravitational wave frequency. Previously in section \ref{michelson}, it was shown that the RF detection technique required beating the sidebands with a carrier field containing the gravitational wave information.  However, this is not exclusively true because the signal sidebands beating with a reference carrier field could also be a valid way of measuring a signal of interest. In fact, Advanced LIGO employs a homodyne detection called DC readout \cite{FritschelReadout}. The idea is that the carrier field will resonant in the arms but will be slightly modulated due to a gravitational wave.  In effect, the carrier will have audio frequency sidebands imparted on the field shown in Figure[gwsb].  
+		
+		Figure [FPMichelson] shows an input electric field of $E_0$ incident on a 50/50 beamsplitter which then enters two orthogonal arm cavities of length $L_x$ and $L_y$.  Notice that the distance from the beamsplitter to the input couplers for both arms denoted by $l_x$ and $l_y$ are independent variables, this is to account for the DARM offset which is analogous to the Schnupp asymmetry described in section \ref{michelson}.  After partially transmitting and reflecting at the beamsplitter, the fields will resonate in each of the arm cavities and obey the reflectivity relations described by equation \ref{r_FP}.  Upon recombining at the beamsplitter, the antisymmetric port electric field will be related to the arm fields by,
+		\begin{equation}
+		E_{\text{AS}} = \frac{1}{\sqrt{2}} [E_{x}^{\text{ARM}} + E_{y}^{\text{ARM}} ] 
+		\end{equation}
+		where $E_{i}^{\text{ARM}} = E(\omega) + [E(+ \omega_{\text{\tiny GW}}) + E(- \omega_{\text{\tiny GW}})] \sin{k\delta l } $ is the reflection coefficient for the x and y arms which contain the carrier and GW signal sidebands.  By inserting a DC microscopic length shift, $\delta l = l_x - l_y$, this allows for some carrier leakage field to propagate towards the antisymmetric port which creates a static reference to create the beat note with the signal sidebands.  The same effect can be achieved by introducing a static offset between the x and y arms; colloquially, this is referred to as DARM offset.
+		
+		For the carrier field, the amplitude of reflection is simple because the LIGO arms are a strongly overcoupled cavity operating on resonance therefore 
+		\begin{equation}
+			E(\omega) = \frac{E_0}{\sqrt{2}}  \bigg(-r_1 + \frac{t_1^2 r_2}{1-r_1 r_2} \bigg) \approx -\frac{E_0}{\sqrt{2}}
+		\end{equation}
+		
+		The sidebands are a different story because the modulation caused by the gravitational wave very slightly move the field off resonance.  Imagine the carrier circulating in the arms and then suddenly, a disturbance due to a gravitational wave displaces the end mirror at a frequency $\omega_\text{GW}$ by an amount $\Delta L$.   By using the same formalism as the expansion of a modulated field in equation \ref{modE}, the sideband fields can be described by,
+		\begin{equation}
+		\begin{aligned}
+			E(\pm \omega_{\text{\tiny GW}}) &= \bigg[ \frac{t_1}{1-r_1 r_2 e^{-2ikL}}\bigg] \frac{E_0}{\sqrt{2}} \bigg[\frac{t_1}{1-r_1 r_2 e^{-2i (kL \pm \frac{\omega_{\text{\tiny GW}}}{c} \Delta L)}} \bigg] ik\Delta L\\
+			& =  \bigg[ \frac{t_1^2}{1-r_1 r_2}\bigg]  \frac{E_0}{\sqrt{2}} \bigg[\frac{ 1}{1-r_1 r_2 e^{-2i \frac{\omega_{\text{\tiny GW}}}{c} \Delta L}} \bigg] ik\Delta L
+		\end{aligned}
+		\end{equation}
+		The first bracket is the circulating field of the carrier signal amplified by the Fabry Perot cavity and the second bracket is the circulating field slightly off resonance due to the gravitational wave frequency offset.  Setting the fields to resonate already simplifies the equation but it is also reasonable to approximate the gravitational wave as a weak signal and expand the exponential $e^{- 2i \frac{\omega_{\text{\tiny GW}}}{c} \Delta L} \approx 1 - 2i\frac{\omega_{\text{\tiny GW}}}{c} \Delta L$.  This transforms the signal sideband field into a simple form,
+		\begin{equation}
+		E(\pm \omega_{\text{\tiny GW}}) \approx \bigg[\frac{t_1}{1-r_1r_2}\bigg]^2 \, \frac{E_0}{\sqrt{2}} \, \bigg[\frac{1}{1 \pm i \frac{\omega_{\text{\tiny GW}}}{\omega_p}}\bigg] ik\Delta L
+		\end{equation}
+		where $\omega_p = \frac{1-r_1r_2}{r_1r_2}\frac{c}{2L}$ is the differential pole frequency.
+		
+		The photodiode signal at the antisymmetric port is proportional to the beat note between the carrier and signal sideband that is demodulated by a phase $\phi_{D}$,
+		\begin{equation}
+		\begin{aligned}
+			S &\propto  [E(\omega) E^*(+\omega_{\text{\tiny GW}}) +  E(-\omega_{\text{\tiny GW}}) E^*(\omega) ] \sin{(k\delta l)} \sin{(\phi_{D})} \\
+			  &\propto E_0^2 \; \frac{2\pi L}{\lambda}  \bigg[\frac{t_1}{1-r_1r_2}\bigg]^2 \bigg[\frac{1}{1 - i \frac{\omega_{\text{\tiny GW}}}{\omega_p}}\bigg] \sin{(k\delta l)} \sin{(\phi_{D})} h_{GW}
+		\end{aligned}
+		\end{equation}
+		where the length disturbance $\Delta L$ was transformed to originate from a gravitational wave signal $k \Delta L = \frac{2\pi L}{\lambda} h_{GW} $.
+		The response in this particular interferometer setup to the presence of differential length motion is linearly proportional to the gravitational wave amplitude as well as the input power $P_0 = E_0^2$, but there is also a frequency dependent component which is the same as a single Fabry-Perot arm that acts like a low pass filter above the corner frequency.
 
 		\subsection{Power-Recycled Fabry-Perot Interferometers}
 		Power Recycling
@@ -621,6 +660,85 @@
 		The Advanced LIGO's solution to the low frequency wall is comprised of seismic isolation platforms and multi-level suspensions.
 		
 		\subsubsection{Thermal Noise}
+		Brownian motion \cite{brownian_einstein} is the random movement of particles suspended in a fluid.  The LIGO test masses, which make up the 4 kilometer long Fabry Perot cavities, are a large macroscopic object but their constituent atoms are excited by the ambient temperature and have associated random motion. Those atoms are interconnected and allow for the propagation of an infinite number of elastic wave modes that contain random relative phases and the linear superposition of the modes create distortions that result in thermal noise.	
+		
+		There are two important points that the Fluctuation-Dissipation theorem is based off:
+		
+		1) When in thermal equilibrium, a system's response to random fluctuations will be the same as when a small force applied.
+		2) When a system dissipates energy, there exists a reverse process that allows energy to flow back into the system.
+		
+		A good way to start analyzing thermal noise is to consider a simple harmonic oscillator with mass $m$, that is in a thermal bath with a damping force, $F=-b\dot{x}(t)$.
+		\begin{equation}
+		\ddot{x}(t) + \gamma \dot{x}(t) + \omega_{0}^2 x(t) = F/m
+		\end{equation}
+		Here, $\gamma = b/m$ and the force, $F$, can be described by white noise.  In this case, the force represents work being done on the system by the external world whereas the damping factor is the release of the system's energy to the outside world.  By taking the Fourier transform, the equation of motion becomes
+		\begin{equation}\label{harmonic}
+		\tilde{x}(f) = \frac{\tilde{F}(f)}{m} \; \frac{1}{\omega^2 +i \gamma \omega + \omega_{0}^2} 
+		\end{equation}
+		This implies that the spectral density for viscous damping is
+		\begin{equation}\label{svis}
+		S_{Vis} = \frac{S_F}{m^2} \; \frac{1}{(\omega^2 -\omega_{0}^2)^2 + (\gamma\omega)^2}
+		\end{equation}
+		Because the noise is due to a thermal bath, the integrated power over all frequencies must satisfy this equation
+		\begin{equation}
+		\frac{1}{2} \int_{-\infty}^{\infty} S_{Vis} (\omega) \frac{\text{d}\omega}{2\pi} = \frac{k_B T}{m\omega_{0}^2}
+		\end{equation}
+		where $k_B$ is the familiar Boltzmann's constant and $T$ is the ambient temperature.  Solving the integral and plugging the result for $S_F$ back into the equation \ref{svis} gives the power spectrum for viscous damping,
+		\begin{equation}\label{vis}
+		S_{Vis} = \frac{4k_B T \gamma}{m} \frac{1}{(\omega^2 - \omega_{0}^2)^2 + (\gamma\omega)^2}
+		\end{equation}
+		This equation shows that for three different frequency regimes, the response can vary wildly.
+		\begin{subequations}
+			\begin{equation}
+			\omega<< \omega_{0} \rightarrow S_{vis} = \frac{4k_B T}{m Q \omega_{0}^3}
+			\end{equation}
+			\begin{equation}
+			\omega \approx \omega_{0} \rightarrow S_{vis} = \frac{4k_B T}{m \omega_{0}^3} Q
+			\end{equation}
+			\begin{equation}
+			\omega >> \omega_{0} \rightarrow S_{vis} = \frac{4k_B T}{m Q} \frac{\omega_0}{\omega^4} 
+			\end{equation}
+		\end{subequations}
+		where $Q=\omega_{0}/\gamma$ is commonly known as the quality factor of a resonator.  Qualitatively, this is directly proportional to the resonance height and its thinness.  Figure [visthermalnoise] shows the resultant frequency dependent power spectrum for a few different quality factors, for higher $Q$ systems the amount of noise contribution from thermal noise is reduced at frequencies above the resonance.  Another commonly used definition of the quality factor is the amount of energy loss per cycle, if the $Q$ of a system is high, then the amount of energy loss per oscillation is very small and will take a longer time returning to equilibrium.  A good description of the quality factor and its application to gravitational wave detectors can be found in section 7.5 of \cite{Saulson}.
+		
+		As system's mode number increases, the previous analysis becomes very difficult to solve analytically. However, the connection between a damped harmonic oscillator's energy loss and power spectrum can be described generically using the Fluctuation Dissipation Theorem,
+		\begin{equation}\label{FD}
+		S_x(f) = \frac{k_B T}{\pi^2 f^2} \vert \operatorname{\mathbb{R}e} (Y(f)) \vert
+		\end{equation}
+		where$Y(f)$ is the complex mechanical admittance (inverse of the impedance) of a system. The physical interpretation of equation \ref{FD} can be viewed as a tunnel of energy between a system of interest and the outside world.  If there is an ability to couple energy from one system to another via some process, then the reverse must be true as well. This subtle but powerful statement can be applied generally.  For example, a resistor which is able to dissipate thermal energy when current is flowing through it will convert random external temperature fluctuations into stray currents that results in $Johnson$ $Noise$.
+		
+		The mechanical admittance of a system is defined as $Y(f) = \dot{x}(f)/F(f)$, which can be written down directly for a damped harmonic oscillator using equation \ref{harmonic},
+		\begin{equation}
+			\begin{aligned}
+			\frac{\dot{x}(f)}{F} &= \frac{i \omega}{m} \frac{1}{\omega_{0}^2 - \omega^2 +i\gamma \omega}\\
+								 &= \frac{i\omega}{m} \frac{(\omega_{0}^2 - \omega^2 - i \gamma \omega)}{(\omega_0^2 - \omega^2)^2 + (\gamma \omega)^2}
+			\end{aligned}
+		\end{equation}
+		and by plugging this into the fluctuation dissipation theorem, the power spectral density matches equation \ref{vis} for the viscous damping.  To extend the usage further, consider the thermal noise from a solid which has some thermoelastic dissipation from an internal mode given by $F_{diss} = -k(1+\phi_L) x(t) $ where the phase term comes from the lag between applied force and the system's response to said force.  By solving Newton's second law with this new damping term, the displacement spectrum becomes 
+		\begin{equation}
+		\tilde{x}(f) =  \frac{\tilde{F}}{m} \; \frac{1}{(1 + i\phi_L ) \omega_{0}^2 - \omega^2 }
+		\end{equation}
+		Unlike the previous example of viscous damping, the integral for thermoelastic dissipation only holds for some frequency regime but implementing the fluctuation dissipation theorem leads directly to the noise power spectrum,
+		\begin{equation}
+			S_{TD}(f) =  \frac{4k_B T \omega_{0}^2 \phi_L}{m \omega} \frac{1}{(\omega^2 - \omega_{0}^2)^2 + (\omega_{0}\phi_L)^2}
+		\end{equation}
+		The frequency response will also be different compared to viscoelastic dissipation,
+		\begin{subequations}
+			\begin{equation}
+			\omega<< \omega_{0} \rightarrow S_{vis} = \frac{4k_B T}{m Q \omega \omega_{0}^2}
+			\end{equation}
+			\begin{equation}
+			\omega \approx \omega_{0} \rightarrow S_{vis} = \frac{4k_B T}{m \omega_{0}^3} Q
+			\end{equation}
+			\begin{equation}
+			\omega >> \omega_{0} \rightarrow S_{vis} = \frac{4k_B T}{m Q} \frac{\omega_0^2}{\omega^5} 
+			\end{equation}
+		\end{subequations}
+		The structural damping formalism can also be applied to the suspension fibers which hold the 40 kilogram test masses[\cite{SaulsonThermalSus}, \cite{Saulson}] which yield a noise spectral density that contains resonances at a variety of frequencies.  The lower two modes consist of the pendulum and rocking modes, while starting at 500 hertz the violin modes will be seen.  In fact, the violin modes and their harmonics could get rung up from earthquakes and saturate the output mode cleaner's DC photodiodes so the must be actively damped in order to proceed towards nominal low noise.
+		
+		The largest contribution to the thermal noise for current interferometers do not stem from viscous damping, thermoelastic damping of the substrate, or internal friction of the suspension fibers, but rather from the thermal noise contributed by the dielectric coatings [\cite{HarryThermalCoat}] which cause phase noise at the high reflectivity surface of the mirrors.
+		
+		
 		Thermal Noise [\cite{SaulsonThermalNoise}]
 		
 		Suspension Thermal Noise \cite{SaulsonThermalSus}
@@ -631,6 +749,7 @@
 		
 		Thermal-Optical Noise[\cite{EvansBallmerThermalOptic}]
 		
+		Residual Viscous damping[\cite{Saulson}]
 		
 		\subsubsection{Newtonian Noise}
 		Although there are some noise sources that can be reduced using increasingly complicated techniques such as various levels of seismic isolation or quantum nondemolition devices as shown above. [\cite{SaulsonNewtonian} and \cite{ThorneNewtonian}].  Newtonian noise caused by fluctuating gravitational fields from the wave motion of the ground is one that cannot easily be reduced but possibly be measured and fed-forward or subtracted off-line.[\cite{DriggersNewtonian}]

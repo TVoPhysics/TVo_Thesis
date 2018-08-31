@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{38}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,13 @@ J.~Abadie et~al.
 \newblock {Sensitivity Achieved by the LIGO and Virgo Gravitational Wave
   Detectors during LIGO's Sixth and Virgo's Second and Third Science Runs}.
 \newblock \emph{arXiv}, 2012.
+
+\bibitem[Anderson(1984)]{Anderson}
+D.~Z. Anderson.
+\newblock Alignment of resonant optical cavities.
+\newblock \emph{Appl. Opt.}, 23\penalty0 (17):\penalty0 2944--2949, Sep 1984.
+\newblock \doi{10.1364/AO.23.002944}.
+\newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-23-17-2944}.
 
 \bibitem[Beijersbergen et~al.(1993)Beijersbergen, Allen, van~der Veen, and
   Woerdman]{BEIJERSBERGEN}
@@ -101,12 +108,19 @@ J.~C. {Driggers}, J.~{Harms}, and R.~X. {Adhikari}.
 \newblock \emph{\prd}, 86\penalty0 (10):\penalty0 102001, Nov. 2012.
 \newblock \doi{10.1103/PhysRevD.86.102001}.
 
-\bibitem[Einstein(1905)]{einstein}
+\bibitem[Einstein(1905{\natexlab{a}})]{brownian_einstein}
+A.~Einstein.
+\newblock Investigations on the theory of the brownian movement.
+\newblock \emph{Ann. der Physik}, 1905{\natexlab{a}}.
+\newblock URL
+  \url{http://www.physik.fu-berlin.de/\~{}kleinert/files/eins\_brownian.pdf}.
+
+\bibitem[Einstein(1905{\natexlab{b}})]{einstein}
 A.~Einstein.
 \newblock {Zur Elektrodynamik bewegter K{\"o}rper}. ({German}) [{On} the
   electrodynamics of moving bodies].
 \newblock \emph{Annalen der Physik}, 322\penalty0 (10):\penalty0 891--921,
-  1905.
+  1905{\natexlab{b}}.
 \newblock \doi{http://dx.doi.org/10.1002/andp.19053221004}.
 
 \bibitem[et~al(1989)]{NSFproposal}
@@ -169,6 +183,15 @@ G.~M. Harry, A.~M. Gretarsson, P.~R. Saulson, S.~E. Kittelberger, S.~D. Penn,
   2002.
 \newblock URL \url{http://stacks.iop.org/0264-9381/19/i=5/a=305}.
 
+\bibitem[Hefetz et~al.(1997)Hefetz, Mavalvala, and Sigg]{HefetzWFS}
+Y.~Hefetz, N.~Mavalvala, and D.~Sigg.
+\newblock Principles of calculating alignment signals in complex resonant
+  optical interferometers.
+\newblock \emph{J. Opt. Soc. Am. B}, 14\penalty0 (7):\penalty0 1597--1606, Jul
+  1997.
+\newblock \doi{10.1364/JOSAB.14.001597}.
+\newblock URL \url{http://josab.osa.org/abstract.cfm?URI=josab-14-7-1597}.
+
 \bibitem[Hild et~al.(2009)Hild, Grote, Degallaix, Chelkowski, Danzmann, Freise,
   Hewitson, Hough, Lück, Prijatelj, Strain, Smith, and Willke]{HildDCReadout}
 S.~Hild, H.~Grote, J.~Degallaix, S.~Chelkowski, K.~Danzmann, A.~Freise,
@@ -186,6 +209,13 @@ S.~A. Hughes and K.~S. Thorne.
 \newblock \emph{Phys. Rev. D}, 58:\penalty0 122002, Nov 1998.
 \newblock \doi{10.1103/PhysRevD.58.122002}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.58.122002}.
+
+\bibitem[Morrison et~al.(1994)Morrison, Meers, Robertson, and Ward]{Morrison}
+E.~Morrison, B.~J. Meers, D.~I. Robertson, and H.~Ward.
+\newblock Automatic alignment of optical interferometers.
+\newblock \emph{Appl. Opt.}, 33\penalty0 (22):\penalty0 5041--5049, Aug 1994.
+\newblock \doi{10.1364/AO.33.005041}.
+\newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-33-22-5041}.
 
 \bibitem[Mueller et~al.(2000)Mueller, ze~Shu, Adhikari, Tanner, Reitze, Sigg,
   Mavalvala, and Camp]{MuellerMM}
