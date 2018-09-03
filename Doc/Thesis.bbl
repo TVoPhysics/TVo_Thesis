@@ -1,4 +1,4 @@
-\begin{thebibliography}{38}
+\begin{thebibliography}{43}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -96,6 +96,13 @@ J.~L. Cervantes-Cota, S.~Galindo-Uribarri, and G.~F. Smoot.
 \newblock \doi{10.3390/universe2030022}.
 \newblock URL \url{http://www.mdpi.com/2218-1997/2/3/22}.
 
+\bibitem[Collaboration(2015)]{FritschelAdvancedLIGO}
+T.~L.~S. Collaboration.
+\newblock Advanced ligo.
+\newblock \emph{Classical and Quantum Gravity}, 32\penalty0 (7):\penalty0
+  074001, 2015.
+\newblock URL \url{http://stacks.iop.org/0264-9381/32/i=7/a=074001}.
+
 \bibitem[Collins(2004)]{CollinsGravity}
 H.~Collins.
 \newblock \emph{Gravitys shadow: the search for gravitational waves}.
@@ -143,13 +150,25 @@ L.~S. Finn.
 \newblock \emph{Phys. Rev.}, D53:\penalty0 2878--2894, 1996.
 \newblock \doi{10.1103/PhysRevD.53.2878}.
 
-\bibitem[Fritschel et~al.(2001)Fritschel, Bork, Gonz\'{a}lez, Mavalvala,
-  Ouimette, Rong, Sigg, and Zucker]{FritschelReadout}
+\bibitem[Fritschel et~al.(2001{\natexlab{a}})Fritschel, Bork, Gonz\'{a}lez,
+  Mavalvala, Ouimette, Rong, Sigg, and Zucker]{FritschelReadout}
 P.~Fritschel, R.~Bork, G.~Gonz\'{a}lez, N.~Mavalvala, D.~Ouimette, H.~Rong,
   D.~Sigg, and M.~Zucker.
 \newblock Readout and control of a power-recycled interferometric
   gravitational-wave antenna.
-\newblock \emph{Appl. Opt.}, 40\penalty0 (28):\penalty0 4988--4998, Oct 2001.
+\newblock \emph{Appl. Opt.}, 40\penalty0 (28):\penalty0 4988--4998, Oct
+  2001{\natexlab{a}}.
+\newblock \doi{10.1364/AO.40.004988}.
+\newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-40-28-4988}.
+
+\bibitem[Fritschel et~al.(2001{\natexlab{b}})Fritschel, Bork, Gonz\'{a}lez,
+  Mavalvala, Ouimette, Rong, Sigg, and Zucker]{Fritschel_Readout}
+P.~Fritschel, R.~Bork, G.~Gonz\'{a}lez, N.~Mavalvala, D.~Ouimette, H.~Rong,
+  D.~Sigg, and M.~Zucker.
+\newblock Readout and control of a power-recycled interferometric
+  gravitational-wave antenna.
+\newblock \emph{Appl. Opt.}, 40\penalty0 (28):\penalty0 4988--4998, Oct
+  2001{\natexlab{b}}.
 \newblock \doi{10.1364/AO.40.004988}.
 \newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-40-28-4988}.
 
@@ -209,6 +228,26 @@ S.~A. Hughes and K.~S. Thorne.
 \newblock \emph{Phys. Rev. D}, 58:\penalty0 122002, Nov 1998.
 \newblock \doi{10.1103/PhysRevD.58.122002}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.58.122002}.
+
+\bibitem[K. and D.(2015)]{kiwamu_freq1}
+I.~K. and S.~D.
+\newblock Frequency response of the aligo interferometer: part1.
+\newblock Technical report, California Institute of Technology, 2015.
+\newblock URL \url{https://dcc.ligo.org/LIGO-T1500325}.
+
+\bibitem[K. et~al.(2015{\natexlab{a}})K., D., and K.]{kiwamu_freq2}
+I.~K., S.~D., and K.~K.
+\newblock Frequency response of the aligo interferometer: part2.
+\newblock Technical report, California Institute of Technology,
+  2015{\natexlab{a}}.
+\newblock URL \url{https://dcc.ligo.org/LIGO-T1500461}.
+
+\bibitem[K. et~al.(2015{\natexlab{b}})K., D., and K.]{kiwamu_freq3}
+I.~K., S.~D., and K.~K.
+\newblock Frequency response of the aligo interferometer: part3.
+\newblock Technical report, California Institute of Technology,
+  2015{\natexlab{b}}.
+\newblock URL \url{https://dcc.ligo.org/LIGO-T1500559}.
 
 \bibitem[Morrison et~al.(1994)Morrison, Meers, Robertson, and Ward]{Morrison}
 E.~Morrison, B.~J. Meers, D.~I. Robertson, and H.~Ward.

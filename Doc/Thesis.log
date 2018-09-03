@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  30 AUG 2018 17:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  3 SEP 2018 14:42
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1996,7 +1996,7 @@ Appendix E.
 ! Undefined control sequence.
 <recently read> \prd 
                      
-l.110 
+l.117 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2016,14 +2016,14 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 6FA084555D4FCCACDDE5BB9F314621F8;4687.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 76480586FFCE59C4F33CC0C0AD49C9A1;2865.
+(rerunfilecheck)             Checksum: 499DE507A234F063022FD92FCDE0C77F;3164.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 18588 strings out of 493323
- 312810 string characters out of 3139066
- 404376 words of memory out of 3000000
- 21506 multiletter control sequences out of 15000+200000
+ 18624 strings out of 493323
+ 313543 string characters out of 3139066
+ 404701 words of memory out of 3000000
+ 21537 multiletter control sequences out of 15000+200000
  542663 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,19n,40p,10416b,487s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2046,9 +2046,9 @@ nts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Thesis.pdf (74 pages, 593468 bytes).
+Output written on Thesis.pdf (74 pages, 599653 bytes).
 PDF statistics:
- 1298 PDF objects out of 1440 (max. 8388607)
- 408 named destinations out of 1000 (max. 500000)
+ 1320 PDF objects out of 1440 (max. 8388607)
+ 413 named destinations out of 1000 (max. 500000)
  513 words of extra memory for PDF output out of 10000 (max. 10000000)
 

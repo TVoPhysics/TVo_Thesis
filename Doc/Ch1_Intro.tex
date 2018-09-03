@@ -255,7 +255,7 @@
 		
 		But the question remains, how does an interferometer explcitly measure $\Delta \phi$?
 		
-		If the input electric field of the interferometer is $E_0$, the beamsplitter will transmit $E_0 /2$ down the x-arm and reflect $E_0 /2$ down the y-arm.  By setting the beamsplitter to be the origin, the two plane waves traveling down their respective arms will have gathered a phase $\phi_i$. Then, upon reflecting off the end mirrors and returning to the beamsplitter, each of the electric fields can be described by these equations
+		If the input electric field of the interferometer is $E_0$, the beamsplitter will transmit $iE_0 /\sqrt{2}$ down the x-arm and reflect $E_0 /\sqrt{2}$ towards the y-arm.  By setting the beamsplitter to be the origin, the two plane waves traveling down their respective arms will have gathered a phase $\phi_i$. Then, upon reflecting off the end mirrors and returning to the beamsplitter where the x-arm reflects and the y-arm transmits to the output port. Each of the electric fields can be described by these equations
 			\begin{equation}
 			\begin{aligned}
 				E_{x} 	&=	\frac{i E_0}{2} e^{2i\phi_{x}}	
@@ -428,20 +428,20 @@
 		
 		
 		\subsection{Fabry-Perot Michelson}
-		Using an optical cavity to increase the number of bounces along the 4 kilometer arms will amplify the gravitational wave signal but it will also shape the frequency dependence of the sensitivity as well.  This has already been alluded to in section \ref{measuringGWs} where the overall increase in arm length will tune the response function of equation \ref{gwsinc}.  The same formalism can apply to integrate the use of Fabry-Perot arms into a Michelson interferometer and looking at the signal at the antisymmetric port as a function of gravitational wave frequency. Previously in section \ref{michelson}, it was shown that the RF detection technique required beating the sidebands with a carrier field containing the gravitational wave information.  However, this is not exclusively true because the signal sidebands beating with a reference carrier field could also be a valid way of measuring a signal of interest. In fact, Advanced LIGO employs a homodyne detection called DC readout \cite{FritschelReadout}. The idea is that the carrier field will resonant in the arms but will be slightly modulated due to a gravitational wave.  In effect, the carrier will have audio frequency sidebands imparted on the field shown in Figure[gwsb].  
+		Using an optical cavity to increase the number of bounces along the 4 kilometer arms will amplify the gravitational wave signal but it will also shape the frequency dependence of the sensitivity as well.  This has already been alluded to in section \ref{measuringGWs} where the overall increase in arm length will tune the response function of equation \ref{gwsinc}.  The same formalism can apply to integrate the use of Fabry-Perot arms into a Michelson interferometer and looking at the signal at the antisymmetric port as a function of gravitational wave frequency. Previously in section \ref{michelson}, it was shown that the RF detection technique required beating the sidebands with a carrier field containing the gravitational wave information.  However, this is not exclusively true because the signal sidebands beating with a reference carrier field could also be a valid way of measuring a signal of interest. In fact, Advanced LIGO employs a homodyne detection called DC readout \cite{FritschelReadout}\cite{FritschelAdvancedLIGO}. The idea is that the carrier field will resonant in the arms but will be slightly modulated due to a gravitational wave.  In effect, the carrier will have audio frequency sidebands imparted on the field shown in Figure[gwsb].  
 		
 		Figure [FPMichelson] shows an input electric field of $E_0$ incident on a 50/50 beamsplitter which then enters two orthogonal arm cavities of length $L_x$ and $L_y$.  Notice that the distance from the beamsplitter to the input couplers for both arms denoted by $l_x$ and $l_y$ are independent variables, this is to account for the DARM offset which is analogous to the Schnupp asymmetry described in section \ref{michelson}.  After partially transmitting and reflecting at the beamsplitter, the fields will resonate in each of the arm cavities and obey the reflectivity relations described by equation \ref{r_FP}.  Upon recombining at the beamsplitter, the antisymmetric port electric field will be related to the arm fields by,
 		\begin{equation}
 		E_{\text{AS}} = \frac{1}{\sqrt{2}} [E_{x}^{\text{ARM}} + E_{y}^{\text{ARM}} ] 
 		\end{equation}
-		where $E_{i}^{\text{ARM}} = E(\omega) + [E(+ \omega_{\text{\tiny GW}}) + E(- \omega_{\text{\tiny GW}})] \sin{k\delta l } $ is the reflection coefficient for the x and y arms which contain the carrier and GW signal sidebands.  By inserting a DC microscopic length shift, $\delta l = l_x - l_y$, this allows for some carrier leakage field to propagate towards the antisymmetric port which creates a static reference to create the beat note with the signal sidebands.  The same effect can be achieved by introducing a static offset between the x and y arms; colloquially, this is referred to as DARM offset.
+		where $E_{i}^{\text{ARM}} = E(\omega) \pm [E(+ \omega_{\text{\tiny GW}}) + E(- \omega_{\text{\tiny GW}})] \sin{k\delta l } $ is the reflection coefficient for the x and y arms which contain the carrier(first term) and GW signal sidebands(last two terms).  Intuitively, one can deduce that the antisymmetric port will only be sensitive to the differential motion between the arm cavities, which means the gravitational wave sidebands in the x-arm will be out of phase with the y-arm.  Also it is import to note that inserting a DC microscopic length shift, $\delta l = l_x - l_y$ allows for some carrier leakage field to propagate towards the antisymmetric port which creates a static reference to form a beat note with the signal sidebands.  The same effect can be achieved by introducing a static offset between the x and y arms; colloquially, this is referred to as DARM offset.
 		
 		For the carrier field, the amplitude of reflection is simple because the LIGO arms are a strongly overcoupled cavity operating on resonance therefore 
 		\begin{equation}
 			E(\omega) = \frac{E_0}{\sqrt{2}}  \bigg(-r_1 + \frac{t_1^2 r_2}{1-r_1 r_2} \bigg) \approx -\frac{E_0}{\sqrt{2}}
 		\end{equation}
 		
-		The sidebands are a different story because the modulation caused by the gravitational wave very slightly move the field off resonance.  Imagine the carrier circulating in the arms and then suddenly, a disturbance due to a gravitational wave displaces the end mirror at a frequency $\omega_\text{GW}$ by an amount $\Delta L$.   By using the same formalism as the expansion of a modulated field in equation \ref{modE}, the sideband fields can be described by,
+		The sidebands are a different story because the modulation caused by the gravitational wave slightly move the field off resonance.  Imagine the carrier circulating in the arms and then suddenly, a disturbance due to a gravitational wave displaces the end mirror at a frequency $\omega_\text{GW}$ by an amount $\Delta L$.   By using the same formalism as the expansion of a modulated field in equation \ref{modE}, the sideband fields can be described by,
 		\begin{equation}
 		\begin{aligned}
 			E(\pm \omega_{\text{\tiny GW}}) &= \bigg[ \frac{t_1}{1-r_1 r_2 e^{-2ikL}}\bigg] \frac{E_0}{\sqrt{2}} \bigg[\frac{t_1}{1-r_1 r_2 e^{-2i (kL \pm \frac{\omega_{\text{\tiny GW}}}{c} \Delta L)}} \bigg] ik\Delta L\\
@@ -454,19 +454,19 @@
 		\end{equation}
 		where $\omega_p = \frac{1-r_1r_2}{r_1r_2}\frac{c}{2L}$ is the differential pole frequency.
 		
-		The photodiode signal at the antisymmetric port is proportional to the beat note between the carrier and signal sideband that is demodulated by a phase $\phi_{D}$,
+		The photodiode signal at the antisymmetric port is proportional to the beat note between the carrier and signal sideband that is demodulated in the audio band with a phase $\phi_{D}$,
 		\begin{equation}
 		\begin{aligned}
-			S &\propto  [E(\omega) E^*(+\omega_{\text{\tiny GW}}) +  E(-\omega_{\text{\tiny GW}}) E^*(\omega) ] \sin{(k\delta l)} \sin{(\phi_{D})} \\
-			  &\propto E_0^2 \; \frac{2\pi L}{\lambda}  \bigg[\frac{t_1}{1-r_1r_2}\bigg]^2 \bigg[\frac{1}{1 - i \frac{\omega_{\text{\tiny GW}}}{\omega_p}}\bigg] \sin{(k\delta l)} \sin{(\phi_{D})} h_{GW}
+			S &\propto 2 [E(\omega) E^*(+\omega_{\text{\tiny GW}}) +  E(-\omega_{\text{\tiny GW}}) E^*(\omega) ] \sin{(k\delta l)} \sin{(\phi_{D})} \\
+			  &\propto E_0^2 \; \frac{8\pi L}{\lambda}  \bigg[\frac{t_1}{1-r_1r_2}\bigg]^2 \bigg[\frac{1}{1 - i \frac{\omega_{\text{\tiny GW}}}{\omega_p}}\bigg] \sin{(k\delta l)} \sin{(\phi_{D})} h_{\text{\tiny GW}}
 		\end{aligned}
 		\end{equation}
-		where the length disturbance $\Delta L$ was transformed to originate from a gravitational wave signal $k \Delta L = \frac{2\pi L}{\lambda} h_{GW} $.
+		where the length disturbance $\Delta L$ was transformed to originate from a gravitational wave signal $k \Delta L = \frac{2\pi L}{\lambda} h_{\text{\tiny GW}}$.
 		The response in this particular interferometer setup to the presence of differential length motion is linearly proportional to the gravitational wave amplitude as well as the input power $P_0 = E_0^2$, but there is also a frequency dependent component which is the same as a single Fabry-Perot arm that acts like a low pass filter above the corner frequency.
 
 		\subsection{Power-Recycled Fabry-Perot Interferometers}
-		Power Recycling
-		If the interferometer is operating such that the 4 km arms are exactly different in arms a pi over two times the wavelength, then the intensity of the light at antisymmetric port will be close to null.  This means the power from the arms will reflect back towards the input laser.  Ref[] shows the effect of adding a partially reflecting mirror to increase the optical gain of the Michaelson for the sidebands and carrier fields.
+		
+		If the interferometer is operating such that the 4 km arms are exactly different in arms a pi over two times the wavelength, then the intensity of the light at antisymmetric port will be close to null.  This means the power from the arms will reflect back towards the input laser.  Fritschel et al [\cite{Fritschel_Readout}] shows the effect of adding a partially reflecting mirror to increase the optical gain of the Michaelson for the sidebands and carrier fields.
 		
 		
 		
@@ -474,14 +474,13 @@
 		
 		\subsection{Dual-Recycled Fabry-Perot Interferometers}\label{DRMI}
 		
-		One of the biggest changes made between initial and advanced LIGO was the addition of a signal recycling mirror at the antisymmetric port shown in Figure []. This extra mirror allows an extra degree of freedom in shaping the sensitivity curve such.
+		One of the biggest changes made between initial and advanced LIGO was the addition of a signal recycling mirror at the antisymmetric port shown in Figure []. Previously, it was shown that the gravitational wave sensitivity was increased by adding a power recycling cavity to increase the effective input power into the Fabry Perot cavities.  Adding another mirror at the antisymmetric port to create a resonant cavity will shape the interferometer's response to gravitational waves.  This allows for some flexibility in optimizing the instrument for specific sources such as binary neutron stars, but it also creates a more broadband response at higher frequencies while allowing the arm cavity finesse and/or power recycling to impart more power. 
 		
 		
-		Figure comparing the three cases of increased sensitivity.
-		
-		References: [Kiwamu]
-		
-		\subsection{Fundamental Noise Sources}
+		Figure[ifoconfigs]
+
+		The previous sections only considered the effect of Fabry Perot cavities and recycling mirrors at the antisymmetric port due to a differential length change at the 4 kilometer arms but the Advanced LIGO interferometer has a few different degrees of a freedom which are actively controlled in length.  This means the signals sampling various ports will have contributions from one or more degrees of freedom.  A good reference for what is expected at the important ports such  as REFL, AS, and POP can be found in \cite{kiwamu_freq1} \cite{kiwamu_freq2} \cite{kiwamu_freq3}
+		\subsection{Fundamental Noise Sources}\label{funnoise}
 		Ref: Evan Hall, GWINC
 		The proceeding sections describe ways to increase the response of LIGO to gravitational waves; equally as important is the science of characterizing and reducing the noise contributions from everything else.
 		
