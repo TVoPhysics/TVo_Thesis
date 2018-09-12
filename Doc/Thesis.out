@@ -45,20 +45,21 @@
 \BOOKMARK [2][-]{subsection.5.4.3}{Fabry-Perot Contrast Defect}{section.5.4}% 45
 \BOOKMARK [1][-]{section.5.5}{Hot vs. Cold Interferometers}{chapter.5}% 46
 \BOOKMARK [2][-]{subsection.5.5.1}{Thermal Lensing}{section.5.5}% 47
-\BOOKMARK [0][-]{chapter.6}{Solutions for Detector Upgrades}{}% 48
-\BOOKMARK [1][-]{section.6.1}{Sensors}{chapter.6}% 49
-\BOOKMARK [1][-]{section.6.2}{High Sensitivity Telescope}{chapter.6}% 50
-\BOOKMARK [1][-]{section.6.3}{A Global Active Wavefront Control Scheme}{chapter.6}% 51
-\BOOKMARK [2][-]{subsection.6.3.1}{Hard and Soft Mode Matching}{section.6.3}% 52
-\BOOKMARK [0][-]{section*.24}{Appendices}{}% 53
-\BOOKMARK [0][-]{Appendix.a.A}{Resonator Formulas}{}% 54
-\BOOKMARK [0][-]{Appendix.a.B}{Hermite Gauss Normalization}{}% 55
-\BOOKMARK [0][-]{Appendix.a.C}{Bullseye and Quadrant Photodiode Characterization}{}% 56
-\BOOKMARK [1][-]{section.a.C.1}{Quadrant Photodiodes \(QPD\)}{Appendix.a.C}% 57
-\BOOKMARK [1][-]{section.a.C.2}{Bullseye Photodiodes}{Appendix.a.C}% 58
-\BOOKMARK [2][-]{subsection.a.C.2.1}{Width}{section.a.C.2}% 59
-\BOOKMARK [2][-]{subsection.a.C.2.2}{Pitch}{section.a.C.2}% 60
-\BOOKMARK [2][-]{subsection.a.C.2.3}{Yaw}{section.a.C.2}% 61
-\BOOKMARK [2][-]{subsection.a.C.2.4}{RF}{section.a.C.2}% 62
-\BOOKMARK [0][-]{Appendix.a.D}{Overlap of Gaussian Beams}{}% 63
-\BOOKMARK [0][-]{Appendix.a.E}{Extending the ABCD Formalism}{}% 64
+\BOOKMARK [1][-]{section.5.6}{Tuning Thermal Compensation for LIGO}{chapter.5}% 48
+\BOOKMARK [0][-]{chapter.6}{Solutions for Detector Upgrades}{}% 49
+\BOOKMARK [1][-]{section.6.1}{Sensors}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.2}{High Sensitivity Telescope}{chapter.6}% 51
+\BOOKMARK [1][-]{section.6.3}{A Global Active Wavefront Control Scheme}{chapter.6}% 52
+\BOOKMARK [2][-]{subsection.6.3.1}{Hard and Soft Mode Matching}{section.6.3}% 53
+\BOOKMARK [0][-]{section*.23}{Appendices}{}% 54
+\BOOKMARK [0][-]{Appendix.a.A}{Resonator Formulas}{}% 55
+\BOOKMARK [0][-]{Appendix.a.B}{Hermite Gauss Normalization}{}% 56
+\BOOKMARK [0][-]{Appendix.a.C}{Bullseye and Quadrant Photodiode Characterization}{}% 57
+\BOOKMARK [1][-]{section.a.C.1}{Quadrant Photodiodes \(QPD\)}{Appendix.a.C}% 58
+\BOOKMARK [1][-]{section.a.C.2}{Bullseye Photodiodes}{Appendix.a.C}% 59
+\BOOKMARK [2][-]{subsection.a.C.2.1}{Width}{section.a.C.2}% 60
+\BOOKMARK [2][-]{subsection.a.C.2.2}{Pitch}{section.a.C.2}% 61
+\BOOKMARK [2][-]{subsection.a.C.2.3}{Yaw}{section.a.C.2}% 62
+\BOOKMARK [2][-]{subsection.a.C.2.4}{RF}{section.a.C.2}% 63
+\BOOKMARK [0][-]{Appendix.a.D}{Overlap of Gaussian Beams}{}% 64
+\BOOKMARK [0][-]{Appendix.a.E}{Extending the ABCD Formalism}{}% 65

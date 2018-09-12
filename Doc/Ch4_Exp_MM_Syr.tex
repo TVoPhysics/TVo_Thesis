@@ -105,8 +105,8 @@ The equation above only shows a relation between the Rayleigh ranges and the sep
 Mueller et al \cite{MuellerMM} showed that the error signal from mode mismatch could be extracted by using an RF detection scheme. Using this formalism, the error signal on a quadrant photodetector from a mismatched cavity after a mode converter is 
 	\begin{equation}
 	\begin{aligned}
-	S 	&\propto \sin(\Omega t) \text{Im} \bigg\{ \epsilon^{*} \bigg[\int_{A1,A3} \hat{M}^{\dagger}_{00} \bra{U_{00}} \big[\hat{M}^{\dagger}_{20} \ket{20} + \hat{M}^{\dagger}_{02} \ket{02}\big]  \,-\, \int_{A2,A4} \hat{M}^{\dagger}_{00} \bra{U_{00}} (\hat{M}^{\dagger}_{20} \ket{20} + \hat{M}^{\dagger}_{02} \ket{02}) \bigg] \bigg\}\\
-	&\propto \sin(\Omega t) \text{Im} \bigg\{ \epsilon^{*} \bigg[\int_{A1,A3} \bra{U_{00}} \big(\ket{20} - \ket{02}\big)  \,-\, \int_{A2,A4}  \bra{U_{00}} ( \ket{20} - \ket{02}) \bigg] \bigg\}
+	S 	&\propto \sin(\Omega t) \text{Im} \bigg\{ \epsilon^{*} \bigg[\int_{A1,A3} \hat{M}^{\dagger}_{00} \bra{U_{00}} \big[\hat{M}^{\dagger}_{U_{20}} \ket{U_{20}} + \hat{M}^{\dagger}_{U_{02}} \ket{U_{02}}\big]  \,-\, \int_{A2,A4} \hat{M}^{\dagger}_{00} \bra{U_{00}} (\hat{M}^{\dagger}_{20} \ket{U_{20}} + \hat{M}^{\dagger}_{02} \ket{U_{02}}) \bigg] \bigg\}\\
+	&\propto \sin(\Omega t) \text{Im} \bigg\{ \epsilon^{*} \bigg[\int_{A1,A3} \bra{U_{00}} \big(\ket{U_{20}} - \ket{U_{02}}\big)  \,-\, \int_{A2,A4}  \bra{U_{00}} ( \ket{U_{20}} - \ket{U_{02}}) \bigg] \bigg\}
 	\end{aligned}
 	\end{equation}
 In the above equation, $\hat{C}_{ij} $ was chosen with $\Delta \Omega = \pi/2$ and $\hat{R}_{ij}$ should rotate the beams such that the intensities in Figure {ModeConverter} are aligned with the quadrant photodiodes.
