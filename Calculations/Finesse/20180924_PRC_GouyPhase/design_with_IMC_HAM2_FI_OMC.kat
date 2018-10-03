@@ -97,77 +97,34 @@
 ###########################################################################
 # Laser and input optics
 l L0 125 0.0 0.0 ni
-bs jitter 1 0 0 0 ni n0 dump dump
+bs jitter 1 0 0 0 ni nLaserOut dump dump
 
-s lmod1 1 n0 n1
+tem L0 0 0 1.0 0.0 
+tem L0 0 1 0.0 0.0
+tem L0 1 0 0.0 0.0
+
+
+maxtem 2
+
+#s lmod1 1 n0 n1
 
 # modulators for core interferometer sensing - Advanced LIGO, CQG, 2015 
 # http://iopscience.iop.org/article/10.1088/0264-9381/32/7/074001/meta#cqg507871s4-8
 # 9MHz (CARM, PRC, SRC loops)
-const f1 9099471
-const f2 45497355
+#const f1 9099471
+#const f2 45497355
 
-mod mod1 $f1 0.18 1 pm n1 n2
-s lmod2 1 n2 n3
+#mod mod1 $f1 0.18 1 pm n1 n2
+#s lmod2 1 n2 n3
 
 # 45MHz (MICH, SRC loops)
-mod mod2 $f2 0.18 1 pm n3 nLaserOut
+#mod mod2 $f2 0.18 1 pm n3 nLaserOut
 ###########################################################################
 %%% FTend laser
 
 %%% FTblock IMC
 #####################################################################################
-s sIMCin 0 nLaserOut nMC1in
-
-bs1 MC1 6000u 0 0 44.59 nMC1in nMC1refl nMC1trans nMC1fromMC3
-s sMC1_MC2 16.24057 nMC1trans nMC2in
-
-bs1 MC2 0 0u 0 0.82 nMC2in nMC2refl nMC2trans dump
-s sMC2_MC3 16.24057 nMC2refl nMC3in
-attr MC2 Rc 27.24
-
-bs1 MC3 6000u 0 0 44.59 nMC3in nMC3refl nMC3trans nMCreturn_refl
-s sMC3substrate 0.0845 $nsilica nMC3trans nMC3ARin
-bs2 MC3AR 0 0 0 28.9661 nMC3ARin dump nIMCout dump
-
-s sMC3_MC1 0.465 nMC3refl nMC1fromMC3
-#####################################################################################
-%%% FTend IMC
-
-%%% FTblock HAM2
-#####################################################################################
-s sHAM2in 0.4282 nIMCout nIM11
-
-# IM1 a.k.a. SM1
-bs1 IM1 0 0 0 53 nIM11 nIM12 dump dump
-
-s sIM1_IM2 1.2938 nIM12 nIM21
-
-# IM2 a.k.a. PMMT1
-bs1 IM2 0 0 0 7 nIM21 nIM22 dump dump
-attr IM2 Rc 12.8
-
-s sIM2_FI 0.260 nIM22 nFI1
-
-# Input faraday isolator
-dbs FI nFI1 nFI2 nFI3 nREFL
-
-s sFI_IM3 0.910 nFI3 nIM31
-
-# IM3 a.k.a PMMT2
-bs1 IM3 0 0 0 7.1 nIM31 nIM32 dump dump
-attr IM3 Rc -6.24
-
-s sIM3_IM4 1.210 nIM32 nIM41
-
-# a.k.a SM2
-bs1 IM4 0 0 0 45 nIM41 nHAM2out dump dump
-#####################################################################################
-%%% FTend HAM2
-
-%%% FTblock PRC
-###########################################################################
-s sPRCin 0.4135 nHAM2out nPRM1
+s sPRCin 0.4135 nLaserOut nPRM1
 
 # PRM
 # AR surface
@@ -395,14 +352,14 @@ s lCM2_IC 0.2842 1 nOMC_CM2b nOMC_ICd
 
 %%% FTblock cavities
 ###########################################################################
-cav cavIMC MC2 nMC2in MC2 nMC2refl 
-cav cavXARM ITMX nITMX2 ETMX nETMX1
-cav cavYARM ITMY nITMY2 ETMY nETMY1
-cav cavSRX SRM nSRM1 ITMX nITMXs2
-cav cavSRY SRM nSRM1 ITMY nITMYs2
+#cav cavIMC MC2 nMC2in MC2 nMC2refl 
+#cav cavXARM ITMX nITMX2 ETMX nETMX1
+#cav cavYARM ITMY nITMY2 ETMY nETMY1
+#cav cavSRX SRM nSRM1 ITMX nITMXs2
+#cav cavSRY SRM nSRM1 ITMY nITMYs2
 cav cavPRX PRM nPRM2 ITMX nITMXs2
 cav cavPRY PRM nPRM2 ITMY nITMYs2
-cav cavOMC OMC_IC nOMC_ICc OMC_IC nOMC_ICd
+#cav cavOMC OMC_IC nOMC_ICc OMC_IC nOMC_ICd
 
 ###########################################################################
 %%% FTend cavities
@@ -427,7 +384,7 @@ const th_f 34.5k
 %%% FTblock tunings
 ###########################################################################
 const phi_SRM 90.0
-const phi_PRM 0.0
+const phi_PRM 120.0
 const phi_ITMX 0.0
 const phi_ITMY 0.0
 const phi_ETMX 0.0

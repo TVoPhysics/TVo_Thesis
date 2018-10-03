@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  11 SEP 2018 16:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  2 OCT 2018 17:44
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1942,66 +1942,53 @@ Chapter 5.
 
 
 
-] [52] [53]
+] [52] [53] [54] [55]
 
-Package natbib Warning: Citation `hiro_thermal_lens' on page 54 undefined on in
-put line 96.
+Package natbib Warning: Citation `Lawrence_TCS' on page 56 undefined on input l
+ine 176.
 
-[54]
-
-Package natbib Warning: Citation `hello_vinet' on page 55 undefined on input li
-ne 111.
-
-
-Package natbib Warning: Citation `ramette_analytical' on page 55 undefined on i
-nput line 113.
-
-
-Package natbib Warning: Citation `wang_thermalmodel' on page 55 undefined on in
-put line 115.
-
-) [55]
+[56]) [57]
 \openout2 = `Ch6_Det_Up.aux'.
 
  (Ch6_Det_Up.tex
 Chapter 6.
-) [56
+) [58
 
 
 
-] [57]
+] [59]
 \openout2 = `Appendix.aux'.
 
- (Appendix.tex [58
+ (Appendix.tex [60
 
 
 
 
 ]
 Appendix A.
-[59
+[61
 
-] [60] [61]
+] [62] [63]
 Appendix B.
-[62
-
-] [63]
-Appendix C.
 [64
 
-] [65] [66] [67]
-Appendix D.
-[68
+] [65]
+Appendix C.
+[66
 
-] [69]
+] [67] [68] [69]
+Appendix D.
+[70
+
+] [71]
 Appendix E.
-) [70
+) [72
 
 ] (Thesis.lof)
 \tf@lof=\write5
 \openout5 = `Thesis.lof'.
 
- [71
+ [73
 
 
 ] (Thesis.lot)
@@ -2012,15 +1999,15 @@ Appendix E.
 \tf@brf=\write7
 \openout7 = `Thesis.brf'.
 
- [72
+ [74
 
-] [73
+] [75
 
 ]
 ! Undefined control sequence.
 <recently read> \prd 
                      
-l.139 
+l.159 
       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2028,31 +2015,31 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[74] [75] [76] [77])
+[76] [77] [78] [79] [80])
 
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
-[78]
+[81]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
  (Thesis.aux (Ch1_Intro.aux) (Ch2_Intro_to_MM.aux) (Ch3_Sim_MM_Finesse.aux) (Ch
 4_Exp_MM_Syr.aux) (Ch5_MM_at_LHO.aux) (Ch6_Det_Up.aux) (Appendix.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7F7565D1495771B6CB71FFCDDB23C16E;4771.
+(rerunfilecheck)             Checksum: 533EC0F6445C97FD0A2EEA01588608B7;5015.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 15FD2C297D945AF00E028973119D6F20;3704.
+(rerunfilecheck)             Checksum: 19A25738C8653E073BC7BF6AB7B186BC;4185.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 18704 strings out of 493323
- 314950 string characters out of 3139066
- 406703 words of memory out of 3000000
- 21592 multiletter control sequences out of 15000+200000
+ 18766 strings out of 493323
+ 316118 string characters out of 3139066
+ 407368 words of memory out of 3000000
+ 21637 multiletter control sequences out of 15000+200000
  542663 words of font info for 68 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,19n,40p,10416b,517s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,19n,40p,10416b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files
@@ -2072,9 +2059,9 @@ nts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Thesis.pdf (80 pages, 627488 bytes).
+Output written on Thesis.pdf (83 pages, 648407 bytes).
 PDF statistics:
- 1407 PDF objects out of 1440 (max. 8388607)
- 438 named destinations out of 1000 (max. 500000)
- 521 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1476 PDF objects out of 1728 (max. 8388607)
+ 455 named destinations out of 1000 (max. 500000)
+ 545 words of extra memory for PDF output out of 10000 (max. 10000000)
 

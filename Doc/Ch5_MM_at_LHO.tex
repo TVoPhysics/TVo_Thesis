@@ -77,10 +77,10 @@
 	The reasoning for this is subtle and described in Section \ref{TL_lensing}.
 	
 	
-	\section{Hot vs. Cold Interferometers}
+	\section{Hot vs. Cold Interferometers}\label{hotcoldifo}
 		In the previous section, the contrast defect calculations did not include the self-heating thermal effects that will be present when the interferometer reaches its nominal state.
 		When fully operational, the arm cavities can have a few hundred kilowatts of laser power resonating while in observing mode. 
-	An approximate but useful description of the total arm power in each arm is
+		An approximate but useful description of the total arm power in each arm is
 	\begin{equation}
 		P_{\text{ARM}} \approx \frac{1}{2} (g_{PRC} * g_{ARM} * P_{IN})
 	\end{equation}
@@ -89,24 +89,109 @@
 		A fraction of that power, approximately .5 PPM, will be absorbed by the high reflectivity surface, hence, creating an additional thermal lens which changes the radius of curvature.  
 		Additionally, the thermo-refactive index will change as a function of absorbed temperature \cite{winkler_thermaldist}.
 		By changing the curvature of the test masses, the resonant Gaussian mode will also change its profile.
-		For the substrate lensing, the sideband signals will be most adversely affected because the carrier field will see a cancellation of the distortion from the promptly reflected beam (see Section [])
-	
+		For the substrate lensing, the sideband signals will be most adversely affected because the carrier field will see a cancellation of the distortion from the promptly reflected beam (see Section \ref{TL_lensing})
 	
 	\subsection{Thermal Lensing}\label{TL_lensing}
 	\cite{hiro_thermal_lens}
 		As seen in Section\ref{DRMI}, the sideband and carrier frequencies propagate differently in the interferometer, which means their fields will see different lensing from thermal effects.
-		To understand how the fields change quantitatively, the easiest way is to invoke the ABCD transfer matrix approach for the carrier and sideband fields individually.
+		To understand how the fields change quantitatively, the easiest way is to invoke the ABCD transfer matrix approach to see how the phases change as they propagate through the optical system.
 		\subsubsection{Carrier}
-		Consider Figure[], a two-mirror optical system which has an input beam, $E_{in}$, that has a portion promptly reflected off the input mirror to create $E_{prompt}$ 
+		Consider Figure[FabyPerotLens], a two-mirror optical system which has an input carrier beam, $E^c_{in}$, that has a portion promptly reflected off the input mirror to create $E^c_{p}$
+		\begin{equation}
+		\ket{E^{c}_{p}} = \hat{M}^{c}_{p} \ket{E^{c}_{in}}
+		\end{equation}
+		The prompt reflection is made up of a beam incident on a converging lens(-) from the substrate and a single reflection from the input coupler's convex(+) surface, therefore, the transfer matrix is
+		\begin{equation}
+		\hat{M}^{c}_{p} = 
+		\begin{bmatrix}
+						1 	&	0 
+		\\ 	-\frac{1}{f} 	&	1
+		\end{bmatrix}
+		\begin{bmatrix}
+						1 	&	0 
+		\\ 	+\frac{2}{R} 	&	1
+		\end{bmatrix}
+		\begin{bmatrix}
+						1 	&	0 
+		\\ 	-\frac{1}{f} 	&	1
+		\end{bmatrix}
+		\end{equation}
+		where $R$ is the radius of curvature of the high reflectivity surface and $f$ is the focal length of the mirror substrate. In general, this can be a combination of the static lens and any thermal effects which create additional (intentional or non-intentional) lensing.
 		
 		\begin{equation}
-		\ket{E^{carrier}_{prompt}} = \hat{M}_{carrier}^{prompt} \ket{E^{carrier}_{in}}
+		 \ket{E^{c}_{p}}=
+		 \hat{M}^{c}_{p}
+		 \begin{bmatrix}
+		 					1  
+		 \\ 	\frac{1}{q_{\text{in}}}
+		 \end{bmatrix}
+		 =
+		 \begin{bmatrix}
+		 1  
+		 \\ 	\frac{1}{q_{\text{in}}} + 2 \big(\frac{1}{R} - \frac{1}{f}\big)
+		 \end{bmatrix}
+		 =
+		 \begin{bmatrix}
+		 1  
+		 \\ 	\frac{1}{q_{\text{p}}}
+		 \end{bmatrix}
 		\end{equation}
+		In addition, there is also a circulating field inside the cavity which leaks out can be denoted by $E^c_{\ell}$ which exits with the input coupler's radius of curvature and sees a single pass through the substrate lens,
+		\begin{equation}
+		\ket{E^c_{\ell}} = 		 
+		\begin{bmatrix}
+		1 	&	0 
+		\\ 	-\frac{1}{f} 	&	1
+		\end{bmatrix}
+		\begin{bmatrix}
+		1  
+		\\ 	\frac{1}{R}
+		\end{bmatrix}
+		=
+		\begin{bmatrix}
+		1  
+		\\ 	\frac{1}{R} - \frac{1}{f}
+		\end{bmatrix}
+		\end{equation}
+		The total reflected beam is a summation of the prompt and leaked cavity fields.  LIGO uses arms which are highly over-coupled optical cavities so the promptly reflected amplitude is $\vert E^c_p \vert \approx \vert E_{\text{in}} \vert$ and using equation \ref{c_FP}, the leakage amplitude is $\vert E^c_\ell \vert \approx -2\vert E_{\text{in}} \vert$.  Putting all this together, the total reflected field of the carrier is
+		\begin{equation}
+		\begin{aligned}
+		E^c_{\text{REFL}} 	&= E^c_{\ell} + E^c_p \\
+							&= E_{\text{in}} \bigg[ \exp \bigg(\frac{-ik r^2}{2q_p}\bigg) - 2  \text{exp} \bigg(\frac{-ik r^2}{2q_{\ell}}\bigg) \bigg]\\
+							&\approx E_{\text{in}} \bigg[ -1 - \frac{ikr^2}{2} \bigg( \frac{1}{q_p} - \frac{2}{q_\ell} \bigg) \bigg]\\
+							&\approx -E_{\text{in}} \exp\bigg(\frac{ikr^2}{2q_{\text{in}}}\bigg) 
+		\end{aligned} 
+		\end{equation}
+		This shows that the carrier field will be reflected minus the original amplitude and the same absolute curvature, however, now the beam is diverging instead of converging.  The amazing part is that the end result is independent of the substrate lensing.
+		
 		\subsubsection{Sidebands}
+		Using the same formalism as the carrier fields, the sidebands will have the same input curvature, however, they do not resonate in the arms and so there is no cavity leakage field.  Therefore, the sidebands will see the phase change due to the substrate lens and this has very important consequences on the sideband build up within the power recycling cavity.
+		
 		\subsubsection{GW Signal}
-		As mentioned in Section \ref{michelson}, LIGO's gravitational wave readout currently employs a DC readout scheme that extracts the signal by beating the carrier field with the sidebands created by the gravitational wave.
+		As mentioned in Section \ref{DRMI}, LIGO's gravitational wave readout currently employs a DC readout scheme that extracts the signal by beating the carrier field with the audio frequency sidebands created by the gravitational wave.  Although the carrier field was shown to be immune to thermal lensing, the gravitational wave sideband field will see a single-passed lensing effect as it propagates out of the cavity and towards the beamsplitter.  If there is a differential lensing, the signal recycling cavity will see an effective thermal lens $\text{TL}_{-}$
 	
 	\section{Tuning Thermal Compensation for LIGO}
+	Goals: Locking help with preloading
+	
+	\cite{Lawrence_TCS}
+	
+	\cite{AWC_current}
+	
+	As mentioned in section \ref{hotcoldifo}, the amount of circulating power in each of the arms can be hundreds of kilowatts and even with absorption amounts between $0.2-0.5$ parts per million, the induced curvature change can be significant.  The Thermal Compensation System (TCS) was developed to correct the radii of curvature by applying heat to compensate the interferometer's main beam.
+
+	\subsection{Hartmann Wavefront Sensors}
+	All estimates of curvature change due to heating by the interferometer depend linearly on the absorption and this can be quite difficult when the overall average is below the PPM level.  The Hartmann Wavefront Sensors was a system developed by Caltech and Adelaide which uses a CCD to sense the wavefront distortions created by heating.
+	
+	\cite{AWC_current}
+	
+	\cite{Brooks_OffAxis}
+	
+	\cite{Veitch_HWS_ALIGO}
+	
+	\cite{Brooks_HWS}
+	
+	\subsection{CO2 and Ring Heater Commissioning}
+	Thermal Pre-loading
 	
 	\cite{hello_vinet}
 	
@@ -116,4 +201,6 @@
 	
 	\cite{winkler_thermaldist}
 	
-	\cite{AWC_current}
+	
+	\subsection{SR3 Thermal Actuator}
+	Round trip gouy phase of the SRC affecting 72 MHz wavefront sensing.

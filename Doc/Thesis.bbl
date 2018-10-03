@@ -1,4 +1,4 @@
-\begin{thebibliography}{51}
+\begin{thebibliography}{58}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -56,6 +56,26 @@ E.~D. Black.
 D.~G. Blair.
 \newblock \emph{The detection of gravitational waves}.
 \newblock Cambridge University Press, 2005.
+
+\bibitem[Brooks et~al.(2005)Brooks, Veitch, Munch, and Kelly]{Brooks_OffAxis}
+A.~Brooks, P.~Veitch, J.~Munch, and T.-L. Kelly.
+\newblock An off-axis hartmann sensor for the measurement of absorption-induced
+  wavefront distortion in advanced gravitational wave interferometers.
+\newblock \emph{General Relativity and Gravitation}, 37\penalty0 (9):\penalty0
+  1575--1580, Sep 2005.
+\newblock ISSN 1572-9532.
+\newblock \doi{10.1007/s10714-005-0137-5}.
+\newblock URL \url{https://doi.org/10.1007/s10714-005-0137-5}.
+
+\bibitem[Brooks et~al.(2009)Brooks, Hosken, Munch, Veitch, Yan, Zhao, Fan, Ju,
+  Blair, Willems, Slagmolen, and Degallaix]{Brooks_HWS}
+A.~F. Brooks, D.~Hosken, J.~Munch, P.~J. Veitch, Z.~Yan, C.~Zhao, Y.~Fan,
+  L.~Ju, D.~Blair, P.~Willems, B.~Slagmolen, and J.~Degallaix.
+\newblock Direct measurement of absorption-induced wavefront distortion in high
+  optical power systems.
+\newblock \emph{Appl. Opt.}, 48\penalty0 (2):\penalty0 355--364, Jan 2009.
+\newblock \doi{10.1364/AO.48.000355}.
+\newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-48-2-355}.
 
 \bibitem[Brooks et~al.(2016)Brooks, Abbott, Arain, Ciani, Cole, Grabeel,
   Gustafson, Guido, Heintze, Heptonstall, Jacobson, Kim, King, Lynch, O'Connor,
@@ -251,6 +271,14 @@ Y.~Hefetz, N.~Mavalvala, and D.~Sigg.
 \newblock \doi{10.1364/JOSAB.14.001597}.
 \newblock URL \url{http://josab.osa.org/abstract.cfm?URI=josab-14-7-1597}.
 
+\bibitem[Hello and Vinet(1990)]{hello_vinet}
+P.~Hello and J.-Y. Vinet.
+\newblock Analytical models of thermal aberrations in massive mirrors heated by
+  high power laser beams.
+\newblock \emph{Journal de Physique}, 51\penalty0 (12):\penalty0 1267–1282,
+  1990.
+\newblock \doi{10.1051/jphys:0199000510120126700}.
+
 \bibitem[Hild et~al.(2009)Hild, Grote, Degallaix, Chelkowski, Danzmann, Freise,
   Hewitson, Hough, Lück, Prijatelj, Strain, Smith, and Willke]{HildDCReadout}
 S.~Hild, H.~Grote, J.~Degallaix, S.~Chelkowski, K.~Danzmann, A.~Freise,
@@ -366,8 +394,8 @@ E.~Morrison, B.~J. Meers, D.~I. Robertson, and H.~Ward.
   Mavalvala, and Camp]{MuellerMM}
 G.~Mueller, Q.~ze~Shu, R.~Adhikari, D.~B. Tanner, D.~Reitze, D.~Sigg,
   N.~Mavalvala, and J.~Camp.
-\newblock Determination and optimization of modgit ste matching into optical
-  cavities by heterodyne detection.
+\newblock Determination and optimization of mode matching into optical cavities
+  by heterodyne detection.
 \newblock \emph{Opt. Lett.}, 25\penalty0 (4):\penalty0 266--268, Feb 2000.
 \newblock \doi{10.1364/OL.25.000266}.
 \newblock URL \url{http://ol.osa.org/abstract.cfm?URI=ol-25-4-266}.
@@ -396,6 +424,15 @@ F.~A.~E. Pirani.
 \newblock ISSN 1572-9532.
 \newblock \doi{10.1007/s10714-009-0787-9}.
 \newblock URL \url{https://doi.org/10.1007/s10714-009-0787-9}.
+
+\bibitem[Ramette et~al.(2016)Ramette, Kasprzack, Brooks, Blair, Wang, and
+  Heintze]{ramette_analytical}
+J.~Ramette, M.~Kasprzack, A.~Brooks, C.~Blair, H.~Wang, and M.~Heintze.
+\newblock Analytical model for ring heater thermal compensation in the advanced
+  laser interferometer gravitational-wave observatory.
+\newblock \emph{Appl. Opt.}, 55\penalty0 (10):\penalty0 2619--2625, Apr 2016.
+\newblock \doi{10.1364/AO.55.002619}.
+\newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-55-10-2619}.
 
 \bibitem[Saleh and Teich(2009)]{Saleh}
 B.~E.~A. Saleh and M.~C. Teich.
@@ -431,6 +468,26 @@ R.~Shankar.
 \newblock \emph{Principles of Quantum Mechanics}.
 \newblock Springer Verlag, 2014.
 
+\bibitem[Veitch et~al.(2018)Veitch, Brooks, Kim, Blair, Cao, Grabeel, Hardwick,
+  Heintze, Heponstall, Ingram, Munch, Ottaway, and Vo]{Veitch_HWS_ALIGO}
+P.~Veitch, A.~Brooks, W.~Kim, C.~Blair, H.~Cao, G.~Grabeel, T.~Hardwick,
+  M.~Heintze, A.~Heponstall, C.~Ingram, J.~Munch, D.~Ottaway, and T.~Vo.
+\newblock Hartmann wavefront sensors for advanced ligo.
+\newblock In \emph{Conference on Lasers and Electro-Optics}, page SW3M.5.
+  Optical Society of America, 2018.
+\newblock \doi{10.1364/CLEO_SI.2018.SW3M.5}.
+\newblock URL
+  \url{http://www.osapublishing.org/abstract.cfm?URI=CLEO_SI-2018-SW3M.5}.
+
+\bibitem[Wang et~al.(2017)Wang, Blair, Álvarez, Brooks, Kasprzack, Ramette,
+  Meyers, Kaufer, O’Reilly, Mow-Lowry, and Freise]{wang_thermalmodel}
+H.~Wang, C.~Blair, M.~D. Álvarez, A.~Brooks, M.~F. Kasprzack, J.~Ramette,
+  P.~M. Meyers, S.~Kaufer, B.~O’Reilly, C.~M. Mow-Lowry, and A.~Freise.
+\newblock Thermal modelling of advanced ligo test masses.
+\newblock \emph{Classical and Quantum Gravity}, 34\penalty0 (11):\penalty0
+  115001, 2017.
+\newblock URL \url{http://stacks.iop.org/0264-9381/34/i=11/a=115001}.
+
 \bibitem[Winkler et~al.(1991)Winkler, Danzmann, R\"udiger, and
   Schilling]{winkler_thermaldist}
 W.~Winkler, K.~Danzmann, A.~R\"udiger, and R.~Schilling.
@@ -439,6 +496,12 @@ W.~Winkler, K.~Danzmann, A.~R\"udiger, and R.~Schilling.
 \newblock \emph{Phys. Rev. A}, 44:\penalty0 7022--7036, Dec 1991.
 \newblock \doi{10.1103/PhysRevA.44.7022}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevA.44.7022}.
+
+\bibitem[Yamamoto(2009)]{hiro_thermal_lens}
+H.~Yamamoto.
+\newblock Effect of itm thermal lens in beam reflection, Jan 2009.
+\newblock URL
+  \url{https://dcc.ligo.org/cgi-bin/private/DocDB/ShowDocument?.submit=Identifier&docid=T0810007&version=}.
 
 \bibitem[Yu et~al.(2018)Yu, Martynov, Vitale, Evans, Shoemaker, Barr, Hammond,
   Hild, Hough, Huttner, Rowan, Sorazu, Carbone, Freise, Mow-Lowry, Dooley,
