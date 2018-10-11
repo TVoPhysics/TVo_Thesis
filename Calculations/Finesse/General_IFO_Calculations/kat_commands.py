@@ -6,9 +6,12 @@ const mech_Q    1M # Guess for suspension Q factor
 # Differentially modulate the strain in the arms
 fsig darm  LXarm 1 0 1
 fsig darm2 LYarm 1 180 1
+
 qnoisedS NSR_with_RP 1 $fs nOMC_AROC_trans
 qshotS NSR_without_RP 1 $fs nOMC_AROC_trans
-xaxis darm f log 1 5k 100
+pd1 pdAS $fs nOMC_AROC_trans
+
+xaxis darm f log 5 5k 100
 yaxis lin re:im
 retrace off
 """

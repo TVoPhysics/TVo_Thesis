@@ -1,4 +1,4 @@
-\begin{thebibliography}{58}
+\begin{thebibliography}{62}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -67,8 +67,17 @@ A.~Brooks, P.~Veitch, J.~Munch, and T.-L. Kelly.
 \newblock \doi{10.1007/s10714-005-0137-5}.
 \newblock URL \url{https://doi.org/10.1007/s10714-005-0137-5}.
 
+\bibitem[Brooks et~al.(2007)Brooks, Kelly, Veitch, and Munch]{Brooks_HWS_2007}
+A.~F. Brooks, T.-L. Kelly, P.~J. Veitch, and J.~Munch.
+\newblock Ultra-sensitive wavefront measurement using a hartmann sensor.
+\newblock \emph{Opt. Express}, 15\penalty0 (16):\penalty0 10370--10375, Aug
+  2007.
+\newblock \doi{10.1364/OE.15.010370}.
+\newblock URL
+  \url{http://www.opticsexpress.org/abstract.cfm?URI=oe-15-16-10370}.
+
 \bibitem[Brooks et~al.(2009)Brooks, Hosken, Munch, Veitch, Yan, Zhao, Fan, Ju,
-  Blair, Willems, Slagmolen, and Degallaix]{Brooks_HWS}
+  Blair, Willems, Slagmolen, and Degallaix]{Brooks_HWS_2009}
 A.~F. Brooks, D.~Hosken, J.~Munch, P.~J. Veitch, Z.~Yan, C.~Zhao, Y.~Fan,
   L.~Ju, D.~Blair, P.~Willems, B.~Slagmolen, and J.~Degallaix.
 \newblock Direct measurement of absorption-induced wavefront distortion in high
@@ -317,6 +326,14 @@ I.~K., S.~D., and K.~K.
   2015{\natexlab{b}}.
 \newblock URL \url{https://dcc.ligo.org/LIGO-T1500559}.
 
+\bibitem[Lawrence et~al.(2002)Lawrence, Zucker, Fritschel, Marfuta, and
+  Shoemaker]{Lawrence_TCS}
+R.~Lawrence, M.~Zucker, P.~Fritschel, P.~Marfuta, and D.~Shoemaker.
+\newblock Adaptive thermal compensation of test masses in advanced ligo.
+\newblock \emph{Classical and Quantum Gravity}, 19\penalty0 (7):\penalty0 1803,
+  2002.
+\newblock URL \url{http://stacks.iop.org/0264-9381/19/i=7/a=377}.
+
 \bibitem[Matichard et~al.(2015{\natexlab{a}})Matichard, Lantz, Mason,
   Mittleman, Abbott, Abbott, Allwine, Barnum, Birch, Biscans, Clark, Coyne,
   DeBra, DeRosa, Foley, Fritschel, Giaime, Gray, Grabeel, Hanson, Hillard,
@@ -468,6 +485,19 @@ R.~Shankar.
 \newblock \emph{Principles of Quantum Mechanics}.
 \newblock Springer Verlag, 2014.
 
+\bibitem[Strain et~al.(1994)Strain, Danzmann, Mizuno, Nelson, Rüdiger,
+  Schilling, and Winkler]{Strain_TL}
+K.~Strain, K.~Danzmann, J.~Mizuno, P.~Nelson, A.~Rüdiger, R.~Schilling, and
+  W.~Winkler.
+\newblock Thermal lensing in recycling interferometric gravitational wave
+  detectors.
+\newblock \emph{Physics Letters A}, 194\penalty0 (1):\penalty0 124 -- 132,
+  1994.
+\newblock ISSN 0375-9601.
+\newblock \doi{https://doi.org/10.1016/0375-9601(94)00717-4}.
+\newblock URL
+  \url{http://www.sciencedirect.com/science/article/pii/0375960194007174}.
+
 \bibitem[Veitch et~al.(2018)Veitch, Brooks, Kim, Blair, Cao, Grabeel, Hardwick,
   Heintze, Heponstall, Ingram, Munch, Ottaway, and Vo]{Veitch_HWS_ALIGO}
 P.~Veitch, A.~Brooks, W.~Kim, C.~Blair, H.~Cao, G.~Grabeel, T.~Hardwick,
@@ -478,6 +508,16 @@ P.~Veitch, A.~Brooks, W.~Kim, C.~Blair, H.~Cao, G.~Grabeel, T.~Hardwick,
 \newblock \doi{10.1364/CLEO_SI.2018.SW3M.5}.
 \newblock URL
   \url{http://www.osapublishing.org/abstract.cfm?URI=CLEO_SI-2018-SW3M.5}.
+
+\bibitem[Vinet(2009)]{Vinet_Thermal_Issues}
+J.-Y. Vinet.
+\newblock On special optical modes and thermal issues in advanced gravitational
+  wave interferometric detectors.
+\newblock \emph{Living Reviews in Relativity}, 12\penalty0 (1):\penalty0 5, Jul
+  2009.
+\newblock ISSN 1433-8351.
+\newblock \doi{10.12942/lrr-2009-5}.
+\newblock URL \url{https://doi.org/10.12942/lrr-2009-5}.
 
 \bibitem[Wang et~al.(2017)Wang, Blair, Álvarez, Brooks, Kasprzack, Ramette,
   Meyers, Kaufer, O’Reilly, Mow-Lowry, and Freise]{wang_thermalmodel}
