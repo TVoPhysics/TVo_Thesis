@@ -1,30 +1,26 @@
 \chapter{The Fundamentals of Mode-Matching}\label{fund_mm}
-	Theory section of modematching. Gaussian beams, define relevant quantities, Gouy Phase!
-	
-	When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, it is necessary to incorporate Gaussian beams and associated their higher order modes.
+	  The plane wave and the spherical wave represent the two extremes of transverse spatial confinement. The former is a collimated beam that has one steady wavefront whose normal vector is parallel with the axis of propagation, whereas the latter type of wave has a single point of origin and its normal rays diverge in all directions.  There exists a solution which is a medium between the two cases called a Gaussian beam.  When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, it is necessary to incorporate Gaussian beams and associated their higher order modes.
 		\section{Gaussian Beam Optics}
 		Consider the famous Maxwell's equations:
 		\begin{equation}
 		\label{18.1:1}
 		\begin{aligned}
-		 \nabla \times \mathbf{E} &=-\frac{\partial \mathbf{B}} {\partial t},&
-		\\\nabla \cdot \mathbf{B} &=0&,
-		\\\nabla \times \mathbf{B} &= \mu\ \mathbf{J} + \frac{1}{c^2} \frac{\partial \mathbf{E}} {\partial t}&
+		 \nabla \times \mathbf{E} &=-\frac{\partial \mathbf{B}} {\partial t}
+		\\\nabla \cdot \mathbf{B} &=0				
+		\\\nabla \times \mathbf{B} &= \mu\ \mathbf{J} + \frac{1}{c^2} \frac{\partial \mathbf{E}} {\partial t}
 		\\
-		\nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon}&
+		\nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon}
 		\end{aligned}
 		\end{equation}
 		
 		Concentrating on the electric field in vacuum, we arrive at the Helmholtz Equation
-		
 		\begin{equation}\label{Helmholtz}
 		(\nabla^2 + k^2 ) \mathbf{U}(\mathbf{r},t) = 0
 		\end{equation}
-	
 		
 		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\mathbf{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  There are a variety of solutions to equation \ref{Helmholtz} which include the plane and spherical waves \cite{Saleh}.  These two types of solutions are the extremes when considering the angle and spatial distribution as a function of propagation.  The plane wave which has been used in chapter \ref{intro} is a beam whose rays have no variance in the spatial direction as it propagates through space, whereas the spherical wave starts at a point and spreads as a function of distance from the origin. Somewhere in between these two extrema is the paraxial wave which is a wave pattern that has its rays at small angles relative to the direction of propagation (see Figure[raysoflight]).  It is possible to express the paraxial solution to equation \ref{Helmholtz} as a plane wave with a modulated complex envelope $\mathbf{A}(r)$
 		\begin{equation}
-		\mathbf{U}(\mathbf{r}) = \mathbf{A}(\mathbf{r}) e^{-ikz)}
+		\mathbf{U}(\mathbf{r}) = \mathbf{A}(\mathbf{r}) e^{-ikz}
 		\end{equation}
 		However, in order for the paraxial wave to exist, $\mathbf{U}(r)$ must satisfy the Helmholtz equation or alternatively, the complex amplitude portion must satisfy a separate differential equation known as the paraxial Helmholtz Equation. By imposing the constraints which force the envelope to vary slowly with respect to the z-axis within the distance of one wavelength $\lambda = 2\pi/k$,
 
@@ -59,11 +55,9 @@
 		\end{equation} 
 		
 		Plugging equation \ref{invq} into \ref{complexenvelope} leads directly to the complex amplitude for a Gaussian Beam
-		
 		\begin{equation}
-		U(r) = A_0 \frac{W_0}{W(z)} e^{-\frac{r^2}{W^2(z)}} e^{-ikz - ik \frac{r^2}{2R(z)} + i \phi(z)}
+		U(r,z) = A_0 \frac{W_0}{W(z)} e^{-\frac{r^2}{W^2(z)}} e^{-ikz - ik \frac{r^2}{2R(z)} + i \phi(z)}
 		\end{equation}
-		
 		where
 		\begin{subequations}
 		\begin{equation}
@@ -73,16 +67,47 @@
 		R(z) = z \bigg[ 1 + \bigg( \frac{z}{z_0} \bigg)^2 \bigg]
 		\end{equation}
 		\begin{equation}\label{gouy}
-		\phi(z)= \text{tan}^{-1}\bigg(\frac{z}{z_0}\bigg)
+		\phi(z)= \text{tan}^{-1}\bigg(\frac{z_0}{z}\bigg)
 		\end{equation}
 		\begin{equation}
 		W_0 = \sqrt{\frac{\lambda z_0}{\pi}}
 		\end{equation}
 		\end{subequations}
+	
+		The Gaussian beams are named as such because of the intensity distribution,
+		\begin{equation}
+		I(r,z) = \vert U(r,z) |^2 = I_0 \bigg[ \frac{w_0}{w(z)}\bigg]^2 \exp \bigg[ \frac{-2 r^2}{w^2(z)}\bigg]
+		\end{equation}
+		where $I_0 = \vert A_0\vert^2$ and has a peak at $r=0$ and $z=0$.  The width increases as the beam propagates along the $\hat{z}$ axis away from the waist position and the intensity maximum on the beam axis decreases (see Figure \ref{fig:GaussIntensity}),
+		\begin{equation}
+		I(0,z) = \frac{I_0}{1 + (z/z_0)^2}
+		\end{equation}
+		When it comes to sensing a laser beam, the most common way is using a photodetector which is a transducer that transforms the integrated intensity or power into an electronic current.  
+		
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.65 \textwidth]{../Figures/GaussProfile.png}
+			\caption{The Gaussian beam is a cylindrically symmetric function so the two coordinates are denoted by $\hat{r}$ for the radial and $\hat{z}$ for the axis of propagation with the origin located at the center. The thick dark lines represent the beam size, $w(z)$, which is minimal at the waist, $w(z)=w_0$ when $z=0$ and asymptotic towards $\lambda/\pi w_0$ when $z \approx \inf$ as shown by the dotted gray lines. The red dashed line represents the intensity cross section of the beam which changes to a wider and flatter profile as a function of distance from the waist.}
+			\label{fig:GaussProfile}
+		\end{figure}
+	
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.85 \textwidth]{../Figures/GaussBeamParams.png}
+			\caption[Beam size, radius of curvature, and Gouy phase as a function of distance propagation from the waist.] 
+			{\textbf{Beam size, radius of curvature, and Gouy phase as a function of distance propagation from the waist.} The vertical dashed gray lines represent the integer number of Rayleigh ranges.  At the point $z=z_0$, the beam size is $\sqrt{2}$ of the waist size and the radius of curvature is minimal.  At this point, the Gouy phase propagation is lagging the plane wave by $\pi /4$ and the beam intensity is half of that at the waist.}
+			\label{fig:GaussParams}
+		\end{figure}
 
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.65 \textwidth]{../Figures/GaussBeamIntensity.png}
+			\caption{Intensity}
+			\label{fig:GaussIntensity}
+		\end{figure}
 
 		\subsubsection{Gouy Phase}
-		The Gouy phase given by equation \ref{gouy} is the phase lag that occurs as a function of propagation along the $\hat{z}$-axis which ranges from $\phi(z) = \pm \pi/2$ for $z =\pm \inf$.  Physically, this manifests itself as the difference between the laser beam behaving like a plane wave when $z\approx0$ (or near field) and eventually evolving into a spherical wave when $z\approx \pm \inf$ (or far field) (see Figure[GouyPhaseFig]).  Although this phenomenon is interesting mathematically, most texts do not consider how to practically use or measure the Gouy phase.  In LIGO technical notes and electronic logs, the Gouy phase of sensors or actuators are used to describe where along the laser beam path the piece of equipment is located.  This will indicate what degree of freedom is being observed or adjusted, respectively.  For example, in ray optics \cite{Saleh} a laser beam has two degrees of freedom, the displacement and angle from the optical axis (see Figure[Gouyphase]).  If an actuator such as a piezo-electric transducer with an attached reflective mirror is placed near the origin or focus of the laser beam, then the controlled degree of freedom is only the angle.  Alternatively, if the actuator is placed in the far field then the controlled degree of freedom is almost entirely displacement.  This is also true of sensors at various points along the $\hat{z}$-axis to determine the exact alignment of the optical beam.
+		The Gouy phase given by equation \ref{gouy} is the phase lag between a Gaussian beam and a perfect plane wave that occurs as a function of propagation along the $\hat{z}$-axis which ranges from $\phi(z) = \pm \pi/2$ for $z =\pm \inf$.  Physically, this could be interpreted as the difference between the laser beam behaving like a plane wave when $z\approx0$ (or near field) and eventually evolving into a spherical wave when $z\approx \pm \inf$ (or far field) (see Figure \ref{fig:GaussParams} ).  Although this phenomenon is interesting mathematically, most texts do not consider how to practically use or measure the Gouy phase.  In LIGO technical notes and electronic logs, the Gouy phase of sensors or actuators are used to describe where along the beam path the piece of equipment is located.  This will indicate what degree of freedom is being observed or adjusted.  For example, in ray optics \cite{Saleh} a laser beam has two degrees of freedom, the displacement and angle from the optical axis.  If an actuator such as a piezo-electric transducer with an attached reflective mirror is placed near the origin or focus of the laser beam, then the controlled degree of freedom is only the angle.  Alternatively, if the actuator is placed in the far field then the controlled degree of freedom is almost entirely displacement.  This is also true of sensors at various points along the $\hat{z}$-axis to determine the exact alignment of the optical beam.
 		
 		In practice, it is impossible to sense the true waist of an optical system because it could be inside a Fabry-Perot cavity.  So the clever designer must insert a pick-off beam to sample the transmission or reflection of the interested optical system and use a combination of lenses to create a telescope for the sensors and infers the degrees of freedom.  Then, by rotating to the two-dimensional space created by the sensors to represent the interested space spanned by the optical system's degrees of freedom (see Figure[RotDofs]); colloquially, this is known as a sensing matrix.  Using this method, sensors do not have to be exactly at the near or far field because it is only required that the two sensors are separated by $\pi/2$ in Gouy phase, in fact, it is usually easier to place one sensor at $+\pi/4$ and the other at $-\pi/4$. 
 		
@@ -105,7 +130,7 @@
 		and $ \mathbb{H}(u)$ are the well known Hermite polynomials.  It is important to mention that the Gouy phase of the complex amplitude is different than the fundamental Gaussian beam by a factor of $(m + n + 1)$.   Also, the intensity distribution of these higher order modes are much different. Both of these facts will become extremely important in the following wavefront sensing discussion (Figure[HGModes]).
 		
 		The extra Gouy phase that a higher order mode accrues as a function of $z$ shows up as in the frequency or cavity length domain as one sweeps through a full free spectral range using an offset in the length or frequency error signal, see Figure[FSRwHOM].  This  can be directly used to measure the higher order mode separation and becomes important if the cavity has a low finesse which means the fundamental Gaussian mode has a spread comparable in frequency to the first order mode then it is easy to hop from one to the other.
-		
+			
 		Figure[FSRwHOM] The difference between left and right plot is representative of the PRC and SRC.  The former has a high finesse and a relatively large round trip Gouy phase where as the latter has a low finesse and very little Gouy phase.  An error signal could get confused by which lock point to use if a transient moves through the system and causes a mode hop.
 		
 		\subsubsection{Laguerre Modes}
@@ -277,7 +302,6 @@
 		\end{equation}
 
 		where the product is an integral over the transverse space $\int \!\!\! \int_{D(x,y)} \text{d}x \text{d}y$
-		
 
 		\begin{equation} \label{misalign_matrix}
 		\hat{\Theta}_{\mu \nu} = 
@@ -301,7 +325,6 @@
 		\end{pmatrix}
 		\end{equation}
 		
-		
 		\begin{equation} \label{waistloc_matrix}
 		\hat{\mathbb{Z}}_{\mu \nu} = 
 		\begin{pmatrix}
@@ -314,7 +337,6 @@
 		\end{equation}
 		
 		where $\Delta z_{(x,y)} =  \frac{i}{\sqrt{2}} \frac{\lambda b}{2\pi\omega_{0}} $
-		
 		
 		\begin{equation} \label{waistsize_matrix}
 		\hat{\mathbb{Z}}_{0, \mu \nu} = 
@@ -333,12 +355,8 @@
 		
 		
 		\subsubsection{Example: Fabry Perot Cavity}
-			
 
 		\section{Effects of Mode-matching on Squeezing}
-		
-		
-		
 		Still not clear to me.
 		In the most simple sense, a loss is akin to coupling quantum vacuum into a squeezed state.
 		References: [Miao, Sheon, Kimble, Dwyer]

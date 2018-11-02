@@ -1,18 +1,27 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces A ring of free floating particles will be stretched and squeezed if a gravitational wave passes through them. The polarization will affect the particles in a similar way but rotated 45 degrees.\relax }}{7}{figure.caption.4}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces A ring of free floating particles being stretched and squeezed by a passing gravitational wave.}}{7}{figure.caption.4}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Michelson with heterodyne detection scheme.\relax }}{15}{figure.caption.5}
 \contentsline {figure}{\numberline {1.3}{\ignorespaces Delay Line vs Fabry Perot\relax }}{16}{figure.caption.6}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Bode Plots of the Fabry Perot response\relax }}{17}{figure.caption.7}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces The different powers for a single Fabry-Perot cavity that has properties in Table [] to represent one of the LIGO 4km arms which are highly over-coupled cavities so almost all of the light reflects toward the beamsplitter. The input power is normalized to 1 Watt to show the relative gain of the circulating power.\relax }}{18}{figure.caption.8}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The reflected, circulating, and transmitted powers for a single Fabry-Perot cavity.}}{18}{figure.caption.8}
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Control scheme for an optical cavity.\relax }}{20}{figure.caption.10}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Error signal in reflection\relax }}{21}{figure.caption.11}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces Error signal in reflection}}{21}{figure.caption.11}
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Michelson with Fabry Perot arms\relax }}{22}{figure.caption.12}
 \contentsline {figure}{\numberline {1.9}{\ignorespaces Interferometer configurations\relax }}{23}{figure.caption.13}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Quantum limited sensitivity by combining shot noise and radiation pressure\relax }}{25}{figure.caption.14}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces Shot noise limited sensitivity\relax }}{25}{figure.caption.14}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces Quantum limited sensitivity by combining shot noise and radiation pressure\relax }}{26}{figure.caption.15}
+\contentsline {figure}{\numberline {1.12}{\ignorespaces The amplitude spectral density of gravitational wave strain normalized by the standard quantum limit.\relax }}{36}{figure.caption.20}
+\contentsline {figure}{\numberline {1.13}{\ignorespaces Add a caption\relax }}{37}{figure.caption.21}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The Gaussian beam is a cylindrically symmetric function so the two coordinates are denoted by $\mathaccentV {hat}05E{r}$ for the radial and $\mathaccentV {hat}05E{z}$ for the axis of propagation with the origin located at the center. The thick dark lines represent the beam size, $w(z)$, which is minimal at the waist, $w(z)=w_0$ when $z=0$ and asymptotic towards $\lambda /\pi w_0$ when $z \approx \qopname \relax m{inf}$ as shown by the dotted gray lines. The red dashed line represents the intensity cross section of the beam which changes to a wider and flatter profile as a function of distance from the waist.\relax }}{41}{figure.caption.22}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Beam size, radius of curvature, and Gouy phase as a function of distance propagation from the waist.}}{42}{figure.caption.23}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Intensity\relax }}{43}{figure.caption.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces MEDM master screen for adaptive mode matching at Syracuse, here, the error signal in reflection of the Fabry-Perot cavity is fed into two RF detectors that have rotational phasing. Then the signal is sent to an actuator function which allows for diagonalizing the signals and can be sent to a set of thermal lens at different Gouy phases for actuation. \relax }}{54}{figure.caption.33}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The nominal circulating power denoted by the vertical blue line is a function of the input power, the recycling gain, and the arm cavity gain. The nominal input power for O3 will be 50 Watts and the power recycling gain is around 45. The arm cavity gain can be estimated by calibrating the transmitted power from each of the arms and is approximately 228. The horizontal, dashed turquoise line represents the nominal substrate lens which the optics \relax }}{67}{figure.caption.40}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Determining the ring heater and CO2 settings still leaves the end test mass ring heaters to be set. The goal is to maintain the mode matching between the arms while simultaneously searching for the optimal overlap with the power recycling cavity. The linear portion of the graph shows a combination of common and differential adjustment of each ring heater that keeps the mode matching between the arms at less than 1 ppb, \relax }}{68}{figure.caption.41}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

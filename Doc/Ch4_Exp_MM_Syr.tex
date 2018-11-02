@@ -1,10 +1,14 @@
 \chapter{Experimental Mode Matching Cavities at Syracuse}
-In conjunction with Sandoval et al, the adaptive modematching table top experiment was able to show the feasibility of a fully dynamical system.
+In conjunction with Sandoval et al, the adaptive mode matching  experiment was able to show the feasibility of a fully dynamical system.
 	\section{Adaptive Mode Matching}
-	Reque
-	Real time digital system and model.
+	Adaptive controls require both actuators and sensors which are interfaced in a real-time system that uses analog-to-digital (ADC) and digital-to-analog (DAC) converters.  LIGO uses a front end computer that reads in data and processes the signals based off a Simulink graphical model that allows for simple logic, mathematical operations, and frequency dependent filtering.  The real time data acquisition code is user-interfaced with a Motif Editor and Display Manager (MEDM) that is able to report and execute variables such as gains and matrix elements.
 	
-	Signal chain.
+	\begin{figure}[h]
+		\centering
+		\frame{\includegraphics[width=1.0 \textwidth]{../Figures/AMM_MASTER.png}}
+		\caption{MEDM master screen for adaptive mode matching at Syracuse, here, the error signal in reflection of the Fabry-Perot cavity is fed into two RF detectors that have rotational phasing. Then the signal is sent to an actuator function which allows for diagonalizing the signals and can be sent to a set of thermal lens at different Gouy phases for actuation. }
+		\label{fig:AMM_Master}
+	\end{figure}
 	
 	\section{Actuators}
 		\subsection{Thermal Lenses}
@@ -38,7 +42,7 @@ In conjunction with Sandoval et al, the adaptive modematching table top experime
 
 		
 \subsection{Mode Converters}
-The bullseye photodiodes can be difficult to calibrate and manufacture so a particularly interesting method of sensing mode mismatch is to convert the fields with a cylindrical telescope.  Using lenses which contain separate curvatures for each direction (x or y), one being flat and the other is curved with focal length, $f$.  The idea is to break the cylindrical symmetry of the donut mode (Figure []) and convert the beam into a pringle mode, then, an error signal can extracted using the radio frequency quadrant photodiode that the angular wavefront sensors employ
+The bullseye photodiodes can be difficult to calibrate and manufacture so a particularly interesting method of sensing mode mismatch is to convert the fields with a cylindrical telescope such that an error signal can be extracted with a RF quadrant photodiode .  Using lenses which contain separate curvatures for each direction (x or y), one being flat and the other is curved with focal length, $f$.  The idea is to break the cylindrical symmetry of the donut mode (Figure []) and convert the beam into a pringle mode, then, an error signal can extracted using the radio frequency quadrant photodiode that the angular wavefront sensors employ
 
 \subsubsection{Vector formalism for laser beams and optical cavities}
 Consider an optical cavity that is longitudinally resonant on the $\text{TEM}_{00}$ mode using the Pound-Drever-Hall technique shown in Section \ref{FP} and also locked with angular wavefront sensors shown in Section \ref{WFS}. When there is a small mismatch between the waist size and position of the input beam relative to the cavity, this is equivalent to coupling the TEM-00 mode into higher order modes.  Since mode matching is only concerned with coupling to the second order modes, the  resultant field in reflection ($r_{FP}$) of a Fabry-Perot resonator will have the form

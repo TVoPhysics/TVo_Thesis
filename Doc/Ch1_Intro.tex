@@ -66,10 +66,11 @@
 	\\ = \frac{1}{2} \eta_{\mu \nu} (h_{\beta 0, 0} + h_{0 \beta, 0} + h_{0 0, \beta} )
 	\end{equation}
 	
-	\begin{figure}[h]
+	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=.5 \textwidth]{../Figures/GW_Particles.png}
-		\caption{A ring of free floating particles will be stretched and squeezed if a gravitational wave passes through them.  The polarization will affect the particles in a similar way but rotated 45 degrees.}
+		\caption[A ring of free floating particles being stretched and squeezed by a passing gravitational wave.]  
+		{\textbf{A ring of free floating particles being stretched and squeezed by a passing gravitational wave.}}
 		\label{fig:gwparticles}
 	\end{figure}
 	
@@ -429,7 +430,8 @@
 			\caption{Transmitted Power}
 			\label{fig:FP_tran}
 		\end{subfigure}
-		\caption{The different powers for a single Fabry-Perot cavity that has properties in Table [] to represent one of the LIGO 4km arms which are highly over-coupled cavities so almost all of the light reflects toward the beamsplitter.  The input power is normalized to 1 Watt to show the relative gain of the circulating power.}
+		\caption[The reflected, circulating, and transmitted powers for a single Fabry-Perot cavity.]
+		{The  has properties in Table [] to represent one of the LIGO 4km arms which are highly over-coupled cavities so almost all of the light reflects toward the beamsplitter.  The input power is normalized to 1 Watt to show the relative gain of the circulating power.}
 		\label{fig:FP_pwrs}
 		\end{figure}
 		
@@ -504,7 +506,7 @@
 		\begin{figure}[h]
 		\centering
 		\includegraphics[width=.75 \textwidth]{../Figures/PDH_Err.png}
-		\caption{Error signal in reflection}
+		\caption[Error signal in reflection]{\textbf{Pound-Drever-Hall (PDH) error signal in reflection of a Fabry Perot cavity.}  By modulating the frequency (or length) close to the zero offset point, the error signal is linear.  However, if the actuation is too far away from the lock point, the signal becomes highly non-linear. }
 		\label{fig:FP_err}
 		\end{figure}
 	
@@ -518,7 +520,7 @@
 		\end{equation}
 		where $E_{i}^{\text{ARM}} = E(\omega) \pm [E(+ \omega_{\text{\tiny GW}}) + E(- \omega_{\text{\tiny GW}})] \sin{k\delta l } $ is the reflectionfig:FPMichelson coefficient for the x and y arms which contain the carrier(first term) and GW signal sidebands(last two terms).  Intuitively, one can deduce that the antisymmetric port will only be sensitive to the differential motion between the arm cavities, which means the gravitational wave sidebands in the x-arm will be out of phase with the y-arm.  Also it is important to note that inserting a DC microscopic length shift, $\delta l = l_x - l_y$ allows for some carrier leakage field to propagate towards the antisymmetric port which creates a static reference to form a beat note with the signal sidebands.  The same effect can be achieved by introducing a static offset between the x and y arms; colloquially, this is referred to as DARM offset.
 				
-		\begin{figure}[h]
+		\begin{figure}[ht]
 			\centering
 			\includegraphics[width=.3 \textwidth]{../Figures/FP_Mich.png}
 			\caption{Michelson with Fabry Perot arms}
@@ -614,7 +616,14 @@
 		
 		One of the biggest changes made between initial and advanced LIGO was the addition of a signal recycling mirror at the antisymmetric port (Figure [DRFPMI]). In the previous section, it was shown that the gravitational wave sensitivity was improved by adding a power recycling cavity to increase the effective input power into the Fabry-Perot cavities.  Adding another partially reflecting optic called the signal recycling mirror (SRM) at the antisymmetric port to create a resonant cavity will shape the interferometer's response to gravitational waves.  This allows for some flexibility in optimizing the instrument for specific sources such as binary neutron stars, but it also creates a more broadband response at higher frequencies while allowing the arm cavity finesse and/or power recycling to impart more power.
 		
-		\begin{figure}[h]
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=1.0 \textwidth]{../Figures/SN_Lim_Sense.png}
+			\caption{Shot noise limited sensitivity}
+			\label{fig:SN_sense}
+		\end{figure}
+		
+		\begin{figure}[ht]
 			\centering
 			\includegraphics[width=1.0 \textwidth]{../Figures/QM_Limited_Sense.png}
 			\caption{Quantum limited sensitivity by combining shot noise and radiation pressure}
@@ -660,13 +669,12 @@
 
 		The previous sections only considered the effect of Fabry-Perot cavities and recycling mirrors at the antisymmetric port due to a differential length change at the 4 kilometer arms but the Advanced LIGO interferometer has a few different degrees of a freedom which are actively controlled.  This means the signals sampling various ports will have contributions from one or more degrees of freedom.  A good reference for what is expected at the important ports such  as REFL, AS, and POP can be found in \cite{kiwamu_freq1} \cite{kiwamu_freq2} \cite{kiwamu_freq3}
 		\subsection{Fundamental Noise Sources}\label{funnoise}
-		The proceeding sections describe ways to increase the response of LIGO to gravitational waves; equally as important is the science of characterizing and reducing the noise contributions from everything else.
+		The proceeding sections describe ways to increase the response of LIGO to gravitational waves; equally as important is the science of characterizing and reducing the noise contributions from everything else to optimize the sensitivity.
 		
-		Noise budget:
+		\subsubsection{Quantum Noise}\label{Sec:QuantumNoise}
+		Virtually all undergraduate quantum mechanics textbooks include a section on the harmonic oscillator [\cite{Shankar}].  An interesting result when solving the Schrödinger equation using creation ($\hat{a^{\dagger}}$) and annihilation $\hat{a}$ operators is the existence of a non-zero energy ground state which has variances in momentum and position related by the Heisenberg uncertainty principle.
 		
-		\subsubsection{Quantum Noise}
-
-		One fundamental noise source that is limiting LIGO's sensitivity comes from the fluctuations of quantum vacuum entering the anti-symmetric port and coupling to the input laser. A quantum mechanical description of an interferometer was constructed by Caves \cite{CavesQMNoise}\cite{Caves2photon} \cite{CavesOscillator}, where he used electric field operators to show that vacuum fluctuations are the cause of radiation pressure and shot noise in an interferometer.
+		One fundamental noise source that is limiting LIGO's sensitivity comes from the fluctuations of quantum vacuum entering the anti-symmetric port and coupling to the input laser. A quantum mechanical description of an interferometer was constructed by Caves \cite{CavesQMNoise}\cite{Caves2photon} \cite{CavesOscillator}, where he used electric field operators to show that vacuum fluctuations are the cause of radiation pressure and shot noise in an interferometer.  Since then, there has been an explosion of research efforts associated with lowering the noise contributions from vacuum fluctuations by changing the interferometer configurations \cite{BuonannoChenQMNoise} \cite{ChenQND}.
 		
 		\textbf{Quantum states}:
 		It is well known in physics \cite{Shankar} \cite{Griffiths} that a solution to the quantum harmonic oscillator in the energy eigenbasis employs the annihilation and creation  operators, $\hat{a}^{\dagger}$ and $\hat{a}$, to factorize the Hamiltonian
@@ -677,6 +685,8 @@
 		\begin{equation}
 		\hat{D} \equiv \hat{D}(\alpha) \equiv \text{exp}(\alpha \hat{a}^{\dagger} - \alpha^{*} \hat{a} ) = e^{-\frac{\vert{\alpha}\vert^2}{2}} e^{\alpha \hat{a}^{\dagger} } e^{\alpha^{*} \hat{a} }
 		\end{equation}
+		
+		
 		$\hat{D}(\alpha) = \hat{D}^{-1}(\alpha) = \hat{D}(-\alpha)$
 		\begin{equation}
 		\begin{aligned}
@@ -684,10 +694,11 @@
 		\hat{D}^\dagger&\, \hat{a}^\dagger \,\hat{D} 		= \hat{a}^\dagger + \alpha^*
 		\end{aligned}
 		\end{equation}
+		
+		When applying the displacement operation on the vacuum state, the resultant vector has an amplitude $\alpha$ and follows the same uncertainty distribution as an unperturbed vacuum vector as shown in Figure[StickandBall],
 		\begin{equation}
 		\ket{\alpha} = \hat{D} \ket{0} =  e^{-\frac{\vert{\alpha}\vert^2}{2}} e^{\alpha \hat{a}^{\dagger} } \ket{0}
 		\end{equation}
-		
 		
 		\textbf{Radiation Pressure}
 		
@@ -806,20 +817,16 @@
 							&= \vert \alpha \vert \big[ \cos^2(\Delta \phi)\ \big] 
 		\end{aligned}
 		\end{equation}
-		
 		\begin{equation}
 		I = N \cos^2(\Delta \phi)
 		\end{equation}
-		
 		\begin{equation}
 		\frac{\partial I}{\partial \phi} = - 2 \vert \alpha \vert^2\cos(\Delta \phi) \sin(\Delta \phi)
 		\end{equation}
-		
 		\begin{equation}
 		\delta \phi = \sqrt{\frac{\hbar \omega}{ P_{in}}} \cot(\Delta \phi)
 		\end{equation}
-		Here $\delta \phi$ is the microscopic change in phase due to shot noise, whereas $\Delta\phi$ is the DC offset in the arm lengths to begin with. So in general, the shot noise contribution is dependent on the amount of light present at the anti-symmetric port and this will vary depending on what type of read out that is implemented.
-		
+		Here $\delta \phi$ is the microscopic change in phase due to shot noise, whereas $\Delta\phi$ is the DC offset in the arm lengths to begin with. So in general, the shot noise contribution is dependent on the amount of light present at the anti-symmetric port and this will vary depending on what type of read out that is implemented.  To calculate the shot noise sensitivity, the phase shift in shot noise can be scaled by a factor of $\frac{\lambda}{2 \pi}\frac{1}{L}$ where $\lambda$ is the laser wavelength and $L$ is the DC length of the Michelson arms,
 		\begin{equation}
 		\tilde{h}_{SN}(f) = 8.2\times 10^{-22} \; \bigg[ \frac{\text{Strain}}{\sqrt{\text{Hz}}}\bigg]
 		\end{equation}
@@ -941,15 +948,68 @@
 		Residual Viscous damping[\cite{Saulson}]
 		
 		\subsubsection{Newtonian Noise}
-		Although there are some noise sources that can be reduced using increasingly complicated techniques such as various levels of seismic isolation or quantum nondemolition devices as shown above. [\cite{SaulsonNewtonian} and \cite{ThorneNewtonian}].  Newtonian noise caused by fluctuating gravitational fields from the wave motion of the ground is one that cannot easily be reduced but possibly be measured and fed-forward or subtracted off-line.[\cite{DriggersNewtonian}]
+		Although there are some noise sources that can be reduced using increasingly complicated techniques such as various levels of seismic isolation or quantum non-demolition devices as shown above. [\cite{SaulsonNewtonian} and \cite{ThorneNewtonian}].  Newtonian noise caused by fluctuating gravitational fields from the wave motion of the ground is one that cannot easily be reduced but possibly be measured and fed-forward or subtracted off-line.[\cite{DriggersNewtonian}]
 		
 	
-	\section{Squeezed States of Light}
-
-	Virtually all undergraduate quantum mechanics textbooks include a section on the harmonic oscillator [\cite{Shankar}].  An interesting result when solving the Schrodinger equation using creation ($\hat{a^{\dagger}}$) and annihilation $\hat{a}$ operators is the existence of a non-zero energy ground state. 
+	\section{Mode Matching with Squeezed States of Light}
+	In Section \ref{Sec:QuantumNoise}, the quantum limited sensitivity for a Michelson interferometer was shown to be comprised of shot noise and radiation pressure. Although quantum fluctuations are a fundamental noise source, their effects can be modified by manipulating the quantum vacuum with correlated photons and injecting these states of light into the antisymmetric port of the interferometer.  Within the LIGO community, this procedure of modifying quantum vacuum is called squeezing.  The production of squeezed states with nonlinear devices is a well understood subject and was successfully tested in the sixth LIGO science run \cite{LSCBeyondQM}\cite{LSCEnhancedSenseSqz}.  An extension of the formalism described in Section \ref{Sec:QuantumNoise} was developed by Caves-Schumaker \cite{Caves2photon} which describes two-photon quantum optics and squeezing, but it is outside of the scope in terms of mode matching. 
 	
-	This effect leads to Quantum Noise, which is a fundamental source that can be improved by modifying the quantum vacuum using correlated photons and injecting the states of light into the antisymmetric port of the interferometer.  Within the LIGO community, this procedure of modifying quantum vacuum is called squeezing. Caves analytically derived the effects of quantum noise on the interferometer as well as the improvement due to	
+	However, it useful to understand the quantum noise in a formalism which scales the interferometer sensitivity in terms of the $\textit{Standard Quantum Limit}$ (SQL).   The radiation pressure and shot noise add in quadrature to form the quantum noise and both are proportional to the square root of the input power but in different regimes.  The SQL refers to the input power minimizes the total quantum noise and is the minimum achievable noise without squeezing.  The radiation-pressure back-action coupling constant, $\kappa$, is given by \cite{KimbleConversion}
+	\begin{equation}
+	\kappa = \frac{4 P_0 \omega_{0}}{m c^2 f^2}
+	\end{equation}
+	where $P_0$ is the input power on the beamsplitter, $\omega_{0}$ is the laser angular frequency, $m$ is the optic mass, and $f$ is the Fourier domain frequency.  The SQL for a simple Michelson is given by \cite{KimbleConversion},
+	\begin{equation}
+	S_{SQL} = \frac{4 \hbar}{m L^2 f^2}
+	\end{equation}
+	With these two equations above, the total single-sided power spectral density for a simple Michelson is
+	\begin{equation}
+	S_{SM} = \frac{S_{SQL}}{2} \bigg( \frac{1}{\kappa}  + \kappa\bigg)
+	\end{equation}
+	Here the first term is represents the shot noise while the second term is the radiation pressure contribution. 
+	\begin{figure}[ht]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../Figures/Kimble_SM_QM.png}
+			\caption{Simple Michelson quantum noise}
+			\label{fig:kimble_SM}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../Figures/Kimble_SM_QM_sqz.png}
+			\caption{Simple Michelson quantum noise with squeezing}
+			\label{fig:kimble_SM_sqz}
+		\end{subfigure}
+		\caption{The amplitude spectral density of gravitational wave strain normalized by the standard quantum limit.}
+		\label{fig:PSD_SM}
+	\end{figure}
 	
-	Losses!?!?!?!?!?!?
-	References: [Caves, Dwyer, Kwee, Miao]
+	Modifying the field entering the antisymmetric port by replacing the quantum vacuum with a squeezed state has interesting effects on the strain sensitivity and reduces the noise floor below the standard quantum limit. The power spectral density for a simple Michelson with injected squeezing is described by \cite{KimbleConversion}
+	\begin{equation}
+	\begin{aligned}
+	S_{SM Sqz} 	&=  \frac{S_{SQL}}{2} \bigg( \frac{1}{\kappa}  + \kappa\bigg) [\cosh{2R} - \cos(2(\phi_s+\theta_s)) \sinh{2R}]\\
+				&= \frac{S_{SQL}}{2} \bigg( \frac{1}{\kappa}  + \kappa\bigg) e^{-2R} \qquad \text{for } \theta_s = -\phi_s
+	\end{aligned}
+	\end{equation}
+	where $R$ is the squeeze factor, $\theta_s$ is the squeeze angle, and $\phi_s = \cot^{-1}(\kappa)$.  The squeeze angle can change the regime of strain which is affected, for example, when injecting for optimal shot noise reduction one would choose $\theta_s=\pi/2$.  However, when trying to reduce the radiation pressure noise, then choosing $\theta_s=0$ is optimal.   For the second line in the equation above, to achieve broadband squeezing, the squeeze angle must be rotated as a function of frequency.  Fortunately, this can be achieved by reflecting the squeezer beam off a filter cavity before injecting into the interferometer \cite{Oelker_FD_sqz} \cite{EvansRealistic}.
 	
+	\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../Figures/Kimble_PRFPMI_QM.png}
+		\caption{Power recycled Fabry Perot Michelson quantum noise}
+		\label{fig:kimble_PRFMI}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../Figures/Kimble_PRFPMI_QM_Sqz.png}
+		\caption{Power recycled Fabry Perot Michelson quantum noise with various squeezing angles}
+		\label{fig:kimble_PRFMI_sqz}
+	\end{subfigure}
+	\caption{Add a caption}
+	\label{fig:PSD_SM}
+	\end{figure}

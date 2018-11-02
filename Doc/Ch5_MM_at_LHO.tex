@@ -54,8 +54,6 @@
 	In addition to modes being different, there exists a static (or cold) substrate lens in each of the compensation plates.
 	This static lens becomes important for two reasons: Firstly, the sidebands in DRMI are promptly rejected by the arm cavities. Secondly, the gravitational wave sidebands which are generated and resonant in the arms will see the substrate lensing as it travels to the beamsplitter.
 	
-
-
 	\subsection{Simple Michelson Contrast Defect}
 	The simple Michelson can give the first estimate of the contrast defect when starting to commission the interferometer, however, it will not be directly used in nominal low noise since the dual-recycled Michelson is implemented.  
 	By propagating the input mode cleaner beam to each of the input test masses and taking a single bounce at the high reflectivity surface, one can approximate the resultant mode overlap.  
@@ -77,7 +75,7 @@
 	The reasoning for this is subtle and described in Section \ref{TL_lensing}.
 	
 	
-	\section{Hot vs. Cold Interferometers}\label{hotcoldifo}
+	\section{Hot vs. Cold Interferometers}\label{sec:hotcoldifo}
 		In the previous section, the contrast defect calculations did not include the self-heating thermal effects that will be present when the interferometer reaches its nominal state.
 		When fully operational, the arm cavities can have a few hundred kilowatts of laser power resonating while in observing mode. 
 		An approximate but useful description of the total arm power in each arm is
@@ -91,7 +89,7 @@
 		By changing the curvature of the test masses, the resonant Gaussian mode will also change its profile.
 		For the substrate lensing, the sideband signals will be most adversely affected because the carrier field will see a cancellation of the distortion from the promptly reflected beam (see Section \ref{TL_lensing})
 	
-	\subsection{Thermal Lensing}\label{TL_lensing}
+	\subsection{Thermal Lensing}\label{Sec:TL_lensing}
 	\cite{hiro_thermal_lens}
 		As seen in Section\ref{DRMI}, the sideband and carrier frequencies propagate differently in the interferometer, which means their fields will see different lensing from thermal effects.
 		To understand how the fields change quantitatively, the easiest way is to invoke the ABCD transfer matrix approach to see how the phases change as they propagate through the optical system.
@@ -168,7 +166,7 @@
 		Using the same formalism as the carrier fields, the sidebands will have the same input curvature, however, they do not resonate in the arms and so there is no cavity leakage field.  Therefore, the sidebands will see the phase change due to the substrate lens and this has very important consequences on the sideband build up within the power recycling cavity.
 		
 		\subsubsection{GW Signal}
-		As mentioned in Section \ref{DRMI}, LIGO's gravitational wave readout currently employs a DC readout scheme that extracts the signal by beating the carrier field with the audio frequency sidebands created by the gravitational wave.  Although the carrier field was shown to be immune to thermal lensing, the gravitational wave sideband field will see a single-passed lensing effect as it propagates out of the cavity and towards the beamsplitter.  If there is a differential lensing, the signal recycling cavity will see an effective thermal lens $\text{TL}_{-}$
+		As mentioned in Section \ref{DRMI}, LIGO's gravitational wave readout currently employs a DC readout scheme that extracts the signal by beating the carrier field with the audio frequency sidebands created by the gravitational wave.  Although the carrier field was shown to be immune to thermal lensing, the gravitational wave sideband field will see a single-passed lensing effect as it propagates out of the cavity and towards the beamsplitter.  If there is a differential lensing, the signal recycling cavity will see an effective thermal lens, $\text{TL}_{-}$, which will be scattered into higher order modes.  This reduces the amount of gravitational wave signal at the anti-symmetric port that is directly proportional to the mode mismatch between the arms.
 	
 	\section{Tuning Thermal Compensation for LIGO}
 	Goals: Locking help with preloading
@@ -181,10 +179,20 @@
 	
 	\cite{Vinet_Thermal_Issues}
 	
-	As mentioned in section \ref{hotcoldifo}, the amount of circulating power in each of the arms can be hundreds of kilowatts and even with absorption amounts between $0.2-0.5$ parts per million, the induced curvature change can be significant.  The Thermal Compensation System (TCS) was developed to correct the radii of curvature by applying heat to compensate the interferometer's main beam.
+	As mentioned in section \ref{Sec:TL_lensing}, the amount of circulating power in each of the arms can be hundreds of kilowatts and even with absorption amounts between $0.2-0.5$ parts per million, the induced curvature change can be significant.  The Thermal Compensation System (TCS) was developed to correct the radii of curvature by applying heat to compensate the interferometer's main beam.  The strategy has two main components, lock acquisition and gravitational-wave optimization.
+	
+	To aid in the acquisition sequence, TCS is required to thermally lens the substrate between the beamsplitter and the high-reflectivity surfaces of the test masses such that the optical path difference is the same as a fully resonant interferometer.
+	
+	First it is required to estimate the amount of absorption on the test masses by using the Hartmann wavefront sensors (see Section \ref{Sec:HWS}) to measure the optical path distortion induced by the interferometer during a power up.  Then pre-load the ring heaters with the nominal settings which would cancel carrier beam's thermal absorption.  However, turning on the ring heaters will change the radius of curvature and induce a substrate lens (see Section \ref{Sec:RH}).  The overall lens now has to be canceled out by the CO2 (Carbon Dioxide) lasers which create a lens on the compensation plate of the quadruple pendulum.
 
-	\subsection{Hartmann Wavefront Sensors}
-	All estimates of curvature change due to heating by the interferometer depend linearly on the absorption and this can be quite difficult when the overall average is below the PPM level.  The Hartmann Wavefront Sensors was a system developed by Caltech and Adelaide which uses a CCD to sense the wavefront distortions created by heating.
+	\subsection{Hartmann Wavefront Sensors}\label{Sec:HWS}
+	All estimates of steady-state curvature changes due to heating by the main interferometer beam depend linearly on the absorption and this can be quite difficult to detect when the coating absorption estimated to range between 0.2 and 0.5 PPM.  In order to diagnose this effect, the Hartmann Wavefront Sensors (HWS) was a system developed by Adelaide and Caltech which uses a charged coupled imaging device (CCD) to sense the wavefront distortions created by heating.
+	
+	Dead pixel removal
+	
+	Digital Masking
+	
+	Plane imaging
 	
 	\cite{AWC_current}
 	
@@ -196,10 +204,8 @@
 	
 	\cite{Brooks_HWS_2007}
 	
-	\subsection{CO2 and Ring Heater Commissioning}
-	Thermal Pre-loading
-	
-	\cite{hello_vinet}
+	\subsection{Ring Heater Commissioning}\label{Sec:RH}
+	To counteract the effects of interferometer heating, Advanced LIGO uses a ring heater which has two heating elements mounted on the suspension cage. Each of them are glass formers wrapped by nichrome wire that has current running through it and radiates an annular heating pattern. The ring heaters will have two effects, it will induce a substrate lens and a radius of curvature change.  As shown in Section \ref{sec:hotcoldifo}, the carrier beam will not see the substrate lens but the radius of curvature difference will change the overall modal shape of the cavity. 
 	
 	\cite{ramette_analytical}
 	
@@ -208,5 +214,39 @@
 	\cite{winkler_thermaldist}
 	
 	
+	\subsection{CO2 Commissioning}\label{Sec:CO2}
+	After using the Hartmann sensors to determine the absorption and pre-loading the ring heaters to compensate the interferometer lensing, the substrate is no longer in the nominal configuration during lock acquisition.  Therefore, it is necessary to use CO2 (Carbon Dioxide) lasers to mimic the interferometer's heating on the substrate.
+	
+	The CO2 lasers are located on each input test mass chamber and injected through a double zinc selenide viewport, then two steering mirrors direct the heating beam on the compensation plate of the reaction mass.  In initial LIGO, the CO2 beams were injected onto the high reflectivity surfaces of the test masses which created both a radius of curvature on the cavity side and a thermo-refractive change in the substrate.  However, in advanced LIGO, the CO2 lasers will only affect the substrate lensing.
+	
+	\cite{hello_vinet}
+	
+	
 	\subsection{SR3 Thermal Actuator}
 	Round trip gouy phase of the SRC affecting 72 MHz wavefront sensing.
+	
+	\subsection{Putting it all together}
+	
+	\begin{figure}[ht]
+		\centering
+		\begin{subfigure}[b]{1.0\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../Figures/ITMX_TCS_Settings.png}
+			\label{fig:TCS_ITMX}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{1.0\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../Figures/ITMY_TCS_Settings.png}
+			\label{fig:TCS_ITMY}
+		\end{subfigure}
+		\caption{The nominal circulating power denoted by the vertical blue line is a function of the input power, the recycling gain, and the arm cavity gain.  The nominal input power for O3 will be 50 Watts and the power recycling gain is around 45.  The arm cavity gain can be estimated by calibrating the transmitted power from each of the arms and is approximately 228.  The horizontal, dashed turquoise line represents the nominal substrate lens which the optics  }
+		\label{fig:TCS_ITMs}
+	\end{figure}
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=1.0 \textwidth]{../Figures/ETM_TCS_Settings.png}
+		\caption{Determining the ring heater and CO2 settings still leaves the end test mass ring heaters to be set.  The goal is to maintain the mode matching between the arms while simultaneously searching for the optimal overlap with the power recycling cavity. The linear portion of the graph shows a combination of common and differential adjustment of each ring heater that keeps the mode matching between the arms at less than 1 ppb, }
+		\label{fig:TCS_ETM}
+	\end{figure}

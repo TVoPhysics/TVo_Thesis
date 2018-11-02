@@ -1,4 +1,4 @@
-\begin{thebibliography}{62}
+\begin{thebibliography}{65}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -100,6 +100,14 @@ A.~F. Brooks, B.~Abbott, M.~A. Arain, G.~Ciani, A.~Cole, G.~Grabeel,
 \newblock \doi{10.1364/AO.55.008256}.
 \newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-55-29-8256}.
 
+\bibitem[Buonanno and Chen(2001)]{BuonannoChenQMNoise}
+A.~Buonanno and Y.~Chen.
+\newblock Quantum noise in second generation, signal-recycled laser
+  interferometric gravitational-wave detectors.
+\newblock \emph{Phys. Rev. D}, 64:\penalty0 042006, Jul 2001.
+\newblock \doi{10.1103/PhysRevD.64.042006}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.64.042006}.
+
 \bibitem[Carroll(2003)]{carroll_2003}
 S.~M. Carroll.
 \newblock \emph{Spacetime and geometry: an introduction to general relativity}.
@@ -137,6 +145,16 @@ J.~L. Cervantes-Cota, S.~Galindo-Uribarri, and G.~F. Smoot.
 \newblock ISSN 2218-1997.
 \newblock \doi{10.3390/universe2030022}.
 \newblock URL \url{http://www.mdpi.com/2218-1997/2/3/22}.
+
+\bibitem[Chen et~al.(2011)Chen, Danilishin, Khalili, and
+  M{\"u}ller-Ebhardt]{ChenQND}
+Y.~Chen, S.~L. Danilishin, F.~Y. Khalili, and H.~M{\"u}ller-Ebhardt.
+\newblock Qnd measurements for future gravitational-wave detectors.
+\newblock \emph{General Relativity and Gravitation}, 43\penalty0 (2):\penalty0
+  671--694, Feb 2011.
+\newblock ISSN 1572-9532.
+\newblock \doi{10.1007/s10714-010-1060-y}.
+\newblock URL \url{https://doi.org/10.1007/s10714-010-1060-y}.
 
 \bibitem[Collaboration(2015)]{FritschelAdvancedLIGO}
 T.~L.~S. Collaboration.
@@ -325,6 +343,16 @@ I.~K., S.~D., and K.~K.
 \newblock Technical report, California Institute of Technology,
   2015{\natexlab{b}}.
 \newblock URL \url{https://dcc.ligo.org/LIGO-T1500559}.
+
+\bibitem[Kimble et~al.(2001)Kimble, Levin, Matsko, Thorne, and
+  Vyatchanin]{KimbleConversion}
+H.~J. Kimble, Y.~Levin, A.~B. Matsko, K.~S. Thorne, and S.~P. Vyatchanin.
+\newblock Conversion of conventional gravitational-wave interferometers into
+  quantum nondemolition interferometers by modifying their input and/or output
+  optics.
+\newblock \emph{Phys. Rev. D}, 65:\penalty0 022002, Dec 2001.
+\newblock \doi{10.1103/PhysRevD.65.022002}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.65.022002}.
 
 \bibitem[Lawrence et~al.(2002)Lawrence, Zucker, Fritschel, Marfuta, and
   Shoemaker]{Lawrence_TCS}
