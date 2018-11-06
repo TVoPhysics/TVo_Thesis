@@ -1,4 +1,4 @@
-\begin{thebibliography}{65}
+\begin{thebibliography}{70}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,6 +10,13 @@ J.~Abadie et~al.
 \newblock {Sensitivity Achieved by the LIGO and Virgo Gravitational Wave
   Detectors during LIGO's Sixth and Virgo's Second and Third Science Runs}.
 \newblock \emph{arXiv}, 2012.
+
+\bibitem[Abbott(2016)]{DetectionPaper}
+B.~P. e.~a. Abbott.
+\newblock Observation of gravitational waves from a binary black hole merger.
+\newblock \emph{Phys. Rev. Lett.}, 116:\penalty0 061102, Feb 2016.
+\newblock \doi{10.1103/PhysRevLett.116.061102}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.116.061102}.
 
 \bibitem[Abbott et~al.(2002)Abbott, Adhikari, Allen, Cowley, Daw, DeBra,
   Giaime, Hammond, Hammond, Hardham, How, Hua, Johnson, Lantz, Mason,
@@ -156,6 +163,22 @@ Y.~Chen, S.~L. Danilishin, F.~Y. Khalili, and H.~M{\"u}ller-Ebhardt.
 \newblock \doi{10.1007/s10714-010-1060-y}.
 \newblock URL \url{https://doi.org/10.1007/s10714-010-1060-y}.
 
+\bibitem[Collaboration(2009)]{LSCBeyondQM}
+T.~L.~S. Collaboration.
+\newblock A gravitational wave observatory operating beyond the quantum
+  shot-noise limit.
+\newblock \emph{Nature Physics}, 7:\penalty0 962, Nov 2009.
+\newblock \doi{10.1038/nphys2083}.
+\newblock URL \url{http://dx.doi.org/10.1038/nphys2083}.
+
+\bibitem[Collaboration(2013)]{LSCEnhancedSenseSqz}
+T.~L.~S. Collaboration.
+\newblock Enhanced sensitivity of the ligo gravitational wave detector by using
+  squeezed states of light.
+\newblock \emph{Nature Physics}, 7:\penalty0 613, Jul 2013.
+\newblock \doi{10.1038/nphoton.2013.177}.
+\newblock URL \url{http://dx.doi.org/10.1038/nphoton.2013.177}.
+
 \bibitem[Collaboration(2015)]{FritschelAdvancedLIGO}
 T.~L.~S. Collaboration.
 \newblock Advanced ligo.
@@ -212,6 +235,14 @@ M.~Evans, S.~Ballmer, M.~Fejer, P.~Fritschel, G.~Harry, and G.~Ogin.
 \newblock \emph{Phys. Rev. D}, 78:\penalty0 102003, Nov 2008.
 \newblock \doi{10.1103/PhysRevD.78.102003}.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.78.102003}.
+
+\bibitem[Evans et~al.(2013)Evans, Barsotti, Kwee, Harms, and
+  Miao]{EvansRealistic}
+M.~Evans, L.~Barsotti, P.~Kwee, J.~Harms, and H.~Miao.
+\newblock Realistic filter cavities for advanced gravitational wave detectors.
+\newblock \emph{Phys. Rev. D}, 88:\penalty0 022002, Jul 2013.
+\newblock \doi{10.1103/PhysRevD.88.022002}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevD.88.022002}.
 
 \bibitem[Finn(1996)]{Finn:1995}
 L.~S. Finn.
@@ -444,6 +475,16 @@ G.~Mueller, Q.~ze~Shu, R.~Adhikari, D.~B. Tanner, D.~Reitze, D.~Sigg,
 \newblock \emph{Opt. Lett.}, 25\penalty0 (4):\penalty0 266--268, Feb 2000.
 \newblock \doi{10.1364/OL.25.000266}.
 \newblock URL \url{http://ol.osa.org/abstract.cfm?URI=ol-25-4-266}.
+
+\bibitem[Oelker et~al.(2016)Oelker, Isogai, Miller, Tse, Barsotti, Mavalvala,
+  and Evans]{Oelker_FD_sqz}
+E.~Oelker, T.~Isogai, J.~Miller, M.~Tse, L.~Barsotti, N.~Mavalvala, and
+  M.~Evans.
+\newblock Audio-band frequency-dependent squeezing for gravitational-wave
+  detectors.
+\newblock \emph{Phys. Rev. Lett.}, 116:\penalty0 041102, Jan 2016.
+\newblock \doi{10.1103/PhysRevLett.116.041102}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.116.041102}.
 
 \bibitem[of~Birmingham(2014)]{FinesseManual}
 U.~of~Birmingham.

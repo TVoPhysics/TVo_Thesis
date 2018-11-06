@@ -45,7 +45,7 @@ def make_LHO(verbose=False):
     ###########################################################################
 
     # Input power [W]
-    Pin = 125  # Fix!
+    Pin = 22.7  # Fix!
     # Modulation frequencies [Hz], from [1, 4].
     f1 = 9099055.0
     f2 = 45495275.0
@@ -53,7 +53,7 @@ def make_LHO(verbose=False):
     # Modulation depths [rad], from [1], derived from [4].
     midx1 = 0.13
     midx2 = 0.139985
-
+    
     if (5 * f1 != f2):
         print(" ** Warning: modulation frequencies do not match: 5*f1!=f2")
 
@@ -270,7 +270,7 @@ def make_LHO(verbose=False):
     # Refl, Trans, and loss.
     #  - HR
     T_etmy_hr = 3.8e-6                     # [3]
-    L_etmy_hr = (8.2 + 0.2)*1e-6           # [3]
+    L_etmy_hr = (12 + 0.2)*1e-6           # [3]
     
     #  - AR
     R_etmy_ar = 20e-6                       # [3]
@@ -372,7 +372,7 @@ def make_LHO(verbose=False):
     # -----
     # Refl, trans, and loss
     T_etmx_hr = 3.9e-6                     
-    L_etmx_hr = (11 + 0.2)*1e-6            # Scatter + absorbtion. [1] using 30 ppm for cavity gains. 
+    L_etmx_hr = (21 + 0.2)*1e-6            # Scatter + absorbtion. [1] using 30 ppm for cavity gains. 
 
     R_etmx_ar = 8.9e-6                     
     L_etmx_ar = 0                          # Unspecified.
@@ -455,6 +455,8 @@ def make_LHO(verbose=False):
 
     # SRM (SRM 06)
     T_srm_hr = 0.3234                  # [3]
+    
+    #T_srm_hr = 0.3
     L_srm_hr = (8.5 + 0.7)*1e-6        # [3] Scatter + absorbtion. 
     R_srm_hr = 1.0 - T_srm_hr - L_srm_hr   
 
@@ -544,8 +546,8 @@ def make_LHO(verbose=False):
     kat.parse("""
     %%% FTblock squeezer
     ###########################################################################
-    #sqz sqz 0 0 0 nSQZ
-    l sqz 0 0 nSQZ 
+    sqz sqz 0 0 0 nSQZ
+    #l sqz_clf 0 3M nSQZ 
     bs M1_OPO 0 1 0 6 nSQZ dump nM1_OPOc dump
     s subM1_OPO 6.35 $nsilica nM1_OPOc nM1_OPO_ARa
     bs M1_OPO_AR 0 1 0 6 nM1_OPO_ARa dump nM1_OPO_ARc dump
@@ -574,6 +576,7 @@ def make_LHO(verbose=False):
     
     bs1 ZM2 0 0 0 45 nZM2a nZM2b dump dump
     s lzm2_OFI 0 nZM2b nFI2b
+    maxtem 2
     
     ###########################################################################
     %%% FTend squeezer
