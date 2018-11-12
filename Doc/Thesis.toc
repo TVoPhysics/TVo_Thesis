@@ -67,7 +67,7 @@
 \contentsline {section}{\numberline {6.6}Tuning Thermal Compensation for LIGO}{66}{section.6.6}
 \contentsline {subsection}{\numberline {6.6.1}Hartmann Wavefront Sensors}{67}{subsection.6.6.1}
 \contentsline {subsection}{\numberline {6.6.2}Ring Heater Commissioning}{67}{subsection.6.6.2}
-\contentsline {subsection}{\numberline {6.6.3}CO2 Commissioning}{67}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.6.3}CO2 Commissioning}{68}{subsection.6.6.3}
 \contentsline {subsection}{\numberline {6.6.4}SR3 Thermal Actuator}{68}{subsection.6.6.4}
 \contentsline {subsection}{\numberline {6.6.5}Putting it all together}{68}{subsection.6.6.5}
 \contentsline {chapter}{\numberline {7}Solutions for Detector Upgrades}{71}{chapter.7}

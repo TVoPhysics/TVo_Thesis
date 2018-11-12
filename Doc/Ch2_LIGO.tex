@@ -1,12 +1,11 @@
 	\chapter{The LIGO Instrument}\label{LIGOInstrument}
-	The previous chapter dealt with gravitational waves and briefly touched on how a laser interferometer is well suited for detecting GWs and in its simplest form, the LIGO instrument is an incredibly large Michaelson interferometer. However, to make a practical gravitational-wave observatory, the complexity will have to be extended beyond what Michelson and Morley used.  The next sections will explore the various upgrades to the instrument configuration that improve the sensitivity of LIGO.
+	The previous chapter dealt with gravitational waves and briefly touched on how a laser interferometer is well suited for detecting GWs and in its simplest form, the LIGO instrument is an incredibly large Michaelson interferometer. However, to make a practical gravitational-wave observatory, the complexity will have to be extended well beyond what Michelson and Morley used.  The next sections will explore the various upgrades to the instrument configuration that improve the sensitivity of LIGO.
 	
 		\subsection{Simple Michaelson}\label{michelson}
 		As shown in Figure \ref{fig:simple_michelson}, the interferometer begins with a laser which is incident on a partially-reflecting and partially-transmitting beamsplitter that sends half of the laser light down each arm.  The individual beams gather phase as they propagate down the arms and then reflect off of two end mirrors and eventually recombine at the same beamsplitter.  Whether the light constructively or destructively interferes will depend on their relative accumulated phase from propagating down each arm. A photodetector is placed at the output and measures the total power which converts the total amount of light into an electronic signal.  In Section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down the individual arms carry gravitational wave information.  
 		The difference in flight times, $\Delta t$, can be converted into how much phase, $\Delta \phi$, is accumulated by the photons as they propagate through space.  
 		
-		
-		But the question remains, how does an interferometer explcitly measure $\Delta \phi$?
+		But the question remains, how does an interferometer explicitly measure $\Delta \phi$?
 		
 		If the input electric field of the interferometer is $E_0$, the beamsplitter will transmit $iE_0 /\sqrt{2}$ down the x-arm and reflect $E_0 /\sqrt{2}$ towards the y-arm.  By setting the beamsplitter to be the origin, the two plane waves traveling down their respective arms will have gathered a phase $\phi_i$, where the individual arms are denoted by the subscripts. Then, upon reflecting off the end mirrors and returning to the beamsplitter the resultant fields are transmitted to the antisymmetric port. Each of the electric fields from the arms can be described by these equations
 			\begin{equation}
@@ -27,13 +26,11 @@
 			\begin{equation}
 			P_{AS} \approx P_{in} \; (1-2 \Delta \phi) = P_{in} \; (1-2 k L_{+} h_{+})
 			\end{equation}
-		There is a large DC term that is dependent on the input power and generally, it is very difficult to measure small changes in a large signal. So the next obvious method would be to shift the arms such that the output port is operating on a dark fringe, normally this is called a null-point operation.  However, there are difficulties associated with this method as well.  
-		Consider shifting the phase of equation \ref{asy_power} by $\pi/2$, which would result in
+		There is a large DC term that is dependent on the input power and generally, it is very difficult to measure small changes in a large signal. So the next obvious method would be to shift the arms such that the output port is operating on a dark fringe, normally this is called a null-point operation.  However, there are difficulties associated with this method as well. Consider shifting the phase of equation \ref{asy_power} by $\pi/2$, which would result in
 			\begin{equation}\label{null}
 			P_{AS} \vert_{null} = P_{in} \; \text{sin}^2 (\Delta \phi) \approx P_{in} \; (k L_{+} h_{+})^2 
 			\end{equation}
-		This results in a second-order dependence on a gravitational-wave signal that is already approximated to be very small.  
-		So a good solution to the issue of how to $read$ out a gravitational wave signal can be solved using radio frequency (RF) detection methods. Consider changing the interferometer input by adding an electro-optical modulator (EOM) to sinusoidally modulate the laser frequency and expanding to first order using the Bessel functions,
+		This results in a second-order dependence on a gravitational-wave signal that is already approximated to be very small.  So a good solution to the issue of how to $read$ out a gravitational wave signal can be remedied using radio frequency (RF) detection methods. By changing the interferometer input from a single laser to adding an electro-optical modulator (EOM) that sinusoidally modulates the laser frequency and expanding to first order using the Bessel functions,
 			\begin{equation}\label{modE}
 			\begin{aligned}
 			E_{in} 	&= E_{0} e^{i(wt + \beta \text{cos} (\Omega t))} \\
@@ -41,7 +38,7 @@
 					&= E_{C,in} + E_{SB+,in} + E_{SB-,in}
 			\end{aligned}
 			\end{equation}
-		where $\Omega$ and $\beta$ are the modulation frequency and depth, respectively. The first term is commonly called the carrier field whereas the second and third terms are referred to as the (upper or lower) sidebands.  Because there are multiple electric fields, it is useful to define an optical transfer function which transforms the interferometer's input fields to its output,
+		where $\Omega$ and $\beta$ are the modulation frequency and depths, respectively. The first term is commonly called the carrier field whereas the second and third terms are referred to as the (upper or lower) sidebands.  Because there are multiple electric fields, it is useful to define an optical transfer function which maps the interferometer's input fields to its output,
 		\begin{equation}\label{opt_tf}
 		E_{out} = E_{C} + E_{SB+} + E_{SB-} = 
 		\begin{pmatrix}
@@ -61,7 +58,7 @@
 		\begin{equation}
 		E_{out} = i e^{iwt} [ J_0(\beta) 	k \ell_{+}  h_{+}  \; + \; J_1(\beta) \sin( k \Delta \ell + k_{\Omega} \Delta \ell) (e^{i\Omega t}  + e^{-i\Omega t}) ]
 		\end{equation}
-		The frequency offset of the sidebands allow them to pick up phase differently than the carrier field. Thus, by choosing a static offset between the arm lengths such that the carrier signal is on a dark fringe, $k \Delta \ell = \pi/2$, but the sideband are slightly off the null point (Figure [\ref{fig:MichelsonHetero}]) and hence leak into the anti-symmetric port.  This technique is colloquially known as the Schnupp Asymmetry and the electric field reduces to
+		The frequency offset of the sidebands allow them to pick up phase differently than the carrier field. Thus, by choosing a static offset between the arm lengths such that the carrier signal is on a dark fringe, $k \Delta \ell = \pi/2$, but the sideband are slightly off the null point (Figure [\ref{fig:MichelsonHetero}]) and hence leak into the anti-symmetric port.  This technique is colloquially known as the $\textit{Schnupp}$ $\textit{Asymmetry}$ and the electric field reduces to
 		\begin{equation}
 		E_{out} = i e^{iwt} [ J_0(\beta) 	k \ell_{+}  h_{+}  \; + \; J_1(\beta) \sin(k_{\Omega} \Delta \ell) ( e^{i\Omega t} + e^{-i\Omega t}) ]
 		\end{equation}
@@ -69,13 +66,12 @@
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width=.6 \textwidth]{../Figures/SimpleMichelsonHetero.png}
-			\caption{Michelson with heterodyne detection scheme.}
+			\caption[A heterodyne detection scheme for interferometers.]  
+			{\textbf{A heterodyne detection scheme for interferometers.} The laser enters an electro-optical modulator which creates three fields described by equation \ref{modE} and read out by a photodetector.  The error signal at the output is then filtered and described by equation \ref{eq:SM_hetero}.}
 			\label{fig:MichelsonHetero}
 		\end{figure}
 		
-		
-		
-		Recall that the intensity is equal to the electric field squared,
+		The	intensity, which is equal to the electric field squared can be described by
 		\begin{equation}\label{RFdet}
 		\begin{aligned}
 			I	= \vert E_{out} \vert^2  =	&\vert E_{C}\vert^2 + \vert E_{SB+}\vert^2 + \vert E_{SB-}\vert^2 \\
@@ -86,12 +82,12 @@
 		The last term is referred to as the $beat$ $note$ between the carrier signal and the sidebands.  It is possible to extract the term at the modulation frequency using a mixer which is an analog device that outputs the product of two inputs. Usually, the same oscillator that was used to modulate the input beam can be one of the mixer inputs, $\cos(\Omega t)$,  so that the demodulated signal is
 		\begin{equation}
 		\begin{aligned}
-		I_{Demod} 	&\propto \big[ 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell)  \; h_{+}\big] \big[ \cos(\Omega t)  \sin(\Omega t + \phi_{Demod}) \big] \\
+		I_{\text{Demod}} 	&\propto \big[ 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell)  \; h_{+}\big] \big[ \cos(\Omega t)  \sin(\Omega t + \phi_{Demod}) \big] \\
 					&\propto \big[ 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell)  \; h_{+}\big] \big[ \sin(\phi_{Demod}) + \sin(2\Omega t + \phi_{Demod}) \big]
 		\end{aligned}
 		\end{equation}
-		where $\phi_{Demod}$ is the phase that can be set by the user in order to account for extra phase shifts (ie. longer cables). After the mixer, there will be signals at DC, $\Omega$, $2\Omega$ and so on. However, the part that is linear in the gravitational wave amplitude will be at DC so a low-pass filter will allow the final signal to dominate \cite{BlackPDH}:
-		\begin{equation}
+		where $\phi_{\text{Demod}}$ is the phase that can be set by the user in order to account for extra phase shifts (ie. longer cables). After the mixer, there will be signals at DC, $\Omega$, $2\Omega$ and so on. However, the part that is linear in the gravitational wave amplitude will be at DC so a low-pass filter will allow the final signal to dominate \cite{BlackPDH}:
+		\begin{equation}\label{eq:SM_hetero}
 		S = 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell}{\lambda}  \sin(k_{\Omega} \Delta \ell) \sin(\phi_{Demod}) \; h_{+}
 		\end{equation}
 		This shows that a RF detection technique will be linear in GW signal with no large DC offset. Setting the carrier on a null point means $\Delta \ell = \frac{k_{\Omega}}{k} \frac{\pi}{2}$ and allows the designer to optimize the Schnupp asymmetry length to get the best signal for some modulation frequency. This type of readout scheme was used in Enhanced LIGO and is called heterodyne detection, where the sideband fields are produced by an EOM and its efficacy depends on the local oscillator's stability \cite{FritschelReadout}.  
@@ -103,15 +99,13 @@
 		\begin{figure}[h]
 		\centering
 		\includegraphics[width=.5 \textwidth]{../Figures/FPvDL.png}
-		\caption{Delay Line vs Fabry Perot}
+		\caption{Delay Line (top) vs Fabry Perot (bottom)}
 		\label{fig:FPvDL}
 		\end{figure}
-		
 	
-		A Fabry-Perot cavity is an optical system comprised of two or more partially transmitting mirrors with one laser input.  To create a resonator, the user must design a system so that once the laser has made one round trip within the optical system, the shape and size of the beam is the same as when it started.  This may seem simple conceptually but in practice, controlling and sensing any optical cavity comes with a few challenges.
+		A Fabry-Perot cavity is an optical system comprised of two or more partially transmitting mirrors with one laser input.  To create such a resonator, the user must design a system so that once the electric field has made one round trip within the optical system, the phase of the beam is the same as when it started such that it constructively interferes.  This is done by changing the cavity length, which may seem simple conceptually but in practice, controlling and sensing any optical cavity comes with a few challenges.
 		
-		To start understanding the longitudinal degree of freedom, consider a two mirror system in Figure [FabryPerotFig] which is separated by a length $L$ with reflection and transmission coefficients: $r_1$, $t_1$, $r_2$, $t_2$.	
-		Starting with a plane wave at the input mirror with amplitude $E_0$, the beam will enter the cavity and propagate back between the two mirrors.  The reflected, transmitted, and circulating fields \cite{Saulson}, which are a result of the geometric series, can be described as
+		To start understanding the longitudinal degree of freedom, consider a two mirror system in Figure [FabryPerotFig] which is separated by a length $L$ with reflection and transmission coefficients: $r_1$, $t_1$, $r_2$, $t_2$.  Starting with a plane wave at the input mirror with amplitude $E_0$, the beam will enter the cavity and propagate back between the two mirrors.  The reflected, transmitted, and circulating fields \cite{Saulson}, which are a result of the geometric series, can be described as
 		\begin{equation}\label{r_FP}
 		E_{REFL} = r_{FP} E_0 = \bigg(-r_1 + \frac{t_1^2 r_2  e^{-i2kL}}{1-r_1 r_2 e^{-i2kL}} \bigg) E_0
 		\end{equation}
@@ -741,14 +735,14 @@
 	
 	\begin{figure}[ht]
 		\centering
-		\begin{subfigure}[b]{0.45\textwidth}
+		\begin{subfigure}[b]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{../Figures/Kimble_PRFPMI_QM.png}
 			\caption{Power recycled Fabry Perot Michelson quantum noise}
 			\label{fig:kimble_PRFMI}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}[b]{0.45\textwidth}
+		\begin{subfigure}[b]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{../Figures/Kimble_PRFPMI_QM_Sqz.png}
 			\caption{Power recycled Fabry Perot Michelson quantum noise with various squeezing angles}
