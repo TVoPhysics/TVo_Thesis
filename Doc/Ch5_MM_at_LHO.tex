@@ -92,7 +92,8 @@
 		As seen in Section\ref{DRMI}, the sideband and carrier frequencies propagate differently in the interferometer, which means their fields will see different lensing from thermal effects.
 		To understand how the fields change quantitatively, the easiest way is to invoke the ABCD transfer matrix approach to see how the phases change as they propagate through the optical system.
 		\subsubsection{Carrier}
-		Consider Figure[FabyPerotLens], a two-mirror optical system which has an input carrier beam, $E^c_{in}$, that has a portion promptly reflected off the input mirror to create $E^c_{p}$
+	
+		Consider Figure \ref{fig:ThermalLensFP}, a two-mirror optical system which has an input carrier beam, $E^c_{in}$, that has a portion promptly reflected off the input mirror to create $E^c_{p}$
 		\begin{equation}
 		\ket{E^{c}_{p}} = \hat{M}^{c}_{p} \ket{E^{c}_{in}}
 		\end{equation}
@@ -114,7 +115,15 @@
 		\end{equation}
 		where $R$ is the radius of curvature of the high reflectivity surface and $f$ is the focal length of the mirror substrate. In general, this can be a combination of the static lens and any thermal effects which create additional (intentional or non-intentional) lensing.
 		
-		\begin{equation}
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=.7 \textwidth]{../Figures/ThermalLensFP.png}
+			\caption[A simplified model for the effect of a substrate thermal lens on the carrier field.]  
+			{\textbf{A simplified model for the effect of a substrate thermal lens on the carrier field.} An input beam, $E_{\text{in}}^{c}$, from the power recycling mirror (PRM) will have a radius of curvature that mode matches to the input test mass (ITM).  The promptly reflected beam, $E_{p}^{c}$, is denoted by equation \ref{eq:promptE} and the leakage beam, $E_{\ell}^{c}$, is expressed by equation \ref{eq:leakE} where the sum of them would make the total reflected beam.}
+				\label{fig:ThermalLensFP}
+		\end{figure}
+		
+		\begin{equation}\label{eq:promptE}
 		 \ket{E^{c}_{p}}=
 		 \hat{M}^{c}_{p}
 		 \begin{bmatrix}
@@ -132,8 +141,9 @@
 		 \\ 	\frac{1}{q_{\text{p}}}
 		 \end{bmatrix}
 		\end{equation}
+		
 		In addition, there is also a circulating field inside the cavity which leaks out can be denoted by $E^c_{\ell}$ which exits with the input coupler's radius of curvature and sees a single pass through the substrate lens,
-		\begin{equation}
+		\begin{equation}\label{eq:leakE}
 		\ket{E^c_{\ell}} = 		 
 		\begin{bmatrix}
 		1 	&	0 
@@ -177,23 +187,47 @@
 	
 	\cite{Vinet_Thermal_Issues}
 	
-	As mentioned in section \ref{Sec:TL_lensing}, the amount of circulating power in each of the arms can be hundreds of kilowatts and even with absorption amounts between $0.2-0.5$ parts per million, the induced curvature change can be significant.  The Thermal Compensation System (TCS) was developed to correct the radii of curvature by applying heat to compensate the interferometer's main beam.  The strategy has two main components, lock acquisition and gravitational-wave optimization.
+	As mentioned in Section \ref{Sec:TL_lensing}, the amount of circulating power in each of the arms can be hundreds of kilowatts and even with absorption amounts between $0.2-0.5$ parts per million, the induced curvature change can be significant.  The Thermal Compensation System (TCS) was developed to correct the radii of curvature by applying heat to compensate the interferometer's main beam.  The strategy has two main components, lock acquisition and gravitational-wave optimization.
 	
 	To aid in the acquisition sequence, TCS is required to thermally lens the substrate between the beamsplitter and the high-reflectivity surfaces of the test masses such that the optical path difference is the same as a fully resonant interferometer.
 	
 	First it is required to estimate the amount of absorption on the test masses by using the Hartmann wavefront sensors (see Section \ref{Sec:HWS}) to measure the optical path distortion induced by the interferometer during a power up.  Then pre-load the ring heaters with the nominal settings which would cancel carrier beam's thermal absorption.  However, turning on the ring heaters will change the radius of curvature and induce a substrate lens (see Section \ref{Sec:RH}).  The overall lens now has to be canceled out by the CO2 (Carbon Dioxide) lasers which create a lens on the compensation plate of the quadruple pendulum.
 
 	\subsection{Hartmann Wavefront Sensors}\label{Sec:HWS}
-	All estimates of steady-state curvature changes due to heating by the main interferometer beam depend linearly on the absorption and this can be quite difficult to detect when the coating absorption estimates range between 0.2 and 0.5 PPM.  In order to diagnose this effect, the Hartmann Wavefront Sensors (HWS) was a system developed by Adelaide and Caltech which uses a charged coupled imaging device (CCD) to sense the wavefront distortions created by heating.
+	All estimates of steady-state curvature changes due to heating by the main interferometer beam depend linearly on the absorption and this can be quite difficult to detect when the coating absorption are typically below one part in a million.
+	
+	In order to diagnose this effect, the Hartmann Wavefront Sensors (HWS) was a system developed by Adelaide and Caltech which uses a charged coupled imaging device (CCD) to sense the wavefront distortions created by heating from the interferometer beam during power up and a lock loss.  After the arm power drops suddenly, the heat decays exponentially depending on the amount of absorption on the high reflective surface of the arm cavity.  Using the HWS, it is possible to fit the decay rate to a finite element model of a cylindrical mass.  A fitted parameter for absorption is extremely important in predetermining the amount compensation necessary to prepare the test masses for lock acquisition.  Figure \ref{fig:hws_abs} shows the measured spherical power from interferometer heating for ITMX/ITMY and comparing the two optics shows that the spherical power difference for ITMY is almost a factor of 2 larger than ITMX, the reasoning is not yet fully understood but one of the main differences between the O2 and O3 observing runs was the replacement of ITMX, ETMX, and ETMY test masses.  With a fully running Hartmann Sensor system in place which monitors the wavefront curvature across the optic, long-term trends over the observation runs will be able to determine how absorption changes as a function of time and whether test masses have an innate lifetime.  This will be particularly important if the next generation of detectors use much higher power levels in order to achieve better high frequency sensitivity. [cite ozgrav]
+
+	\begin{figure}[ht]
+	\centering
+	\begin{subfigure}[a]{0.7\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../Figures/itmx_HWS_Absorption.png}
+		\caption{ITMX absorption}
+		\label{fig:itmx_abs}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../Figures/itmy_HWS_Absorption.png}
+		\caption{ITMY absorption}
+		\label{fig:itmy_abs}
+	\end{subfigure}
+	\caption{The amount of spherical lensing from a Gaussian beam is shown by Hello and Vinet \cite{Vinet_Thermal_Issues} and this provides a model which to fit the data.}
+	\label{fig:hws_abs}
+	\end{figure}
+	
+	One of the main successes for the Hartmann wavefront sensors have been the ability to find excess absorption due to point absorbers on the high reflectivity surfaces of the test masses.  During the second observation run (O2), there was an absorber found on ITMX that made increasing the input power past 30 watts extremely difficult because it was thought to couple intensity noise into the DARM spectrum.
+	
+	Because the Hartmann sensors provide one of the core estimates for the absorption, they require careful tuning in order to properly sense the wavefront distortion and extract the spherical lensing during a power up.
+	
+	Picture of the HWS layout, cite Aidan.
 	
 	Dead pixel removal
 	
 	Digital Masking
 	
 	Plane imaging
-	
-	One of the main successes for the Hartmann sensors have been the ability to sense the excess absorption due to point absorbers on the high reflectivity surfaces of the test masses.  During the second observation run (O2), there was an absorber found on ITMX that made increasing the input power past 30 watts extremely difficult.  At the end of O2, three optics were replaced: ITMX, ETMX, and ETMY.  However, during the commissioning period there was a new point absorber found on ITMY.
-	
 	\cite{AWC_current}
 	
 	\cite{Brooks_OffAxis}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  6 NOV 2018 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  18 NOV 2018 18:39
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1787,20 +1787,20 @@ Package caption Info: listings package is loaded.
 (Ch4_Exp_MM_Syr.aux) (Ch5_MM_at_LHO.aux) (Ch6_Det_Up.aux) (Appendix.aux))
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1864,8 +1864,8 @@ G,.JBIG2,.JB2,.eps]
 )
 \c@lstlisting=\count290
 \AtBeginShipoutBox=\box47
-Package backref Info: ** backref set up for natbib ** on input line 10.
-Package hyperref Info: Link coloring OFF on input line 10.
+Package backref Info: ** backref set up for natbib ** on input line 17.
+Package hyperref Info: Link coloring OFF on input line 17.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1875,9 +1875,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count291
 )
-LaTeX Info: Redefining \ref on input line 10.
-LaTeX Info: Redefining \pageref on input line 10.
-LaTeX Info: Redefining \nameref on input line 10.
+LaTeX Info: Redefining \ref on input line 17.
+LaTeX Info: Redefining \pageref on input line 17.
+LaTeX Info: Redefining \nameref on input line 17.
 
 (Thesis.out) (Thesis.out)
 \@outlinefile=\write3
@@ -1889,11 +1889,11 @@ Package caption Info: End \AtBeginDocument code.
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for U+msa on input line 17.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 17.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1901,14 +1901,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 	\maketitle	\chapter
+l.24 	\maketitle	\chapter
                          *{Preface} [1
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.21 	\tableofcontents
+l.28 	\tableofcontents
                        [1
 
 ] (Thesis.toc [2
@@ -1918,291 +1918,15 @@ l.21 	\tableofcontents
 \openout4 = `Thesis.toc'.
 
  [4]
-\openout2 = `Ch1_Intro.aux'.
-
- (Ch1_Intro.tex
-Chapter 1.
-
-Package natbib Warning: Citation `Einstein_GR' on page 5 undefined on input lin
-e 10.
-
-
-Package natbib Warning: Citation `DysonEddington' on page 5 undefined on input 
-line 10.
-
-
-Package natbib Warning: Citation `HulseTaylor' on page 5 undefined on input lin
-e 10.
-
-[5
-
-
-] <../Figures/GW_Particles.png, id=403, 144.68454pt x 63.5976pt>
-File: ../Figures/GW_Particles.png Graphic file (type png)
-
-<use ../Figures/GW_Particles.png>
-Package pdftex.def Info: ../Figures/GW_Particles.png used on input line 55.
-(pdftex.def)             Requested size: 187.89914pt x 82.59921pt.
- [6]
-
-Package natbib Warning: Citation `SaulsonStretch' on page 7 undefined on input 
-line 63.
-
-
-Package natbib Warning: Citation `Weber' on page 7 undefined on input line 78.
-
-[7 <../Figures/GW_Particles.png>]
-<../Figures/SimpleMichelson.png, id=441, 158.84946pt x 135.93987pt>
-File: ../Figures/SimpleMichelson.png Graphic file (type png)
-
-<use ../Figures/SimpleMichelson.png>
-Package pdftex.def Info: ../Figures/SimpleMichelson.png used on input line 87.
-(pdftex.def)             Requested size: 211.38832pt x 180.90558pt.
- [8 <../Figures/SimpleMichelson.png>]
-<../Figures/EulerAngles.png, id=457, 185.0112pt x 149.74344pt>
-File: ../Figures/EulerAngles.png Graphic file (type png)
-
-<use ../Figures/EulerAngles.png>
-Package pdftex.def Info: ../Figures/EulerAngles.png used on input line 110.
-(pdftex.def)             Requested size: 211.38832pt x 171.10228pt.
- [9 <../Figures/EulerAngles.png>] [10]
-<../Figures/SincGW.png, id=486, 650.43pt x 361.35pt>
-File: ../Figures/SincGW.png Graphic file (type png)
-
-<use ../Figures/SincGW.png>
-Package pdftex.def Info: ../Figures/SincGW.png used on input line 162.
-(pdftex.def)             Requested size: 328.82707pt x 182.68707pt.
- [11 <../Figures/SincGW.png>] [12]) [13]
-\openout2 = `Ch2_LIGO.aux'.
-
-
-(Ch2_LIGO.tex
-Chapter 2.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4.
-
-[14
-
-
-
-] [15]
-<../Figures/SimpleMichelsonHetero.png, id=546, 571.6557pt x 476.5002pt>
-File: ../Figures/SimpleMichelsonHetero.png Graphic file (type png)
-
-<use ../Figures/SimpleMichelsonHetero.png>
-Package pdftex.def Info: ../Figures/SimpleMichelsonHetero.png used on input lin
-e 68.
-(pdftex.def)             Requested size: 281.85587pt x 234.94856pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16] [17 <../Figures/SimpleMichelsonHetero.png>]
-<../Figures/FPvDL.png, id=579, 313.4109pt x 164.5347pt>
-File: ../Figures/FPvDL.png Graphic file (type png)
-
-<use ../Figures/FPvDL.png>
-Package pdftex.def Info: ../Figures/FPvDL.png used on input line 101.
-(pdftex.def)             Requested size: 234.8775pt x 123.3053pt.
- [18 <../Figures/FPvDL.png>]
-<../Figures/FP_L_TF.png, id=587, 402.7848pt x 264.0264pt>
-File: ../Figures/FP_L_TF.png Graphic file (type png)
-
-<use ../Figures/FP_L_TF.png>
-Package pdftex.def Info: ../Figures/FP_L_TF.png used on input line 128.
-(pdftex.def)             Requested size: 211.38832pt x 138.56355pt.
-
-<../Figures/FP_F_TF.png, id=588, 407.3619pt x 264.0264pt>
-File: ../Figures/FP_F_TF.png Graphic file (type png)
-
-<use ../Figures/FP_F_TF.png>
-Package pdftex.def Info: ../Figures/FP_F_TF.png used on input line 135.
-(pdftex.def)             Requested size: 211.38832pt x 137.00847pt.
-
-<../Figures/Arm_Refl.png, id=589, 589.7232pt x 265.7127pt>
-File: ../Figures/Arm_Refl.png Graphic file (type png)
-
-<use ../Figures/Arm_Refl.png>
-Package pdftex.def Info: ../Figures/Arm_Refl.png used on input line 154.
-(pdftex.def)             Requested size: 211.38832pt x 95.24294pt.
-
-<../Figures/Arm_Circ.png, id=590, 562.9833pt x 265.7127pt>
-File: ../Figures/Arm_Circ.png Graphic file (type png)
-
-<use ../Figures/Arm_Circ.png>
-Package pdftex.def Info: ../Figures/Arm_Circ.png used on input line 161.
-(pdftex.def)             Requested size: 211.38832pt x 99.77176pt.
-
-<../Figures/Arm_Tran.png, id=591, 589.7232pt x 265.7127pt>
-File: ../Figures/Arm_Tran.png Graphic file (type png)
-
-<use ../Figures/Arm_Tran.png>
-Package pdftex.def Info: ../Figures/Arm_Tran.png used on input line 168.
-(pdftex.def)             Requested size: 211.38832pt x 95.24294pt.
- [19 <../Figures/FP_L_TF.png> <../Figures/FP_F_TF.png>] [20 <../Figures/Arm_Ref
-l.png> <../Figures/Arm_Circ.png> <../Figures/Arm_Tran.png>] [21] <../Figures/FP
-_Control.png, id=634, 496.4949pt x 181.03635pt>
-File: ../Figures/FP_Control.png Graphic file (type png)
-
-<use ../Figures/FP_Control.png>
-Package pdftex.def Info: ../Figures/FP_Control.png used on input line 240.
-(pdftex.def)             Requested size: 352.31625pt x 128.4704pt.
-
-<../Figures/PDH_Err.png, id=635, 433.62pt x 289.08pt>
-File: ../Figures/PDH_Err.png Graphic file (type png)
-
-<use ../Figures/PDH_Err.png>
-Package pdftex.def Info: ../Figures/PDH_Err.png used on input line 247.
-(pdftex.def)             Requested size: 352.31625pt x 234.89014pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[22 <../Figures/FP_Control.png>]
-<../Figures/FP_Mich.png, id=654, 158.77719pt x 127.48428pt>
-File: ../Figures/FP_Mich.png Graphic file (type png)
-
-<use ../Figures/FP_Mich.png>
-Package pdftex.def Info: ../Figures/FP_Mich.png used on input line 264.
-(pdftex.def)             Requested size: 140.92793pt x 113.15913pt.
- [23 <../Figures/PDH_Err.png>] [24 <../Figures/FP_Mich.png>]
-File: ../Figures/FP_Mich.png Graphic file (type png)
- <use ../Figures/FP_Mich.png>
-Package pdftex.def Info: ../Figures/FP_Mich.png used on input line 303.
-(pdftex.def)             Requested size: 140.92793pt x 113.15913pt.
-
-<../Figures/PRFP_Mich.png, id=673, 164.7756pt x 127.48428pt>
-File: ../Figures/PRFP_Mich.png Graphic file (type png)
-
-<use ../Figures/PRFP_Mich.png>
-Package pdftex.def Info: ../Figures/PRFP_Mich.png used on input line 310.
-(pdftex.def)             Requested size: 140.92793pt x 109.0391pt.
-
-<../Figures/DRFP_Mich.png, id=674, 164.7756pt x 127.48428pt>
-File: ../Figures/DRFP_Mich.png Graphic file (type png)
-
-<use ../Figures/DRFP_Mich.png>
-Package pdftex.def Info: ../Figures/DRFP_Mich.png used on input line 317.
-(pdftex.def)             Requested size: 140.92793pt x 109.0391pt.
- [25 <../Figures/PRFP_Mich.png> <../Figures/DRFP_Mich.png>] [26] <../Figures/SN
-_Lim_Sense.png, id=698, 1300.86pt x 650.43pt>
-File: ../Figures/SN_Lim_Sense.png Graphic file (type png)
-
-<use ../Figures/SN_Lim_Sense.png>
-Package pdftex.def Info: ../Figures/SN_Lim_Sense.png used on input line 360.
-(pdftex.def)             Requested size: 469.75502pt x 234.87912pt.
-
-<../Figures/QM_Limited_Sense.png, id=699, 1300.86pt x 650.43pt>
-File: ../Figures/QM_Limited_Sense.png Graphic file (type png)
-
-<use ../Figures/QM_Limited_Sense.png>
-Package pdftex.def Info: ../Figures/QM_Limited_Sense.png used on input line 367
-.
-(pdftex.def)             Requested size: 469.75502pt x 234.87912pt.
- [27 <../Figures/SN_Lim_Sense.png>]
-[28 <../Figures/QM_Limited_Sense.png>] [29] [30] [31] [32] [33] [34] [35]
-[36] [37] <../Figures/Kimble_SM_QM.png, id=888, 867.24pt x 578.16pt>
-File: ../Figures/Kimble_SM_QM.png Graphic file (type png)
-
-<use ../Figures/Kimble_SM_QM.png>
-Package pdftex.def Info: ../Figures/Kimble_SM_QM.png used on input line 712.
-(pdftex.def)             Requested size: 211.38832pt x 140.92262pt.
-
-<../Figures/Kimble_SM_QM_sqz.png, id=889, 867.24pt x 578.16pt>
-File: ../Figures/Kimble_SM_QM_sqz.png Graphic file (type png)
-
-<use ../Figures/Kimble_SM_QM_sqz.png>
-Package pdftex.def Info: ../Figures/Kimble_SM_QM_sqz.png used on input line 719
-.
-(pdftex.def)             Requested size: 211.38832pt x 140.92262pt.
-
-<../Figures/Kimble_PRFPMI_QM.png, id=893, 867.24pt x 578.16pt>
-File: ../Figures/Kimble_PRFPMI_QM.png Graphic file (type png)
-
-<use ../Figures/Kimble_PRFPMI_QM.png>
-Package pdftex.def Info: ../Figures/Kimble_PRFPMI_QM.png used on input line 740
-.
-(pdftex.def)             Requested size: 234.8775pt x 156.58167pt.
-
-<../Figures/Kimble_PRFPMI_QM_Sqz.png, id=894, 867.24pt x 578.16pt>
-File: ../Figures/Kimble_PRFPMI_QM_Sqz.png Graphic file (type png)
-
-<use ../Figures/Kimble_PRFPMI_QM_Sqz.png>
-Package pdftex.def Info: ../Figures/Kimble_PRFPMI_QM_Sqz.png used on input line
- 747.
-(pdftex.def)             Requested size: 234.8775pt x 156.58167pt.
-) [38 <../Figures/Kimble_SM_QM.png> <../Figures/Kimble_SM_QM_sqz.png>] [39 <../
-Figures/Kimble_PRFPMI_QM.png> <../Figures/Kimble_PRFPMI_QM_Sqz.png>]
-\openout2 = `Ch2_Intro_to_MM.aux'.
-
- (Ch2_Intro_to_MM.tex
-Chapter 3.
-[40
-
-
-
-] [41] <../Figures/GaussProfile.png, id=943, 302.01633pt x 151.91154pt>
-File: ../Figures/GaussProfile.png Graphic file (type png)
-
-<use ../Figures/GaussProfile.png>
-Package pdftex.def Info: ../Figures/GaussProfile.png used on input line 89.
-(pdftex.def)             Requested size: 305.33789pt x 153.58937pt.
-
-<../Figures/GaussBeamParams.png, id=944, 433.62pt x 289.08pt>
-File: ../Figures/GaussBeamParams.png Graphic file (type png)
-
-<use ../Figures/GaussBeamParams.png>
-Package pdftex.def Info: ../Figures/GaussBeamParams.png used on input line 96.
-(pdftex.def)             Requested size: 399.29463pt x 266.20824pt.
-
-<../Figures/GaussBeamIntensity.png, id=945, 433.62pt x 289.08pt>
-File: ../Figures/GaussBeamIntensity.png Graphic file (type png)
-
-<use ../Figures/GaussBeamIntensity.png>
-Package pdftex.def Info: ../Figures/GaussBeamIntensity.png used on input line 1
-04.
-(pdftex.def)             Requested size: 305.33789pt x 203.56763pt.
- [42] [43 <../Figures/GaussProfile.png>] [44 <../Figures/GaussBeamParams.png>] 
-[45 <../Figures/GaussBeamIntensity.png>] [46] [47] [48] [49] [50]) [51] [52]
-\openout2 = `Ch3_Sim_MM_Finesse.aux'.
-
- (Ch3_Sim_MM_Finesse.tex
-Chapter 4.
-[53
-
-
-
-]) [54]
-\openout2 = `Ch4_Exp_MM_Syr.aux'.
-
- (Ch4_Exp_MM_Syr.tex
-Chapter 5.
-<../Figures/AMM_MASTER.png, id=1069, 1249.66875pt x 624.3325pt>
-File: ../Figures/AMM_MASTER.png Graphic file (type png)
-
-<use ../Figures/AMM_MASTER.png>
-Package pdftex.def Info: ../Figures/AMM_MASTER.png used on input line 8.
-(pdftex.def)             Requested size: 469.75502pt x 234.68617pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[55
-
-
-
-] [56 <../Figures/AMM_MASTER.png>] [57] [58]
-Overfull \hbox (10.70766pt too wide) detected at line 115
-[][][]
- []
-
-[59]) [60]
 \openout2 = `Ch5_MM_at_LHO.aux'.
 
  (Ch5_MM_at_LHO.tex
 Chapter 6.
 [61
+
+
+
+
 
 
 
@@ -2214,70 +1938,58 @@ LaTeX Warning: Reference `TL_lensing' on page 63 undefined on input line 73.
 
 LaTeX Warning: Reference `TL_lensing' on page 64 undefined on input line 88.
 
-[64] [65] [66] [67]
-<../Figures/ITMX_TCS_Settings.png, id=1200, 1445.4pt x 722.7pt>
+[64] <../Figures/ThermalLensFP.png, id=272, 343.06569pt x 110.71764pt>
+File: ../Figures/ThermalLensFP.png Graphic file (type png)
+
+<use ../Figures/ThermalLensFP.png>
+Package pdftex.def Info: ../Figures/ThermalLensFP.png used on input line 120.
+(pdftex.def)             Requested size: 328.82707pt x 106.12215pt.
+ [65 <../Figures/ThermalLensFP.png>] [66]
+[67] <../Figures/itmx_HWS_Absorption.png, id=314, 722.7pt x 361.35pt>
+File: ../Figures/itmx_HWS_Absorption.png Graphic file (type png)
+
+<use ../Figures/itmx_HWS_Absorption.png>
+Package pdftex.def Info: ../Figures/itmx_HWS_Absorption.png used on input line 
+205.
+(pdftex.def)             Requested size: 328.82707pt x 164.4145pt.
+
+<../Figures/itmy_HWS_Absorption.png, id=315, 722.7pt x 361.35pt>
+File: ../Figures/itmy_HWS_Absorption.png Graphic file (type png)
+
+<use ../Figures/itmy_HWS_Absorption.png>
+Package pdftex.def Info: ../Figures/itmy_HWS_Absorption.png used on input line 
+212.
+(pdftex.def)             Requested size: 328.82707pt x 164.4145pt.
+ [68 <../Figures/itmx_HWS_Absorption.png> <../Figures/itmy_HWS_Absorption.png>]
+
+<../Figures/ITMX_TCS_Settings.png, id=335, 1445.4pt x 722.7pt>
 File: ../Figures/ITMX_TCS_Settings.png Graphic file (type png)
 
 <use ../Figures/ITMX_TCS_Settings.png>
-Package pdftex.def Info: ../Figures/ITMX_TCS_Settings.png used on input line 23
-5.
+Package pdftex.def Info: ../Figures/ITMX_TCS_Settings.png used on input line 26
+8.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
 
-<../Figures/ITMY_TCS_Settings.png, id=1201, 1445.4pt x 722.7pt>
+<../Figures/ITMY_TCS_Settings.png, id=336, 1445.4pt x 722.7pt>
 File: ../Figures/ITMY_TCS_Settings.png Graphic file (type png)
 
 <use ../Figures/ITMY_TCS_Settings.png>
-Package pdftex.def Info: ../Figures/ITMY_TCS_Settings.png used on input line 24
-1.
+Package pdftex.def Info: ../Figures/ITMY_TCS_Settings.png used on input line 27
+4.
 (pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-
-<../Figures/ETM_TCS_Settings.png, id=1202, 722.7pt x 433.62pt>
+ [69]
+<../Figures/ETM_TCS_Settings.png, id=348, 722.7pt x 433.62pt>
 File: ../Figures/ETM_TCS_Settings.png Graphic file (type png)
 
 <use ../Figures/ETM_TCS_Settings.png>
-Package pdftex.def Info: ../Figures/ETM_TCS_Settings.png used on input line 250
+Package pdftex.def Info: ../Figures/ETM_TCS_Settings.png used on input line 283
 .
 (pdftex.def)             Requested size: 469.75502pt x 281.85628pt.
-) [68] [69 <../Figures/ITMX_TCS_Settings.png> <../Figures/ITMY_TCS_Settings.png
->] [70 <../Figures/ETM_TCS_Settings.png>]
-\openout2 = `Ch6_Det_Up.aux'.
+) [70] [71 <../Figures/ITMX_TCS_Settings.png> <../Figures/ITMY_TCS_Settings.png
+>] [72 <../Figures/ETM_TCS_Settings.png>]
+(Thesis.lof [86
 
 
-(Ch6_Det_Up.tex
-Chapter 7.
-) [71
-
-
-
-] [72]
-\openout2 = `Appendix.aux'.
-
- (Appendix.tex [73
-
-
-
-
-]
-Appendix A.
-[74
-
-] [75] [76]
-Appendix B.
-[77
-
-] [78]
-Appendix C.
-[79
-
-] [80] [81] [82]
-Appendix D.
-[83
-
-] [84]
-Appendix E.
-) [85
-
-] (Thesis.lof [86
 
 
 ])
@@ -2294,8 +2006,7 @@ Appendix E.
 
  [88
 
-]
-[89
+] [89
 
 ] [90]
 ! Undefined control sequence.
@@ -2310,58 +2021,345 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 [91] [92] [93] [94] [95])
-
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 44.
-[96]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 44.
- (Thesis.aux (Ch1_Intro.aux) (Ch2_LIGO.aux) (Ch2_Intro_to_MM.aux)
-(Ch3_Sim_MM_Finesse.aux) (Ch4_Exp_MM_Syr.aux) (Ch5_MM_at_LHO.aux)
-(Ch6_Det_Up.aux) (Appendix.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 44.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 44.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
+ [96]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
+ (Thesis.aux (Ch1_Intro.aux) (Ch2_LIGO.aux)
+(Ch2_Intro_to_MM.aux) (Ch3_Sim_MM_Finesse.aux) (Ch4_Exp_MM_Syr.aux)
+(Ch5_MM_at_LHO.aux) (Ch6_Det_Up.aux) (Appendix.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5F9F779CCC859057C07F02D1F22A8EC4;5174.
+(rerunfilecheck)             Checksum: 1093DCD4FDDC32D44086A63C0AE60178;1459.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: FE7EDE9B8EFB8E39F624A244369856C1;4927.
+(rerunfilecheck)             Checksum: 09CA57F3E5FA38CD4F386BC915B96B67;5050.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 44.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
  ) 
 Here is how much of TeX's memory you used:
- 20220 strings out of 493323
- 343786 string characters out of 3139066
- 435978 words of memory out of 3000000
- 22985 multiletter control sequences out of 15000+200000
- 543660 words of font info for 71 fonts, out of 3000000 for 9000
+ 19746 strings out of 493323
+ 335688 string characters out of 3139066
+ 432560 words of memory out of 3000000
+ 22834 multiletter control sequences out of 15000+200000
+ 540513 words of font info for 61 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 47i,19n,42p,10416b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program 
-Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Thesis.pdf (98 pages, 5314016 bytes).
+ 47i,11n,46p,10416b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
+pdfTeX warning (dest): name{page.35} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{page.18} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.10} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.42} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.41} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.58} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.53} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.38} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.49} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.36} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.31} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.30} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.25} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.12} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.39} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.11} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.7} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{page.37} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.6} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{page.29} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.33} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.22} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.17} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.59} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.46} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.34} has been referenced but does not exist, re
+placed by a fixed one
+
+pdfTeX warning (dest): name{page.5} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{page.9} has been referenced but does not exist, rep
+laced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.47} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.36} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.27} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.26} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.25} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.24} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.23} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.18} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.17} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.16} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.15} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.14} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.13} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.11} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.7} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.2.0.15} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.a.D.0.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Appendix.a.E} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Appendix.a.D} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.a.C.2.4} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.a.C.2.3} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.a.C.2.2} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.a.C.2.1} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.a.C.2} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.a.C.1} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Appendix.a.C} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Appendix.a.B} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{Appendix.a.A} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{section*.46} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.7.3.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.7.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.7.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.7.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.7} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.3.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.2.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.4} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.1.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.1.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.2.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.0.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.0.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.0.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.0.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.0.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.0.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.2} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.1} has been referenced but does not exist, 
+replaced by a fixed one
+
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mtt10.pfb>
+Output written on Thesis.pdf (29 pages, 2984956 bytes).
 PDF statistics:
- 1772 PDF objects out of 2073 (max. 8388607)
- 512 named destinations out of 1000 (max. 500000)
- 706 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 837 PDF objects out of 1000 (max. 8388607)
+ 235 named destinations out of 1000 (max. 500000)
+ 183 words of extra memory for PDF output out of 10000 (max. 10000000)
 

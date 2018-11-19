@@ -61,21 +61,21 @@
 \contentsline {subsection}{\numberline {6.4.3}Fabry-Perot Contrast Defect}{63}{subsection.6.4.3}
 \contentsline {section}{\numberline {6.5}Hot vs. Cold Interferometers}{64}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Thermal Lensing}{64}{subsection.6.5.1}
-\contentsline {subsubsection}{Carrier}{64}{section*.40}
-\contentsline {subsubsection}{Sidebands}{65}{section*.41}
-\contentsline {subsubsection}{GW Signal}{66}{section*.42}
+\contentsline {subsubsection}{Carrier}{64}{section*.4}
+\contentsline {subsubsection}{Sidebands}{66}{section*.6}
+\contentsline {subsubsection}{GW Signal}{66}{section*.7}
 \contentsline {section}{\numberline {6.6}Tuning Thermal Compensation for LIGO}{66}{section.6.6}
 \contentsline {subsection}{\numberline {6.6.1}Hartmann Wavefront Sensors}{67}{subsection.6.6.1}
-\contentsline {subsection}{\numberline {6.6.2}Ring Heater Commissioning}{67}{subsection.6.6.2}
-\contentsline {subsection}{\numberline {6.6.3}CO2 Commissioning}{68}{subsection.6.6.3}
-\contentsline {subsection}{\numberline {6.6.4}SR3 Thermal Actuator}{68}{subsection.6.6.4}
-\contentsline {subsection}{\numberline {6.6.5}Putting it all together}{68}{subsection.6.6.5}
+\contentsline {subsection}{\numberline {6.6.2}Ring Heater Commissioning}{69}{subsection.6.6.2}
+\contentsline {subsection}{\numberline {6.6.3}CO2 Commissioning}{69}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.6.4}SR3 Thermal Actuator}{69}{subsection.6.6.4}
+\contentsline {subsection}{\numberline {6.6.5}Putting it all together}{70}{subsection.6.6.5}
 \contentsline {chapter}{\numberline {7}Solutions for Detector Upgrades}{71}{chapter.7}
 \contentsline {section}{\numberline {7.1}Sensors}{71}{section.7.1}
 \contentsline {section}{\numberline {7.2}High Sensitivity Telescope}{71}{section.7.2}
 \contentsline {section}{\numberline {7.3}A Global Active Wavefront Control Scheme}{71}{section.7.3}
 \contentsline {subsection}{\numberline {7.3.1}Hard and Soft Mode Matching}{72}{subsection.7.3.1}
-\contentsline {chapter}{Appendices}{73}{section*.45}
+\contentsline {chapter}{Appendices}{73}{section*.46}
 \contentsline {chapter}{\numberline {A}Resonator Formulas}{74}{Appendix.a.A}
 \contentsline {chapter}{\numberline {B}Hermite Gauss Normalization}{77}{Appendix.a.B}
 \contentsline {chapter}{\numberline {C}Bullseye and Quadrant Photodiode Characterization}{79}{Appendix.a.C}
