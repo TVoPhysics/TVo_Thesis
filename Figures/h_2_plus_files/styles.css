@@ -1,0 +1,18 @@
+body {
+       background-color: #ffffff;
+       font-family: sans-serif;
+       }
+
+#input_latex {
+width: 100%;
+ }
+
+.outputimg {
+             background-image: url('trans_grid.png');
+             background-repeat: repeat;
+             padding: 2px;
+}
+
+.hist {
+        padding: 15px;
+        }
