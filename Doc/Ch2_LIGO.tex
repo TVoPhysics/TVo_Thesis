@@ -273,7 +273,7 @@
 		\end{aligned}
 		\end{equation}
 		The first bracket is the circulating field of the carrier signal amplified by the Fabry Perot cavity and the second bracket is the circulating field slightly off resonance due to the gravitational wave frequency offset.  Setting the fields to resonate already simplifies the equation but it is also reasonable to approximate the gravitational wave as a weak signal and expand the exponential $e^{- 2i \omega_{\text{\tiny GW}}  \frac{L}{c}} \approx 1 - 2i \omega_{\text{\tiny GW}}  \frac{L}{c}$.  This transforms the signal sideband field into a simple form,
-		\begin{equation}
+		\begin{equation}\label{eq:e_gw}
 		E(\pm \omega_{\text{\tiny GW}}) \approx \bigg[\frac{t_1}{1-r_1r_2}\bigg]^2 \, \frac{E_0}{\sqrt{2}} \, \bigg[\frac{1}{1 \pm i \frac{\omega_{\text{\tiny GW}}}{\omega_p}}\bigg] ik\Delta L
 		\end{equation}
 		where $\omega_p = \frac{1-r_1r_2}{r_1r_2}\frac{c}{2L}$ is the differential pole frequency; notice that it matches the single arm cavity pole.
@@ -368,7 +368,7 @@
 		\end{equation}
 		Here, the frequency dependence of the differential cavity pole with dual recycling is denoted by
 		\begin{equation}
-		\begin{aligned}
+		\begin{aligned}\label{eq:darm_cav_pole}
 			\omega_{\text{DR}} 	&=	\frac{1-r_{1+s}r_2}{r_{1+s}r_2}\frac{c}{2L}\\
 								&=	\frac{1- r_1r_s e^{-2i\phi_s} }{ (r_1 - r_s e^{-2i\phi_s})r_2} - 1
 		\end{aligned}
@@ -541,32 +541,14 @@
 		\begin{equation}
 		\tilde{h}_{SN}(f) = 8.2\times 10^{-22} \; \bigg[ \frac{\text{Strain}}{\sqrt{\text{Hz}}}\bigg]
 		\end{equation}
-		Unsurprisingly, the shot noise is proportional to $1/\sqrt{P_{\text{in}}}$ and the initial phase difference between the interferometer arms. There are a few subtleties associated with measuring shot noise, this model assumes that the interferometer readout is a single photodetector located at the antisymmetric port.  However,it is possible to measure the light at two different phases (90 degrees apart) and subtract the results to get better averaging.   Also, as shown in section \ref{sec:DRMI}, there is a freedom to choose the readout scheme of the interferometer (heterodyne or homodyne) which will also affect the overall quantum sensitivity.
+		Unsurprisingly, the shot noise is proportional to $1/\sqrt{P_{\text{in}}}$ and the initial phase difference between the interferometer arms. There are a few subtleties associated with measuring shot noise, this model assumes that the interferometer readout is a single photodetector located at the antisymmetric port.  However,it is possible to measure the light at two different phases (90 degrees apart) and subtract the results to get better averaging.   As shown in section \ref{sec:DRMI}, there is a freedom to choose the readout scheme of the interferometer (heterodyne or homodyne) which will also affect the overall quantum sensitivity and introducing Fabry-Perot cavities will shape the shot noise for frequencies above the differential cavity pole in equations \ref{eq:e_gw} and \ref{eq:darm_cav_pole}.
 		
 		\subsubsection{Seismic Noise}
 		Reference:[Kissel Thesis]
-		The main contributions to seismic noise are primarily caused by either natural occurrences  (tectonic plates, wind driven microcosms, oceanic storms etc) or man-made disturbances (heavy automotive traffic, industrial machinery, etc) which contribute to the background hum of motion.  Seismic noise will be the low frequency barrier for all terrestrial gravitational-wave detectors.  One of the biggest upgrades from eLIGO to aLIGO was the increase in complexity for seismic isolation and suspensions.  Using multiple stages of actively controlled platforms, the noise contribution can be attenuated for frequencies larger than ~1Hz;  in addition, the use of quadruple pendulums to hang the main arm cavity optics further reduces the motion above the pendulum's resonance frequency. This is a tremendous upgrade from the mostly passive isolation methods used in initial LIGO.
-		
-		Compare low and high noise microseisms
-		\cite{BlairBook}
-		The Advanced LIGO's solution to the low frequency wall is comprised of seismic isolation platforms and multi-level suspensions.
-		
-		\cite{driggers_global}
-		
-		\cite{fabrice_sei1}
-		
-		\cite{fabrice_sei2}
-		
-		\cite{fabrice_strat}
-		
-		\cite{sei_isol}
-		
-		\cite{Hang_LF}
-		
-		\cite{Fritschel_alignment}
+		The main contributions to seismic noise are primarily caused by either natural occurrences  (tectonic plates, wind driven microcosms, oceanic storms etc) or man-made disturbances (heavy automotive traffic, industrial machinery, etc) which contribute to the background hum of motion.  In general, this will be the low frequency barrier for all terrestrial gravitational-wave detectors.  One of the biggest upgrades from eLIGO to aLIGO was the increase in complexity for seismic isolation and suspensions.  Using multiple stages of actively controlled platforms \cite{fabrice_sei1} \cite{fabrice_sei2} \cite{fabrice_strat}\cite{sei_isol}, the noise contribution can be attenuated for frequencies larger than ~1Hz;  in addition, the use of quadruple pendulums to hang the main arm cavity optics further reduces the motion above the pendulum's resonance frequency\cite{driggers_global}\cite{BlairBook}. This is a tremendous upgrade from the mostly passive isolation methods used in initial LIGO.  An interesting point to note is that the estimate of noise contributions from seismic activities to the strain sensitivity is negligible for frequencies above 10 Hz, but is absolutely vital for lock acquisition and resonator stability \cite{Hang_LF} \cite{Fritschel_alignment}.
 		
 		\subsubsection{Thermal Noise}
-		Brownian motion \cite{brownian_einstein} is the random movement of particles suspended in a fluid.  The LIGO test masses, which make up the 4 kilometer long Fabry Perot cavities, are a large macroscopic object but their constituent atoms are excited by the ambient temperature and have associated random motion. Those atoms are interconnected which allow for the propagation of an infinite number of elastic wave modes that contain random relative phases and the linear superposition of the modes create distortions that result in thermal noise.	
+		Brownian motion \cite{brownian_einstein} is the random movement of particles suspended in a fluid.  The LIGO test masses that make up the 4 kilometer long Fabry-Perot cavities are large macroscopic objects but their constituent atoms can be excited by the ambient temperature which leads to random motion. Those atoms are interconnected which allow for the propagation of an infinite number of elastic wave modes that contain random relative phases and the linear superposition of the modes create distortions that result in thermal noise.	
 	
 		A good way to start analyzing thermal noise is to consider a simple harmonic oscillator with mass $m$, that is in a thermal bath with a damping force, $F=-b\dot{x}(t)$.
 		\begin{equation}
@@ -608,7 +590,7 @@
 		\end{equation}
 		where $Y(f)$ is the complex mechanical admittance (inverse of the impedance) of a system. The physical interpretation of equation \ref{FD} can be viewed as a tunnel of energy between a system of interest and the outside world.  If there is an ability to couple energy from one system to another via some process, then the reverse must be true as well. This subtle but powerful statement can be applied generally.  For example, a resistor which is able to dissipate thermal energy when current is flowing through it will convert random external temperature fluctuations into stray currents that results in $Johnson$ $Noise$.  Another principle which the FD theorem relies upon is that when the system is in thermal equilibrium, its response to fluctuations will be the same as applying a small force randomly.
 		
-		The mechanical admittance of a system is defined as $Y(f) = \dot{x}(f)/F(f)$, which can be written down directly for a damped harmonic oscillator using equation \ref{harmonic},
+		Using this method, the mechanical admittance of a system is defined as $Y(f) = \dot{x}(f)/F(f)$ which can be written down directly for a damped harmonic oscillator using equation \ref{harmonic},
 		\begin{equation}
 			\begin{aligned}
 			\frac{\dot{x}(f)}{F} &= \frac{i \omega}{m} \frac{1}{\omega_{0}^2 - \omega^2 +i\gamma \omega}\\
