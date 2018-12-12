@@ -15,15 +15,15 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces A dual recycled Fabry-Perot interferometer.}}{28}{figure.caption.17}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Shot noise limited sensitivity\relax }}{28}{figure.caption.18}
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Quantum limited sensitivity by combining shot noise and radiation pressure\relax }}{29}{figure.caption.19}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces The amplitude spectral density of gravitational wave strain normalized by the standard quantum limit.\relax }}{40}{figure.caption.24}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Add a caption\relax }}{41}{figure.caption.25}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces The amplitude spectral density of gravitational wave strain normalized by the standard quantum limit.\relax }}{39}{figure.caption.24}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Add a caption\relax }}{40}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces The Gaussian beam is a cylindrically symmetric function so the two coordinates are denoted by $\mathaccentV {hat}05E{r}$ for the radial and $\mathaccentV {hat}05E{z}$ for the axis of propagation with the origin located at the center. The thick dark lines represent the beam size, $w(z)$, which is minimal at the waist, $w(z)=w_0$ when $z=0$ and asymptotic towards $\lambda /\pi w_0$ when $z \approx \qopname \relax m{inf}$ as shown by the dotted gray lines. The red dashed line represents the intensity cross section of the beam which changes to a wider and flatter profile as a function of distance from the waist.\relax }}{45}{figure.caption.26}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Beam size, radius of curvature, and Gouy phase as a function of distance propagation from the waist.}}{46}{figure.caption.27}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Intensity\relax }}{47}{figure.caption.28}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The Gaussian beam is a cylindrically symmetric function so the two coordinates are denoted by $\mathaccentV {hat}05E{r}$ for the radial and $\mathaccentV {hat}05E{z}$ for the axis of propagation with the origin located at the center. The thick dark lines represent the beam size, $w(z)$, which is minimal at the waist, $w(z)=w_0$ when $z=0$ and asymptotic towards $\lambda /\pi w_0$ when $z \approx \qopname \relax m{inf}$ as shown by the dotted gray lines. The red dashed line represents the intensity cross section of the beam which changes to a wider and flatter profile as a function of distance from the waist.\relax }}{44}{figure.caption.26}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Beam size, radius of curvature, and Gouy phase as a function of distance propagation from the waist.}}{45}{figure.caption.27}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Intensity\relax }}{46}{figure.caption.28}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces MEDM master screen for adaptive mode matching at Syracuse, here, the error signal in reflection of the Fabry-Perot cavity is fed into two RF detectors that have rotational phasing. Then the signal is sent to an actuator function which allows for diagonalizing the signals and can be sent to a set of thermal lens at different Gouy phases for actuation. \relax }}{57}{figure.caption.36}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces MEDM master screen for adaptive mode matching at Syracuse, here, the error signal in reflection of the Fabry-Perot cavity is fed into two RF detectors that have rotational phasing. Then the signal is sent to an actuator function which allows for diagonalizing the signals and can be sent to a set of thermal lens at different Gouy phases for actuation. \relax }}{56}{figure.caption.36}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  8 DEC 2018 15:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  11 DEC 2018 11:44
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -2124,72 +2124,71 @@ QM_Limited_Sense.png>] [30] [31]
 LaTeX Warning: Reference `michelson' on page 32 undefined on input line 425.
 
 [32] [33] [34] [35] [36] [37] [38]
-<../Figures/Kimble_SM_QM.png, id=883, 867.24pt x 578.16pt>
+<../Figures/Kimble_SM_QM.png, id=886, 867.24pt x 578.16pt>
 File: ../Figures/Kimble_SM_QM.png Graphic file (type png)
 
 <use ../Figures/Kimble_SM_QM.png>
-Package pdftex.def Info: ../Figures/Kimble_SM_QM.png used on input line 665.
+Package pdftex.def Info: ../Figures/Kimble_SM_QM.png used on input line 647.
 (pdftex.def)             Requested size: 211.38832pt x 140.92262pt.
 
-<../Figures/Kimble_SM_QM_sqz.png, id=884, 867.24pt x 578.16pt>
+<../Figures/Kimble_SM_QM_sqz.png, id=887, 867.24pt x 578.16pt>
 File: ../Figures/Kimble_SM_QM_sqz.png Graphic file (type png)
 
 <use ../Figures/Kimble_SM_QM_sqz.png>
-Package pdftex.def Info: ../Figures/Kimble_SM_QM_sqz.png used on input line 672
+Package pdftex.def Info: ../Figures/Kimble_SM_QM_sqz.png used on input line 654
 .
 (pdftex.def)             Requested size: 211.38832pt x 140.92262pt.
- [39]
-<../Figures/Kimble_PRFPMI_QM.png, id=898, 867.24pt x 578.16pt>
+ [39 <../Figures/Kimble_SM_QM.png> <../Figures/Kimble_SM_QM_sqz.png>]
+<../Figures/Kimble_PRFPMI_QM.png, id=903, 867.24pt x 578.16pt>
 File: ../Figures/Kimble_PRFPMI_QM.png Graphic file (type png)
 
 <use ../Figures/Kimble_PRFPMI_QM.png>
-Package pdftex.def Info: ../Figures/Kimble_PRFPMI_QM.png used on input line 693
+Package pdftex.def Info: ../Figures/Kimble_PRFPMI_QM.png used on input line 675
 .
 (pdftex.def)             Requested size: 234.8775pt x 156.58167pt.
 
-<../Figures/Kimble_PRFPMI_QM_Sqz.png, id=899, 867.24pt x 578.16pt>
+<../Figures/Kimble_PRFPMI_QM_Sqz.png, id=904, 867.24pt x 578.16pt>
 File: ../Figures/Kimble_PRFPMI_QM_Sqz.png Graphic file (type png)
 
 <use ../Figures/Kimble_PRFPMI_QM_Sqz.png>
 Package pdftex.def Info: ../Figures/Kimble_PRFPMI_QM_Sqz.png used on input line
- 700.
+ 682.
 (pdftex.def)             Requested size: 234.8775pt x 156.58167pt.
-) (Ch2_Intro_to_MM.tex [40 <../Figures/Kimble_SM_QM.png> <../Figures/Kimble_SM_
-QM_sqz.png>] [41 <../Figures/Kimble_PRFPMI_QM.png> <../Figures/Kimble_PRFPMI_QM
-_Sqz.png>]
+) (Ch2_Intro_to_MM.tex [40 <../Figures/Kimble_PRFPMI_QM.png> <../Figures/Kimble
+_PRFPMI_QM_Sqz.png>]
 Chapter 3.
-[42
+[41
 
-] [43] <../Figures/GaussProfile.png, id=946, 302.01633pt x 151.91154pt>
+] [42] <../Figures/GaussProfile.png, id=944, 302.01633pt x 151.91154pt>
 File: ../Figures/GaussProfile.png Graphic file (type png)
 
 <use ../Figures/GaussProfile.png>
 Package pdftex.def Info: ../Figures/GaussProfile.png used on input line 89.
 (pdftex.def)             Requested size: 305.33789pt x 153.58937pt.
 
-<../Figures/GaussBeamParams.png, id=947, 433.62pt x 289.08pt>
+<../Figures/GaussBeamParams.png, id=945, 433.62pt x 289.08pt>
 File: ../Figures/GaussBeamParams.png Graphic file (type png)
 
 <use ../Figures/GaussBeamParams.png>
 Package pdftex.def Info: ../Figures/GaussBeamParams.png used on input line 96.
 (pdftex.def)             Requested size: 399.29463pt x 266.20824pt.
 
-<../Figures/GaussBeamIntensity.png, id=948, 433.62pt x 289.08pt>
+<../Figures/GaussBeamIntensity.png, id=946, 433.62pt x 289.08pt>
 File: ../Figures/GaussBeamIntensity.png Graphic file (type png)
 
 <use ../Figures/GaussBeamIntensity.png>
 Package pdftex.def Info: ../Figures/GaussBeamIntensity.png used on input line 1
 04.
 (pdftex.def)             Requested size: 305.33789pt x 203.56763pt.
- [44] [45 <../Figures/GaussProfile.png>] [46 <../Figures/GaussBeamParams.png>] 
-[47 <../Figures/GaussBeamIntensity.png>] [48] [49] [50] [51] [52]) (Ch3_Sim_MM_
-Finesse.tex [53]
+ [43] [44 <../Figures/GaussProfile.png>] [45 <../Figures/GaussBeamParams.png>] 
+[46 <../Figures/GaussBeamIntensity.png>] [47] [48] [49] [50] [51]) (Ch3_Sim_MM_
+Finesse.tex [52]
 Chapter 4.
-[54
+[53
 
-]) (Ch4_Exp_MM_Syr.tex [55]
+]) (Ch4_Exp_MM_Syr.tex [54]
 Chapter 5.
-<../Figures/AMM_MASTER.png, id=1067, 1249.66875pt x 624.3325pt>
+<../Figures/AMM_MASTER.png, id=1065, 1249.66875pt x 624.3325pt>
 File: ../Figures/AMM_MASTER.png Graphic file (type png)
 
 <use ../Figures/AMM_MASTER.png>
@@ -2199,38 +2198,38 @@ Package pdftex.def Info: ../Figures/AMM_MASTER.png used on input line 8.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[56
+[55
 
-] [57 <../Figures/AMM_MASTER.png>] [58] [59]
+] [56 <../Figures/AMM_MASTER.png>] [57] [58]
 Overfull \hbox (10.70766pt too wide) detected at line 115
 [][][]
  []
 
-[60]) (Ch5_MM_at_LHO.tex [61]
+[59]) (Ch5_MM_at_LHO.tex [60]
 Chapter 6.
-[62
+[61
 
-] [63]
+] [62]
 
-LaTeX Warning: Reference `TL_lensing' on page 64 undefined on input line 54.
+LaTeX Warning: Reference `TL_lensing' on page 63 undefined on input line 54.
 
-[64]
+[63]
 
-LaTeX Warning: Reference `TL_lensing' on page 65 undefined on input line 63.
-
-
-LaTeX Warning: Reference `DRMI' on page 65 undefined on input line 67.
+LaTeX Warning: Reference `TL_lensing' on page 64 undefined on input line 63.
 
 
-LaTeX Warning: Reference `fig:ThermalLensFP' on page 65 undefined on input line
+LaTeX Warning: Reference `DRMI' on page 64 undefined on input line 67.
+
+
+LaTeX Warning: Reference `fig:ThermalLensFP' on page 64 undefined on input line
  70.
 
-[65] [66]
+[64] [65]
 
-LaTeX Warning: Reference `DRMI' on page 67 undefined on input line 143.
+LaTeX Warning: Reference `DRMI' on page 66 undefined on input line 143.
 
 
-LaTeX Warning: Reference `fig:ThermalLensWF' on page 67 undefined on input line
+LaTeX Warning: Reference `fig:ThermalLensWF' on page 66 undefined on input line
  152.
 
 
@@ -2240,49 +2239,49 @@ LaTeX Font Warning: Command \boldmath invalid in math mode on input line 154.
 LaTeX Font Warning: Command \mathversion invalid in math mode on input line 154
 .
 
-[67]
+[66]
 
-LaTeX Warning: Reference `fig:ThermalLensWF' on page 68 undefined on input line
+LaTeX Warning: Reference `fig:ThermalLensWF' on page 67 undefined on input line
  158.
 
-[68] [69] [70]
+[67] [68] [69]
 
-LaTeX Warning: Reference `fig:hws_abs' on page 71 undefined on input line 276.
+LaTeX Warning: Reference `fig:hws_abs' on page 70 undefined on input line 276.
 
-[71] [72]
+[70] [71]
 
-LaTeX Warning: Reference `fig:hws_abs' on page 73 undefined on input line 307.
+LaTeX Warning: Reference `fig:hws_abs' on page 72 undefined on input line 307.
 
-) (Ch6_Det_Up.tex [73] [74]
+) (Ch6_Det_Up.tex [72] [73]
 Chapter 7.
-) (Appendix.tex [75
+) (Appendix.tex [74
 
-] [76] [77
+] [75] [76
 
 
 ]
 Appendix A.
-[78
+[77
 
-] [79] [80]
+] [78] [79]
 Appendix B.
-[81
+[80
 
-] [82]
+] [81]
 Appendix C.
-[83
+[82
 
-] [84] [85] [86]
+] [83] [84] [85]
 Appendix D.
-[87
+[86
 
-]) [88] (Thesis.lof [89
+]) [87] (Thesis.lof [88
 
 ])
 \tf@lof=\write5
 \openout5 = `Thesis.lof'.
 
- [90] (Thesis.lot)
+ [89] (Thesis.lot)
 \tf@lot=\write6
 \openout6 = `Thesis.lot'.
 
@@ -2291,11 +2290,11 @@ Appendix D.
 \openout7 = `Thesis.brf'.
 
 
-[91
+[90
 
-] [92
+] [91
 
-] [93]
+] [92]
 ! Undefined control sequence.
 <recently read> \prd 
                      
@@ -2307,12 +2306,12 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[94] [95] [96] [97] [98])
+[93] [94] [95] [96] [97])
 
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
-[99]
+[98]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
  (Thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
@@ -2320,7 +2319,7 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: A8888436BD1390B4BAF99E54A3BDB36E;5111.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 302248A3006CEE3201DAF770DB24A86E;4856.
+(rerunfilecheck)             Checksum: A339A9D2D51C02F8E260E857DBB54A33;4856.
 
 
 LaTeX Warning: There were undefined references.
@@ -2331,10 +2330,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
  ) 
 Here is how much of TeX's memory you used:
- 20235 strings out of 493323
- 343879 string characters out of 3139066
- 432251 words of memory out of 3000000
- 23004 multiletter control sequences out of 15000+200000
+ 20236 strings out of 493323
+ 343899 string characters out of 3139066
+ 432379 words of memory out of 3000000
+ 23006 multiletter control sequences out of 15000+200000
  543660 words of font info for 71 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,19n,42p,10416b,555s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2358,9 +2357,9 @@ y7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><
 C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Thesis.pdf (101 pages, 3907976 bytes).
+Output written on Thesis.pdf (100 pages, 3908001 bytes).
 PDF statistics:
- 1798 PDF objects out of 2073 (max. 8388607)
- 536 named destinations out of 1000 (max. 500000)
+ 1796 PDF objects out of 2073 (max. 8388607)
+ 535 named destinations out of 1000 (max. 500000)
  683 words of extra memory for PDF output out of 10000 (max. 10000000)
 
