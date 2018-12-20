@@ -245,9 +245,9 @@
 	
 		
 		\subsection{Fabry-Perot Michelson}\label{FPmich}
-		Using an optical cavity to increase the number of bounces along the 4 kilometer arms will amplify the gravitational wave signal but it will also shape the frequency dependence of the sensitivity as well.  This has already been alluded to in section \ref{measuringGWs} where the overall increase in arm length will tune the response function of equation \ref{gwsinc}.  The same idea can apply to integrate the use of Fabry-Perot arms into a Michelson interferometer and looking at the signal at the antisymmetric port as a function of gravitational wave frequency. Previously in section \ref{michelson}, it was shown that the heterodyne RF detection technique required beating the sidebands with a carrier field containing the gravitational wave information.  However, this is not the only way because the signal sidebands beating with a reference carrier field could also be a valid way of measuring a signal of interest. In fact, Advanced LIGO employs a specific type of homodyne detection called DC readout \cite{FritschelReadout}\cite{FritschelAdvancedLIGO}. The idea is that the carrier field will resonant in the arms but will be slightly modulated due to a gravitational wave which will create audio frequency sidebands imparted on the field.  
+		Using an optical cavity to increase the number of bounces along the 4 kilometer arms will amplify the gravitational wave signal but it will also shape the frequency dependence of the sensitivity as well.  This has already been alluded to in section \ref{measuringGWs} where the overall increase in arm length will tune the response function of equation \ref{gwsinc}.  The same idea can apply to integrate the use of Fabry-Perot arms into a Michelson interferometer and looking at the signal at the antisymmetric port as a function of gravitational wave frequency. Previously in section \ref{sec:michelson}, it was shown that the heterodyne RF detection technique required beating the sidebands with a carrier field containing the gravitational wave information.  However, this is not the only way because the signal sidebands beating with a reference carrier field could also be a valid way of measuring a signal of interest. In fact, Advanced LIGO employs a specific type of homodyne detection called DC readout \cite{FritschelReadout}\cite{FritschelAdvancedLIGO}. The idea is that the carrier field will resonant in the arms but will be slightly modulated due to a gravitational wave which will create audio frequency sidebands imparted on the field.  
 		
-		Figure \ref{fig:FPMichelson} shows an input electric field of $E_0$ incident on a 50/50 beamsplitter which then enters two orthogonal arm cavities of length $L_x$ and $L_y$.  Notice that the distance from the beamsplitter to the input couplers for both arms denoted by $l_x$ and $l_y$ are independent variables, this is to account for the DARM offset which is analogous to the Schnupp asymmetry described in section \ref{michelson}.  After partially transmitting and reflecting at the beamsplitter, the fields will resonate in each of the arm cavities and obey the reflectivity relations described by equation \ref{r_FP}.  Upon recombining at the beamsplitter, the antisymmetric port electric field will be related to the arm fields by,
+		Figure \ref{fig:FPMichelson} shows an input electric field of $E_0$ incident on a 50/50 beamsplitter which then enters two orthogonal arm cavities of length $L_x$ and $L_y$.  Notice that the distance from the beamsplitter to the input couplers for both arms denoted by $l_x$ and $l_y$ are independent variables, this is to account for the DARM offset which is analogous to the Schnupp asymmetry described in section \ref{sec:michelson}.  After partially transmitting and reflecting at the beamsplitter, the fields will resonate in each of the arm cavities and obey the reflectivity relations described by equation \ref{r_FP}.  Upon recombining at the beamsplitter, the antisymmetric port electric field will be related to the arm fields by,
 		\begin{equation}
 		E_{\text{AS}} = \frac{1}{\sqrt{2}} [E_{x}^{\text{ARM}} + E_{y}^{\text{ARM}} ] 
 		\end{equation}
@@ -480,7 +480,7 @@
 		\begin{equation}
 		\tilde{x}_{RP}(f) = \sqrt{\frac{\hbar \omega}{\Delta T} P_{\text{in}}} \frac{1}{2Mc (\pi f)^2}
 		\end{equation}
-		This means the noise spectral density of radiation pressure for an interferometer with a mirror of mass $M=40kg$, input power $P_{\text{in}}=125$ Watts, and laser frequency $\lambda=1064$ nm
+		This means the noise spectral density of radiation pressure for an interferometer with a mirror of mass $M=40 $ kg, input power $P_{\text{in}}=125$ Watts, and laser frequency $\lambda=1064$ nm
 		\begin{equation}
 		\tilde{h}_{RP}(f) = 2.04\times 10^{-20} \frac{1}{f^2} \; \bigg[ \frac{\text{Strain}}{\sqrt{\text{Hz}}}\bigg]
 		\end{equation}
@@ -545,7 +545,7 @@
 		
 		\subsubsection{Seismic Noise}
 		Reference:[Kissel Thesis]
-		The main contributions to seismic noise are primarily caused by either natural occurrences  (tectonic plates, wind driven microcosms, oceanic storms etc) or man-made disturbances (heavy automotive traffic, industrial machinery, etc) which contribute to the background hum of motion.  In general, this will be the low frequency barrier for all terrestrial gravitational-wave detectors.  One of the biggest upgrades from eLIGO to aLIGO was the increase in complexity for seismic isolation and suspensions.  Using multiple stages of actively controlled platforms \cite{fabrice_sei1} \cite{fabrice_sei2} \cite{fabrice_strat}\cite{sei_isol}, the noise contribution can be attenuated for frequencies larger than ~1Hz;  in addition, the use of quadruple pendulums to hang the main arm cavity optics further reduces the motion above the pendulum's resonance frequency\cite{driggers_global}\cite{BlairBook}. This is a tremendous upgrade from the mostly passive isolation methods used in initial LIGO.  An interesting point to note is that the estimate of noise contributions from seismic activities to the strain sensitivity is negligible for frequencies above 10 Hz, but is absolutely vital for lock acquisition and resonator stability \cite{Hang_LF} \cite{Fritschel_alignment}.
+		The main contributions to seismic noise are primarily caused by either natural occurrences  (tectonic plates, wind driven microcosms, oceanic storms etc) or man-made disturbances (heavy automotive traffic, industrial machinery, etc) which contribute to the background hum of motion.  In general, this will be the low frequency barrier for all terrestrial gravitational-wave detectors.  One of the biggest upgrades from eLIGO to aLIGO was the increase in complexity for seismic isolation and suspensions.  Using multiple stages of actively controlled platforms \cite{fabrice_sei1} \cite{fabrice_sei2} \cite{fabrice_strat}\cite{sei_isol}, the noise contribution can be attenuated for frequencies larger than ~1Hz;  in addition, the use of quadruple pendulums to hang the main arm cavity optics further reduces the motion above the pendulum's resonance frequency\cite{driggers_global}\cite{BlairBook}. This is a tremendous upgrade from the mostly passive isolation methods used in initial LIGO.  An interesting point to note is that the estimate of noise contributions from seismic activities to the strain sensitivity is negligible for frequencies above 10 Hz, but absolutely vital for lock acquisition and resonator stability \cite{Hang_LF} \cite{Fritschel_alignment}.
 		
 		\subsubsection{Thermal Noise}
 		Brownian motion \cite{brownian_einstein} is the random movement of particles suspended in a fluid.  The LIGO test masses that make up the 4 kilometer long Fabry-Perot cavities are large macroscopic objects but their constituent atoms can be excited by the ambient temperature which leads to random motion. Those atoms are interconnected which allow for the propagation of an infinite number of elastic wave modes that contain random relative phases and the linear superposition of the modes create distortions that result in thermal noise.	
@@ -621,13 +621,21 @@
 		
 		The largest contribution to the thermal noise for current interferometers do not stem from viscous damping \cite{SaulsonThermalNoise}, thermoelastic damping of the substrate \cite{Saulson}, or internal friction of the suspension fibers, but rather from the thermal noise contributed by the mechanical loss of the dielectric coatings \cite{HarryThermalCoat} \cite{EvansBallmerThermalOptic} which cause phase noise at the high reflectivity surface of the mirrors.
 		
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=.9 \textwidth]{../Figures/ThermalNoise_ASD.png}
+			\caption[Displacement spectrum for thermal noise.]  
+			{\textbf{Displacement spectrum for thermal noise.} Adding an extra Q changes the peak and thermal noise above the resonance.}
+			\label{fig:ThermalNoise}
+		\end{figure}
+		
 		\subsubsection{Newtonian Noise}
-		Although there are some noise sources that can be reduced using increasingly complicated techniques such as various levels of seismic isolation or quantum non-demolition devices as shown above. [\cite{SaulsonNewtonian} and \cite{ThorneNewtonian}].  Newtonian noise caused by fluctuating gravitational fields from the wave motion of the ground is one that cannot easily be reduced but possibly be measured and fed-forward or subtracted off-line.[\cite{DriggersNewtonian}]
+		Described in the previous sections are noise sources which can be reduced using increasingly complicated techniques such as increased isolation stages for seismic or using squeezed states of light for quantum noise.  However, for Newtonian noise caused by fluctuating gravitational fields from the wave motion of the ground \cite{SaulsonNewtonian} and \cite{ThorneNewtonian} is one that cannot easily be reduced but possibly be measured and fed-forward or subtracted off-line \cite{DriggersNewtonian}.
 
 	\section{Mode Matching with Squeezed States of Light}
-	In Section \ref{Sec:QuantumNoise}, the quantum limited sensitivity for a Michelson interferometer was shown to be comprised of shot noise and radiation pressure. Although quantum fluctuations are a fundamental noise source, their effects can be modified by manipulating the quantum vacuum with correlated photons and injecting these states of light into the antisymmetric port of the interferometer.  Within the LIGO community, this procedure of modifying quantum vacuum is called squeezing.  The production of squeezed states with nonlinear devices is a well understood subject and was successfully tested in the sixth LIGO science run \cite{LSCBeyondQM}\cite{LSCEnhancedSenseSqz}.  An extension of the formalism described in Section \ref{Sec:QuantumNoise} was developed by Caves-Schumaker \cite{Caves2photon} which describes two-photon quantum optics and squeezing, but it is outside of the scope in terms of mode matching. 
+	In Section \ref{Sec:QuantumNoise}, the quantum limited sensitivity for a Michelson interferometer was shown to be composed of shot noise and radiation pressure. Although quantum fluctuations are a fundamental noise source, their effects can be modified by manipulating the  vacuum state with correlated photons and injecting these states of light into the antisymmetric port of the interferometer.  Within the LIGO community, this procedure of modifying quantum vacuum is called squeezing.  The production of squeezed states with nonlinear devices is a well understood subject and was successfully tested in the sixth LIGO science run \cite{LSCBeyondQM}\cite{LSCEnhancedSenseSqz}.  An extension of the formalism described in Section \ref{Sec:QuantumNoise} was developed by Caves-Schumaker \cite{Caves2photon} which describes two-photon quantum optics and squeezing, but it is outside of the scope in terms of mode matching. 
 	
-	However, it useful to understand the quantum noise in a formalism which scales the interferometer sensitivity in terms of the $\textit{Standard Quantum Limit}$ (SQL).   The radiation pressure and shot noise add in quadrature to form the quantum noise and both are proportional to the square root of the input power but in different regimes.  The SQL refers to the input power minimizes the total quantum noise and is the minimum achievable noise without squeezing.  The radiation-pressure back-action coupling constant, $\kappa$, is given by \cite{KimbleConversion}
+	However, it useful to understand the quantum noise in a way which scales the interferometer sensitivity in terms of the $\textit{Standard Quantum Limit}$ (SQL).   The radiation pressure and shot noise add in quadrature to form the quantum noise and both are proportional to the square root of the input power but in different regimes.  The SQL refers to the input power minimizes the total quantum noise and is the minimum achievable noise without squeezing.  The radiation-pressure back-action coupling constant, $\kappa$, is given by \cite{KimbleConversion}
 	\begin{equation}
 	\kappa = \frac{4 P_0 \omega_{0}}{m c^2 f^2}
 	\end{equation}
@@ -670,14 +678,14 @@
 	
 	\begin{figure}[ht]
 		\centering
-		\begin{subfigure}[b]{0.5\textwidth}
+		\begin{subfigure}[b]{0.7\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{../Figures/Kimble_PRFPMI_QM.png}
 			\caption{Power recycled Fabry Perot Michelson quantum noise}
 			\label{fig:kimble_PRFMI}
 		\end{subfigure}
 		\hfill
-		\begin{subfigure}[b]{0.5\textwidth}
+		\begin{subfigure}[b]{0.7\textwidth}
 			\centering
 			\includegraphics[width=\textwidth]{../Figures/Kimble_PRFPMI_QM_Sqz.png}
 			\caption{Power recycled Fabry Perot Michelson quantum noise with various squeezing angles}
