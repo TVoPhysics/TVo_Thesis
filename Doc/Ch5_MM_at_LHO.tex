@@ -40,18 +40,10 @@
 				&\approx \frac{1}{8} \bigg[ \bigg(\frac{\Delta\omega_{0}}{\omega_{0}} \bigg)^2+  \bigg(\frac{ \Delta z }{z_R}\bigg)^2 \bigg]
 	\end{aligned}
 	\end{equation}
-	Mismatch between the arm cavities can stem from a few different sources such as mismatches between the test masses radii of curvature on the high reflectivity surfaces will cause the resonant modes to be different between the X-arm and Y-arm.  In addition to modes being different, there exists a static (or cold) substrate lens in each of the compensation plates.  This static lens becomes important for two reasons: Firstly, the sidebands in DRMI are promptly rejected by the arm cavities. Secondly, the gravitational wave sidebands which are generated and resonant in the arms will see the substrate lensing as it travels to the beamsplitter.
+	Mismatch between the arm cavities can stem from a few different sources such as the difference between the test mass' radii of curvature on the high reflectivity surfaces will cause the resonant modes to be different between the X-arm and Y-arm.  In addition to modes being different, there exists a static (or cold) substrate lens in each of the compensation plates.  This static lens becomes important for two reasons: Firstly, the sidebands in DRMI are promptly rejected by the arm cavities. Secondly, the gravitational wave sidebands which are generated and resonant in the arms will see the substrate lensing as it travels to the beamsplitter.
 	
 	\subsection{Simple Michelson Contrast Defect}
 	The simple Michelson can give the first estimate of the contrast defect when starting to commission the interferometer, however, it will not be directly used in nominal low noise since the dual-recycled Michelson is implemented.  By propagating the input mode cleaner beam to each of the input test masses and taking a single bounce at the high reflectivity surface, one can approximate the resultant mode overlap.  At this point the carrier and sideband fields follow the same ABCD matrix transfer function, so only one calculation is needed to estimate the contrast defect.  A keen reader will notice that this model will not take the Schnupp asymmetry into account which allows the $\hat{x}$-direction beam to travel an extra 8 centimeters further than the $\hat{y}$, however, this effect will only change the end result by approximately 10$\%$.  In fact, for this interferometer configuration, the dominate source of mismatch will be from the prompt reflection off the HR surfaces of the ITMs where most of the phase change occurs.
-	
-	Figure[]
-
-	\subsection{Dual Recycled Michelson Contrast Defect}
-	The contrast defect for DRMI is similar to the simple Michelson analysis, however, there is an added complexity in that the resonance of the power recycling cavities (PRX and PRY) make up the mode content at the beamsplitter.  This means that the power recycling mirror has to be mode matched well to the ITMs and this also means the field inside DRMI will see the substrate lensing.
-	\subsection{Fabry-Perot Contrast Defect}
-	The contrast defect from the two 4km arms will be dominated by the resonant mode of the individual arm cavities and will not see the static substrate lens distortions.
-	The reasoning for this is subtle and described in Section \ref{TL_lensing}.
 	
 	\section{Hot vs. Cold Interferometers}\label{sec:hotcoldifo}
 	In the previous section, the contrast defect calculations did not include the self-heating thermal effects that will be present when the interferometer reaches its nominal state.  When fully operational, the arm cavities can have a few hundred kilowatts of laser power resonating while in observing mode. 
@@ -60,7 +52,7 @@
 	\begin{equation}
 		P_{\text{ARM}} \approx \frac{1}{2} (g_{PRC} * g_{ARM} * P_{IN})
 	\end{equation}
-	where $g_{PRC} \approx 30$ is the power recycling cavity gain and $g_{ARM} \approx 250$ is the single arm cavity gain. For O3, the intended input power, $P_{IN}$ will reach approximately 50 W which means $P_{ARM} \approx 187,500$ W. A fraction of that power, approximately .5 PPM, will be absorbed by the high reflectivity surface, hence, creating an additional thermal lens which changes the radius of curvature.  Additionally, the thermo-refactive index will change as a function of absorbed temperature \cite{winkler_thermaldist}.  By changing the curvature of the test masses, the resonant Gaussian mode will also change its profile. For the substrate lensing, the sideband signals will be most adversely affected because the carrier field will see a cancellation of the distortion from the promptly reflected beam (see Section \ref{TL_lensing})
+	where $g_{PRC} \approx 30$ is the power recycling cavity gain and $g_{ARM} \approx 250$ is the single arm cavity gain. For O3, the intended input power, $P_{IN}$ will reach approximately 50 W which means $P_{ARM} \approx 187,500$ W. A fraction of that power, approximately .5 PPM, will be absorbed by the high reflectivity surface, hence, creating an additional thermal lens which changes the radius of curvature.  Additionally, the thermo-refactive index will change as a function of absorbed temperature \cite{winkler_thermaldist}.  By changing the curvature of the test masses, the resonant Gaussian mode will also change its profile. For the substrate lensing, the sideband signals will be most adversely affected because the carrier field will see a cancellation of the distortion from the promptly reflected beam.
 	
 	\subsection{Thermal Lensing}\label{Sec:TL_lensing}
 	\cite{hiro_thermal_lens}
@@ -140,7 +132,7 @@
 		Using the same formalism as the carrier fields, the sidebands will have the same input curvature, however, they do not resonate in the arms and so there is no cavity leakage field.  Therefore, the sidebands will see the phase change due to the substrate lens and this has very important consequences on the sideband build up within the power recycling cavity.
 		
 		\subsubsection{GW Signal}
-		As mentioned in Section \ref{DRMI}, LIGO's gravitational wave readout currently employs a DC readout scheme that extracts the signal by beating the carrier field with the audio frequency sidebands created by the gravitational wave.  Although the carrier field was shown to be immune to thermal lensing, the gravitational wave sideband field will see a single-passed lensing effect as it propagates out of the cavity and towards the beamsplitter.  If there is a differential lensing, the signal recycling cavity will see an effective thermal lens, $\text{TL}_{-}$, which will be scattered into higher order modes.  This reduces the amount of gravitational wave signal at the anti-symmetric port that is directly proportional to the mode mismatch between the arms.
+		As mentioned in Section \ref{sec:DRMI}, LIGO's gravitational wave readout currently employs a DC readout scheme that extracts the signal by beating the carrier field with the audio frequency sidebands created by the gravitational wave.  Although the carrier field was shown to be immune to thermal lensing, the gravitational wave sideband field will see a single-passed lensing effect as it propagates out of the cavity and towards the beamsplitter.  If there is a differential lensing, the signal recycling cavity will see an effective thermal lens, $\text{TL}_{-}$, which will be scattered into higher order modes.  This reduces the amount of gravitational wave signal at the anti-symmetric port that is directly proportional to the mode mismatch between the arms.
 	
 	\section{Wavefront Distortions from Thermal Effects}\label{sec:wf_dist}
 	In the previous section, it was shown that lensing in the substrate affected fields in the interferometer differently.  The thermal distortion was modeled as a simple addition of phase or lensing, however, it is useful to understand how the optical path varies from first principles.  A lot of work in this field was pioneered by Hello and Vinet \cite{hello_vinet} \cite{Vinet_Thermal_Issues} where they implemented the Heat Diffusion equation in order to analytically derive the phase change due to thermal aberrations.  In general, there are two effects which occur when a beam interacts with an optic which has a temperature field: thermo-refractive and thermo-elastic.  
@@ -254,16 +246,11 @@
 	\end{equation}
 
 	The thermo-refractive effect due to coating and substrate absorption is only one type, there is also an effect which elastically curves the surface from thermal expansion \cite{Vinet_Thermal_Issues}.  This thermo-elastic effect deals with the internal stresses of the material and employs the stress-strain relations in order to derive the wavefront curvature.  For the LIGO test masses, this effect is smaller than the thermo-refractive wavefront distortion by about an order of magnitude.
+	
+	
+	
 	\section{Tuning Thermal Compensation for LIGO}
-	Goals: Locking help with preloading
-	
-	\cite{Lawrence_TCS}
-	
-	\cite{AWC_current}
-	
-	\cite{winkler_thermaldist}
-	
-	\cite{Strain_TL}
+	Goals: Locking help with preloading \cite{Lawrence_TCS} \cite{AWC_current} \cite{winkler_thermaldist} \cite{Strain_TL}
 	As mentioned in Section \ref{Sec:TL_lensing}, the amount of circulating power in each of the arms can be hundreds of kilowatts and even with absorption amounts between $0.2-0.5$ parts per million, the induced curvature change can be significant.  The Thermal Compensation System (TCS) was developed to correct the radii of curvature by applying heat to compensate the interferometer's main beam.  The strategy has two main components, lock acquisition and gravitational-wave optimization.
 	
 	To aid in the acquisition sequence, TCS is required to thermally lens the substrate between the beamsplitter and the high-reflectivity surfaces of the test masses such that the optical path difference is the same as a fully resonant interferometer.
@@ -273,7 +260,7 @@
 	\subsection{Hartmann Wavefront Sensors}\label{Sec:HWS}
 	All estimates of steady-state curvature changes due to heating by the main interferometer beam depend linearly on the absorption and this can be quite difficult to detect when the coating absorption are typically less than one part in a million.
 	
-	In order to diagnose this effect, the Hartmann Wavefront Sensors (HWS) \cite{Brooks_OffAxis} \cite{Veitch_HWS_ALIGO} was a system developed by Adelaide and Caltech \cite{Brooks_HWS_2007} \cite{Brooks_HWS_2009} which uses a charged coupled imaging device (CCD) to sense the wavefront distortions created by heating from the interferometer beam during power up and a lock loss.  After the arm power drops suddenly, the heat decays exponentially depending on the amount of absorption on the high reflective surface of the arm cavity.  Using the HWS, it is possible to fit the decay rate to a finite element model of a cylindrical mass.  A fitted parameter for absorption is extremely important in pre-determining the amount compensation necessary to prepare the test masses for lock acquisition.  Figure \ref{fig:hws_abs} shows the measured spherical power from interferometer heating for ITMX/ITMY and comparing the two optics shows that the spherical power difference for ITMY is almost a factor of 2 larger than ITMX, the reasoning is not yet fully understood but one of the main differences between the O2 and O3 observing runs was the replacement of ITMX, ETMX, and ETMY test masses.  With a fully running Hartmann Sensor system in place which monitors the wavefront curvature across the optic, long-term trends over the observation runs will be able to determine how absorption changes as a function of time and whether test masses have an innate lifetime.  This will be particularly important if the next generation of detectors use much higher power levels in order to achieve better high frequency sensitivity. [cite ozgrav]
+	In order to diagnose this effect, the Hartmann Wavefront Sensors (HWS) \cite{Brooks_OffAxis} \cite{Veitch_HWS_ALIGO} was a system developed by Adelaide and Caltech \cite{Brooks_HWS_2007} \cite{Brooks_HWS_2009} which uses a charged coupled imaging device (CCD) to sense the wavefront distortions created by heating from the interferometer beam during power up and a lock loss.  After the arm power drops suddenly, the heat decays exponentially depending on the amount of absorption on the high reflective surface of the arm cavity.  Using the HWS, it is possible to fit the decay rate to a finite element model of a cylindrical mass.  A fitted parameter for absorption is extremely important in pre-determining the amount compensation necessary to prepare the test masses for lock acquisition.  Figure \ref{fig:hws_abs} shows the measured spherical power from interferometer heating for ITMX/ITMY and comparing the two optics shows that the spherical power difference for ITMY is almost a factor of 2 larger than ITMX, the reasoning is not yet fully understood but one of the main differences between the O2 and O3 observing runs was the replacement of ITMX, ETMX, and ETMY test masses.  With a fully running Hartmann Sensor system in place which monitors the wavefront curvature across the optic, long-term trends over the observation runs will be able to determine how absorption changes as a function of time and whether test masses have an innate lifetime.  This will be particularly important if the next generation of detectors use much higher power levels in order to achieve better high frequency sensitivity \cite{DanBrown_prvt}.
 	
 	The Hartmann code creates a gradient vector field between two times which have different thermal lensing, then numerically integrates the gradients to fit a wavefront distortion field.  The algorithm then uses the Zernike polynomials as a single basis to represent the effect of the thermal lens.
 	
@@ -290,11 +277,9 @@
 	Plane imaging
 	\cite{AWC_current}
 	
-	
 	\subsection{Ring Heater Commissioning}\label{Sec:RH}
 	To counteract the effects of interferometer heating, Advanced LIGO uses a ring heater \cite{ramette_analytical} \cite{wang_thermalmodel} which has two heating elements mounted on the suspension cage. Each of them are glass formers wrapped by nichrome wire that has current running through it and radiates an annular heating pattern. The ring heaters will have two effects, it will induce a substrate lens and a radius of curvature change.  As shown in Section \ref{sec:hotcoldifo}, the carrier beam will not see the substrate lens but the radius of curvature difference will change the overall modal shape of the cavity.  Similar to the distortion derived in section \ref{sec:wf_dist} where the thermo-refractive effect dominates when dealing with a Gaussian beam, the same is true from the ring heaters. Using equation \ref{gauss_power_ovl}, one can directly calculate the power overlap between a pre-loaded cavity and the original, as it turns out, the effect varies the overlap by less than $0.1\%$
-	
-	
+
 	\subsection{CO2 Commissioning}\label{Sec:CO2}
 	After using the Hartmann sensors to determine the absorption and pre-loading the ring heaters to compensate the interferometer lensing, the substrate is no longer in the nominal configuration during lock acquisition.  Therefore, it is necessary to use CO2 (Carbon Dioxide) lasers to mimic the interferometer's heating on the compensation plate.
 	
@@ -305,4 +290,7 @@
 	
 	\subsection{Putting it all together}
 	With the sensors and tests described in the preceding sections, a cohesive plan to pre-load the interferometer must be implemented in order to achieve stable higher power operation in the detectors.  Generally, the Thermal Compensation System has two goals: Firstly, the actuators are used to pre-load the test masses with heat in anticipation of the lensing due to the interferometer while operating at full lock and higher power.  Secondly, the amount of mode-matching between the coupled cavities must be optimized in order to achieve the best sensitivity.  Using the absorptions measured in Figure \ref{fig:hws_abs}, it is possible to estimate the total amount of lensing from self-heating as a function of input power.
+	
+		\subsubsection{Higher Power Operation}
+		The PRCL degree of freedom degrading as a function of differential substrate lensing.
 	

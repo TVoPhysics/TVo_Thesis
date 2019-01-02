@@ -167,14 +167,13 @@
 	Laying out the response to gravitational waves is one thing but practically measuring $\Delta \Phi$ to detect astrophysical objects requires much more complex systems, so building modern detector is explained in section \ref{LIGOInstrument}.
 
 	\section{Detection of Gravitational Waves}\label{detectgw}
-	The purpose of LIGO is to observe gravitational waves emanating from astrophysical objects \cite{NSFproposal}, so it is natural to wonder how well a single detector can probe the universe.  It is worthwhile to explicitly derive the inspiral horizon distance, which is how far a single detector can see a source comprised two equal mass compact objects optimally oriented in the sky relative to the detector.  Signal-to-noise (SNR) is the level of interesting signals compared to the background noise, which can be expressed as
+	The purpose of LIGO is to observe gravitational waves emanating from astrophysical objects \cite{NSFproposal}, so it is natural to wonder how well a single detector can probe the universe.  It is worthwhile to explicitly derive the inspiral horizon distance, which is how far a single detector can detect a binary system comprised of two equal mass compact objects optimally oriented in the sky relative to the detector.  Signal-to-noise (SNR) is the comparison of foreground triggers to the background noise, which can be expressed as
 	\begin{equation}\label{SNR}
 	\rho = 2 \int_{-\infty}^{\infty} \frac{ \tilde{s}(f) \tilde{s}^*(f) }{S_n(f)}
 	\end{equation}
-	
 	where ${S_n(f)}$ is the one-sided average power spectral density of the detector noise and $\tilde{s}(f)$ is the Fourier transform of the detectors' response to a gravitational-wave signal.
 	
-	Consider two dense objects which are approximated by points sources with mass $m_1$ and $m_2$ spiraling around each other.  They are separated by a distance $R$ such that the quadrupole equation from \ref{weak} still holds (i.e. flat space-time with small perturbations). The detector response, in units of strain, to the gravitational waves emitted by this source is \cite{Finn:1995},
+	Consider two dense objects which are approximated by points sources with mass $m_1$ and $m_2$ spiraling around each other.  They are separated by a distance $R$ such that the quadrupole equation from \ref{weak} still holds (i.e. flat space-time with small perturbations). The detector response, in units of strain, to the gravitational waves emitted by this type of source is \cite{Finn:1995},
 	\begin{equation}\label{inspiralsignal}
 	s(t) = \frac{\mathcal{M}}{d_L} \Theta(\theta,\phi,\psi,i) [\pi f(t) \mathcal{M}]^{2/3} \cos[\Phi(t) + constant]
 	\end{equation}
@@ -187,9 +186,7 @@
 	\Theta(\theta,\phi,\psi,i) \&= 2 \sqrt{	[F_{+}(\theta,\phi,\psi) (1+\cos^2(i)) ]^2 + [2 F_{\cross} \cos(i)]^2 }
 		\end{equation}
 	\end{subequations}
-	and $F_{+}$ and $F_{\cross}$ are the antenna response of the interferometer in equations \ref{Fplus} and \ref{Fcross}.  By convention, $\mathcal{M}$ is called the chirp mass and $d_L$ is the luminosity distance. The orientation response, $\Theta(\theta,\phi,\psi,i)$, is a function that depends entirely on the detector orientation relative to the angular momentum vector of the binary [Figure of a binary spiraling and a detector on earth]
-
-	As the binary loses energy to gravitational waves, the orbit will shrink as a function of time, in turn, the orbital frequency will increase
+	and $F_{+}$ and $F_{\cross}$ are the antenna response of the interferometer in equations \ref{Fplus} and \ref{Fcross}.  By convention, $\mathcal{M}$ is called the chirp mass and $d_L$ is the luminosity distance. The orientation response, $\Theta(\theta,\phi,\psi,i)$, is a function that depends entirely on the detector orientation relative to the angular momentum vector of the binary.  As the system emits  gravitational waves, the orbit will shrink as a function of time, in turn, the orbital frequency will increase
 	
 	\begin{equation}
 	f(t) = \frac{1}{\pi \mathcal{M}} \bigg[\frac{5}{256} \frac{\mathcal{M}}{T-t}\bigg]^{3/8} 
@@ -204,10 +201,10 @@
 
 	Plugging equation \ref{inspiralsignal} into \ref{SNR},
 	\begin{equation}
-	\rho = 8 \Theta(\theta,\phi,\psi,i) \frac{r_0}{d_L} \bigg(\frac{\mathcal{M}}{1.2 \textup{M}_\odot}\bigg)^{5/6} \zeta(f_{max})
+	\rho = 8 \Theta(\theta,\phi,\psi,i) \frac{r_0}{d_L} \bigg(\frac{\mathcal{M}}{1.2 \textup{M}_\odot}\bigg)^{5/6} \zeta(f_{\text{max}})
 	\end{equation}
 	
-	There are two important functions in the equation above that reflect the detector's performance in sensing gravitational radiation from a binary inspiral, $r_0$ and $\zeta(f_{max})$.
+	There are two important functions in the equation above that reflect the detector's performance in sensing gravitational radiation from a binary inspiral, $r_0$ and $\zeta(f_{\text{max}})$.
 	
 	The characteristic distance, $r_0$ is how far the detector can see for a fixed binary's mass distribution,
 	
@@ -218,21 +215,17 @@
 	Due to the integrand's dependence on $f^{-7/3}$, lower frequency improvements in the detector's noise spectrum will contribute more to the distance.
 	
 	\begin{equation}\label{zeta}
-	\zeta(f_{max}) = \frac{\int_{0}^{2f_{max}} \frac{1}{S_n(f)} \frac{\text{d} f}{f^{7/3}}}{\int_{0}^{\infty} \frac{1}{S_n(f)} \frac{\text{d} f}{f^{7/3}}}
+	\zeta(f_{\text{max}}) = \frac{\int_{0}^{2f_{\text{max}}} \frac{1}{S_n(f)} \frac{\text{d} f}{f^{7/3}}}{\int_{0}^{\infty} \frac{1}{S_n(f)} \frac{\text{d} f}{f^{7/3}}}
 	\end{equation}
 	
-	The sensitivity can be different for various mass distributions; $\zeta(f_{max})$ is a normalized function that describes how well the detector's bandwidth overlaps the binary's frequency evolution.  If $f_{max}$ is higher that the minimal sensitivity frequency for the detector, then there is good overlap and  $\zeta(f_{max})\approx 1$.  However, if the masses are sufficiently large, $f_{max}$ will be lower because coalescence occurs before the objects reach a higher frequency regime and this will result in  $\zeta(f_{max})\approx 0$.
+	The sensitivity can be different for various mass distributions; $\zeta(f_{\text{max}})$ is a normalized function that describes how well the detector's bandwidth overlaps the binary's frequency evolution.  If $f_{\text{max}}$ sweeps across the detector's most sensitive frequency band (generally between 80 and 400 Hz), there can be relatively good overlap and  $\zeta(f_{\text{max}})\approx 1$.  However, if the masses are sufficiently large, $f_{\text{max}}$ will be lower because coalescence occurs before the objects reach a high enough frequency regime and this will result in  $\zeta(f_{\text{max}})\approx 0$.
 	
-	The process of two objects coalescing starts at lower frequencies and terminate at some $f_{max}$ that depends on when the objects reach their inner-most stable circular orbit, $f_{ISCO}$.   If $m_1=m_2$, then the maximum frequency is[]
+	The process of two compact objects coalescing starts at lower frequencies and terminate at a maximal frequency,$f_{\text{max}}$, that depends on when the objects reach their inner-most stable circular orbit, $f_{\text{ISCO}}$.   If $m_1=m_2$, then the maximum frequency is \cite{Finn:1995}
 	
 	\begin{equation}
 	\begin{aligned}
-	f_{max}	=&  \frac{f_{ISCO}}{1+z} \\
+	f_{\text{max}}	=&  \frac{f_{ISCO}}{1+z} \\
 			=&	\frac{99 \text{Hz}}{1+z} \, \frac{20 \textup{M}_\odot}{M}
 	\end{aligned}
 	\end{equation}
-	where $M=m_1+m_2$.
-
-	By plugging a few mass distributions and an estimate of the sensitivity [GWINC], it is possible to study the range of a single detector.  For example, a 1.4-1.4$\textup{M}_\odot$ binary that has optimal orientation with respect to the detector has horizon distance equal to...
-	
-	Horizon distance and range, advanced LIGO projected
+	where $M=m_1+m_2$.  

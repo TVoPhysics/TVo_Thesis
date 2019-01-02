@@ -200,7 +200,7 @@
 		LIGO uses the frequency response of optical cavities for a number of reasons: Firstly, the round trip phase of the gravitational wave is amplified by the finesse (equation \ref{finesse}) of the 4 kilometer arm cavities, therefore increasing the sensitivity.  Secondly, the input and output of the interferometer's Gaussian beam mode can be refined by only allowing the fundamental mode of the laser to resonate (input and output mode cleaners).  Thirdly, Advanced LIGO uses a dual-recycled Michelson interferometer which means the symmetric port has a mirror inserted to resonate the light reflected from the Fabry Perot arms (power recycling) and another mirror shapes the frequency response of the differential cavity pole at the anti-symmetric port (signal recycling).
 		
 		\subsubsection{Achieving Resonance in an Optical Cavity}
-		Described above are the theoretical constructs for a Fabry-Perot cavity, but the question remains, how does one practically construct a resonant optical cavity?  The answer comes from using a heterodyne sensing scheme similar to the one described in Section \ref{michelson}.  Except the optical system is not a Michelson interferometer but rather a two mirror cavity and can apply to a number of different geometries such as triangular or bow-tie cavities.
+		Described above are the theoretical constructs for a Fabry-Perot cavity, but the question remains, how does one practically construct a resonant optical cavity?  The answer comes from using a heterodyne sensing scheme similar to the one described in Section \ref{sec:michelson}.  Except the optical system is not a Michelson interferometer but rather a two mirror cavity and can apply to a number of different geometries such as triangular or bow-tie cavities.
 		
 		Starting with an input laser and EOM (electro-optical modulator) that imparts upper and lower sidebands at a modulation frequency $\Omega$, the user injects three beams into the optical system described in Equation \ref{modE}.  When placing a photodetector on the reflection port, one should see the cavity's effect on each of the three electric fields.
 		
@@ -422,7 +422,7 @@
 		
 		One might naively think that power fluctuations in the main laser causes radiation pressure effects on the test masses which will result in noise.  However, if the 50/50 beamsplitter is perfect, then the momentum transfer to each test mass will result in a common length change and will not vary the intensity at the antisymmetric port (or the symmetric port for that matter).  However, the baseline laser power will be important when considering a full quantum mechanical picture of radiation pressure.
 		
-		Consider plane wave waves entering the interferometer from both the symmetric and anti-symmetric ports.  This method is similar to the input-output methods of section \ref{michelson}, however, the difference being that the beamsplitter will couple the electric fields from the input laser and quantum vacuum.
+		Consider plane wave waves entering the interferometer from both the symmetric and anti-symmetric ports.  This method is similar to the input-output methods of section \ref{sec:michelson}, however, the difference being that the beamsplitter will couple the electric fields from the input laser and quantum vacuum.
 		
 		The electric fields combine at the beamsplitter from both ports and add linearly,
 		\begin{subequations}\label{exey}
@@ -582,7 +582,7 @@
 			\omega >> \omega_{0} \rightarrow S_{vis} = \frac{4k_B T}{m Q} \frac{\omega_0}{\omega^4} 
 			\end{equation}
 		\end{subequations}
-		where $Q=\omega_{0}/\gamma$ is commonly known as the quality factor of a resonator.  Qualitatively, this is directly proportional to the resonance height and its thinness.  Figure [visthermalnoise] shows the resultant frequency dependent power spectrum for a few different quality factors, for higher $Q$ systems the amount of noise contribution from thermal noise is reduced at frequencies above the resonance.  Another commonly used definition of the quality factor is the amount of energy loss per cycle, if the $Q$ of a system is high, then the amount of energy loss per oscillation is very small and will take a longer time returning to equilibrium.  A good description of the quality factor and its application to gravitational wave detectors can be found in section 7.5 of \cite{Saulson}.
+		where $Q=\omega_{0}/\gamma$ is commonly known as the quality factor of a resonator.  Qualitatively, this is directly proportional to the resonance height and its thinness.  Figure \ref{fig:ThermalNoise} shows the resultant frequency dependent amplitude spectral density for a few different quality factors, for higher $Q$ systems the amount of noise contribution from thermal noise is reduced at frequencies above the resonance.  Another commonly used definition of the quality factor is the amount of energy loss per cycle, if the $Q$ of a system is high, then the amount of energy loss per oscillation is very small and will take a longer time returning to equilibrium.  A good description of the quality factor and its application to gravitational wave detectors can be found in section 7.5 of \cite{Saulson}.
 		
 		As system's mode number increases, the previous analysis becomes very difficult to solve analytically. However, the connection between a damped harmonic oscillator's energy loss and power spectrum can be described generically using the Fluctuation Dissipation Theorem,
 		\begin{equation}\label{FD}
@@ -603,7 +603,7 @@
 		\end{equation}
 		Unlike the previous example of viscous damping, the integral for thermoelastic dissipation only holds for some frequency regime but implementing the fluctuation dissipation theorem leads directly to the noise power spectrum,
 		\begin{equation}
-			S_{TD}(f) =  \frac{4k_B T \omega_{0}^2 \phi_L}{m \omega} \frac{1}{(\omega^2 - \omega_{0}^2)^2 + (\omega_{0}\phi_L)^2}
+			S_{\text{TN}}(f) =  \frac{4k_B T \omega_{0}^2 \phi_L}{m \omega} \frac{1}{(\omega^2 - \omega_{0}^2)^2 + (\omega_{0}\phi_L)^2}
 		\end{equation}
 		The frequency response will also be different compared to viscoelastic dissipation,
 		\begin{subequations}
@@ -617,15 +617,15 @@
 			\omega >> \omega_{0} \rightarrow S_{vis} = \frac{4k_B T}{m Q} \frac{\omega_0^2}{\omega^5} 
 			\end{equation}
 		\end{subequations}
-		The structural damping formalism can also be applied to the suspension fibers which hold the 40 kilogram test masses \cite{SaulsonThermalSus}, \cite{Saulson} which yield a noise spectral density that contains resonances at a variety of frequencies.  The lower two modes consist of the pendulum and rocking modes, while starting at 500 hertz the violin modes will be seen.  In fact, the violin modes and their harmonics could get rung up from earthquakes and saturate the output mode cleaner's DC photodiodes so they must be actively damped in order to obtain nominal low noise.
+		The structural damping formalism can also be applied to the suspension fibers which hold the 40 kilogram test masses \cite{SaulsonThermalSus}, \cite{Saulson} which yield a noise spectral density that contains resonances at a variety of frequencies. In Advanced LIGO, the violin modes and their harmonics could get rung up from earthquakes and saturate the output mode cleaner's DC photodiodes so they must be actively damped in order to obtain nominal low noise.
 		
-		The largest contribution to the thermal noise for current interferometers do not stem from viscous damping \cite{SaulsonThermalNoise}, thermoelastic damping of the substrate \cite{Saulson}, or internal friction of the suspension fibers, but rather from the thermal noise contributed by the mechanical loss of the dielectric coatings \cite{HarryThermalCoat} \cite{EvansBallmerThermalOptic} which cause phase noise at the high reflectivity surface of the mirrors.
+		The largest contribution to the total thermal noise for current interferometers do not stem from viscous damping \cite{SaulsonThermalNoise}, thermoelastic damping of the substrate \cite{Saulson}, or internal friction of the suspension fibers.  The most dominant type of thermal noise is from the mechanical loss of the dielectric coatings \cite{HarryThermalCoat} \cite{EvansBallmerThermalOptic} which cause phase noise at the high reflectivity surface of the mirrors.
 		
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[width=.9 \textwidth]{../Figures/ThermalNoise_ASD.png}
 			\caption[Displacement spectrum for thermal noise.]  
-			{\textbf{Displacement spectrum for thermal noise.} Adding an extra Q changes the peak and thermal noise above the resonance.}
+			{\textbf{Displacement spectrum for thermal noise.} By varying the resonance width of a system, the thermal noise at frequencies above the resonant peak will be decreased for higher Q's.}
 			\label{fig:ThermalNoise}
 		\end{figure}
 		
