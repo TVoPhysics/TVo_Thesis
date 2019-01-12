@@ -23,20 +23,38 @@
 \end{figure}
 
 \begin{figure}[ht]
+	\centering
+	\begin{subfigure}[a]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Figures/MCMC_ITMX_abs.png}
+		\caption{ITMX absorption}
+		\label{fig:mcmc_itmx_abs}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{../Figures/MCMC_ITMY_abs.png}
+		\caption{ITMY absorption}
+		\label{fig:mcmc_itmy_abs}
+	\end{subfigure}
+	\caption[Distributions of the fit]  
+	{\textbf{Distributions of the fit} Description}
+	\label{fig:mcmc_hws_abs}
+\end{figure}
+
+\begin{figure}[ht]
 \centering
-\begin{subfigure}[a]{0.7\textwidth}
-	\centering
-	\includegraphics[width=\textwidth]{../Figures/itmx_HWS_Absorption.png}
-	\caption{ITMX absorption}
-	\label{fig:itmx_abs}
-\end{subfigure}
+	\begin{subfigure}[a]{0.7\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../Figures/MCMC_ITMX_ABS_FIT.png}
+		\caption{ITMX absorption}
+		\label{fig:itmx_abs}
+	\end{subfigure}
 \hfill
-\begin{subfigure}[b]{0.7\textwidth}
-	\centering
-	\includegraphics[width=\textwidth]{../Figures/itmy_HWS_Absorption.png}
-	\caption{ITMY absorption}
-	\label{fig:itmy_abs}
-\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{../Figures/MCMC_ITMY_ABS_FIT.png}
+		\caption{ITMY absorption}
+		\label{fig:itmy_abs}
+	\end{subfigure}
 	\caption[Thermal lensing as seen by the ITM Hartmann Sensors after a lock loss.]  
 	{\textbf{Thermal lensing as seen by the ITM Hartmann Sensors after a lock loss.} The finite element model from COMSOL shows an exponential decay which can be linearized and fitted to the spherical power. Comparing ITMX and ITMY at Hanford shows a huge overall difference between the two optics, mostly due to the fact that ITMY has multiple point absorbers adding to the absorption estimate.}
 \label{fig:hws_abs}
@@ -82,4 +100,13 @@
 	\caption[A wavefront map measured by the Hartmann Wavefront Sensor of ITMY.]  
 	{\textbf{A wavefront map measured by the Hartmann Wavefront Sensor of ITMY.}}
 	\label{fig:ITMY_WF}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.6 \textwidth]{../Figures/POP18_POP90_DiffLens.png}
+	\caption[The power recycling pick-off port sensors as a function of differential thermal lensing.]  
+	{\textbf{The power recycling pick-off port sensors as a function of differential thermal lensing.}
+	The interferometer controls use auxiliary ports demodulated at various frequencies to control the resonant cavities. }
+	\label{fig:POP18_POP90}
 \end{figure}

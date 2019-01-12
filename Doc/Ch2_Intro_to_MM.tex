@@ -1,9 +1,8 @@
 \chapter{The Fundamentals of Mode-Matching}\label{fund_mm}
-	  The plane wave and the spherical wave represent the two extremes of transverse spatial confinement. The former is a collimated beam that has one steady wavefront whose normal vector is parallel with the axis of propagation, whereas the latter type of wave has a single point of origin and its normal rays diverge in all directions.  There exists a solution which is a medium between the two cases called a Gaussian beam.  When dealing with length sensing degrees of freedoms such as section \ref{FP}, the simple plane wave approximation is sufficient in describing the dynamics, however, when trying to understand the misalignment and mode-mismatch signals, it is necessary to incorporate Gaussian beams and associated their higher order modes.
+		When dealing with the length sensing degrees of freedoms in Chapter \ref{LIGOInstrument}, the plane wave approximation is sufficient for describing the resonator dynamics. However, when trying to understand the misalignment and mode-mismatch signals, it is necessary to incorporate Gaussian beams and their associated higher order modes. This formalism plays a pivotal role in the LIGO detectors because the gravitational waves affect the fundamental eigenmode of the arm cavities and any coupling to other modes results in a loss of signal.  Equally as important, the reduction of angular motion to remain locked relies on robust sensing of the cavity misalignment from external disturbances \cite{Fritschel_alignment} and torque-to-angle coupling \cite{SiggSidle}.  Mode matching is a second order effect but it will be shown in Chapter \label{chapter:MM_LHO} that mismatches play an important role in the practical operation of a large scale interferometer.
 		\section{Gaussian Beam Optics}
-		Consider the famous Maxwell's equations:
-		\begin{equation}
-		\label{18.1:1}
+		To show that a Gaussian beam is a valid electromagnetic wave, consider the famous Maxwell's equations:
+		\begin{equation}\label{eq:maxwell}
 		\begin{aligned}
 		 \nabla \times \mathbf{E} &=-\frac{\partial \mathbf{B}} {\partial t}
 		\\\nabla \cdot \mathbf{B} &=0				
@@ -17,12 +16,11 @@
 		\begin{equation}\label{Helmholtz}
 		(\nabla^2 + k^2 ) \mathbf{U}(\mathbf{r},t) = 0
 		\end{equation}
-		
-		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\mathbf{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  There are a variety of solutions to equation \ref{Helmholtz} which include the plane and spherical waves \cite{Saleh}.  These two types of solutions are the extremes when considering the angle and spatial distribution as a function of propagation.  The plane wave which has been used in chapter \ref{intro} is a beam whose rays have no variance in the spatial direction as it propagates through space, whereas the spherical wave starts at a point and spreads as a function of distance from the origin. Somewhere in between these two extrema is the paraxial wave which is a wave pattern that has its rays at small angles relative to the direction of propagation (see Figure[raysoflight]).  It is possible to express the paraxial solution to equation \ref{Helmholtz} as a plane wave with a modulated complex envelope $\mathbf{A}(r)$
+		where $k=\frac{2\pi\nu}{c}$ is the wave number and $\mathbf{U}(\mathbf{r},t)$ is the complex amplitude which can describe either the electric or magnetic fields.  There are a variety of solutions to equation \ref{Helmholtz} which include the plane and spherical waves \cite{Saleh}.  These two types of solutions are the extremes when considering the angle and spatial distribution as a function of propagation.  The plane wave which has been used in chapter \ref{intro} is a beam whose rays have no variance in the spatial direction as it propagates through space, whereas the spherical wave starts at a point and spreads as a function of distance from the origin. Somewhere in between these two extrema is the paraxial wave which is a wave pattern that consists of rays at small angles relative to the direction of propagation.  It is possible to express the paraxial solution to equation \ref{Helmholtz} as a plane wave with a modulated complex envelope $\mathbf{A}(r)$,
 		\begin{equation}
 		\mathbf{U}(\mathbf{r}) = \mathbf{A}(\mathbf{r}) e^{-ikz}
 		\end{equation}
-		However, in order for the paraxial wave to exist, $\mathbf{U}(r)$ must satisfy the Helmholtz equation or alternatively, the complex amplitude portion must satisfy a separate differential equation known as the paraxial Helmholtz Equation. By imposing the constraints which force the envelope to vary slowly with respect to the z-axis within the distance of one wavelength $\lambda = 2\pi/k$,
+		However, in order for the paraxial wave to exist, $\mathbf{U}(r)$ must satisfy the Helmholtz equation. Alternatively, the $\mathbf{A}(r)$ must satisfy a separate differential equation known as the paraxial Helmholtz Equation which can be derived explicitly by imposing constraints that force the envelope to vary slowly with respect to the z-axis within the distance of one wavelength $\lambda = 2\pi/k$:
 
 		\begin{subequations}
 		\begin{equation}\label{paraxiala}
@@ -35,14 +33,13 @@
 		\bigg| { \frac{\partial^2 \mathbf{A}}{\partial z^2} } \bigg|  \ll  \bigg| { k{\frac{\partial^2 \mathbf{A}}{\partial y^2}}} \bigg|
 		\end{equation}
 		\end{subequations}
-		
-		the partial differential equation which arises is called the Paraxial Helmholtz Equation:
+		The partial differential equation which arises is called the Paraxial Helmholtz Equation:
 		
 		\begin{equation}\label{paraHelmholtz}
 		\nabla_T^2 A(r) - i2k \frac{\partial A(r)}{\partial z} = 0
 		\end{equation}
 		
-		where $\nabla_T^2 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} $ is the transverse Laplacian.  A simple solution for equation \ref{paraHelmholtz} is the complex paraboloidal wave
+		where $\nabla_T^2 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} $ is the transverse Laplacian.  A simple solution for equation \ref{paraHelmholtz} is the complex paraboloidal wave,
 		
 		\begin{equation} \label{complexenvelope}
 		A(\mathbf{r}) = \frac{A_0}{q(z)} e^{\frac{-ikr^2}{2q(z)}} , \quad q(z)=z+iz_0
@@ -135,7 +132,7 @@
 			\centering
 			\includegraphics[width=0.65 \textwidth]{../Figures/PRC_SRC_ModeScan.png}
 			\caption[A Finesse model of a longitudinal mode scan comparing the Advanced LIGO power recycling and signal recycling cavities.]
-			{\textbf{A Finesse model of a longitudinal mode scan comparing the Advanced LIGO power recycling and signal recycling cavities}	The upper and lower plots is represent of the PRC and SRC, respectively.  The main difference between these two optical cavities is obvious when comparing the three large peaks corresponding to the 00 mode resonances.  The power recycling cavity has a much higher and sharper peak which indicates higher finesse where as the signal recycling cavity is a much lower finesse which has a broader and shorter peak.  The red traces are with nominal alignment where as the blue lines correspond to misalignments of PR3 and SR3 by $1 \mu$rad which allow higher order mode content to resonant as a function of length.}
+			{\textbf{A Finesse model of a longitudinal mode scan comparing the Advanced LIGO power recycling and signal recycling cavities}	The upper and lower plots represents the PRC and SRC, respectively.  The main difference between these two optical cavities is obvious when comparing the three large peaks corresponding to the 00 mode resonances.  The power recycling cavity has a much higher and sharper peak which indicates a larger finesse where as the signal recycling cavity is a much lower finesse has a broader and shorter peak.  The red traces are with nominal alignment compared with the blue lines corresponding to misalignments of PR3 and SR3 by $1 \mu$rad which allow higher order mode content to resonant as a function of length.}
 			\label{fig:PRC_SRC_mode_scan}
 		\end{figure}
 	
@@ -161,7 +158,7 @@
 		\end{equation}
 
 		\subsection{Misalignment and Higher Order Modes}\label{Misalign}
-		Morrison and Anderson \cite{Anderson} \cite{Morrison} derived a simplistic way of how small misalignments and mode mismatch in cavities can couple the fundamental Gaussian beam into various higher order modes.  This is done by taking a linear cavity and using its perfectly matched Gaussian beam as a reference, and then varying the input electric field with small perturbations and expanding in terms of the higher order modes.  So long as the mismatches are small, it is possible to consider only the first few terms of the expansion which have gained most of their power from the fundamental mode.
+		Morrison and Anderson \cite{Anderson} \cite{Morrison} derived a simplistic way of how small misalignments and mode mismatch in cavities can couple the fundamental Gaussian beam into various higher order modes.  This is done by taking a linear cavity and using its perfectly matched Gaussian beam as a reference, and then varying the input electric field with small perturbations and expanding in terms of the higher order modes.  So long as the mismatches are small, it is possible to consider only the first few terms of the expansion which have gained most of their power from the fundamental mode.  Between various texts, the terms misalignment and mode mismatch are used interchangeably, which is not incorrect but creates some confusion.  This thesis will try to distinguish the two effects because the actuators and sensors used for correction can be quite different.
 		
 		Consider the first three Hermite-Gauss modes of equation \ref{HG} in one dimension and normalized to set the total optical power to unity:
 
@@ -173,7 +170,7 @@
 		\\	 	U_{2}(r) &	=	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4}  \frac{1}{\sqrt{2}} \bigg( \frac{4r^2}{w^2(z)} - 1 \bigg)   e^{-r^2/w^2(z)}
 		\end{aligned}
 		\end{equation}
-				
+		
 		\subsubsection{Beam Axis Tilted}
 		If the input beam into an optical cavity is tilted by an angle $\alpha$ with respect to the nominal cavity axis, the wave front of the input beam will have an extra phase propagation relative to the cavity that is approximately proportional to $e^{ik \alpha r}$.  By implementing the small angle approximation, which is valid if the misalignment is much smaller than the divergence angle of the fundamental mode $k \alpha r << 1$, the resultant input beam is
 		
@@ -196,7 +193,7 @@
 		\end{aligned}
 		\end{equation} 
 		
-		Similarly to a tilted input beam axis, the displaced beam axis couples power to the first higher order mode, however, the latter does not have a 90 degree phase difference previously seen in the former.  This point is of extreme importance when trying to discern between the two effects as shown in Section [].  Although comparing the two cases in Figure, one can already seen the difference between the wavefronts in the near field, $z<<z_R$, and the far field, $z>>z_R$.  
+		Similarly to a tilted input beam axis, the displaced beam axis couples power to the first higher order mode, however, the latter does not have a 90 degree phase difference previously seen in the former.  This point is of extreme importance when trying to discern between the two effects.  Although comparing the two cases in Figure, one can already seen the difference between the wavefronts in the near field, $z<<z_R$, and the far field, $z>>z_R$.  
 		
 		In the near field, there is no phase difference due to a displaced beam, but there is one for a tilted beam.  Conversely, in the far field, there is no phase difference due to a tilted beam, but there is one from a displaced beam.  In order to implement a closed loop feedback system, the wavefront sensors discussed in Section \ref{WFS} will use this precise logic to extract an error signal.
 		
@@ -250,10 +247,43 @@
 		
 		 In order to be physically valid one would need to consider the full two dimensional space so that the equation would encapsulate the full transverse mode, however, the x and y components would follow the exact same derivation. On that point, it is important to note that only the mode mismatch couplings from either a varying waist position or size has higher order modes that are circularly symmetric.
 		
-		\section{Wavefront Sensing}\label{WFS}
-		Heterodyne detection via modal decomposition of the full electric field allows the use of wavefront sensors to extract an error signal from the optical system.  Hefetz et.al \cite{HefetzWFS} created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  By observing the demodulated signal of the intensity, it is possible to obtain a linear signal that corresponds to a physical misalignment or mode mismatch.
+		\begin{figure*}
+			\centering
+			\begin{subfigure}[b]{0.475\textwidth}
+				\centering
+				\includegraphics[width=\textwidth]{../Figures/BeamAxisDisplaced.png}
+				\caption[]{\textbf{Beam axis displaced by $\Delta r$.}}    
+				\label{fig:BeamAxisDisplaced}
+			\end{subfigure}
+			\hfill
+			\begin{subfigure}[b]{0.475\textwidth}  
+				\centering 
+				\includegraphics[width=\textwidth]{../Figures/BeamAxisRotated.png}
+				\caption[]{\textbf{Beam axis rotated by $\alpha$.}}    
+				\label{fig:BeamAxisRotated}
+			\end{subfigure}
+			\vskip\baselineskip
+			\begin{subfigure}[b]{0.475\textwidth}   
+				\centering 
+				\includegraphics[width=\textwidth]{../Figures/BeamWaistDisplaced.png}
+				\caption[]{\textbf{Beam waist displaced by $\Delta z$.}}    
+				\label{fig:BeamWaistDisplaced}
+			\end{subfigure}
+			\quad
+			\begin{subfigure}[b]{0.475\textwidth}   
+				\centering 
+				\includegraphics[width=\textwidth]{../Figures/BeamWaistEnlarged.png}
+				\caption[]{\textbf{Beam waist reduced by $\epsilon$}}    
+				\label{fig:BeamWaistEnlarged}
+			\end{subfigure}
+			\caption[Misaligment and mode mismatch between two different Gaussian beams.]  
+			{\textbf{Misaligment and mode mismatch between two different Gaussian beams.}
+				The purple solid curves represent the original Gaussian shape and the red dotted curves are beams which have been augmented in one degree of freedom.  It is important to note that using this representation uses the eigenmode of the cavity as a starting basis, if one were to create these misalignments using the actual optics, there needs to be a linear combination of rotations or curvature changes.
+			}
+		\end{figure*}
 		
-		Fundamentally, the purpose of wavefront sensing is to detect the content of higher order modes due to physical disturbances of the optical cavity (ie. mode mismatch or misalignment).  In other words, it is examining the difference between the incoming beam's and the cavity's eigenmodes.
+		\section{Wavefront Sensing}\label{WFS}
+		In Chapter \ref{sec:michelson} and \ref{sec:DRMI}, a heterodyne detection scheme was used to sense the longitudinal degree of freedom for optical cavities.  Analogously, a technique using the sidebands can employ a modal decomposition of the full electric field which allows the use of wavefront sensors to extract an error signal.  Hefetz et.al \cite{HefetzWFS} created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  By observing the demodulated signal of the intensity, it is possible to obtain a linear signal that corresponds to a physical misalignment or mode mismatch.  Fundamentally, the purpose of wavefront sensing is to detect the content of higher order modes due to physical disturbances of the optical cavity.  In other words, it is examining the difference between the incoming beam and the cavity eigenmodes.
 		
 		Consider a general equation for an electric field which is a linear combination of all higher order modes of the complex amplitude
 		\begin{equation}
@@ -290,21 +320,15 @@
 		\\ 0		&0			&0			& 0				& e^{3i\phi}
 		\end{pmatrix}
 		\end{equation}
-
 		From the above diagonal elements, it is clear that the higher order modes have an extra phase compared to the fundamental 00 mode, this effect will be extremely important on how an error signal can be derived from the optical system.
-		
 		\begin{equation}
 		\ket{E(x,y,z_2)} = \hat{M}(x,y,z_1,z_2)	\ket{E(x,y,z_1)}
 		\end{equation}
-		
-		where $\hat{M}(x,y,z_1,z_2)$ is the misalignment operator.  Since we are using the paraxial approximation, the z-components of the misalignment operator are small so we can approximate $\hat{M}_(x,y,z_1,z_2) \approx \hat{M}_(x,y)$ and the expectation value is
-		
+		where $\hat{M}(x,y,z_1,z_2)$ is the misalignment operator.  Since we are using the paraxial approximation, the z-components of the misalignment operator are small so we can approximate $\hat{M}{(x,y,z_1,z_2)} \approx \hat{M}(x,y)$ and the expectation value is
 		\begin{equation}
 		M_{mn,kl}=  \bra{U_{mn}(x,y,z_1)} M(x,y) \ket{U_{kl}(x,y,z_2)}
 		\end{equation}
-
 		where the product is an integral over the transverse space $\int \!\!\! \int_{D(x,y)} \text{d}x \text{d}y$
-
 		\begin{equation} \label{misalign_matrix}
 		\hat{\Theta}_{\mu \nu} = 
 		\begin{pmatrix}

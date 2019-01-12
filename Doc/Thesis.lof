@@ -23,18 +23,21 @@
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Beam size, radius of curvature, and Gouy phase as a function of distance propagation from the waist.}}{46}{figure.caption.28}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Intensity\relax }}{47}{figure.caption.29}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces A Finesse model of a longitudinal mode scan comparing the Advanced LIGO power recycling and signal recycling cavities.}}{48}{figure.caption.32}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Misaligment and mode mismatch between two different Gaussian beams.}}{52}{figure.caption.38}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces MEDM master screen for adaptive mode matching at Syracuse}}{57}{figure.caption.38}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces MEDM master screen for adaptive mode matching at Syracuse}}{58}{figure.caption.39}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces A simplified model for the effect of a substrate thermal lens on the carrier field.}}{73}{figure.caption.46}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces A plane wave passing through a lens with a temperature gradient.}}{74}{figure.caption.47}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces A conceptual model of flux balance for a cylindrical object.}}{74}{figure.caption.48}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Thermal lensing as seen by the ITM Hartmann Sensors after a lock loss.}}{75}{figure.caption.49}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Calculated TCS settings to balance the substrate lens.}}{76}{figure.caption.50}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Mode matching the arm cavities to the power recycling cavity.}}{77}{figure.caption.51}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces A wavefront map measured by the Hartmann Wavefront Sensor of ITMX.}}{77}{figure.caption.52}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces A wavefront map measured by the Hartmann Wavefront Sensor of ITMY.}}{78}{figure.caption.53}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces A simplified model for the effect of a substrate thermal lens on the carrier field.}}{74}{figure.caption.47}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces A plane wave passing through a lens with a temperature gradient.}}{75}{figure.caption.48}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A conceptual model of flux balance for a cylindrical object.}}{75}{figure.caption.49}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Distributions of the fit}}{76}{figure.caption.50}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Thermal lensing as seen by the ITM Hartmann Sensors after a lock loss.}}{77}{figure.caption.51}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Calculated TCS settings to balance the substrate lens.}}{78}{figure.caption.52}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Mode matching the arm cavities to the power recycling cavity.}}{79}{figure.caption.53}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces A wavefront map measured by the Hartmann Wavefront Sensor of ITMX.}}{79}{figure.caption.54}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces A wavefront map measured by the Hartmann Wavefront Sensor of ITMY.}}{80}{figure.caption.55}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces The power recycling pick-off port sensors as a function of differential thermal lensing.}}{80}{figure.caption.56}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
