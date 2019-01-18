@@ -1,10 +1,7 @@
-
 \begin{appendices}
 
 	\chapter{Resonator Formulas} \label{FPappendix}
-	Equation \ref{gfactor} describes the stability condition for a two mirror Fabry-Perot cavity.  It is worthwhile to derive the criterion for geometric stability from the ray matrix tools commonly used in optics. 
-	
-	Consider two plane waves traveling in space shown by figure [], they differ by two quantities: the axial and angular separations,  $y$ and $\theta$, respectively.  These two quantities can be transformed via these optical matrices:
+	Equation \ref{gfactor} describes the stability condition for a two mirror Fabry-Perot cavity, but is worthwhile to derive the criterion for geometric stability from the ray matrix tools commonly used in optics. Consider two plane waves traveling in space shown by figure [], they differ by two quantities: the axial and angular separations,  $y$ and $\theta$, respectively.  These two quantities can be transformed via these optical matrices:
 	
 	Lens
 	\begin{equation} \label{lens}
@@ -117,6 +114,27 @@
 	
 	If the Rayleigh range is a real number, then once again, equation \ref{gfactor} must be true.
 	
+	
+	\chapter{Parameters Summary}
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{ | l | l | l |l |}
+			\hline
+			\textbf{Parameter} & \textbf{Symbol} & \textbf{Value} & \textbf{Units} \\ \hline
+			ITMX Transmission  & $T_{\text{ix}}$  &1.50                & \%  \\ \hline
+			ITMY Transmission  & $T_{\text{iy}}$  &1.42                & \%  \\ \hline
+			ETMX Transmission  & $T_{\text{ex}}$  &3.90                & PPM \\ \hline
+			ETMY Transmission  & $T_{\text{ey}}$  &3.80                & PPM \\ \hline
+			X Arm Length       & $L_x$            &3994.4704 $\pm$ .0003 & m   \\ \hline
+			Y Arm Length       & $L_y$            &3994.4691 $\pm$ .0007 & m   \\ \hline   
+		\end{tabular}
+		\caption[Parameters for the installed optics for O3.]
+		{\textbf{Parameters for the installed optics for O3. }
+		}
+		\label{tbl:LHO_optics}
+	\end{table}
+	
 	\chapter{Hermite Gauss Normalization}
 	According to equation \ref{HG}, the higher order modes in the Hermite Gauss basis has the intensity profile,
 	
@@ -165,10 +183,6 @@
 	\\	A_{20} &	= \sqrt{\frac{1}{4\pi w_0^2}}
 	\end{aligned}
 	\end{equation}
-	
-	Therefore the normalized modes are
-	
-
 	
 	\chapter{Bullseye and Quadrant Photodiode Characterization}\label{BPDchar}
 	Both RF and DC segmented photodiodes are widely used in LIGO's sensing schemes, however, the quadrant photodiodes (QPDs) are more readily implemented.  Recently, a bullseye photodiode has been installed upstream of the pre-mode cleaner to sense the size and angular jitter noise contribution from the high powered oscillator.  It is useful to have angular sensors both upstream and downstream of optical cavities to narrow down where jitter could be coupling into the optical path.  That being said, to calibrate the two types of sensors in common units, it is easiest to scale by beam diameters.

@@ -1,86 +1,34 @@
 \contentsline {chapter}{Preface}{1}{chapter*.2}
-\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Gravitational Waves}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Measuring Gravitational Waves with Light}{7}{section.1.2}
-\contentsline {section}{\numberline {1.3}Detection of Gravitational Waves}{11}{section.1.3}
-\contentsline {chapter}{\numberline {2}The LIGO Instrument}{14}{chapter.2}
-\contentsline {subsection}{\numberline {2.0.1}Simple Michaelson}{14}{subsection.2.0.1}
-\contentsline {subsection}{\numberline {2.0.2}Fabry-Perot Cavities}{18}{subsection.2.0.2}
-\contentsline {subsubsection}{Achieving Resonance in an Optical Cavity}{22}{section*.12}
-\contentsline {subsection}{\numberline {2.0.3}Fabry-Perot Michelson}{23}{subsection.2.0.3}
-\contentsline {subsection}{\numberline {2.0.4}Power-Recycled Fabry-Perot Interferometers}{26}{subsection.2.0.4}
-\contentsline {subsection}{\numberline {2.0.5}Dual-Recycled Fabry-Perot Interferometers}{27}{subsection.2.0.5}
-\contentsline {subsection}{\numberline {2.0.6}Fundamental Noise Sources}{30}{subsection.2.0.6}
-\contentsline {subsubsection}{Quantum Noise}{30}{section*.20}
-\contentsline {subsubsection}{Seismic Noise}{35}{section*.21}
-\contentsline {subsubsection}{Thermal Noise}{35}{section*.22}
-\contentsline {subsubsection}{Newtonian Noise}{38}{section*.24}
-\contentsline {section}{\numberline {2.1}Mode Matching with Squeezed States of Light}{39}{section.2.1}
-\contentsline {chapter}{\numberline {3}The Fundamentals of Mode-Matching}{42}{chapter.3}
-\contentsline {section}{\numberline {3.1}Gaussian Beam Optics}{42}{section.3.1}
-\contentsline {subsubsection}{Gouy Phase}{44}{section*.30}
-\contentsline {subsubsection}{Hermite-Gauss Modes}{45}{section*.31}
-\contentsline {subsubsection}{Laguerre Modes}{47}{section*.33}
-\contentsline {subsection}{\numberline {3.1.1}Misalignment and Higher Order Modes}{48}{subsection.3.1.1}
-\contentsline {subsubsection}{Beam Axis Tilted}{49}{section*.34}
-\contentsline {subsubsection}{Beam Axis Displaced}{49}{section*.35}
-\contentsline {subsection}{\numberline {3.1.2}Mode Mismatch and Higher Order Modes}{50}{subsection.3.1.2}
-\contentsline {subsubsection}{Waist Size Shifted}{50}{section*.36}
-\contentsline {subsubsection}{Waist Position Shifted}{50}{section*.37}
-\contentsline {section}{\numberline {3.2}Wavefront Sensing}{51}{section.3.2}
-\contentsline {chapter}{\numberline {4}Simulating Mode-Matching with Finesse}{55}{chapter.4}
-\contentsline {section}{\numberline {4.1}How it works}{55}{section.4.1}
-\contentsline {section}{\numberline {4.2}Finesse Simulations}{56}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}ALIGO Design with FC and Squeezer}{56}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Looking at just Modal Change}{56}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}QM Limited Sensitivity}{56}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Results}{56}{section.4.3}
-\contentsline {chapter}{\numberline {5}Experimental Mode Matching Cavities at Syracuse}{57}{chapter.5}
-\contentsline {section}{\numberline {5.1}Adaptive Mode Matching}{57}{section.5.1}
-\contentsline {section}{\numberline {5.2}Actuators}{57}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Thermal Lenses}{57}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Translation Stages}{58}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Sensors}{58}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Bullseye Photodiodes (BPD)}{58}{subsection.5.3.1}
-\contentsline {subsubsection}{BPD Calibration}{59}{section*.40}
-\contentsline {subsection}{\numberline {5.3.2}Mode Converters}{59}{subsection.5.3.2}
-\contentsline {subsubsection}{Vector formalism for laser beams and optical cavities}{59}{section*.41}
-\contentsline {subsubsection}{Extracting information from mode}{61}{section*.42}
-\contentsline {subsection}{\numberline {5.3.3}DC Mode Matching}{62}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {6}Mode Matching Cavities at LIGO Hanford}{63}{chapter.6}
-\contentsline {section}{\numberline {6.1}Mode Matching IFO to OMC: Single Bounce vs DRMI}{63}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}SR3 Heater}{63}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}SRM Heater}{63}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Mode Matching Squeezer to OMC}{63}{section.6.2}
-\contentsline {section}{\numberline {6.3}Mode Matching as a Function of DARM Offset}{64}{section.6.3}
-\contentsline {section}{\numberline {6.4}Modal Contrast Defect}{64}{section.6.4}
-\contentsline {subsection}{\numberline {6.4.1}Simple Michelson Contrast Defect}{65}{subsection.6.4.1}
-\contentsline {section}{\numberline {6.5}Hot vs. Cold Interferometers}{65}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Thermal Lensing}{66}{subsection.6.5.1}
-\contentsline {subsubsection}{Carrier}{66}{section*.43}
-\contentsline {subsubsection}{Sidebands}{67}{section*.44}
-\contentsline {subsubsection}{GW Signal}{67}{section*.45}
-\contentsline {section}{\numberline {6.6}Wavefront Distortions from Thermal Effects}{67}{section.6.6}
-\contentsline {section}{\numberline {6.7}Tuning Thermal Compensation for LIGO}{71}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}Hartmann Wavefront Sensors}{72}{subsection.6.7.1}
-\contentsline {subsection}{\numberline {6.7.2}Ring Heater Commissioning}{73}{subsection.6.7.2}
-\contentsline {subsection}{\numberline {6.7.3}CO2 Commissioning}{73}{subsection.6.7.3}
-\contentsline {subsection}{\numberline {6.7.4}SR3 Thermal Actuator}{74}{subsection.6.7.4}
-\contentsline {subsection}{\numberline {6.7.5}Putting it all together}{74}{subsection.6.7.5}
-\contentsline {subsubsection}{Higher Power Operation}{74}{section*.46}
-\contentsline {chapter}{\numberline {7}Solutions for Detector Upgrades}{81}{chapter.7}
-\contentsline {section}{\numberline {7.1}Sensors}{81}{section.7.1}
-\contentsline {section}{\numberline {7.2}High Sensitivity Telescope}{81}{section.7.2}
-\contentsline {section}{\numberline {7.3}A Global Active Wavefront Control Scheme}{81}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Hard and Soft Mode Matching}{82}{subsection.7.3.1}
-\contentsline {chapter}{Appendices}{83}{section*.57}
-\contentsline {chapter}{\numberline {A}Resonator Formulas}{84}{Appendix.a.A}
-\contentsline {chapter}{\numberline {B}Hermite Gauss Normalization}{87}{Appendix.a.B}
-\contentsline {chapter}{\numberline {C}Bullseye and Quadrant Photodiode Characterization}{89}{Appendix.a.C}
-\contentsline {section}{\numberline {C.1}Quadrant Photodiodes (QPD)}{89}{section.a.C.1}
-\contentsline {section}{\numberline {C.2}Bullseye Photodiodes}{90}{section.a.C.2}
-\contentsline {subsection}{\numberline {C.2.1}Width}{90}{subsection.a.C.2.1}
-\contentsline {subsection}{\numberline {C.2.2}Pitch}{91}{subsection.a.C.2.2}
-\contentsline {subsection}{\numberline {C.2.3}Yaw}{92}{subsection.a.C.2.3}
-\contentsline {subsection}{\numberline {C.2.4}RF}{92}{subsection.a.C.2.4}
-\contentsline {chapter}{\numberline {D}Overlap of Gaussian Beams}{93}{Appendix.a.D}
+\contentsline {chapter}{\numberline {1}Wavefront Control at LIGO Hanford}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Modal Contrast Defect}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Simple Michelson Contrast Defect}{5}{subsection.1.1.1}
+\contentsline {section}{\numberline {1.2}Hot vs. Cold Interferometers}{6}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Thermal Lensing}{7}{subsection.1.2.1}
+\contentsline {subsubsection}{Carrier}{7}{section*.4}
+\contentsline {subsubsection}{Sidebands}{8}{section*.5}
+\contentsline {subsubsection}{GW Signal}{8}{section*.6}
+\contentsline {section}{\numberline {1.3}Wavefront Distortions from Thermal Effects}{8}{section.1.3}
+\contentsline {section}{\numberline {1.4}Tuning Thermal Compensation for LIGO}{12}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Hartmann Wavefront Sensors}{13}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Ring Heater Commissioning}{14}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}CO2 Commissioning}{14}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.4}Auxiliary Degrees of Freedom}{15}{subsection.1.4.4}
+\contentsline {subsection}{\numberline {1.4.5}SR3 Thermal Actuator}{15}{subsection.1.4.5}
+\contentsline {section}{\numberline {1.5}Putting it all together}{15}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Higher Power Operation}{15}{subsection.1.5.1}
+\contentsline {section}{\numberline {1.6}Mode Matching IFO to OMC: Single Bounce vs DRMI}{16}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}SR3 Heater}{16}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}SRM Heater}{16}{subsection.1.6.2}
+\contentsline {section}{\numberline {1.7}Mode Matching Squeezer to OMC}{16}{section.1.7}
+\contentsline {chapter}{Appendices}{17}{section*.7}
+\contentsline {chapter}{\numberline {A}Resonator Formulas}{18}{Appendix.a.A}
+\contentsline {chapter}{\numberline {B}Parameters Summary}{21}{Appendix.a.B}
+\contentsline {chapter}{\numberline {C}Hermite Gauss Normalization}{22}{Appendix.a.C}
+\contentsline {chapter}{\numberline {D}Bullseye and Quadrant Photodiode Characterization}{24}{Appendix.a.D}
+\contentsline {section}{\numberline {D.1}Quadrant Photodiodes (QPD)}{24}{section.a.D.1}
+\contentsline {section}{\numberline {D.2}Bullseye Photodiodes}{25}{section.a.D.2}
+\contentsline {subsection}{\numberline {D.2.1}Width}{25}{subsection.a.D.2.1}
+\contentsline {subsection}{\numberline {D.2.2}Pitch}{26}{subsection.a.D.2.2}
+\contentsline {subsection}{\numberline {D.2.3}Yaw}{27}{subsection.a.D.2.3}
+\contentsline {subsection}{\numberline {D.2.4}RF}{27}{subsection.a.D.2.4}
+\contentsline {chapter}{\numberline {E}Overlap of Gaussian Beams}{28}{Appendix.a.E}
