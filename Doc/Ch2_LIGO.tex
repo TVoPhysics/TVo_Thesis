@@ -1,4 +1,4 @@
-	\chapter{The LIGO Instrument}\label{LIGOInstrument}
+	\chapter{The LIGO Instrument}\label{chap:LIGOInstrument}
 	The previous chapter dealt with gravitational waves and briefly touched on how a laser interferometer is well suited for detecting GWs and in its simplest form, the LIGO instrument is an incredibly large Michaelson interferometer. However, to make a practical gravitational-wave observatory, the complexity will have to be extended far beyond what Michelson and Morley used.  The next sections will explore the various upgrades to the instrument configuration that improve the sensitivity of LIGO.
 	
 		\subsection{Simple Michaelson}\label{sec:michelson}
@@ -545,22 +545,22 @@
 		
 		\subsubsection{Seismic Noise}
 		The main contributions to seismic noise are primarily caused by either natural occurrences (tectonic plates, wind driven microcosms, oceanic storms etc) or man-made disturbances (heavy automotive traffic, industrial machinery, etc) which contribute to the background hum of motion.  Table \ref{tbl:sei_noise} shows the large   In general, this will be the low frequency barrier for all terrestrial gravitational-wave detectors.  One of the biggest upgrades from eLIGO to aLIGO was the increase in complexity for seismic isolation and suspensions.  Using multiple stages of actively controlled platforms \cite{fabrice_sei1} \cite{fabrice_sei2} \cite{fabrice_strat}\cite{sei_isol}, the noise contribution can be attenuated for frequencies larger than ~1Hz;  in addition, the use of quadruple pendulums to hang the main arm cavity optics further reduces the motion above the pendulum's resonance frequency\cite{driggers_global}\cite{BlairBook}. This is a tremendous upgrade from the mostly passive isolation methods used in initial LIGO.  An interesting point to note is that the estimate of noise contributions from seismic activities to the strain sensitivity is negligible for frequencies above 10 Hz, but absolutely vital for lock acquisition and resonator stability \cite{Hang_LF} \cite{Fritschel_alignment}.
-		
-		\begin{center}
+		 
+		 \begin{table}[h!]
+			\centering
 			\begin{tabular}{ | l | l |}
 				\hline
 				\textbf{Frequency Band} & \textbf{Causes}\\ \hline
 				0.03 - 0.10 Hz & Wind and EQs\\ \hline
 				0.10 - 0.30 Hz & Wave driven micro-seismic motion\\ \hline
 				3.00 - 10.0 Hz & Anthropogenic and trucks\\ \hline
-			\caption[Frequency bands of common seismic noise at LHO.]  
-			{\textbf{Frequency bands of common seismic noise at LHO.}
-			 }
-			\label{tbl:sei_noise}
 			\end{tabular}
+			\caption[Frequency bands of common seismic noise at LHO.]
+			{\textbf{Frequency bands of common seismic noise at LHO.}
+			}
+			\label{tbl:sei_noise}
+		 \end{table}
 	
-		\end{center}
-		
 		\subsubsection{Thermal Noise}
 		Brownian motion \cite{brownian_einstein} is the random movement of particles suspended in a fluid.  The LIGO test masses that make up the 4 kilometer long Fabry-Perot cavities are large macroscopic objects but their constituent atoms can be excited by the ambient temperature which leads to random motion. Those atoms are interconnected which allow for the propagation of an infinite number of elastic wave modes that contain random relative phases and the linear superposition of the modes create distortions that result in thermal noise.	
 	

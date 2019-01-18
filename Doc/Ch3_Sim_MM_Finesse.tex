@@ -1,19 +1,16 @@
-\chapter{Simulating Mode-Matching with Finesse}
-As with most simple concepts Within LIGO, the complexity scales very rapidly in application to the main interferometer and mode matching is no exception so it is useful to use a full scale simulation to extract as much information as possible.
+\chapter{Simulating Mode-Matching with FINESSE}
+In Chapter \ref{chap:LIGOInstrument}, the optical gain from differential arm motion was determined analytically with very few approximations but in actuality, the LIGO interferometer has more degrees of freedom which make precise calculations very cumbersome.  As with most simple concepts within LIGO, the complexity scales very rapidly in application to the main interferometer and mode matching is no exception so it is useful to use a full scale numerical simulation to extract as much information as possible.  FINESSE \cite{FinesseManual} \cite{FinesseTechniques} is one of the leading full-scale interferometer simulation tools which use the linear input-output relations of electromagnetic fields to model complex properties of the LIGO interferometer.  The goal of this chapter is to apply FINESSE in order to model the quantum limited noise sensitivity with mode-mismatch at various positions in the interferometer and determine which actuation points are needed for optimal matching.  This is extremely important in the current generation of Advanced LIGO when squeezing is implemented because of the sensitivity to losses in mode matching between the optical parametric oscillator and the interferometer cavities.  By using FINESSE's ability to incorporate higher order beams and RF sidebands, it is possible to quickly and accurately model mode matching.
 
-Mode matching a linear cavity which has a single waist size and location relative to the input beam equates to two degrees of freedom.  There is an arbitrary method where one could match the optical cavity with the input beam using heaters on the test mass or one could have deformable lenses which shape the incoming beam; this picture works for cavities which feed one Gaussian mode into the another such as the input (or output) mode cleaner.  
+In addition, the practical placement of mode matching sensors in LIGO will have cross-coupling to different cavities when placed at accessible ports (REFL, POP, AS) so it is worthwhile to understand the sensitivity of mode matching sensors to the interferometer's modal content.  To do this, one can use FINESSE to vary the cavity modes by changing the radii of curvatures or lenses to estimate the errror signals at each of the ports.
 
- 
-	\section{How it works}
-
-	\cite{FinesseManual}
-	Summary of how Finesse works (input output matrix), how it handles HOMs
-	\section{Finesse Simulations}
-		\subsection{ALIGO Design with FC and Squeezer}
-		\subsection{Looking at just Modal Change}
-		\subsection{QM Limited Sensitivity}
-			
-	\section{Results}
+	\section{FINESSE Simulations}
+		An Advanced LIGO configuration file \ref{FinesseH1} which utilizes the as-designed values for the lengths and optical parameters is a good starting point for simulating the interferometer.  To incorporate the more realistic numbers, in-situ measurements were taken at Hanford with a beam profile at HAM6 to understand the Gaussian beam shape entering the output mode cleaner. The results and systematic error in these measurements are discussed in Chapter \ref{chapter:MM_LHO}.  For future consideration with regards to the squeezer implementation, the model also applies both squeezed vacuum and a filter cavity before entering the interferometer to compare the effect of mode-matching.
+		
+	\section{Effects of Signal Recycling Mismatch}
+		LIGO's coupled optical cavities allow for a large parameter space when trying to match multiple resonators.   Changing the curvature of an optic in the signal recycling cavity will obviously change its overlap with the output mode cleaner but the effect will also vary the arm mode propagation to the OMC as well.  This will have a confusing result because it is impossible to discern whether the degradation in performance is due to the arm or SRC.  One of the ways to get around this is to implement a perfect mode-matching telescope between the SRC and OMC to keep the arm modes consistent with the output mode cleaner so that the only effect on the interferometer is a non-optimal signal recycling cavity.
+		
+	\section{Detectors and Actuators for Mode Matching}
+	An Fabry-Perot interferometer, the natural eigenbasis for angular sensing uses four degrees of freedom that form linear combinations of angular motion for the main test masses.  These are referred to as differential hard/soft and common hard/soft modes as depicted by Figure [].  Generally speaking, this will translate (SOFT) or tilt (HARD) the cavity beam relative to the input.  This can be extended to mode matching where the waist location and size is shifted by a linear combination of curvature changes.
 		* Signal recycling cavity mismatches
 
 		* Mismatches before the OMC

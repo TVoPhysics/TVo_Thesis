@@ -1,43 +1,4 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces A ring of free floating particles being stretched and squeezed by a passing gravitational wave.}}{7}{figure.caption.4}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces A Michelson Interferometer.}}{8}{figure.caption.5}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Detector to radiation frame.}}{9}{figure.caption.6}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces The phase response of an interferometer to a gravitational wave.}}{11}{figure.caption.7}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A heterodyne detection scheme for interferometers.}}{17}{figure.caption.8}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Delay Line (top) vs Fabry Perot (bottom)\relax }}{19}{figure.caption.9}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The reflected, circulating, and transmitted powers for a single Fabry-Perot cavity.}}{20}{figure.caption.10}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Bode Plots of a linear Fabry-Perot response in reflection.\relax }}{20}{figure.caption.11}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Control scheme for an optical cavity.}}{23}{figure.caption.13}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Error signal in reflection}}{24}{figure.caption.14}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Michelson with Fabry Perot arms\relax }}{25}{figure.caption.15}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces A power recycled Fabry-Perot interferometer.}}{26}{figure.caption.16}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces A dual recycled Fabry-Perot interferometer.}}{28}{figure.caption.17}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Shot noise limited sensitivity\relax }}{28}{figure.caption.18}
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Quantum limited sensitivity by combining shot noise and radiation pressure\relax }}{29}{figure.caption.19}
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Displacement spectrum for thermal noise.}}{39}{figure.caption.23}
-\contentsline {figure}{\numberline {2.13}{\ignorespaces The amplitude spectral density of gravitational wave strain normalized by the standard quantum limit.\relax }}{40}{figure.caption.25}
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Add a caption\relax }}{41}{figure.caption.26}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces A depiction of the Gaussian beam properties with respect to cylindrical coordinates.}}{45}{figure.caption.27}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Beam size, radius of curvature, and Gouy phase as a function of distance propagation from the waist.}}{46}{figure.caption.28}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Intensity\relax }}{47}{figure.caption.29}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces A Finesse model of a longitudinal mode scan comparing the Advanced LIGO power recycling and signal recycling cavities.}}{48}{figure.caption.32}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Misaligment and mode mismatch between two different Gaussian beams.}}{52}{figure.caption.38}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces MEDM master screen for adaptive mode matching at Syracuse}}{58}{figure.caption.39}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces A simplified model for the effect of a substrate thermal lens on the carrier field.}}{74}{figure.caption.47}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces A plane wave passing through a lens with a temperature gradient.}}{75}{figure.caption.48}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces A conceptual model of flux balance for a cylindrical object.}}{75}{figure.caption.49}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Distributions of the fit}}{76}{figure.caption.50}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Thermal lensing as seen by the ITM Hartmann Sensors after a lock loss.}}{77}{figure.caption.51}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Calculated TCS settings to balance the substrate lens.}}{78}{figure.caption.52}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Mode matching the arm cavities to the power recycling cavity.}}{79}{figure.caption.53}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces A wavefront map measured by the Hartmann Wavefront Sensor of ITMX.}}{79}{figure.caption.54}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces A wavefront map measured by the Hartmann Wavefront Sensor of ITMY.}}{80}{figure.caption.55}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces The power recycling pick-off port sensors as a function of differential thermal lensing.}}{80}{figure.caption.56}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

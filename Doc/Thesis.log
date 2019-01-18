@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  11 JAN 2019 19:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  17 JAN 2019 09:51
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -1791,11 +1791,7 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks24
 \verbatim@line=\toks25
 \verbatim@in@stream=\read1
-)) (Thesis.aux
-
-LaTeX Warning: Label `eq:thermoref' multiply defined.
-
-)
+)) (Thesis.aux)
 \openout1 = `Thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -1924,470 +1920,105 @@ l.19 	\tableofcontents
 
 ] (Thesis.toc [2
 
-] [3])
+])
 \tf@toc=\write4
 \openout4 = `Thesis.toc'.
 
- (Ch1_Intro.tex [4]
+ (Ch5_MM_at_LHO.tex [3]
 Chapter 1.
-[5
 
-] <../Figures/GW_Particles.png, id=394, 144.68454pt x 63.5976pt>
-File: ../Figures/GW_Particles.png Graphic file (type png)
+LaTeX Warning: Reference `fund_mm' on page 4 undefined on input line 7.
 
-<use ../Figures/GW_Particles.png>
-Package pdftex.def Info: ../Figures/GW_Particles.png used on input line 55.
-(pdftex.def)             Requested size: 187.89914pt x 82.59921pt.
- [6] [7 <../Figures/GW_Particles.png>]
-<../Figures/SimpleMichelson.png, id=435, 158.84946pt x 135.93987pt>
-File: ../Figures/SimpleMichelson.png Graphic file (type png)
+[4
 
-<use ../Figures/SimpleMichelson.png>
-Package pdftex.def Info: ../Figures/SimpleMichelson.png used on input line 87.
-(pdftex.def)             Requested size: 211.38832pt x 180.90558pt.
- [8 <../Figures/SimpleMichelson.png>]
-<../Figures/EulerAngles.png, id=452, 185.0112pt x 149.74344pt>
-File: ../Figures/EulerAngles.png Graphic file (type png)
+]
 
-<use ../Figures/EulerAngles.png>
-Package pdftex.def Info: ../Figures/EulerAngles.png used on input line 110.
-(pdftex.def)             Requested size: 211.38832pt x 171.10228pt.
- [9 <../Figures/EulerAngles.png>] [10]
-<../Figures/SincGW.png, id=481, 650.43pt x 361.35pt>
-File: ../Figures/SincGW.png Graphic file (type png)
+LaTeX Warning: Reference `sb_tf' on page 5 undefined on input line 22.
 
-<use ../Figures/SincGW.png>
-Package pdftex.def Info: ../Figures/SincGW.png used on input line 162.
-(pdftex.def)             Requested size: 328.82707pt x 182.68707pt.
- [11 <../Figures/SincGW.png>] [12]) (Ch2_LIGO.tex
-[13]
-Chapter 2.
+[5]
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 4.
+LaTeX Warning: Reference `sec:DRMI' on page 6 undefined on input line 45.
 
-[14
+[6]
 
-] [15]
-<../Figures/SimpleMichelsonHetero.png, id=541, 571.6557pt x 476.5002pt>
-File: ../Figures/SimpleMichelsonHetero.png Graphic file (type png)
+LaTeX Warning: Reference `fig:ThermalLensFP' on page 7 undefined on input line 
+48.
 
-<use ../Figures/SimpleMichelsonHetero.png>
-Package pdftex.def Info: ../Figures/SimpleMichelsonHetero.png used on input lin
-e 68.
-(pdftex.def)             Requested size: 281.85587pt x 234.94856pt.
 
+LaTeX Warning: Reference `c_FP' on page 7 undefined on input line 106.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+[7]
 
-[16] [17 <../Figures/SimpleMichelsonHetero.png>]
-<../Figures/FPvDL.png, id=572, 313.50726pt x 187.25157pt>
-File: ../Figures/FPvDL.png Graphic file (type png)
+LaTeX Warning: Reference `sec:DRMI' on page 8 undefined on input line 121.
 
-<use ../Figures/FPvDL.png>
-Package pdftex.def Info: ../Figures/FPvDL.png used on input line 101.
-(pdftex.def)             Requested size: 234.8775pt x 140.28973pt.
-
+[8]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: Reference `fig:ThermalLensWF' on page 9 undefined on input line 
+130.
 
-[18] <../Figures/Arm_Refl.png, id=583, 595.7457pt x 271.7352pt>
-File: ../Figures/Arm_Refl.png Graphic file (type png)
 
-<use ../Figures/Arm_Refl.png>
-Package pdftex.def Info: ../Figures/Arm_Refl.png used on input line 126.
-(pdftex.def)             Requested size: 211.38832pt x 96.41898pt.
-
-<../Figures/Arm_Circ.png, id=584, 569.0058pt x 271.7352pt>
-File: ../Figures/Arm_Circ.png Graphic file (type png)
-
-<use ../Figures/Arm_Circ.png>
-Package pdftex.def Info: ../Figures/Arm_Circ.png used on input line 133.
-(pdftex.def)             Requested size: 211.38832pt x 100.95093pt.
-
-<../Figures/Arm_Tran.png, id=585, 595.7457pt x 271.7352pt>
-File: ../Figures/Arm_Tran.png Graphic file (type png)
-
-<use ../Figures/Arm_Tran.png>
-Package pdftex.def Info: ../Figures/Arm_Tran.png used on input line 140.
-(pdftex.def)             Requested size: 211.38832pt x 96.41898pt.
-
-<../Figures/FP_L_TF.png, id=587, 402.7848pt x 264.0264pt>
-File: ../Figures/FP_L_TF.png Graphic file (type png)
-
-<use ../Figures/FP_L_TF.png>
-Package pdftex.def Info: ../Figures/FP_L_TF.png used on input line 158.
-(pdftex.def)             Requested size: 211.38832pt x 138.56355pt.
-
-<../Figures/FP_F_TF.png, id=588, 407.3619pt x 264.0264pt>
-File: ../Figures/FP_F_TF.png Graphic file (type png)
-
-<use ../Figures/FP_F_TF.png>
-Package pdftex.def Info: ../Figures/FP_F_TF.png used on input line 165.
-(pdftex.def)             Requested size: 211.38832pt x 137.00847pt.
- [19 <../Figures/FPvDL.png>] [20 <../Figures/Arm_Refl.png> <../Figures/Arm_Circ
-.png> <../Figures/Arm_Tran.png> <../Figures/FP_L_TF.png> <../Figures/FP_F_TF.pn
-g>] [21]
-<../Figures/FP_Control.png, id=632, 496.4949pt x 181.03635pt>
-File: ../Figures/FP_Control.png Graphic file (type png)
-
-<use ../Figures/FP_Control.png>
-Package pdftex.def Info: ../Figures/FP_Control.png used on input line 234.
-(pdftex.def)             Requested size: 352.31625pt x 128.4704pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../Figures/PDH_Err.png, id=635, 433.62pt x 289.08pt>
-File: ../Figures/PDH_Err.png Graphic file (type png)
-
-<use ../Figures/PDH_Err.png>
-Package pdftex.def Info: ../Figures/PDH_Err.png used on input line 241.
-(pdftex.def)             Requested size: 352.31625pt x 234.89014pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[22] [23 <../Figures/FP_Control.png>]
-<../Figures/FP_Mich.png, id=664, 158.77719pt x 127.48428pt>
-File: ../Figures/FP_Mich.png Graphic file (type png)
-
-<use ../Figures/FP_Mich.png>
-Package pdftex.def Info: ../Figures/FP_Mich.png used on input line 258.
-(pdftex.def)             Requested size: 234.8775pt x 188.5979pt.
- [24 <../Figures/PDH_Err.png>] [25 <../Figures/FP_Mich.png>] <../Figures/PRFP_M
-ich.png, id=680, 194.33403pt x 127.48428pt>
-File: ../Figures/PRFP_Mich.png Graphic file (type png)
-
-<use ../Figures/PRFP_Mich.png>
-Package pdftex.def Info: ../Figures/PRFP_Mich.png used on input line 295.
-(pdftex.def)             Requested size: 234.8775pt x 154.08527pt.
- [26 <../Figures/PRFP_Mich.png>]
-<../Figures/DRFP_Mich.png, id=694, 194.33403pt x 130.30281pt>
-File: ../Figures/DRFP_Mich.png Graphic file (type png)
-
-<use ../Figures/DRFP_Mich.png>
-Package pdftex.def Info: ../Figures/DRFP_Mich.png used on input line 332.
-(pdftex.def)             Requested size: 234.8775pt x 157.4919pt.
- [27]
-<../Figures/SN_Lim_Sense.png, id=705, 1300.86pt x 650.43pt>
-File: ../Figures/SN_Lim_Sense.png Graphic file (type png)
-
-<use ../Figures/SN_Lim_Sense.png>
-Package pdftex.def Info: ../Figures/SN_Lim_Sense.png used on input line 341.
-(pdftex.def)             Requested size: 469.75502pt x 234.87912pt.
-
-<../Figures/QM_Limited_Sense.png, id=706, 1300.86pt x 650.43pt>
-File: ../Figures/QM_Limited_Sense.png Graphic file (type png)
-
-<use ../Figures/QM_Limited_Sense.png>
-Package pdftex.def Info: ../Figures/QM_Limited_Sense.png used on input line 348
-.
-(pdftex.def)             Requested size: 469.75502pt x 234.87912pt.
- [28 <../Figures/DRFP_Mich.png> <../Figures/SN_Lim_Sense.png>] [29 <../Figures/
-QM_Limited_Sense.png>] [30] [31] [32]
-[33] [34]
-
-! Package caption Error: \caption outside float.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.556 			\caption
-                 [Frequency bands of common seismic noise at LHO.]
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[35] [36] [37] <../Figures/ThermalNoise_ASD.png, id=868, 1084.05pt x 578.16pt>
-File: ../Figures/ThermalNoise_ASD.png Graphic file (type png)
-
-<use ../Figures/ThermalNoise_ASD.png>
-Package pdftex.def Info: ../Figures/ThermalNoise_ASD.png used on input line 640
-.
-(pdftex.def)             Requested size: 422.77664pt x 225.48149pt.
- [38] [39 <../Figures/ThermalNoise_ASD.png>] <../Figures/Kimble_SM_QM.png, id=9
-05, 867.24pt x 578.16pt>
-File: ../Figures/Kimble_SM_QM.png Graphic file (type png)
-
-<use ../Figures/Kimble_SM_QM.png>
-Package pdftex.def Info: ../Figures/Kimble_SM_QM.png used on input line 669.
-(pdftex.def)             Requested size: 211.38832pt x 140.92262pt.
-
-<../Figures/Kimble_SM_QM_sqz.png, id=906, 867.24pt x 578.16pt>
-File: ../Figures/Kimble_SM_QM_sqz.png Graphic file (type png)
-
-<use ../Figures/Kimble_SM_QM_sqz.png>
-Package pdftex.def Info: ../Figures/Kimble_SM_QM_sqz.png used on input line 676
-.
-(pdftex.def)             Requested size: 211.38832pt x 140.92262pt.
-
-<../Figures/Kimble_PRFPMI_QM.png, id=910, 867.24pt x 578.16pt>
-File: ../Figures/Kimble_PRFPMI_QM.png Graphic file (type png)
-
-<use ../Figures/Kimble_PRFPMI_QM.png>
-Package pdftex.def Info: ../Figures/Kimble_PRFPMI_QM.png used on input line 697
-.
-(pdftex.def)             Requested size: 328.82707pt x 219.21786pt.
-
-<../Figures/Kimble_PRFPMI_QM_Sqz.png, id=911, 867.24pt x 578.16pt>
-File: ../Figures/Kimble_PRFPMI_QM_Sqz.png Graphic file (type png)
-
-<use ../Figures/Kimble_PRFPMI_QM_Sqz.png>
-Package pdftex.def Info: ../Figures/Kimble_PRFPMI_QM_Sqz.png used on input line
- 704.
-(pdftex.def)             Requested size: 328.82707pt x 219.21786pt.
-) (Ch2_Intro_to_MM.tex [40 <../Figures/Kimble_SM_QM.png> <../Figures/Kimble_SM_
-QM_sqz.png>] [41 <../Figures/Kimble_PRFPMI_QM.png> <../Figures/Kimble_PRFPMI_QM
-_Sqz.png>]
-Chapter 3.
-
-Package natbib Warning: Citation `SiggSidle' on page 42 undefined on input line
- 2.
-
-[42
-
-] [43] <../Figures/GaussProfile.png, id=961, 302.01633pt x 151.91154pt>
-File: ../Figures/GaussProfile.png Graphic file (type png)
-
-<use ../Figures/GaussProfile.png>
-Package pdftex.def Info: ../Figures/GaussProfile.png used on input line 86.
-(pdftex.def)             Requested size: 305.33789pt x 153.58937pt.
-
-<../Figures/GaussBeamParams.png, id=962, 433.62pt x 289.08pt>
-File: ../Figures/GaussBeamParams.png Graphic file (type png)
-
-<use ../Figures/GaussBeamParams.png>
-Package pdftex.def Info: ../Figures/GaussBeamParams.png used on input line 94.
-(pdftex.def)             Requested size: 399.29463pt x 266.20824pt.
-
-<../Figures/GaussBeamIntensity.png, id=963, 433.62pt x 289.08pt>
-File: ../Figures/GaussBeamIntensity.png Graphic file (type png)
-
-<use ../Figures/GaussBeamIntensity.png>
-Package pdftex.def Info: ../Figures/GaussBeamIntensity.png used on input line 1
-02.
-(pdftex.def)             Requested size: 305.33789pt x 203.56763pt.
- [44] [45 <../Figures/GaussProfile.png>] <../Figures/PRC_SRC_ModeScan.png, id=9
-90, 615.0177pt x 536.9661pt>
-File: ../Figures/PRC_SRC_ModeScan.png Graphic file (type png)
-
-<use ../Figures/PRC_SRC_ModeScan.png>
-Package pdftex.def Info: ../Figures/PRC_SRC_ModeScan.png used on input line 133
-.
-(pdftex.def)             Requested size: 305.33789pt x 266.5897pt.
- [46 <../Figures/GaussBeamParams.png>]
-[47 <../Figures/GaussBeamIntensity.png>] [48 <../Figures/PRC_SRC_ModeScan.png>]
-[49] [50]
-<../Figures/BeamAxisDisplaced.png, id=1047, 399.05086pt x 178.86826pt>
-File: ../Figures/BeamAxisDisplaced.png Graphic file (type png)
-
-<use ../Figures/BeamAxisDisplaced.png>
-Package pdftex.def Info: ../Figures/BeamAxisDisplaced.png used on input line 25
-4.
-(pdftex.def)             Requested size: 223.13649pt x 100.01814pt.
-
-<../Figures/BeamAxisRotated.png, id=1048, 399.05086pt x 189.22694pt>
-File: ../Figures/BeamAxisRotated.png Graphic file (type png)
-
-<use ../Figures/BeamAxisRotated.png>
-Package pdftex.def Info: ../Figures/BeamAxisRotated.png used on input line 261.
-
-(pdftex.def)             Requested size: 223.13649pt x 105.81044pt.
-
-<../Figures/BeamWaistDisplaced.png, id=1049, 457.58955pt x 151.88745pt>
-File: ../Figures/BeamWaistDisplaced.png Graphic file (type png)
-
-<use ../Figures/BeamWaistDisplaced.png>
-Package pdftex.def Info: ../Figures/BeamWaistDisplaced.png used on input line 2
-68.
-(pdftex.def)             Requested size: 223.13649pt x 74.06625pt.
-
-<../Figures/BeamWaistEnlarged.png, id=1050, 399.4122pt x 151.88745pt>
-File: ../Figures/BeamWaistEnlarged.png Graphic file (type png)
-
-<use ../Figures/BeamWaistEnlarged.png>
-Package pdftex.def Info: ../Figures/BeamWaistEnlarged.png used on input line 27
-5.
-(pdftex.def)             Requested size: 223.13649pt x 84.85475pt.
- [51] [52 <../Figures/BeamAxisDisplaced.png> <../Figures/BeamAxisRotated.png> <
-../Figures/BeamWaistDisplaced.png> <../Figures/BeamWaistEnlarged.png>] [53]) (C
-h3_Sim_MM_Finesse.tex [54]
-Chapter 4.
-[55
-
-]) (Ch4_Exp_MM_Syr.tex [56]
-Chapter 5.
-<../Figures/AMM_MASTER.png, id=1106, 1249.66875pt x 624.3325pt>
-File: ../Figures/AMM_MASTER.png Graphic file (type png)
-
-<use ../Figures/AMM_MASTER.png>
-Package pdftex.def Info: ../Figures/AMM_MASTER.png used on input line 8.
-(pdftex.def)             Requested size: 469.75502pt x 234.68617pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[57
-
-] [58 <../Figures/AMM_MASTER.png>] [59] [60]
-Overfull \hbox (10.70766pt too wide) detected at line 116
-[][][]
- []
-
-[61]) (Ch5_MM_at_LHO.tex [62]
-Chapter 6.
-[63
-
-] [64] [65] [66] [67]
-
-LaTeX Font Warning: Command \boldmath invalid in math mode on input line 146.
-
-
-LaTeX Font Warning: Command \mathversion invalid in math mode on input line 146
+LaTeX Font Warning: Command \boldmath invalid in math mode on input line 132.
+
+
+LaTeX Font Warning: Command \mathversion invalid in math mode on input line 132
 .
 
-[68] [69] [70] [71]
 
-Package natbib Warning: Citation `DanBrown_prvt' on page 72 undefined on input 
-line 261.
+LaTeX Warning: Reference `fig:ThermalLensWF' on page 9 undefined on input line 
+136.
 
-[72] [73]) (Ch5_MM_at_LHO_Figures.tex
-<../Figures/ThermalLensFP.png, id=1296, 343.06569pt x 110.71764pt>
-File: ../Figures/ThermalLensFP.png Graphic file (type png)
+[9] [10] [11] [12]
 
-<use ../Figures/ThermalLensFP.png>
-Package pdftex.def Info: ../Figures/ThermalLensFP.png used on input line 3.
-(pdftex.def)             Requested size: 328.82707pt x 106.12215pt.
+LaTeX Warning: Reference `fig:hws_abs' on page 13 undefined on input line 247.
 
-<../Figures/ThermalLensWF.png, id=1301, 167.23277pt x 107.39322pt>
-File: ../Figures/ThermalLensWF.png Graphic file (type png)
+[13] [14]
 
-<use ../Figures/ThermalLensWF.png>
-Package pdftex.def Info: ../Figures/ThermalLensWF.png used on input line 11.
-(pdftex.def)             Requested size: 187.89914pt x 120.67448pt.
+LaTeX Warning: Reference `fig:hws_abs' on page 15 undefined on input line 282.
 
-<../Figures/ThermalLensFlux.png, id=1302, 216.15958pt x 142.01054pt>
-File: ../Figures/ThermalLensFlux.png Graphic file (type png)
-
-<use ../Figures/ThermalLensFlux.png>
-Package pdftex.def Info: ../Figures/ThermalLensFlux.png used on input line 19.
-(pdftex.def)             Requested size: 281.85587pt x 185.17274pt.
-
-<../Figures/MCMC_ITMX_abs.png, id=1303, 397.485pt x 397.485pt>
-File: ../Figures/MCMC_ITMX_abs.png Graphic file (type png)
-
-<use ../Figures/MCMC_ITMX_abs.png>
-Package pdftex.def Info: ../Figures/MCMC_ITMX_abs.png used on input line 28.
-(pdftex.def)             Requested size: 234.8775pt x 234.88408pt.
-
-<../Figures/MCMC_ITMY_abs.png, id=1304, 397.485pt x 397.485pt>
-File: ../Figures/MCMC_ITMY_abs.png Graphic file (type png)
-
-<use ../Figures/MCMC_ITMY_abs.png>
-Package pdftex.def Info: ../Figures/MCMC_ITMY_abs.png used on input line 34.
-(pdftex.def)             Requested size: 234.8775pt x 234.88408pt.
-
-<../Figures/MCMC_ITMX_ABS_FIT.png, id=1305, 722.7pt x 361.35pt>
-File: ../Figures/MCMC_ITMX_ABS_FIT.png Graphic file (type png)
-
-<use ../Figures/MCMC_ITMX_ABS_FIT.png>
-Package pdftex.def Info: ../Figures/MCMC_ITMX_ABS_FIT.png used on input line 47
-.
-(pdftex.def)             Requested size: 328.82707pt x 164.4145pt.
-
-<../Figures/MCMC_ITMY_ABS_FIT.png, id=1306, 722.7pt x 361.35pt>
-File: ../Figures/MCMC_ITMY_ABS_FIT.png Graphic file (type png)
-
-<use ../Figures/MCMC_ITMY_ABS_FIT.png>
-Package pdftex.def Info: ../Figures/MCMC_ITMY_ABS_FIT.png used on input line 54
-.
-(pdftex.def)             Requested size: 328.82707pt x 164.4145pt.
-
-<../Figures/ITMX_TCS_Settings.png, id=1307, 1445.4pt x 722.7pt>
-File: ../Figures/ITMX_TCS_Settings.png Graphic file (type png)
-
-<use ../Figures/ITMX_TCS_Settings.png>
-Package pdftex.def Info: ../Figures/ITMX_TCS_Settings.png used on input line 67
-.
-(pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-
-<../Figures/ITMY_TCS_Settings.png, id=1308, 1445.4pt x 722.7pt>
-File: ../Figures/ITMY_TCS_Settings.png Graphic file (type png)
-
-<use ../Figures/ITMY_TCS_Settings.png>
-Package pdftex.def Info: ../Figures/ITMY_TCS_Settings.png used on input line 73
-.
-(pdftex.def)             Requested size: 469.75502pt x 234.87471pt.
-
-<../Figures/ETM_TCS_Settings.png, id=1309, 722.7pt x 433.62pt>
-File: ../Figures/ETM_TCS_Settings.png Graphic file (type png)
-
-<use ../Figures/ETM_TCS_Settings.png>
-Package pdftex.def Info: ../Figures/ETM_TCS_Settings.png used on input line 83.
-
-(pdftex.def)             Requested size: 469.75502pt x 281.85628pt.
-
-<../Figures/ITMX_20W_abs.png, id=1310, 1445.4pt x 722.7pt>
-File: ../Figures/ITMX_20W_abs.png Graphic file (type png)
-
-<use ../Figures/ITMX_20W_abs.png>
-Package pdftex.def Info: ../Figures/ITMX_20W_abs.png used on input line 91.
-(pdftex.def)             Requested size: 328.82707pt x 164.40898pt.
-
-<../Figures/ITMY_20W_abs.png, id=1311, 1445.4pt x 722.7pt>
-File: ../Figures/ITMY_20W_abs.png Graphic file (type png)
-
-<use ../Figures/ITMY_20W_abs.png>
-Package pdftex.def Info: ../Figures/ITMY_20W_abs.png used on input line 99.
-(pdftex.def)             Requested size: 328.82707pt x 164.40898pt.
-
-<../Figures/POP18_POP90_DiffLens.png, id=1312, 625.1355pt x 578.8827pt>
-File: ../Figures/POP18_POP90_DiffLens.png Graphic file (type png)
-
-<use ../Figures/POP18_POP90_DiffLens.png>
-Package pdftex.def Info: ../Figures/POP18_POP90_DiffLens.png used on input line
- 107.
-(pdftex.def)             Requested size: 281.85587pt x 260.99829pt.
-) (Ch6_Det_Up.tex [74 <../Figures/ThermalLensFP.png>] [75 <../Figures/ThermalLe
-nsWF.png> <../Figures/ThermalLensFlux.png>] [76 <../Figures/MCMC_ITMX_abs.png> 
-<../Figures/MCMC_ITMY_abs.png>]
-[77 <../Figures/MCMC_ITMX_ABS_FIT.png> <../Figures/MCMC_ITMY_ABS_FIT.png>]
-[78 <../Figures/ITMX_TCS_Settings.png> <../Figures/ITMY_TCS_Settings.png>]
-[79 <../Figures/ETM_TCS_Settings.png> <../Figures/ITMX_20W_abs.png>] [80 <../Fi
-gures/ITMY_20W_abs.png> <../Figures/POP18_POP90_DiffLens.png>]
-Chapter 7.
-) (Appendix.tex [81
-
-] [82] [83
+[15]) (Appendix.tex [16] [17
 
 
 ]
 Appendix A.
-[84
 
-] [85] [86]
+LaTeX Warning: Reference `gfactor' on page 18 undefined on input line 4.
+
+[18
+
+]
+
+LaTeX Warning: Reference `gfactor' on page 19 undefined on input line 104.
+
+[19]
+
+LaTeX Warning: Reference `gfactor' on page 20 undefined on input line 115.
+
+[20]
 Appendix B.
-[87
+[21
 
-] [88]
+]
 Appendix C.
-[89
 
-] [90] [91] [92]
+LaTeX Warning: Reference `HG' on page 22 undefined on input line 139.
+
+[22
+
+] [23]
 Appendix D.
-[93
+[24
 
-]) [94] (Thesis.lof [95
+] [25] [26] [27]
+Appendix E.
+[28
 
-])
+]) [29] (Thesis.lof)
 \tf@lof=\write5
 \openout5 = `Thesis.lof'.
 
- [96] (Thesis.lot)
+ [30
+
+] (Thesis.lot)
 \tf@lot=\write6
 \openout6 = `Thesis.lot'.
 
@@ -2395,76 +2026,56 @@ Appendix D.
 \tf@brf=\write7
 \openout7 = `Thesis.brf'.
 
+ [31
 
-[97
+]
+[32
 
-] [98
-
-] [99]
-! Undefined control sequence.
-<recently read> \prd 
-                     
-l.222 
-      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[100] [101] [102] [103] [104] [105])
-
-Package natbib Warning: There were undefined citations.
-
+] [33])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
-[106]
+ [34]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
  (Thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 08D12AB528D90507831538DEFB4B974C;4935.
+(rerunfilecheck)             Checksum: 01CC14E7DBA135CEC7FD7FC40FA7D90B;2213.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: 502A8F76275361FA9CBF17E02A8250DC;5425.
+(rerunfilecheck)             Checksum: 102AB0E76EA8BE02D7CBDC5BF23E0FFB;1070.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
  ) 
 Here is how much of TeX's memory you used:
- 20438 strings out of 493323
- 348676 string characters out of 3139066
- 434109 words of memory out of 3000000
- 23154 multiletter control sequences out of 15000+200000
- 545526 words of font info for 78 fonts, out of 3000000 for 9000
+ 19213 strings out of 493323
+ 326318 string characters out of 3139066
+ 418943 words of memory out of 3000000
+ 22402 multiletter control sequences out of 15000+200000
+ 540833 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 49i,19n,42p,10416b,577s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progr
-am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Thesis.pdf (108 pages, 8235669 bytes).
+ 49i,19n,42p,10416b,457s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/m
+sbm10.pfb>
+Output written on Thesis.pdf (36 pages, 381418 bytes).
 PDF statistics:
- 1949 PDF objects out of 2073 (max. 8388607)
- 562 named destinations out of 1000 (max. 500000)
- 762 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 598 PDF objects out of 1000 (max. 8388607)
+ 170 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 
