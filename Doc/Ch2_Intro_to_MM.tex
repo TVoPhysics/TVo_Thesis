@@ -1,5 +1,6 @@
-\chapter{The Fundamentals of Mode-Matching}\label{fund_mm}
-		When dealing with the length sensing degrees of freedoms in Chapter \ref{LIGOInstrument}, the plane wave approximation is sufficient for describing the resonator dynamics. However, when trying to understand the misalignment and mode-mismatch signals, it is necessary to incorporate Gaussian beams and their associated higher order modes. This formalism plays a pivotal role in the LIGO detectors because the gravitational waves affect the fundamental eigenmode of the arm cavities and any coupling to other modes results in a loss of signal.  Equally as important, the reduction of angular motion to remain locked relies on robust sensing of the cavity misalignment from external disturbances \cite{Fritschel_alignment} and torque-to-angle coupling \cite{SiggSidle}.  Mode matching is a second order effect but it will be shown in Chapter \label{chapter:MM_LHO} that mismatches play an important role in the practical operation of a large scale interferometer.
+\chapter{The Fundamentals of Mode-Matching}\label{chap:fund_mm}
+		When dealing with the length sensing degrees of freedoms in Chapter \ref{LIGOInstrument}, the plane wave approximation is sufficient for describing the resonator dynamics. However, when trying to understand the misalignment and mode mismatch signals, it is necessary to incorporate Gaussian beams and their associated higher order modes. This formalism plays a pivotal role in the LIGO detectors because the gravitational wave is sensed using the fundamental eigenmode of the arm cavities and any coupling to higher order modes results in a loss of signal at the antisymmetric port.  Equally as important, the reduction of angular motion to remain locked relies on robust sensing of the cavity misalignment from external disturbances \cite{Fritschel_alignment} and torque-to-angle coupling \cite{SiggSidle}.  Mode matching is a second order effect but it will be shown in Chapter \ref{chapter:MM_LHO} that mismatches play an important role in the practical operation of a large scale interferometer.
+			
 		\section{Gaussian Beam Optics}
 		To show that a Gaussian beam is a valid electromagnetic wave, consider the famous Maxwell's equations:
 		\begin{equation}\label{eq:maxwell}
@@ -11,7 +12,6 @@
 		\nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon}
 		\end{aligned}
 		\end{equation}
-		
 		Concentrating on the electric field in vacuum, we arrive at the Helmholtz Equation
 		\begin{equation}\label{Helmholtz}
 		(\nabla^2 + k^2 ) \mathbf{U}(\mathbf{r},t) = 0
@@ -53,7 +53,7 @@
 		
 		Plugging equation \ref{invq} into \ref{complexenvelope} leads directly to the complex amplitude for a Gaussian Beam
 		\begin{equation}
-		U(r,z) = A_0 \frac{W_0}{W(z)} e^{-\frac{r^2}{W^2(z)}} e^{-ikz - ik \frac{r^2}{2R(z)} + i \phi(z)}
+		U(r,z) = A_0 \frac{W_0}{W(z)} e^{-\frac{r^2}{W^2(z)}} e^{-ikz - ik \frac{r^2}{2R(z)} + i \zeta(z)}
 		\end{equation}
 		where
 		\begin{subequations}
@@ -64,7 +64,7 @@
 		R(z) = z \bigg[ 1 + \bigg( \frac{z}{z_0} \bigg)^2 \bigg]
 		\end{equation}
 		\begin{equation}\label{gouy}
-		\phi(z)= \text{tan}^{-1}\bigg(\frac{z_0}{z}\bigg)
+		\zeta(z)= \text{tan}^{-1}\bigg(\frac{z_0}{z}\bigg)
 		\end{equation}
 		\begin{equation}
 		W_0 = \sqrt{\frac{\lambda z_0}{\pi}}
@@ -90,7 +90,7 @@
 	
 		\begin{figure}[ht]
 			\centering
-			\includegraphics[width=0.85 \textwidth]{../Figures/GaussBeamParams.png}
+			\includegraphics[width=0.6 \textwidth]{../Figures/GaussBeamParams.png}
 			\caption[Beam size, radius of curvature, and Gouy phase as a function of distance propagation from the waist.] 
 			{\textbf{Beam size, radius of curvature, and Gouy phase as a function of distance propagation from the waist.} The vertical dashed gray lines represent the integer number of Rayleigh ranges.  At the point $z=z_0$, the beam size is $\sqrt{2}$ of the waist size and the radius of curvature is minimal.  At this point, the Gouy phase propagation is lagging the plane wave by $\pi /4$ and the beam intensity is half of that at the waist.}
 			\label{fig:GaussParams}
@@ -102,51 +102,34 @@
 			\caption{Intensity}
 			\label{fig:GaussIntensity}
 		\end{figure}
-
-		\subsubsection{Gouy Phase}
-		The Gouy phase given by equation \ref{gouy} is the phase lag between a Gaussian beam and a perfect plane wave that occurs as a function of propagation along the $\hat{z}$-axis which ranges from $\phi(z) = \pm \pi/2$ for $z =\pm \inf$.  Physically, this could be interpreted as the difference between the laser beam behaving like a plane wave when $z\approx0$ (or near field) and eventually evolving into a spherical wave when $z\approx \pm \inf$ (or far field) (see Figure \ref{fig:GaussParams} ).  Although this phenomenon is interesting mathematically, most texts do not consider how to practically use or measure the Gouy phase.  In LIGO technical notes and electronic logs, the Gouy phase of sensors or actuators are used to describe where along the beam path the piece of equipment is located.  This will indicate what degree of freedom is being observed or adjusted.  For example, in ray optics \cite{Saleh} a laser beam has two degrees of freedom, the displacement and angle from the optical axis.  If an actuator such as a piezo-electric transducer with an attached reflective mirror is placed near the origin or focus of the laser beam, then the controlled degree of freedom is only the angle.  Alternatively, if the actuator is placed in the far field then the controlled degree of freedom is almost entirely displacement.  This is also true of sensors at various points along the $\hat{z}$-axis to determine the exact alignment of the optical beam.
 		
-		In practice, it is impossible to sense the true waist of an optical system because it could be inside a Fabry-Perot cavity.  So the clever designer must insert a pick-off beam to sample the transmission or reflection of the interested optical system and use a combination of lenses to create a telescope for the sensors and infers the degrees of freedom.  Then, by rotating to the two-dimensional space created by the sensors to represent the interested space spanned by the optical system's degrees of freedom; colloquially, this is known as a sensing matrix.  Using this method, sensors do not have to be exactly at the near or far field because it is only required that the two sensors are separated by $\pi/2$ in Gouy phase, in fact, it is usually easier to place one sensor at $+\pi/4$ and the other at $-\pi/4$. 
+		\textbf{Hermite-Gauss Modes}
 		
-		Unfortunately, there is no transducer that directly measures the Gouy phase so in order to \textit{determine} the Gouy phase of a particular sensor or actuator, one must model the beam propagation and fit the waist location.
-		
-		\subsubsection{Hermite-Gauss Modes}
 		The fundamental Gaussian beam is not the only solution which can be used to solve equation \ref{paraHelmholtz}.  In fact, there exists a complete set of solutions that can solve the paraxial Helmholtz Equation in rectangular coordinates, which are referred to as the Hermite Gauss modes
 		\begin{equation}\label{HG}
 		\begin{aligned}
 		&U_{mn}(x,y,z) = A_{mn}\bigg[ \frac{W_0}{W(z)} \bigg] \mathbb{G}_m\Bigg( \frac{\sqrt{2}x}{W(z)}  \Bigg) \mathbb{G}_n\Bigg( \frac{\sqrt{2}y}{W(z)} \Bigg)\\
-		&\times \text{exp} \bigg\{ -ikz - \frac{ik(x^2+y^2)}{2R(z)} + i(m+n+1)\phi(z) \bigg\}
+		&\times \text{exp} \bigg\{ -ikz - \frac{ik(x^2+y^2)}{2R(z)} + i(m+n+1)\zeta(z) \bigg\}
 		\end{aligned}
 		\end{equation}
-		
 		where,
 		\begin{equation}
 		\mathbb{G}(u) = \mathbb{H}(u) \, \text{exp}(-u^2/2)
 		\end{equation}
-		
 		and $ \mathbb{H}(u)$ are the well known Hermite polynomials.  It is important to mention that the Gouy phase of the complex amplitude is different than the fundamental Gaussian beam by a factor of $(m + n + 1)$ and that the intensity distribution of these higher order modes are much different. Both of these facts will become extremely important in the following wavefront sensing discussion.
+	
+		\textbf{Laguerre Modes}
 		
-		The extra Gouy phase that a higher order mode accrues as a function of $z$ shows up as in the frequency or cavity length domain as one sweeps through a full free spectral range using an offset in the length or frequency error signal.  This  can be directly used to measure the higher order mode separation and becomes important if the cavity has a low finesse which means the fundamental Gaussian mode has a spread comparable in frequency to the first order mode then it is easy to hop from one to the other.
-		\begin{figure}[ht]
-			\centering
-			\includegraphics[width=0.65 \textwidth]{../Figures/PRC_SRC_ModeScan.png}
-			\caption[A Finesse model of a longitudinal mode scan comparing the Advanced LIGO power recycling and signal recycling cavities.]
-			{\textbf{A Finesse model of a longitudinal mode scan comparing the Advanced LIGO power recycling and signal recycling cavities}	The upper and lower plots represents the PRC and SRC, respectively.  The main difference between these two optical cavities is obvious when comparing the three large peaks corresponding to the 00 mode resonances.  The power recycling cavity has a much higher and sharper peak which indicates a larger finesse where as the signal recycling cavity is a much lower finesse has a broader and shorter peak.  The red traces are with nominal alignment compared with the blue lines corresponding to misalignments of PR3 and SR3 by $1 \mu$rad which allow higher order mode content to resonant as a function of length.}
-			\label{fig:PRC_SRC_mode_scan}
-		\end{figure}
-	
-	
-		\subsubsection{Laguerre Modes}
 		Another complete set of alternative solutions to equation \ref{paraHelmholtz} exists which are called the Laguerre-Gauss modes
 		
 		\begin{equation}\label{LG}
 		\begin{aligned}
 		&V_{\mu\nu}(\rho,\theta,z) = A_{\mu\nu}\bigg[ \frac{W_0}{W(z)} \bigg] \mathbb{L}^{\mu}_{\nu} \Bigg( \frac{\sqrt{2}x}{W(z)}  \Bigg) \\
-		&\times \text{exp} \bigg\{-ikz-\frac{ik\rho^2}{2R(z)} + i(\mu+2\nu+1)\phi(z) \bigg\}
+		&\times \text{exp} \bigg\{-ikz-\frac{ik\rho^2}{2R(z)} + i(\mu+2\nu+1)\zeta(z) \bigg\}
 		\end{aligned}
 		\end{equation}
 		
-		where $\mathbb{L}^{\mu}_{\nu} \Bigg( \frac{\sqrt{2}x}{W(z)}  \Bigg)$ is the Laguerre polynomial function. Both equations \ref{HG} and \ref{LG} are able to fully describe any complex electromagnetic amplitude; and because they both form complete sets, there is a rotation which can map from one basis to the other \cite{BEIJERSBERGEN} \cite{ONeilModeTransform}
+		where $\mathbb{L}^{\mu}_{\nu} \Big( \frac{\sqrt{2}x}{W(z)}  \Big)$ is the Laguerre polynomial function. Both equations \ref{HG} and \ref{LG} are able to fully describe any complex electromagnetic amplitude; and because they both form complete sets, there is a rotation which can map from one basis to the other \cite{BEIJERSBERGEN} \cite{ONeilModeTransform}
 		
 		\begin{equation}
 		U^{LG}_{\mu \nu} (x,y,z) = \sum\limits_{k}^{N} i^k b(n,m,k) U^{HG}_{N-k,k} (x,y,z)
@@ -160,7 +143,6 @@
 		Morrison and Anderson \cite{Anderson} \cite{Morrison} derived a simplistic way of how small misalignments and mode mismatch in cavities can couple the fundamental Gaussian beam into various higher order modes.  This is done by taking a linear cavity and using its perfectly matched Gaussian beam as a reference, and then varying the input electric field with small perturbations and expanding in terms of the higher order modes.  So long as the mismatches are small, it is possible to consider only the first few terms of the expansion which have gained most of their power from the fundamental mode.  Between various texts, the terms misalignment and mode mismatch are used interchangeably, which is not incorrect but creates some confusion.  This thesis will try to distinguish the two effects because the actuators and sensors used for correction can be quite different.
 		
 		Consider the first three Hermite-Gauss modes of equation \ref{HG} in one dimension and normalized to set the total optical power to unity:
-
 		\begin{equation}
 		\label{Gauss1D}
 		\begin{aligned}
@@ -171,13 +153,11 @@
 		\end{equation}
 		
 		\subsubsection{Beam Axis Tilted}
-		If the input beam into an optical cavity is tilted by an angle $\alpha$ with respect to the nominal cavity axis, the wave front of the input beam will have an extra phase propagation relative to the cavity that is approximately proportional to $e^{ik \alpha r}$.  By implementing the small angle approximation, which is valid if the misalignment is much smaller than the divergence angle of the fundamental mode $k \alpha r << 1$, the resultant input beam is
-		
+		If the input beam entering an optical cavity is tilted by an angle $\alpha$ with respect to the nominal cavity axis, the wave front of the input beam will have an extra phase propagation relative to the cavity that is approximately proportional to $e^{ik \alpha r}$.  By implementing the small angle approximation, which is valid if the misalignment is much smaller than the divergence angle of the fundamental mode $k \alpha r << 1$, the resultant input beam is
 		\begin{equation}
 		\Psi \approx U_{0}(r) e^{ik \alpha r} \approx U_{0}(r) ( 1 + ik \alpha r ) =  U_{0}(r) + \frac{ik \alpha w(z)}{\sqrt{2\pi}} U_{1}(r)
 		\end{equation}
-		
-		Here the factor associated with the first higher order mode is complex, indicating there is a 90 degree phase difference between the fundamental and off axis mode. 
+		Here, the factor associated with the first higher order mode is complex, indicating there is a 90 degree phase difference between the fundamental and off-axis mode. 
 		\subsubsection{Beam Axis Displaced}
 		If the input beam is displaced in the transverse direction by a quantity $\Delta r$, the resultant waveform will be
 		
@@ -191,12 +171,10 @@
 			\\		&=			\bigg( U_0(r) - \sqrt{\frac{2}{\pi}} \frac{\Delta r }{w(z)} U_1(r)	 \bigg)
 		\end{aligned}
 		\end{equation} 
-		
-		Similarly to a tilted input beam axis, the displaced beam axis couples power to the first higher order mode, however, the latter does not have a 90 degree phase difference previously seen in the former.  This point is of extreme importance when trying to discern between the two effects.  Although comparing the two cases in Figure, one can already seen the difference between the wavefronts in the near field, $z<<z_R$, and the far field, $z>>z_R$.  
-		
-		In the near field, there is no phase difference due to a displaced beam, but there is one for a tilted beam.  Conversely, in the far field, there is no phase difference due to a tilted beam, but there is one from a displaced beam.  In order to implement a closed loop feedback system, the wavefront sensors discussed in Section \ref{WFS} will use this precise logic to extract an error signal.
+		Similar to a tilted input beam axis, the displaced beam axis couples power to the first higher order mode, however, the latter does not have a 90 degree phase difference.  This point is extremely important when trying to discern between the two effects.  Although comparing the two cases in Figure \ref{fig:BeamAxisRotated}, one can already see the difference between wavefronts in the near field, $z<<z_R$, and the far field, $z>>z_R$.  In the near field, there is no wavefront phase difference between the original beam and the displaced beam, but there is one for a tilted beam.  Conversely in the far field, there is no phase difference due to a tilted beam, but there is one from a displaced beam.  In order to implement a closed loop feedback system, the wavefront sensors discussed in Section \ref{WFS} will use this precise logic to extract an error signal.
 		
 		\subsection{Mode Mismatch and Higher Order Modes}\label{Modemismatch}
+		Using the same formalism as above, determining the second order mode coupling from mode mismatch is repeated.
 		
 		\subsubsection{Waist Size Shifted}
 		By considering the effect of evaluating the fundamental mode at the waist position, $z=0$, but changing the waist size by a small amount $\epsilon$, it is possible to see coupling into higher order modes by expanding to first order.	
@@ -210,16 +188,14 @@
 		\\		&=			U_0(r) \, - \, \frac{\epsilon}{\sqrt{2}} \, U_2(r)
 		\end{aligned}
 		\end{equation}
-		Changing the waist size by a small amount will couple the fundamental mode to the in-phase second order Hermite Gauss mode.
+		By changing the waist size by a small amount, the mismatch will couple the fundamental mode to the in-phase second order Hermite Gauss mode.
 		
 		\subsubsection{Waist Position Shifted}
 		To repeat the process from above with a waist position shift, it is useful to start with a more general equation that includes the phase that is gained from including the radius of curvature,
-		
 		\begin{equation}\label{EFieldwPhase}
 		\Psi = 	\bigg( \frac{2}{\pi w^2(z)} \bigg)^{1/4} \quad e^{-r^2/w^2(z)} \quad e^{-ikr^2/2R(z)}
 		\end{equation}
 		where $R(z)$ is from equation \ref{ROC}.  It is also useful to approximate the shift in waist position along the longitudinal axis is small compared to the Rayleigh range of the beam, $\Delta z << z_0$, which leaves the waist size approximately the same and the radius of curvature inversely proportional to the shift. 
-		
 		\begin{subequations}
 		\begin{align}
 		\begin{split}
@@ -230,9 +206,7 @@
 		\end{split}
 		\end{align}
 		\end{subequations}
-
-		Plugging the equations above into \ref{EFieldwPhase},
-		
+	Plugging the equations above into \ref{EFieldwPhase},
 		\begin{equation}
 		\begin{aligned}
 		\Psi 	&\approx	\bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} \quad e^{-r^2/w_0^2} \quad e^{-ikr^2 \Delta z /2 z_0^2}
@@ -241,7 +215,6 @@
 		\\		&=			U_0(r) - i \frac{\Delta z}{2k w_0^2} \bigg( 4U_2(r) + U_0(r) \bigg)
 		\end{aligned}
 		\end{equation}
-		
 		The equations above show that a fundamental Gaussian mode that is shifted in waist position will couple power to the second order Hermite Gauss mode.  Although changes in the waist size or position couple power to the same mode, they differ by a 90 degrees in phase as denoted by the extra factor of $i$ in the coupling coefficient.  By recognizing the two effects are in different quadrature phases will allow a user to design a system to distinguish between the different types of physical couplings, this is shown in Section \ref{WFS}.
 		
 		 In order to be physically valid one would need to consider the full two dimensional space so that the equation would encapsulate the full transverse mode, however, the x and y components would follow the exact same derivation. On that point, it is important to note that only the mode mismatch couplings from either a varying waist position or size has higher order modes that are circularly symmetric.
@@ -282,15 +255,13 @@
 		\end{figure*}
 		
 		\section{Wavefront Sensing}\label{WFS}
-		In Chapter \ref{sec:michelson} and \ref{sec:DRMI}, a heterodyne detection scheme was used to sense the longitudinal degree of freedom for optical cavities.  Analogously, a technique using the sidebands can employ a modal decomposition of the full electric field which allows the use of wavefront sensors to extract an error signal.  Hefetz et.al \cite{HefetzWFS} created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  By observing the demodulated signal of the intensity, it is possible to obtain a linear signal that corresponds to a physical misalignment or mode mismatch.  Fundamentally, the purpose of wavefront sensing is to detect the content of higher order modes due to physical disturbances of the optical cavity.  In other words, it is examining the difference between the incoming beam and the cavity eigenmodes.
+		In Chapter \ref{sec:michelson} and \ref{sec:DRMI}, a heterodyne detection scheme was used to sense the longitudinal degree of freedom for optical cavities.  Analogously, a technique using sidebands can employ a modal decomposition of the full electric field which allows the use of wavefront sensors to extract an error signal.  Hefetz et.al \cite{HefetzWFS} created a formalism to describe the use of wavefront sensors by creating frequency sidebands which accumulate a different Gouy phase than the electric field at the carrier frequency when passed through the optical system.  By observing the demodulated signal of the intensity, it is possible to obtain a linear signal that corresponds to a physical misalignment or mode mismatch.  Fundamentally, the purpose of wavefront sensing is to detect the content of higher order modes due to physical disturbances of the optical cavity and by extension, it is examining the difference between the incoming beam and the cavity eigenmodes.
 		
 		Consider a general equation for an electric field which is a linear combination of all higher order modes of the complex amplitude
 		\begin{equation}
 		E(x,y,z) = \sum\limits_{m,n}^{\infty} a_{mn} U_{mn}(x,y,z)
 		\end{equation}
-		
 		where $ U_{mn}(x,y,z)$ are the eigenmodes described in equation \ref{HG} (or \ref{LG}) and $a_{mn}$ is the complex amplitude.  It is also convenient in the following analysis to use vectors when describing the composition of the electric fields.
-		
 		\begin{equation}\label{EVector}
 		\ket{E(x,y,z)} = \begin{pmatrix} E_{00} 
 		\\ E_{01}
@@ -299,24 +270,20 @@
 		\\E_{02}
 		\end{pmatrix}
 		\end{equation}
-
 		When creating a theory that involves laser beams, it is useful to define operators that are important in describing physical situations.  For example, laser beams propagate through space and pick up phase according to equation \ref{HG} which can be represented by the spatial propagation operator,
-		
 		\begin{equation}
 		\hat{P}_{mn,kl} = \delta_{mn} \delta_{kl} \quad \text{exp}[-ik(z_2 - z_1)] 
-		\\ \text{exp}[i(m+n+1)\phi(z)]
+		\\ \text{exp}[i(m+n+1)\zeta(z)]
 		\end{equation}
-
 		However, it is useful to compare how the fundamental Gaussian mode propagates compared to the higher order modes,
-
 		\begin{equation} \label{GouyPhaseMatrix}
 		\hat{\eta}_{\mu \nu} = 
 		\begin{pmatrix}
-		e^{i\phi}	&0			&0			& 0 			& 0
-		\\ 0		&e^{2i\phi}	&0			& 0				& 0
-		\\ 0		&0			&e^{2i\phi}	& 0				& 0
-		\\ 0		&0			&0			& e^{3i\phi}	& 0
-		\\ 0		&0			&0			& 0				& e^{3i\phi}
+		e^{i\zeta}	&0			&0			& 0 			& 0
+		\\ 0		&e^{2i\zeta}	&0			& 0				& 0
+		\\ 0		&0			&e^{2i\zeta}	& 0				& 0
+		\\ 0		&0			&0			& e^{3i\zeta}	& 0
+		\\ 0		&0			&0			& 0				& e^{3i\zeta}
 		\end{pmatrix}
 		\end{equation}
 		From the above diagonal elements, it is clear that the higher order modes have an extra phase compared to the fundamental 00 mode, this effect will be extremely important on how an error signal can be derived from the optical system.
@@ -338,7 +305,6 @@
 		\\ 0			&0				&0				& 0	& 1
 		\end{pmatrix}
 		\end{equation}
-
 		\begin{equation} \label{mistrans_matrix}
 		\hat{\mathbb{D}}_{\mu \nu} = 
 		\begin{pmatrix}
@@ -349,7 +315,6 @@
 		\\ 0					&0						&0						& 0 & 1 
 		\end{pmatrix}
 		\end{equation}
-		
 		\begin{equation} \label{waistloc_matrix}
 		\hat{\mathbb{Z}}_{\mu \nu} = 
 		\begin{pmatrix}
@@ -360,9 +325,7 @@
 		\\ \Delta z_y	&0		&0		&0				&1 
 		\end{pmatrix}
 		\end{equation}
-		
 		where $\Delta z_{(x,y)} =  \frac{i}{\sqrt{2}} \frac{\lambda b}{2\pi\omega_{0}} $
-		
 		\begin{equation} \label{waistsize_matrix}
 		\hat{\mathbb{Z}}_{0, \mu \nu} = 
 		\begin{pmatrix}
@@ -373,9 +336,26 @@
 		\\ \Delta z_{0,y} 	&0		&0		&0					&1 
 		\end{pmatrix}
 		\end{equation}
-
 		where $\Delta z_{0,(x,y)} =   \frac{1}{\sqrt{2}} \frac{\omega'-\omega_{0}}{\omega_{0}} $
-
-		Figure: Beat frequency between two modes.
-	
-	
+		
+		\subsubsection{Gouy Phase}
+		Understanding the relationship between Gouy phase as defined by \ref{gouy} and how the term is used colloquially within the LIGO experimental community is not very straightforward.  Gouy phase given by equation \ref{gouy} is the phase lag between a Gaussian beam and a perfect plane wave that occurs as a function of propagation along the $\hat{z}$-axis which ranges from $\zeta(z) = \pm \pi/2$ for $z =\pm \inf$.  Physically, this could be interpreted as the difference between the laser beam behaving like a plane wave when $z\approx0$ (or near field) and eventually evolving into a spherical wave when $z\approx \pm \inf$ (or far field), see Figure \ref{fig:GaussParams}.  Although this phenomenon is interesting mathematically, most texts do not consider how to practically use or measure the Gouy phase.  In LIGO technical notes and electronic logs, the Gouy phase of sensors or actuators is often used to describe where along the beam path the piece of equipment is located.  This will indicate what degree of freedom is being observed or adjusted.  For example, in ray optics \cite{Saleh} a laser beam has two degrees of freedom, the displacement and angle from the optical axis.  If an actuator such as a piezo-electric transducer with an attached reflective mirror is placed near the origin or focus of the laser beam, then the controlled degree of freedom is only the angle.  Alternatively, if the actuator is placed in the far field then the controlled degree of freedom is almost entirely displacement.  So to have full control over the alignment of a laser beam, it is required to have two actuators separated by 90 degrees in Gouy phase.  
+		
+		This is also true of sensors at various points along the $\hat{z}$-axis to determine the exact alignment of the optical beam. In practice, it is impossible to sense the true waist of an optical system because it could be inside a Fabry-Perot cavity.  So the clever designer must insert a pick-off beam to sample the transmission or reflection of the interested optical system and use a combination of lenses to create a telescope for the sensors and infers the degrees of freedom.  Then, by rotating to the two-dimensional space created by the sensors to represent the interested space spanned by the optical system's degrees of freedom; colloquially, this is known as a sensing matrix.  Using this method, sensors do not have to be exactly at the near or far field because it is only required that the two sensors are separated by $\pi/2$ in Gouy phase, in fact, it is usually easier to place one sensor at $+\pi/4$ and the other at $-\pi/4$. Unfortunately, there is no transducer that directly measures the Gouy phase so in order to \textit{determine} the Gouy phase of a particular sensor or actuator, one must model the beam propagation and fit the waist location.
+		
+		Another way which Gouy phase is presented in many LIGO discussions is regarding the round trip accumulation of phase while propagating in an optical cavity.  This plays an important role because the round trip Gouy phase is directly proportional to the transverse mode spacing.  Recall that the free spectral range of a cavity is equal to $f_{\text{FSR}} = c/2L$ which sets the frequency separation between the fundamental modes, and that the Gouy phase propagation for higher order modes is equal to $(m+n+1) \zeta(z)$ so these modes will effectively \textit{see} a different cavity than the zeroth.  Gouy phase can be calculated explicitly by using the ABCD formulation and relating the matrix elements to the round trip phase,
+		\begin{equation}
+		\zeta = \text{sgn} B \arccos \bigg( \frac{A+D}{2} \bigg)
+		\end{equation}
+		where A, B, C, and D are the matrix elements of the optical system.  The Gouy phase is related to the transverse mode spacing by
+		\begin{equation}
+		f_{\text{TMS}} = \frac{\zeta}{2 \pi} f_{\text{FSR}}
+		\end{equation} 
+		The extra Gouy phase that a higher order mode accrues as a function of $z$ shows up as in the frequency or cavity length domain as one sweeps through a full free spectral range using an offset in the length or frequency error signal.  This can be directly used to measure the higher order mode separation and becomes important if the cavity has a low finesse which means the fundamental Gaussian mode has a spread comparable in frequency to the first order mode then it is easy to hop from one to the other (see Figure \ref{fig:PRC_SRC_mode_scan}).
+		\begin{figure}[ht]
+			\centering
+			\includegraphics[width=0.55 \textwidth]{../Figures/PRC_SRC_ModeScan.png}
+			\caption[A Finesse model of a longitudinal mode scan comparing the Advanced LIGO power recycling and signal recycling cavities.]
+			{\textbf{A Finesse model of a longitudinal mode scan comparing the Advanced LIGO power recycling and signal recycling cavities}	The upper and lower plots represents the PRC and SRC, respectively.  The main difference between these two optical cavities is obvious when comparing the three large peaks corresponding to the 00 mode resonances.  The power recycling cavity has a much higher and sharper peak which indicates a larger finesse where as the signal recycling cavity is a much lower finesse has a broader and shorter peak.  The red traces are with nominal alignment compared with the blue lines corresponding to misalignments of PR3 and SR3 by $1 \mu$rad.  This allows higher order mode content to resonate as a function of length or frequency.}
+			\label{fig:PRC_SRC_mode_scan}
+		\end{figure}

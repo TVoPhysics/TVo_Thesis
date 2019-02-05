@@ -1,9 +1,9 @@
 \begin{appendices}
 
 	\chapter{Resonator Formulas} \label{FPappendix}
-	Equation \ref{gfactor} describes the stability condition for a two mirror Fabry-Perot cavity, but is worthwhile to derive the criterion for geometric stability from the ray matrix tools commonly used in optics. Consider two plane waves traveling in space shown by figure [], they differ by two quantities: the axial and angular separations,  $y$ and $\theta$, respectively.  These two quantities can be transformed via these optical matrices:
+	Equation \ref{gfactor} describes the stability condition for a two mirror Fabry-Perot cavity, but is worthwhile to derive the criterion for geometric stability from the ray matrix tools commonly used in optics. The alignment of two plane waves traveling in space can differ by two quantities: the axial and angular separations,  $y$ and $\theta$, respectively.  These two quantities can be transformed via these optical matrices:
 	
-	Lens
+	Lens:
 	\begin{equation} \label{lens}
 	\hat{F_i} = 
 	\begin{pmatrix}
@@ -12,7 +12,7 @@
 	\end{pmatrix}
 	\end{equation}
 	
-	Curved Mirror
+	Curved Mirror:
 	\begin{equation} \label{mirror}
 	\hat{M_i} = 
 	\begin{pmatrix}
@@ -21,7 +21,7 @@
 	\end{pmatrix}
 	\end{equation}
 	
-	Space
+	Space:
 	\begin{equation} \label{space}
 	\hat{D_i} = 
 	\begin{pmatrix}
@@ -29,9 +29,7 @@
 	\\ 	0	&1
 	\end{pmatrix}
 	\end{equation}
-	
-	
-	Periodic Fabry-Perot with two mirrors is 
+	Using these matrices, the periodic Fabry-Perot with two mirrors can be represented by the matrix,
 	\begin{equation}
 	\begin{pmatrix} y_{m+1} 
 	\\ \theta{m+1}
@@ -40,14 +38,11 @@
 	\\ \theta{m}
 	\end{pmatrix}
 	\end{equation}
-
 	where 
 	\begin{equation}
 	\hat{M}_{FP} = \hat{M_i} \hat{D_i} \hat{M_i} \hat{D_i}
 	\end{equation}
-	is the optical transfer matrix.
-	The goal is to find a geometric condition that is dependent on the optical transfer matrix which keeps the axial displacement from diverging.
-	
+	is the optical transfer matrix.  The goal is to find a geometric condition that is dependent on the optical transfer matrix which keeps the axial displacement from diverging.
 	\begin{equation}
 	\begin{pmatrix} y_{m+1} 
 	\\ \theta{m+1}
@@ -61,9 +56,7 @@
 	\\ \theta{m}
 	\end{pmatrix}
 	\end{equation}
-	
 	which means
-	
 	\begin{subequations}
 	\begin{equation}
 	\theta_m = \frac{y_{m+1} - A \, y_m}{B}
@@ -80,18 +73,14 @@
 	\end{equation}
 	
 	Assuming a geometrical solution where $y_m = y_o h^m$ and plugging into the equation above, 
-	
 	\begin{equation}
 	h^2 = (A+D) \, h - \text{det}(\hat{M}_{FP})
 	\end{equation}
-	
 	which is a quadratic equation that has two solutions and can be further simplified if the index of refraction for the entire system remains constant such that $\text{det}(\hat{M}_{FP}) =1 $.  Plugging back into $y_m$ and doing some algebra
-	
 	\begin{equation}
 	y_m \propto \text{sin}(m \phi )
 	\end{equation}
 	where $\phi =\text{cos}^{-1} (\frac{A+D}{2})$, which is also referred to as the round trip Gouy phase of the cavity.  In order for $y_m$ to be harmonic instead of hyperbolic and hence confined, this condition must be met
-	
 	\begin{equation}
 	\frac{\vert A+D \vert}{2} \leq 1
 	\end{equation}
@@ -100,10 +89,7 @@
 	\begin{equation}
 	0 \leq \bigg(1-\frac{L}{R_1}\bigg) \bigg(1-\frac{L}{R_2}\bigg) \leq 1
 	\end{equation}
-	
-	which is what was stated in equation \ref{gfactor}.
-	
-	There is a simpler and less algebraic way to reach the same conclusion by looking at the Rayleigh range of a finite Gaussian beam for a simple cavity.   In Table II of Kogelnik and Li \cite{Kogelnik}, there is an expression for the Rayleigh range
+	which is what was stated in equation \ref{gfactor}. There is a simpler and less algebraic way to reach the same conclusion by looking at the Rayleigh range of a finite Gaussian beam for a simple cavity.   In Table II of Kogelnik and Li \cite{Kogelnik}, there is an expression for the Rayleigh range
 	
 	\begin{equation}
 	\begin{aligned}
@@ -111,41 +97,14 @@
 			&= \frac{g_1 g_2 (1-g_1 g_2}{(g_1 - g_2 - 2 g_1 g_2)^2}
 	\end{aligned}
 	\end{equation}
-	
 	If the Rayleigh range is a real number, then once again, equation \ref{gfactor} must be true.
-	
-	
-	\chapter{Parameters Summary}
-	
-	\begin{table}[h!]
-		\centering
-		\begin{tabular}{ | l | l | l |l |}
-			\hline
-			\textbf{Parameter} & \textbf{Symbol} & \textbf{Value} & \textbf{Units} \\ \hline
-			ITMX Transmission  & $T_{\text{ix}}$  &1.50                & \%  \\ \hline
-			ITMY Transmission  & $T_{\text{iy}}$  &1.42                & \%  \\ \hline
-			ETMX Transmission  & $T_{\text{ex}}$  &3.90                & PPM \\ \hline
-			ETMY Transmission  & $T_{\text{ey}}$  &3.80                & PPM \\ \hline
-			X Arm Length       & $L_x$            &3994.4704 $\pm$ .0003 & m   \\ \hline
-			Y Arm Length       & $L_y$            &3994.4691 $\pm$ .0007 & m   \\ \hline   
-		\end{tabular}
-		\caption[Parameters for the installed optics for O3.]
-		{\textbf{Parameters for the installed optics for O3. }
-		}
-		\label{tbl:LHO_optics}
-	\end{table}
 	
 	\chapter{Hermite Gauss Normalization}
 	According to equation \ref{HG}, the higher order modes in the Hermite Gauss basis has the intensity profile,
-	
 	\begin{equation}
 		I_{mn} (x,y,z) = \vert A_{mn} \vert^2 \bigg[ \frac{W_0}{W(z)} \bigg]^2  \mathbb{G}^2_n\Bigg( \frac{\sqrt{2}x}{W(z)} \Bigg) \mathbb{G}^2_n\Bigg( \frac{\sqrt{2}y}{W(z)} \Bigg)
 	\end{equation}
-
-	It is useful to normalize the first few lowest order modes with respect to the total optical power since the Gaussian beam will couple to them the most due either misalignment or mode mismatch as seen in section [].
-	
-	In one dimension, the total optical power for the first 3 modes are
-	
+	It is useful to normalize the first few lowest order modes with respect to the total optical power since the Gaussian beam will couple to them the most due either misalignment or mode mismatch as seen in section []. In one dimension, the total optical power for the first 3 modes are
 	\begin{equation}
 	\label{HGNormalInt1D}
 	\begin{aligned}
@@ -155,7 +114,6 @@
 	\\	P_{2}(x,y,z)	&	= 	\int_{-\infty}^{\infty}  \vert A_{2} \vert^2   \bigg[ \frac{W_0}{W(z)} \bigg] \bigg(\frac{8x^2}{w^2(z)}	-2\bigg)^2e^{-2x^2/w^2(z)}dx
 	\end{aligned}
 	\end{equation}
-	
 	In two dimensions, the total optical power for the first 3 modes are
 	\begin{equation}
 	\label{HGNormalInt2D}
@@ -165,9 +123,7 @@
 	\\	P_{20}(x,y,z)	&	= 	\int_{-\infty}^{\infty} \int_{-\infty}^{\infty}  \vert A_{20} \vert^2   \bigg[ \frac{W_0}{W(z)} \bigg]^2 \bigg(\frac{8x^2}{w^2(z)} - 2\bigg)^2 e^{-2x^2/w^2(z)}e^{-2y^2/w^2(z)} dx dy
 	\end{aligned}
 	\end{equation}
-	
 	By setting the equations above to unity, the normalization factors become
-	
 	\begin{equation}
 	\begin{aligned}
 		A_{0} &	= \bigg( \frac{2}{\pi w_0^2} \bigg)^{1/4} 
@@ -210,8 +166,6 @@
 	It is trivial to repeat the calculation for vertical displacements so it is left for the reader to complete.
 	
 	\section{Bullseye Photodiodes}
-	Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye's geometry will give insight on the beam size jitter. A sensing matrix for these degrees of freedom is realized in Table \ref{bpd_matrix}
-
 	\begin{table}
 	\begin{center}
 		\begin{tabular}{ c|c|c|c|c } 
@@ -226,6 +180,8 @@
 		\label{bpd_matrix}
 	\end{center}
 	\end{table}
+
+	Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye's geometry will give insight on the beam size jitter. A sensing matrix for these degrees of freedom is realized in Table \ref{bpd_matrix}
 	
 	\subsection{Width}
 	 The bullseye's calibration is determined in a similar manner to the QPD however, the sensitivity will inherently depend on the beam size. To calculate what beam size is optimal, first consider a power integral for a cylindrically symmetric Gaussian beam,
@@ -237,26 +193,26 @@
 	\end{equation}
 	Plugging in limits for the equation where $R$ is the boundary between the inner and outer segments,
 	\begin{equation}
-	\text{P}_{in} = \text{Power} \biggr\rvert_0^{R} = \abs{A_{00}}^2 \frac{\pi \omega^2}{2} [1 - e^{\frac{-2R^2}{\omega^2}}]
+	\text{P}_{\text{in}} = \text{Power} \biggr\rvert_0^{R} = \abs{A_{00}}^2 \frac{\pi \omega^2}{2} [1 - e^{\frac{-2R^2}{\omega^2}}]
 	\end{equation}
 	\begin{equation}
-	\text{P}_{out} = \text{Power} \biggr\rvert_{R}^{\infty} = \abs{A_{00}}^2 \frac{\pi \omega^2}{2} [e^{\frac{-2R^2}{\omega^2}}]
+	\text{P}_{\text{out}} = \text{Power} \biggr\rvert_{R}^{\infty} = \abs{A_{00}}^2 \frac{\pi \omega^2}{2} [e^{\frac{-2R^2}{\omega^2}}]
 	\end{equation}
 	The error signal comes from subtracting the inner segment from the outer,
 	\begin{equation}
-	\text{S}_{WID} =  \text{P}_{in} - \text{P}_{out}
+	\text{S}_{\text{WID}} =  \text{P}_{\text{in}} - \text{P}_{\text{out}}
 	\end{equation}
 	Minimizing the derivative with respect to the beam size will determine the optimal width which gives the best sensitivity to beam size change,
 	\begin{equation}
 	\begin{aligned}
-	\frac{\partial \text{S}_{WID}}{\partial \omega} &\approx \frac{8 R^2}{\omega^2} \bigg(1-\frac{2 R^2}{\omega^2}\bigg) = 0 \\
+	\frac{\partial \text{S}_{\text{WID}}}{\partial \omega} &\approx \frac{8 R^2}{\omega^2} \bigg(1-\frac{2 R^2}{\omega^2}\bigg) = 0 \\
 	\Rightarrow	\omega &= \sqrt{2} R
 	\end{aligned}
 	\end{equation}
 	When determining the beam size, it is possible to measure the beam size directly by fitting the power ratio. For example, if the constraint that $\omega = \sqrt{2} R$ then the power ratio is,
 	\begin{equation}
 	\text{DC Power Ratio} 
-	= \frac{P_{out}}{P_{in}} \\
+	= \frac{P_{\text{out}}}{P_{\text{in}}} \\
 	= \frac{e^{-2R^2/ \omega_{0}^2}} {1 - e^{-2R^2/ \omega_{0}^2 }} \approx 0.582
 	\end{equation}
 
@@ -279,7 +235,7 @@
 	
 	The error signal from a pitch displacement following Table \ref{bpd_matrix} is,
 	\begin{equation}
-	S^{\text{Pit}} = P^{\text{Pit}}_{seg_1} + P^{\text{Pit}}_{seg_2} - 2 P^{\text{Pit}}_{seg_3} = 3\sqrt{\frac{3}{2\pi}} \frac{\Delta y}{\omega} \bigg[ \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) + \sqrt{\frac{8}{\pi }} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}} \bigg]
+	S^{\text{Pit}} = P^{\text{Pit}}_{\text{seg1}} + P^{\text{Pit}}_{\text{seg2}} - 2 P^{\text{Pit}}_{\text{seg3}} = 3\sqrt{\frac{3}{2\pi}} \frac{\Delta y}{\omega} \bigg[ \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) + \sqrt{\frac{8}{\pi }} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}} \bigg]
  	\end{equation}
 
 	\subsection{Yaw}
@@ -292,38 +248,10 @@
 	\end{equation}
 	Plugging in the angles to get the signal response in terms of beam radius,
 	\begin{equation}
-	S^{\text{Yaw}} = P^{\text{Yaw}}_{seg_1} - P^{\text{Yaw}}_{seg_2} = \frac{3}{\sqrt{2\pi}} \frac{\Delta x}{\omega} \bigg[ \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) + \sqrt{\frac{8}{\pi }} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}} \bigg]
+	S^{\text{Yaw}} = P^{\text{Yaw}}_{\text{seg1}} - P^{\text{Yaw}}_{\text{seg2}} = \frac{3}{\sqrt{2\pi}} \frac{\Delta x}{\omega} \bigg[ \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) + \sqrt{\frac{8}{\pi }} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}} \bigg]
 	\end{equation}
-	
-	\subsection{RF}
-	\begin{equation}
-	\begin{split}
-	\text{P}_{RF} &= \int_{A}^{B} \abs{A_{01}}^2 \big(1-\frac{2r^2}{\omega_{0}^2}\big) e^{\frac{-2r^2}{\omega_{0}^2}} 2\pi r dr\\
-	&= -\abs{A_{00}}^2 \frac{\pi}{2} \omega_{0}^2 e^{\frac{-2r^2}{\omega_{0}^2}} \bigg(1 + \frac{4 r_4}{\omega_{0}^4} \bigg)  \biggr\rvert_A^B
-	\end{split}
-	\end{equation}
-	
-	\begin{equation}
-	\text{P}_{in} \\
-	= \text{P}_{RF} \biggr\rvert_0^{r_0} \\
-	= - \abs{A_{01}}^2  \frac{\pi}{2} \omega_{0}^2 \bigg( e^{\frac{-2r^2}{\omega_{0}^2}} \big(1 + \frac{4 r_4}{\omega_{0}^4} \big) - 1 \bigg)
-	\end{equation}
-	
-	\begin{equation}
-	\text{P}_{out} \\
-	= \text{P}_{RF} \biggr\rvert_{r_0}^{\infty}\\ 
-	= - \abs{A_{01}}^2  \frac{\pi}{2} \omega_{0}^2 e^{\frac{-2r^2}{\omega_{0}^2}} \big(1 + \frac{4 r_4}{\omega_{0}^4} \big) 
-	\end{equation}
-	
-	\begin{equation}
-	\text{RF Power Ratio} 
-	= \frac{P_{out}}{P_{in}} \\
-	= \frac{e^{-2r_0^2/ \omega_{0}^2}} {1 - e^{-2r_0^2/ \omega_{0}^2 }} \approx 2.7844
-	\end{equation}
-	
+
 	\chapter{Overlap of Gaussian Beams}
-	
-	Referenced in section
 	When a cavity is mode mismatched to an incoming laser field, the amount of power loss from scattering to higher order modes is quantified by the spatial overlap integral between the TEM00 cavity eigenmode and TEM00 of the input beam.
 	An arbitrary Gaussian integral is defined as,
 	\begin{equation}
@@ -341,7 +269,6 @@
 	\begin{equation}
 	A_0 = \sqrt{\frac{k z_0}{\pi}}
 	\end{equation}
-
 	For a Gaussian beam with arbitrary q-parameters,
 	\begin{equation}
 	\ket{A_i} = \frac{A_{0,i}}{q_i} e^{ \frac{-ikr^2(z-iz_0)}{2\abs{q_i}^2 }}
@@ -350,12 +277,10 @@
 	\begin{equation}
 	\braket{A_1|A_2} = 2 i  \frac{ z_{0,1}z_{0,2}}{q_1 - q_2^*}
 	\end{equation}
-	
 	So the power overlap is:
 	\begin{equation}\label{gauss_power_ovl}
 	\text{Power Overlap} = \vert \braket{A_1|A_2} \vert^2 = 4 \frac{ z_{0,1}z_{0,2}}{\abs{q_1 - q_2^*}^2}
 	\end{equation}
-	Essentially, mode matching an optical system only requires the designer to match the q-parameter of the incoming beam to the cavity, so it makes sense that the final power overlap depends only on the waist size and location.
-
+	Essentially, mode matching an optical system only requires the designer to match the incoming beam's q-parameter to the cavity's, so it makes sense that the final power overlap depends only on the waist size and location.
 
 \end{appendices} 
