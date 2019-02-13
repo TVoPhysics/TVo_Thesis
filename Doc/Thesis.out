@@ -1,10 +1,10 @@
-\BOOKMARK [0][-]{chapter*.1}{Preface}{}% 1
+\BOOKMARK [0][-]{chapter*.2}{Preface}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 2
 \BOOKMARK [1][-]{section.1.1}{Gravitational Waves}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.2}{Measuring Gravitational Waves with Light}{chapter.1}% 4
 \BOOKMARK [1][-]{section.1.3}{Detection of Gravitational Waves}{chapter.1}% 5
 \BOOKMARK [0][-]{chapter.2}{The LIGO Instrument}{}% 6
-\BOOKMARK [1][-]{subsection.2.0.1}{Simple Michaelson}{chapter.2}% 7
+\BOOKMARK [1][-]{subsection.2.0.1}{Simple Michelson}{chapter.2}% 7
 \BOOKMARK [2][-]{subsection.2.0.2}{Fabry-Perot Cavities}{subsection.2.0.1}% 8
 \BOOKMARK [2][-]{subsection.2.0.3}{Fabry-Perot Michelson}{subsection.2.0.1}% 9
 \BOOKMARK [2][-]{subsection.2.0.4}{Power-Recycled Fabry-Perot Interferometers}{subsection.2.0.1}% 10
@@ -39,18 +39,18 @@
 \BOOKMARK [2][-]{subsection.6.4.3}{CO2 Commissioning}{section.6.4}% 39
 \BOOKMARK [2][-]{subsection.6.4.4}{Auxiliary Degrees of Freedom}{section.6.4}% 40
 \BOOKMARK [2][-]{subsection.6.4.5}{SR3 Thermal Actuator}{section.6.4}% 41
-\BOOKMARK [1][-]{section.6.5}{Putting it all together}{chapter.6}% 42
-\BOOKMARK [2][-]{subsection.6.5.1}{Higher Power Operation}{section.6.5}% 43
-\BOOKMARK [1][-]{section.6.6}{Mode Matching IFO to OMC: Single Bounce vs DRMI}{chapter.6}% 44
-\BOOKMARK [2][-]{subsection.6.6.1}{SR3 Heater}{section.6.6}% 45
-\BOOKMARK [2][-]{subsection.6.6.2}{SRM Heater}{section.6.6}% 46
-\BOOKMARK [1][-]{section.6.7}{Mode Matching Squeezer to OMC}{chapter.6}% 47
+\BOOKMARK [1][-]{section.6.5}{Simulating Common Lensing with FINESSE}{chapter.6}% 42
+\BOOKMARK [1][-]{section.6.6}{Higher Power Operation}{chapter.6}% 43
+\BOOKMARK [1][-]{section.6.7}{Mode Matching IFO to OMC: Single Bounce}{chapter.6}% 44
+\BOOKMARK [2][-]{subsection.6.7.1}{SR3 Heater}{section.6.7}% 45
+\BOOKMARK [2][-]{subsection.6.7.2}{SRM Heater}{section.6.7}% 46
+\BOOKMARK [1][-]{section.6.8}{Mode Matching Squeezer to OMC}{chapter.6}% 47
 \BOOKMARK [0][-]{chapter.7}{Solutions for Detector Upgrades}{}% 48
 \BOOKMARK [1][-]{section.7.1}{Sensors}{chapter.7}% 49
 \BOOKMARK [1][-]{section.7.2}{High Sensitivity Telescope}{chapter.7}% 50
 \BOOKMARK [1][-]{section.7.3}{A Global Active Wavefront Control Scheme}{chapter.7}% 51
 \BOOKMARK [2][-]{subsection.7.3.1}{Hard and Soft Mode Matching}{section.7.3}% 52
-\BOOKMARK [0][-]{section*.64}{Appendices}{}% 53
+\BOOKMARK [0][-]{section*.69}{Appendices}{}% 53
 \BOOKMARK [0][-]{Appendix.a.A}{Resonator Formulas}{}% 54
 \BOOKMARK [0][-]{Appendix.a.B}{Hermite Gauss Normalization}{}% 55
 \BOOKMARK [0][-]{Appendix.a.C}{Bullseye and Quadrant Photodiode Characterization}{}% 56

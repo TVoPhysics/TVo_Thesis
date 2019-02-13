@@ -1,0 +1,15 @@
+
+------------------------------------------------------------------------
+                     FINESSE 2.1                  (build 2.1-2-gb87c29b)
+       o_.-=.        Frequency domain INterferomEter Simulation SoftwarE
+      (\'".\|        16.05.2016         http://www.gwoptics.org/finesse/
+      .>' (_--.      
+   _=/d   ,^\        Input file VaryMMTT_95MM_wSqz_MMTTon_maxtem4.kat,
+  ~~ \)-'   '        Output file VaryMMTT_95MM_wSqz_MMTTon_maxtem4.out,
+     / |             Gnuplot file VaryMMTT_95MM_wSqz_MMTTon_maxtem4.gnu 
+    '  '                                        Tue Sep 13 22:07:27 2016
+------------------------------------------------------------------------
+ 
+ writing matlab/python/gnuplot batch files...
+ calling gnuplot...
+Failed to execute system_call: 'gnuplot -persist VaryMMTT_95MM_wSqz_MMTTon_maxtem4.gnu'  error: '2'

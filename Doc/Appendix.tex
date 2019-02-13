@@ -166,7 +166,9 @@
 	It is trivial to repeat the calculation for vertical displacements so it is left for the reader to complete.
 	
 	\section{Bullseye Photodiodes}
-	\begin{table}
+		Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye's geometry will give insight on the beam size jitter. A sensing matrix for these degrees of freedom is realized in Table \ref{bpd_matrix}.
+		
+	\begin{table}\label{bpd_matrix}
 	\begin{center}
 		\begin{tabular}{ c|c|c|c|c } 
 			&\text{Seg 1}		&\text{Seg 2}		& \text{Seg 3} 	& \text{Seg 4} \\
@@ -177,11 +179,8 @@
 			\\ 	\text{Sum}		&1		&1		& 1		& 1
 		\end{tabular}
 		\caption{Bullseye photodiode sensing matrix.}
-		\label{bpd_matrix}
 	\end{center}
 	\end{table}
-
-	Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye's geometry will give insight on the beam size jitter. A sensing matrix for these degrees of freedom is realized in Table \ref{bpd_matrix}
 	
 	\subsection{Width}
 	 The bullseye's calibration is determined in a similar manner to the QPD however, the sensitivity will inherently depend on the beam size. To calculate what beam size is optimal, first consider a power integral for a cylindrically symmetric Gaussian beam,

@@ -1,0 +1,15 @@
+
+------------------------------------------------------------------------
+                     FINESSE 2.1                  (build 2.1-2-gb87c29b)
+       o_.-=.        Frequency domain INterferomEter Simulation SoftwarE
+      (\'".\|        16.05.2016         http://www.gwoptics.org/finesse/
+      .>' (_--.      
+   _=/d   ,^\        Input file test.kat,
+  ~~ \)-'   '        Output file test.out,
+     / |             Gnuplot file test.gnu 
+    '  '                                        Wed Sep  7 13:42:53 2016
+------------------------------------------------------------------------
+ 
+ writing matlab/python/gnuplot batch files...
+ calling gnuplot...
+Failed to execute system_call: 'gnuplot -persist test.gnu'  error: '12'

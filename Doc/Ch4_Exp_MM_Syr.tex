@@ -36,7 +36,7 @@ In conjunction with Sandoval et al \cite{Fabian_Thesis}, the table-top adaptive 
 
 
 \subsection{Mode Converters}
-	The bullseye photodiodes can be difficult to calibrate and manufacture so a particularly interesting method of sensing mode mismatch is to convert the axisymmetric fields with a cylindrical telescope such that an error signal can be extracted with quadrant photodiode.  Using lenses which have two radii of curvature for each direction (x or y) with one being flat and the orthogonal is curved with some focal length, $f$.  The idea is to break the cylindrical symmetry of the donut mode (Figure []) and convert the beam into a pringle mode by advancing the phase of one axis by a factor of $\pi/2$ to create a relative sign flip.  Then, an error signal can extracted using the radio frequency quadrant photodiode that the angular wavefront sensors employ
+	The bullseye photodiodes can be difficult to calibrate and manufacture so a particularly interesting method of sensing mode mismatch is to convert the axisymmetric fields with a cylindrical telescope such that an error signal can be extracted with quadrant photodiode.  Using lenses which have two radii of curvature for each direction (x or y) with one being flat and the orthogonal is curved with some focal length, $f$.  The idea is to break the cylindrical symmetry of the donut mode (Figure \ref{fig:ModeConv}) and convert the beam into a pringle mode by advancing the phase of one axis by a factor of $\pi/2$ to create a relative sign flip.  Then, an error signal can extracted using the radio frequency quadrant photodiode that the angular wavefront sensors employ
 
 \subsubsection{Vector formalism for laser beams and optical cavities}
 	Consider an optical cavity that is longitudinally resonant on the $\text{TEM}_{00}$ mode using the Pound-Drever-Hall technique shown in Section \ref{FP} and also locked with angular wavefront sensors shown in Section \ref{WFS}. When there is a small mismatch between the waist size and position of the input beam relative to the cavity, this is equivalent to coupling the TEM-00 mode into higher order modes.  Since mode matching is only concerned with coupling to the second order modes, the  resultant field in reflection ($r_{FP}$) of a Fabry-Perot resonator will have the form
@@ -54,11 +54,11 @@ In conjunction with Sandoval et al \cite{Fabian_Thesis}, the table-top adaptive 
 \begin{equation}
 \epsilon = \frac{1}{\sqrt{2}} \bigg(\frac{\delta w}{w_0} + i \frac{\delta z}{z_R}\bigg)
 \end{equation}
-where $\delta w$ and $\delta z$ are the mismatches in waist size and position, respectively.  O'Neil et al \cite{ONeilModeTransform} wrote down a formalism that explicitly showed the effects of cylindrical telescopes on the full range of Hermite Gauss modes. An arbitrary mode converter is comprised of two cylindrical lenses that can be rotated about the axis of propagation:
+where $\delta w$ and $\delta z$ are the mismatches in waist size and position, respectively.  O'Neil et al \cite{ONeilModeTransform} wrote down a formalism that explicitly showed the effects of cylindrical telescopes on the full range of Hermite Gauss modes. An arbitrary mode conversion system, $\hat{M}$, is comprised of two cylindrical lenses and can be described by two distinct operators,
 	\begin{equation}
 	\hat{M} = \hat{R} \hat{C}
 	\end{equation} 
-where $\hat{R}$ is a rotation operator and $\hat{C}$ is the mode converting operator.  Since mode matching primarily couples power into the 02 and 20 modes of the cavity, we can use a 3x3 matrix.  For rotations about the axis of propagation, the operator is
+where $\hat{R}$ is a rotation operator that depends on a angle $\theta$ which can rotate about the axis of propagation and $\hat{C}$ is the mode converting operator which depends on the amount of phase advance seen by higher order modes.  Physically, $\hat{R}$ can be shifted by rotating the entire cylindrical telescope about the axis of propagation whereas the phase advance can be changed by choosing various focal lengths.  Since mode matching primarily couples power into the 02 and 20 modes of the cavity, we can use a 3x3 matrix.  For rotations about the axis of propagation, the operator is
 \begin{equation} \label{rotation}
 \hat{R}_{ij} = 
 \begin{pmatrix}
@@ -78,7 +78,7 @@ For the mode converter phase advance, the operator is
 
 \end{pmatrix}
 \end{equation}
-where $ \Omega_{mn} = (m+\frac{1}{2}) \tan^{-1}\bigg(\frac{d}{z_{R,x}}\bigg) + (n+\frac{1}{2}) \tan^{-1}\bigg(\frac{d}{z_{R,y}}\bigg) $ and $d$ is the distance from one cylindrical lens to the waist.  Physically, $\Omega_{mn}$ is the amount of phase advance or lg that a higher order mode will experience due to the mode converter.  It is important to note, the matrices above show that the Gaussian beam is only astigmatic within the region of between the cylindrical lenses and unchanged outside of the telescope.   If the beam reflected from the cavity is well mode matched to the cylindrical telescope, then a mode converter will introduce an astigmatism and vary the separate Rayleigh ranges \cite{BEIJERSBERGEN},
+where $ \Omega_{mn} = (m+\frac{1}{2}) \tan^{-1}\bigg(\frac{d}{z_{R,x}}\bigg) + (n+\frac{1}{2}) \tan^{-1}\bigg(\frac{d}{z_{R,y}}\bigg) $ and $d$ is the distance from one cylindrical lens to the waist.  $\Omega_{mn}$ is the amount of phase advance that a higher order mode will experience due to the mode converter.  It is important to note, the matrices above show that the Gaussian beam is only astigmatic within the region of between the cylindrical lenses and unchanged outside of the telescope.   If the beam reflected from the cavity is well mode matched to the cylindrical telescope, then a mode converter will introduce an astigmatism and vary the separate Rayleigh ranges \cite{BEIJERSBERGEN},
 \begin{equation}
 \frac{z_{R,x}}{z_{R,y}} = \frac{1+d/f}{1-d/f}
 \end{equation}
@@ -106,7 +106,7 @@ Mueller et al \cite{MuellerMM} showed that the error signal from mode mismatch c
 	\propto \text{Im} \bigg\{ \epsilon^{*} \bigg[&\int_{A1,A3} \bra{U_{00}} \big(\ket{U_{20}} - \ket{U_{02}}\big)  \,-\, \int_{A2,A4}  \bra{U_{00}} ( \ket{U_{20}} - \ket{U_{02}}) \bigg] \bigg\}
 	\end{aligned}
 	\end{equation}
-In the above equation, $\hat{C}_{ij} $ was chosen with $\Delta \Omega = \pi/2$ and $\hat{R}_{ij}$ should rotate the beams such that the intensities in Figure {ModeConverter} are aligned with the quadrant photodiodes.
+where the surface integrals are over each segment.  In the above equation, $\hat{C}_{ij} $ was chosen with $\Delta \Omega = \pi/2$ and $\hat{R}_{ij}$ should rotate the beams such that the intensities in Figure {ModeConverter} are aligned with the quadrant photodiodes.
 		
 \subsection{DC Mode Matching}
 	The benefit to using the RF sensing scheme for generating an error signal is the automatic reduction of the higher order mode content which can use actuators to adjust the incoming mode of the beam to whatever the cavity requires.

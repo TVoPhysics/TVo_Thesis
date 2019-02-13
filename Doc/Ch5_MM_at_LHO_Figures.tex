@@ -1,9 +1,48 @@
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=1.0 \textwidth]{../Figures/POP18_POP90_DiffLens.png}
-	\caption[Model of POP-18 as a function of differential thermal lensing.]  
-	{\textbf{Model of POP-18 as a function of differential thermal lensing.}
-		The horizontal axis is differential lensing between the ITMX/ITMY substrates and the vertical axis represents the normalized power when locked with nominal mode matching.  POP-18 is the signal at the power recycling pick-off port demodulated at 18 MHz which shows the sideband power buildup in the power recycling cavity.  Even with modest differential lensing (9 microdiopters), the buildup drops by 40 percent and eventually the simulation has trouble maintaining resonance, not too dissimilarly from the actual interferometer. 
+	\includegraphics[width=0.75 \textwidth]{../Figures/POP_18dive.png}
+	\caption[Model of POP-18 as a function of differential thermal lensing using FINESSE.]  
+	{\textbf{Model of POP-18 as a function of differential thermal lensing using FINESSE.}
+		The horizontal axis is differential lensing between the ITMX/ITMY substrates and the vertical axis represents the normalized power when locked with nominal mode matching.  POP-18 is the signal at the power recycling pick-off port demodulated at 18 MHz which shows the sideband power buildup in the power recycling cavity. In this particular simulation the differential lensing requires finding a new operational point to lock the longitudinal degrees of freedom.  Additionally, the sensors which are used to maintain resonance and readout the RF power need to be re-phased in order to get the upper limit estimate.  Even with modest differential lensing (10 microdiopters), the buildup drops by 20 percent and eventually the simulation has trouble maintaining resonance similarly to the actual interferometer.
+	}
+	\label{fig:POP18}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.75 \textwidth]{../Figures/MeasuredVertexOLF.png}
+	\caption[Vertex open loop transfer functions while in Nominal Low Noise.]  
+	{\textbf{Vertex open loop transfer functions while in Nominal Low Noise.}
+	The nominal UGF for PRCL is around 45 Hz.
+	}
+	\label{fig:vertex_OLTF}
+\end{figure}
+
+\begin{sidewaysfigure}[ht]
+	\centering
+	\begin{minipage}{0.5\textheight}
+		\centering
+		\includegraphics[height=0.5 \textheight]{../Figures/Simplified_PRC_ARM_itm_abs.png}
+	\end{minipage}\hfill
+	\begin{minipage}{0.5\textheight}
+	\centering
+		\includegraphics[height=0.5 \textheight]{../Figures/Simplified_PRC_ARM_etm_abs.png}
+	\end{minipage} q
+	\caption[Interferometer DC powers as a function of round trip arm loss and test mass absorption.]  
+	{\textbf{Interferometer DC powers as a function of round trip arm loss and test mass absorption.}
+	Simplifying the power recycling cavity and a combined arm model to understand the powers as a function of loss has a few advantages with regards to computational time and the results are easier to conceptually understand.  Here, absorption changes the radius of curvature and substrate thermal lens which results in some mode mismatch while the round trip loss takes into account the rest of the higher order modes from point absorbers.  The ITM absorption has a much larger effect on the overall power recycling gain loss by almost a factor of 3 compared to ETM absorption.  Of course, the simplified model will fall short in describing effects on the antisymmetric signals of the full interferometer.
+	}
+	\label{fig:simple_prc_arm}
+\end{sidewaysfigure}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=1.0 \textwidth]{../Figures/PRCL_EXC_LSC-POP_A_RF9_I.png}
+	\includegraphics[width=1.0 \textwidth]{../Figures/SRCL_EXC_LSC-POP_A_RF45_I.png}
+	\includegraphics[width=1.0 \textwidth]{../Figures/MICH_EXC_LSC-POP_A_RF45_Q.png}
+	\caption[Measuring vertex optical gains as a function of heating.]  
+	{\textbf{Measuring vertex optical gains as a function of heating.}
+	Injecting a dither line into each degree of freedom then digitally demodulating the respective sensors at the excitation frequency can quantify how much the optical gain shifts as a function of heating. At time t=0, the power begins increasing from 2 watts of input power to 20 watts. In PRCL, there is a drop to about 80\% of the starting magnitude and about 7.5 degrees of phase rotation with the first power increase. At 0.9 hours, the input power goes from 20 to 30 watts and the magnitude drops to about 30\% of the original gain which results in a lock loss.  As for the SRCL and MICH degrees of freedom, there is a slight change at the beginning but not nearly as bad as PRCL.
 	}
 	\label{fig:POP18_POP90}
 \end{figure}
@@ -110,7 +149,7 @@
 		\label{fig:itmy_abs}
 	\end{subfigure}
 	\caption[Thermal lensing as seen by the ITM Hartmann Sensors after a lock loss.]  
-	{\textbf{Thermal lensing as seen by the ITM Hartmann Sensors after a lock loss.} A finite element model from COMSOL shows an exponential decay which can be linearized and fitted to the spherical power. Comparing ITMX and ITMY at Hanford shows a huge overall difference between the two optics, mostly due to the fact that ITMY has multiple point absorbers adding to the absorption estimate.}
+	{\textbf{Thermal lensing as seen by the ITM Hartmann Sensors after a lock loss.} A finite element simulation from COMSOL shows an impulse response which resembles the exponential decay which can be linearized and fitted to the spherical power. The model assumes a beam size of 54 mm and 1 Watt of absorbed power from COMSOL then uses MCMC to fit the offset and scale to the data. Comparing ITMX and ITMY at Hanford shows a huge overall difference between the two optics, mostly due to the fact that ITMY has multiple point absorbers adding to the absorption estimate.}
 	\label{fig:hws_abs}
 \end{figure}
 
