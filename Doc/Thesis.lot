@@ -3,11 +3,15 @@
 \contentsline {table}{\numberline {2.1}{\ignorespaces Frequency bands of common seismic noise at LHO.}}{45}{table.caption.23}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Mode matching actuation matrix for the transverse x direction.}}{78}{table.caption.42}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Mode matching actuation matrix for the transverse y direction.}}{79}{table.caption.43}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Calculated cavity parameters for the advanced LIGO interferometer.}}{80}{table.caption.44}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Single pass actuator lensing calibrations for aLIGO TCS in micro-diopters/Watt.}}{122}{table.caption.71}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {C.1}{\ignorespaces Bullseye photodiode sensing matrix.\relax }}{132}{table.caption.70}
+\contentsline {table}{\numberline {C.1}{\ignorespaces Bullseye photodiode sensing matrix.\relax }}{143}{table.caption.79}
 \addvspace {10\p@ }

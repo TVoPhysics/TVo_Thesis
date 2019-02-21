@@ -59,26 +59,22 @@ s lmod1 1 n0 n1
 mod mod1 $f1 0.18 1 pm n1 n2
 s lmod2 1 n2 n3
 mod mod2 $f2 0.18 1 pm n3 n4
-s lmod3 1 n4 n5
-mod mod3 $f3 0.1 1 pm n5 n6
-s mod3toMC1 1 n6 nMC1in
+s lmod3 1 n4 nMC1in
 
 ###########################################################################
 %%% FTend Laser
 
 %%% FTblock IMC
 #####################################################################################
+cav cavIMC MC2 nMC2in MC2 nMC2refl 
 
-# MC1 
 bs1 MC1 6030u 0.6u 0 44.59 nMC1in nMC1refl nMC1trans nMC1fromMC3 
 s sMC1toMC2 16.2405708 nMC1trans nMC2in 
 
-# MC2 
 bs1 MC2 5.1u 9.3u 0 0.82 nMC2in nMC2refl nMC2trans dump1
 s sMC2toMC3 16.2405708 nMC2refl nMC3in 
 attr MC2 Rc 27.275
 
-# MC3 
 bs1 MC3 5845u 0.8u 0 44.59 nMC3in nMC3refl nMC3trans nMCreturn_refl
 s sMC3toMC1 0.465 nMC3refl nMC1fromMC3
 
@@ -95,35 +91,38 @@ s sMC3ARtoIM1 0.4282 nMC3ARtrans nIM1in
 # IM1 a.k.a. SM1
 bs1 IM1 0 0 0 53 nIM1in nIM1refl nIM1HRtrans dump
 s sIM1sub 0.02995 $nsilica nIM1HRtrans nIM1ARin
-bs2 IM1AR 0 0 0 33.4 nIM1ARin dump5 nIM1ARtrans dump
+bs2 IM1AR 0 0 0 33.4 nIM1ARin dump nIM1ARtrans dump
 
-s IM1ARtonanoscan 3 nIM1ARtrans nIOT2Lnanoscan
+s IM1AR_nanoscan 3 nIM1ARtrans nIOT_Lnanoscan
 
 #AOE1
-s sIM1toAOE1 0.1955 nIM1refl nAOE1in
+s sIM1_AOE1 0.1955 nIM1refl nAOE1in
 lens AOE1 inf nAOE1in nAOE1trans
 
 # IM2 a.k.a. PMMT1 
-s sAOE1toIM2 1.0983 nAOE1trans nIM2in
+s sAOE1_IM2 1.0983 nAOE1trans nIM2in
 bs1 IM2 0 0 0 7 nIM2in nIM2refl dump dump
 attr IM2 Rc 12.8 
 
 s sIM2toIM3 1.1704 nIM2refl nIM3in
 
 # IM3 a.k.a PMMT2
-#s sIM2toIM3 1.1704 nIM2refl nIM3in
+#s sIM2_IM3 1.1704 nIM2refl nIM3in
 bs1 IM3 0 0 0 7.1 nIM3in nIM3refl dump dump
 attr IM3 Rc -6.24
 
 #AOE2
-s sIM3toAOE2 1.041 nIM3refl nAOE2in
+s sIM3_AOE2 1.041 nIM3refl nAOE2in
 lens AOE2 inf nAOE2in nAOE2trans
 
 # IM4 a.k.a. SM2
-s sAOE2toIM4 0.134 nAOE2trans nIM4in
+s sAOE2_IM4 0.134 nAOE2trans nIM4in
 
 bs1 IM4 2400u 0 0 45 nIM4in nIM4refl nIM4trans nIM4rettrans
-s sIM4toPRMAR 0.4135 nIM4refl nREFL
+s sIM4toREFLpick 0.4135 nIM4refl nREFLpickin
+
+bs REFLpick 0.001 0.999 0 45 nREFLpickin nREFLrefl nREFLtrans nREFLretrefl
+s sREFLpicktoPRMAR 0 nREFLtrans nREFL
 
 #####################################################################################
 %%% FTend HAM2
@@ -131,34 +130,19 @@ s sIM4toPRMAR 0.4135 nIM4refl nREFL
 %%% FTblock PR
 ###########################################################################
 
-# PRM
-
-# AR surface
-m2 PRMAR 35u 4.5u $phi_PRM nREFL nPRMARb
-
-# Substrate
-s sPRMsub1 0.0737 $nsilica nPRMARb nPRMHRa
-
-# HR surface
-m1 PRMHR 0.03 8.5u $phi_PRM nPRMHRa nPRMHRb
+m2 PRMAR 35u 4.5u $phi_PRM nREFL nPRMARb     # AR surface
+s sPRMsub1 0.0737 $nsilica nPRMARb nPRMHRa   # Substrate
+m1 PRMHR 0.03 8.5u $phi_PRM nPRMHRa nPRMHRb  # HR surface
 attr PRMHR Rc 11.009
 
-# Distance between PRM and PR2
-s lp1 $Lpr1 nPRMHRb nPR2a
-
-# PR2
+s lp1 $Lpr1 nPRMHRb nPR2a 
 bs1 PR2 250u $Mloss 0 -0.79 nPR2a nPR2b nPOP dump
-attr PR2 Rc -4.545
-
-# Distance from PR2 to PR3
 s lp2 $Lpr2 nPR2b nPR3a
-
-# PR3
 bs1 PR3 0 $Mloss 0 0.615 nPR3a nPR3b dump dump
-attr PR3 Rc 36.027
-
-# Distance from PR3
 s lp3 $Lpr3 nPR3b nPRBS
+
+attr PR2 Rc -4.545
+attr PR3 Rc 36.027
 
 ###########################################################################
 %%% FTend PR
@@ -200,8 +184,7 @@ bs2 BSAR2 50u 0 0 29.195 nBSi4 dump nSRBS dump
 %%% FTblock Yarm
 ###########################################################################
 
-# Distance from beam splitter to Y arm input mirror
-s ly1 5.0279 nYBS nITMY11
+s ly1 5.01258 nYBS nITMY11   # Distance from beam splitter to Y arm input mirror          
 
 # Thermal lens correction
 lens ITMYTL $TL_f nITMY11 nITMYTLtrans
@@ -214,13 +197,10 @@ m2 ITMYAR 20u 0 $phi_ITMY nITMY1 nITMYs1
 s ITMYsub 0.2 $nsilica nITMYs1 nITMYs2
 m1 ITMYHR 0.014 $Mloss $phi_ITMY nITMYs2 nITMY2
 
-# Y arm length
-s LYarm 3994.5 nITMY2 nETMY1
+s LYarm 3994.5 nITMY2 nETMY1   # Y arm length
 
 # Y arm end mirror
 m1 ETMYHR 5u $Mloss $phi_ETMY nETMY1 nETMYs1
-s ETMYsub 0.2 $nsilica nETMYs1 nETMYs2
-m2 ETMYAR 500u 0 $phi_ETMY nETMYs2 nPTY
 
 attr ITMYHR Rc -1934
 attr ETMYHR Rc 2245
@@ -235,7 +215,7 @@ attr ETMYHR mass 40
 ###########################################################################
 
 # Distance from beam splitter to X arm input mirror 
-s lx1 5.0082 nXBS nITMX11
+s lx1 4.99294 nXBS nITMX11
 
 # Thermal lens correction
 lens ITMXTL $TL_f nITMX11 nITMXTLtrans
@@ -254,8 +234,6 @@ s LXarm 3994.5 nITMX2 nETMX1
 
 # X arm end mirror
 m1 ETMXHR 5u $Mloss $phi_ETMX nETMX1 nETMXs1
-s ETMXsub 0.2 $nsilica nETMXs1 nETMXs2
-m2 ETMXAR 500u 0 $phi_ETMX nETMXs2 nPTX
 
 attr ITMXHR Rc -1934
 attr ETMXHR Rc 2245
@@ -269,179 +247,86 @@ attr ITMXHR mass 40
 %%% FTblock SR
 ###########################################################################
 
-# Distance to SR3
 s ls3 $Lsr3 nSRBS nSR3b
 
-# SR3
 bs1 SR3 0 $Mloss 0 0.785 nSR3b nSR3a dump17 dump
 attr SR3 Rc 35.972841
 
-# Distance from SR3 to SR2
 s ls2 $Lsr2 nSR3a nSR2b
 
-# SR2
 bs1 SR2 0 $Mloss 0 -0.87 nSR2b nSR2a dump dump
 attr SR2 Rc -6.406
 
-# Distance from SR2 to SRM
 s ls1 $Lsr1 nSR2a nSRMHRa
 
-# Signal recycling mirror SRM-08
-m1 SRMHR $T_SRM $L_SRM $phi_SRM nSRMHRa nSRMHRb
+m1 SRMHR $T_SRM $L_SRM $phi_SRM nSRMHRa nSRMHRb 
 s SRMsub 0.0749 $nsilica nSRMHRb nSRMARa
 m2 SRMAR 50n 0 $phi_SRM nSRMARa nSRMARb
+
 attr SRMHR Rc -5.6938
 
 ###########################################################################
 %%% FTend SR
 
-%%% FTblock FI
-###########################################################################
-# The FI is on a platform delimited by the Input/Output Buffer Assy (I/OBA)
-# The physical distance IBA --> OBA = 0.5034 (D0901920-V13)
-# OFI design based on: D0900464, D1002598
-
-# Distance from SRM (AR surface) to the input buffle assy (IBA) in OFI sus
-s lIBAin 0.491516 nSRMARb nIBAin
-m1 IBA 1 0 0 nIBAin nIBAout
-
-# Distance from IBA to input of OFI (Prism in between not considered)
-s lOFIin 0.16 nIBAout nOFIin
-
-# Input Polirizer IP (Silica)
-bs1 IP 1 0 0 0 nOFIin dump nIPtrans dump
-s lIP 0.019 $nsilica nIPtrans nROTin
-
-# Rotator (TGG)
-m1 ROTin 1 0 0 nROTin nROTb
-s lROT 0.08285 $nTGG nROTb nROTouta
-m1 ROTout 1 0 0 nROTouta nOPa
-
-# Output polirizer OP (Silica)
-s lOP 0.019 $nsilica nOPa nOPb
-m1 OP 1 0 0 nOPb nOFIout
-
-# Waveplate thickness 
-s lWP 0.0127 $nCalcite nOFIout nWPa
-m1 WP 1 0 0 nWPa nWPb
-
-# Distance from Waveplate to OBA of OFI (Prism in between not considered)
-s lOBA 0.2098563 nWPb nOBAin
-m1 OBA 1 0 0 nOBAin nOBAout
-###########################################################################
-%%% FTend FI
-
 %%% FTblock OMCpath
 ###########################################################################
-# (Loctions and angles based on the solid work file D1000342-v14 give ~5% 
-# mismatch. Thus lom1, lom3omc have been adjusted to get ~99.7% overlap at the OMC)
-# (lom1=2.6334,lom3omc=0.24.8 give 99% overlap at OMC)
+# (Locations and angles based on the solid work file D1000342-v14 give ~5% 
+# mismatch. Thus SRM_OM1, OM3_OMC have been adjusted to get ~99.7% overlap at the OMC)
+# (SRM_OM1=2.6334, OM3_OMC=0.24.8 give 99% overlap at OMC)
 
-# Distance OBA --> OM1  
-s lom1 2.724 nOBAout nOM1a 
+s sSRM_OM1 3.66164 nSRMARb nOM1a                         # extra length takes into account faraday isolator path
 
-#OM1
-bs1 OM1 800u $Mloss 0 2.251 nOM1a nOM1b dump dump # T is set for high power; Loss is a guess
+bs1 OM1 800u $Mloss 0 2.251 nOM1a nOM1b dump dump        # T is set for high power; Loss is a guess
 attr OM1 Rc 4.6
 
-# Distance OM1 --> OM2
-s lom2 1.395 nOM1b nOM2a 
+s sOM1_OM2 1.395 nOM1b nOM2a 
 
-# OM2
-bs1 OM2 10u $Mloss 0 4.399 nOM2a nOM2b dump dump  # T is a guess
+bs1 OM2 10u $Mloss 0 4.399 nOM2a nOM2b dump dump         # T is a guess
 attr OM2 Rc 1.7058
 
-# Distance OM2 --> OM3
-s lom3 0.631 nOM2b nOM3a 
-bs1 OM3 0.01 $Mloss 0 30.037 nOM3a nOM3b nOM3trans dump # T is a from T1200410-v2
+s sOM2_OM3 0.631 nOM2b nOM3a 
 
-# Distance OM3 --> OMC input coupler IC (AR side)
-s lom3omc 0.196 nOM3b nOMC_ARIC_in # By design should be ~0.31
+bs1 OM3 0.01 $Mloss 0 30.037 nOM3a nOM3b nOM3trans dump  # T is a from T1200410-v2
 
-#  Distance in transmission to OM3 used for testing
-#s lomOM3trans 0.1 nOM3trans nOMC_ARIC2_in
+s sOM3_OMC 0.196 nOM3b nOMCin                            # By design should be ~0.31
 
 ###########################################################################
 %%% FTend OMCpath 
 
 %%% FTblock OMC
 ###########################################################################
-# OMC (as built parameters: D1300507-v1)
+# Output mode cleaner (as built parameters: D1300507-v1)
 
-# Input Coupler IC (flat mirror)
-bs1 OMC_ARIC 1 0 0 4.004 nOMC_ARIC_in dump nOMC_ARIC_trans dump
-s subOMC_IC 0.01078 $nsilica nOMC_ARIC_trans nOMC_HRIC_in
-bs1 OMC_HRIC 0.0076 10u 0 2.7609 nOMC_HRIC_in dump nOMC_HRIC_trans nOMC_HRICret
-# Distance from IC to OC 
-s OMC_ICOC 0.2815 1 nOMC_HRIC_trans nOMC_HROC_in
+bs1 OMC1 0.0076 10u 0 4.004 nOMCin nOMCrefl nOMC1b nOMC1a    # Input mirror IC (flat mirror)
 
-# Output Coupler OC (flat mirror)
-bs1 OMC_HROC 0.0075 10u 0 4.004 nOMC_HROC_in nOMC_HROC_refl nOMC_HROC_trans nOMC_HROC_ret
-s subOMC_OC 0.01078 $nsilica nOMC_HROC_trans nOMC_AROC_in
-bs1 OMC_AROC 1 0 0 2.7609 nOMC_AROC_in dump nOMC_AROC_trans dump32
-# Distance from OC to CM1
-s OMC_OCCM1 0.2842 1 nOMC_HROC_refl nOMC_CM1_in
+s sOMC1_OMC2 0.2815 1 nOMC1b nOMC2a                          # OMC1 -> OMC2
 
-# Curved Mirror CM1
-bs1 OMC_CM1 36u 10u 0 4.004 nOMC_CM1_in nOMC_CM1_refl dump dump
+bs1 OMC2 0.0075 10u 0 4.004 nOMC2b nOMC2a dump nOMCout       # Output Coupler OC (flat mirror)
 
-# Distance from CM1 to CM2 
-s OMC_CM1CM2 0.2815 1 nOMC_CM1_refl nOMC_CM2_in
-attr OMC_CM1 Rc 2.57321
+s sOMC2_OMC3 0.2842 1 nOMC2b nOMC3a                          # Distance from OC to CM1
 
-# Curved Mirror CM2
-bs1 OMC_CM2 35.9u 10u 0 4.004 nOMC_CM2_in nOMC_CM2_refl dump dump
-attr OMC_CM2 Rc 2.57369
+bs1 OMC3 36u 10u 0 4.004 nOMC3a nOMC3b dump dump             # Curved Mirror CM1
+attr OMC3 Rc 2.57321
 
-# Distance from CM2 to IC 
-s CM2OC 0.2842 1 nOMC_CM2_refl nOMC_HRICret
+s sOMC3_OMC4 0.2815 1 nOMC3b nOMC4a                          # Distance from CM1 to CM2 
+
+bs1 OMC4 35.9u 10u 0 4.004 nOMC4a nOMC4b dump dump           # Curved Mirror CM2
+attr OMC4 Rc 2.57369
+
+s sOMC4_OMC1 0.2842 1 nOMC4b nOMC1a                          # Distance from CM2 to IC 
 
 ###########################################################################
 %%% FTend OMC
 
 %%% FTblock Lengths
 ###########################################################################
-# Calculate lengths of variables so Schnupp asymmetry can be changed
-# easily.
-# Cavity lengths
-const Lprc 57.656
-#const Lprc 57.645
-const Lsrc 56.008
-const Lschnupp 0.08
 
-# Individual lengths
-# PRC
 const Lpr1 16.6107
 const Lpr2 16.1647
 const Lpr3 19.5381 
-
-# SRC
 const Lsr1 15.7586
 const Lsr2 15.4435
 const Lsr3 19.3661
-
-# Arms
-const BSthickness 0.06873
-
-func Laver = $Lprc - $Lpr1 - $Lpr2 - $Lpr3
-noplot Laver
-
-# x length between BS and ITM
-func Lmx = $Laver + 0.5*$Lschnupp - $BSthickness * $nsilica - 0.2*$nsilica
-noplot Lmx
-put lx1 L $Lmx
-
-# y length between BS and ITM
-func Lmy = $Laver - 0.2*$nsilica - 0.5*$Lschnupp
-noplot Lmy   
-put ly1 L $Lmy
-
-# Lsr3
-%func Lasrc = $Laver + $BSthickness * $nsilica
-%noplot Lasrc
-%func Lsr3 = $Lsrc - $Lsr1 - $Lsr2 - $Lasrc
-#noplot Lsr3
-%put ls3 L $Lsr3
 
 ###########################################################################
 %%% FTend Lengths
@@ -455,13 +340,11 @@ const phi_ITMY -4.60943808179651e-05
 const phi_ETMX 0.00172729497882701
 const phi_ETMY -0.00176526469459912
 const phi_BS 0
-
 ###########################################################################
 %%% FTend Tunings
 
 %%% FTblock Constants
 ###########################################################################
-
 const Mloss 37.5u
 const T_SRM 0.35
 const L_SRM 8.7u
@@ -470,9 +353,14 @@ const nsilica 1.44963098985906
 const nTGG 1.954
 const nCalcite 1.65846
 const f1 9099471
+const f1h2 18198942
 const nf1 -9099471
+const nf1h2 -18198942
 const f2 45497355
+const f2h2 90994710
 const nf2 -45497355
+const nf2h2 -90994710
+
 const f3 24000000
 const nf3 -24000000
 
@@ -508,7 +396,7 @@ pd1 AS_f2_Q $f2 103 nSRMARb
 ###########################################################################
 
 pd P_DC_AS  nSRMARb
-pd P_DC_OMC nOMC_HROC_trans
+pd P_DC_OMC nOMCout
 pd PIMCtrans nREFL*
 pd Px nITMX2
 pd Py nITMY2
@@ -518,7 +406,7 @@ ad prc0 0 nPRMHRb
 ad prcf1 $f1 nPRMHRb
 ad prcf2 $f2 nPRMHRb
 
-ad aoc0 0 nOMC_HROC_trans
+ad aoc0 0 nOMCout
 ad asc0 0 nSRMARb
 ad asf1 $f1 nSRMARb
 ad asf2 $f2 nSRMARb
@@ -532,15 +420,13 @@ ad srcf2 $f2 nSRMHRa*
 %%% FTblock HOMs
 ###########################################################################
 
-cav cavIMC MC2 nMC2in MC2 nMC2refl 
-cav cavPRX PRMHR nPRMHRb ITMXHR nITMXs2
-cav cavPRY PRMHR nPRMHRb ITMYHR nITMYs2
+cav cavYARM ITMYHR nITMY2 ETMYHR nETMY1
+cav cavXARM ITMXHR nITMX2 ETMXHR nETMX1
 cav cavSRX SRMHR nSRMHRa ITMXHR nITMXs2
 cav cavSRY SRMHR nSRMHRa ITMYHR nITMYs2
-cav cavXARM ITMXHR nITMX2 ETMXHR nETMX1
-cav cavYARM ITMYHR nITMY2 ETMYHR nETMY1
-cav cavOMC OMC_HROC nOMC_HROC_refl OMC_HROC nOMC_HROC_in  
-
+cav cavPRX PRMHR nPRMHRb ITMXHR nITMXs2
+cav cavPRY PRMHR nPRMHRb ITMYHR nITMYs2
+cav cavOMC OMC2 nOMC2b OMC2 nOMC2a
 maxtem 2
 
 ###########################################################################
@@ -576,10 +462,8 @@ put* ITMYHR  phi     $mMICH_lock
 put* ITMYAR  phi     $mMICH_lock
 
 put* ETMXHR  phi     $ETMX_lock
-put* ETMXAR  phi     $ETMX_lock
 
 put* ETMYHR  phi     $ETMY_lock
-put* ETMYAR  phi     $ETMY_lock
 
 put* SRMHR   phi     $SRCL_lock
 put* SRMAR   phi     $SRCL_lock
@@ -598,58 +482,272 @@ noplot ETMY_lock
 
 %%% FTblock ASWFS
 ###########################################################################
-s lOM3trans2ASWFSBS 0.66 nOM3trans nASWFSBSin 
+s lOM3trans2ASWFSBS 0.66 nOM3trans nASWFSBSin
 bs ASWFSBS 0.5 0.5 0 45 nASWFSBSin nASWFSBSrefl nASWFSBStrans dump
 
 s lASWFSBS2ASWFSA 0.1 nASWFSBSrefl nASWFSA
-attr lASWFSBS2ASWFSA gouy 70
+#attr lASWFSBS2ASWFSA gouy 70
 
-s lASWFSBS2ASWFSB 0.379 nASWFSBStrans nASWFSB
-attr lASWFSBS2ASWFSB gouy 160
+# lens and path tuned to give default 90deg Gouy phase difference between WFSA and WFSB
+s lASWFSBS2ASWFSBlens 0.379 nASWFSBStrans nASWFSBlensin
+lens ASWFSblens 0.25 nASWFSBlensin nASWFSBlensout
+s lASWFSblens2WFSBsteer 0 nASWFSBlensout nASWFSBsteerin
+bs2 ASWFSBsteer 1 0 0 45 nASWFSBsteerin nASWFSBsteerrefl dump dump
+s lASWFSBlens2ASWFSB 0.2878 nASWFSBsteerrefl nASWFSB
+#attr lASWFSBS2ASWFSB gouy 160
 
 # AS WFS RF detectors
-pd1 ASWFSA_45I_P $f2 0 nASWFSA 
-pd1 ASWFSA_45Q_P $f2 90 nASWFSA 
-pd1 ASWFSA_36I_P $fM 15 nASWFSA 
-pd1 ASWFSA_36Q_P $fM 75 nASWFSA 
+
+pd1 ASWFSA_18I_P $f1h2 $ASWFSA18Idemod nASWFSA
+pd1 ASWFSA_18Q_P $f1h2 $ASWFSA18Qdemod nASWFSA
+
+pd1 ASWFSA_36I_P $fM $ASWFSA36Idemod nASWFSA
+pd1 ASWFSA_36Q_P $fM $ASWFSA36Qdemod nASWFSA
+
+pd1 ASWFSA_45I_P $f2 0 nASWFSA
+pd1 ASWFSA_45Q_P $f2 90 nASWFSA
+
+pd1 ASWFSA_90I_P $f2h2 $ASWFSA90Idemod nASWFSA
+pd1 ASWFSA_90Q_P $f2h2 $ASWFSA90Qdemod nASWFSA
+
 pdtype ASWFSA_45I_P y-split
 pdtype ASWFSA_45Q_P y-split
 pdtype ASWFSA_36I_P y-split
 pdtype ASWFSA_36Q_P y-split
+pdtype ASWFSA_18I_P y-split
+pdtype ASWFSA_18Q_P y-split
+pdtype ASWFSA_90I_P y-split
+pdtype ASWFSA_90Q_P y-split
 
-pd1 ASWFSB_45I_P $f2 0 nASWFSB 
-pd1 ASWFSB_45Q_P $f2 90 nASWFSB 
-pd1 ASWFSB_36I_P $fM 65 nASWFSB 
-pd1 ASWFSB_36Q_P $fM 155 nASWFSB
+pd1 ASWFSB_18I_P $f1h2 $ASWFSB18Idemod nASWFSB
+pd1 ASWFSB_18Q_P $f1h2 $ASWFSB18Qdemod nASWFSB
+
+pd1 ASWFSB_36I_P $fM $ASWFSB36Idemod nASWFSB
+pd1 ASWFSB_36Q_P $fM $ASWFSB36Qdemod nASWFSB
+
+pd1 ASWFSB_45I_P $f2 0 nASWFSB
+pd1 ASWFSB_45Q_P $f2 90 nASWFSB
+
+pd1 ASWFSB_90I_P $f2h2 $ASWFSB90Idemod nASWFSB
+pd1 ASWFSB_90Q_P $f2h2 $ASWFSB90Qdemod nASWFSB
+
 pdtype ASWFSB_45I_P y-split
 pdtype ASWFSB_45Q_P y-split
 pdtype ASWFSB_36I_P y-split
 pdtype ASWFSB_36Q_P y-split
+pdtype ASWFSB_18I_P y-split
+pdtype ASWFSB_18Q_P y-split
+pdtype ASWFSB_90I_P y-split
+pdtype ASWFSB_90Q_P y-split
 
-const f_sig 1 
+pd1 ASWFSA_18I_Y $f1h2 $ASWFSA18Idemod nASWFSA
+pd1 ASWFSA_18Q_Y $f1h2 $ASWFSA18Qdemod nASWFSA
 
-# AS WFS RF detectors double demodulated at signal frequency $f_sig
-pd2 ASWFSA_45I_audio_P $f2 0 $f_sig max nASWFSA 
-pd2 ASWFSA_45Q_audio_P $f2 90 $f_sig max nASWFSA 
-pd2 ASWFSA_36I_audio_P $fM 0 $f_sig max nASWFSA 
-pd2 ASWFSA_36Q_audio_P $fM 90 $f_sig max nASWFSA 
+pd1 ASWFSA_36I_Y $fM $ASWFSA36Idemod nASWFSA
+pd1 ASWFSA_36Q_Y $fM $ASWFSA36Qdemod nASWFSA
+
+pd1 ASWFSA_45I_Y $f2 0 nASWFSA
+pd1 ASWFSA_45Q_Y $f2 90 nASWFSA
+
+pd1 ASWFSA_90I_Y $f2h2 $ASWFSA90Idemod nASWFSA
+pd1 ASWFSA_90Q_Y $f2h2 $ASWFSA90Qdemod nASWFSA
+
+pdtype ASWFSA_45I_Y x-split
+pdtype ASWFSA_45Q_Y x-split
+pdtype ASWFSA_36I_Y x-split
+pdtype ASWFSA_36Q_Y x-split
+pdtype ASWFSA_18I_Y x-split
+pdtype ASWFSA_18Q_Y x-split
+pdtype ASWFSA_90I_Y x-split
+pdtype ASWFSA_90Q_Y x-split
+
+pd1 ASWFSB_18I_Y $f1h2 $ASWFSB18Idemod nASWFSB
+pd1 ASWFSB_18Q_Y $f1h2 $ASWFSB18Qdemod nASWFSB
+
+pd1 ASWFSB_36I_Y $fM $ASWFSB36Idemod nASWFSB
+pd1 ASWFSB_36Q_Y $fM $ASWFSB36Qdemod nASWFSB
+
+pd1 ASWFSB_45I_Y $f2 0 nASWFSB
+pd1 ASWFSB_45Q_Y $f2 90 nASWFSB
+
+pd1 ASWFSB_90I_Y $f2h2 $ASWFSB90Idemod nASWFSB
+pd1 ASWFSB_90Q_Y $f2h2 $ASWFSB90Qdemod nASWFSB
+
+pdtype ASWFSB_45I_Y x-split
+pdtype ASWFSB_45Q_Y x-split
+pdtype ASWFSB_36I_Y x-split
+pdtype ASWFSB_36Q_Y x-split
+pdtype ASWFSB_18I_Y x-split
+pdtype ASWFSB_18Q_Y x-split
+pdtype ASWFSB_90I_Y x-split
+pdtype ASWFSB_90Q_Y x-split
+
+const fASC 1
+
+# AS WFS RF detectors double demodulated at signal frequency $fASC
+
+pd2 ASWFSA_18I_audio_P $f1h2 $ASWFSA18Idemod $fASC nASWFSA
+pd2 ASWFSA_18Q_audio_P $f1h2 $ASWFSA18Qdemod $fASC nASWFSA
+
+pd2 ASWFSA_36I_audio_P $fM $ASWFSA36Idemod $fASC nASWFSA
+pd2 ASWFSA_36Q_audio_P $fM $ASWFSA36Qdemod $fASC nASWFSA
+
+pd2 ASWFSA_45I_audio_P $f2 0 $fASC nASWFSA
+pd2 ASWFSA_45Q_audio_P $f2 90 $fASC nASWFSA
+
+pd2 ASWFSA_90I_audio_P $f2h2 $ASWFSA90Idemod $fASC nASWFSA
+pd2 ASWFSA_90Q_audio_P $f2h2 $ASWFSA90Qdemod $fASC nASWFSA
+
 pdtype ASWFSA_45I_audio_P y-split
 pdtype ASWFSA_45Q_audio_P y-split
 pdtype ASWFSA_36I_audio_P y-split
 pdtype ASWFSA_36Q_audio_P y-split
+pdtype ASWFSA_18I_audio_P y-split
+pdtype ASWFSA_18Q_audio_P y-split
+pdtype ASWFSA_90I_audio_P y-split
+pdtype ASWFSA_90Q_audio_P y-split
+
+pd2 ASWFSB_18I_audio_P $f1h2 $ASWFSB18Idemod $fASC nASWFSB
+pd2 ASWFSB_18Q_audio_P $f1h2 $ASWFSB18Qdemod $fASC nASWFSB
+
+pd2 ASWFSB_36I_audio_P $fM $ASWFSB36Idemod $fASC nASWFSB
+pd2 ASWFSB_36Q_audio_P $fM $ASWFSB36Qdemod $fASC nASWFSB
+
+pd2 ASWFSB_45I_audio_P $f2 0 $fASC nASWFSB
+pd2 ASWFSB_45Q_audio_P $f2 90 $fASC nASWFSB
+
+pd2 ASWFSB_90I_audio_P $f2h2 $ASWFSB90Idemod $fASC nASWFSB
+pd2 ASWFSB_90Q_audio_P $f2h2 $ASWFSB90Qdemod $fASC nASWFSB
 
 
-pd2 ASWFSB_45I_audio_P $f2 0 $f_sig max nASWFSB 
-pd2 ASWFSB_45Q_audio_P $f2 90 $f_sig max nASWFSB 
-pd2 ASWFSB_36I_audio_P $fM 0 $f_sig max nASWFSB 
-pd2 ASWFSB_36Q_audio_P $fM 90 $f_sig max nASWFSB
 pdtype ASWFSB_45I_audio_P y-split
 pdtype ASWFSB_45Q_audio_P y-split
 pdtype ASWFSB_36I_audio_P y-split
 pdtype ASWFSB_36Q_audio_P y-split
+pdtype ASWFSB_18I_audio_P y-split
+pdtype ASWFSB_18Q_audio_P y-split
+pdtype ASWFSB_90I_audio_P y-split
+pdtype ASWFSB_90Q_audio_P y-split
+
+pd2 ASWFSA_18I_audio_Y $f1h2 $ASWFSA18Idemod $fASC nASWFSA
+pd2 ASWFSA_18Q_audio_Y $f1h2 $ASWFSA18Qdemod $fASC nASWFSA
+
+pd2 ASWFSA_36I_audio_Y $fM $ASWFSA36Idemod $fASC nASWFSA
+pd2 ASWFSA_36Q_audio_Y $fM $ASWFSA36Qdemod $fASC nASWFSA
+
+pd2 ASWFSA_45I_audio_Y $f2 0 $fASC nASWFSA
+pd2 ASWFSA_45Q_audio_Y $f2 90 $fASC nASWFSA
+
+pd2 ASWFSA_90I_audio_Y $f2h2 $ASWFSA90Idemod $fASC nASWFSA
+pd2 ASWFSA_90Q_audio_Y $f2h2 $ASWFSA90Qdemod $fASC nASWFSA
+
+pdtype ASWFSA_45I_audio_Y x-split
+pdtype ASWFSA_45Q_audio_Y x-split
+pdtype ASWFSA_36I_audio_Y x-split
+pdtype ASWFSA_36Q_audio_Y x-split
+pdtype ASWFSA_18I_audio_Y x-split
+pdtype ASWFSA_18Q_audio_Y x-split
+pdtype ASWFSA_90I_audio_Y x-split
+pdtype ASWFSA_90Q_audio_Y x-split
+
+pd2 ASWFSB_18I_audio_Y $f1h2 $ASWFSB18Idemod $fASC nASWFSB
+pd2 ASWFSB_18Q_audio_Y $f1h2 $ASWFSB18Qdemod $fASC nASWFSB
+
+pd2 ASWFSB_45I_audio_Y $f2 0 $fASC nASWFSB
+pd2 ASWFSB_45Q_audio_Y $f2 90 $fASC nASWFSB
+
+pd2 ASWFSB_36I_audio_Y $fM $ASWFSB36Idemod $fASC nASWFSB
+pd2 ASWFSB_36Q_audio_Y $fM $ASWFSB36Qdemod $fASC nASWFSB
+
+pd2 ASWFSB_90I_audio_Y $f2h2 $ASWFSB90Idemod $fASC nASWFSB
+pd2 ASWFSB_90Q_audio_Y $f2h2 $ASWFSB90Qdemod $fASC nASWFSB
+
+pdtype ASWFSB_45I_audio_Y x-split
+pdtype ASWFSB_45Q_audio_Y x-split
+pdtype ASWFSB_36I_audio_Y x-split
+pdtype ASWFSB_36Q_audio_Y x-split
+pdtype ASWFSB_18I_audio_Y x-split
+pdtype ASWFSB_18Q_audio_Y x-split
+pdtype ASWFSB_90I_audio_Y x-split
+pdtype ASWFSB_90Q_audio_Y x-split
+
+pd1 ASWFSA18sum $f1h2 nASWFSA
+pd1 ASWFSB18sum $f1h2 nASWFSB
+
+pd1 ASWFSA36sum $fM nASWFSA
+pd1 ASWFSB36sum $fM nASWFSB
+
+pd1 ASWFSA90sum $f2h2 nASWFSA
+pd1 ASWFSB90sum $f2h2 nASWFSB
+
+const ASWFSA18Idemod 240.66546
+const ASWFSA18Qdemod 150.66546
+const ASWFSB18Idemod 228.2786983
+const ASWFSB18Qdemod 138.2786983
+
+const ASWFSA36Idemod 252.9610861
+const ASWFSA36Qdemod 162.9610861
+const ASWFSB36Idemod 228.1875629
+const ASWFSB36Qdemod 138.1875629
+
+const ASWFSA90Idemod 26.58349357
+const ASWFSA90Qdemod 116.58349357
+const ASWFSB90Idemod 324.6496854
+const ASWFSB90Qdemod 234.6496854
 
 ###########################################################################
 %%% FTend ASWFS
 
-%%% FTblock commands
-%%% FTend commands 
+%%% FTblock REFLWFS
+###########################################################################
+
+s sREFLpicktoREFLWFSBS 0 nREFLretrefl nREFLWFSBSin
+bs REFLWFSBS 0.5 0.5 0 45 nREFLWFSBSin nREFLWFSBSrefl nREFLWFSA dump
+s sREFLWFSBStoREFLWFSBlens 0 nREFLWFSBSrefl nREFLWFSBlensin
+lens REFLWFSBlens 1 nREFLWFSBlensin nREFLWFSBlenstrans
+s sREFLWFSBlenstoREFLWFSB 0.88264 nREFLWFSBlenstrans nREFLWFSB
+
+pd1 REFLWFSA_45I_Y $f2 16.06 nREFLWFSA
+pd1 REFLWFSA_45Q_Y $f2 106.06 nREFLWFSA
+pd1 REFLWFSB_45I_Y $f2 327.83 nREFLWFSB
+pd1 REFLWFSB_45Q_Y $f2 57.83 nREFLWFSB
+
+pdtype REFLWFSA_45I_Y x-split
+pdtype REFLWFSA_45Q_Y x-split
+pdtype REFLWFSB_45I_Y x-split
+pdtype REFLWFSB_45Q_Y x-split
+
+pd1 REFLWFSA_45I_P $f2 16.06 nREFLWFSA
+pd1 REFLWFSA_45Q_P $f2 106.06 nREFLWFSA
+pd1 REFLWFSB_45I_P $f2 327.83 nREFLWFSB
+pd1 REFLWFSB_45Q_P $f2 57.83 nREFLWFSB
+
+pdtype REFLWFSA_45I_P y-split
+pdtype REFLWFSA_45Q_P y-split
+pdtype REFLWFSB_45I_P y-split
+pdtype REFLWFSB_45Q_P y-split
+
+pd2 REFLWFSA_45I_audio_Y $f2 16.06 $fASC nREFLWFSA
+pd2 REFLWFSA_45Q_audio_Y $f2 106.06 $fASC nREFLWFSA
+pd2 REFLWFSB_45I_audio_Y $f2 327.83 $fASC nREFLWFSB
+pd2 REFLWFSB_45Q_audio_Y $f2 57.83 $fASC nREFLWFSB
+
+pdtype REFLWFSA_45I_audio_Y x-split
+pdtype REFLWFSA_45Q_audio_Y x-split
+pdtype REFLWFSB_45I_audio_Y x-split
+pdtype REFLWFSB_45Q_audio_Y x-split
+
+pd2 REFLWFSA_45I_audio_P $f2 16.06 $fASC nREFLWFSA
+pd2 REFLWFSA_45Q_audio_P $f2 106.06 $fASC nREFLWFSA
+pd2 REFLWFSB_45I_audio_P $f2 327.83 $fASC nREFLWFSB
+pd2 REFLWFSB_45Q_audio_P $f2 57.83 $fASC nREFLWFSB
+
+pdtype REFLWFSA_45I_audio_P y-split
+pdtype REFLWFSA_45Q_audio_P y-split
+pdtype REFLWFSB_45I_audio_P y-split
+pdtype REFLWFSB_45Q_audio_P y-split
+
+###########################################################################
+ %%% FTend REFLWFS
+
+noxaxis

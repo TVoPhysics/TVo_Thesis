@@ -6,8 +6,8 @@ def phase_space(q_list_x,q_list_y):
 	sx = []
 	sy = []
 	for i in range(len(q_list_x)):
-	    qx = pykat.beam_param(q=q_list_x[i])
-	    qy = pykat.beam_param(q=q_list_y[i])
+	    qx = pykat.BeamParam(q=q_list_x[i])
+	    qy = pykat.BeamParam(q=q_list_y[i])
 
 	    #cuvature in microdipoters
 	    sx.append( -(1/qx.curvature())*1e6)
