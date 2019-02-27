@@ -458,13 +458,13 @@
 	&\approx 98 \; mW \; \bigg[\frac{P_{\text{in}}}{70 \, \text{Watts}}\bigg] \; \bigg[\frac{g_{\text{PRC}}}{ 45 }\bigg] \; \bigg[\frac{g_{\text{ARM}}}{ 225 }\bigg] \; \bigg[\frac{\epsilon_a}{0.5 \, \text{ppm}}\bigg]
 	\end{aligned}
 	\end{equation}
-	where the factor of 0.25 comes from double passing the main beamsplitter, the coefficient $\epsilon_a$ is the estimated uniform absorption.  Using $ D_{\text{sub}} \approx 487 \frac{\mu \text{D}}{1 \; \text{Watt}}$ as the modeled conversion from absorbed power to steady-state spherical power.  The expected substrate lensing in units of micro-diopters [$\mu \text{D}$] is
+	where the factor of 0.25 comes from double passing the main beamsplitter, the coefficient $\epsilon_a$ is the estimated uniform absorption.  Using $ D_{\text{sub}} \approx 487 \frac{\mu \text{D}}{1 \; \text{Watt}}$ as the modeled conversion from absorbed power to steady-state spherical power, the expected substrate lensing in units of micro-diopters [$\mu \text{D}$] is
 	\begin{equation}
 	S_\text{PRC-1ARM} = P_\text{PRC-1ARM} *  D_{\text{sub}} \approx 48 \mu\text{D}
 	\end{equation}
 	 which readily detectable by the current Hartmann sensors. Commissioning and installation schedules are ever-changing entities and there have been times when the end stations are not ready for integration simultaneously. This provides a window where only single arm commissioning is available so this method might be able to detect the existence of point absorbers much sooner.
 	 
-	 \indent The question still remains, once these anomalies are found, what can be done?
+	 \indent Once these anomalies are found, the question remains, what can be done?
 	 
 	 One consideration is a complete re-design of Thermal Compensation to account for higher frequency spatial corrections. There are already custom masks at Hanford which are designed to smooth the optical path distortion in the substrate and can be implemented with the CO2 lasers on the compensation plate to increase the sideband build ups, which is one of the biggest difficulties associated with point absorbers.  However, this does not solve the fundamental problem of losing power recycling gain due to power scattering where the quadratic losses of the arm cavity set an upper limit for increasing power.  Another way to avoid these effects is to move the beam spot away from the point absorber on the HR surface but it must be sufficiently far or the odd higher order modes will couple very strongly with asymmetry. 
 	 
@@ -498,7 +498,7 @@
 	\end{sidewaysfigure}
 
 \section{Higher Power Operation}
-	The goal for O3 is 150 kW of circulating power in the arms.
+	The goal for O3 is at least 150 kW of circulating power in the arms.
 	
 	With the sensors and tests described in the preceding sections, a cohesive plan to pre-load the interferometer was implemented in order to achieve stable higher power operation in the detectors.  Generally, the Thermal Compensation System has two goals: Firstly, the actuators are used to pre-load the test masses with heat in anticipation of the lensing due to the interferometer while operating at full lock and higher power.  Secondly, the amount of mode-matching between the coupled cavities must be optimized in order to achieve the best sensitivity.  Using the absorptions measured in Figure \ref{fig:hws_abs}, it is possible to estimate the total amount of lensing from self-heating as a function of input power.
 	
@@ -518,7 +518,7 @@
 		\label{fig:POP18}
 	\end{figure}
 	
-	\begin{figure}[!]
+	\begin{figure}[t!]
 		\centering
 		\includegraphics[width=0.75 \textwidth]{../Figures/MeasuredVertexOLF.png}
 		\caption[Vertex open loop transfer functions while in Nominal Low Noise.]  
@@ -528,7 +528,7 @@
 		\label{fig:vertex_OLTF}
 	\end{figure}
 	
-	\begin{figure}[!]
+	\begin{figure}[t!]
 		\centering
 		\includegraphics[width=1.0 \textwidth]{../Figures/PRCL_EXC_LSC-POP_A_RF9_I.png}
 		\includegraphics[width=1.0 \textwidth]{../Figures/SRCL_EXC_LSC-POP_A_RF45_I.png}
@@ -540,19 +540,52 @@
 		\label{fig:POP18_POP90}
 	\end{figure}
 
-\section{Mode Matching IFO to OMC: Single Bounce}
-	Using the OMC as an optical spectrum analyzer is one simplest methods for understanding the mode matching coming out of the interferometer.  In the single bounce configuration, measuring the ratio between the second order mode and the fundamental gives a first look at the limit of matching.  The same can be done using the squeezed beam as well and during commissioning of the squeezer, a mode-mismatch of 20\% was observed which led to a re-design of the optical path entering the interferometer. 
-	\subsection{SR3 Heater}
-	- Beckhoff code
-	
-	\subsection{SRM Heater}
-	- Mode Profiling: Single Bounce
-	
-	- OMC Scanning
 
-\section{Mode Matching Squeezer to OMC}
-	- Mode Profiling
+\clearpage
+
+\section{Mode Matching from the OPO to the OMC}
+	Using the OMC as an optical spectrum analyzer is one simplest methods for understanding the mode matching coming out of the interferometer.  In the single bounce configuration, measuring the ratio between the second order mode and the fundamental gives a first look at the limit of matching.  The same can be done using the squeezed beam as well and during commissioning of the squeezer, a mode mismatch of 16\% was observed which led to a re-design of the OPO to OMC optical path.
 	
-	- OMC Scanning
+	\begin{figure}[b!]
+		\centering
+		\includegraphics[width=0.8 \textwidth]{../Figures/OPO_to_ZM2_fit.png}
+		\caption[Mode measurement from the OPO.]  
+		{\textbf{Mode measurement from the OPO.}
+			  The results without Lens2 are shown in black for two transverse directions (x/y) and constrain the distance of Lens1 relative to the OPO output.  Then, Lens2 is replaced back in its original position on a translation stage at half the range and measurements were taken in order to constrain the distance between Lens1 and Lens2.  The beam sizes were fit to find the Gaussian q-parameter entering HAM5. There is some slight deviation in the transverse directions after Lens2, possibly from misalignment of the lens.  This method seems to provide a good model of what beam is being injected from the squeezer side.
+		}
+		\label{fig:OPO_to_ZM2}
+	\end{figure}
 	
-	- Astigmatism: expected in LIGO and measured!
+	Using a well-calibrated mode profiler that measures beam sizes along the propagation axis is the most direct way of determining OPO to OMC mode matching.  This method can also predict the actuator Gouy phase of the second lens after the OPO, which is on a translation stage with approximately 4 centimeters of range. Generally, the length measurement between optics is the largest systematic error especially in the near-field where beam sizes do not change very much as a function of $\hat{z}$.  In addition, places to put a beam profile become very limited as HAM6 becomes crowded with optical components.  In preparation for squeezing in Advanced LIGO, the mode matching from the OPO to OMC was measured and found to be approximately 84\% at best. When implementing a telescope with fast lenses, the distances between optics must be stringently characterized but the OPO platform is very crowded along the output path so it was very difficult to accurately measure the path lengths with a ruler.  Between the second lens and ZM1, the table is much clearer and by removing Lens2, the Gouy phase is approximately in the far-field which means the distance measurements can be more easily measured as a function of beam size.
+	
+	\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.8 \textwidth]{../Figures/OPO_to_OMCREFL_Oldlenses.png}
+	\caption[Projecting the modes from the squeezer to the OMC.]  
+	{\textbf{Projecting the modes from the squeezer to the OMC.}
+		Determining the actuation range with the translation stage using the as-installed focal lengths, $f_{\text{Lens1}} = 111$ mm and $f_{\text{Lens2}} = 334$ mm, showed that the mode matching into the OMC was at most 80\% with various translation stage positions with "Close" referring to the position of Lens2 relative to the OPO cavity.  Here, crosses represent the transverse-x direction and pluses denote the transverse-y orientation.  One very interesting feature is that the astigmatism as measured seems to be worse after re-entering HAM6 from HAM5 and is not explainable by the slight deviations shown in Figure \ref{fig:OPO_to_ZM2}, so it is possible that some sort of clipping occurs while propagating through the main output Faraday isolator.  Near the OMC waist, the predicted mode shapes for different translation stage positions agree with the measured beam sizes and power overlaps were confirmed to be accurate with OMC scans to within a percent.
+	}
+	\label{fig:OPO_to_OMC_Old}
+	\end{figure}
+
+	\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.8 \textwidth]{../Figures/OPO_to_OMCREFL_Newlenses.png}
+	\caption[Repeated measurements made with new lenses.]  
+	{\textbf{Repeated measurements made with new lenses.}
+		With the poor mode matching shown in Figure \ref{fig:OPO_to_OMC_Old}, the fast telescope lenses needed to be replaced or risk being the limit to effective squeezing for O3.  The available range in the translation stage did not allow for increased matching and the crowded OPO platform did not permit coarse moves of Lens1 or Lens2.  The next option was replacing the lenses with a solution which did not incorporate large actuation range but was more suited for mode matching.  There were a few clean lenses available that provided the right solution but greatly reduced the translation stage efficacy, on the other hand, this made the telescope placement much more robust to path length errors which is the original problem to begin with.
+	}
+	\label{fig:OPO_to_OMC_New}
+	\end{figure}
+	
+	
+	\begin{figure}[t!]
+		\centering
+		\includegraphics[width=0.8 \textwidth]{../Figures/Lens_Closest_to_OPO.png}
+		\includegraphics[width=0.8 \textwidth]{../Figures/Lens_in_Center_Position.png}
+		\includegraphics[width=0.8 \textwidth]{../Figures/Lens_Furthest_from_OPO.png}
+		\caption[OPO to OMC cavity scanning for various Lens2 positions.]  
+		{\textbf{OPO to OMC cavity scanning for various Lens2 positions.}  The top figure has the lens closest to the OPO along the propagation axis, the middle figure represents Lens2 at half the actuation range and the bottom figure shows the lens furthest from the OPO.  During this time, the OMC ASC control loops were closed on the reflected QPDs to minimize the odd order mode coupling.  
+		}
+		\label{fig:OPO_to_OMC_Old}
+	\end{figure}
