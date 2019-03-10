@@ -166,20 +166,24 @@
 	It is trivial to repeat the calculation for vertical displacements so it is left for the reader to complete.
 	
 	\section{Bullseye Photodiodes}
-		Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye's geometry will give insight on the beam size jitter. A sensing matrix for these degrees of freedom is realized in Table \ref{bpd_matrix}.
+		Similar to the QPD calibration above, it is possible to express pitch and yaw displacements that are normalized to beam diameters.  Additionally, the bullseye's geometry will give insight on the beam size jitter. A sensing matrix for these degrees of freedom is realized in Table \ref{tbl:bpd_matrix}.
 		
-	\begin{table}\label{bpd_matrix}
-	\begin{center}
-		\begin{tabular}{ c|c|c|c|c } 
+	\begin{table}[]
+		\centering
+		\begin{tabular}{|c||c|c|c|c|}
+			\hline
 			&\text{Seg 1}		&\text{Seg 2}		& \text{Seg 3} 	& \text{Seg 4} \\
+			\hline
 			\hline
 			\text{Pit}		&1		&1		& -2 	& 0
 			\\ 	\text{Yaw}		&-1		&1		& 0		& 0
 			\\ 	\text{Wid}		&1		&1		& 1		& -1
 			\\ 	\text{Sum}		&1		&1		& 1		& 1
+			\\
+			\hline
 		\end{tabular}
 		\caption{Bullseye photodiode sensing matrix.}
-	\end{center}
+	\label{tbl:bpd_matrix}
 	\end{table}
 	
 	\subsection{Width}
@@ -232,7 +236,7 @@
 	\end{split}
 	\end{equation}
 	
-	The error signal from a pitch displacement following Table \ref{bpd_matrix} is,
+	The error signal from a pitch displacement following Table \ref{tbl:bpd_matrix} is,
 	\begin{equation}
 	S^{\text{Pit}} = P^{\text{Pit}}_{\text{seg1}} + P^{\text{Pit}}_{\text{seg2}} - 2 P^{\text{Pit}}_{\text{seg3}} = 3\sqrt{\frac{3}{2\pi}} \frac{\Delta y}{\omega} \bigg[ \text{erfc} \bigg(\frac{\sqrt{2} R}{\omega}\bigg) + \sqrt{\frac{8}{\pi }} \frac{R}{\omega} e^{-2 \frac{R^2}{\omega^2}} \bigg]
  	\end{equation}

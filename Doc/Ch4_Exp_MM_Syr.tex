@@ -2,7 +2,7 @@
 In conjunction with Sandoval et al \cite{Fabian_Thesis}, the table-top adaptive mode matching experiment was able to show the feasibility of a fully dynamical system at Syracuse University.  Most of the work done by the author was focused on converting and upgrading the real-time digital sysem (RTCDS) from being used by the optical trap experiment \cite{OpticalTrap} to adaptive mode matching and interfacing the RF sensors into the digital system.  There is also a section on the usage of cylindrical lenses and quadrant photodiodes as a viable method of extracting a mode matching error signal.
 
 \section{Commissioning the Real Time Digital System}
-	Dynamic control systems require both actuators and sensors which are interfaced in a real-time manner and this requires the use of analog-to-digital (ADC) and digital-to-analog (DAC) converters.  A LIGO standard system uses a front end computer that reads in data and processes the signals based off a Simulink graphical model that allows for simple logic, mathematical operations, and frequency dependent filtering.  The real time data acquisition code is user-interfaced with a Motif Editor and Display Manager (MEDM) that is able to report and execute variables such as gains and matrix elements.
+	Dynamic control systems require both actuators and sensors which are interfaced in a real-time manner and this requires the use of analog-to-digital (ADC) and digital-to-analog (DAC) converters.  A LIGO standard system uses a front end computer that reads in data and processes the signals based off a Simulink graphical model that allows for simple logic, mathematical operations, and frequency dependent filtering.  The real time data acquisition code is user-interfaced with a Motif Editor and Display Manager (MEDM) that is able to report and execute variables such as gains and matrix elements.  The use of a LIGO standard digital system means that hardware and software developed at Syracuse can be transferred more smoothly to the LIGO sites.
 	
 	\begin{figure}[h]
 		\centering
@@ -14,29 +14,50 @@ In conjunction with Sandoval et al \cite{Fabian_Thesis}, the table-top adaptive 
 		\label{fig:AMM_Master}
 	\end{figure}
 
-	\section{Sensors}
-	Recall in Section \ref{WFS} that the RF modal decomposition technique relies on comparing the Gouy phase of higher order modes to the fundamental Gaussian mode with an array of RF photodiodes in order to extract an error signal. The complication arises when using this method to extract the beat note between the fundamental mode and symmetric donut mode because the photodetector arrays must match the higher order mode geometry.  This is easier to deal with when trying to sense angular distortions from a misaligned cavity because the 01 and 10 modes can be sensed with a split photodetector, however, using a quadrant photodiode will not work to sense mode mismatch due to the cylindrical symmetry of the 02 and 20 modes. Currently, Advanced LIGO uses no RF sensors to detect mode matching so the next sections will provide sensing methods which can be used for dynamic closed loop feedback control.
+	\begin{figure}[h]
+		\centering
+		\frame{\includegraphics[width=1.0 \textwidth]{../Figures/Model_Overview.png}}
+		\caption[Model overview for adaptive mode matching.]
+		{\textbf{Model overview for adaptive mode matching.} 
+			Using the LIGO digital system as a test bed for technology development has the advantage of easy integration at both LIGO sites.  The Syracuse system uses a Simulink style model with LIGO standard modules to read in data from the analog-to-digital converter (ADC) that contain signals from each RF photodiode segments, apply a phase rotation to get the signal into one quadrature (nominally I for a linear cavity) and normalize by the total power on the sensor.  Afterwards, the signals are sent to a master actuator function that diagonalizes the sensor signals into an actuators basis and sent to the digital-to-analog converter (DAC) to control the heater drivers.
+		}
+		\label{fig:AMM_overview}
+	\end{figure}
+
+\section{Sensors}
+	Recall in Section \ref{WFS} that the RF modal decomposition technique relies on comparing the Gouy phase of higher order modes to the fundamental Gaussian mode with an array of RF photodiodes in order to extract an error signal. The complication arises when using this method to extract the beat note between the fundamental mode and symmetric donut mode because the photodetector arrays must match the higher order mode geometry.  This is easier to deal with when trying to sense angular distortions from a misaligned cavity because the 01 and 10 modes can be sensed with a split photodetector, however, using a quadrant photodiode will not work to sense mode mismatch due to the cylindrical symmetry of the 02 and 20 modes. Currently, Advanced LIGO uses no RF sensors to detect mode mismatch so the next sections will provide sensing methods which can be used for dynamic closed loop feedback control.
 	
 	\subsection{Bullseye Photodiodes (BPD)}
-	It is clear that using a quadrant photodetector to measure the symmetric $U_{20} + U_{02}$ mode which arises from mismatch is futile because the integrated power on each side will be exactly the same due to donut mode symmetry. So it is simplest to try subtracting the inner beam power from the outer ring of the electric field in order to measure a phase difference using a specialized RF photodiode called a Bullseye Photodetector shown in Figure [].  This method is proven to already work in the Enhanced LIGO era \cite{MuellerMM} and is the most natural extension of the angular wavefront sensing/controls that is implemented in Advanced LIGO.
+	It is clear that using a quadrant photodetector to measure the symmetric $U_{20} + U_{02}$ mode which arises from mismatch is futile because the integrated power on each side will be exactly the same due to donut mode symmetry. So it is simplest to try subtracting the inner beam power from the outer ring of the electric field in order to measure a phase difference using a specialized RF photodiode called a Bullseye Photodetector (BPD) shown in Figure \ref{fig:BPD}.  This method is proven to already work in the Enhanced LIGO era \cite{MuellerMM} and is the most natural extension of the angular wavefront sensing/controls that is widely implemented in Advanced LIGO.
 	
-	\subsubsection{BPD Calibration}
-		To use the BPDs, there are a few steps required in designing the optical setup which is different than the standard PDH or WFS method.  Most notably, the beam size incident on the BPD must be tuned such that the zero crossing of the ($U_{20} + U_{02}$) matches the boundary between the inner and outer segments.  This condition is met if $\omega_{0} = \sqrt{2} r_0$ and Appendix \ref{BPDchar} shows the power ratio of the outer to inner segments when this is true,
+	\begin{figure}[h]
+		\centering
+		\frame{\includegraphics[width=1.0 \textwidth]{../Figures/RFBPD_real_V5.png}}
+		\caption[RF Bullseye Photodiode.]
+		{\textbf{RF Bullseye Photodiode.}  The left figure shows the analog readout electronics and the right gives segment numbers used  in the sensing matrix.
+		}
+		\label{fig:BPD}
+	\end{figure}
+	
+	\subsubsection{Calibration}
+		To use the BPDs, there are a few steps required in designing the optical setup which is different than the standard PDH or WFS method.  Most notably, the beam size incident on the BPD must be tuned such that the zero crossing of the ($U_{20} + U_{02}$) matches the boundary between the inner and outer segments.  This condition is met if $\omega_{0} = \sqrt{2} r_0$ which gives a well defined power ratio of the outer to inner segments as 
 		\begin{equation}
 		\text{Power Ratio} = \frac{\text{P}_2 + \text{P}_3 + \text{P}_4}{\text{P}_1}  \\
 		= \frac{e^{-2r_0^2/ \omega_{0}^2}} {1 - e^{-2r_0^2/ \omega_{0}^2 }} \approx 0.582
 		\end{equation}
-	
+		In Appendix \ref{BPDchar}, the complete derivation for the sensitivity of QPDs (Pitch/Yaw) and BPDs (Pitch/Yaw/Width) is explicitly shown for DC mismatches.  Another constraint is that the Gouy phase separation between successive BPDs must be close to 45 or 135 degrees such that the error signals from each BPD can be orthogonalized, this is in contrast to angular wavefront sensors which require 90 degree Gouy phase separation.  
 		
-		Picture of BPD
-		
-		Pitch and Yaw sensing matrix
-
-		Another constraint on using this method is that the Gouy phase separation between successive BPDs must be close to 45 or 135 degrees so that the error signals from each BPD can be orthogonalized, this is in contrast to angular wavefront sensors which require 90 degree Gouy phase separation.
-
-
 \subsection{Mode Converters}
-	The bullseye photodiodes can be difficult to calibrate and manufacture so a particularly interesting method of sensing mode mismatch is to convert the axisymmetric fields with a cylindrical telescope such that an error signal can be extracted with quadrant photodiode.  Using lenses which have two radii of curvature for each direction (x or y) with one being flat and the orthogonal is curved with some focal length, $f$.  The idea is to break the cylindrical symmetry of the donut mode (Figure \ref{fig:ModeConv}) and convert the beam into a pringle mode by advancing the phase of one axis by a factor of $\pi/2$ to create a relative sign flip.  Then, an error signal can extracted using the radio frequency quadrant photodiode that the angular wavefront sensors employ
+	The bullseye photodiodes can be difficult to calibrate and manufacture so a particularly interesting method of sensing mode mismatch is to convert the axially symmetric fields with a cylindrical telescope such that an error signal can be extracted with a quadrant photodiode.  This process is shown to preserve both the angular and modal mismatch error signals.  Using lenses which have two radii of curvature for each direction (x or y) with one being flat and the orthogonal is curved with some focal length, $f$.  The idea is to break the cylindrical symmetry of the donut mode (Figure \ref{fig:ModeConv}) and convert the beam into a pringle mode by advancing the phase of one axis by a factor of $\pi/2$ to create a relative sign flip.  Then, an error signal can extracted using the radio frequency quadrant photodiode that the angular wavefront sensors employ.
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=1.0 \textwidth]{../Figures/ModeConv.png}
+		\caption[Passing a bullseye mode through a $\pi/2$ mode converter.]
+		{\textbf{Passing a bullseye mode through a $\pi/2$ mode converter.} The reflected fields of a well aligned Fabry-Perot cavity with a slight mode mismatch will have a large contribution from the $\ket{\text{HG}_{20}} + \ket{\text{HG}_{02}}$ mode which is cylindrically symmetric.  After passing through a cylindrical telescope which has a $\pi/2$ phase advance for one axis, there is a relative sign flip which breaks the the symmetry and the error signal can be extracted with an RF quadrant photodiode.
+		}
+		\label{fig:ModeConv}
+	\end{figure}
 
 \subsubsection{Vector formalism for laser beams and optical cavities}
 	Consider an optical cavity that is longitudinally resonant on the $\text{TEM}_{00}$ mode using the Pound-Drever-Hall technique shown in Section \ref{FP} and also locked with angular wavefront sensors shown in Section \ref{WFS}. When there is a small mismatch between the waist size and position of the input beam relative to the cavity, this is equivalent to coupling the TEM-00 mode into higher order modes.  Since mode matching is only concerned with coupling to the second order modes, the  resultant field in reflection ($r_{FP}$) of a Fabry-Perot resonator will have the form
@@ -107,12 +128,36 @@ Mueller et al \cite{MuellerMM} showed that the error signal from mode mismatch c
 	\end{aligned}
 	\end{equation}
 where the surface integrals are over each segment.  In the above equation, $\hat{C}_{ij} $ was chosen with $\Delta \Omega = \pi/2$ and $\hat{R}_{ij}$ should rotate the beams such that the intensities in Figure {ModeConverter} are aligned with the quadrant photodiodes.
+
+\begin{figure}[h]
+	\centering
+	\frame{\includegraphics[width=0.5 \textwidth]{../Figures/Oneil_ModeConverter.png}}
+	\caption[Intensity profiles passing through a mode converter. ]
+	{\textbf{Intensity profiles passing through a mode converter \cite{ONeilModeTransform}.} 
+		The image in upper left corner represents the $m=3$ and $n=0$ Hermite Gauss (LG) mode which gets transformed through a converter for different rotations and phase advances.  The only combination which gives a symmetric Laguerre Gauss (LG) mode is $\phi=45\deg$ and $\theta=\pi/2$.  This gives some intuition about how to reverse this process to take an input LG mode and breaks the cylindrical symmetry so that the modal content can be sensed by a quadrant photodiode.
+	}
+	\label{fig:Oneil_modeconv}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.4 \textwidth]{../Figures/ModeConv_BPD_Pos.png}
+	\includegraphics[width=0.4 \textwidth]{../Figures/ModeConv_BPD_Siz.png}
+	\includegraphics[width=0.4 \textwidth]{../Figures/ModeConv_QPD_Pos.png}
+	\includegraphics[width=0.4 \textwidth]{../Figures/ModeConv_QPD_Siz.png}
+	\caption[Simulated error signals from MATLAB (QPD) and FINESSE (BPD).]
+	{\textbf{Simulated error signals from MATLAB (QPD) and FINESSE (BPD).} 
+		A numerical simulation of the error signal in reflection from a linear Fabry Perot cavity with different detectors when varying either the waist position ($\Delta z$) or Rayleigh range ($\Delta z_R$).  The error signal orthogonality at two different Gouy phases is demonstrated using both sensing schemes for active wavefront control.
+	}
+	\label{fig:ModeConv_err}
+\end{figure}
+
 		
 \subsection{DC Mode Matching}
 	The benefit to using the RF sensing scheme for generating an error signal is the automatic reduction of the higher order mode content which can use actuators to adjust the incoming mode of the beam to whatever the cavity requires.
 	This is particularly useful in areas where the laser power density is high and absorption on the high reflectivity surfaces cause thermal distortions in the cavity mode.
-	However, the output mode cleaner remains generally fixed in its eigenbasis such that the nominal input mode is static; in fact, the current alignment scheme uses DC quadrant photodiodes to feed back to the OMC suspensions and the control loop offsets are tuned to minimize the 10/01 modes.
-	If there was a low-noise way to continually measure the beam size at two different Gouy phases prior to entering the output mode cleaner, then there could be an error signal which would be used for thermal actuators directly after the signal recycling cavity.
+	However, the output mode cleaner remains fixed in its eigenbasis regardless of interferometer heating such that the nominal input mode is also static; in fact, the current alignment scheme uses DC quadrant photodiodes to feed back to the OMC suspensions and the control loop offsets are tuned to minimize the 10/01 modes.
+	If there was a low-noise way to continually measure the beam size at  two different Gouy phases prior to entering the output mode cleaner, then there could be an error signal which would be used for thermal actuators directly after the signal recycling cavity.
 	This can be achieved with bullseye sensors that read power ratio relatively quickly.
 	Another interesting way of measuring the mode is using a slowly rotating razer blade with known angular frequency in front of a single photodiode and inferring the error function which will directly give the beam size.
 	

@@ -1,26 +1,26 @@
-\chapter{Solutions for Detector Upgrades} 
-A solution to the current mode matching situation will be solved by further expanding active wavefront control described in Section \cite{AWC_current}. A full modal picture, sensors and actuator
-	\section{Sensors}
-* Bullseye photodetectors
+\chapter{Conclusions}
+The LIGO detectors are currently entering the engineering run to start observing cosmos at the best network sensitivities ever achieved for binary neutron star inspirals and both machines include upgrades to inject squeezed vacuum. The mode matching work presented in this thesis helped reduce the optical losses at Hanford and a parallel team implemented similar work at Livingston.  In addition, it has been shown that active wavefront control will need to be carefully considered for future design phases for the next generation of laser interferometric gravitational wave detectors where its difficulties are rooted in both the noise performance and operational stability.  It has also been shown that substrate thermal lensing from excess absorption will be the critical limiter for increasing input power.  The continuation of engineering and science tasks are itemized below:
 
-* Operation: range (in terms of watts and percentage mismatch)
+\begin{itemize}
+	\item Point Absorbers
+	\begin{itemize}
+		\item Early detection of point absorbers is crucial, so resonating each arm with power recycling and maximal input power ahead of full lock acquisition is a possible strategy for mapping out the optimal spot position on each test mass.
+		\item Corrections for the high spatial frequencies from point absorbers will require significant re-work of the current thermal compensation hardware which is underway with custom masks for the CO2 lasers. This will help with sideband build ups but does not solve the arm scatter losses which limit the sensitivity improvement with increased higher power.  However, it does provide the possibility of reducing the 9 Mhz higher order mode RIN coupling which co-resonates in the OMC.
+		\item For Advanced LIGO, POP sensors provide the most sensitive error signals for the longitudinal vertex degrees of freedom \cite{kiwamu_freq1}\cite{kiwamu_freq2}\cite{kiwamu_freq3}. However, in the face of irreparable lensing from point absorbers, re-visiting the sensing matrix for the available ports when the interferometer has reached thermal equilibrium may yield a better sensor for locking PRCL.
+	\end{itemize}
+	\item Global Mode Matching
+	\begin{itemize}		
+		\item Even if the point absorbers are not present, to truly implement a system that solves the mode matching challenges presented in LIGO, an active control scheme that implements both sensors and actuators will be required to span the degrees of freedom that are present in the interferometer.  Similar to the angular wavefront sensors already being used in LIGO at the time of this writing, the active wavefront control system should be expanded to a global sensing and actuation scheme, however, this adds to an already heavy commissioning load in preparing for runs.
+		\item The addition of mode converters and phase cameras will provide a glimpse into the modal content which is crucial in determining the upper limits of operating power. The effect of point absorbers on the interferometer noise is an on-going area of research but it is clear that increased differential substrate lensing beyond the Advanced LIGO specifications will increase the technical complications of high power operation. 
+	\end{itemize}
+	\item Hartmann Sensor Tunings
+	\begin{itemize}
+		\item Reducing the amount of in-chamber clipping on the Hartmann Sensors will provide more accurate and reliable results to estimate the total absorption, this can be done by replacing the in-vacuum steering mirrors with pico-motors in preparation for the fourth observing run.
+		\item Implementation of the current Thermal Compensation System still faces challenges with reliable lock acquisition when pre-loading the ring heaters in anticipation for $\>50$ Watts of power but with the combination of careful Hartmann Sensor tuning and sufficient fine-tuning it is possible to obtain the desired settings.
+	\end{itemize}
+	\item Squeezer to Interferometer Mode Matching
+	\begin{itemize}
+		\item Integrating reliable path length measurements with beam profile scans will make existing models more accurate which is important when using high sensitivity telescopes.
+	\end{itemize}
+\end{itemize}
 
-
-	\section{High Sensitivity Telescope}
-	* Translation stages: General principles, rigging, sensitivity
-	
-	* Mechanical description (Solidworks designs)
-	
-	* Constraints (range, vacuum, alignment, integration)
-
-	* Electronics 
-	
-	* Software
-	
-	*Implementation: rigg something better, in situ measurements.
-	
-	\section{A Global Active Wavefront Control Scheme}
-	To truly implement a system that solves the mode matching challenges presented in LIGO, an active control scheme that implements both sensors and actuators will be required to span the degrees of freedom that are present in the interferometer.
-	
-	\subsection{Hard and Soft Mode Matching}
-	Similar to the wavefront sensors already being used in LIGO at the time of this writing, the active wavefront system should be able to rotate the phase of their actuators and sensors to the common and differential basis.  Also, the extra two degrees of freedom required are the hard and soft modes for thermal lensing which curve the ITMs and ETMs in a way which vary the waist size and position orthogonally. 

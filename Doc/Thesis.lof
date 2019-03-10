@@ -1,24 +1,66 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces A simplified model for the effect of a substrate thermal lens on the carrier field.}}{6}{figure.caption.4}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces A plane wave passing through a lens with a temperature gradient.}}{9}{figure.caption.8}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces A conceptual model of flux balance for a cylindrical object.}}{11}{figure.caption.9}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces ITM Hartmann sensors optical layout.}}{20}{figure.caption.10}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Noise spectra for the HWS spherical lensing.}}{21}{figure.caption.11}
-\contentsline {figure}{\numberline {1.6}{\ignorespaces ITMX Hartmann Sensor output.}}{22}{figure.caption.13}
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Clipping on ITMX Hartmann Sensor.}}{23}{figure.caption.14}
-\contentsline {figure}{\numberline {1.8}{\ignorespaces A time series of the interferometer power increase sequence.}}{24}{figure.caption.15}
-\contentsline {figure}{\numberline {1.9}{\ignorespaces ITMX gradient plots (left) and wavefront maps (right) during a power up to 30 Watts of input power.}}{25}{figure.caption.16}
-\contentsline {figure}{\numberline {1.10}{\ignorespaces ITMY gradient plots (left) and wavefront maps (right) during a power up to 30 Watts of input power.}}{26}{figure.caption.17}
-\contentsline {figure}{\numberline {1.11}{\ignorespaces Thermal lensing as seen by the ITM Hartmann Sensors after a lock loss.}}{28}{figure.caption.19}
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Posterior distributions from fitting the Hartmann sensor spherical power.}}{29}{figure.caption.20}
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Calculated TCS settings to balance the substrate lens.}}{30}{figure.caption.21}
-\contentsline {figure}{\numberline {1.14}{\ignorespaces Mode matching the arm cavities to the power recycling cavity.}}{31}{figure.caption.23}
-\contentsline {figure}{\numberline {1.15}{\ignorespaces Comparing 3-D plots of the optical path distortion for ITMX and ITMY test masses after powering up the interferometer.}}{36}{figure.caption.24}
-\contentsline {figure}{\numberline {1.16}{\ignorespaces Interferometer DC powers as a function of round trip arm loss and test mass absorption.}}{38}{figure.caption.25}
-\contentsline {figure}{\numberline {1.17}{\ignorespaces Model of POP-18 as a function of differential thermal lensing using FINESSE.}}{39}{figure.caption.26}
-\contentsline {figure}{\numberline {1.18}{\ignorespaces Vertex open loop transfer functions while in Nominal Low Noise.}}{40}{figure.caption.27}
-\contentsline {figure}{\numberline {1.19}{\ignorespaces Measuring vertex optical gains as a function of heating.}}{41}{figure.caption.28}
-\contentsline {figure}{\numberline {1.20}{\ignorespaces Mode measurement from the OPO.}}{42}{figure.caption.29}
-\contentsline {figure}{\numberline {1.21}{\ignorespaces Projecting the modes from the squeezer to the OMC.}}{44}{figure.caption.30}
-\contentsline {figure}{\numberline {1.22}{\ignorespaces Repeated measurements made with new lenses.}}{45}{figure.caption.31}
-\contentsline {figure}{\numberline {1.23}{\ignorespaces OPO to OMC cavity scanning for various Lens2 positions.}}{46}{figure.caption.32}
+\contentsline {figure}{\numberline {1}{\ignorespaces A ring of free floating particles being stretched and squeezed by a passing gravitational wave.}}{3}{figure.caption.7}
+\contentsline {figure}{\numberline {2}{\ignorespaces A Michelson Interferometer.}}{5}{figure.caption.8}
+\contentsline {figure}{\numberline {3}{\ignorespaces Detector to radiation frame.}}{6}{figure.caption.9}
+\contentsline {figure}{\numberline {4}{\ignorespaces The phase response of an interferometer to a gravitational wave.}}{8}{figure.caption.10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5}{\ignorespaces A heterodyne detection scheme for interferometers.}}{14}{figure.caption.11}
+\contentsline {figure}{\numberline {6}{\ignorespaces Delay Line (top) vs Fabry Perot (bottom)\relax }}{16}{figure.caption.12}
+\contentsline {figure}{\numberline {7}{\ignorespaces The reflected, circulating, and transmitted powers for a single Fabry-Perot cavity.}}{18}{figure.caption.13}
+\contentsline {figure}{\numberline {8}{\ignorespaces Bode Plots of a linear Fabry-Perot response in reflection.\relax }}{19}{figure.caption.14}
+\contentsline {figure}{\numberline {9}{\ignorespaces Control scheme for an optical cavity.}}{21}{figure.caption.16}
+\contentsline {figure}{\numberline {10}{\ignorespaces Error signal in reflection}}{22}{figure.caption.17}
+\contentsline {figure}{\numberline {11}{\ignorespaces Michelson with Fabry Perot arms\relax }}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {12}{\ignorespaces A power recycled Fabry-Perot interferometer.}}{25}{figure.caption.19}
+\contentsline {figure}{\numberline {13}{\ignorespaces A dual recycled Fabry-Perot interferometer.}}{27}{figure.caption.20}
+\contentsline {figure}{\numberline {14}{\ignorespaces Comparing the shot noise limited differential arm spetra for different interferometer configurations.}}{28}{figure.caption.21}
+\contentsline {figure}{\numberline {15}{\ignorespaces Important sensor ports for Advanced LIGO}}{30}{figure.caption.22}
+\contentsline {figure}{\numberline {16}{\ignorespaces Noise budget from GWINC (Gravitational Wave Interferometer Noise Calculator)}}{31}{figure.caption.23}
+\contentsline {figure}{\numberline {17}{\ignorespaces Displacement spectrum for thermal noise.}}{41}{figure.caption.28}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {19}{\ignorespaces A depiction of the Gaussian beam properties with respect to cylindrical coordinates.}}{48}{figure.caption.31}
+\contentsline {figure}{\numberline {20}{\ignorespaces Beam size, radius of curvature, and Gouy phase as a function of distance propagation from the waist.}}{49}{figure.caption.32}
+\contentsline {figure}{\numberline {21}{\ignorespaces Intensity\relax }}{50}{figure.caption.33}
+\contentsline {figure}{\numberline {22}{\ignorespaces Misaligment and mode mismatch between two different Gaussian beams.}}{55}{figure.caption.38}
+\contentsline {figure}{\numberline {23}{\ignorespaces A Finesse model of a longitudinal mode scan comparing the Advanced LIGO power recycling and signal recycling cavities.}}{60}{figure.caption.40}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {24}{\ignorespaces Full interferometer simulation with FINESSE.}}{62}{figure.caption.41}
+\contentsline {figure}{\numberline {25}{\ignorespaces How FINESSE sees a beamsplitter.}}{63}{figure.caption.42}
+\contentsline {figure}{\numberline {26}{\ignorespaces Quantum limited sensitivity simulation to compare mismatches in the presence of squeezed light.}}{64}{figure.caption.43}
+\contentsline {figure}{\numberline {27}{\ignorespaces Simulating the output actuator phase spaces projected onto the OMC mode basis.}}{66}{figure.caption.44}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {28}{\ignorespaces MEDM master screen for adaptive mode matching at Syracuse.}}{72}{figure.caption.48}
+\contentsline {figure}{\numberline {29}{\ignorespaces Model overview for adaptive mode matching.}}{73}{figure.caption.49}
+\contentsline {figure}{\numberline {30}{\ignorespaces RF Bullseye Photodiode.}}{74}{figure.caption.50}
+\contentsline {figure}{\numberline {31}{\ignorespaces Passing a bullseye mode through a $\pi /2$ mode converter.}}{75}{figure.caption.52}
+\contentsline {figure}{\numberline {32}{\ignorespaces Intensity profiles passing through a mode converter. }}{78}{figure.caption.55}
+\contentsline {figure}{\numberline {33}{\ignorespaces Simulated error signals from MATLAB (QPD) and FINESSE (BPD).}}{79}{figure.caption.56}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {34}{\ignorespaces A simplified model for the effect of a substrate thermal lens on the carrier field.}}{82}{figure.caption.57}
+\contentsline {figure}{\numberline {35}{\ignorespaces A plane wave passing through a lens with a temperature gradient.}}{85}{figure.caption.61}
+\contentsline {figure}{\numberline {36}{\ignorespaces A conceptual model of flux balance for a cylindrical object.}}{87}{figure.caption.62}
+\contentsline {figure}{\numberline {37}{\ignorespaces ITM Hartmann sensors optical layout.}}{94}{figure.caption.63}
+\contentsline {figure}{\numberline {38}{\ignorespaces Noise spectra for the HWS spherical lensing.}}{95}{figure.caption.64}
+\contentsline {figure}{\numberline {39}{\ignorespaces ITMX Hartmann Sensor output.}}{97}{figure.caption.66}
+\contentsline {figure}{\numberline {40}{\ignorespaces Clipping on ITMX Hartmann Sensor.}}{98}{figure.caption.67}
+\contentsline {figure}{\numberline {41}{\ignorespaces A time series of the interferometer power increase sequence.}}{99}{figure.caption.68}
+\contentsline {figure}{\numberline {42}{\ignorespaces ITMX gradient plots (left) and wavefront maps (right) during a power up to 30 Watts of input power.}}{100}{figure.caption.69}
+\contentsline {figure}{\numberline {43}{\ignorespaces ITMY gradient plots (left) and wavefront maps (right) during a power up to 30 Watts of input power.}}{101}{figure.caption.70}
+\contentsline {figure}{\numberline {44}{\ignorespaces Thermal lensing as seen by the ITM Hartmann Sensors after a lock loss.}}{102}{figure.caption.72}
+\contentsline {figure}{\numberline {45}{\ignorespaces Posterior distributions from fitting the Hartmann sensor spherical power.}}{103}{figure.caption.73}
+\contentsline {figure}{\numberline {46}{\ignorespaces Calculated TCS settings to balance the substrate lens.}}{105}{figure.caption.74}
+\contentsline {figure}{\numberline {47}{\ignorespaces Mode matching the arm cavities to the power recycling cavity.}}{106}{figure.caption.76}
+\contentsline {figure}{\numberline {48}{\ignorespaces Comparing 3-D plots of the optical path distortion for ITMX and ITMY test masses after powering up the interferometer.}}{110}{figure.caption.77}
+\contentsline {figure}{\numberline {49}{\ignorespaces Interferometer DC powers as a function of round trip arm loss and test mass absorption.}}{111}{figure.caption.78}
+\contentsline {figure}{\numberline {50}{\ignorespaces Model of POP-18 as a function of differential thermal lensing using FINESSE.}}{113}{figure.caption.79}
+\contentsline {figure}{\numberline {51}{\ignorespaces Vertex open loop transfer functions while in Nominal Low Noise.}}{114}{figure.caption.80}
+\contentsline {figure}{\numberline {52}{\ignorespaces Measuring vertex optical gains as a function of heating.}}{115}{figure.caption.81}
+\contentsline {figure}{\numberline {53}{\ignorespaces OPO to OMC cavity scanning for various Lens2 positions.}}{116}{figure.caption.82}
+\contentsline {figure}{\numberline {54}{\ignorespaces Mode measurement from the OPO.}}{119}{figure.caption.83}
+\contentsline {figure}{\numberline {55}{\ignorespaces Projecting the modes from the squeezer to the OMC.}}{120}{figure.caption.84}
+\contentsline {figure}{\numberline {56}{\ignorespaces Repeated measurements with new lenses.}}{121}{figure.caption.85}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

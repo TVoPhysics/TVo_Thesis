@@ -1,0 +1,169 @@
+%-----------------------------------------------------------------------
+%
+% File Name: thesis.tex
+%
+% Author: Kelley, D. B.
+%
+% Revision: $Id$
+%
+% Hello and welcome to your new best friend for the next few months! I've created this so that you can have an easier time with formatting and 
+% can thus spend more time on making some beautiful and insightful contributions to physics. There are a few useful comments in this file. 
+% You should probably take a look at them so you know what options you have. 
+%
+% This is provided as-is, with no guarantee of accuracy or support. 
+% Good luck, and if you get really stuck, figure out where I am and send me a note. I might just respond.
+%
+%-----------------------------------------------------------------------
+
+% document class and packages
+\documentclass[12pt,notitlepage]{report}
+\usepackage{bibunits}
+\usepackage{suthesis}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[bookmarksnumbered, bookmarksopen, breaklinks, colorlinks, linkcolor=blue, citecolor=magenta]{hyperref}
+
+%\usepackage{caption}
+%\usepackage{rotating}
+%\usepackage{tensor}
+
+\pdfoutput=1
+\DeclareGraphicsExtensions{.pdf,.png}
+
+\hbadness=10000
+
+% new command definitions
+\newcommand{\half}{\frac{1}{2}}
+\newcommand{\ospsd}{\ensuremath{S_n\left(\left|f_{k}\right|\right)}}
+
+% journal definitions
+\newcommand{\apj}{{\it Astrophysical J.}}
+\newcommand{\apjl}{{\it Astrophysical J.}}
+\newcommand{\aap}{{\it Astron. and Astrophys.}}
+\newcommand{\cmp}{{\it Commun. Math. Phys.}}
+\newcommand{\grg}{{\it Gen. Rel. Grav.}}
+\newcommand{\cqg}{{\it Class. Quant. Grav.}}
+\newcommand{\lr}{{\it Living Reviews in Relativity}}
+\newcommand{\mnras}{{\it Mon. Not. Roy. Astr. Soc.}}
+\newcommand{\pr}{{\it Phys. Rev.}}
+\newcommand{\prl}{{\it Phys. Rev. Lett.}}
+\newcommand{\prd}{{\it Phys. Rev. D}}
+\newcommand{\pra}{{\it Phys. Rev. A}}
+\newcommand{\prsl}{{\it Proc. R. Soc. Lond. A}}
+\newcommand{\ptrsl}{{\it Phil. Trans. Roy. Soc. London}}
+\newcommand{\rmp}{{\it Rev. Mod. Phys.}}
+
+\newcommand{\tcr}{\textcolor{red}}
+\newcommand{\tcb}{\textcolor{blue}}
+\newcommand{\tcm}{\textcolor{magenta}}
+\newcommand{\tcg}{\textcolor{green}}
+\newcommand{\tcp}{\textcolor{purple}}
+
+\begin{document}
+	\title{Angular trapping of a mirror using radiation pressure}
+	\author{David B. Kelley}
+	\majorprof{Stefan Ballmer}
+	% For the following line, if you got a masters, list it first. Otherwise, leave the first of the two entries blank, like the line below it.
+	\previousdegree{M.S. Syracuse University, Syracuse, NY, 2013}{B.S. Massachusetts Institute of Technology, Cambridge, MA, 2010}
+	%\previousdegree{}{B.S. Massachusetts Institute of Technology, Cambridge, MA, 2010}
+	\submitdate{December 2015} % I know this says submit date, but SU requires that you put the month that you're going to graduate in.
+	\degree{Doctor of Philosophy}
+	\program{Physics}
+	\copyrightyear{2015}
+	\majordept{Physics}
+	\havededicationtrue
+	\dedication{to\\ my parents and Emma}
+	\haveminorfalse
+	\copyrighttrue
+	\doctoratetrue
+	\figurespagetrue
+	\tablespagetrue
+	\electronicsubmitfalse % if false, makes an approval title page. if true, makes title page with no approval spot. 
+	%You need to submit a signed version of the approval title page to the office, then an electronic edition with no approval spot. this is dumb.
+	
+	\Abstract{
+		Alignment control in gravitational-wave detectors is really hard.
+		I blame Sidles and Sigg \cite{Sidles06}).
+		I present the development, implementation, and measurement of a hare-brained scheme which uses radiation pressure to control a suspended mirror,
+		trapping it in the longitudinal degree of freedom and one angular degree of freedom. 
+	}
+	
+	\Acknowledgments{
+		\input{acknowledge}}
+	
+	\beforepreface
+	\prefacesection{Preface}
+	The work presented in this thesis stems from my participation in the LIGO
+	Scientific Collaboration (LSC). This work does not reflect the
+	scientific opinion of the LSC and it was not reviewed by the collaboration.
+	
+	\vspace*{0.5cm}
+	\noindent The theory of optical trapping in two degrees of freedom in chapter \ref{ch:introduction} is based on
+	
+	\vspace*{0.25cm}
+	
+	\noindent A.~Perreca~{\it et~al.}, ``Multi-dimensional optical trapping of a mirror,''
+	\prd~{\bf 89} (2014) 122002.
+	
+	\afterpreface
+	
+	\Chapter{Introduction}
+	\label{ch:introduction}
+	\input{introduction}
+	%\Chapter{Conclusion}
+	%\label{ch:conclusion}
+	%\input{conclusion}
+	
+	%\appendix
+	%\Chapter{Beam Separation}
+	%\label{ap:beamseparation}
+	%\input{beamSeparation}
+	
+	\clearpage
+	\bibliographystyle{unsrt}
+	\bibliography{references}
+	
+	\addcontentsline{toc}{chapter}{\numberline {Bibliography}}
+	
+	\clearpage
+	\birthplacedate{Brooklyn, New York \>\>January 1, 1999}
+	\collegewherewhen{%
+		\>Massachusetts Institute of Technology \>\>2006--2010, \>B.S.\\
+		\>\su	\>\>2010--2015, \>Ph.D.}
+	
+	\newpage
+	\null\vskip1in%
+	\begin{center}
+		{\Large\bf Curriculum Vitae}
+	\end{center}
+	\vskip 2em
+	\begin{tabbing}
+		\tabset
+		Title of Dissertation\\
+		\>Angular trapping of a mirror using radiation pressure
+	\end{tabbing}
+	\vskip 1em
+	
+	\begin{startvita}
+	\end{startvita}
+	
+	\renewenvironment{thebibliography}[1]%
+	{\begin{list}{\labelenumi\hss}%
+			{\usecounter{enumi}\setlength{\labelwidth}{3em}%
+				\setlength{\leftmargin}{5em}}}%
+		{\end{list}}
+	\renewcommand{\bibitem}[1]{\item\label{#1}\relax}%
+	\renewcommand{\theenumi}{\arabic{enumi}}%
+	\begin{publications}
+		\putbib[papers]
+	\end{publications}
+	
+	\begin{honorarysocieties}
+		2010 \> Fellowship??\\
+	\end{honorarysocieties}
+	
+	\finishvita
+\end{document}

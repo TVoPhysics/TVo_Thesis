@@ -1,84 +1,124 @@
-\documentclass[oneside,12pt]{book}
+\documentclass[suthesis,12pt,notitlepage]{report}
 \usepackage{MyStyle}
+\usepackage{suthesis}
 
-\title{Adaptive Mode Matching in Advanced LIGO}
-\date{Spring 2017}
-\author{Thomas Vo}
+\captionsetup{compatibility=false}
+
+
+%\pdfoutput=1
+\hbadness=10000
 
 \begin{document}
+	\Abstract{
+		The era of gravitational waves astronomy was ushered in by the LIGO (Laser Interferometer Gravitational-Wave Observatory) collaboration with the detection of a binary black hole collision \cite{DetectionPaper}.  The event that shook the foundation of space-time allowed mankind to view the cosmos in a way that had never been done previously. Since then, another remarkable event was found by the LIGO and Virgo detectors where two neutron stars collided sending both gravitational and electromagnetic waves to earth \cite{BNS}. LIGO was built with the purpose of detecting the ripples in space-time caused by astrophysical events with the hopes of understanding the complexities hidden within the cosmos.  In 2011, the primary stages of Advanced LIGO were installed and commissioned to start the first observing run (O1).  During the writing of this thesis, the detectors had hardware replaced in order to mitigate noise from scattered light and new optics which reduced the losses from absorption.  The upgrades were in preparation for the third observing run (O3) and the work presented here is primarily focused on experimental techniques for operating at higher power and mode matching Gaussian beams in the dual-recycled Michelson interferometer for the Advanced LIGO era and beyond.  The first two chapters discuss the fundamentals of gravitational waves and the LIGO detector configurations.  The third chapter introduces the reader to fundamentals in mode matching Gaussian laser beams.  The fourth and fifth chapter summarizes the author's work at Syracuse University and LIGO Hanford observatory in mode sensing and high-powered commissioning.
+	}
 	
-\doublespacing
-
-	\chapter*{Abstract}
-	The era of gravitational waves astronomy was ushered in by the LIGO (Laser Interferometer Gravitational-Wave Observatory) collaboration with the detection of a binary black hole collision \cite{DetectionPaper}.  The event that shook the foundation of space-time allowed mankind to view the cosmos in a way that had never been done previously. Since then, another remarkable event was found by the LIGO and Virgo detectors where two neutron stars collided sending both gravitational and electromagnetic waves to earth \cite{BNS}. LIGO was built with the purpose of detecting the ripples in space-time caused by astrophysical events with the hopes of understanding the complexities hidden within the cosmos.  In 2011, the primary stages of Advanced LIGO were installed and commissioned to start the first observing run (O1).  During the writing of this thesis, the detectors had hardware replaced in order to mitigate noise from scattered light and new optics which reduced the losses from absorption.  The upgrades were in preparation for the third observing run (O3) and the work presented here is primarily focused on experimental techniques for operating at higher power and mode matching Gaussian beams in the dual-recycled Michelson interferometer for the Advanced LIGO era and beyond.  The first two chapters discuss the fundamentals of gravitational waves and the LIGO detector configurations.  The third chapter introduces the reader to fundamentals in mode matching Gaussian laser beams.  The fourth and fifth chapter summarizes the author's work at Syracuse University and LIGO Hanford observatory in mode sensing and high-powered commissioning. 
+	\title{Adaptive Mode Matching in Advanced LIGO and Beyond}
+	\author{Thomas V. Vo}
+	\majorprof{Stefan Ballmer}
+	% For the following line, if you got a masters, list it first. Otherwise, leave the first of the two entries blank, like the line below it.
+	\previousdegree{M.S. Syracuse University, Syracuse, NY, 2016}{B.S. University of Washington, Seattle, WA, 2010}
+	\submitdate{May 2019} % I know this says submit date, but SU requires that you put the month that you're going to graduate in.
+	\degree{Doctor of Philosophy}
+	\program{Physics}
+	\copyrightyear{2019}
+	\majordept{Physics}
+	\haveminorfalse
+	\copyrighttrue
+	\doctoratetrue
+	\figurespagetrue
+	\tablespagetrue
+	\electronicsubmittrue % if false, makes an approval title page. if true, makes title page with no approval spot. 
+	%You need to submit a signed version of the approval title page to the office, then an electronic edition with no approval spot. this is dumb.
 	
-	\maketitle
+	\beforepreface
+	\prefacesection{Preface}
+	The work presented in this thesis stems from my participation in the LIGO
+	Scientific Collaboration (LSC). This work does not reflect the
+	scientific opinion of the LSC and it was not reviewed by the collaboration. 
 
-\chapter*{Acknowledgements}
+	LIGO DCC Number: P1900086
+	
+	\prefacesection{Acknowledgements}
+		\input{acknowledge}
+		
+	\afterpreface
+	
 
-I would like to thank my thesis advisor Stefan Ballmer for trusting in me as a scientist, always providing indispensable advice, and allowing me to follow my interests.
-
-To Peter Saulson: Your love of science truly inspires me to be a better scientist and teacher.
-
-To Duncan Brown:  Tough questions force us to grow and group meetings provided a growth spurt.
-
-To Sheila Dwyer, Jenne Driggers, and Georgia Mansell, thank you for your patience in teaching me the gritty details about the Hanford interferometer, I will never forget the difficult in-chamber work on HAM6 and the long commissioning hours in the control room.
-
-To Daniel Sigg, the dinners are a fugue of flavors, conversations and friends. Thank you for letting me participate in some of the crucial interferometer commissioning tasks.
-
-To Keita Kawabe, thank you for the tough questions but also the encouragement to do the best science possible.
-
-To Rick Savage, the Fellows program is one of the best parts of being at Hanford and I was honored to be a part of it for so long, thank you for the advice about all aspects of life and the fishing trips just when I needed it most.
-
-To Aidan Brooks, thank you for letting me work on/use TCS at Hanford, your guidance and experience is invaluable in times of confusion.
-
-To Daniel Vander-Hyde, thank you for helping at Hanford with your extra hands/brain and being patient with me when things weren't going well but also celebrating with me when things were!
-
-To Dan Brown, thanks for coming across the pond to help when we needed it most and the Inbetweeners jokes at wings night.
-
-To Corey Gray, Gunner and Gomez, the hikes brought peace to my troubled mind and patience to my un-restful soul.
-
-To all the operators and staff at Hanford: Jeff, Betsy, Chandra, TJ, Jim, Cheryl, Nico, Patrick, Ed, Gerardo, Evan.
-
-To Hang Yu: Thank you for helping me understand the inner workings of the interferometer with only a few lines of math and a picture.
-
-To my forever teachers Melissa Brainerd, Paul Didier, Chrissy Dahms, Carolyn West, and Dan Dorsey:  The accumulated effect of my work is a direct result of your teachings, you inspire kids like me from White Center to chase our dreams.
-
-To my childhood friends Quang, Leah, Thang, Sienna, Khanh, Truc, Kay, Tuan, Wanda, James, Matt and Trung:  You knew me when I was just dreaming of being a scientist, now we're here.
-
-To the Bloomingdale family: Thank you for always making me feel at home even in the coldest of Syracuse winters.
-
-To Jaysin Lord, Laura Nuttall, and Mat Hutchens: Thank you for the laughs and Thursday wings.
-
-To my family Cuong, Nhi, Tony, Theresa, Brittny, Kayla, Chloe: Your support and encouragement mean everything to me.
-
-To my parents: The difficulties of science dwindles in comparison to your journey from Vietnam, this work is dedicated to you.
-
-To my darling Tiffany: Your support provides nourishment for my soul and your love gives a guiding light through the darkest of nights.
-
-
-\addcontentsline{toc}{chapter}{Preface}
-\tableofcontents
-
-
-%\input{Ch1_Intro}	
-%\input{Ch2_LIGO}
-%\input{Ch2_Intro_to_MM}
-%\input{Ch3_Sim_MM_Finesse}
-%\input{Ch4_Exp_MM_Syr}
-%\input{Ch4_Exp_MM_Syr_Figures}
+	
+\input{Ch1_Intro}	
+\input{Ch2_LIGO}
+\input{Ch2_Intro_to_MM}
+\input{Ch3_Sim_MM_Finesse}
+\input{Ch4_Exp_MM_Syr}
 \input{Ch5_MM_at_LHO}
-%\input{Ch6_Det_Up}
-%\input{Appendix}
+\input{Ch6_Det_Up}
+\input{Appendix}
 %%%%%%%%%%%%%%%%%%%%%%
 
-\listoffigures
-\listoftables
 
 \medskip
-
 
 \bibliographystyle{abbrvnat}
 \bibliography{Refs}
 
-	\end{document}
+\clearpage
+\birthplacedate{Seattle, WA \>\>July 26, 1988}
+\collegewherewhen{%
+	\>University of Washington \>\>2006--2010, \>B.S.\\
+	\>\su	\>\>2014--2019, \>M.S.,Ph.D.}
+
+\newpage
+\null\vskip1in%
+\begin{center}
+	{\Large\bf Curriculum Vitae}
+\end{center}
+\vskip 2em
+\begin{tabbing}
+	\tabset
+	Title of Dissertation\\
+	\>Adaptive Mode Matching in Advanced LIGO and Beyond
+\end{tabbing}
+\vskip 1em
+
+\begin{startvita}
+\end{startvita}
+
+\renewenvironment{thebibliography}[1]%
+{\begin{list}{\labelenumi\hss}%
+		{\usecounter{enumi}\setlength{\labelwidth}{3em}%
+			\setlength{\leftmargin}{5em}}}%
+	{\end{list}}
+\renewcommand{\bibitem}[1]{\item\label{#1}\relax}%
+\renewcommand{\theenumi}{\arabic{enumi}}%
+
+\noindent Patents
+
+2018 Mode Converter and Quadrant Photodiode for Sensing Optical Cavity Mode Mismatch \newline
+
+\noindent Major Department
+
+Physics\newline
+
+\noindent Publications
+
+\begin{itemize}
+	\item{A. F. Brooks, B. Abbott, M. A. Arain, G. Ciani, A. Cole, G. Grabeel, E. Gustafson,
+	C. Guido, M. Heintze, A. Heptonstall, M. Jacobson, W. Kim, E. King, A. Lynch,
+	S. O’Connor, D. Ottaway, K. Mailand, G. Mueller, J. Munch, V. Sannibale, Z. Shao,
+	M. Smith, P. Veitch, T. Vo, C. Vorvick, and P. Willems. Overview of advanced ligo
+	adaptive optics. Appl. Opt., 55(29):8256{8265, Oct 2016. doi: 10.1364/AO.55.008256}}
+	\item{P. Veitch, A. Brooks, W. Kim, C. Blair, H. Cao, G. Grabeel, T. Hardwick, M. Heintze,
+	A. Heponstall, C. Ingram, J. Munch, D. Ottaway, and T. Vo. Hartmann wavefront
+	sensors for advanced ligo. In Conference on Lasers and Electro-Optics, page SW3M.5.
+	Optical Society of America, 2018. doi: 10.1364/CLEO SI.2018.SW3M.5.}
+	\item{Fabian Magana-Sandoval, Thomas Vo, y Daniel Vander-Hyde, J. R. Sanders, and Stefan W. Ballmer Sensing Optical Cavity Mismatch with a Mode-Converter and Quadrant Photodiode (in progress)}
+\end{itemize} 
+
+\noindent Awards and Fellowships
+
+2017-2019 LIGO Hanford Fellow
+
+\finishvita
+
+\end{document}

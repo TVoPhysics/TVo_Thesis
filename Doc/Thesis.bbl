@@ -1,4 +1,4 @@
-\begin{thebibliography}{90}
+\begin{thebibliography}{92}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -59,6 +59,13 @@ D.~Z. Anderson.
 \newblock \doi{10.1364/AO.23.002944}.
 \newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-23-17-2944}.
 
+\bibitem[Arai(2019)]{9rin}
+K.~Arai.
+\newblock H1 omc hom/sb resonant structure (and possible mitigation of
+  9th-order 9mhz sb resonance), 2019.
+\newblock URL
+  \url{https://alog.ligo-wa.caltech.edu/aLOG/index.php?callRep=46667}.
+
 \bibitem[Beijersbergen et~al.(1993)Beijersbergen, Allen, van~der Veen, and
   Woerdman]{BEIJERSBERGEN}
 M.~Beijersbergen, L.~Allen, H.~van~der Veen, and J.~Woerdman.
@@ -101,9 +108,9 @@ C.~Bond, D.~Brown, A.~Freise, and K.~A. Strain.
 \newblock \doi{10.1007/s41114-016-0002-8}.
 \newblock URL \url{https://doi.org/10.1007/s41114-016-0002-8}.
 
-\bibitem[Bond()]{FinesseH1}
+\bibitem[Bond(2013)]{FinesseH1}
 C.~e.~a. Bond.
-\newblock Finesse input files for the h1 interferometer.
+\newblock Finesse input files for the h1 interferometer, 2013.
 \newblock URL \url{https://dcc.ligo.org/LIGO-T1300904}.
 
 \bibitem[Brooks et~al.(2005)Brooks, Veitch, Munch, and Kelly]{Brooks_OffAxis}
@@ -154,9 +161,16 @@ A.~F. Brooks, B.~Abbott, M.~A. Arain, G.~Ciani, A.~Cole, G.~Grabeel,
 \newblock \doi{10.1364/AO.55.008256}.
 \newblock URL \url{http://ao.osa.org/abstract.cfm?URI=ao-55-29-8256}.
 
-\bibitem[Brown(2018)]{DanBrown_prvt}
+\bibitem[Brown(2018{\natexlab{a}})]{DanBrown_prvt}
 D.~Brown.
-\newblock Personal Communication, 2018.
+\newblock Personal Communication, 2018{\natexlab{a}}.
+
+\bibitem[Brown(2018{\natexlab{b}})]{modematch99}
+D.~Brown.
+\newblock 99% mode-matching on squeezer-itm-omc single bounce,
+  2018{\natexlab{b}}.
+\newblock URL
+  \url{https://alog.ligo-wa.caltech.edu/aLOG/index.php?callRep=45511}.
 
 \bibitem[Buonanno and Chen(2001)]{BuonannoChenQMNoise}
 A.~Buonanno and Y.~Chen.
@@ -220,9 +234,9 @@ S.~S.~Y. Chua.
   Gravitational-Wave Detector}.
 \newblock PhD thesis, The Australian National University, 4 2013.
 
-\bibitem[Collaboration()]{galaxy}
+\bibitem[Collaboration(2019)]{galaxy}
 L.~Collaboration.
-\newblock Ligo optics.
+\newblock Ligo optics, 2019.
 \newblock URL \url{https://galaxy.ligo.caltech.edu/optics/}.
 
 \bibitem[Collaboration(2009)]{LSCBeyondQM}
@@ -266,7 +280,8 @@ R.~DeRosa, J.~C. Driggers, D.~Atkinson, H.~Miao, V.~Frolov, M.~Landry, J.~A.
   {Adhikari}]{DriggersNewtonian}
 J.~C. {Driggers}, J.~{Harms}, and R.~X. {Adhikari}.
 \newblock Subtraction of newtonian noise using optimized sensor arrays.
-\newblock \emph{\prd}, 86\penalty0 (10):\penalty0 102001, Nov. 2012.
+\newblock \emph{Physics Review D}, 86\penalty0 (10):\penalty0 102001, Nov.
+  2012.
 \newblock \doi{10.1103/PhysRevD.86.102001}.
 
 \bibitem[Dwyer et~al.(2013)Dwyer, Barsotti, Chua, Evans, Factourovich,
@@ -503,9 +518,9 @@ O.~D. M~Rakhmanov, F~Bondu and R.~L.~S. Jr.
 \newblock URL
   \url{http://iopscience.iop.org/article/10.1088/0264-9381/21/5/015/meta}.
 
-\bibitem[Magana-Sandoval()]{Fabian_Thesis}
+\bibitem[Magana-Sandoval(2019)]{Fabian_Thesis}
 F.~Magana-Sandoval.
-\newblock Adaptive mode matching upgrade for advanced ligo.
+\newblock Adaptive mode matching upgrade for advanced ligo, 2019.
 \newblock URL \url{https://dcc.ligo.org/LIGO-P1800143}.
 
 \bibitem[Matichard et~al.(2015{\natexlab{a}})Matichard, Lantz, Mason,

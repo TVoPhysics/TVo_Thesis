@@ -111,7 +111,7 @@
 		\label{fig:ThermalLensWF}
 	\end{figure}
 
-	To understand how changing the index of refraction varies the optical path length, consider the function $S(r)$ which describes surfaces that are perpendicular to the rays. If $S(r)$ is a known function then the rays can be reconstructed using the gradient, $\nabla S(r)$.  As an analogy to electrostatics, $S(r)$ is similar to the potential function $V$ and the electric field is described by $\boldmath{E}=-\nabla V$.  As an extension of ray optics, Fermat's principle requires that the Eikonal equation be satisfied,
+	To understand how changing the index of refraction varies the optical path length, consider the function $S(r)$ which describes surfaces that are perpendicular to the rays. If $S(r)$ is a known function then the rays can be reconstructed using the gradient, $\nabla S(r)$.  As an analogy to electrostatics, $S(r)$ is similar to the potential function $V$ and the electric field is described by $\bf{E}=-\nabla V$.  As an extension of ray optics, Fermat's principle requires that the Eikonal equation be satisfied,
 	\begin{equation}
 	\vert \nabla S \vert^2 = n^2
 	\end{equation}
@@ -230,7 +230,7 @@
 	Generally, the contrast defect is defined as the ratio of power between the antisymmetric port and the reflected port when locked on a dark fringe.  In other words, it is the amount of junk light that is present in the interferometer when light between the two arms do not perfectly interfere with each other. This junk light can be the symptom of various causes, for example, an imbalance of reflectivity between ITMX and ITMY will cause non-perfect destructive interference at the antisymmetric port and a camera would see a TEM00 beam when locked on length.  Another cause of contrast defect could be from misalignment between the ITMs or beamsplitter which will result in seeing a TEM 01/10 mode.  However, if both of the aforementioned causes are fixed with a combination of stringent design specifications for the reflectivity and alignment loops closed to minimize angular jitter, then the contrast defect will be dominated by mode mismatch which can be fixed by a combination of ring heaters and CO2 lasers.  The picture gets even more complicated when adding in the absorption for individual optics and introducing multiple Fabry-Perot cavities which will treat the sidebands and carrier fields differently.  One of the main goals for the Thermal Compensation System is to correct the cold and hot interferometer differences in radii of curvature.
 	
 	\subsection{Simple Michelson Contrast Defect}
-	The simple Michelson can give a first estimate of the contrast defect when starting to commission the interferometer's thermal system, however, it is not used in nominal low noise since the dual-recycled Michelson is implemented.  By propagating the input mode cleaner beam to the beamsplitter and taking a single bounce at the high reflectivity surface, one can approximate the resultant mode overlap by measuring the power at the antisymmetric port.  The static mismatch correction was measured this way and is compensated using one of the CO2 lasers to reduce the contrast at 2 Watts of input power from $0.4\%$ to $0.1\%$ \cite{CD_meas}.
+	The simple Michelson can give a first estimate of the contrast defect when starting to commission the interferometer's thermal system, however, it is not used in nominal low noise since the dual-recycled Michelson is implemented.  By propagating the input mode cleaner beam to the beamsplitter and taking a single bounce at the high reflectivity surface, one can approximate the resultant mode overlap by measuring the power at the antisymmetric port.  The static mismatch correction was measured this way and is compensated using one of the CO2 lasers to reduce the contrast at 2 Watts of input power from $0.4\%$ to $0.1\%$.
 	
 	At this point the carrier and sideband fields follow the same ABCD matrix transfer function, so only one calculation is needed to estimate the contrast defect.  A keen reader will notice that this model will not take the Schnupp asymmetry into account which allows the $\hat{x}$-direction beam to travel an extra 8 centimeters further than the $\hat{y}$, however, this effect will only change the end result by approximately 10$\%$.  In fact, for this interferometer configuration, the dominate source of mismatch will be from the prompt reflection off the HR surfaces of the ITMs where most of the phase change occurs.  The sideband contribution at the antisymmetric port can be estimated by using equation \ref{sb_tf} and measuring the modulation depth, $\Gamma_{\Omega}$, for the 9 and 45 MHz RF fields that enter the interferometer,
 	\begin{equation}
@@ -279,7 +279,7 @@
 
 	\begin{figure}[!]
 	\centering
-	\includegraphics[width=0.75\textheight]{../Figures/HWS_Noise.PNG}
+	\includegraphics[width=0.7\textheight]{../Figures/HWS_Noise.PNG}
 	\caption[Noise spectra for the HWS spherical lensing.] 
 	{\textbf{Noise spectra for the HWS spherical lensing.} Taken from \cite{AWC_current}, this puts a lower bound on the Hartmann sensitivity to distortions for various time scales.}
 	\label{fig:HWS_spectra}
@@ -302,7 +302,7 @@
 		\centering
 		\includegraphics[width=0.4\textheight]{../Figures/ITMX_HWS_clipping.png}
 		\caption[Clipping on ITMX Hartmann Sensor.] 
-		{\textbf{Clipping on ITMX Hartmann Sensor.}
+		{\textbf{Clipping on ITMX Hartmann Sensor.}  A source of systematic noise found at both sites when trying to simultaneously align ITMX and ITMY Hartmann Sensors.  The CCD spot positions are very sensitive to the SR3 alignment so control loops and initial alignment are not recommended for this particular optic.  An in-vacuum pico-motor may help alleviate the clipping.
 		}
 		\label{fig:ITMX_clipping}
 	\end{figure}
@@ -311,18 +311,19 @@
 	
 	\begin{figure}[t!]
 		\centering
-		\includegraphics[width=0.35\textheight]{../Figures/1231726400TCS_and_PSL_powerup.png}
-		\includegraphics[width=0.35\textheight]{../Figures/1231726400HWS_powerup.png}
+		\includegraphics[width=0.45\textwidth]{../Figures/1231726400TCS_and_PSL_powerup.png}
+		\includegraphics[width=0.45\textwidth]{../Figures/1231726400HWS_powerup.png}
 		\caption[A time series of the interferometer power increase sequence.] 
-		{\textbf{A time series of the interferometer power increase sequence.} During this time, the interferometer is using DC-readout and locked at 2 watts of PSL input power with all of the angular control loops closed with high-bandwidth, in this configuration, the power recycling gain is approximately 45.  The left figure shows the increase of PSL input power and the CO2 lasers stepping down in power where levels of compensation were experimentally determined such that the angular control loops were stable and sideband build ups remained as high as possible.  The right plot shows the Hartmann sensor spherical power as a function of time with the starting point scaled to zero micro-diopters.  Although the point absorbers do not exhibit the same spatial structure as uniform heating so it is difficult to derive absolute absorption for ITMY, the spherical fitting gives some information about the relative scale of heating absorption between the two optics.}
+		{\textbf{A time series of the interferometer power increase sequence.} 
+			During this time, the interferometer is using DC-readout and locked at 2 watts of PSL input power with all of the angular control loops closed with high-bandwidth, in this configuration, the power recycling gain is approximately 45.  The left figure shows the increase of PSL input power and the CO2 lasers stepping down in power where levels of compensation were experimentally determined such that the angular control loops were stable and sideband build ups remained as high as possible.  The right plot shows the Hartmann sensor spherical power as a function of time with the starting point scaled to zero micro-diopters.  Although the point absorbers do not exhibit the same spatial structure as uniform heating so it is difficult to derive absolute absorption for ITMY, the spherical fitting gives some information about the relative scale of heating absorption between the two optics.}
 		\label{fig:pwr_up_time}
 	\end{figure}
 	
 	\begin{figure}[t!]
 		\centering
-		\includegraphics[width=0.5\textheight]{../Figures/1231726400_200dur_30W_ITMx.png}\quad
-		\includegraphics[width=0.5\textheight]{../Figures/1231726400_500dur_30W_ITMx.png}\quad
-		\includegraphics[width=0.5\textheight]{../Figures/1231726400_1000dur_30W_ITMx.png}\quad
+		\includegraphics[width=0.55\textheight]{../Figures/1231726400_200dur_30W_ITMx.png}\quad
+		\includegraphics[width=0.55\textheight]{../Figures/1231726400_500dur_30W_ITMx.png}\quad
+		\includegraphics[width=0.55\textheight]{../Figures/1231726400_1000dur_30W_ITMx.png}\quad
 		\caption[ITMX gradient plots (left) and wavefront maps (right) during a power up to 30 Watts of input power.]  
 		{\textbf{ITMX gradient plots (left) and wavefront maps (right) during a power up to 30 Watts of input power.}
 			It is important to note that there is a back-reflected stray beam from the super-luminous LED that is incident in the bottom left portion of the camera which is digitally cropped out during the real-time analysis. As previously noted, this particular Hartmann sensors suffers from beam clipping on the right side of the image which adds to the systematic noise.  A blue cross denotes the origin which is fitted with the Zernike polynomials to derive a spherical power.  The arrow lengths in the gradient plots are normalized to each individual plot and are meant to guide the eye in discerning the directionality and pattern of lensing.}
@@ -331,9 +332,9 @@
 	
 	\begin{figure}[t!]
 		\centering
-		\includegraphics[width=0.5\textheight]{../Figures/1231726400_200dur_30W_ITMy.png}\quad
-		\includegraphics[width=0.5\textheight]{../Figures/1231726400_500dur_30W_ITMy.png}\quad
-		\includegraphics[width=0.5\textheight]{../Figures/1231726400_1000dur_30W_ITMy.png}\quad
+		\includegraphics[width=0.55\textheight]{../Figures/1231726400_200dur_30W_ITMy.png}\quad
+		\includegraphics[width=0.55\textheight]{../Figures/1231726400_500dur_30W_ITMy.png}\quad
+		\includegraphics[width=0.55\textheight]{../Figures/1231726400_1000dur_30W_ITMy.png}\quad
 		\caption[ITMY gradient plots (left) and wavefront maps (right) during a power up to 30 Watts of input power.]  
 		{\textbf{ITMY gradient plots (left) and wavefront maps (right) during a power up to 30 Watts of input power.}
 			Compared to the ITMX phase map in Figure \ref{fig:ITMX_HWS_plot}, ITMY has a much larger overall heating pattern and higher spatial frequencies in the contours which was the first clue that revealed multiple (possibly 4) point absorber on the test mass.  There is also a halo of gradients on the outer rim of the plots which is most prominent on the lower left corner.  This is due reducing the CO2 laser power in an attempt to compensate the lensing effects as the interferometer beam heats up the test mass.  The overall scale of self-heating with the higher spatial frequencies of the point absorbers makes it incredibly difficult to compensate with using the CO2 lasers as designed by Advanced LIGO. }
@@ -341,7 +342,7 @@
 	\end{figure}
 
 	\subsubsection{Measuring Uniform Absorption}
-	After the arm power drops suddenly, the heat decays exponentially depending on the amount of absorption on the high reflective surface of the arm cavity.  Using the HWS, it is possible to fit the decay rate to a finite element model of a cylindrical mass.  A fitted parameter for absorption is extremely important in pre-determining the amount compensation necessary to prepare the test masses for lock acquisition.  
+	After the arm power drops suddenly, the lensing decays exponentially depending on the amount of absorption on the high reflective surface of the arm cavity.  Using the HWS, it is possible to fit the decay rate to a finite element model of a cylindrical mass.  A fitted parameter for absorption is extremely important in pre-determining the amount compensation necessary to prepare the test masses for lock acquisition.  
 	
 	Applying an Markov Chain Monte-Carlo method allows some statistical uncertainty estimates for the exponential fitting to the data shown in Figure \ref{fig:mcmc_hws_abs}, where the priors are assumed to be random Gaussian noise and the initial guesses are scaled roughly with a least squares fitting algorithm. Figure \ref{fig:hws_abs} shows the measured spherical power from interferometer heating for ITMX/ITMY and comparing the two optics shows that the spherical power difference for ITMY is almost a factor of 2 larger than ITMX. One of the main differences between the O2 and O3 observing runs was the replacement of ITMX, ETMX, and ETMY test masses.  With a fully running Hartmann Sensor system in place which monitors the wavefront curvature across the optic, long-term trends over the observation runs will be able to determine how absorption changes as a function of time and whether test masses have an innate lifetime.  This will be particularly important if the next generation of detectors use much higher power levels in order to achieve better high frequency sensitivity \cite{DanBrown_prvt}.  Using this method, the current absorption estimates for the H1 input test masses are as follows:
 	\begin{equation}
@@ -391,9 +392,9 @@
 	\subsection{Ring Heater and CO2 Commissioning}\label{Sec:RH}
 	To counteract the effects of interferometer heating, Advanced LIGO uses a ring heater \cite{ramette_analytical} \cite{wang_thermalmodel} which has two heating elements mounted on the suspension cage. Each of them are glass formers wrapped by nichrome wire that has current running through it and radiates an annular heating pattern. The ring heaters will have two effects, it will induce a substrate lens and a radius of curvature change.  As shown in Section \ref{sec:hotcoldifo}, the carrier beam will not see the substrate lens but the radius of curvature difference will change the overall modal shape of the cavity.  Similar to the distortion derived in section \ref{sec:wf_dist} where the thermo-refractive effect dominates when dealing with a Gaussian beam, the same is true from the ring heaters. Using equation \ref{gauss_power_ovl}, one can directly calculate the power overlap between a pre-loaded cavity and the original, as it turns out, the effect varies the overlap by less than $0.1\%$
 
-	After using the Hartmann sensors to determine the absorption and pre-loading the ring heaters to compensate the interferometer lensing, the substrate is no longer in the nominal configuration during lock acquisition.  Therefore, it is necessary to use CO2 (Carbon Dioxide) lasers to mimic the interferometer's heating on the compensation plate.  The CO2 lasers are located on each input test mass chamber and injected through a double zinc selenide viewport, then two steering mirrors direct the heating beam on the compensation plate of the reaction mass.  In initial LIGO, the CO2 beams were injected onto the high reflectivity surfaces of the test masses which created both a radius of curvature on the cavity side and a thermo-refractive change in the substrate.  However, in advanced LIGO, the CO2 lasers will only affect the substrate lensing.  Tuning the CO2 power will have a dramatic effect on the interferometer auxiliary degrees of freedom because the sidebands get rejected by the arm cavity and only resonate in the recycling cavities.
+	After using the Hartmann sensors to determine the absorption and pre-loading the ring heaters to compensate the interferometer lensing, the substrate is no longer in the nominal configuration during lock acquisition.  Therefore, it is necessary to use CO2 (Carbon Dioxide) lasers to mimic the interferometer's heating on the compensation plate.  The CO2 lasers are located on each input test mass chamber and injected through a double zinc selenide viewport, then two steering mirrors direct the heating beam on the compensation plate of the reaction mass.  In initial LIGO, the CO2 beams were injected onto the high reflectivity surfaces of the test masses which created both a radius of curvature on the cavity side and a thermo-refractive change in the substrate.  However, in advanced LIGO, the CO2 lasers will only affect the substrate lensing.  Tuning the CO2 power will have a dramatic effect on the interferometer auxiliary degrees of freedom because the sidebands get rejected by the arm cavity and only resonate in the recycling cavities.  The self-heating caused by the interferometer beam is assumed to have a Gaussian intensity profile, while the CO2 heating beam is meant to have a uniform profile across the test mass surface which allows for a consistent phase distortion as a beam passes through the substrate.  Settings for the ITM ring heaters and CO2 lasers are calculated in Figure \ref{fig:TCS_ITMs} based off the Hartmann measurements.
 	
-	The self-heating caused by the interferometer beam is assumed to have a Gaussian intensity profile, while the CO2 heating beam is meant to have a uniform heating profile across the test mass surface which allows for a consistent phase distortion as a beam passes through the substrate.
+	Determining the ITM ring heaters and CO2 power levels still leaves the end test mass ring heaters to be set.  In Figure \ref{fig:TCS_ETM}, the goal is to maintain the mode matching between the arms while simultaneously searching for the optimal overlap with the power recycling cavity.  This is done by determining the spatial mode overlap between all three cavities (XARM, YARM, and PRC). The linear portion of the graph shows a combination of common and differential adjustment of each ETM ring heater that keeps the mode matching between the arms at less than 1 PPM 
 	
 	\begin{figure}[!]
 		\centering
@@ -414,7 +415,7 @@
 		\label{fig:TCS_ITMs}
 	\end{figure}
 	
-		\begin{table}[]
+	\begin{table}[]
 		\centering
 		\begin{tabular}{|l||r|r|r|}
 			\hline
@@ -435,21 +436,23 @@
 		\centering
 		\includegraphics[width=1.0 \textwidth]{../Figures/ETM_TCS_Settings.png}
 		\caption[Mode matching the arm cavities to the power recycling cavity.]{
-			\textbf{Mode matching the arm cavities to the power recycling cavity.}  Determining the ITM ring heaters and CO2 power levels still leaves the end test mass ring heaters to be set.  The goal is to maintain the mode matching between the arms while simultaneously searching for the optimal overlap with the power recycling cavity.  This is done by determining the spatial mode overlap between all three cavities (2 ARMS) The linear portion of the graph shows a combination of common and differential adjustment of each ring heater that keeps the mode matching between the arms at less than 1 PPM 
+			\textbf{Mode matching the arm cavities to the power recycling cavity.}
 		}
 		\label{fig:TCS_ETM}
 	\end{figure}
-	
+\clearpage
 \section{Point Absorbers}\label{sec:point_absorbers}
-	Up till to point, all actuators models, and measurements assumed uniform absorption across the optics which results in second order Hermite-Gauss coupling with the fundamental Gaussian beam .  As it turns out, this assumption is not so simple. One of the main successes for the Hartmann Wavefront Sensors have been the ability to find excess absorption due to point absorbers on the high reflectivity surfaces of the test masses.  During the second observation run (O2), there was an absorber found on ITMX that made increasing the input power past 30 watts extremely difficult and futile because it was thought to couple intensity noise into DARM. The exact origin of these point absorbers is still an active area of research but incursions into the vacuum system will always pose a risk of spreading particulate on the HR surfaces.
+	Up till now, all actuators models, and measurements assumed uniform absorption across the optics which results in second order Hermite-Gauss coupling with the fundamental Gaussian beam .  As it turns out, this assumption is not so simple. One of the main successes for the Hartmann Wavefront Sensors have been the ability to find excess absorption due to point absorbers on the high reflectivity surfaces of the test masses.  During the second observation run (O2), there was an absorber found on ITMX that made increasing the input power past 30 watts extremely difficult and futile because it was thought to couple intensity noise into DARM. The exact origin of these point absorbers is still an active area of research but incursions into the vacuum system will always pose a risk of spreading particulate on the HR surfaces.
 
-	\textbf{\emph{Part way into commissioning for O3, another point absorber on ITMY was detected that showed similar characteristics.}}  Since their spatial frequencies are much higher than the uniform absorption, many of the models for scattered power and thermal effects require significant adjustment to predict the interferometer behavior.  To decompose the differential phase map into the Hermite Gauss basis requires a relatively high order and makes full interferometer simulations very difficult.  For example, FINESSE calculations on a laptop tend to become unwieldy at around $n+m \leq 6$.  This affects the HWS's ability to properly evaluate total thermal lens from the interferometer, therefore changing the estimated absorption.  There are two main parts which allow point absorbers to adversely affect interferometer performance.   The first is scattering from the arm cavity that takes away carrier light and couples to higher order modes, and secondly, the thermal lens in the substrate distorts the power recycling cavity for the sideband build ups dramatically.
+	\textbf{\emph{Part way into commissioning for O3, another point absorber on ITMY was detected that showed similar characteristics.}}  Since their spatial frequencies are much higher than the uniform absorption, many of the models for scattered power and thermal effects require significant adjustment to predict the interferometer behavior.  To decompose the differential phase map into the Hermite Gauss basis requires a relatively high order and makes full interferometer simulations very difficult.  For example, FINESSE calculations on a laptop tend to become unwieldy at around $n+m = 6$.  This affects the HWS's ability to properly evaluate total thermal lens from the interferometer, therefore changing the estimated absorption.  There are two main parts which allow point absorbers to adversely affect interferometer performance.   The first is scattering from the arm cavity that takes away carrier light and couples to higher order modes, and secondly, the thermal lens in the substrate distorts the power recycling cavity for the sideband build ups dramatically.
 	
 	A few ways to try getting around this could be separating the temporal effects which quadratically depend on the point absorber size. The thermo-refractive transient solution found in Vinet \cite{Vinet_Thermal_Issues} has the form
 	\begin{equation}\label{Thermal_Dist_time}
 	Z_{\text{TR}}(t)   \propto 1-\exp{-t/ \tau}
 	\end{equation}
 	where $\tau = \frac{\rho C w_\text{pa}^2}{3 \kappa} $ is the characteristic time constant that depends on the beam size $w_\text{pa}$, the thermal conductivity $\kappa$, the specific heat $C$ and the material density $\rho$.  A simple model can consist of two beams with different sizes which will have separate time constants.  Another interesting way of characterizing what can be compensated for O3 could be to Fourier transform the optical path distortion and low pass the high spatial frequency components with a Gaussian filter. The cut-off frequency can be estimated by the approximate point absorber size (10-20 mm).  Of course, early detection and replacement of an optic may be the most efficient way to avoid custom thermal compensation.  Figure \ref{fig:3d_HWS_plot} shows a comparison between ITMX and ITMY while the interferometer is increasing input laser power from 2 to 30 Watts.  Within the first few hundred seconds, the point absorbers begin showing up in the optical path distortion map.
+	
+	An interesting coupling that was discovered which the point absorbers could be responsible for is higher order mode 9 Mhz leakage through the OMC.  Generally, the OMC is very good at rejecting both the sidebands and first few higher order modes but the addition of point absorbers couples greater spatial frequencies than anticipated.  Careful analysis by Koji Arai \cite{9rin} shows the Hanford OMC can allow some 9th order 9 Mhz onto the OMC DCPDs.  This coupling should provide a decent metric for reducing the point absorber induced noise. 
 	
 	During commissioning periods, the highest starting priority is to achieve full resonance as quickly as possible and is easier with approximately 2 Watts of input laser power. This requires locking the arm length stabilization (ALS) system with 532 nm, the vertex degrees of freedom (DRMI) and complete the common arm length (CARM) transition. Additionally, closing all angular degrees of freedom (ASC) will take a lot of time and energy.  If major upgrades or fixes have occurred such as replacing main test masses then all the prior steps require many months of commissioning.  Generally, vacuum incursions into the main vertex cost the most time and money because of the large volume needing to be pumped.  All this is to say, the earlier point absorbers are detected, the better.  However, this requires a high level of arm power which historically has come much later on the road to nominal low noise.  In Figure \ref{fig:HWS_spectra}, the signal-to-noise ratio is 10 at 0.01 Hz for 37.5 mW of absorbed power which means the circulating arm power must reach at least 75 kW  (assuming absorption is approximately 0.5 ppm)to be detectable within the time constant of point absorbers. This could still be achieved without full lock if the first priority after pumping down is resonating a single arm with power recycling at the highest input laser power possible (currently 70 Watts).  With a single power recycled arm cavity the expected circulating power absorbed on the HR surface of the test masses is
 	\begin{equation}
@@ -466,7 +469,7 @@
 	 
 	 \indent Once these anomalies are found, the question remains, what can be done?
 	 
-	 One consideration is a complete re-design of Thermal Compensation to account for higher frequency spatial corrections. There are already custom masks at Hanford which are designed to smooth the optical path distortion in the substrate and can be implemented with the CO2 lasers on the compensation plate to increase the sideband build ups, which is one of the biggest difficulties associated with point absorbers.  However, this does not solve the fundamental problem of losing power recycling gain due to power scattering where the quadratic losses of the arm cavity set an upper limit for increasing power.  Another way to avoid these effects is to move the beam spot away from the point absorber on the HR surface but it must be sufficiently far or the odd higher order modes will couple very strongly with asymmetry. 
+	 One consideration is a complete re-design of Thermal Compensation to account for higher frequency spatial corrections. There are already custom masks at Hanford which are designed to smooth the optical path distortion in the substrate and can be implemented with the CO2 lasers on the compensation plate to increase the sideband build ups, which is one of the biggest difficulties associated with point absorbers.  However, this does not solve the fundamental problem of losing power recycling gain due to power scattering where the quadratic losses of the arm cavity set an upper limit for increasing power.  Another way to avoid these effects is to move the beam spot away from the point absorber on the HR surface but it must be sufficiently far or the odd higher order modes will couple very strongly with asymmetry. In terms of noise, the 9 Mhz RIN coupling to the OMC DCPDs could be reduced with changing the OMC transverse mode spacing by locking on a different carrier resonance a free spectral range away.  The introduction of a well-tuned custom mask should also reduce higher order mode content in the recycling cavities.
 	 
 	 \begin{figure}[t!]
 	 	\centering
@@ -497,27 +500,27 @@
 		\label{fig:simple_prc_arm}
 	\end{sidewaysfigure}
 
-\section{Higher Power Operation}
-	The goal for O3 is at least 150 kW of circulating power in the arms.
-	
-	With the sensors and tests described in the preceding sections, a cohesive plan to pre-load the interferometer was implemented in order to achieve stable higher power operation in the detectors.  Generally, the Thermal Compensation System has two goals: Firstly, the actuators are used to pre-load the test masses with heat in anticipation of the lensing due to the interferometer while operating at full lock and higher power.  Secondly, the amount of mode-matching between the coupled cavities must be optimized in order to achieve the best sensitivity.  Using the absorptions measured in Figure \ref{fig:hws_abs}, it is possible to estimate the total amount of lensing from self-heating as a function of input power.
-	
-	In principle, the Hartmann measurements of absorbed power provide sufficient information to pre-loaded the interferometer in anticipation of 50 Watts of input power. At Hanford, this proved to be very difficult for reliably locking the interferometer, so with the combination of estimates provided by the Hartmann Sensors and experimentation with the CO2 power levels at each stage of increasing the PSL power, we are able to consistently lock at 30 Watts of PSL input power and $\approx 140 \; kW$ of circulating arm power.  The biggest difficulty associated with implementing this thermal compensation scheme was consistently locking DRMI in high micro-seismic conditions. This could be contributed to misalignment of CO2 lasers to the test masses, which were initially aligned using the Hartmann sensors and double-checked by cycling the lasers on/off to measure the single bounce interferometer beam deflection at the anti-symmetric port.
-	
-	This required considerable tuning of the thermal compensation system that is not needed at Livingston for the same input power.  Although both interferometers saw a decay in power recycling which was found to be attributed to a point absorber on L1-ETMX.  
-	
-	During the early phases of commissioning higher power at Hanford, most of the locklosses occurred when the 9 Mhz sidebands would fall below a certain threshold level.
+\clearpage
 
-	\begin{figure}[t!]
-		\centering
-		\includegraphics[width=0.75 \textwidth]{../Figures/POP_18dive.png}
-		\caption[Model of POP-18 as a function of differential thermal lensing using FINESSE.]  
-		{\textbf{Model of POP-18 as a function of differential thermal lensing using FINESSE.}
-			The horizontal axis is differential lensing between the ITMX/ITMY substrates and the vertical axis represents the normalized power when locked with nominal mode matching.  POP-18 is the signal at the power recycling pick-off port demodulated at 18 MHz which shows the sideband power buildup in the power recycling cavity. In this particular simulation the differential lensing requires finding a new operational point to lock the longitudinal degrees of freedom.  Additionally, the sensors which are used to maintain resonance and readout the RF power need to be re-phased in order to get the upper limit estimate.  Even with modest differential lensing (10 microdiopters), the buildup drops by 20 percent and eventually the simulation has trouble maintaining resonance similarly to the actual interferometer.
-		}
-		\label{fig:POP18}
-	\end{figure}
+\section{Higher Power Operation}
+	The goal for O3 is 150 kW of circulating power in the arms. With the sensors and tests described in the preceding sections, a cohesive plan to pre-load the interferometer was implemented in order to achieve stable higher power operation in the detectors.  Generally, the Thermal Compensation System has two goals: Firstly, the actuators are used to pre-load the test masses with heat in anticipation of the lensing due to the interferometer while operating at full lock and higher power.  Secondly, the amount of mode-matching between the coupled cavities must be optimized in order to achieve the best sensitivity.  Using the absorptions measured in Figure \ref{fig:hws_abs}, it is possible to estimate the total amount of lensing from self-heating as a function of input power (see Figure \ref{fig:TCS_ITMs}).
+
+	In principle, the Hartmann measurements of absorbed power should provide sufficient information to pre-loaded the interferometer in anticipation for 50 Watts of input power.  The biggest difficulty associated with implementing this thermal compensation scheme was consistently locking DRMI in high micro-seismic conditions. This could be contributed to misalignment of CO2 lasers to the test masses, which were initially aligned using the Hartmann sensors and double-checked by cycling the lasers on/off to measure the single bounce interferometer beam deflection at the anti-symmetric port. At Hanford, this difficulty for reliably locking the interferometer forced a reduction in pre-loading, so with the combination of estimates provided by the Hartmann Sensors and experimentation with the CO2 power levels at each stage of increasing the PSL power, the interferometer is able to consistently lock at 30 Watts of PSL input power and $\approx 140 \; kW$ of circulating arm power. 
 	
+	\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.75 \textwidth]{../Figures/POP_18dive.png}
+	\caption[Model of POP-18 as a function of differential thermal lensing using FINESSE.]  
+	{\textbf{Model of POP-18 as a function of differential thermal lensing using FINESSE.}
+		The horizontal axis is differential lensing between the ITMX/ITMY substrates and the vertical axis represents the normalized power when locked with nominal mode matching.  Even with modest differential lensing (10 microdiopters), the buildup drops by 20 percent and eventually the simulation has trouble maintaining resonance, similar to the actual interferometer.
+	}
+	\label{fig:POP18}
+	\end{figure}
+
+	During the early phases of commissioning for higher power at Hanford, most of the lock losses occurred when the 18 Mhz sidebands in transmission of PR2 (POP-18) would fall below a certain threshold level of approximately 70\% of buildup compared to locking at 2 Watts of input power.  This effect was not observed at Livingston and can be attributed to the point absorber that uniquely contaminated H1-ITMY.  To study the effects of differential uniform lensing in an interferometer, FINESSE is able to simulate the POP-18 signal at the power recycling pick-off port demodulated at 18 MHz which shows the sideband power buildup in the power recycling cavity (see Figure \ref{fig:POP18}). In this particular simulation the differential lensing requires finding a new operational point to lock the longitudinal degrees of freedom.  Additionally, the sensors which are used to maintain resonance and readout the RF power need to be re-phased in order to get the upper limit.  This agrees with the analytical calculation mentioned in Section \ref{Sec:TL_lensing} where the carrier power recycling gain is not as adversely affected by the substrate thermal lens compared to the sideband fields.
+	
+	The carrier and sidebands resonate differently in the power recycling cavity where the latter has approximately a factor of 10 larger finesse than the former for 9 Mhz \cite{kiwamu_freq1}.  However, this assumes a lossless interferometer and needs to be revisited in the presence of substrate thermal lensing.   As with all Pound-Drever-Hall locking, an error signal relies on the static and varying field accumulating different phases to lock the cavity. However, as lensing causes more losses for the sideband compared to the carrier, the optical gain starts to diminish.  For the current Advanced LIGO configuration, all vertex degrees of freedom (PRCL, SRCL, MICH) utilize the POP port for their error signals shown in Figure \ref{fig:vertex_OLTF}. The degradation can be estimated by injecting a dither line into each degree of freedom and digitally demodulating the respective sensors at the excitation frequency, see Figure \ref{fig:POP18_POP90}.  This provides insight on how much the optical gain/phase shifts as a function of heating.  When powering up to 30 Watts, the loss of optical gain in PRCL is almost 80\% with a 10 degrees phase shift, which enough to drive the system towards an unstable loop.  This can be compensated by adjusting the digital gain but that fix is only temporary because the problem stems from an optical loss.  Alternatively, searching for optimal thermal compensations settings to re-gain theses losses can be very time consuming because of the long thermal time constants and in the case of point absorbers, the current thermal compensation system is not designed to correct the high spatial frequencies.  As previously mentioned, one of the main limiters to higher power operation will be reducing the optical loss from mode mismatch.
+
 	\begin{figure}[t!]
 		\centering
 		\includegraphics[width=0.75 \textwidth]{../Figures/MeasuredVertexOLF.png}
@@ -535,29 +538,44 @@
 		\includegraphics[width=1.0 \textwidth]{../Figures/MICH_EXC_LSC-POP_A_RF45_Q.png}
 		\caption[Measuring vertex optical gains as a function of heating.]  
 		{\textbf{Measuring vertex optical gains as a function of heating.}
-			Injecting a dither line into each degree of freedom and digitally demodulating the respective sensors at the excitation frequency can provide insight on how much the optical gain/phase shifts as a function of heating. At time t=0, the power begins increasing from 2 watts of input power to 20 watts. In PRCL, there is a reduction to 80\% of the starting magnitude and 7.5 degrees of phase rotation with the first power increase. At 0.9 hours, the input power goes from 20 to 30 watts and the magnitude drops to about 30\% of the original gain which results in a lock loss.  As for the SRCL and MICH degrees of freedom, there are slight changes first power increase but not nearly as bad as PRCL.
+		At time t=0, the power begins increasing from 2 watts of input power to 20 watts. In PRCL, there is a reduction to 80\% of the starting magnitude and 7.5 degrees of phase rotation with the first power increase. At 0.9 hours, the input power goes from 20 to 30 watts and the magnitude drops to about 30\% of the original gain which results in a lock loss.  As for the SRCL and MICH degrees of freedom, there are slight changes first power increase but not nearly as bad as PRCL.
 		}
 		\label{fig:POP18_POP90}
 	\end{figure}
 
-
 \clearpage
 
 \section{Mode Matching from the OPO to the OMC}
-	Using the OMC as an optical spectrum analyzer is one simplest methods for understanding the mode matching coming out of the interferometer.  In the single bounce configuration, measuring the ratio between the second order mode and the fundamental gives a first look at the limit of matching.  The same can be done using the squeezed beam as well and during commissioning of the squeezer, a mode mismatch of 16\% was observed which led to a re-design of the OPO to OMC optical path.
+	Mentioned in Chapter 2, one of the main limitations to effective squeezing is mode mismatch which needs to be characterized carefully.  Generally, the mode exiting the OPO and OMC cavities are accurately determined from design values but the path lengths and mode profile was measured and the results are presented in this section.
 	
-	\begin{figure}[b!]
+	\begin{figure}[]
+	\centering
+	\includegraphics[width=0.7\textwidth]{../Figures/Lens_Closest_to_OPO.png}
+	\includegraphics[width=0.7\textwidth]{../Figures/Lens_in_Center_Position.png}
+	\includegraphics[width=0.7\textwidth]{../Figures/Lens_Furthest_from_OPO.png}
+	\caption[OPO to OMC cavity scanning for various Lens2 positions.]  
+	{\textbf{OPO to OMC cavity scanning for various Lens2 positions.}  The top figure has the lens closest to the OPO along the propagation axis, the middle figure represents Lens2 at half the actuation range and the bottom figure shows the lens furthest from the OPO.  During this time, the OMC ASC control loops were closed on the reflected QPDs to minimize the odd order mode coupling.  
+	}
+	\label{fig:OPO_to_OMC_scan}
+	\end{figure}
+
+	Using the OMC as an optical spectrum analyzer is one simplest methods for understanding the mode matching coming out of the interferometer.  In a single bounce configuration, measuring the ratio between the second order mode and the fundamental gives a first look at the limit of matching.  Similar techniques can be used with the squeezed beam as well and during commissioning of the squeezer, a mode mismatch between 12-17\% was observed which led to a re-design of the OPO to OMC optical path.  Figure \ref{fig:OPO_to_OMC_scan} shows the results for scanning the OMC length using PZT2 with the  ASC control loops closed on the reflected QPDs to minimize odd-order mode coupling.  The measurements were taken in-air which made the results rather noisy so before the peak-finding algorithm tries to fit the 00 or 02 modes, the data is low-passed with a corner frequency of 1kHz.
+	
+	Using a well-calibrated mode profiler that measures beam sizes along the propagation axis is the most direct way of determining OPO to OMC mode matching.  This method can also predict the actuator Gouy phase of the second lens after the OPO, which is on a translation stage with approximately 4 centimeters of range. Generally, the length measurement between optics is the largest systematic error especially in the near-field where beam sizes do not change very much as a function of $\hat{z}$.  In addition, places to put a beam profile become very limited as HAM6 becomes crowded with optical components.  In preparation for squeezing in Advanced LIGO, the mode matching from the OPO to OMC was measured and found to be approximately 88\% at best. When implementing a telescope with fast lenses, the distances between optics must be stringently characterized but the OPO platform is very crowded along the output path so it was very difficult to accurately measure the path lengths with a ruler.  Between the second lens and ZM1, the table is much clearer and by removing Lens2, the Gouy phase is approximately in the far-field which means the distance measurements can be more easily measured as a function of beam size.  Figure \ref{fig:OPO_to_ZM2} shows the results of characterizing the OPO output mode as it enters HAM5 by removing Lens2, a fit constrains the Lens1 positioning and the OPO mode is assumed from its design document \cite{Oelker_FD_sqz}.
+	
+	With the poor mode matching shown in Figure \ref{fig:OPO_to_OMC_Old}, the fast telescope lenses needed to be replaced, or otherwise, risk being the limit to effective squeezing for O3.  The available range in the translation stage did not allow for increased matching and the crowded OPO platform did not permit coarse moves of Lens1. In addition, moving the translation stages for Lens2 closer to the OPO cavity does not gain any extra mode overlap.  The next option was replacing the lenses with a solution which did not incorporate large actuation range but was more suited for mode matching.  There were a few clean lenses available that provided the right solution but greatly reduced the translation stage efficacy, on the other hand, this made the telescope placement much more robust to path length errors which is the original problem to begin with.  The new model is shown in Figure \ref{fig:OPO_to_OMC_New} where the lenses are now  $f^{\text{new}}_{\text{Lens1}} = 250$ mm and $f^{\text{new}}_{\text{Lens2}} = 350$ mm where Lens1 is closer to the OPO output.   The calculated overlap integral between the expected OMC mode and the squeezer is on the order of 99\% with very little sensitivity in the Lens2 positioning as expected.  Follow up measurements with OMC scans in-vacuum indicate approximately 95\% mode matching between the OPO to SRM and back to the OMC, this is due to the astigmatism mentioned previously that is still prevalent after changing the lenses.  However, the mode matching from the OPO to ITMs and back to the OMC shows 99\% mode matching with the new lens configuration \cite{modematch99} which is effectively the path of squeezed light.  It is important to note that measurements taken in-vacuum had pre-loaded TCS settings in anticipation for 50 Watts.
+	
+	For future implementations of high sensitivity telescopes, length measurements between optics will need to be more stringently constrained with specialized tools such as laser range finders or mechanical jigs while simultaneously re-confirmed with profile scans to understand the laser beam entering the interferometer.  Distances between optics were the largest source of uncertainties in these measurements so understanding the optical path length will help curb the systematic errors.
+	
+	\begin{figure}[]
 		\centering
 		\includegraphics[width=0.8 \textwidth]{../Figures/OPO_to_ZM2_fit.png}
 		\caption[Mode measurement from the OPO.]  
 		{\textbf{Mode measurement from the OPO.}
-			  The results without Lens2 are shown in black for two transverse directions (x/y) and constrain the distance of Lens1 relative to the OPO output.  Then, Lens2 is replaced back in its original position on a translation stage at half the range and measurements were taken in order to constrain the distance between Lens1 and Lens2.  The beam sizes were fit to find the Gaussian q-parameter entering HAM5. There is some slight deviation in the transverse directions after Lens2, possibly from misalignment of the lens.  This method seems to provide a good model of what beam is being injected from the squeezer side.
+			The results without Lens2 are shown in black for two transverse directions (x/y) and constrain the distance of Lens1 relative to the OPO output.  Then, Lens2 is replaced back in its original position on a translation stage at half the range and measurements were taken in order to constrain the distance between Lens1 and Lens2.  The beam sizes were fit to find the Gaussian q-parameter entering HAM5. There is some slight deviation in the transverse directions after Lens2, possibly from misalignment of the lens.  This method seems to provide a good model of what beam is being injected from the squeezer side.
 		}
 		\label{fig:OPO_to_ZM2}
 	\end{figure}
-	
-	Using a well-calibrated mode profiler that measures beam sizes along the propagation axis is the most direct way of determining OPO to OMC mode matching.  This method can also predict the actuator Gouy phase of the second lens after the OPO, which is on a translation stage with approximately 4 centimeters of range. Generally, the length measurement between optics is the largest systematic error especially in the near-field where beam sizes do not change very much as a function of $\hat{z}$.  In addition, places to put a beam profile become very limited as HAM6 becomes crowded with optical components.  In preparation for squeezing in Advanced LIGO, the mode matching from the OPO to OMC was measured and found to be approximately 84\% at best. When implementing a telescope with fast lenses, the distances between optics must be stringently characterized but the OPO platform is very crowded along the output path so it was very difficult to accurately measure the path lengths with a ruler.  Between the second lens and ZM1, the table is much clearer and by removing Lens2, the Gouy phase is approximately in the far-field which means the distance measurements can be more easily measured as a function of beam size.
-	
 	\begin{figure}[t!]
 	\centering
 	\includegraphics[width=0.8 \textwidth]{../Figures/OPO_to_OMCREFL_Oldlenses.png}
@@ -571,21 +589,8 @@
 	\begin{figure}[t!]
 	\centering
 	\includegraphics[width=0.8 \textwidth]{../Figures/OPO_to_OMCREFL_Newlenses.png}
-	\caption[Repeated measurements made with new lenses.]  
-	{\textbf{Repeated measurements made with new lenses.}
-		With the poor mode matching shown in Figure \ref{fig:OPO_to_OMC_Old}, the fast telescope lenses needed to be replaced or risk being the limit to effective squeezing for O3.  The available range in the translation stage did not allow for increased matching and the crowded OPO platform did not permit coarse moves of Lens1 or Lens2.  The next option was replacing the lenses with a solution which did not incorporate large actuation range but was more suited for mode matching.  There were a few clean lenses available that provided the right solution but greatly reduced the translation stage efficacy, on the other hand, this made the telescope placement much more robust to path length errors which is the original problem to begin with.
+	\caption[Repeated measurements with new lenses.]  
+	{\textbf{Repeated measurements with new lenses.}  The model tries a few different lens solutions and settles on $f^{\text{new}}_{\text{Lens1}} = 250$ mm and $f_{\text{Lens2}} = 350$ mm, which severely limits the actuation range.  However, it shows approximately 97\% mode matching for the fitted transverse-y data and 92\% for the transverse-x data.  Astigmatism which was already shown in Figure \ref{fig:OPO_to_OMC_Old} is still prevalent here and brings the average mode matching to 95\% from the OPO to OMC in the single bounce configuration.
 	}
 	\label{fig:OPO_to_OMC_New}
-	\end{figure}
-	
-	
-	\begin{figure}[t!]
-		\centering
-		\includegraphics[width=0.8 \textwidth]{../Figures/Lens_Closest_to_OPO.png}
-		\includegraphics[width=0.8 \textwidth]{../Figures/Lens_in_Center_Position.png}
-		\includegraphics[width=0.8 \textwidth]{../Figures/Lens_Furthest_from_OPO.png}
-		\caption[OPO to OMC cavity scanning for various Lens2 positions.]  
-		{\textbf{OPO to OMC cavity scanning for various Lens2 positions.}  The top figure has the lens closest to the OPO along the propagation axis, the middle figure represents Lens2 at half the actuation range and the bottom figure shows the lens furthest from the OPO.  During this time, the OMC ASC control loops were closed on the reflected QPDs to minimize the odd order mode coupling.  
-		}
-		\label{fig:OPO_to_OMC_Old}
 	\end{figure}

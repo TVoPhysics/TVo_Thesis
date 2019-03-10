@@ -5,6 +5,7 @@
 	
 	The previous chapter dealt with gravitational waves and briefly touched on how a laser interferometer is particularly well-suited for detecting them. In its simplest form, the LIGO instrument is an incredibly large Michelson interferometer. However, to make a practical gravitational-wave observatory, the complexity had to be extended far beyond what Michelson and Morley used.  The next sections will explore the various instrument configurations that improve LIGO's sensitivity and a few fundamental noise sources.
 	
+	\section{Interferometer Configurations}
 	\subsection{Simple Michelson}\label{sec:michelson}
 		As shown in Figure \ref{fig:simple_michelson}, the interferometer begins with a laser which is incident on a partially-reflecting and partially-transmitting beamsplitter that sends half of the laser light down each arm.  The individual beams gather phase as they propagate down the arms and then reflect off of two end mirrors and eventually recombine at the same beamsplitter.  Whether the light constructively or destructively interferes will depend on their relative accumulated phase from propagating down each arm. A photodetector is placed at the output and measures the total power which converts the total amount of light into an electronic signal.  In Section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down the individual arms carry gravitational wave information.  The difference in flight times, $\Delta t$, can be converted into how much phase, $\Delta \phi$, is accumulated by the photons as they propagate through space.  
 		
@@ -389,7 +390,7 @@
 			\label{fig:FullIFO}
 		\end{figure}
 		
-		\subsection{Fundamental Noise Sources}\label{funnoise}
+		\section{Fundamental Noise Sources}\label{funnoise}
 		The preceding sections described ways to increase the response of LIGO to gravitational waves; equally as important is the science of characterizing and reducing the noise contributions from everything that is not gravitational waves to optimize the sensitivity.
 		
 		\begin{figure}[ht]
@@ -681,7 +682,7 @@
 	&= \frac{S_{SQL}}{2} \bigg( \frac{1}{\Upsilon}  + \Upsilon\bigg) e^{-2R} \qquad \text{for } \theta_s = -\phi_s
 x	\end{aligned}
 	\end{equation}
-	where $R$ is the squeeze factor, $\theta_s$ is the squeeze angle, and $\phi_s = \cot^{-1}(\Upsilon)$.  The squeeze angle can change the regime of strain which is affected, for example, when injecting for optimal shot noise reduction one would choose $\theta_s=\pi/2$.  However, when trying to reduce the radiation pressure noise, then choosing $\theta_s=0$ is optimal.   For the second line in the equation above, to achieve broadband squeezing, the squeeze angle must be rotated as a function of frequency.  Fortunately, this can be achieved by reflecting the squeezer beam off a filter cavity before injecting into the interferometer \cite{Oelker_FD_sqz} \cite{EvansRealistic}.  Various configurations for squeezing is shown in Figure \ref{fig:PSD_PRFPMI}.  The addition of optical losses play a large role in the interferometer sensitivity for a number of reasons:
+	where $R$ is the squeeze factor, $\theta_s$ is the squeeze angle, and $\phi_s = \cot^{-1}(\Upsilon)$.  The squeeze angle can change the regime of strain which is affected, for example, when injecting for optimal shot noise reduction one would choose $\theta_s=\pi/2$.  However, when trying to reduce the radiation pressure noise, then choosing $\theta_s=0$ is optimal.   For the second line in the equation above, to achieve broadband squeezing, the squeeze angle must be rotated as a function of frequency.  Fortunately, this can be achieved by reflecting the squeezer beam off a filter cavity before injecting into the interferometer \cite{Oelker_FD_sqz} \cite{EvansRealistic}.  Various configurations for squeezing is shown in Figure \ref{fig:kimble_PRFMI_sqz}.  The addition of optical losses play a large role in the interferometer sensitivity for a number of reasons:
 	\begin{enumerate}
 		\item The arm cavities and output optical train have associated losses which couple vacuum fluctuations and contribute shot noise.  Generally, the former will have associated frequency dependence and be proportional to the round trip loss in the arm cavities.
 		\item A back-action coupling will also increase as a function of the round trip loss and contribute to the radiation pressure.
@@ -713,5 +714,5 @@ x	\end{aligned}
 			\caption{Power recycled Fabry Perot Michelson quantum noise with various squeezing angles}
 			\label{fig:kimble_PRFMI_sqz}
 		\end{subfigure}
-		\label{fig:PSD_PRFPMI}
+	\label{fig:PSD_PRFPMI}
 	\end{figure}
