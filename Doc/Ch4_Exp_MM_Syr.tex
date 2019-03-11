@@ -42,7 +42,7 @@ In conjunction with Sandoval et al \cite{Fabian_Thesis}, the table-top adaptive 
 	\subsubsection{Calibration}
 		To use the BPDs, there are a few steps required in designing the optical setup which is different than the standard PDH or WFS method.  Most notably, the beam size incident on the BPD must be tuned such that the zero crossing of the ($U_{20} + U_{02}$) matches the boundary between the inner and outer segments.  This condition is met if $\omega_{0} = \sqrt{2} r_0$ which gives a well defined power ratio of the outer to inner segments as 
 		\begin{equation}
-		\text{Power Ratio} = \frac{\text{P}_2 + \text{P}_3 + \text{P}_4}{\text{P}_1}  \\
+		\text{Power Ratio} = \frac{\text{P}_1 + \text{P}_2 + \text{P}_3}{\text{P}_4}  \\
 		= \frac{e^{-2r_0^2/ \omega_{0}^2}} {1 - e^{-2r_0^2/ \omega_{0}^2 }} \approx 0.582
 		\end{equation}
 		In Appendix \ref{BPDchar}, the complete derivation for the sensitivity of QPDs (Pitch/Yaw) and BPDs (Pitch/Yaw/Width) is explicitly shown for DC mismatches.  Another constraint is that the Gouy phase separation between successive BPDs must be close to 45 or 135 degrees such that the error signals from each BPD can be orthogonalized, this is in contrast to angular wavefront sensors which require 90 degree Gouy phase separation.  

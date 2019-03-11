@@ -55,9 +55,9 @@
 \contentsline {subsection}{\numberline {6.3.2}Modal Contrast Defect}{91}{subsection.6.3.2}
 \contentsline {section}{\numberline {6.4}Tuning Thermal Compensation for LIGO}{92}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Hartmann Wavefront Sensors}{93}{subsection.6.4.1}
-\contentsline {subsubsection}{Tuning the Hartmann Sensors}{96}{section*.65}
+\contentsline {subsubsection}{Tuning the Hartmann Sensors}{94}{section*.65}
 \contentsline {subsubsection}{Measuring Uniform Absorption}{98}{section*.71}
-\contentsline {subsection}{\numberline {6.4.2}Ring Heater and CO2 Commissioning}{103}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.2}Ring Heater and CO2 Commissioning}{102}{subsection.6.4.2}
 \contentsline {section}{\numberline {6.5}Point Absorbers}{107}{section.6.5}
 \contentsline {section}{\numberline {6.6}Higher Power Operation}{112}{section.6.6}
 \contentsline {section}{\numberline {6.7}Mode Matching from the OPO to the OMC}{116}{section.6.7}

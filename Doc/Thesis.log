@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  8 MAR 2019 09:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.30)  10 MAR 2019 23:03
 entering extended mode
 **./Thesis.tex
 (Thesis.tex
@@ -2677,162 +2677,123 @@ cmr/m/n/12 )$
 [88] [89] [90] [91] [92] [93]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 272.
+               Default added (so using `!tbp') on input line 271.
 
 <../Figures/HWS_OpticalLayout.png, id=1560, 335.62189pt x 282.86478pt>
 File: ../Figures/HWS_OpticalLayout.png Graphic file (type png)
 
 <use ../Figures/HWS_OpticalLayout.png>
 Package pdftex.def Info: ../Figures/HWS_OpticalLayout.png used on input line 27
-4.
+3.
 (pdftex.def)             Requested size: 372.91725pt x 314.32027pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 280.
+               Default added (so using `!tbp') on input line 279.
 
 <../Figures/HWS_Noise.PNG, id=1562, 604.88484pt x 482.92921pt>
 File: ../Figures/HWS_Noise.PNG Graphic file (type png)
 
 <use ../Figures/HWS_Noise.PNG>
-Package pdftex.def Info: ../Figures/HWS_Noise.PNG used on input line 282.
+Package pdftex.def Info: ../Figures/HWS_Noise.PNG used on input line 281.
 (pdftex.def)             Requested size: 435.0638pt x 347.34769pt.
 
-Overfull \hbox (1.4438pt too wide) in paragraph at lines 282--284
+Overfull \hbox (1.4438pt too wide) in paragraph at lines 281--283
  [][] 
  []
 
-[94 <../Figures/HWS_OpticalLayout.png>] [95 <../Figures/HWS_Noise.PNG>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 291.
+               Default added (so using `!tbp') on input line 290.
 
 
-<../Figures/20181011_ITMX_HWS_histogram_Masked.png, id=1576, 1237.2624pt x 1092
+<../Figures/20181011_ITMX_HWS_histogram_Masked.png, id=1565, 1237.2624pt x 1092
 .7224pt>
 File: ../Figures/20181011_ITMX_HWS_histogram_Masked.png Graphic file (type png)
 
  <use ../Figures/20181011_ITMX_HWS_histogram_Masked.png>
 Package pdftex.def Info: ../Figures/20181011_ITMX_HWS_histogram_Masked.png used
- on input line 293.
+ on input line 292.
 (pdftex.def)             Requested size: 435.0638pt x 384.22597pt.
 
-Overfull \hbox (1.4438pt too wide) in paragraph at lines 293--295
+Overfull \hbox (1.4438pt too wide) in paragraph at lines 292--294
  [][] 
  []
 
-<../Figures/ITMX_HWS_clipping.png, id=1579, 815.045pt x 712.6625pt>
+<../Figures/ITMX_HWS_clipping.png, id=1568, 815.045pt x 712.6625pt>
 File: ../Figures/ITMX_HWS_clipping.png Graphic file (type png)
 
 <use ../Figures/ITMX_HWS_clipping.png>
 Package pdftex.def Info: ../Figures/ITMX_HWS_clipping.png used on input line 30
-3.
+2.
 (pdftex.def)             Requested size: 248.60516pt x 217.37805pt.
-
-<../Figures/1231726400TCS_and_PSL_powerup.png, id=1580, 650.43pt x 867.24pt>
+ [94] [95 <../Figures/HWS_OpticalLayout.png>] [96 <../Figures/HWS_Noise.PNG>] [
+97 <../Figures/20181011_ITMX_HWS_histogram_Masked.png>]
+<../Figures/1231726400TCS_and_PSL_powerup.png, id=1591, 650.43pt x 867.24pt>
 File: ../Figures/1231726400TCS_and_PSL_powerup.png Graphic file (type png)
 
 <use ../Figures/1231726400TCS_and_PSL_powerup.png>
 Package pdftex.def Info: ../Figures/1231726400TCS_and_PSL_powerup.png used on i
-nput line 314.
+nput line 313.
 (pdftex.def)             Requested size: 195.12767pt x 260.16078pt.
 
-<../Figures/1231726400HWS_powerup.png, id=1581, 650.43pt x 867.24pt>
+<../Figures/1231726400HWS_powerup.png, id=1592, 650.43pt x 867.24pt>
 File: ../Figures/1231726400HWS_powerup.png Graphic file (type png)
 
 <use ../Figures/1231726400HWS_powerup.png>
 Package pdftex.def Info: ../Figures/1231726400HWS_powerup.png used on input lin
-e 315.
+e 314.
 (pdftex.def)             Requested size: 195.12767pt x 260.16078pt.
 
-<../Figures/1231726400_200dur_30W_ITMx.png, id=1582, 2312.64pt x 1011.78pt>
+<../Figures/1231726400_200dur_30W_ITMx.png, id=1593, 2312.64pt x 1011.78pt>
 File: ../Figures/1231726400_200dur_30W_ITMx.png Graphic file (type png)
 
 <use ../Figures/1231726400_200dur_30W_ITMx.png>
 Package pdftex.def Info: ../Figures/1231726400_200dur_30W_ITMx.png used on inpu
-t line 324.
+t line 323.
 (pdftex.def)             Requested size: 341.83923pt x 149.55273pt.
 
-<../Figures/1231726400_500dur_30W_ITMx.png, id=1583, 2312.64pt x 1011.78pt>
+<../Figures/1231726400_500dur_30W_ITMx.png, id=1594, 2312.64pt x 1011.78pt>
 File: ../Figures/1231726400_500dur_30W_ITMx.png Graphic file (type png)
 
 <use ../Figures/1231726400_500dur_30W_ITMx.png>
 Package pdftex.def Info: ../Figures/1231726400_500dur_30W_ITMx.png used on inpu
-t line 325.
+t line 324.
 (pdftex.def)             Requested size: 341.83923pt x 149.55273pt.
 
-<../Figures/1231726400_1000dur_30W_ITMx.png, id=1584, 2312.64pt x 1011.78pt>
+<../Figures/1231726400_1000dur_30W_ITMx.png, id=1595, 2312.64pt x 1011.78pt>
 File: ../Figures/1231726400_1000dur_30W_ITMx.png Graphic file (type png)
 
 <use ../Figures/1231726400_1000dur_30W_ITMx.png>
 Package pdftex.def Info: ../Figures/1231726400_1000dur_30W_ITMx.png used on inp
-ut line 326.
+ut line 325.
 (pdftex.def)             Requested size: 341.83923pt x 149.55273pt.
 
-<../Figures/1231726400_200dur_30W_ITMy.png, id=1585, 2312.64pt x 1011.78pt>
+<../Figures/1231726400_200dur_30W_ITMy.png, id=1596, 2312.64pt x 1011.78pt>
 File: ../Figures/1231726400_200dur_30W_ITMy.png Graphic file (type png)
 
 <use ../Figures/1231726400_200dur_30W_ITMy.png>
 Package pdftex.def Info: ../Figures/1231726400_200dur_30W_ITMy.png used on inpu
-t line 335.
+t line 334.
 (pdftex.def)             Requested size: 341.83923pt x 149.55273pt.
 
-<../Figures/1231726400_500dur_30W_ITMy.png, id=1586, 2312.64pt x 1011.78pt>
+<../Figures/1231726400_500dur_30W_ITMy.png, id=1597, 2312.64pt x 1011.78pt>
 File: ../Figures/1231726400_500dur_30W_ITMy.png Graphic file (type png)
 
 <use ../Figures/1231726400_500dur_30W_ITMy.png>
 Package pdftex.def Info: ../Figures/1231726400_500dur_30W_ITMy.png used on inpu
-t line 336.
+t line 335.
 (pdftex.def)             Requested size: 341.83923pt x 149.55273pt.
 
-<../Figures/1231726400_1000dur_30W_ITMy.png, id=1587, 2312.64pt x 1011.78pt>
+<../Figures/1231726400_1000dur_30W_ITMy.png, id=1598, 2312.64pt x 1011.78pt>
 File: ../Figures/1231726400_1000dur_30W_ITMy.png Graphic file (type png)
 
 <use ../Figures/1231726400_1000dur_30W_ITMy.png>
 Package pdftex.def Info: ../Figures/1231726400_1000dur_30W_ITMy.png used on inp
-ut line 337.
+ut line 336.
 (pdftex.def)             Requested size: 341.83923pt x 149.55273pt.
- [96] [97 <../Figures/20181011_ITMX_HWS_histogram_Masked.png>] [98 <../Figures/
-ITMX_HWS_clipping.png>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 354.
-
-<../Figures/MCMC_ITMX_ABS_FIT.png, id=1609, 722.7pt x 361.35pt>
-File: ../Figures/MCMC_ITMX_ABS_FIT.png Graphic file (type png)
-
-<use ../Figures/MCMC_ITMX_ABS_FIT.png>
-Package pdftex.def Info: ../Figures/MCMC_ITMX_ABS_FIT.png used on input line 35
-8.
-(pdftex.def)             Requested size: 346.89731pt x 173.44603pt.
-
-<../Figures/MCMC_ITMY_ABS_FIT.png, id=1610, 722.7pt x 361.35pt>
-File: ../Figures/MCMC_ITMY_ABS_FIT.png Graphic file (type png)
-
-<use ../Figures/MCMC_ITMY_ABS_FIT.png>
-Package pdftex.def Info: ../Figures/MCMC_ITMY_ABS_FIT.png used on input line 36
-5.
-(pdftex.def)             Requested size: 346.89731pt x 173.44603pt.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 374.
-
-<../Figures/MCMC_ITMX_abs.png, id=1611, 397.485pt x 397.485pt>
-File: ../Figures/MCMC_ITMX_abs.png Graphic file (type png)
-
-<use ../Figures/MCMC_ITMX_abs.png>
-Package pdftex.def Info: ../Figures/MCMC_ITMX_abs.png used on input line 377.
-(pdftex.def)             Requested size: 216.81pt x 216.81607pt.
-
-<../Figures/MCMC_ITMY_abs.png, id=1612, 397.485pt x 397.485pt>
-File: ../Figures/MCMC_ITMY_abs.png Graphic file (type png)
-
-<use ../Figures/MCMC_ITMY_abs.png>
-Package pdftex.def Info: ../Figures/MCMC_ITMY_abs.png used on input line 382.
-(pdftex.def)             Requested size: 216.81pt x 216.81607pt.
- [99 <../Figures/1231726400TCS_and_PSL_powerup.png> <../Figures/1231726400HWS_p
-owerup.png>]
+ [98 <../Figures/ITMX_HWS_clipping.png>] [99 <../Figures/1231726400TCS_and_PSL_
+powerup.png> <../Figures/1231726400HWS_powerup.png>]
 
 LaTeX Warning: Text page 100 contains only floats.
 
@@ -2842,47 +2803,85 @@ LaTeX Warning: Text page 100 contains only floats.
 LaTeX Warning: Text page 101 contains only floats.
 
 [101 <../Figures/1231726400_200dur_30W_ITMy.png> <../Figures/1231726400_500dur_
-30W_ITMy.png> <../Figures/1231726400_1000dur_30W_ITMy.png>] [102 <../Figures/MC
-MC_ITMX_ABS_FIT.png> <../Figures/MCMC_ITMY_ABS_FIT.png>] [103 <../Figures/MCMC_
-ITMX_abs.png> <../Figures/MCMC_ITMY_abs.png>]
+30W_ITMy.png> <../Figures/1231726400_1000dur_30W_ITMy.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 399.
+               Default added (so using `!tbp') on input line 353.
 
-<../Figures/ITMX_TCS_Settings.png, id=1660, 1445.4pt x 722.7pt>
+<../Figures/MCMC_ITMX_ABS_FIT.png, id=1629, 722.7pt x 361.35pt>
+File: ../Figures/MCMC_ITMX_ABS_FIT.png Graphic file (type png)
+
+<use ../Figures/MCMC_ITMX_ABS_FIT.png>
+Package pdftex.def Info: ../Figures/MCMC_ITMX_ABS_FIT.png used on input line 35
+7.
+(pdftex.def)             Requested size: 346.89731pt x 173.44603pt.
+
+<../Figures/MCMC_ITMY_ABS_FIT.png, id=1630, 722.7pt x 361.35pt>
+File: ../Figures/MCMC_ITMY_ABS_FIT.png Graphic file (type png)
+
+<use ../Figures/MCMC_ITMY_ABS_FIT.png>
+Package pdftex.def Info: ../Figures/MCMC_ITMY_ABS_FIT.png used on input line 36
+4.
+(pdftex.def)             Requested size: 346.89731pt x 173.44603pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 373.
+
+<../Figures/MCMC_ITMX_abs.png, id=1631, 397.485pt x 397.485pt>
+File: ../Figures/MCMC_ITMX_abs.png Graphic file (type png)
+
+<use ../Figures/MCMC_ITMX_abs.png>
+Package pdftex.def Info: ../Figures/MCMC_ITMX_abs.png used on input line 376.
+(pdftex.def)             Requested size: 216.81pt x 216.81607pt.
+
+<../Figures/MCMC_ITMY_abs.png, id=1632, 397.485pt x 397.485pt>
+File: ../Figures/MCMC_ITMY_abs.png Graphic file (type png)
+
+<use ../Figures/MCMC_ITMY_abs.png>
+Package pdftex.def Info: ../Figures/MCMC_ITMY_abs.png used on input line 381.
+(pdftex.def)             Requested size: 216.81pt x 216.81607pt.
+ [102] [103 <../Figures/MCMC_ITMX_ABS_FIT.png> <../Figures/MCMC_ITMY_ABS_FIT.pn
+g>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `!tbp') on input line 398.
+
+<../Figures/ITMX_TCS_Settings.png, id=1657, 1445.4pt x 722.7pt>
 File: ../Figures/ITMX_TCS_Settings.png Graphic file (type png)
 
 <use ../Figures/ITMX_TCS_Settings.png>
 Package pdftex.def Info: ../Figures/ITMX_TCS_Settings.png used on input line 40
-3.
+2.
 (pdftex.def)             Requested size: 433.62pt x 216.81166pt.
 
-<../Figures/ITMY_TCS_Settings.png, id=1661, 1445.4pt x 722.7pt>
+<../Figures/ITMY_TCS_Settings.png, id=1658, 1445.4pt x 722.7pt>
 File: ../Figures/ITMY_TCS_Settings.png Graphic file (type png)
 
 <use ../Figures/ITMY_TCS_Settings.png>
 Package pdftex.def Info: ../Figures/ITMY_TCS_Settings.png used on input line 40
-9.
+8.
 (pdftex.def)             Requested size: 433.62pt x 216.81166pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 418.
+               Default added (so using `tbp') on input line 417.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `!tbp') on input line 435.
+               Default added (so using `!tbp') on input line 434.
 
-<../Figures/ETM_TCS_Settings.png, id=1662, 722.7pt x 433.62pt>
+<../Figures/ETM_TCS_Settings.png, id=1659, 722.7pt x 433.62pt>
 File: ../Figures/ETM_TCS_Settings.png Graphic file (type png)
 
 <use ../Figures/ETM_TCS_Settings.png>
-Package pdftex.def Info: ../Figures/ETM_TCS_Settings.png used on input line 437
+Package pdftex.def Info: ../Figures/ETM_TCS_Settings.png used on input line 436
 .
 (pdftex.def)             Requested size: 433.62pt x 260.17401pt.
- [104] [105 <../Figures/ITMX_TCS_Settings.png> <../Figures/ITMY_TCS_Settings.pn
-g>] [106 <../Figures/ETM_TCS_Settings.png>]
-Overfull \hbox (2.59369pt too wide) in paragraph at lines 447--448
+ [104 <../Figures/MCMC_ITMX_abs.png> <../Figures/MCMC_ITMY_abs.png>] [105 <../F
+igures/ITMX_TCS_Settings.png> <../Figures/ITMY_TCS_Settings.png>] [106 <../Figu
+res/ETM_TCS_Settings.png>]
+Overfull \hbox (2.59369pt too wide) in paragraph at lines 446--447
 []\OT1/cmr/bx/it/12 Part way into com-mis-sion-ing for O3, an-other point ab-so
 rber on ITMY
  []
@@ -2895,7 +2894,7 @@ File: ../Figures/1231726400_3d_200dur_30W_ITM.png Graphic file (type png)
 
 <use ../Figures/1231726400_3d_200dur_30W_ITM.png>
 Package pdftex.def Info: ../Figures/1231726400_3d_200dur_30W_ITM.png used on in
-put line 476.
+put line 477.
 (pdftex.def)             Requested size: 248.60516pt x 116.01259pt.
 
 <../Figures/1231726400_3d_500dur_30W_ITM.png, id=1695, 1084.05pt x 505.89pt>
@@ -2903,7 +2902,7 @@ File: ../Figures/1231726400_3d_500dur_30W_ITM.png Graphic file (type png)
 
 <use ../Figures/1231726400_3d_500dur_30W_ITM.png>
 Package pdftex.def Info: ../Figures/1231726400_3d_500dur_30W_ITM.png used on in
-put line 477.
+put line 478.
 (pdftex.def)             Requested size: 248.60516pt x 116.01259pt.
 
 <../Figures/1231726400_3d_1000dur_30W_ITM.png, id=1696, 1084.05pt x 505.89pt>
@@ -2911,33 +2910,33 @@ File: ../Figures/1231726400_3d_1000dur_30W_ITM.png Graphic file (type png)
 
 <use ../Figures/1231726400_3d_1000dur_30W_ITM.png>
 Package pdftex.def Info: ../Figures/1231726400_3d_1000dur_30W_ITM.png used on i
-nput line 478.
+nput line 479.
 (pdftex.def)             Requested size: 248.60516pt x 116.01259pt.
-
-<../Figures/Simplified_PRC_ARM_etm_abs.png, id=1697, 722.7pt x 722.7pt>
+ [109]
+<../Figures/Simplified_PRC_ARM_etm_abs.png, id=1703, 722.7pt x 722.7pt>
 File: ../Figures/Simplified_PRC_ARM_etm_abs.png Graphic file (type png)
 
 <use ../Figures/Simplified_PRC_ARM_etm_abs.png>
 Package pdftex.def Info: ../Figures/Simplified_PRC_ARM_etm_abs.png used on inpu
-t line 490.
+t line 491.
 (pdftex.def)             Requested size: 310.75494pt x 310.76122pt.
 
-<../Figures/Simplified_PRC_ARM_itm_abs.png, id=1698, 722.7pt x 722.7pt>
+<../Figures/Simplified_PRC_ARM_itm_abs.png, id=1704, 722.7pt x 722.7pt>
 File: ../Figures/Simplified_PRC_ARM_itm_abs.png Graphic file (type png)
 
 <use ../Figures/Simplified_PRC_ARM_itm_abs.png>
 Package pdftex.def Info: ../Figures/Simplified_PRC_ARM_itm_abs.png used on inpu
-t line 494.
+t line 495.
 (pdftex.def)             Requested size: 310.75494pt x 310.76122pt.
- [109] [110 <../Figures/1231726400_3d_200dur_30W_ITM.png> <../Figures/123172640
-0_3d_500dur_30W_ITM.png> <../Figures/1231726400_3d_1000dur_30W_ITM.png>] [111 <
-../Figures/Simplified_PRC_ARM_etm_abs.png> <../Figures/Simplified_PRC_ARM_itm_a
-bs.png>]
+ [110 <../Figures/1231726400_3d_200dur_30W_ITM.png> <../Figures/1231726400_3d_5
+00dur_30W_ITM.png> <../Figures/1231726400_3d_1000dur_30W_ITM.png>] [111 <../Fig
+ures/Simplified_PRC_ARM_etm_abs.png> <../Figures/Simplified_PRC_ARM_itm_abs.png
+>]
 <../Figures/POP_18dive.png, id=1720, 505.89pt x 216.81pt>
 File: ../Figures/POP_18dive.png Graphic file (type png)
 
 <use ../Figures/POP_18dive.png>
-Package pdftex.def Info: ../Figures/POP_18dive.png used on input line 512.
+Package pdftex.def Info: ../Figures/POP_18dive.png used on input line 513.
 (pdftex.def)             Requested size: 325.215pt x 139.37987pt.
  [112
 
@@ -2947,7 +2946,7 @@ File: ../Figures/MeasuredVertexOLF.png Graphic file (type png)
 
 <use ../Figures/MeasuredVertexOLF.png>
 Package pdftex.def Info: ../Figures/MeasuredVertexOLF.png used on input line 52
-6.
+7.
 (pdftex.def)             Requested size: 325.215pt x 325.2197pt.
 
 <../Figures/PRCL_EXC_LSC-POP_A_RF9_I.png, id=1736, 1445.4pt x 361.35pt>
@@ -2955,7 +2954,7 @@ File: ../Figures/PRCL_EXC_LSC-POP_A_RF9_I.png Graphic file (type png)
 
 <use ../Figures/PRCL_EXC_LSC-POP_A_RF9_I.png>
 Package pdftex.def Info: ../Figures/PRCL_EXC_LSC-POP_A_RF9_I.png used on input 
-line 536.
+line 537.
 (pdftex.def)             Requested size: 433.62pt x 108.40584pt.
 
 <../Figures/SRCL_EXC_LSC-POP_A_RF45_I.png, id=1737, 1445.4pt x 361.35pt>
@@ -2963,7 +2962,7 @@ File: ../Figures/SRCL_EXC_LSC-POP_A_RF45_I.png Graphic file (type png)
 
 <use ../Figures/SRCL_EXC_LSC-POP_A_RF45_I.png>
 Package pdftex.def Info: ../Figures/SRCL_EXC_LSC-POP_A_RF45_I.png used on input
- line 537.
+ line 538.
 (pdftex.def)             Requested size: 433.62pt x 108.40584pt.
 
 <../Figures/MICH_EXC_LSC-POP_A_RF45_Q.png, id=1738, 1445.4pt x 361.35pt>
@@ -2971,21 +2970,21 @@ File: ../Figures/MICH_EXC_LSC-POP_A_RF45_Q.png Graphic file (type png)
 
 <use ../Figures/MICH_EXC_LSC-POP_A_RF45_Q.png>
 Package pdftex.def Info: ../Figures/MICH_EXC_LSC-POP_A_RF45_Q.png used on input
- line 538.
+ line 539.
 (pdftex.def)             Requested size: 433.62pt x 108.40584pt.
  [114 <../Figures/MeasuredVertexOLF.png>] [115 <../Figures/PRCL_EXC_LSC-POP_A_R
 F9_I.png> <../Figures/SRCL_EXC_LSC-POP_A_RF45_I.png> <../Figures/MICH_EXC_LSC-P
 OP_A_RF45_Q.png>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 551.
+               Default added (so using `tbp') on input line 552.
 
 <../Figures/Lens_Closest_to_OPO.png, id=1752, 578.16pt x 216.81pt>
 File: ../Figures/Lens_Closest_to_OPO.png Graphic file (type png)
 
 <use ../Figures/Lens_Closest_to_OPO.png>
 Package pdftex.def Info: ../Figures/Lens_Closest_to_OPO.png used on input line 
-553.
+554.
 (pdftex.def)             Requested size: 303.53267pt x 113.82364pt.
 
 <../Figures/Lens_in_Center_Position.png, id=1753, 578.16pt x 216.81pt>
@@ -2993,7 +2992,7 @@ File: ../Figures/Lens_in_Center_Position.png Graphic file (type png)
 
 <use ../Figures/Lens_in_Center_Position.png>
 Package pdftex.def Info: ../Figures/Lens_in_Center_Position.png used on input l
-ine 554.
+ine 555.
 (pdftex.def)             Requested size: 303.53267pt x 113.82364pt.
 
 <../Figures/Lens_Furthest_from_OPO.png, id=1754, 578.16pt x 216.81pt>
@@ -3001,7 +3000,7 @@ File: ../Figures/Lens_Furthest_from_OPO.png Graphic file (type png)
 
 <use ../Figures/Lens_Furthest_from_OPO.png>
 Package pdftex.def Info: ../Figures/Lens_Furthest_from_OPO.png used on input li
-ne 555.
+ne 556.
 (pdftex.def)             Requested size: 303.53267pt x 113.82364pt.
  [116
 
@@ -3009,13 +3008,13 @@ ne 555.
 <../Figures/Lens_Furthest_from_OPO.png>] [117]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 570.
+               Default added (so using `tbp') on input line 571.
 
 <../Figures/OPO_to_ZM2_fit.png, id=1772, 578.16pt x 289.08pt>
 File: ../Figures/OPO_to_ZM2_fit.png Graphic file (type png)
 
 <use ../Figures/OPO_to_ZM2_fit.png>
-Package pdftex.def Info: ../Figures/OPO_to_ZM2_fit.png used on input line 572.
+Package pdftex.def Info: ../Figures/OPO_to_ZM2_fit.png used on input line 573.
 (pdftex.def)             Requested size: 346.89731pt x 173.44933pt.
 
 <../Figures/OPO_to_OMCREFL_Oldlenses.png, id=1773, 578.16pt x 578.16pt>
@@ -3023,7 +3022,7 @@ File: ../Figures/OPO_to_OMCREFL_Oldlenses.png Graphic file (type png)
 
 <use ../Figures/OPO_to_OMCREFL_Oldlenses.png>
 Package pdftex.def Info: ../Figures/OPO_to_OMCREFL_Oldlenses.png used on input 
-line 581.
+line 582.
 (pdftex.def)             Requested size: 346.89731pt x 346.89867pt.
 
 <../Figures/OPO_to_OMCREFL_Newlenses.png, id=1775, 578.16pt x 578.16pt>
@@ -3031,7 +3030,7 @@ File: ../Figures/OPO_to_OMCREFL_Newlenses.png Graphic file (type png)
 
 <use ../Figures/OPO_to_OMCREFL_Newlenses.png>
 Package pdftex.def Info: ../Figures/OPO_to_OMCREFL_Newlenses.png used on input 
-line 591.
+line 592.
 (pdftex.def)             Requested size: 346.89731pt x 346.89867pt.
 ) (Ch6_Det_Up.tex [118] [119 <../Figures/OPO_to_ZM2_fit.png>] [120 <../Figures/
 OPO_to_OMCREFL_Oldlenses.png>]
@@ -3075,22 +3074,22 @@ Appendix D.
 [143] [144] [145] [146] [147] [148]) [149] [150
 
 ]
-Overfull \hbox (1.40466pt too wide) in paragraph at lines 115--116
+Overfull \hbox (1.40466pt too wide) in paragraph at lines 114--115
 \OT1/cmr/m/n/12 and Ste-fan W. Ballmer Sens-ing Op-ti-cal Cav-ity Mis-match wit
 h a Mode-Converter
  []
 
 [151]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
  (Thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `Thesis.out' has not changed.
 (rerunfilecheck)             Checksum: C8067D7EF959E13E320EE1110F889ECD;3976.
 Package rerunfilecheck Info: File `Thesis.brf' has not changed.
-(rerunfilecheck)             Checksum: BC6E4280900B081614F93EAB28D34A2F;6974.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
+(rerunfilecheck)             Checksum: 5778475C178102FDE41A5284B99617EB;6975.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 123.
  ) 
 Here is how much of TeX's memory you used:
  30807 strings out of 493323
@@ -3126,7 +3125,7 @@ blic/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/ms
 bm10.pfb>
-Output written on Thesis.pdf (164 pages, 52577103 bytes).
+Output written on Thesis.pdf (164 pages, 52577147 bytes).
 PDF statistics:
  2461 PDF objects out of 2487 (max. 8388607)
  662 named destinations out of 1000 (max. 500000)
