@@ -1,13 +1,13 @@
 	\chapter{The LIGO Instrument}\label{chap:LIGOInstrument}
-	When gravitational waves were first detected, the first question on everybody's mind was: \textbf{"Is it real?"}. 
+	When gravitational waves were first detected, the first question on everybody's mind was: \textbf{``Is it real?"}. 
 	
-	The next was, \textbf{"How do we get more?"}.  
+	Soon after, the question was \textbf{``How do we get more?"}.  
 	
 	The previous chapter dealt with gravitational waves and briefly touched on how a laser interferometer is particularly well-suited for detecting them. In its simplest form, the LIGO instrument is an incredibly large Michelson interferometer. However, to make a practical gravitational-wave observatory, the complexity had to be extended far beyond what Michelson and Morley used.  The next sections will explore the various instrument configurations that improve LIGO's sensitivity and a few fundamental noise sources.
 	
 	\section{Interferometer Configurations}
 	\subsection{Simple Michelson}\label{sec:michelson}
-		As shown in Figure \ref{fig:simple_michelson}, the interferometer begins with a laser which is incident on a partially-reflecting and partially-transmitting beamsplitter that sends half of the laser light down each arm.  The individual beams gather phase as they propagate down the arms and then reflect off of two end mirrors and eventually recombine at the same beamsplitter.  Whether the light constructively or destructively interferes will depend on their relative accumulated phase from propagating down each arm. A photodetector is placed at the output and measures the total power which converts the total amount of light into an electronic signal.  In Section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down the individual arms carry gravitational wave information.  The difference in flight times, $\Delta t$, can be converted into how much phase, $\Delta \phi$, is accumulated by the photons as they propagate through space.  
+		As shown in Figure \ref{fig:simple_michelson}, modern interferometers use a laser which is incident on a partially-reflecting and partially-transmitting beamsplitter that sends half of the laser light down each arm.  The individual beams gather phase as they propagate down the arms and then reflect off of two end mirrors and eventually recombine at the same beamsplitter.  Whether the light constructively or destructively interferes will depend on their relative accumulated phase from propagating down each arm. A photodetector is placed at the output and measures the total power which converts the total amount of light into an electronic signal.  In Section \ref{measuringGWs}, it was shown that the differential time of flight between photons traveling down the individual arms carry gravitational wave information.  The difference in flight times, $\Delta t$, can be converted into how much phase, $\Delta \phi$, is accumulated by the photons as they propagate through space.  
 		
 		But the question remains, how does an interferometer explicitly measure $\Delta \phi$?  If the input electric field of the interferometer is $E_0$, the beamsplitter will transmit $iE_0 /\sqrt{2}$ down the x-arm and reflect $E_0 /\sqrt{2}$ towards the y-arm.  By setting the beamsplitter to be the origin, the two plane waves traveling down their respective arms will have gathered a phase $\phi_i$, where the individual arms are denoted by the subscripts. Then, upon reflecting off the end mirrors and returning to the beamsplitter the resultant fields are transmitted to the antisymmetric port. Each of the electric fields from the arms can be described by these equations
 			\begin{equation}
@@ -16,7 +16,7 @@
 			\\	E_{y} 	&=	\frac{i E_0}{2} e^{2i\phi_{y}}
 			\end{aligned}
 			\end{equation}
-		Since the electromagnetic waves are linear, the resultant sum of waves at the antisymmetric port will be $E_{out} = E_x + E_y$. The photodiode at the output (or antisymmetric) port detects the integrated power which is related to the total electric field by
+		Since the electromagnetic waves are linear, the resultant sum of waves at the antisymmetric port will be $E_{out} = E_x + E_y$. The photodiode at the output, or antisymmetric (AS), port detects the integrated power which is related to the total electric field by
 			\begin{equation}
 			\begin{aligned}\label{asy_power}
 				P_{AS}	&= \int_{\text{Area}} I \;				\text{d}A 
@@ -93,7 +93,7 @@
 		S = 4 \pi  J_0(\beta) J_1(\beta) \frac{\ell_+}{\lambda}  \sin(k_{\Omega} \Delta \ell) \sin(\phi_{Demod}) \; h_{+}
 		\end{equation}
 		This shows that a RF detection technique will be linear in GW signal with no large DC offset. Setting the carrier on a null point means $\Delta \ell = \frac{k_{\Omega}}{k} \frac{\pi}{2}$ and allows the designer to optimize the Schnupp asymmetry length to get the best signal for some modulation frequency. This type of readout scheme was used in Enhanced LIGO and is called heterodyne detection, where the sideband fields are produced by an EOM and its efficacy depends on the local oscillator's stability \cite{FritschelReadout}.  
-		In contrast, the Advanced LIGO scheme uses a homodyne detection \cite{HildDCReadout} method called "DC-Readout".  Here, the oscillator field is produced by slightly offsetting the arms away from the dark fringe and letting a small amount of carrier light through the antisymmetric port.  A gravitational wave will induce sidebands on the carrier and this will allow the same mathematics as above to achieve a linear signal in gravitational wave strain. This method benefits from naturally being co-aligned and mode matched with the signal field.  All techniques follow the same logic of beating the field containing useful information with a reference field to extrapolate a linear signal but the differences come from technical noise such as laser intensity fluctuations and effective quantum noise.
+		In contrast, the Advanced LIGO scheme uses a homodyne detection \cite{HildDCReadout} method called ``DC-Readout".  Here, the oscillator field is produced by slightly offsetting the arms away from the dark fringe and letting a small amount of carrier light through the antisymmetric port.  A gravitational wave will induce sidebands on the carrier such that the beat note between the two fields will have a linear signal in gravitational wave strain. This method benefits from naturally being co-aligned and mode matched with the signal field.  All techniques follow the same logic of beating the field containing useful information with a reference field to extrapolate a linear signal but the differences come from technical noise such as laser intensity fluctuations and effective quantum noise.
 	
 		\subsection{Fabry-Perot Cavities}\label{FP}
 		There are two ways to improve the LIGO detectors: one is to increase the response from gravitational waves and the other is to decrease the noise contributions. From equation \ref{diffphase}, the gravitational wave signal is proportional to the optical path length that the photon travels, which means the most straightforward method of increasing the sensitivity is to make the arms as long as possible (up to the null point described by equation \ref{gwsinc}).  There are two methods to achieve this: a Herriott delay line or a Fabry-Perot resonator, the differences between each method is shown in Figure \ref{fig:FPvDL}.  At the time of writing this thesis, all modern gravitational wave detectors use the latter method.
@@ -144,7 +144,7 @@
 				\label{fig:FP_tran}
 			\end{subfigure}
 			\caption[The reflected, circulating, and transmitted powers for a single Fabry-Perot cavity.]
-			{The  has properties in Table [] to represent one of the LIGO 4km arms which are highly over-coupled cavities so almost all of the light reflects toward the beamsplitter.  The input power is normalized to 1 Watt to show the relative gain of the circulating power.}
+			{\textbf{The reflected, circulating, and transmitted powers for a single Fabry-Perot cavity.} The optical properties used represent the Hanford 4 kilometer x-arm \cite{galaxy}, which is a highly over-coupled cavity \cite{BlackPDH} so almost all of the light reflects toward the beamsplitter.  The input power is normalized to 1 Watt to show the relative gain of the circulating power.}
 			\label{fig:FP_pwrs}
 		\end{figure}
 		Notice that the fields are dependent on the cavity length and laser frequency, $2kL$, so one might naively determine that modulating the two parameters independently cause the same effect.  However, when both are changing by large amounts, they are related by a frequency dependent transfer function \cite{dynamicFP}
@@ -158,22 +158,22 @@
 			\begin{subfigure}[b]{0.45\textwidth}
 				\centering
 				\includegraphics[width=\textwidth]{../Figures/FP_L_TF.png}
-				\caption{Transfer function with respect to L}
+				\caption{Transfer function with respect to cavity length offset}
 				\label{fig:FP_L}
 			\end{subfigure}
 			\hfill
 			\begin{subfigure}[b]{0.45\textwidth}
 				\centering
 				\includegraphics[width=\textwidth]{../Figures/FP_F_TF.png}
-				\caption{Transfer function with respect to F}
+				\caption{Transfer function with respect to laser frequency offset.}
 				\label{fig:FP_F}
 			\end{subfigure}
-			\caption{Bode Plots of a linear Fabry-Perot response in reflection.}
+			\caption{Bode plots of a linear Fabry-Perot response in reflection.}
 			\label{fig:FP_Bode}
 		\end{figure}
 		It is important to understand the Fabry-Perot response while sweeping through either the laser frequency or cavity length and measuring the reflected (or transmitted) fields, there are features of the power spectrum which relate directly to the cavity's physical properties.
 		
-		The finesse describes the line width of the resonant peak and is function of $r_1$ and $r_2$.  A higher finesse will mean the line width is smaller and taller:
+		The finesse describes the line width of the resonant peak and is a function of $r_1$ and $r_2$.  A higher finesse will mean the line width is smaller and the peak height taller compared to a lower finesse cavity:
 		\begin{equation}\label{finesse}
 		\mathbb{F} = \frac{\pi \sqrt{r_1 r_2}}{1- r_1 r_2}
 		\end{equation}
@@ -181,7 +181,7 @@
 		\begin{equation}
 		\tau_{s} = \frac{L}{c \pi} \, \mathbb{F}
 		\end{equation}
-		The pole frequency, $f_{\text{pole}}$, is when the magnitude of the cavity's transfer function (see Figure \ref{fig:FP_Bode} ) reaches 3db below the DC level:
+		The pole frequency, $f_{\text{pole}}$, is when the magnitude of the cavity's transfer function (see Figure \ref{fig:FP_Bode} ) reaches 3dB below the DC level:
 		\begin{equation}
 		f_{\text{pole}} = \frac{1}{4\pi \tau_{s}}
 		\end{equation}
@@ -193,19 +193,18 @@
 		\begin{equation}
 		P_{cav} = \vert c_{FP} \vert^2 = \frac{\text{Gain}}{ 1 + \big(\frac{2\mathbb{F}}{\pi} \big)^2 \, \text{sin}^2(k \Delta L) }
 		\end{equation}
-		In order to prove that an optical cavity is stable, it is useful to introduce the matrices that describe a periodic optical system which is explicitly derived in appendix \ref{FPappendix}.  A Fabry Perot cavity that is separated by distance $L$ with spherical mirrors that have radii of curvature $R_1$ and $R_2$ will need to satisfy 
+		Stable resonance requires the beam to stay spatially confined on the mirrors, meaning a resonant cavity does not have a continually growing beam size in steady-state operation. In order to prove that an optical cavity is geometrically stable, it is useful to introduce the matrices that describe a periodic optical system which is explicitly derived in Appendix \ref{FPappendix}.  A Fabry Perot cavity that is separated by distance $L$ with spherical mirrors that have radii of curvature $R_1$ and $R_2$ will need to satisfy 
 		\begin{equation}\label{gfactor}
 		0 \leq \bigg(1-\frac{L}{R_1}\bigg) \bigg(1-\frac{L}{R_2}\bigg) \leq 1
 		\end{equation}
-		in order to be geometrically stable.
+		in order to be stable.
 		
-		LIGO uses the frequency response of optical cavities for a number of reasons: Firstly, the round trip phase of the gravitational wave is amplified by the finesse (equation \ref{finesse}) of the 4 kilometer arm cavities, therefore increasing the sensitivity.  Secondly, the input and output of the interferometer's Gaussian beam mode can be refined by only allowing the fundamental mode of the laser to resonate (input and output mode cleaners).  Thirdly, Advanced LIGO uses a dual-recycled Michelson interferometer which means the symmetric port has a mirror inserted to resonate the light reflected from the Fabry Perot arms (power recycling) and another mirror shapes the frequency response of the differential cavity pole at the anti-symmetric port (signal recycling).
+		LIGO uses optical cavities for a number of reasons: Firstly, the round trip phase of the gravitational wave is amplified by the finesse (equation \ref{finesse}) of the 4 kilometer arm cavities, therefore increasing the sensitivity.  Secondly, the input and output of the interferometer's Gaussian beam mode can be refined by only allowing the fundamental mode of the laser to resonate (input and output mode cleaners).  Thirdly, Advanced LIGO uses a dual-recycled Michelson interferometer which means the symmetric port has a mirror inserted to resonate the light reflected from the Fabry Perot arms (power recycling) and another mirror shapes the frequency response of the differential cavity pole at the anti-symmetric port (signal recycling).
 		
 		\subsubsection{Achieving Resonance in an Optical Cavity}
-		Described above are the theoretical constructs for a Fabry-Perot cavity, but the question remains, how does one practically construct a resonant optical cavity?  The answer comes from using a heterodyne sensing scheme similar to the one described in Section \ref{sec:michelson}.  Except the optical system is not a Michelson interferometer but rather a two mirror cavity and can apply to a number of different geometries such as triangular or bow-tie cavities.
+		Described above are the theoretical constructs for a Fabry-Perot cavity, but the question remains, how does one practically construct a resonant optical cavity?  The answer comes from using a heterodyne sensing scheme similar to the one described in Section \ref{sec:michelson}.  Except in this case the optical system is not a Michelson interferometer but rather a two mirror cavity and can apply to a number of different geometries such as triangular or bow-tie cavities.
 		
 		Starting with an input laser and EOM (electro-optical modulator) that imparts upper and lower sidebands at a modulation frequency $\Omega$, the user injects three beams into the optical system described in Equation \ref{modE}.  When placing a photodetector on the reflection port, one should see the cavity's effect on each of the three electric fields.
-		
 		\begin{equation}
 		E_{FP,out} = E_{C} + E_{SB+} + E_{SB-} = 
 		\begin{pmatrix}
@@ -217,8 +216,6 @@
 		E_{C,in} &    E_{SB+,in}    &  E_{SB-,in}     
 		\end{pmatrix}
 		\end{equation}
-		
-		where the reflection coefficients follow equation \ref{r_FP}.  Because sidebands are frequency shifted, they will effectively $see$ a different cavity than the carrier and the total phase accumulated by the two fields will be different. To make a good reference for the resonant carrier beam, the modulation frequency $k_{\Omega}$, is chosen such that sidebands are be anti-resonant which effectively means they are rejected from entering the cavity.
 		\begin{equation}
 		r_{C} = -r_1 + \frac{t_1^2 r_2  e^{-i2kL}}{1-r_1 r_2 e^{-i2kL}}
 		\end{equation}
@@ -226,7 +223,9 @@
 		\begin{equation}
 		r_{SB\pm} = -r_1 + \frac{t_1^2 r_2  e^{-i2(k+k_{\Omega})L}}{1-r_1 r_2 e^{-i2(k+k_{\Omega})L}}
 		\end{equation}
-		The formalism to read out the error signal is the shown in Equation \ref{RFdet} where a photodetector in reflection (see Figure \ref{fig:FPControl}) reads out the sum of fields squared and demodulates to get the error signal which will be linearly proportional to the laser frequency and cavity length \cite{BlackPDH}.
+		where the reflection coefficients follow equation \ref{r_FP}.  Because sidebands are frequency shifted, they will effectively $see$ a different cavity than the carrier and the total phase accumulated by the two fields will be different. To make a good reference for the resonant carrier beam, the modulation frequency $\Omega$, is chosen such that sidebands are anti-resonant, which effectively means they are rejected from entering the cavity.
+
+		The formalism to read out the error signal is shown in Equation \ref{RFdet} where a photodetector in reflection (see Figure \ref{fig:FPControl}) reads out the sum of fields squared and demodulates to get the error signal which will be linearly proportional to the laser frequency and cavity length \cite{BlackPDH}.
 		\begin{equation}
 		\text{Error Signal} \propto \frac{L \mathbb{F}}{\lambda} \bigg[\frac{\delta w}{w} + \frac{\delta L}{L}\bigg]
 		\end{equation}
@@ -241,18 +240,18 @@
 		\begin{figure}[h]
 		\centering
 		\includegraphics[width=.6 \textwidth]{../Figures/PDH_Err.png}
-		\caption[Error signal in reflection]{\textbf{Pound-Drever-Hall (PDH) error signal in reflection of a Fabry Perot cavity.}  By modulating the frequency (or length) close to the zero offset point, the error signal is linear.  However, if the actuation is too far away from the lock point, the signal becomes highly non-linear.  Which means the drive output must wait until the error signal comes close enough to zero before triggering on. }
+		\caption[Error signal in reflection]{\textbf{Pound-Drever-Hall (PDH) error signal in reflection of a Fabry Perot cavity.}  By modulating the frequency (or length) close to the zero offset point, the error signal is linear.  However, if the actuation is too far away from the lock point, the signal becomes highly non-linear.  Within this regime where the error signal is not useful, the control output to an actuator must wait until the error signal comes close enough to linear before triggering on.  Generally, this is done by sweeping the frequency or length offset until the cavity becomes roughly resonant and then closing the loop. }
 		\label{fig:FP_err}
 		\end{figure}
 		
 		\subsection{Fabry-Perot Michelson}\label{FPmich}
-		Using an optical cavity to increase the number of bounces along the 4 kilometer arms will amplify the gravitational wave signal but it will also shape the frequency dependence of the sensitivity as well.  This has already been alluded to in section \ref{measuringGWs} where the overall increase in arm length will tune the response function of equation \ref{gwsinc}.  The same concept applies to integrating the use of Fabry-Perot arms with a Michelson interferometer and looking at the signal at the antisymmetric port as a function of gravitational wave frequency. Previously in section \ref{sec:michelson}, it was shown that the heterodyne RF detection technique required beating the sidebands with a carrier field containing the gravitational wave information.  However, this is not the only way because the signal sidebands beating with a reference carrier field could also be a valid way of measuring a signal of interest. In fact, Advanced LIGO employs a specific type of homodyne detection called DC readout \cite{FritschelReadout}\cite{FritschelAdvancedLIGO}. The idea is that the carrier field will resonant in the arms but will be slightly modulated due to a gravitational wave which will create audio frequency sidebands imparted on the field.  
+		Using an optical cavity to increase the number of bounces along the 4 kilometer arms will amplify the gravitational wave signal but it will also shape the frequency dependence of the sensitivity as well.  This has already been alluded to in section \ref{measuringGWs} where the overall increase in arm length will tune the response function of equation \ref{gwsinc}.  The same concept applies to integrating the use of Fabry-Perot arms with a Michelson interferometer and looking at the signal at the antisymmetric port as a function of gravitational wave frequency. Previously in section \ref{sec:michelson}, it was shown that the heterodyne RF detection technique required beating the sidebands with a carrier field that contains the gravitational wave information.  Another method known as homodyne detection uses signal sidebands beating with a reference carrier field as a valid way of measuring the signal of interest. In fact, Advanced LIGO employs a specific type of homodyne detection called DC readout \cite{FritschelReadout}\cite{FritschelAdvancedLIGO}. The idea is that the carrier field will resonant in the arms but will be slightly modulated due to a gravitational wave which will create audio frequency sidebands imparted on the field.  A small offset in the arm lengths will allow some of the carrier light to leak into the antisymmetric port in order to provide the reference field.  
 		
-		Figure \ref{fig:FPMichelson} shows an input electric field of $E_0$ incident on a 50/50 beamsplitter which then enters two orthogonal arm cavities of length $L_x$ and $L_y$.  Notice that the distance from the beamsplitter to the input couplers for both arms is denoted by $l_x$ and $l_y$, this is to account for the DARM offset which is analogous to the Schnupp asymmetry described in section \ref{sec:michelson}.  After partially transmitting and reflecting at the beamsplitter, the fields will resonate in each of the arm cavities and obey the reflectivity relations described by equation \ref{r_FP}.  Upon recombining at the beamsplitter, the antisymmetric port electric field will be related to the arm fields by,
+		Figure \ref{fig:FPMichelson} shows an input electric field $E_0$ incident on a 50/50 beamsplitter which then enters two orthogonal arm cavities of length $L_x$ and $L_y$.  Notice that the distance from the beamsplitter to the input couplers for both arms is denoted by $l_x$ and $l_y$, this is to allow the description of the DARM offset which is analogous to the Schnupp asymmetry described in section \ref{sec:michelson}.  After partially transmitting and reflecting at the beamsplitter, the fields will resonate in each of the arm cavities and obey the reflectivity relations described by equation \ref{r_FP}.  Upon recombining at the beamsplitter, the antisymmetric port electric field will be related to the arm fields by,
 		\begin{equation}
 		E_{\text{AS}} = \frac{1}{\sqrt{2}} [E_{x}^{\text{ARM}} + E_{y}^{\text{ARM}} ] 
 		\end{equation}
-		where $E_{i}^{\text{ARM}} = E(\omega) \pm [E(+ \omega_{\text{\tiny GW}}) + E(- \omega_{\text{\tiny GW}})] \sin{k\delta l } $ is the reflected fields for the x and y arms which contain the carrier(first term) and GW signal sidebands(last two terms).  In this case, the gravitational wave sidebands are a single frequency for simplicity but this analysis will work for all frequencies spanning the LIGO sensitivity band.  The antisymmetric port will only be sensitive to the differential motion between the arm cavities, which means the gravitational wave sidebands in the x-arm will be out of phase with the y-arm.  Also it is important to note that inserting a DC microscopic length shift of a few picometers represented by $\delta l = l_x - l_y$ allows for some carrier leakage field to propagate towards the antisymmetric port which creates the static reference to form a beat note with the signal sidebands.  In practice, this is achieved by introducing a static offset between the x and y arm cavity lengths, $L_x \neq L_y$, this is referred to as a differential arm (DARM) offset.
+		where $E_{i}^{\text{ARM}} = E(\omega) \pm [E(+ \omega_{\text{\tiny GW}}) + E(- \omega_{\text{\tiny GW}})] \sin{k\delta l } $ represents the reflected fields for the x and y arms which contain the carrier(first term) and GW signal sidebands(last two terms).  In this case, the gravitational wave sidebands are a single frequency for simplicity but this analysis will work for all frequencies spanning the LIGO sensitivity band.  The antisymmetric port will only be sensitive to the differential motion between the arm cavities, which means the gravitational wave sidebands in the x-arm will be out of phase with the y-arm.  Also it is important to note that inserting a DC microscopic length shift of a few picometers represented by $\delta l = l_x - l_y$ allows for some carrier leakage field to propagate towards the antisymmetric port which creates the static reference to form a beat note with the signal sidebands.  In practice, this is achieved by introducing a static offset between the x and y arm cavity lengths, $L_x \neq L_y$, this is referred to as a differential arm (DARM) offset.
 				
 		\begin{figure}[ht]
 			\centering
@@ -283,14 +282,15 @@
 		\begin{equation}
 		\begin{aligned}
 			S &\propto 2 [E(\omega) E^*(+\omega_{\text{\tiny GW}}) +  E(-\omega_{\text{\tiny GW}}) E^*(\omega) ] \sin{(k\delta l)} \sin{(\phi_{D})} \\
+			  &\propto 4 k E_0^2 \bigg[\frac{t_1}{1-r_1r_2}\bigg]^2 \bigg[\frac{1}{1 - i \frac{\omega_{\text{\tiny GW}}}{\omega_p}}\bigg] \sin{(k\delta l)} \sin{(\phi_{D})} \Delta L_{-} \\
 			  &\propto E_0^2 \; \frac{8\pi L_+}{\lambda}  \bigg[\frac{t_1}{1-r_1r_2}\bigg]^2 \bigg[\frac{1}{1 - i \frac{\omega_{\text{\tiny GW}}}{\omega_p}}\bigg] \sin{(k\delta l)} \sin{(\phi_{D})} h_{\text{\tiny GW}}
 		\end{aligned}
 		\end{equation}
-		where the length disturbance $\Delta L_{-}$ was transformed to originate from a gravitational wave signal $k \Delta L_{-} = \frac{2\pi L_{-}}{\lambda} h_{\text{\tiny GW}}$.
-		The response of this particular interferometer to differential arm length motion is linearly proportional to the gravitational wave amplitude as well as the input power $P_0 \propto E_0^2$, but there is also a frequency dependent component which is the same as a single Fabry-Perot cavity. This acts like a low pass filter above the corner frequency colloquially called the DARM cavity pole.  By adding resonators, there is also a DC amplification of the signal by a factor of $\bigg[\frac{t_1}{1-r_1r_2}\bigg]^2$, which is the gain of a linear Fabry-Perot cavity ($\approx 268$ for Advanced LIGO optics \cite{galaxy}).  
+		where the length disturbance $\Delta L_{-}$ was transformed to originate from a gravitational wave signal $k \Delta L_{-} = \frac{2\pi L_{+}}{\lambda} h_{\text{\tiny GW}}$.
+		The response of this particular interferometer to differential arm length motion is linearly proportional to the gravitational wave amplitude as well as the input power $P_0 \propto E_0^2$, but there is also a frequency dependent component which is the same as that of a single Fabry-Perot cavity. This acts like a low pass filter above the corner frequency colloquially called the DARM cavity pole.  By adding resonators, there is also a DC amplification of the signal by a factor of $\bigg[\frac{t_1}{1-r_1r_2}\bigg]^2$, which is the gain of a linear Fabry-Perot cavity ($\approx 268$ for Advanced LIGO optics \cite{galaxy}).  
 
 		\subsection{Power-Recycled Fabry-Perot Interferometers}
-		If the interferometer is operating such that the intensity at the antisymmetric port is close to null, conservation of energy requires that the arm powers will reflect back towards the input laser.  Fritschel et al \cite{Fritschel_Readout} \cite{FritschelLightRecycling} showed the effects of adding a partially reflecting mirror increases the Michelson optical gain for both the sideband and carrier fields. Section \ref{FPmich} showed that the Michelson interferometer with Fabry Perot arms can be represented by a single cavity response.  Therefore it is useful to model a power recycled interferometer by using a coupled cavity approach where one of the mirrors is replaced with the total reflected field of the Fabry-Perot Michelson on a bright fringe.  Here the reflectivity and transitivity of the power recycling mirror (PRM) is denoted by $r_p$ and $t_p$, respectively.
+		If the interferometer is operating such that the intensity at the antisymmetric port is close to null, conservation of energy requires that the arm powers will reflect back towards the input laser.  Fritschel et al. \cite{Fritschel_Readout} \cite{FritschelLightRecycling} showed the effects of adding a partially reflecting mirror increases the Michelson optical gain for both the sideband and carrier fields. Section \ref{FPmich} showed that the Michelson interferometer with Fabry Perot arms can be represented by a single cavity response.  Therefore it is useful to model a power recycled interferometer by using a coupled cavity approach where one of the mirrors is replaced with the total reflected field of the Fabry-Perot Michelson on a bright fringe.  Here the reflectivity and transmissivity of the power recycling mirror (PRM) is denoted by $r_p$ and $t_p$, respectively.
 		
 		\begin{figure}[ht]
 			\centering
@@ -309,11 +309,11 @@
 		\begin{equation}
 		E_{\text{PRC}} = \frac{t_p}{1- r_p r_{\text{FPM}}   e^{-2ik l_{\text{PRC}}}}E_{\text{in}}
 		\end{equation}
-		where $r_{\text{FPM}}\approx 1 - \frac{\mathbb{F}}{\pi} \mathcal{L}_{\text{ARM}}$ for high finesse ($\mathbb{F}$) arm cavities and the round trip arm losses are denoted by $\mathcal{L}_{\text{ARM}}$. This is a valid approximation for the advanced LIGO since their values for arm finesse can be around 450 or higher depending on the losses.  This means the circulating power in the recycling cavity while on resonance can be expressed by
+		where $r_{\text{FPM}}\approx 1 - \frac{\mathbb{F}}{\pi} \mathcal{L}_{\text{ARM}}$ for high finesse ($\mathbb{F}$) arm cavities and the round trip arm losses are denoted by $\mathcal{L}_{\text{ARM}}$ which include scattering, mode mismatch, absorption, and any other effect which is not directly reflected or transmitted from optics. This is a valid approximation for the Advanced LIGO since their values for arm finesse can be around 450 or higher depending on the losses.  This means the circulating power in the recycling cavity while on resonance can be expressed by
 		\begin{equation}
 		P_{\text{PRC}} = \frac{1-r_p^2}{\bigg[ 1 - r_p  (1 - \frac{\mathbb{F}}{\pi} \mathcal{L}_{\text{ARM}})   \bigg]^2}P_{\text{in}}
 		\end{equation} 
-		By taking the derivative with respect to $r_p$ and setting to zero, the optimal power recycling tuning is linearly proportional to the round trip loss,
+		By taking the derivative with respect to $r_p$ and setting to zero, the optimal power recycling tuning is dependent on the round trip loss,
 		\begin{equation}
 		r_{\text{opt}}  = 1 - \frac{\mathbb{F}}{\pi}\mathcal{L}_{\text{ARM}}
 		\end{equation}
@@ -337,12 +337,12 @@
 			\label{fig:DRFPMich}
 		\end{figure}
 		
-		One of the biggest changes made between initial and advanced LIGO was the addition of a signal recycling mirror at the antisymmetric port (see Figure \ref{fig:DRFPMich} ). In the previous section, it was shown that the gravitational wave sensitivity was improved by adding a power recycling cavity to increase the effective input power entering the arm cavities.  Adding another partially reflecting optic called the signal recycling mirror (SRM) at the antisymmetric port to create a resonant cavity will shape the interferometer's response to gravitational waves.  This allows for some flexibility in optimizing the instrument for specific sources such as binary neutron stars, but it also creates a more broadband response at higher frequencies while allowing the arm cavity finesse and/or power recycling to impart more power.
+		One of the biggest changes made between initial and Advanced LIGO was the addition of a signal recycling mirror at the antisymmetric port (see Figure \ref{fig:DRFPMich} ). In the previous section, it was shown that the gravitational wave sensitivity was improved by adding a power recycling cavity to increase the effective input power entering the arm cavities.  Adding another partially reflecting optic called the signal recycling mirror (SRM) at the antisymmetric port to create a resonant cavity will shape the interferometer's response to gravitational waves.  This allows for some flexibility in optimizing the instrument for specific sources such as binary neutron stars, but it also creates a more broadband response at higher frequencies while allowing the arm cavity finesse and/or power recycling to impart more power.
 		\begin{figure}[ht]
 			\centering
 			\includegraphics[width=0.8 \textwidth]{../Figures/SN_Lim_Sense.png}
 			\caption[Comparing the shot noise limited differential arm spetra for different interferometer configurations.]
-			{\textbf{Comparing the shot noise limited differential arm spetra for different interferometer configurations.} Here, the simulation was ran with FINESSE \cite{FinesseManual} using the advanced LIGO optical parameters \cite{FinesseH1}. }
+			{\textbf{Comparing the shot noise limited differential arm spetra for different interferometer configurations.} Here, the simulation was ran with FINESSE \cite{FinesseManual} using the Advanced LIGO optical parameters \cite{FinesseH1}. }
 			\label{fig:DRMICH_sense}
 		\end{figure}
 		
@@ -354,7 +354,7 @@
 		t_{1+s} = \frac{t_1 t_s e^{i\phi_s}}{1- r_1 r_s e^{-2i\phi_s}}
 		\end{equation}
 		where $\phi_s = k \big( l_\text{s} + \frac{l_x + l_y}{2} \big) = k \, l_{\text{SRC}}	$ is the average signal recycling length.
-		Plugging this into equation \ref{Egw} in place of the input test mass reflectivity shows that the cavity pole is directly affected by the signal recycling properties, namely, the SRM reflectivity and the microscopic detuning of the length. The field propagating to the true antisymmetric port is in transmission of the signal recycling cavity which is accounted for with the last bracketed term. 
+		Plugging this into equation \ref{Egw} in place of the input test mass reflectivity shows that the cavity pole is directly affected by the signal recycling properties, namely, the SRM reflectivity and the microscopic detuning of the length. The field propagating to the antisymmetric port is in transmission of the signal recycling cavity which is accounted for with the last bracketed term. 
 		\begin{equation}
 		\begin{aligned}
 		E_{\text{AS}}(\pm \omega_{\text{\tiny GW}}) & =  \bigg[ \frac{t_1^2}{1-r_1 r_2}\bigg]  \frac{E_0}{\sqrt{2}} \bigg[\frac{ 1}{1 \pm r_{1+s} r_2 e^{-2i  \omega_{\text{\tiny GW}}  \frac{L_+}{c}}} \bigg] \bigg[\frac{t_1 t_s e^{i\phi_s}}{1- r_1 r_s e^{-2i\phi_s}}\bigg] ik\Delta L_-\\
@@ -373,7 +373,7 @@
 		\begin{equation}
 		\sqrt{g_{\text{SRC}}} = \frac{t_s}{1+ r_s r_{\text{FPM}}   e^{-2i\phi_s}}
 		\end{equation}
-		It is clear from the equations above that the gravitational wave sideband and carrier fields will see the signal recycling cavity effects differently and the responses are highly sensitive to the length detuning of $\phi_s$.
+		The equations above show that the gravitational wave sideband and carrier fields will see the signal recycling cavity effects differently and the responses are highly sensitive to the length detuning of $\phi_s$.
 		Putting all the pieces together to get the dual recycled Fabry-Perot interferometer response to gravitational waves,
 		\begin{equation}\label{eq:DRFP_opt_gain}
 		S_{\text{DRFP}} \propto E_0^2 \; \frac{8\pi L_+}{\lambda} \sqrt{g_{\text{PRC}}}\;\sqrt{g_{\text{SRC}}}\; g_{\text{ARM}} \bigg[\frac{1}{1 - i \frac{\omega_{\text{\tiny GW}}}{\omega_{\text{DR}}}}\bigg] \sin{(k\delta l)} \sin{(\phi_{D})} h_{\text{\tiny GW}}
@@ -403,12 +403,12 @@
 		\end{figure}
 		
 		\subsubsection{Quantum Noise}\label{Sec:QuantumNoise}
-		Virtually all undergraduate quantum mechanics textbooks include a section on the harmonic oscillator [\cite{Shankar}].  A particularly interesting result when solving the Schrödinger equation using creation ($\hat{a^{\dagger}}$) and annihilation ($\hat{a}$) operators is the existence of a non-zero energy ground state which has variances in momentum and position related by the Heisenberg uncertainty principle.  When it comes to electromagnetic fields, the pair associated with the uncertainty principle is the amplitude and phase of the laser beam.
+		In quantum mechanics \cite{Shankar}, solving the Schrödinger equation for the harmonic oscillator using creation ($\hat{a^{\dagger}}$) and annihilation ($\hat{a}$) operators leads to the existence of a non-zero energy ground state which has variances in momentum and position related by the Heisenberg uncertainty principle.  When it comes to electromagnetic fields, the pair associated with the uncertainty principle is the amplitude and phase of the laser beam.
 		
 		As a result, one of the main noise sources that is limiting LIGO's sensitivity comes from the fluctuations of quantum vacuum entering the anti-symmetric port and coupling to the input laser. A quantum mechanical description of an interferometer was constructed by Caves \cite{CavesQMNoise}\cite{Caves2photon} \cite{CavesOscillator}, where he used electric field operators to show that vacuum fluctuations are the cause of radiation pressure and shot noise in a simple interferometer (no resonant cavities).  The following analysis below will also be simplified in this way but is reasonably close in estimating the amount radiation pressure and shot noise.  For studies that take into account more complicated interferometer configurations with resonant cavities, refer to Buonanno, Chen, and Kimble \cite{BuonannoChenQMNoise} \cite{ChenQND} \cite{KimbleConversion}.
 		
 		\textbf{Quantum states}:
-		It is well known in physics \cite{Shankar} \cite{Griffiths} that a solution to the quantum harmonic oscillator in the energy eigenbasis employs the annihilation and creation  operators, $\hat{a}^{\dagger}$ and $\hat{a}$, to factorize the Hamiltonian
+		A solution to the quantum harmonic oscillator in the energy eigenbasis employs the annihilation and creation operators, $\hat{a}^{\dagger}$ and $\hat{a}$, to factorize the Hamiltonian \cite{Shankar} \cite{Griffiths}
 		\begin{equation}
 		\hat{H} = \hbar w (\hat{N} + 1/2)
 		\end{equation} 
@@ -424,14 +424,14 @@
 		\hat{D}^\dagger&\, \hat{a}^\dagger \,\hat{D} 		= \hat{a}^\dagger + \alpha^*
 		\end{aligned}
 		\end{equation}
-		When applying the displacement operation on the vacuum state, the resultant vector has an amplitude $\alpha$ and follows the same uncertainty distribution as an unperturbed vacuum vector as shown in Figure[StickandBall],
+		When applying the displacement operation on the vacuum state, the resultant vector has an amplitude $\alpha$ and follows the same uncertainty distribution as an unperturbed vacuum vector,
 		\begin{equation}
 		\ket{\alpha} = \hat{D} \ket{0} =  e^{-\frac{\vert{\alpha}\vert^2}{2}} e^{\alpha \hat{a}^{\dagger} } \ket{0}
 		\end{equation}
 		
 		\textbf{Radiation Pressure}
 		
-		One might naively think that power fluctuations in the main laser causes radiation pressure effects on the test masses which will result in noise.  However, if the 50/50 beamsplitter is perfect, then the momentum transfer to each test mass will result in a common length change and will not vary the intensity at the antisymmetric port (or the symmetric port for that matter).  However, the baseline laser power will be important when considering a full quantum mechanical picture of radiation pressure.
+		Power fluctuations in the main laser causes radiation pressure effects on the test masses, however, if the 50/50 beamsplitter is perfect, then the momentum transfer to each test mass will result in a common length change and will not vary the intensity at the antisymmetric port (or the symmetric port for that matter).  The coupling of radiation pressure into the interferometer is shown below to come directly from vacuum fluctuations.
 		
 		Consider plane wave waves entering the interferometer from both the symmetric and anti-symmetric ports.  This method is similar to the input-output methods of section \ref{sec:michelson}, however, the difference being that the beamsplitter will couple the electric fields from the input laser and quantum vacuum.
 		

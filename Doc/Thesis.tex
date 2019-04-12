@@ -1,18 +1,18 @@
-\documentclass[suthesis,12pt,notitlepage]{report}
+\documentclass[12pt,suthesis]{report}
 \usepackage{MyStyle}
 \usepackage{suthesis}
 
 \captionsetup{compatibility=false}
-
 
 %\pdfoutput=1
 \hbadness=10000
 
 \begin{document}
 	\Abstract{
-		The era of gravitational waves astronomy was ushered in by the LIGO (Laser Interferometer Gravitational-Wave Observatory) collaboration with the detection of a binary black hole collision \cite{DetectionPaper}.  The event that shook the foundation of space-time allowed mankind to view the cosmos in a way that had never been done previously. Since then, another remarkable event was found by the LIGO and Virgo detectors where two neutron stars collided sending both gravitational and electromagnetic waves to earth \cite{BNS}. LIGO was built with the purpose of detecting the ripples in space-time caused by astrophysical events with the hopes of understanding the complexities hidden within the cosmos.  In 2011, the primary stages of Advanced LIGO were installed and commissioned to start the first observing run (O1).  During the writing of this thesis, the detectors had hardware replaced in order to mitigate noise from scattered light and new optics which reduced the losses from absorption.  The upgrades were in preparation for the third observing run (O3) and the work presented here is primarily focused on experimental techniques for operating at higher power and mode matching Gaussian beams in the dual-recycled Michelson interferometer for the Advanced LIGO era and beyond.  The first two chapters discuss the fundamentals of gravitational waves and the LIGO detector configurations.  The third chapter introduces the reader to fundamentals in mode matching Gaussian laser beams.  The fourth and fifth chapter summarizes the author's work at Syracuse University and LIGO Hanford observatory in mode sensing and high-powered commissioning.
-	}
-	
+	The era of gravitational wave astronomy was ushered in by the LIGO (Laser Interferometer Gravitational-Wave Observatory) collaboration with the detection of a binary black hole collision \cite{DetectionPaper}.  The event that shook the foundation of space-time allowed mankind to view the cosmos in a way that had never been done previously. Since then, another remarkable event was found by the LIGO and Virgo detectors where two neutron stars collided, sending both gravitational and electromagnetic waves to earth \cite{BNS}. LIGO was built with the purpose of detecting the ripples in space-time caused by astrophysical events with the hopes of understanding the complexities hidden within the cosmos.  In 2011, the primary stages of Advanced LIGO were installed and commissioned to start the first observing run (O1).  During the writing of this thesis, the detectors had hardware replaced in order to mitigate noise from scattered light and new optics which reduced the losses from absorption.  The upgrades were in preparation for the third observing run (O3) and the work presented here is primarily focused on experimental techniques for operating at higher power and mode matching Gaussian beams in the dual-recycled Michelson interferometer for the Advanced LIGO era and beyond.  The first two chapters discuss the fundamentals of gravitational waves and the LIGO detector configurations.  The third chapter introduces the reader to fundamentals in mode matching Gaussian laser beams.  The fourth and fifth chapter summarizes the author's work at Syracuse University.  The sixth chapter deals with work at the LIGO Hanford observatory with an emphasis on mode sensing and high-power operation.
+}
+\setcounter{page}{1}
+		
 	\title{Adaptive Mode Matching in Advanced LIGO and Beyond}
 	\author{Thomas V. Vo}
 	\majorprof{Stefan Ballmer}
@@ -21,29 +21,31 @@
 	\submitdate{May 2019} % I know this says submit date, but SU requires that you put the month that you're going to graduate in.
 	\degree{Doctor of Philosophy}
 	\program{Physics}
-	\copyrightyear{2019}
+	\copyrightyear{May 2019}
 	\majordept{Physics}
+	\havededicationfalse
 	\haveminorfalse
 	\copyrighttrue
-	\doctoratetrue
-	\figurespagetrue
-	\tablespagetrue
-	\electronicsubmittrue % if false, makes an approval title page. if true, makes title page with no approval spot. 
+	%\doctoratetrue
+	\electronicsubmittrue 
+	% if false, makes an approval title page. if true, makes title page with no approval spot. 
 	%You need to submit a signed version of the approval title page to the office, then an electronic edition with no approval spot. this is dumb.
-	
-	\beforepreface
-	\prefacesection{Preface}
-	The work presented in this thesis stems from my participation in the LIGO
-	Scientific Collaboration (LSC).
 
-	LIGO DCC Number: P1900086
-	
-	\prefacesection{Acknowledgements}
-		\input{acknowledge}
-		
-	\afterpreface
-	
 
+
+\Acknowledgments{
+\input{acknowledgments}
+}
+	
+\beforepreface
+
+\prefacesection{Preface}{
+The work presented in this thesis stems from my participation in the LIGO
+Scientific Collaboration (LSC).
+
+LIGO DCC Number: P1900086}
+	
+\afterpreface
 	
 \input{Ch1_Intro}	
 \input{Ch2_LIGO}
